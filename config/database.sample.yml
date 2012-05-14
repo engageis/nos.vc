@@ -11,9 +11,9 @@
 development:
   adapter: postgresql
   encoding: utf-8
-  database: catarse_development
+  database: nosvc_development
   pool: 5
-  username: catarse
+  username: nosvc
   
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -37,14 +37,14 @@ development:
 test: &test
   adapter: postgresql
   encoding: utf-8
-  database: catarse_test
+  database: nosvc_test
   pool: 5
-  username: catarse
+  username: nosvc
   
 
 production:
   adapter: postgresql
   encoding: utf-8
-  database: catarse_production
+  database: nosvc_production
   pool: 5
-  username: catarse
+  username: nosvc
