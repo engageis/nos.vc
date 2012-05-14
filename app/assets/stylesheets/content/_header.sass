@@ -1,97 +1,155 @@
+body
+  margin-top: 60px
+
 #header
-  +grid-container
-  +grid-system(16)
-  padding: 17px 10px 0 10px
-  margin: 0 auto 30px
+  position: fixed
+  top: 0
+  right: 0
+  left: 0
+  width: 100%
+  z-index: 1001
   display: block
-  .logo
-    +grid(4)
-    +alpha
-    margin-right: 20px
-    height: 54px
-    border: none
-    background: url($images_path+"logo164x54.png") left top no-repeat
-    text-indent: -9999em
+  background: #696862
+  height: 40px
+  header
+    +grid-container
+    background: #595853
   nav
+    height: 40px
     a
       display: inline-block
       font-family: "Lato-Regular"
       text-decoration: none
     &.actions
-      +grid(4)
-      margin-top: 20px
-      a
-        color: $pink
-        font-size: 18px
-        margin-right: 27px
-        &:last-child
-          margin-right: 0
-        &:hover
-          text-decoration: underline
-        &.explore
-          background: url($images_path+"explore_icon23x15.png") left 3px no-repeat
-          text-indent: 30px
-        &.submit_project
-          background: url($images_path+"submit_project_icon25x13.png") left 4px no-repeat
-          text-indent: 30px
-    &.menu
-      +grid(4)
-      margin-top: 20px
+      +grid(9)
+      margin: 0
+      ul
+        height: 100%
+        li
+          +grid(3)
+          margin: 0
+          border-right: 1px solid #4B4A4A
+          height: 100%
+          padding: 0 5px 0 7px
+          a
+            text-transform: uppercase
+            color: $pink
+            font-size: 14px
+            margin-top: 8px
+            color: #D7D6D0
+            +text-shadow(black 1px 1px 0px)
+          &.explore
+            &:hover
+              background: #83B1DF
+            a
+              background: url($images_path+"explore_icon23x15.png") left 3px no-repeat
+              text-indent: 30px
+          &.submit_project
+            &:hover
+              background: #B178AD
+            a
+              background: url($images_path+"submit_project_icon25x13.png") left 4px no-repeat
+              text-indent: 30px
+          &.help
+            &:hover
+              background: #ED6569
+            a
+              background: url($images_path+"submit_project_icon25x13.png") left 4px no-repeat
+              text-indent: 30px
+    &.account
+      +grid(3)
+      width: 199px
+      background: #696862
+      margin: 0
+      padding-left: 10px
+      border-left: 1px solid #4B4A4A
       a
         font-family: "Lato-Regular"
-        text-transform: lowercase
         color: $ultra_gryn
         font-size: 14px
         margin-right: 12px
+        color: #D6D5D0
+      .login
+        text-align: center
+        margin-top: 12px
+        a
+          color: #B5B4AF
+          +text-shadow(black 1px 1px 0px)
+          text-transform: uppercase
+      a
         &.my_profile_link
-          width: 130px
+          width: 200px
           display: block
-          float: right
+          float: left
           margin-right: 0
-          
-          img.profile_picture
-            border: 1px $ultra_gryn
-            +box-shadow(rgba(black, 0.3) 1px 1px 2px)
-            +transition(all, 0.5s)
-            position: relative
-            float: left
-            margin-top: -14px
-            margin-right: 5px
-
-            &:hover
-              +box-shadow(rgba(black, 0.6) 1px 1px 2px inset)
+          margin-top: 14px
+          color: #B5B4AF
+          text-transform: uppercase
+          font-size: 11px
           .current_user_name
             float: left
+            padding-right: 10px
+          img.profile_picture
+            border: 1px $ultra_gryn
+            +box-shadow(rgba(#B5B4AF, 0.4) 1px 1px 2px)
+            +transition(all, 0.5s)
+            +border-radius(50%)
+            position: relative
+            float: left
+            margin-top: -10px
             margin-right: 5px
+            &:hover
+              +box-shadow(rgba(black, 0.6) 1px 1px 2px inset)
           .dropdown_arrow
             float: left
             position: relative
             margin-top: 7px
         &:last-child
           margin-right: none
-        &:hover
-          color: $pink
+    &.locales
+      +grid(1)
+      ul
+        margin-top: 2px
+        li
+          a
+            text-transform: uppercase
+            font-size: 11px
+            color: #262522
+            +text-shadow(#81807C 1px 1px 0px)
+            font-family: verdana
+            text-indent: 13px
+            &:hover
+              color: #B5B4AF
+              +text-shadow(none)
   .search
-    +grid(4)
-    margin-top: 18px
+    +grid(3)
+    margin: 0
+    padding-right: 9px
+    border-right: 1px solid #4B4A4A
+    height: 40px
     form
-      width: 220px
-      height: 22px
-      +border-radius(8px)
-      border: 1px $minimal_gryn solid
-      // +box-shadow(rgba(black, 0.1) 1px 1px 2px)
-      background: white
+      width: 140px
+      height: 24px
+      +border-radius(4px)
+      +box-shadow(#81807C 1px 1px 0px, rgba(black, 0.4) 1px 1px 0 inset)
+      background: #595853
+      margin: auto
+      margin-top: 7px
       input[type="text"]
         border: none
-        width: 190px
+        width: 122px
         float: left
+        padding-left: 3px
+        margin-top: 4px
+        background: transparent
+        color: white
         &:focus
           outline: none
       input[type="submit"]
         background: url($images_path+"search_submit15x15.png") left top no-repeat
-        width: 15px
-        height: 15px
+        width: 13px
+        height: 12px
         border: none
         text-indent: -9999em
         float: right
-        margin: 3px 5px 0 0px
+        margin: 5px 0px 0 0px
