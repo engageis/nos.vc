@@ -1,50 +1,75 @@
 [data-namespace="null"][data-controller="projects"][data-action="index"]
   #page_content
-    .selected_projects
-      h2
-        background: url($images_path+"thumbs_up_icon16x16.png") left top no-repeat
-        text-indent: 20px
-    .expiring_projects
-      h2
-        background: url($images_path+"expiring_icon20x22.png") left top no-repeat
-        text-indent: 28px
-        padding-bottom: 3px
-    .recents_projects
-      h2
-        background: url($images_path+"recents_icon31x17.png") left top no-repeat
-        text-indent: 38px
-        padding-bottom: 3px
-    .explore_link
+    .main
       padding-top: 20px
-      padding-bottom: 30px
-      float: left
-      hr
-        +grid(8)
-        border: none
-        border-bottom: 1px rgba(black, 0.1) solid
-        +omega
-        padding-top: 2px
-      a
-        +grid(4)
-        +omega
-        font-family: "Lato-Regular"
-        font-size: 14px
-        color: $pink
-        text-decoration: none
-        &:hover
-          color: $green
+      +grid-system(16)
+      
+      .selected_projects
+        +grid-system(16)
+        h2
+          background: image-url("nosvc/icon-destaques.jpg") left top no-repeat
+          text-indent: 60px
+          height: 45px
+          +grid-system(16)
+          +text-shadow(white 1px 1px 0px)
+          border-bottom: 1px #d8d3d3 dashed
+          padding-bottom: 15px
+      .expiring_projects
+        h2
+          background: url($images_path+"expiring_icon20x22.png") left top no-repeat
+          text-indent: 28px
+          padding-bottom: 3px
+      .recents_projects
+        h2
+          background: url($images_path+"recents_icon31x17.png") left top no-repeat
+          text-indent: 38px
+          padding-bottom: 3px
+      .explore_link
+        padding-top: 20px
+        padding-bottom: 30px
+        float: left
+        hr
+          +grid(8)
+          border: none
+          border-bottom: 1px rgba(black, 0.1) solid
+          +omega
+          padding-top: 2px
+        a
+          +grid(4)
+          +omega
+          font-family: "Lato-Regular"
+          font-size: 14px
+          color: $pink
+          text-decoration: none
+          &:hover
+            color: $green
 
     .partners
       padding-top: 20px
       padding-bottom: 10px
+      background-color: #f7f6f0
+      height: 242px
+      border-top: 1px #d8d3d3 dashed 
+      border-bottom: 1px #d8d3d3 dashed
       .title
-        margin-left: 10px
-      h2
-        background: url($images_path+"partners_icon26x26.png") left top no-repeat
-        text-indent: 35px
+        +grid(12)
+        display: block
+        margin: 0 auto
+        float: none
+        text-align: center
+      h3
         padding-bottom: 9px
-        margin-top: -5px
         padding-top: 5px
+        float: none
+      
+      .list-title    
+      p
+        font-family: "Dosis-Regular"
+        font-size: 18px
+        color: #555555
+        clear: both
+        text-align: center
+
       .channels_list_widget
         ul
           width: 100%

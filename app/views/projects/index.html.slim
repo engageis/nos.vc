@@ -1,10 +1,14 @@
 #page_content
   .container
+    iframe src="http://player.vimeo.com/video/27359974?title=0&amp;byline=0&amp;portrait=0" width="960" height="540" frameborder="0" 
+
     .main
       .selected_projects.list
         .list_title
           .title
-            h2= t('sections.selection.title')
+            h2
+              = t('sections.selection.title')
+              p= "Encontros incríveis que nos inspiram. Divirta-se!"
         .projects
           = render :partial => 'project', :locals => {:project => @first_project, :custom_class => 'first' } if @first_project
           = render :partial => 'project', :locals => {:project => @second_project } if @second_project
@@ -43,58 +47,31 @@
           hr
           = link_to t('main.links.recents'), explore_path()+'#recent'
 
-    .sidebar
-      .content
-        .blog
-          h3= t('sidebar.titles.blog')
-          ul.posts
-            - @blog_posts.each do |post|
-              li
-                h2
-                  = link_to post.url, target: '__blank' do
-                    /= image_tag("catarse/post_title_image.png")
-                    = truncate(post.title, length: 80)
-                p.author= "#{t('projects.box.by')} #{post.author}"
-                = link_to post.url, target: '__blank', class: 'resume' do
-                  = truncate(post.summary, length: 130)
-
-        .facebook
-          h3= t('sidebar.titles.facebook')
-          .fb-like data-href="http://facebook.com/catarse.me" data-send="false" data-width="171" data-show-faces="true"
-        .twitter
-          h3= t('sidebar.titles.twitter')
-          - @last_tweets.each do |tweet|
-            p= tweet['text']
-          = link_to "Follow @#{t('site.twitter')}", "http://twitter.com/#{t('site.twitter')}", :class => 'twitter-follow-button', :"data-show-count" => "false" , :"data-button"=>"blue", :"data-text-color" => "#ffffff", :"data-link-color"=>"#fffffff", :"data-width" => "224px"
-        .newsletter
-          h3= t('sidebar.titles.newsletter')
-          = form_tag 'http://catarse.mailee.me/go/add_contact_form', id: 'mailee-form', method: 'post' do
-            = hidden_field_tag 'key', '13122d'
-            = hidden_field_tag 'url_ok', "http://#{request.env['HTTP_HOST']}/?newsletter=ok"
-            = hidden_field_tag 'url_error', "http://#{request.env['HTTP_HOST']}/?newsletter=error"
-            = text_field_tag 'email', nil, placeholder: 'email@email.com'
-            = submit_tag t('sidebar.buttons.newsletter')
-        .faq
-          h3= t('sidebar.titles.faq')
-          = link_to image_tag('catarse/faq_video.png'), '#'
-        .schedule
-          h3= t('sidebar.titles.schedule')
-          ul.events
-            - @events.each do |event|
-              li
-                = link_to event['htmlLink'] do
-                  h4
-                    | #{event['start']['dateTime'].to_date.strftime('%d')}
-                    br/
-                    span= event['start']['dateTime'].to_date.strftime('%b').upcase
-                  p= (event['description'].present? ? event['description'] : event['title'])
-          .clearfix
-
     .clearfix
 
   .container.partners
     .list_title
       .title
-        h2= t('sections.partners.title')
+        h3= t('sections.partners.title')
+      p= "Veja os encontros que eles assinam embaixo:"
     = render :partial => 'curated_pages_list', :locals => {:curated_pages => @curated_pages} unless @curated_pages.empty?
     .clearfix
+  #logos
+    p
+     = "Mãe, olha a gente:"
+
+    .vidasimples
+      = link_to '#' do
+        = image_tag('nosvc/logo-vidasimples.jpg', :target => '_blank', :alt => 'Vida Simples')
+    .techtudo
+      = link_to '#', :target => '_blank' do
+        = image_tag('nosvc/logo-techtudo.jpg', :alt => 'TechTudo')
+    .digitas
+      = link_to '#', :target => '_blank' do
+        = image_tag('nosvc/logo-digitas.jpg', :alt => 'DigiTas') 
+    .catraca
+      = link_to '#', :target => '_blank' do
+        = image_tag('nosvc/logo-catracalivre.jpg', :alt => 'Catraca Livre')
+    .terra
+      = link_to '#', :target => '_blank' do
+        = image_tag('nosvc/logo-terra.jpg', :alt => 'Terra')    

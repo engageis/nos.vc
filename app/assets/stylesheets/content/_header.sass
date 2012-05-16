@@ -1,6 +1,5 @@
 body
   margin-top: 60px
-
 #header
   position: fixed
   top: 0
@@ -33,29 +32,36 @@ body
           padding: 0 5px 0 7px
           a
             text-transform: uppercase
-            color: $pink
-            font-size: 14px
-            margin-top: 8px
+            font-size: 13px
+            font-family: Dosis-SemiBold
+            margin-top: 0px
             color: #D7D6D0
+            height: 40px
+            text-indent: 33px
+            padding-top: 14px
             +text-shadow(black 1px 1px 0px)
           &.explore
             &:hover
               background: #83B1DF
+              a
+                color: #fafafa
             a
-              background: url($images_path+"explore_icon23x15.png") left 3px no-repeat
-              text-indent: 30px
+              background: image-url("nosvc/icon-explorar.png") left top no-repeat
           &.submit_project
             &:hover
               background: #B178AD
+              a
+                color: #fafafa
             a
-              background: url($images_path+"submit_project_icon25x13.png") left 4px no-repeat
-              text-indent: 30px
+              background: image-url("nosvc/icon-criar.png") left top no-repeat
           &.help
             &:hover
               background: #ED6569
+              a
+                color: #fafafa
             a
-              background: url($images_path+"submit_project_icon25x13.png") left 4px no-repeat
-              text-indent: 30px
+              background: image-url("nosvc/icon-comofunciona.png") left top no-repeat
+
     &.account
       +grid(3)
       width: 199px
@@ -71,11 +77,16 @@ body
         color: #D6D5D0
       .login
         text-align: center
-        margin-top: 12px
+        margin-top: 0px
+        background: image-url("nosvc/icon-login.gif") 50px top no-repeat
+        height: 40px
         a
           color: #B5B4AF
           +text-shadow(black 1px 1px 0px)
           text-transform: uppercase
+          font-size: 14px
+          font-family: Dosis-SemiBold
+          padding-top: 12px   
       a
         &.my_profile_link
           width: 200px
@@ -108,8 +119,11 @@ body
           margin-right: none
     &.locales
       +grid(1)
+      width: 50px
+      margin-left: 5px
+      margin-right: 5px
       ul
-        margin-top: 2px
+        margin-top: 4px
         li
           a
             text-transform: uppercase
@@ -117,14 +131,17 @@ body
             color: #262522
             +text-shadow(#81807C 1px 1px 0px)
             font-family: verdana
-            text-indent: 13px
+            text-indent: 25px
+            background: image-url("nosvc/icon-arrowinactive.gif") left top no-repeat
             &:hover
               color: #B5B4AF
+              background: image-url("nosvc/icon-arrowactive.gif") left top no-repeat
               +text-shadow(none)
   .search
     +grid(3)
     margin: 0
-    padding-right: 9px
+    padding-right: 5px
+    padding-left: 3px
     border-right: 1px solid #4B4A4A
     height: 40px
     form
@@ -132,24 +149,24 @@ body
       height: 24px
       +border-radius(4px)
       +box-shadow(#81807C 1px 1px 0px, rgba(black, 0.4) 1px 1px 0 inset)
-      background: #595853
+      background: #696862
       margin: auto
       margin-top: 7px
       input[type="text"]
         border: none
-        width: 122px
+        width: 112px
         float: left
-        padding-left: 3px
-        margin-top: 4px
+        padding-left: 5px
+        margin-top: 5px
         background: transparent
-        color: white
+        color: #b5b4af 
         &:focus
           outline: none
       input[type="submit"]
-        background: url($images_path+"search_submit15x15.png") left top no-repeat
-        width: 13px
-        height: 12px
+        background: image-url("nosvc/icon-search.png") left 2px no-repeat
+        width: 18px
+        height: 23px
         border: none
         text-indent: -9999em
         float: right
-        margin: 5px 0px 0 0px
+        margin: 0 3px 0 0
