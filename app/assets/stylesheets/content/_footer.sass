@@ -1,74 +1,72 @@
 .footer
   +grid-system(16)
-  +border-radius(8px)
-  padding: 0 10px 0 10px
-  border: 1px $df_gryn solid
-  background: $ultra_gryn !important
+  background: image-url("nosvc/background-footer.gif") left top repeat-x
+  width: 100%
+  margin: 0 auto
+  height: 217px
   .content
-    padding-top: 30px
-    padding-bottom: 10px
+    padding: 20px 0 0
+    +grid-container   
+    margin: 0 auto 
     h3
-      font-family: 'Lato-Bold'
-      font-size: 18px
-      color: $pink
-      padding-bottom: 40px
+      font-family: Dosis-SemiBold
+      font-size: 16px
+      color: #83b1df
+      padding-bottom: 10px
       padding-top: 5px
+      text-transform: uppercase
+      +text-shadow(black 1px 1px 0px)
+    .logofooter
+      +grid(1)
+      +grid-suffix(1)
+
     .info
       +grid(4)
       +grid-suffix(1)
-      h3
-        background: url($images_path+'faq_icon18x18.png') left 5px no-repeat
-        text-indent: 34px
       ul
         li
-          margin-bottom: 32px
+          margin-bottom: 5px
+          background: image-url("nosvc/background-lifooter.gif") left top repeat-x
+          height: 31px
           a
-            font-family: "Lato-Regular"
-            font-size: 18px
-            font-weight: lighter
-            color: white
+            font-family: "Dosis-Regular"
+            font-size: 15px
+            color: #d7d6d0
+            text-transform: uppercase
             text-decoration: none
+            margin-top: 5px
+            float: left
+            +text-shadow(black 1px 1px 0px)
             &:hover
-              color: $pink
+              color: #83b1df
 
     .opendata
-      +grid(5)
+      +grid(4)
       +grid-suffix(1)
-      h3
-        background: url($images_path+'opendata_icon26x26.png') left top no-repeat
-        text-indent: 44px
       ul
         display: block
         li
           width: 100%
           float: left
-          margin-bottom: 20px
+          margin-bottom: 7px
           h5
             float: left
-            font-family: 'Lato-Bold'
-            font-size: 20px
-            color: white
+            font-family: "Dosis-Regular"
+            font-size: 16px
+            color: #83b1df
             padding-right: 10px
+            +text-shadow(black 1px 1px 0px)
           p
             padding-top: 3px
             float: left
-            text-transform: uppercase
-            font-family: Myriad Pro
-            font-size: 16px
-            color: white
-            +opacity(0.5)
+            font-family: "Helvetica Neue"
+            font-size: 13px
+            color: #d7d6d0
 
     .social
-      +grid(5)
-      h3
-        background: url($images_path+'heart_icon17x14.png') left 6px no-repeat
-        text-indent: 32px
-        &.newsletter
-          padding-top: 30px
-          padding-bottom: 20px
-          background: url($images_path+'newsletter_icon18x15.png') left 32px no-repeat
+      +grid(4)
       .twitter
-        margin-bottom: 20px
+        margin-top: 10px
       form
         input[type="text"]
           float: left
@@ -95,3 +93,22 @@
           +transition(all, 0.5s)
           &:active
             +box-shadow(rgba(black, 0.5) 0 0 5px inset)
+    .links
+      +grid-container
+      margin-top: 24px
+      float: left
+      text-align: center
+      a
+        padding-top: 4px
+        padding-left: 10px
+        padding-right: 10px
+        color: #979595
+        font-family: "Helvetica Neue"
+        font-size: 11px
+        text-transform: uppercase
+        +text-shadow(black 1px 1px 0px)
+        text-decoration: none
+        &:hover
+          color: #83b1df
+
+

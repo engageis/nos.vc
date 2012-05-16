@@ -1,18 +1,15 @@
 body
-  background: url($images_path+'bg_s3.png') left top repeat
-
+  background: image-url("nosvc/background.jpg") left top repeat
   #page_content
     .container
       +grid-system(16)
-      +border-radius(10px)
       padding: 0 10px 0 10px
-      background: white
-      border: 1px $df_gryn solid
       margin-bottom: 40px
 
       .main
         padding-top: 17px
         +grid(12)
+                
       .sidebar
         +grid(4)
         +omega
@@ -21,7 +18,7 @@ body
         float: left
 
       .list_title
-        margin: 0 0 15px -30px
+        margin: 0
         float: left
         clear: both
         width: 100%
@@ -31,36 +28,64 @@ body
           max-width: 236px
           height: 30px
           padding: 5px 10px 5px 9px
-          background: url($images_path+"title_component241x40.png") left top no-repeat
           // position: absolute
           h2
             margin-left: 20px
             float: left
-            color: white
-            font-family: "Lato-Regular"
-            font-size: 18px
+            color: #83b1df
+            font-family: "Dosis-SemiBold"
+            font-size: 21px
+            text-transform: uppercase
+          h3
+            float: left
+            color: #83b1df
+            font-family: "Dosis-Medium"
+            font-size: 21px
+            text-transform: uppercase
       .projects
         padding-top: 20px
   #logos
     +grid-container
     +grid-system(16)
-    +border-radius(8px)
-    padding: 0 10px 30px 10px
-    margin-top: 60px
-    .multide
+    margin-top: 20px
+    margin-bottom: 20px
+    height: 50px
+    p
       +grid(2)
-      +grid-suffix(4)
-      a
-        margin-left: 10px
-    .comum
-      +grid(3)
-      +grid-suffix(3)
-      a
-        float: left
-        margin-top: 5px
-        margin-left: 10px
-    .power
-      +grid(4)
-      a
-        margin-top: -15px
-        float:  right
+      font-family: "Helvetica Neue"
+      font-size: 12px
+      float: left
+      color: #91908e
+      padding-top: 20px
+      margin-left: 90px
+      +text-shadow(white 1px 1px 0px)      
+    .vidasimples
+      width: 108px
+      height: 51px
+      float: left
+      margin-left: 30px
+      padding: 0px
+    .techtudo
+      width: 108px
+      height: 51px
+      float: left
+      margin-left: 30px
+      padding: 0px
+    .digitas
+      width: 108px
+      height: 51px
+      float: left
+      margin-left: 30px
+      padding: 0px
+    .catraca
+      width: 108px
+      height: 51px
+      float: left
+      margin-left: 30px
+      padding: 0px
+    .terra
+      width: 108px
+      height: 51px
+      float: left
+      margin-left: 30px
+      padding: 0px
