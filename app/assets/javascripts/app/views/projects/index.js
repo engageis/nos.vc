@@ -19,6 +19,9 @@ CATARSE.ProjectsIndexView = Backbone.View.extend({
         $(document).scrollTo('.curated_page_header', 800);
       });
     });
+     $('.slider').orbit({
+       timer: false
+    });
   }
 })
 
