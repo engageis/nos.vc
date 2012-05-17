@@ -7,4 +7,7 @@
 	#slider.bottom
 	  ul
 	    - curated_pages.each do |curated_page|
-	      li= link_to image_tag(curated_page.logo.thumb.url, :width => '220px', :height => '144px'), curated_page_path(curated_page.permalink)
+	      //li.partner= link_to image_tag(curated_page.logo.thumb.url, :width => '220px', :height => '144px'), curated_page_path(curated_page.permalink)
+
+	      li.partner
+	      	= link_to "", curated_page_path(curated_page.permalink), :style => "background: transparent url(#{curated_page.logo.thumb.url}) no-repeat center"
