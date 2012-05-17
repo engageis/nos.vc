@@ -55,12 +55,6 @@
           = link_to t('main.links.recents'), explore_path()+'#recent'
 
     .clearfix
-
-  .container.partners
-    .list_title
-      .title
-        h3= t('sections.partners.title')
-      p= "Veja os encontros que eles assinam embaixo:"
     = render :partial => 'curated_pages_list', :locals => {:curated_pages => @curated_pages} unless @curated_pages.empty?
     .clearfix
   #logos

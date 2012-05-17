@@ -1,4 +1,10 @@
-.channels_list_widget
-  ul
-    - curated_pages.each do |curated_page|
-      li= link_to image_tag(curated_page.logo.thumb.url, :width => '220px', :height => '144px'), curated_page_path(curated_page.permalink)
+.container.partners
+    .list_title
+      .title
+        h3= t('sections.partners.title')
+      p= "Veja os encontros que eles assinam embaixo:"
+
+	#slider.bottom
+	  ul
+	    - curated_pages.each do |curated_page|
+	      li= link_to image_tag(curated_page.logo.thumb.url, :width => '220px', :height => '144px'), curated_page_path(curated_page.permalink)
