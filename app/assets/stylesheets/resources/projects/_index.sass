@@ -14,35 +14,71 @@
           +text-shadow(white 1px 1px 0px)
           border-bottom: 1px #d8d3d3 dashed
           padding-bottom: 15px
+          margin-bottom: 50px
+          p
+            font-family: "Dosis-Light"
+            font-size: 18px
+            color: #555555
+            text-transform: none
+            margin-top: 6px 
       .expiring_projects
         h2
-          background: url($images_path+"expiring_icon20x22.png") left top no-repeat
-          text-indent: 28px
-          padding-bottom: 3px
+          background: image-url("nosvc/icon-ultimachamada.jpg") left top no-repeat
+          text-indent: 60px
+          height: 45px
+          +grid-system(16)
+          +text-shadow(white 1px 1px 0px)
+          border-bottom: 1px #d8d3d3 dashed
+          padding-bottom: 15px
+          margin-bottom: 50px
+          p
+            font-family: "Dosis-Light"
+            font-size: 18px
+            color: #555555
+            text-transform: none
+            margin-top: 6px       
       .recents_projects
         h2
-          background: url($images_path+"recents_icon31x17.png") left top no-repeat
-          text-indent: 38px
-          padding-bottom: 3px
+          background: image-url("nosvc/icon-ultimachamada.jpg") left top no-repeat
+          text-indent: 60px
+          height: 45px
+          +grid-system(16)
+          +text-shadow(white 1px 1px 0px)
+          border-bottom: 1px #d8d3d3 dashed
+          padding-bottom: 15px
+          margin-bottom: 50px
+          p
+            font-family: "Dosis-Light"
+            font-size: 18px
+            color: #555555
+            text-transform: none
+            margin-top: 6px       
       .explore_link
-        padding-top: 20px
-        padding-bottom: 30px
+        margin-top: 50px
         float: left
+        margin-bottom: 50px
+        +grid-system(16)
         hr
-          +grid(8)
+          +grid(10)
           border: none
-          border-bottom: 1px rgba(black, 0.1) solid
-          +omega
-          padding-top: 2px
+          border-bottom: 1px #d8d3d3 dashed
+          margin-top: 9px
         a
-          +grid(4)
-          +omega
-          font-family: "Lato-Regular"
-          font-size: 14px
-          color: $pink
+          width: auto
+          float: right
+          font-family: "Dosis-Medium"
+          font-size: 18px
+          color: #83b1df
           text-decoration: none
+          text-transform: uppercase
+          margin: 0px
+          +text-shadow(white 1px 1px 0px)
+          background: image-url("nosvc/icon-link.gif") right 2px no-repeat
+          text-align: right
+          padding-right: 25px
+          padding-left: 25px
           &:hover
-            color: $green
+            text-decoration: underline
 
     .partners
       padding-top: 20px
@@ -64,11 +100,12 @@
       
       .list-title    
       p
-        font-family: "Dosis-Regular"
+        font-family: "Dosis-Light"
         font-size: 18px
         color: #555555
         clear: both
         text-align: center
+        +text-shadow(white 1px 1px 0px)
 
       .channels_list_widget
         ul

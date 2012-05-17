@@ -1,7 +1,20 @@
 #page_content
   .container
     iframe src="http://player.vimeo.com/video/27359974?title=0&amp;byline=0&amp;portrait=0" width="960" height="540" frameborder="0" 
-
+    a href="https://twitter.com/share" class="twitter-share-button" data-url="http://twitter.com/nos_vc"
+    .fb-like data-href="http://www.facebook.com/nos.vc" data-send="false" data-layout="button_count" data-width="200" data-show-faces="false"
+  
+    #slider
+      .nav-esq
+      ul
+        li.explorar
+          a
+            p
+              span Aprenda 
+              | algo novo. Inscreva-se em um encontro na 
+              span sua cidade
+              |.
+      .nav-dir
     .main
       .selected_projects.list
         .list_title
@@ -24,7 +37,9 @@
       .expiring_projects.list
         .list_title
           .title
-            h2= t('sections.expiring.title')
+            h2
+              = t('sections.selection.title')
+              p= "Encontros incríveis que nos inspiram. Divirta-se!"
         .projects
           /= raise @expiring.inspect
           /= render :partial => 'project', :collection => @expiring
@@ -37,7 +52,9 @@
       .recents_projects.list
         .list_title
           .title
-            h2= t('sections.recents.title')
+            h2
+              = t('sections.selection.title')
+              p= "Corra, tá chegando a hora! As incrições estão quase encerrando."
         .projects
           /= raise @expiring.inspect
           / = render :partial => 'project', :collection => @recent

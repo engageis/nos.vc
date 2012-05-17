@@ -5,11 +5,69 @@ body
       +grid-system(16)
       padding: 0 10px 0 10px
       margin-bottom: 40px
+      
+      .fb-like 
+        float: right
+        width: 120px
+        margin-right: 10px
+        margin-top: 5px
 
+      .twitter-share-button
+        float: right
+        margin-top: 5px
+
+      #slider
+        margin: 0 auto
+        float: left
+        +grid-system(16)
+        background-color: #f9f9f9
+        border-top: 1px #d8d3d3 dashed
+        border-bottom: 1px #d8d3d3 dashed
+        height: 160px
+        margin-top: 20px
+        margin-bottom: 60px
+        ul
+          +grid(14)
+          margin: 0 auto
+          float: left
+          height: 160px
+          li.explorar
+            +grid(14)
+            height: 160px
+            a
+              background: image-url("nosvc/slider-explorar.gif") left top no-repeat
+              height: 120px
+              float: left
+              display: block
+              padding-left: 290px
+              padding-top: 35px
+              p
+                font-family: "Dosis-ExtraLight"
+                font-size: 41px
+                letter-spacing: -1px
+                width: 460px
+                +text-shadow(white 1px 1px 0px) 
+                color: #5d5d5d
+                line-height: 46px
+                span
+                  color: #83b1df
+        .nav-esq
+          float: left
+          background: image-url("nosvc/seta-esq.gif") left 6px no-repeat
+          height: 156px
+          width: 40px
+          margin-left: 20px
+          margin-right: 10px
+        .nav-dir
+          float: right
+          background: image-url("nosvc/seta-dir.gif") left 6px no-repeat
+          height: 156px
+          width: 40px
+          margin-right: 20px
       .main
         padding-top: 17px
         +grid(12)
-                
+
       .sidebar
         +grid(4)
         +omega
