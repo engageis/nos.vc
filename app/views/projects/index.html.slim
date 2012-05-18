@@ -52,8 +52,8 @@
           hr
           = link_to t('main.links.recents'), explore_path()+'#recent'
     .clearfix
-    = render :partial => 'curated_pages_list', :locals => {:curated_pages => @curated_pages} unless @curated_pages.empty?
-    .clearfix
+
+  = render :partial => 'curated_pages_list', :locals => {:curated_pages => @curated_pages} unless @curated_pages.empty?
   #logos
     p
      = "Mãe, olha a gente:"
@@ -72,4 +72,4 @@
         = image_tag('nosvc/logo-catracalivre.jpg', :alt => 'Catraca Livre')
     .terra
       = link_to '#', :target => '_blank' do
-        = image_tag('nosvc/logo-terra.jpg', :alt => 'Terra')    
+        = image_tag('nosvc/logo-terra.jpg', :alt => 'Terra')

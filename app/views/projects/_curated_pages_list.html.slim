@@ -1,13 +1,16 @@
-.container.partners
+.partners
+  .container
     .list_title
       .title
         h3= t('sections.partners.title')
-      p= "Veja os encontros que eles assinam embaixo:"
-
-	#slider.bottom
-	  ul
-	    - curated_pages.each do |curated_page|
-	      //li.partner= link_to image_tag(curated_page.logo.thumb.url, :width => '220px', :height => '144px'), curated_page_path(curated_page.permalink)
-
-	      li.partner
-	      	= link_to "", curated_page_path(curated_page.permalink), :style => "background: transparent url(#{curated_page.logo.thumb.url}) no-repeat center"
+        p= "Veja os encontros que eles assinam embaixo:"
+  .slider_wrapper.bottom
+    .container
+      .slider
+        - curated_pages.in_groups_of(3) do |g|
+          .content
+            ul
+              - g.each do |curated_page|
+                li.partner
+                  = link_to "", curated_page_path(curated_page.permalink), :style => "background: transparent url(#{curated_page.logo.thumb.url}) no-repeat center"
+.clearfix
