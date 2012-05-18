@@ -1,0 +1,102 @@
+#page_content
+  #slider_wrapper
+    margin: 0 auto
+    background-color: #f9f9f9
+    border-top: 1px #d8d3d3 dashed
+    border-bottom: 1px #d8d3d3 dashed
+    height: 160px
+    margin-top: 20px
+    margin-bottom: 60px
+    .container
+      position: relative
+      .slider
+        +grid-system(14)
+        height: 160px
+        position: relative
+        overflow: hidden
+        div
+          position: absolute
+          top: 0
+          left: 0
+          +grid-system(14)
+          height: 160px
+          background-color: #f9f9f9
+        .explore
+          a
+            background: image-url("nosvc/slider-explorar.gif") 80px top no-repeat
+            height: 120px
+            float: left
+            display: block
+            padding-left: 350px
+            padding-top: 35px
+            p
+              font-family: "Dosis-ExtraLight"
+              font-size: 41px
+              letter-spacing: -1px
+              width: 460px
+              text-align: center
+              +text-shadow(white 1px 1px 0px) 
+              color: #5d5d5d
+              line-height: 46px
+              span
+                color: #83b1df
+        .create
+          a
+            background: image-url("nosvc/slider-criar.gif") 80px top no-repeat
+            height: 120px
+            float: left
+            display: block
+            padding-left: 360px
+            padding-top: 35px
+            cursor: pointer
+            p
+              font-family: "Dosis-ExtraLight"
+              font-size: 41px
+              letter-spacing: -1px
+              width: 460px
+              +text-shadow(white 1px 1px 0px)
+              color: #5d5d5d
+              line-height: 46px
+              text-align: center
+              span
+                color: #b178ad
+        .how_works
+          a
+            background: image-url("nosvc/slider-comofunciona.gif") 80px top no-repeat
+            height: 120px
+            float: left
+            display: block
+            padding-left: 230px
+            padding-top: 35px
+            cursor: pointer
+            p
+              font-family: "Dosis-ExtraLight"
+              font-size: 41px
+              letter-spacing: -1px
+              width: 690px
+              text-align: center
+              +text-shadow(white 1px 1px 0px)
+              color: #5d5d5d
+              line-height: 46px
+              span
+                color: #ed6569
+    .slider-nav
+      +grid-system(16)
+      span
+        height: 160px
+        width: 60px
+        text-indent: -300em
+        cursor: pointer
+        z-index: 1000
+        position: absolute
+        text-indent: -9999px
+      .left
+        background: image-url("nosvc/seta-esq.gif") 18px top no-repeat
+        left: 0px
+        margin-top: -160px
+        background-color: #f9f9f9
+      .right
+        background: image-url("nosvc/seta-dir.gif") 0px top no-repeat
+        right: 0px
+        margin-top: -160px
+        background-color: #f9f9f9
