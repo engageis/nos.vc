@@ -131,29 +131,32 @@ body
 
       .list_title
         margin: 0
-        float: left
         clear: both
         width: 100%
         .title
-          float: left
-          min-width: 103px
-          max-width: 236px
-          height: 30px
-          padding: 5px 10px 5px 9px
-          // position: absolute
           h2
-            margin-left: 20px
-            float: left
             color: #83b1df
             font-family: "Dosis-SemiBold"
             font-size: 21px
             text-transform: uppercase
+            text-indent: 60px
+            height: 45px
+            +text-shadow(white 1px 1px 0px)
+            border-bottom: 1px #d8d3d3 dashed
+            padding-bottom: 15px
+            margin-bottom: 50px
           h3
             float: left
             color: #83b1df
             font-family: "Dosis-Medium"
             font-size: 21px
             text-transform: uppercase
+          p
+            font-family: "Dosis-Light"
+            font-size: 18px
+            color: #555555
+            text-transform: none
+            margin-top: 6px    
       .projects
         padding-top: 20px
   #logos

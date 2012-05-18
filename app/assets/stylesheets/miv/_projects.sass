@@ -1,9 +1,9 @@
 div.project
-  +grid(4)
+  +grid(15)
   background-color: $ed_gryn
+  margin-left: 70px
   +transition(all, 0.3s)
-  height: 415px
-  overflow: hidden
+  height: 400px
   &.first
     +alpha
   &.last
@@ -11,16 +11,9 @@ div.project
   // +alpha
   // &.without_omega
   //   +omega
-  &:hover
-    +box-shadow(rgba(black, 0.3) 0px 0px 4px)
   .status_image
     position: absolute
     z-index: 100
-  .success_slice
-    width: 110px
-    height: 110px
-    overflow: hidden
-    position: absolute
     &.pt
       background: image-url("redesign/success_pt110x110.png") left top no-repeat
   .box
@@ -45,8 +38,8 @@ div.project
       overflow: hidden
       margin-bottom: 8px
       img
-        width: 220px
-        height: 172px
+        width: 400px
+        height: 220px
         vertical-align: middle
     h4
       font-size: 14px
