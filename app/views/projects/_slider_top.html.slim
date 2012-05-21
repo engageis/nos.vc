@@ -3,23 +3,13 @@
     .slider
       .content.explore
         a
-          p
-            span Aprenda 
-            | algo novo. Inscreva-se em um encontro na 
-            span sua cidade
-            |.
+          /.title = t('slider.top.explore.title')
+          p = t('slider.top.explore.text').html_safe
       .content.create
         a
-          p
-            | Compartilhe sua 
-            span paixão 
-            | e encontre outros  
-            span apaixonados
-            |.
+          /.title = t('slider.top.create.title')
+          p = t('slider.top.create.text').html_safe
       .content.how_works
         a
-          p
-            span Aprenda 
-            | e 
-            span ensine  
-            | ao lado de pessoas apaixonadas pelas mesmas coisas que você.
+          /.title = t('slider.top.how_works.title')
+          p = t('slider.top.how_works.text').html_safe

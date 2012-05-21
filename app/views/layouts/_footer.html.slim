@@ -1,50 +1,56 @@
 #footer
-      .container.footer
-        .content
-          .logofooter
-            = link_to '#' do
-              = image_tag('nosvc/logofooter.jpg', :target => '_blank', :alt => 'Página Inicial')
+  .container.footer
+    .content
+      .logofooter
+        = link_to root_path do
+          = image_tag('nosvc/logofooter.jpg', :target => '_blank', :alt => 'Nós.vc')
 
-          .info
-            h3= t('footer.titles.info')
-            ul
-              li= link_to t('footer.links.how_works'), guidelines_path
-              li= link_to t('footer.links.faq'), faq_path
-              li= mail_to t('site.email.contact'), t('layouts.footer.email'), :target => :_blank
+      .info
+        h3= t('footer.titles.info')
+        ul
+          li.explore = link_to t('layouts.header.explore'), explore_path
+          li.submit_project = link_to t('layouts.header.submit_project'), start_projects_path
+          li.how_works = link_to t('layouts.header.how_works'), guidelines_path
 
-          .opendata
-            h3= t('footer.titles.opendata')
-            ul
-              li
-                h5= @total_backers
-                p= t('footer.stats.backers')
-              li
-                h5= @total_backs
-                p= t('footer.stats.backs')
-              li
-                h5= number_to_currency @total_backed, :unit => 'R$', :precision => 0, :delimiter => '.'
-                p= t('footer.stats.total_backed')
-              li
-                h5= @total_users
-                p= t('footer.stats.users')
-              li
-                h5= @total_projects_success
-                p= t('footer.stats.funded_projects')
+      .opendata
+        h3= t('footer.titles.opendata')
+        ul
+          li
+            h5= @total_backers
+            p= t('footer.stats.backers')
+          li
+            h5= @total_backs
+            p= t('footer.stats.backs')
+          li
+            h5= number_to_currency @total_backed, :unit => 'R$', :precision => 0, :delimiter => '.'
+            p= t('footer.stats.total_backed')
+          /li
+            /h5= @total_users
+            /p= t('footer.stats.users')
+          li
+            h5= @total_projects_success
+            p= t('footer.stats.funded_projects')
 
-          .social
-            h3= t('footer.titles.social')
-            .facebook
-              .fb-like data-href="http://www.nos.vc" data-send="false" data-width="210" data-show-faces="true"
-            .twitter
-              = link_to "Follow @#{t('site.twitter')}", "http://twitter.com/#{t('site.twitter')}", :class => 'twitter-follow-button', :"data-button"=>"blue", :"data-text-color" => "#ffffff", :"data-link-color"=>"#fffffff", :"data-width" => "224px"
-          .links
-            p
-             = link_to "Blog", "#"
-             | |
-             = link_to "Sobre", "#"
-             | |             
-             = link_to "Contato", "#"
-             | |
-             = link_to "Termos de Uso", "#"
-             | |             
-             = link_to "Política de Privacidade", "#"
+      .social
+        h3= t('footer.titles.social')
+        .facebook
+          .fb-like data-href="http://www.nos.vc" data-send="false" data-width="210" data-show-faces="true"
+        .twitter
+          = link_to "Follow @#{t('site.twitter')}", "http://twitter.com/#{t('site.twitter')}", :class => 'twitter-follow-button', :"data-button"=>"blue", :"data-text-color" => "#ffffff", :"data-link-color"=>"#fffffff", :"data-width" => "224px"
+      .clear
+    .sub-footer
+      .content
+        .links
+          p
+           = link_to "Blog", "http://blog.nos.vc"
+           | |
+           = link_to t('footer.links.about'), faq_path
+           | |
+           = mail_to t('site.email.contact'), t('layouts.footer.email'), :target => :_blank
+           | |
+           = link_to t('footer.links.terms'), terms_path
+           | |
+           = link_to t('footer.links.policy'), privacy_path
+        .power
+          = link_to image_tag("nosvc/power_logo.png", alt: "power to the crowd", title: "power to the crowd"), "http://engage.is", target: "_blank"
+        .clear

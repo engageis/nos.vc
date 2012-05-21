@@ -9,15 +9,11 @@
           .title
             h2
               = t('sections.selection.title')
-              p= "Encontros incríveis que nos inspiram. Divirta-se!"
+              p = t('sections.selection.description')
         .projects
           = render :partial => 'project', :locals => {:project => @first_project, :custom_class => 'first' } if @first_project
           = render :partial => 'project', :locals => {:project => @second_project } if @second_project
           = render :partial => 'project', :locals => {:project => @third_project, :custom_class => 'last' } if @third_project
-          /= raise @expiring.inspect
-          / = render :partial => 'project', :collection => @expiring
-          / - @expiring.each_with_index do |item,i|
-          /   == render 'project', :project => item, :custom_class => (@expiring.length == (i+1) ? 'without_omega' : '')
         .explore_link
           hr
           = link_to t('main.links.selected'), explore_path()+"#recommended"
@@ -26,11 +22,9 @@
         .list_title
           .title
             h2
-              = t('sections.selection.title')
-              p= "Encontros incríveis que nos inspiram. Divirta-se!"
+              = t('sections.expiring.title')
+              p = t('sections.expiring.description')
         .projects
-          /= raise @expiring.inspect
-          /= render :partial => 'project', :collection => @expiring
           - @expiring.each_with_index do |item,i|
             == render 'project', :project => item, :custom_class => ((@expiring.length == (i+1) ? 'last' : false) || (i==0 ? 'first' : false))
         .explore_link
@@ -41,11 +35,9 @@
         .list_title
           .title
             h2
-              = t('sections.selection.title')
-              p= "Corra, tá chegando a hora! As incrições estão quase encerrando."
+              = t('sections.recents.title')
+              p = t('sections.recents.description')
         .projects
-          /= raise @expiring.inspect
-          / = render :partial => 'project', :collection => @recent
           - @recent.each_with_index do |item,i|
             == render 'project', :project => item, :custom_class => ((@recent.length == (i+1) ? 'last' : false) || (i==0 ? 'first' : false))
         .explore_link
@@ -54,22 +46,4 @@
     .clearfix
 
   = render :partial => 'curated_pages_list', :locals => {:curated_pages => @curated_pages} unless @curated_pages.empty?
-  #logos
-    p
-     = "Mãe, olha a gente:"
-
-    .vidasimples
-      = link_to '#' do
-        = image_tag('nosvc/logo-vidasimples.jpg', :target => '_blank', :alt => 'Vida Simples')
-    .techtudo
-      = link_to '#', :target => '_blank' do
-        = image_tag('nosvc/logo-techtudo.jpg', :alt => 'TechTudo')
-    .digitas
-      = link_to '#', :target => '_blank' do
-        = image_tag('nosvc/logo-digitas.jpg', :alt => 'DigiTas') 
-    .catraca
-      = link_to '#', :target => '_blank' do
-        = image_tag('nosvc/logo-catracalivre.jpg', :alt => 'Catraca Livre')
-    .terra
-      = link_to '#', :target => '_blank' do
-        = image_tag('nosvc/logo-terra.jpg', :alt => 'Terra')
+  = render 'mother_look_us'

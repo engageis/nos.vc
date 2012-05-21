@@ -1,13 +1,12 @@
 .footer
   +grid-system(16)
-  background: image-url("nosvc/background-footer.gif") left top repeat-x
+  background: #393737
   width: 100%
   margin: 0 auto
-  height: 217px
   .content
     padding: 20px 0 0
-    +grid-container   
-    margin: 0 auto 
+    +grid-container
+    margin: 0 auto
     h3
       font-family: Dosis-SemiBold
       font-size: 16px
@@ -26,19 +25,29 @@
       ul
         li
           margin-bottom: 5px
-          background: image-url("nosvc/background-lifooter.gif") left top repeat-x
-          height: 31px
+          background: image-url("nosvc/background-lifooter.gif") left bottom repeat-x
           a
             font-family: "Dosis-Regular"
             font-size: 15px
             color: #d7d6d0
             text-transform: uppercase
             text-decoration: none
-            margin-top: 5px
-            float: left
+            text-indent: 30px
+            margin: 5px 0 5px 0
+            padding: 8px 0 10px 0
             +text-shadow(black 1px 1px 0px)
+            display: block
             &:hover
               color: #83b1df
+        li.explore
+          a
+            background: image-url("nosvc/icon-explorar.png") left no-repeat
+        li.submit_project
+          a
+            background: image-url("nosvc/icon-criar.png") left no-repeat
+        li.how_works
+          a
+            background: image-url("nosvc/icon-comofunciona.png") left no-repeat
 
     .opendata
       +grid(4)
@@ -93,22 +102,29 @@
           +transition(all, 0.5s)
           &:active
             +box-shadow(rgba(black, 0.5) 0 0 5px inset)
-    .links
+  .clear
+    clear: both
+  .sub-footer
+    padding: 5px 0 5px 0
+    text-align: right
+    background: #332F2F
+    .content
       +grid-container
-      margin-top: 24px
-      float: left
-      text-align: center
-      a
-        padding-top: 4px
-        padding-left: 10px
-        padding-right: 10px
-        color: #979595
-        font-family: "Helvetica Neue"
-        font-size: 11px
-        text-transform: uppercase
-        +text-shadow(black 1px 1px 0px)
-        text-decoration: none
-        &:hover
-          color: #83b1df
-
-
+      padding: 0
+      .links
+        padding-top: 10px
+        +grid(12)
+        a
+          padding-top: 4px
+          padding-left: 10px
+          padding-right: 10px
+          color: #979595
+          font-family: "Helvetica Neue"
+          font-size: 11px
+          text-transform: uppercase
+          +text-shadow(black 1px 1px 0px)
+          text-decoration: none
+          &:hover
+            color: #83b1df
+      .power
+        +grid(4)

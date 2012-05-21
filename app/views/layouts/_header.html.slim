@@ -3,8 +3,8 @@
     nav.actions
       ul
         li.explore = link_to t('layouts.header.explore'), explore_path
-        li.submit_project = link_to t('layouts.header.submit_project'), guidelines_path
-        li.help = link_to t('layouts.header.help'), faq_path
+        li.submit_project = link_to t('layouts.header.submit_project'), start_projects_path
+        li.how_works = link_to t('layouts.header.how_works'), guidelines_path
     .search
       = form_tag explore_path(:anchor => "search"), :method => 'GET', :class=>'search_input' do
         = text_field_tag :search, nil, autocomplete: "off"

@@ -22,28 +22,29 @@ pt:
   count_backed_projects: "apoiou %{total} projetos"
   footer:
     titles:
-      info: "informações úteis"
-      opendata: "estatísticas bacanas"
-      social: "curtiu o catarse?"
+      info: "Menu"
+      opendata: "Números mágicos"
+      social: "curtiu o Nós.vc?"
       newsletter: "receba nossa newsletter"
     stats:
-      backers: Apoiadores
-      backs: Apoios
-      total_backed: Arrecadados
+      backers: "Pessoas fazem parte do Nós.vc"
+      backs: "Delas participaram dos encontros"
+      total_backed: "É o total de inscrições feitas"
       users: Usuários
-      funded_projects: "Projetos bem sucedidos"
-      active_projects: "Projetos no ar agora"
+      funded_projects: "Encontros já foram realizados"
+      active_projects: "Estão com inscrições abertas"
     links:
       how_works: "Como funciona"
       faq: F.A.Q./Ajuda
       terms: "Termos de Uso"
       policy: "Política de Privacidade"
       contact: Contato
+      about: "sobre"
   main:
     links:
-      selected: "explore mais projetos selecionados"
-      expiring: "explore mais projetos na reta final"
-      recents: "explore mais projetos recentes"
+      selected: "Veja todos os nossos destaques"
+      expiring: "Veja todos em última chamada"
+      recents: "Veja todos saindo do forno"
   sidebar:
     titles:
       blog: blog
@@ -56,13 +57,18 @@ pt:
       newsletter: assinar
   sections:
     selection:
-      title: seleção
+      title: "Nossos destaques"
+      description: "Encontros incríveis que nos inspiram. Divirta-se!"
     expiring:
-      title: "na reta final"
+      title: "Última chamada"
+      description: "Corra, tá chegando a hora! As incrições estão quase encerrando."
     recents:
-      title: "novos e fresquinhos"
+      title: "Saindo do forno"
+      description: "Garanta sua vaga, inscreva-se e faça acontecer."
     partners:
-      title: parceiros
+      title: "Nossos amigos"
+      description: "Veja os encontros que eles assinam embaixo:"
+    mother_look_us: "Mãe, olha a gente:"
   "no": Não
   "yes": Sim
   accept_terms_html: "Eu li e estou de acordo com os %{link}."
@@ -110,6 +116,17 @@ pt:
     blank_slate:
       content: "Não existem %{resource_name} ainda."
       link: "Crie uma"
+  slider:
+    top:
+      explore:
+        title: "Explorar encontros"
+        text: "<span>Aprenda</span> algo novo. Inscreva-se em um encontro na <span>sua cidade</span>."
+      create:
+        title: "Criar um encontro"
+        text: "Compartilhe sua <span>paixão</span> e encontre outros <span>apaixonados</span>."
+      how_works:
+        title: "Como funciona"
+        text: "<span>Aprenda</span> e <span>ensine</span> ao lado de pessoas apaixonadas pelas mesmas coisas que você."
   activerecord:
     errors:
       models:
@@ -348,30 +365,22 @@ pt:
     api_test: "no text"
   layouts:
     application:
-      menu:
-        explore: "Explore os projetos"
-        login: Login
-        signup: Cadastre-se
-        submit: "Envie seu projeto"
       notifications:
         new_curated_pages: "Já conhece os Canais Catárticos? <a href='#curated_pages' id='curated_link'>Olha aqui</a>!"
     header:
-      blog: blog
-      help: ajuda
-      signup: cadastre-se
-      signin: login
-      explore: explore
-      submit_project: envie
-      profile: "meu perfil"
+      signup: "cadastre-se"
+      signin: "login"
+      explore: "Explorar encontros"
+      submit_project: "Criar encontros"
+      how_works: "Como funciona"
+      profile: "Meu perfil"
     recommended_header:
       sugest_for_you: "sugerido para você"
       highlight_project: "projeto em destaque"
     footer:
-      blog: "Leia o blog"
-      comum: "Grupo Comum"
-      email: Contato
+      email: "Contato"
       facebook: "Curta no Facebook"
-      faq: FAQ/Ajuda
+      faq: "FAQ/Ajuda"
       guidelines: "Como funciona?"
       privacy: "Política de privacidade"
       terms: "Termos de uso"
@@ -943,5 +952,4 @@ pt:
       default: "%A, %d de %B de %Y, %H:%M h"
       long: "%A, %d de %B de %Y, %H:%M h"
       short: "%d/%m, %H:%M h"
-      updates: "%d %b %Y"
     pm: ~

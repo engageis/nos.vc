@@ -1,5 +1,5 @@
 en:
-  or: or
+  or: ~
   newsletter_ok_header: ~
   newsletter_ok_body: ~
   newsletter_error_header: ~
@@ -103,9 +103,7 @@ en:
       one: ~
       one_page: ~
       multiple: ~
-      entry:
-        one: ~
-        other: ~
+      entry: ~
     any: ~
     blank_slate:
       content: ~
@@ -289,9 +287,7 @@ en:
       wrong_length: ~
     template:
       body: ~
-      header:
-        one: ~
-        other: ~
+      header: ~
   explore:
     index:
       categories: Categories
@@ -362,6 +358,7 @@ en:
       signin: login
       explore: explore
       submit_project: submit
+      how_works: ~
       profile: "my profile"
     recommended_header:
       sugest_for_you: "suggested for you"
@@ -500,9 +497,9 @@ en:
           moip: "Proceed to MoIP's checkout"
         subtitle: "This is the last step to make the difference and become part of this project."
         title: "Fill in and review your data"
-        choose_payment: "How do you want to pay?"
-        choose_credit_card: "Credit Card"
-        choose_boleto: "Billet Banking"
+        choose_payment: ~
+        choose_credit_card: ~
+        choose_boleto: ~
         you_are_about_html: "You are about to become part of the group that does everything to make %{link} happen."
     create:
       success: "Your project was successfully created! We'll soon contact you. Thanks a lot!"
@@ -828,40 +825,18 @@ en:
       - :year
   datetime:
     distance_in_words:
-      about_x_hours:
-        one: ~
-        other: ~
-      about_x_months:
-        one: ~
-        other: ~
-      about_x_years:
-        one: ~
-        other: ~
-      almost_x_years:
-        one: ~
-        other: ~
+      about_x_hours: ~
+      about_x_months: ~
+      about_x_years: ~
+      almost_x_years: ~
       half_a_minute: ~
-      less_than_x_minutes:
-        one: ~
-        other: ~
-      less_than_x_seconds:
-        one: ~
-        other: ~
-      over_x_years:
-        one: ~
-        other: ~
-      x_days:
-        one: ~
-        other: ~
-      x_minutes:
-        one: ~
-        other: ~
-      x_months:
-        one: ~
-        other: ~
-      x_seconds:
-        one: ~
-        other: ~
+      less_than_x_minutes: ~
+      less_than_x_seconds: ~
+      over_x_years: ~
+      x_days: ~
+      x_minutes: ~
+      x_months: ~
+      x_seconds: ~
     prompts:
       day: Day
       hour: Hour
@@ -896,19 +871,11 @@ en:
       decimal_units:
         format: "%n %u"
         units:
-          billion:
-            one: ~
-            other: ~
-          million:
-            one: ~
-            other: ~
-          quadrillion:
-            one: ~
-            other: ~
+          billion: ~
+          million: ~
+          quadrillion: ~
           thousand: ~
-          trillion:
-            one: ~
-            other: ~
+          trillion: ~
           unit: ~
       format:
         delimiter: "."
@@ -918,9 +885,7 @@ en:
       storage_units:
         format: ~
         units:
-          byte:
-            one: ~
-            other: ~
+          byte: ~
           gb: ~
           kb: ~
           mb: ~
