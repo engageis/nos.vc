@@ -7,10 +7,11 @@
   .slider_wrapper.bottom
     .container
       .slider
-        - curated_pages.in_groups_of(3) do |g|
+        - curated_pages.in_groups_of(6) do |g|
           .content
             ul
               - g.each do |curated_page|
-                li.partner
-                  = link_to "", curated_page_path(curated_page.permalink), :style => "background: transparent url(#{curated_page.logo.thumb.url}) no-repeat center"
+                - if curated_page
+                  li.partner
+                    = link_to curated_page.name, curated_page_path(curated_page.permalink), :style => "background: transparent url(#{curated_page.logo.thumb.url}) no-repeat center"
 .clearfix
