@@ -13,6 +13,22 @@ div.project
       background: image-url("redesign/success_pt110x110.png") left top no-repeat
   .box
     position: relative
+    .open
+      background: image-url("nosvc/flag-inscabertas.png") left top no-repeat
+      width: 156px
+      height: 47px
+      position: absolute
+      left: -9px
+      margin-top: 16px
+      z-index: 1000
+    .closed
+      background: image-url("nosvc/flag-inscencerradas.png") left top no-repeat
+      width: 156px
+      height: 47px
+      position: absolute
+      left: -9px
+      margin-top: 16px
+      z-index: 1000
     .project_content
       padding: 0px 5px
       border-bottom: 1px rgba(white, 0.2) solid
@@ -29,7 +45,7 @@ div.project
       position: relative
       img
         width: 400px
-        height: 220px
+        overflow: hidden
         vertical-align: middle
       .black_box
         position: absolute
@@ -65,11 +81,11 @@ div.project
       line-height: 21px
       font-size: 14px
       padding: 0px 0 0px 3px
-      margin-top: 30px
-      height: 60px
+      margin-top: 24px
+      height: 70px
     .author
-      font-size: 11px
-      height: 12px
+      font-size: 13px
+      height: 15px
     .where
       padding: 8px 10px 8px 20px
       background-color: #83b1df
@@ -98,9 +114,8 @@ div.project
       height: 200px
       width: 114px
       padding: 10px
-
     ul
-      padding-top: 10px
+      padding-top: 60px
       display: block
       li
         float: left
