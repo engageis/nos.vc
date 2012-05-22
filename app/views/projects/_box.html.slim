@@ -10,8 +10,26 @@
         - else
           = image_tag "not_successful.#{I18n.locale}.png"
   .box
-    p.black_box= project.category.name
+    .info_bar
+      .status_bar
+        .progress style="width: #{project.display_progress}%;"
+      ul
+        li
+          - if project.in_time?
+            h6= "#{project.time_to_go[:time]} #{project.time_to_go[:unit]}"
+            p= "#{project.remaining_text}"
+          - else
+            h6= I18n.t("project.display_status.#{project.display_status}").capitalize
+            p= project.display_expires_at
+        li
+          h6= "#{project.display_pledged}"
+          p= "#{t('projects.project.backed')}"
+
+        //li
+          //h6= "#{project.progress}%"
+          //p= "#{t('projects.project.reached')}"
     .cover
+      p.black_box= project.category.name
       = link_to project do
         = image_tag project.display_image, :itemprop => 'image'
     .project_content
@@ -28,21 +46,3 @@
           - unless project.user.address_state.blank?
             | /
             = project.user.address_state
-    .info_bar
-      .status_bar
-        .progress style="width: #{project.display_progress}%;"
-      ul
-        li
-          - if project.in_time?
-            h6= "#{project.time_to_go[:time]} #{project.time_to_go[:unit]}"
-            p= "#{project.remaining_text}"
-          - else
-            h6= I18n.t("project.display_status.#{project.display_status}").capitalize
-            p= project.display_expires_at
-        li
-          h6= "#{project.display_pledged}"
-          p= "#{t('projects.project.backed')}"
-
-        li
-          h6= "#{project.progress}%"
-          p= "#{t('projects.project.reached')}"

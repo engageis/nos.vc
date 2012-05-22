@@ -1,84 +1,91 @@
 div.project
-  +grid(15)
-  background-color: $ed_gryn
-  margin-left: 70px
+  width: 895px
+  margin-left: 65px
+  margin-bottom: 60px
   +transition(all, 0.3s)
-  height: 400px
-  &.first
-    +alpha
+  height: 220px
   &.last
     +omega
-  // +alpha
-  // &.without_omega
-  //   +omega
   .status_image
     position: absolute
     z-index: 100
     &.pt
       background: image-url("redesign/success_pt110x110.png") left top no-repeat
   .box
+    position: relative
     .project_content
-      padding: 5px
+      padding: 0px 5px
       border-bottom: 1px rgba(white, 0.2) solid
-    .black_box
-      text-transform: uppercase
-      position: absolute
-      background-color: rgba(0,0,0,.6)
-      height: 16px
-      overflow: hidden
-      margin-top: 148px
-      padding: 7px 0 1px 5px
-      color: white
-      font-family: Lato-Regular
-      font-size: 11px
-      width: 215px
+      position: relative
+      height: 220px
+      +grid(6)
+      margin-right: 0px
     .cover
-      width: 220px
-      height: 172px
+      width: 400px
+      height: 220px
       overflow: hidden
       margin-bottom: 8px
+      float: left
+      position: relative
       img
         width: 400px
         height: 220px
         vertical-align: middle
+      .black_box
+        position: absolute
+        background-color: rgba(0,0,0,.6)
+        height: 28px
+        overflow: hidden
+        margin-top: 150px
+        padding: 7px 10px 1px 10px
+        color: white
+        font-family: "Dosis-Light"
+        font-size: 21px
+        right: 0px       
     h4
-      font-size: 14px
-      color: $blue
-      padding: 5px 0 10px 3px
-      font-family: Lato-Bold
-      height: 18px
+      font-size: 24px
+      line-height: 26px
+      color: #5d5d5d
+      padding: 0px 0 10px 3px
+      font-family: "Dosis-Regular"
       overflow: hidden
       margin-bottom: 3px
       a
-        color: black
-        font-family: Lato-Bold
-        font-size: 14px
+        color: #5d5d5d
+        font-family: "Dosis-Regular"
         text-decoration: none
         &:hover
-          color: $green
+          color: #83b1df
     .author, .where, .description
       padding-left: 3px
-      font-family: Arial
-      color: black
-      font-size: 11px
-      height: 11px
+      font-family: "Helvetica Neue"
+      color: #5d5d5d
       overflow: hidden
-      +opacity(0.7)
     .description
-      overflow: hidden
-      line-height: 120%
-      font-size: 13px
-      padding: 10px 0 15px 3px
+      line-height: 21px
+      font-size: 14px
+      padding: 0px 0 0px 3px
+      margin-top: 30px
       height: 60px
-      +opacity(0.5)
+    .author
+      font-size: 11px
+      height: 12px
     .where
-      padding: 10px 0
+      padding: 8px 10px 8px 20px
+      background-color: #83b1df
+      color: white
+      font-family: "Helvetica Neue"
+      font-size: 16px
+      position: absolute
+      left: -10px
+      bottom: 0px
     .status_bar
       background-color: white
       width: 202px
       height: 10px
       overflow: hidden
       border: 1px $minimal_gryn solid
+      display: none
       +border-radius(5px)
       .progress
         +border-radius(4px)
@@ -86,31 +93,33 @@ div.project
         height: 10px
         overflow: hidden
     .info_bar
-      background: $dc_gryn
+      background: #323334
       float: left
-      width: 210px
-      padding: 5px 5px 10px
+      height: 200px
+      width: 114px
+      padding: 10px
 
     ul
       padding-top: 10px
       display: block
       li
         float: left
-        min-width: 50px
-        margin-right: 5px
+        width: 115px
+        font-family: "Dosis-Light"
+        color: #dddddd
         &:last-child
           margin-left: 0px
         h6
-          font-family: Lato-Bold
-          font-size: 12px
-          color: black
-          +opacity(0.7)
+          font-size: 38px
           margin-bottom: 3px
+          float: left
         p
           text-transform: uppercase
-          color: $super_minimal_gryn
-          font-family: Arial
-          font-size: 9px
+          font-size: 12px
+          line-height: 13px
+          width: 60px
+          float: left
+          padding-top: 4px
     .follow_project
       clear: both
       display: block
