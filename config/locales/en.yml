@@ -39,6 +39,7 @@ en:
       terms: "Terms of use"
       policy: "Privacy Policy"
       contact: Contact
+      about: ~
   main:
     links:
       selected: "explore more projects selected"
@@ -57,12 +58,17 @@ en:
   sections:
     selection:
       title: selection
+      description: ~
     expiring:
       title: expiring
+      description: ~
     recents:
       title: recents
+      description: ~
     partners:
       title: partners
+      description: ~
+    mother_look_us: ~
   "no": "No"
   "yes": "Yes"
   accept_terms_html: "I have read and accepted the %{link}."
@@ -108,6 +114,17 @@ en:
     blank_slate:
       content: ~
       link: ~
+  slider:
+    top:
+      explore:
+        title: ~
+        text: ~
+      create:
+        title: ~
+        text: ~
+      how_works:
+        title: ~
+        text: ~
   activerecord:
     errors:
       models:
@@ -344,28 +361,20 @@ en:
     api_test: "no text"
   layouts:
     application:
-      menu:
-        explore: "Explore the projects"
-        login: "Sign in"
-        signup: "Sign up"
-        submit: "Submit your project"
       notifications:
         new_curated_pages: "Now we have cathartic channels, <a href='#curated_pages' id='curated_link'>check out</a>!"
     header:
-      blog: blog
-      help: help
       signup: "sign up"
       signin: login
       explore: explore
       submit_project: submit
       how_works: ~
       profile: "my profile"
+      hello: ~
     recommended_header:
       sugest_for_you: "suggested for you"
       highlight_project: "featured project"
     footer:
-      blog: "Our blog"
-      comum: "Grupo Comum"
       email: Contact
       facebook: "Our Facebook"
       faq: FAQ/Help

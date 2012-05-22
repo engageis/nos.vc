@@ -691,26 +691,26 @@ pt:
     failure:
       error: "Ocorreu um erro ao realizar o login. Por favor, tente novamente."
   site:
-    host: catarse.me
-    base_url: "http://catarse.me"
-    blog: "http://blog.catarse.me/"
+    host: "nos.vc"
+    base_url: "http://nos.vc/"
+    blog: "http://blog.nos.vc/"
     email:
-      contact: contato@catarse.me
-      payments: financeiro@catarse.me
-      projects: projetos@catarse.me
-      system: system@catarse.me
-    facebook: "http://www.facebook.com/Catarse.me"
-    name: Catarse
-    title: "A primeira plataforma de financiamento colaborativo de projetos criativos do Brasil"
-    twitter: Catarse_
+      contact: contato@nos.vc
+      payments: financeiro@nos.vc
+      projects: projetos@nos.vc
+      system: system@nos.vc
+    facebook: "http://www.facebook.com/nos.vc"
+    name: "Nós.vc"
+    title: "Encontros Inspiradores"
+    twitter: "Nos_vc"
   static:
     faq:
       title: "Perguntas frequentes"
     guidelines:
-      accept: "Eu li e entendi como funciona o Catarse."
-      submit: "Quero enviar meu projeto"
-      subtitle: "Antes de enviar seu projeto, saiba um pouco mais sobre como funciona o Catarse."
-      title: "Como funciona o Catarse?"
+      accept: "Eu li e entendi como funciona o Nós.vc."
+      submit: "Quero enviar meu encontro"
+      subtitle: "Antes de enviar seu encontro, saiba um pouco mais sobre como funciona o Nós.vc."
+      title: "Como funciona o Nós.vc?"
     privacy:
       title: "Política de privacidade"
     terms:
@@ -727,9 +727,9 @@ pt:
       tabs:
         backed_projects: "Projetos apoiados"
         created_projects: "Projetos criados"
-        comments: Comentários
-        credits: Créditos
-        settings: Preferências
+        comments: "Comentários"
+        credits: "Créditos"
+        settings: "Preferências"
     admin_fields:
       credits: "disponíveis em créditos"
       no_email: "ainda não preencheu seu email"
@@ -796,7 +796,7 @@ pt:
       - ~
       - Jan
       - Fev
-      - Mar
+      - MarNos_vc
       - Abr
       - Mai
       - Jun
