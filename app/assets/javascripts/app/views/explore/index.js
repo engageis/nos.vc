@@ -64,7 +64,6 @@ CATARSE.ExploreIndexView = Backbone.View.extend({
   },
 
   recommended: function(){
-    this.replaceTitleBy("recommended")
     this.selectItem("recommended")
     this.initializeView({
       recommended: true,
@@ -74,7 +73,6 @@ CATARSE.ExploreIndexView = Backbone.View.extend({
   },
 
   expiring: function(){
-    this.replaceTitleBy("expiring")
     this.selectItem("expiring")
     this.initializeView({
       expiring: true,
@@ -83,7 +81,6 @@ CATARSE.ExploreIndexView = Backbone.View.extend({
   },
 
   recent: function(){
-    this.replaceTitleBy("recent")
     this.selectItem("recent")
     this.initializeView({
       recent: true,
@@ -93,7 +90,6 @@ CATARSE.ExploreIndexView = Backbone.View.extend({
   },
 
   successful: function(){
-    this.replaceTitleBy("successful")
     this.selectItem("successful")
     this.initializeView({
       successful: true,
@@ -102,7 +98,6 @@ CATARSE.ExploreIndexView = Backbone.View.extend({
   },
 
   category: function(name){
-    this.replaceTitleBy(name)
     this.selectItem(name)
     this.initializeView({
       category_id_equals: this.selectedItem.data("id"),
@@ -128,16 +123,6 @@ CATARSE.ExploreIndexView = Backbone.View.extend({
         $('.section_header .original_title').fadeIn(300);
       });
     }
-  },
-
-  replaceTitleBy: function(name) {
-    if(this.$('.section_header .replaced_header')) {
-      this.$('.section_header .replaced_header').remove();
-    }
-    this.$('.section_header .original_title').fadeOut(300, function() {
-      $('.section_header').append('<div class="replaced_header"></div>');
-      $('.section_header .replaced_header').html('<h1><span>Explore</span> '+$('.sidebar a[href=#' + name + ']').text()+'</h1>');
-    })
   },
 
   selectItem: function(name) {

@@ -2,65 +2,81 @@
   #page_content
     margin-top: 30px
     .container
+      background: image-url('nosvc/while_line.gif') right repeat-y
       .sidebar
-        margin-top: 123px
         .content
-          padding-top: 10px
-        section
-          h2
-            font-size: 16px
-            color: black
-            font-family: "Lato-Bold"
-            margin-bottom: 10px
-            text-transform: lowercase
-            padding-left: 20px
-          &.highlights
-            h2
-              background: url($images_path+'min_star12x11.png') left 3px no-repeat
-          &.categories
-            h2
-              background: url($images_path+'category_icon14x14.png') left 2px no-repeat
-          ul
-            margin-bottom: 20px
-            li
-              margin-bottom: 5px
-              a
-                color: $ultra_gryn
-                font-size: 14px
-                font-family: Arial
-                background: rgba($minimal_gryn, 0.3)
-                display: block
-                padding: 1px 10px
-                text-decoration: none
-                +border-radius(5px)
-                &:hover, &.selected
-                  background: rgba($pink, 0.3)
+          section.highlights
+            +grid(6)
+            width: 360px
+            margin: 0
+            margin-top: 100px
+            .section_header
+              +alpha
+              h1
+                font-family: "Dosis-SemiBold"
+                text-transform: uppercase
+                font-size: 24px
+                color: #5d5d5d
+                +text-shadow(white 1px 1px 0px)
+                padding-bottom: 15px
+            ul
+              margin-bottom: 20px
+              border-bottom: 1px #D8D3D3 dashed
+              li
+                border-top: 1px #D8D3D3 dashed
+                a
+                  color: $blue
+                  font-size: 24px
+                  font-family: Dosis-Light
+                  display: block
+                  padding: 15px 15px
+                  text-decoration: none
+                  +text-shadow(white 1px 1px 0px)
+                  &:hover, &.selected
+                    background: white
+                  &.selected
+                    font-family: Dosis-SemiBold
+          section.categories
+            +grid(10)
+            margin: 0
+            padding-top: 20px
+            h1
+              font-family: "Dosis-ExtraLight"
+              font-size: 41px
+              letter-spacing: -1px
+              width: 460px
+              +text-shadow(white 1px 1px 0px)
+              color: #5d5d5d
+              line-height: 46px
+              margin: auto
+              margin-bottom: 35px
+              span
+                color: #83b1df
+            ul
+              margin: 10px
+              li
+                margin: 0
+                padding: 10px
+                float: left
+                a
+                  color: $blue
+                  font-size: 16px
+                  font-family: Dosis-Light
+                  display: block
+                  padding: 5px 5px
+                  text-decoration: none
+                  background: #f9f9f9
+                  +border-radius(6px)
+                  &:hover, &.selected
+                    background: #F5F5EB
+                  &.selected
+                    font-family: Dosis-SemiBold
+
       .main
-        .section_header
-          +grid(16)
-          +alpha
-          padding-bottom: 60px
-          h1
-            font-family: "Lato-Bold"
-            font-size: 28px
-            color: $ultra_gryn
-            padding-bottom: 5px
-            span
-              color: $minimal_gryn
-          h4
-            font-family: Arial
-            font-size: 16px
-            color: $ultra_gryn
+        margin-top: 20px
         #explore_results
+          padding-bottom: 20px
           .results
             ul.collection_list
-              float: left
               li
-                float: left
-                margin-bottom: 20px
-                &.first
-                  .project
-                    +alpha
-                &.last
-                  .project
-                    +omega
+                clear: both

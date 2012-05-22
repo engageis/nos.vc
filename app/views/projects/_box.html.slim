@@ -1,19 +1,11 @@
 .project[itemscope itemtype="http://schema.org/CreativeWork" class=(custom_class if defined?(custom_class))]
   meta[itemprop="dateCreated" content=project.created_at.to_date]
-  - if project.expired?
-    .status_image
-      = link_to project_path(project) do
-        - if project.successful?
-          = image_tag "successful.#{I18n.locale}.png"
-        - elsif project.waiting_confirmation?
-          = image_tag "waiting_confirmation.#{I18n.locale}.png"
-        - else
-          = image_tag "not_successful.#{I18n.locale}.png"
   .box
-    .open
+    - if project.expired?
+      .closed
+    - else
+      .open
     .info_bar
-      .status_bar
-        .progress style="width: #{project.display_progress}%;"
       ul
         li
           - if project.in_time?
@@ -47,3 +39,16 @@
           - unless project.user.address_state.blank?
             | /
             = project.user.address_state
+
+
+
+  /- if project.expired?
+    /.status_image
+      /= link_to project_path(project) do
+        /- if project.successful?
+          /= image_tag "successful.#{I18n.locale}.png"
+        /- elsif project.waiting_confirmation?
+          /= image_tag "waiting_confirmation.#{I18n.locale}.png"
+        /- else
+          /= image_tag "not_successful.#{I18n.locale}.png"
+
