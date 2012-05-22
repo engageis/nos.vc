@@ -11,7 +11,7 @@
       font-family: Dosis-SemiBold
       font-size: 16px
       color: #83b1df
-      padding-bottom: 10px
+      padding-bottom: 17px
       padding-top: 5px
       text-transform: uppercase
       +text-shadow(black 1px 1px 0px)
@@ -32,26 +32,29 @@
             color: #d7d6d0
             text-transform: uppercase
             text-decoration: none
-            text-indent: 30px
+            text-indent: 37px
             margin: 5px 0 5px 0
-            padding: 8px 0 10px 0
+            padding: 8px 0 15px 0
             +text-shadow(black 1px 1px 0px)
             display: block
             &:hover
               color: #83b1df
         li.explore
           a
-            background: image-url("nosvc/icon-explorar.png") left no-repeat
+            background: image-url("nosvc/icon-explorar.png") left -4px no-repeat
         li.submit_project
           a
-            background: image-url("nosvc/icon-criar.png") left no-repeat
+            background: image-url("nosvc/icon-criar.png") left -4px no-repeat
+            &:hover
+              color: #b178ad
         li.how_works
           a
-            background: image-url("nosvc/icon-comofunciona.png") left no-repeat
-
+            background: image-url("nosvc/icon-comofunciona.png") left -4px no-repeat
+            &:hover
+              color: #ed6569
     .opendata
-      +grid(4)
-      +grid-suffix(1)
+      +grid(5)
+      margin-left: 0px
       ul
         display: block
         li
@@ -74,6 +77,8 @@
 
     .social
       +grid(4)
+      margin-right: 0px
+      margin-left: 20px
       .twitter
         margin-top: 10px
       form
