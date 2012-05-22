@@ -4,6 +4,11 @@
 = render 'project_meta_tags'
 = render 'facebook_sdk'
 
+css:
+  .logo_header {
+    background: url("#{@project.display_image.html_safe}") top center no-repeat;
+  }
+
 #page_content
   .container
     = render 'project_warning'

@@ -25,6 +25,7 @@ html lang="#{I18n.locale}" xmlns:fb="http://ogp.me/ns/fb#"
     = render partial: 'layouts/flash', locals: { flash: flash } unless flash.empty?
 
     = render 'layouts/header'
+    = render 'layouts/logo_header' unless request.path == root_path
     #main_content[data-controller-class=controller.class.name.downcase data-controller-name=controller.controller_name.downcase data-action=controller.action_name.downcase data-locale="#{I18n.locale}" data-user="#{current_user.to_json}"]
       =yield
     .clearfix
