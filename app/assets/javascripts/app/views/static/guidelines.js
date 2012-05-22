@@ -1,5 +1,6 @@
 CATARSE.StaticGuidelinesView = Backbone.View.extend({
   initialize: function() {
+    $('#header header nav.actions ul li.how_works').addClass('selected');
     $('input[type=checkbox]').click(function(){
       if($(this).is(':checked')){
         $('input[type=submit]').attr('disabled', false)

@@ -1,5 +1,6 @@
 CATARSE.ProjectsStartView = Backbone.View.extend({
   initialize: function() {
+    $('#header header nav.actions ul li.submit_project').addClass('selected');
     everything_ok = function(){
       var all_ok = true
       if(!ok('#how_much_you_need'))

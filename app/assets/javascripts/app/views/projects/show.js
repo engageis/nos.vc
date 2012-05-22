@@ -1,6 +1,7 @@
 CATARSE.ProjectsShowView = Backbone.View.extend({
 
   initialize: function() {
+    $('#header header nav.actions ul li.explore').addClass('selected');
     _.bindAll(this, "render", "BackerView", "BackersView", "about", "updates", "backers", "comments", "embed", "isValid", "backWithReward")
     CATARSE.router.route("", "index", this.about)
     CATARSE.router.route("about", "about", this.about)

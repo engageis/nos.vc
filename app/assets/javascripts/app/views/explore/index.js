@@ -1,6 +1,7 @@
 CATARSE.ExploreIndexView = Backbone.View.extend({
 
   initialize: function() {
+    $('#header header nav.actions ul li.explore').addClass('selected');
     _.bindAll(this, "render", "ProjectView", "ProjectsView", "initializeView", "recommended", "expiring", "recent", "successful", "category", "search", "updateSearch")
     CATARSE.router.route(":name", "category", this.category)
     CATARSE.router.route("recommended", "recommended", this.recommended)

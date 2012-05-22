@@ -1,5 +1,6 @@
 CATARSE.ProjectsNewView = Backbone.View.extend({
   initialize: function() {
+    $('#header header nav.actions ul li.submit_project').addClass('selected');
     $('#add_reward').click(function(e){
       e.preventDefault()
       var new_reward = '<div class="clearfix"></div><div class="reward">' + $($('.reward')[0]).html() + '</div>'
