@@ -1,0 +1,48 @@
+.logo_header
+  .container
+    +grid-container
+    .logo
+      +grid(6)
+      margin: 0
+      padding: 0 0 0 20px
+      a
+        width: 100px
+        height: 125px
+        display: block
+        margin-top: 40px
+        text-indent: -9999em
+        background: image-url("nosvc/logo_blue.png") no-repeat
+    .header_featured
+      +grid(10)
+      height: 200px
+      margin: 0
+      padding: 0 10px 0 10px
+    .clear
+      clear: both
+
+[data-namespace="null"][data-controller="projects"][data-action="start"], [data-namespace="null"][data-controller="projects"][data-action="new"]
+  .logo_header
+    .container
+      .logo
+        a
+          background-image: image-url("nosvc/logo_purple.png")
+[data-namespace="null"][data-controller="static"][data-action="guidelines"]
+  .logo_header
+    .container
+      .logo
+        a
+          background-image: image-url("nosvc/logo_red.png")
+[data-namespace="projects"][data-controller="backers"]
+  .logo_header
+    .container
+      .logo
+        a
+          background-image: image-url("nosvc/logo_green.png")
+[data-namespace="null"][data-controller="projects"][data-action="show"]
+  #page_content
+    margin-top: -125px
+  .logo_header
+    height: 440px
+    .container
+      .header_featured
+        height: 315px
