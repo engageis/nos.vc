@@ -29,6 +29,7 @@
             margin-bottom: 15px
           img
             max-width: 600px
+            margin-left: -10px
           a
             font-family: Arial
             color: $ultra_gryn
@@ -45,12 +46,7 @@
         font-family: "Lato-Regular"
         font-size: 16px
         color: black
-    .project_image
-      +grid(2)
-      padding-top:  20px
-      padding-bottom: 10px
     .section_header
-      +grid(14)
       padding-top:  20px
       padding-bottom: 10px
       h1
@@ -68,12 +64,16 @@
           &:hover
             color: $pink
     .main
-      +grid(11)
-      padding-bottom: 20px
+      +grid(10)
+      background: white
+      margin: 0 0 30px 0
+      padding: 0 10px 20px 10px
       .midia
         width: 100%
         float: left
         padding-bottom: 20px
+        .video
+          margin-left: -10px
         .social
           padding-top: 10px
           #facebook_share, #facebook_share iframe
@@ -134,7 +134,7 @@
             text-decoration: none
             &:hover
               color: $pink
-            
+
       .media_content_backers
         ul.collection_list
           li
@@ -179,10 +179,10 @@
               width: 620px
 
     .sidebar
-      +grid(5)
+      +grid(6)
       +omega
       border: none
-      padding-top: 15px
+      margin-top: 125px
       .user_social
         +grid(3)
         li
@@ -208,7 +208,6 @@
       #rewards
         .box
           background: $ed_gryn
-          width: 240px
           padding: 20px
           margin-top: 3px
           float: left
@@ -253,7 +252,6 @@
           background: $ed_gryn
         .statistics
           background: $ed_gryn
-          width: 240px
           padding: 20px
           .item
             font-family: Arial
@@ -273,7 +271,6 @@
               background: url($images_path+"time_icon19x30.png") 10px center no-repeat
         #condition
           background: $_6f_gryn
-          width: 240px
           padding: 10px 20px
           &.successful
             background: $green
@@ -286,7 +283,6 @@
             text-transform: uppercase
             color: white
         #pledge
-          width: 280px
           padding-top: 20px
           padding-bottom: 20px
           input[type="submit"][disabled="disabled"]
@@ -402,4 +398,3 @@
           text-decoration: none
           &:hover
             color: $pink
-
