@@ -14,8 +14,8 @@
       - if current_user
         = link_to '#', class: 'my_profile_link' do
           span.current_user_name
-            | Olá, 
-            / TODO: colocar nos locales
+            = t('layouts.header.hello')
+            |, 
             = current_user.display_name.split(' ').first
           = image_tag(current_user.display_image, :size => "30x30", :class => 'profile_picture')
           = image_tag('dropdown.png', :class => 'dropdown_arrow')

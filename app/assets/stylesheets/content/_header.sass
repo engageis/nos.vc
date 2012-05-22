@@ -10,6 +10,7 @@ body
   display: block
   background: #696862
   height: 40px
+  font-family: Dosis-SemiBold
   header
     +grid-container
     background: #595853
@@ -17,7 +18,6 @@ body
     height: 40px
     a
       display: inline-block
-      font-family: "Lato-Regular"
       text-decoration: none
     &.actions
       +grid(9)
@@ -33,7 +33,6 @@ body
           a
             text-transform: uppercase
             font-size: 13px
-            font-family: Dosis-SemiBold
             margin-top: 0px
             color: #D7D6D0
             height: 40px
@@ -70,7 +69,6 @@ body
       padding-left: 10px
       border-left: 1px solid #4B4A4A
       a
-        font-family: "Lato-Regular"
         color: $ultra_gryn
         font-size: 14px
         margin-right: 12px
@@ -85,8 +83,7 @@ body
           +text-shadow(black 1px 1px 0px)
           text-transform: uppercase
           font-size: 14px
-          font-family: Dosis-SemiBold
-          padding-top: 12px   
+          padding-top: 12px
       a
         &.my_profile_link
           width: 200px
@@ -114,7 +111,7 @@ body
           .dropdown_arrow
             float: left
             position: relative
-            margin-top: 7px
+            margin-top: 3px
         &:last-child
           margin-right: none
     &.locales
