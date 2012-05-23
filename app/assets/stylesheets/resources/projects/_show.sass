@@ -50,35 +50,42 @@
       padding-top:  20px
       padding-bottom: 10px
       h1
-        color: $ultra_gryn
-        font-family: "Lato-Regular"
-        font-size: 28px
-        padding: 5px 0
+        color: #5d5d5d
+        font-family: "Dosis-Regular"
+        font-size: 41px
+        line-height: 46px
+        padding: 30px 40px 20px
+        letter-spacing: -1px
+        text-align: center
+        text-transform: uppercase
       h4
         color: rgba($ultra_gryn, 0.7)
         font-family: Arial
         font-size: 16px
+        display: none
         a
           color: $ultra_gryn
           text-decoration: none
           &:hover
             color: $pink
     .main
-      +grid(10)
+      +grid(12)
+      width: 614px
       background: white
       margin: 0 0 30px 0
-      padding: 0 10px 20px 10px
+      padding: 0 0 20px 0
       .midia
         width: 100%
         float: left
         padding-bottom: 20px
         .video
-          margin-left: -10px
         .social
-          padding-top: 10px
+          padding: 20px 40px
+          float: left
           #facebook_share, #facebook_share iframe
-            width: 271px !important
+            width: 570px !important
             float: left
+            margin-bottom: 20px
           #twitter_share
             width: 89px !important
             float: left
@@ -107,26 +114,33 @@
               &.link
                 input[type="text"]
                   margin-top: -2px
-                  color: black
-                  font-family: Lato
+                  color: #5d5d5d
+                  font-family: "Helvetica Neue"
                   font-size: 12px
                   border: 1px $minimal_gryn solid
                   +border-radius(5px)
-                  padding: 1px 3px 1px 20px
-                  text-align: center
-                  background: url($images_path+'link_icon14x14.png') 6px 1px no-repeat
+                  padding: 3px 10px 3px 30px
+                  text-align: left
+                  background: url($images_path+'link_icon14x14.png') 6px 4px no-repeat
 
       #project_about
         .text
-          font-family: Arial
-          font-size: 16px
-          color: rgba(black, 0.6)
+          color: #5d5d5d
+          font-family: "Helvetica Neue"
+          font-size: 14px
           h5
-            font-weight: bold
             padding-bottom: 20px
+            padding-left: 40px
+            font-size: 24px
+            color: #83b1df
+            font-family: "Dosis-Regular"
           p
-            line-height: 140%
+            line-height: 28px
             margin: 10px 0
+            padding: 0px 40px
+            font-family: "Helvetica Neue"
+            font-size: 14px
+            color: #5d5d5d
           strong
             font-weight: bold
           a
@@ -179,10 +193,12 @@
               width: 620px
 
     .sidebar
-      +grid(6)
       +omega
       border: none
       margin-top: 125px
+      margin-left: 0px
+      width: 345px
+      float: left
       .user_social
         +grid(3)
         li
@@ -251,7 +267,7 @@
         #pledge
           background: $ed_gryn
         .statistics
-          background: $ed_gryn
+          background: #323334
           padding: 20px
           .item
             font-family: Arial
