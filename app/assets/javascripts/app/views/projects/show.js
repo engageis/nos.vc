@@ -2,12 +2,7 @@ CATARSE.ProjectsShowView = Backbone.View.extend({
 
   initialize: function() {
     $('#header header nav.actions ul li.explore').addClass('selected');
-    _.bindAll(this, "render", "BackerView", "BackersView", "about", "updates", "backers", "comments", "embed", "isValid", "backWithReward")
-    CATARSE.router.route("", "index", this.about)
-    CATARSE.router.route("about", "about", this.about)
-    CATARSE.router.route("updates", "updates", this.updates)
-    CATARSE.router.route("backers", "backers", this.backers)
-    CATARSE.router.route("comments", "comments", this.comments)
+    _.bindAll(this, "render", "BackerView", "BackersView", "updates", "backers", "embed", "isValid", "backWithReward")
     CATARSE.router.route("embed", "embed", this.embed)
 
     this.$('a.destroy_update').live('ajax:beforeSend', function(event, data){
@@ -23,6 +18,8 @@ CATARSE.ProjectsShowView = Backbone.View.extend({
     });
 
     this.project = new CATARSE.Project($('#project_description').data("project"))
+    this.updates()
+    this.backers()
     this.render()
   },
 
@@ -32,7 +29,6 @@ CATARSE.ProjectsShowView = Backbone.View.extend({
     "click #project_link": "selectTarget",
     "click #project_embed textarea": "selectTarget",
     "click #rewards .clickable": "backWithReward"
-    //"click #pledge input[type=submit]": "requireLogin"
   },
 
   UpdatesForm: Backbone.View.extend({
@@ -89,22 +85,12 @@ CATARSE.ProjectsShowView = Backbone.View.extend({
     }
   }),
 
-  about: function() {
-    this.selectItem("about")
-  },
-
   updates: function() {
-    this.selectItem("updates")
     this.updatesForm = new this.UpdatesForm();
     this.$("#project_updates [type=submit]").removeProp('disabled')
   },
 
-  comments: function() {
-    this.selectItem("comments")
-  },
-
   backers: function() {
-    this.selectItem("backers")
     this.backersView = new this.BackersView({
       modelView: this.BackerView,
       collection: new CATARSE.Backers({url: '/' + CATARSE.locale + '/projects/' + this.project.id + '/backers'}),
@@ -167,9 +153,8 @@ CATARSE.ProjectsShowView = Backbone.View.extend({
       element = element.parentsUntil('li')
     var url = element.find('input[type=hidden]').val()
     window.location.href = url;
-    //CATARSE.requireLogin(event, url)
   },
-  
+
   requireLogin: function(event) {
     CATARSE.requireLogin(event)
   }
