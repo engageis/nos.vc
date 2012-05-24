@@ -124,16 +124,16 @@ css:
                       = t('.share.embed')
                   li.link
                     = text_field_tag "project_link", @project.short_url
-                .clear
-          .text
-            h5= t('.about_title')
+                .clearfix
+          .text.clearfix
+            h1= t('.about_title')
             p
               - if current_user and current_user.admin
                 | #{on_the_spot_edit @project, :about, :type => :textarea}
               - else
                 = @project.about_html.html_safe
               = render "admin_fields" if current_user and current_user.admin
-        #project_updates.content.hide
+        #project_updates.content
           h1
             = t('.menu.updates')
             span.count=" (#{@project.updates.count})"
@@ -151,7 +151,7 @@ css:
 
           .updates_wrapper
             = render :template => 'updates/index'
-        #project_comments.content.hide
+        #project_comments.content
           h1
             = t('.menu.comments')
             | &nbsp; (

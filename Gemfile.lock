@@ -43,16 +43,6 @@ GIT
       httparty (~> 0.6.1)
       nokogiri (~> 1.4.3)
 
-PATH
-  remote: ../active_paypal_adaptive_payment
-  specs:
-    active_paypal_adaptive_payment (0.3.13)
-      activemerchant (>= 1.5.1)
-      hashie (>= 1.2.0)
-      mocha (>= 0.10.0)
-      money (>= 3.6.0)
-      multi_json (>= 1.0.0)
-
 GEM
   remote: http://rubygems.org/
   remote: http://gems.github.com/
@@ -71,6 +61,12 @@ GEM
       rack-cache (~> 1.2)
       rack-test (~> 0.6.1)
       sprockets (~> 2.1.2)
+    active_paypal_adaptive_payment (0.3.13)
+      activemerchant (>= 1.5.1)
+      hashie (>= 1.2.0)
+      mocha (>= 0.10.0)
+      money (>= 3.6.0)
+      multi_json (>= 1.0.0)
     activemerchant (1.17.0)
       activesupport (>= 2.3.11)
       braintree (>= 2.0.0)
@@ -427,7 +423,7 @@ PLATFORMS
 
 DEPENDENCIES
   RedCloth
-  active_paypal_adaptive_payment (~> 0.3.13)!
+  active_paypal_adaptive_payment (~> 0.3.13)
   activeadmin!
   activemerchant (= 1.17.0)
   annotate
