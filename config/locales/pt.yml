@@ -630,8 +630,8 @@ pt:
       about_title: "Sobre o projeto"
       menu:
         about: Sobre
-        backers: Apoiadores
-        comments: Comentários
+        backers: "Quem vai?"
+        comments: "Recomende, pergunte e construa este encontro:"
         updates: Atualizações
       share:
         embed: embed

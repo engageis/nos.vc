@@ -1,51 +1,5 @@
 [data-namespace="null"][data-controller="projects"][data-action="show"]
   #page_content
-    .media_content_update
-      ul.collection_list
-        li
-          width: 100%
-          float: left
-          border-bottom: 1px $gryn_almost_ccc dotted
-          padding: 20px 0 10px
-          min-height: 67px
-          &:last-child
-            border-bottom: none
-          .time
-            font-family: "Lato-Regular"
-            text-transform: uppercase
-            color: $gryn_almost_ccc
-            font-size: 14px
-            margin-bottom: 20px
-          h3
-            font-family: "Lato-Regular"
-            color: $ultra_gryn
-          p
-            font-family: Arial
-            padding: 5px 0
-            font-size: 17px
-            color: $_6f_gryn
-          h3
-            font-size: 1.5em
-            margin-bottom: 15px
-          img
-            max-width: 600px
-            margin-left: -10px
-          a
-            font-family: Arial
-            color: $ultra_gryn
-            text-decoration: none
-            &:hover
-              color: $pink
-          strong
-            font-weight: bold
-          em
-            font-style: italic
-            font-size: 12px
-            font-family: "Lato-Regular"
-      em
-        font-family: "Lato-Regular"
-        font-size: 16px
-        color: black
     .section_header
       padding-top:  20px
       padding-bottom: 10px
@@ -132,7 +86,7 @@
       #project_about
         .text
           color: #5d5d5d
-          padding: 0px 40px
+          padding: 0px 40px 40px 40px
           font-family: "Helvetica Neue"
           font-size: 14px
           line-height: 20px
@@ -370,43 +324,76 @@
               color: $ultra_gryn
               line-height: 140%
     #project_updates
+      border-top: 1px #D8D3D3 dashed
+      padding: 50px 0 50px 0
+      color: #5d5d5d
+      font-family: "Helvetica Neue"
+      hr
+        border: none
+        border-top: 1px #D8D3D3 dashed
+        margin-bottom: 15px
       h1
         padding-bottom: 20px
-        padding-left: 40px
-        font-size: 24px
-        color: #83b1df
-        font-family: "Dosis-Regular"
+        text-align: center
+        text-transform: uppercase
+      .deleting_update
+        text-align: center
       .updates_wrapper
-        color: #5d5d5d
-        padding: 0px 40px
-        font-family: "Helvetica Neue"
-        font-size: 14px
-        line-height: 20px
-        p
-          margin: 10px 0
-          line-height: 28px
-        strong
-          font-weight: bold
-        a
-          color: $ultra_gryn
-          text-decoration: none
-          &:hover
-            color: $pink
-        h1
-          padding-left: 0
+        .media_content_update
+          padding: 0 40px 0 40px
+          ul.collection_list
+            li
+              width: 100%
+              padding: 40px 0 0 0
+              min-height: 67px
+              &:last-child
+                border-bottom: none
+              .time
+                color: $gryn_almost_ccc
+                font-size: 12px
+              h3
+                color: #83b1df
+                font-family: "Dosis-Regular"
+                font-size: 1.5em
+                margin-bottom: 15px
+              p
+                padding: 5px 0
+                font-size: 17px
+                font-family: "Helvetica Neue"
+                line-height: 28px
+              img
+                max-width: 614px
+              a
+                font-family: Arial
+                color: $ultra_gryn
+                text-decoration: none
+                &:hover
+                  color: $pink
+              iframe, img
+                margin-left: -40px
+            strong
+              font-weight: bold
+            em
+              font-style: italic
+              font-size: 12px
+            h1
+              padding-left: 0
+              text-align: left
+              text-transform: none
 
       .bootstrap-form
+        padding: 0 40px 0 40px
         textarea, input#update_title
-          width: 100%
+          width: 524px
         label
-          font-family: "Lato-Regular"
+          font-family: "Helvetica Neue"
           font-size: 15px
           color: rgba(0, 0, 0, 0.8)
       #show_formatting_tips
-        font-family: Arial
+        font-family: "Helvetica Neue"
         text-align: left !important
         color: #666
-        font-size: 16px
+        font-size: 14px
         margin-bottom: 15px
         a
           color: $ultra_gryn
@@ -414,7 +401,7 @@
           &:hover
             color: $pink
       #formatting_tips
-        font-family: Arial
+        font-family: "Helvetica Neue"
         display: none
         text-align: left
         color: #666
@@ -430,7 +417,7 @@
           font-size: 14px
           padding-bottom: 8px
           margin-bottom: 8px
-          border-bottom: 1px dotted #999
+          border-bottom: 1px dashed #D8D3D3
           &:last-child
             border: none
         a
@@ -438,3 +425,15 @@
           text-decoration: none
           &:hover
             color: $pink
+    #project_comments
+      border-top: 1px #D8D3D3 dashed
+      padding: 50px 0 50px 0
+      h1
+        margin-bottom: 20px
+        text-align: center
+        text-transform: normal
+        padding-left: 0
+      .fb-comments
+        margin: 0 auto
+        width: 534px
+        display: block

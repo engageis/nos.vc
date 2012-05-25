@@ -154,12 +154,11 @@ css:
         #project_comments.content
           h1
             = t('.menu.comments')
-            | &nbsp; (
-            fb:comments-count href="#{request.url}"
-            | )
           = render :partial => 'comments'
 
         .media_content_backers
+          h1
+            = t('.menu.backers')
           #project_backers.content
         .clearfix
         #loading= image_tag "loading.gif"

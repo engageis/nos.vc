@@ -10,8 +10,8 @@ class Update < ActiveRecord::Base
       '<' => '&lt;',
       '"' => '"' }
     image
-    youtube width: 600, height: 380, wmode: "opaque"
-    vimeo width: 600, height: 380
+    youtube width: 614, height: 355, wmode: "opaque"
+    vimeo width: 614, height: 355
     redcloth :target => :_blank
     link :target => :_blank
   end
