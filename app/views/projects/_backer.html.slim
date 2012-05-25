@@ -6,18 +6,22 @@ script type="text/template" id="backers_template"
 
 script type="text/template" id="backer_template"
   .backer
-    | <% if(anonymous) { %>
-    img src="/assets/user.png" class="backer_avatar"
+    .img
+      | <% if(anonymous) { %>
+      img src="/assets/user.png" class="backer_avatar"
+      | <% } else { %>
+      a href="<%= user['url'] %>"
+        img src="<%= user['image'] %>" class="backer_avatar"
+      | <% } %>
+
     .back_info
+      | <% if(anonymous) { %>
       p#text
         em.anon=" #{t('.anonymous_backer')}"
       p#confirmed
         | <%= confirmed_at %>
       p#backed= t('.anonymous_description')
-    | <% } else { %>
-    a href="<%= user['url'] %>"
-      img src="<%= user['image'] %>" class="backer_avatar"
-    .back_info
+      | <% } else { %>
       p#text
         a href="<%= user['url'] %>"
          | <%= user['medium_name'] %>
@@ -25,8 +29,7 @@ script type="text/template" id="backer_template"
         | <%= confirmed_at %>
       p#backed
         | <%= user['backs_text'] %>
-    | <% } %>
-    - if current_user and (current_user == @project.user or current_user.admin)
+      | <% } %>
       p.reward
         = "#{t('activerecord.attributes.backer.value')}: "
         | <%= display_value %> .
@@ -46,5 +49,5 @@ script type="text/template" id="backer_template"
         | &nbsp;
         = t('.no_reward')
         | <% } %>
-    .clear
+      .clear
 

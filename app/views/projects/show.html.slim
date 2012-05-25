@@ -67,7 +67,6 @@ css:
                     .limited= t('reward.limited')
                   .remaining= reward.display_remaining
                 .clearfix
-
         #creator_profile
           h3= t('project_by')
           .avatar= image_tag @project.user.display_image, :width => '100px', :heigth => '100px'
@@ -95,6 +94,14 @@ css:
               li.other
                 = link_to @project.user.other_link, @project.user.other_link, :target => '_blank'
           .clearfix
+        .media_content_backers.clearfix
+          h1
+            = t('.menu.backers')
+          #project_backers.content
+        .clearfix
+        #loading= image_tag "loading.gif"
+
+
 
     .main
       .section_header
@@ -156,12 +163,6 @@ css:
             = t('.menu.comments')
           = render :partial => 'comments'
 
-        .media_content_backers
-          h1
-            = t('.menu.backers')
-          #project_backers.content
-        .clearfix
-        #loading= image_tag "loading.gif"
       .clearfix
     .clearfix
 = render 'show_embed'

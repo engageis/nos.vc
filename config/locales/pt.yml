@@ -696,7 +696,7 @@ pt:
       error: "Ocorreu um erro ao realizar o login. Por favor, tente novamente."
   site:
     host: "nos.vc"
-    base_url: "http://nos.vc/"
+    base_url: "http://localhost:3000"
     blog: "http://blog.nos.vc/"
     email:
       contact: contato@nos.vc
