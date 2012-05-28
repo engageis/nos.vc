@@ -74,12 +74,6 @@ css:
           .personal_info
             p.name
              = link_to @project.user.display_name, user_path(@project.user)
-            #city
-              p
-                | #{@project.user.address_city}
-              p= t('count_backed_projects', :total => @project.user.total_backs)
-          #bio
-            p= @project.user.bio
         .user_social
           ul
             - if can? :manage, @project.user
