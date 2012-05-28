@@ -4,7 +4,7 @@ class Projects::BackersController < ApplicationController
   before_filter :load_project
 
   def index
-    @backers = @project.backers.confirmed.order("confirmed_at DESC").page(params[:page]).per(10)
+    @backers = @project.backers.confirmed.order("confirmed_at DESC").page(params[:page]).per(20)
     render :json => @backers.to_json(:can_manage => can?(:manage, @project))
   end
 
