@@ -216,11 +216,6 @@
             margin: 0 auto
             width: 534px
             display: block
-
-
-
-
-
     .sidebar
       +omega
       border: none
@@ -252,17 +247,22 @@
             background: url($images_path+'social_icons.png') left -54px no-repeat
       #rewards
         .box
-          background: $ed_gryn
-          padding: 20px
+          background: #fefefe
+          padding: 20px 20px 1px
           margin-top: 3px
           float: left
           +transition(all, 0.3s)
+          width: 270px
+          border: solid 1px #e7e6e1
+          margin-bottom: 20px
+          +border-radius(16px)
+          position: relative
           &.clickable:hover
             background: rgba($light_green, 0.3)              
           h2
-            font-family: "Lato-Bold"
-            font-size: 18px
-            color: rgba(black, 0.8)
+            font-family: "Dosis-Regular"
+            font-size: 38px
+            color: #5d5d5d
             text-transform: uppercase
             padding-bottom: 5px
           em
@@ -276,10 +276,10 @@
             clear: both
             display: block
           p, .on_the_spot_editing
-            color: $ultra_gryn
-            font-family: Arial
-            font-size: 16px
-            line-height: 130%
+            color: #5d5d5d
+            font-family: "Helvetica Neue"
+            font-size: 12px
+            line-height: 18px
             padding-bottom: 10px
             a
               color: $pink
@@ -288,10 +288,15 @@
                 text-decoration: underline
           .maximum_backers
             color: $_4d_gryn
-            font-family: Arial
+            font-family: "Dosis-Light"
             font-weight: bold
             font-size: 11px
             text-transform: uppercase
+            background: #F7F6F0
+            margin-left: -19px
+            width: 308px
+            height: 40px
+            +border-radius(0 0 16px 16px)
       .info
         #pledge
         .statistics
@@ -362,28 +367,41 @@
             &:hover
               color: $pink
           h3
-            background: url($images_path+"profile_icon19x14.png") left 4px no-repeat
-            color: $ultra_gryn
-            font-family: "Lato-Bold"
-            font-size: 18px
-            padding-left: 30px
+            background: image-url("nosvc/icon-user.gif") left top no-repeat
+            color: #83b1df
+            font-family: "Dosis-Medium"
+            font-size: 21px
             display: block
-            padding-bottom: 15px
+            text-indent: 50px
+            padding-top: 10px
+            text-transform: uppercase
+            margin-bottom: 30px
+            height: 30px
+            +text-shadow(white 1px 1px 0px)
           .avatar
-            +grid(2)
             +alpha
             img
-              +box-shadow(rgba(black, 0.8) 2px 2px 4px)
+              width: 220px
+              display: block
+              float: left
+              margin-left: 45px
+              overflow: hidden
+              +border-radius(112px)
           .personal_info
-            +grid(3)
+            +grid(5)
             +omega
             p.name
               padding-bottom: 5px
               a
-                font-family: "Lato-Bold"
-                font-size: 14px
-                color: $pink
+                font-family: "Dosis-Medium"
+                font-size: 18px
+                color: #3772ae
                 text-decoration: none
+                margin-top: 20px
+                display: block
+                width: 100%
+                text-align: center
+                +text-shadow(white 1px 1px 0px)
             p
               font-family: Arial
               font-size: 12px
@@ -398,8 +416,19 @@
               font-size: 12px
               color: $ultra_gryn
               line-height: 140%
-
         .media_content_backers
+          h1
+            background: image-url("nosvc/icon-users.gif") left top no-repeat
+            color: #83b1df
+            font-family: "Dosis-Medium"
+            font-size: 21px
+            display: block
+            text-indent: 50px
+            padding-top: 10px
+            text-transform: uppercase
+            margin-bottom: 30px
+            height: 30px
+            +text-shadow(white 1px 1px 0px)
           ul.collection_list
             li
               width: 80px

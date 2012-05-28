@@ -17,8 +17,8 @@
             = t('layouts.header.hello')
             |, 
             = current_user.display_name.split(' ').first
-          = image_tag(current_user.display_image, :size => "30x30", :class => 'profile_picture')
           = image_tag('dropdown.png', :class => 'dropdown_arrow')
+          = image_tag(current_user.display_image, :size => "30x30", :class => 'profile_picture')
         ul.dropdown.user
           li= link_to t('layouts.header.profile'), current_user
           li
