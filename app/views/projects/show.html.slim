@@ -70,7 +70,7 @@ css:
                 .clearfix
         #creator_profile
           h3= t('project_by')
-          .avatar= image_tag @project.user.display_image, :width => '100px', :heigth => '100px'
+          .avatar= image_tag @project.user.display_image_large
           .personal_info
             p.name
              = link_to @project.user.display_name, user_path(@project.user)
