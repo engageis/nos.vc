@@ -34,8 +34,10 @@
             = reward.input :description
             .left
               = reward.input :minimum_value
-            .right
+            .left
               = reward.input :maximum_backers
+            .right
+              = reward.input :expires_at, :as => :string, :label => t('formtastic.labels.reward.expires_at'), :hint => t('formtastic.hints.reward.expires_at'), :input_html =>  {:class => 'reward_expires_at'}
             .clearfix
       #add_reward_wrapper
         .bootstrap-twitter

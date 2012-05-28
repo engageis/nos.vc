@@ -339,6 +339,7 @@ pt:
         description: "Descreva sua recompensa de um jeito que desperte o interesse das pessoas para apoiar o projeto. Não seja tímido!"
         maximum_backers: "Se sua recompensa é limitada, informe o máximo de pessoas."
         minimum_value: "Este é valor mínimo de apoio para escolher esta recompensa."
+        expires_at: "Esta inscrição tem um prozo limitado? Qual?"
     labels:
       backer:
         anonymous: "Quero que meu apoio seja anônimo."
@@ -355,6 +356,7 @@ pt:
         video_url: Vídeo
       reward:
         maximum_backers: "Máximo de apoiadores (opcional)"
+        expires_at: "Qual o prazo para fazer a inscrição? (opcional)"
     optional: " (opcional)"
   found_plural: Encontrados
   found_singular: Encontrado

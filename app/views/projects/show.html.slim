@@ -49,7 +49,7 @@ css:
 
         #rewards
           - @rewards.each do |reward|
-            div[class="box #{('clickable' if @project.can_back? and not reward.sold_out?)}"]
+            div[class="box #{('clickable' if @project.can_back? and not reward.sold_out? and not reward.expired?)}"]
               = hidden_field_tag 'url', "#{new_project_backer_path(@project)}/?reward_id=#{reward.id}"
               h2= reward.display_minimum
               .clearfix
@@ -66,7 +66,7 @@ css:
                     .remaining= reward.display_maximum_backers
                 - else
                   .unlimited= t('reward.unlimited')
-                .expires_at= @project.display_expires_at
+                .expires_at= reward.display_expires_at || @project.display_expires_at
                 .clearfix
         #creator_profile
           h3= t('project_by')

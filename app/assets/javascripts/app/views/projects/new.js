@@ -13,6 +13,12 @@ CATARSE.ProjectsNewView = Backbone.View.extend({
       new_reward.find('input, textarea').removeClass('ok').removeClass('error')
       $('#rewards_wrapper').append(new_reward)
       new_reward.find('textarea').focus()
+      new_reward.find('.reward_expires_at').removeClass('hasDatepicker');
+      new_reward.find('.reward_expires_at').datepicker({
+        altFormat: 'dd/mm/yy',
+        onSelect: everything_ok
+      });
+
       rewards_count++
       rewards_id++
     })
@@ -140,7 +146,9 @@ CATARSE.ProjectsNewView = Backbone.View.extend({
         } else {
           if(/maximum_backers/.test($(this).attr('id')) && (!$(this).val())){
             $(this).addClass("ok").removeClass("error")
-          } else {
+          } else if(/expires_at/.test($(this).attr('id')) && (!$(this).val() || /expires_at/.test($(this).attr('id')) && $(this).val() )){
+            $(this).addClass("ok").removeClass("error")
+          }else {
             $(this).addClass("error").removeClass("ok")
             okey = false
           }
@@ -172,7 +180,7 @@ CATARSE.ProjectsNewView = Backbone.View.extend({
 
     $('#project_goal').numeric(false)
     $('.reward input').numeric(false)
-    $('#project_expires_at').datepicker({
+    $('#project_expires_at, .reward_expires_at').datepicker({
       altFormat: 'dd/mm/yy',
       onSelect: everything_ok
     })

@@ -11,8 +11,17 @@ class Reward < ActiveRecord::Base
   validates_numericality_of :maximum_backers, :only_integer => true, :greater_than => 0, :allow_nil => true
   scope :sold_out, where("maximum_backers IS NOT NULL AND (SELECT COUNT(*) FROM backers WHERE confirmed AND reward_id = rewards.id) >= maximum_backers")
   scope :remaining, where("maximum_backers IS NULL OR (maximum_backers IS NOT NULL AND (SELECT COUNT(*) FROM backers WHERE confirmed AND reward_id = rewards.id) < maximum_backers)")
+  scope :not_expired, where("expires_at >= current_timestamp OR expires_at IS NULL")
   def sold_out?
     maximum_backers and backers.confirmed.count >= maximum_backers
+  end
+  def expired?
+    return false unless expires_at
+    expires_at < Time.now
+  end
+  def display_expires_at
+    return false unless expires_at
+    I18n.l(expires_at.to_date)
   end
   def remaining
     return nil unless maximum_backers
