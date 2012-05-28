@@ -51,21 +51,22 @@ css:
           - @rewards.each do |reward|
             div[class="box #{('clickable' if @project.can_back? and not reward.sold_out?)}"]
               = hidden_field_tag 'url', "#{new_project_backer_path(@project)}/?reward_id=#{reward.id}"
-              h2= t('projects.rewards.reward_title', :minimum => reward.display_minimum)
-              em= pluralize(reward.backers.confirmed.count, t('backer_singular'), t('backer_plural'))
+              h2= reward.display_minimum
               .clearfix
               p
                 - if current_user and current_user.admin
                   #{on_the_spot_edit reward, :description, :type => :textarea}
                 - else
                   = auto_link(simple_format(reward.description), :html => {:target => :_blank})
-              - if reward.maximum_backers
-                .maximum_backers
+              .maximum_backers
+                - if reward.maximum_backers
                   - if reward.sold_out?
                     .sold_out= t('reward.sold_out')
                   - else
-                    .limited= t('reward.limited')
-                  .remaining= reward.display_remaining
+                    .remaining= reward.display_maximum_backers
+                - else
+                  .unlimited= t('reward.unlimited')
+                .expires_at= @project.display_expires_at
                 .clearfix
         #creator_profile
           h3= t('project_by')

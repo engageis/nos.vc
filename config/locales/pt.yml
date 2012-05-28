@@ -14,7 +14,7 @@ pt:
       subtitle: apoiadores
     goal:
       subtitle: "atingidos de %{total}"
-  project_by: "projeto por"
+  project_by: "Quem está organizando?"
   tell_about_this_back: "Conte para o mundo sobre o seu apoio!"
   share_my_backs: "Confira o projeto "
   tell_about_this_project: "Conte para o mundo sobre o seu projeto!"
@@ -684,8 +684,10 @@ pt:
   require_permission: "Você não tem permissão para realizar esta ação."
   reward:
     display_remaining: "%{remaining} de %{maximum} disponíveis"
+    display_maximum_backers: "%{maximum} disponíveis"
     dont_want: "Não quero recompensa"
     limited: Limitada
+    unlimited: "Ilimitada"
     sold_out: Esgotada
   sessions:
     auth:

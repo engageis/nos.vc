@@ -432,6 +432,10 @@ en:
       text_title_html: "You are now part of the group that does everything to make %{link} happen."
       title: "Thank you"
   project:
+    start:
+      email_subject: ~
+      email_text: ~
+      notification_text: ~
     finish:
       successful:
         email_subject: "Hooray! The project you backed was successful on Catarse!"
@@ -676,8 +680,10 @@ en:
   require_permission: "You don't have permission to perform this action."
   reward:
     display_remaining: "%{remaining} of %{maximum} available"
+    display_maximum_backers: ~
     dont_want: "I don't want a reward"
     limited: Limited
+    unlimited: ~
     sold_out: "Sold out"
   sessions:
     auth:
@@ -917,4 +923,5 @@ en:
       default: "%B %d, %Y %H:%M"
       long: "%B %d, %Y %H:%M"
       short: "%d %b %H:%M"
+      updates: ~
     pm: ~
