@@ -120,8 +120,9 @@ css:
             = on_the_spot_edit @project, :name
           - else
             = @project.name
-        .categorie= link_to(@project.category.name, explore_path(:anchor => @project.category.name.parameterize))
-        .when= @project.when_short
+        .info
+          .when= @project.when_short
+          .categorie= link_to(@project.category.name, explore_path(:anchor => @project.category.name.parameterize))
         p.headline= @project.headline
 
       #project_content.clearfix
