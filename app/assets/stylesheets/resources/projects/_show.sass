@@ -225,26 +225,33 @@
       float: left
       .user_social
         +grid(3)
-        li
-          font-family: 'Lato-Regular'
-          font-size: 12px
-          padding: 0 0 5px 25px
-          margin-bottom: 10px
-          +opacity(0.8)
-          a
-            color: black
-            +transition(all, 0.5s)
-            text-decoration: none
-            &:hover
-              color: $pink
-          &.email
-            background: url($images_path+'social_icons.png') left top no-repeat
-          &.facebook
-            padding-top: 2px
-            background: url($images_path+'social_icons.png') left -25px no-repeat
-          &.twitter
-            padding-top: 2px
-            background: url($images_path+'social_icons.png') left -54px no-repeat
+        display: block
+        margin: 0 auto 40px
+        float: none
+        ul
+          margin-left: 10px
+          float: left
+          li
+            height: 26px
+            text-indent: -3000em
+            float: left
+            margin-right: 5px
+            width: 27px
+            a
+              color: black
+              +transition(all, 0.5s)
+              text-decoration: none
+              &:hover
+                color: $pink
+            &.email
+              background: image-url("nosvc/icon-user_face.png") left top no-repeat
+              display: none
+            &.facebook
+              background: image-url("nosvc/icon-user_face.png") left top no-repeat
+            &.twitter
+              background: image-url("nosvc/icon-user_twitter.png") left top no-repeat
+            &.other
+              background: image-url("nosvc/icon-user_home.png") left top no-repeat 
       #rewards
         .box
           background: #fefefe
@@ -287,9 +294,8 @@
               &:hover
                 text-decoration: underline
           .maximum_backers
-            color: $_4d_gryn
+            color: #5d5d5d
             font-family: "Dosis-Light"
-            font-weight: bold
             font-size: 11px
             text-transform: uppercase
             background: #F7F6F0
@@ -297,6 +303,9 @@
             width: 308px
             height: 40px
             +border-radius(0 0 16px 16px)
+            .remaining
+              font-size: 24px
+              +text-shadow(white 1px 1px 1px)
       .info
         #pledge
         .statistics
@@ -358,7 +367,7 @@
             &:active
               +box-shadow(rgba(black, 0.3) 0 0 10px inset)
         #creator_profile
-          padding-top: 20px
+          padding-top: 40px
           float: left
           padding-bottom: 15px
           a
