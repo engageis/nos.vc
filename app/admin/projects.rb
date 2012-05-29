@@ -33,6 +33,8 @@ ActiveAdmin.register Project do
       f.input :about
       f.input :headline
       f.input :video_url, :as => :string
+      f.input :when_short
+      f.input :when_long
       f.input :can_finish
       f.input :finished
     end

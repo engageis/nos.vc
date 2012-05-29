@@ -68,6 +68,9 @@ css:
                   .unlimited= t('reward.unlimited')
                 .expires_at= reward.display_expires_at || @project.display_expires_at
                 .clearfix
+        #when.clearfix
+          h3= t('when')
+          p= @project.when_long
         #creator_profile
           h3= t('project_by')
           .avatar= image_tag @project.user.display_image_large
@@ -105,12 +108,11 @@ css:
             = on_the_spot_edit @project, :name
           - else
             = @project.name
-        - if @project.user.address_city
-          h4= t('projects.project_header.with_city', :category_name => link_to(@project.category.name, explore_path(:anchor => @project.category.name.parameterize)), :city => @project.user.address_city, :author => link_to(@project.user.display_name, user_path(@project.user))).html_safe
-        - else
-          h4= t('projects.project_header.without_city', :category_name => link_to(@project.category.name, explore_path(:anchor => @project.category.name.parameterize)), :author => link_to(@project.user.display_name, user_path(@project.user))).html_safe
+        .categorie= link_to(@project.category.name, explore_path(:anchor => @project.category.name.parameterize))
+        .when= @project.when_short
+        p.headline= @project.headline
 
-      #project_content
+      #project_content.clearfix
         #project_about.content
           .midia
             .video

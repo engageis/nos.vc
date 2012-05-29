@@ -45,15 +45,8 @@ script type="text/template" id="project_template"
           span[itemprop="author"] <%= user['name'] %>
         p.description[itemprop="description"]
           | <%= headline %>
-        p.where[itemprop="contentLocation"]
-          |<% if (user['city'] && user['city'].length > 0) { %>
-          | <%= user['city'] %>
-          |<% if (user['state'] && user['state'].length > 0) { %>
-          | /
-          | <%= user['state'] %>
-          |<% } %>
-          |<% } %>
-
+        p.where
+          | <%= when_short %>
 
 
 

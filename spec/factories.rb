@@ -30,6 +30,8 @@ Factory.define :project do |f|
   f.goal 10000
   f.expires_at { 1.month.from_now }
   f.video_url 'http://vimeo.com/17298435'
+  f.when_short '28/10'
+  f.when_long '28/10, 18:00'
 end
 Factory.define :reward do |f|
   f.association :project, :factory => :project

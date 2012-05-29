@@ -51,7 +51,7 @@ class Project < ActiveRecord::Base
 
   search_methods :visible, :home_page, :not_home_page, :recommended, :not_recommended, :expired, :not_expired, :expiring, :not_expiring, :recent, :successful
 
-  validates_presence_of :name, :user, :category, :about, :headline, :goal, :expires_at, :video_url
+  validates_presence_of :name, :user, :category, :about, :headline, :goal, :expires_at, :video_url, :when_short, :when_long
   validates_length_of :headline, :maximum => 140
   validates_uniqueness_of :permalink, :allow_blank => true, :allow_nil => true
   before_create :store_image_url
@@ -209,7 +209,8 @@ class Project < ActiveRecord::Base
       waiting_confirmation: waiting_confirmation?,
       display_status_to_box: I18n.t("project.display_status.#{display_status}").capitalize,
       display_expires_at: display_expires_at,
-      in_time: in_time?
+      in_time: in_time?,
+      when_short: when_short
     }
   end
 
