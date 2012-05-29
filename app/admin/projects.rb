@@ -30,6 +30,7 @@ ActiveAdmin.register Project do
       f.input :name, :as => :string
       f.input :goal
       f.input :expires_at
+      f.input :maximum_backers
       f.input :about
       f.input :headline
       f.input :video_url, :as => :string

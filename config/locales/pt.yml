@@ -637,6 +637,9 @@ pt:
     show:
       where: "Onde?"
       when: "Quando"
+      total_backers: "Pessoas inscritas"
+      total_remaining: "Vagas restantes"
+      unlimited_vacancies: "Vagas ilimitadas"
       about_title: "Sobre o projeto"
       menu:
         about: Sobre
@@ -694,7 +697,7 @@ pt:
   require_permission: "Você não tem permissão para realizar esta ação."
   reward:
     display_remaining: "%{remaining} de %{maximum} disponíveis"
-    display_maximum_backers: "%{maximum} disponíveis"
+    display_maximum_backers: "<span>%{maximum}</span> disponíveis"
     dont_want: "Não quero recompensa"
     limited: Limitada
     unlimited: "Ilimitada"

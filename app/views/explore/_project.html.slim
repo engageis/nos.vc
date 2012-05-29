@@ -8,10 +8,10 @@ script type="text/template" id="project_template"
   .project[itemscope itemtype="http://schema.org/CreativeWork" class=(custom_class if defined?(custom_class))]
     meta[itemprop="dateCreated" content="<%= created_at %>"]
     .box
-      | <% if(expired) { %>
-      .closed
-      | <% } else { %>
+      | <% if(can_back) { %>
       .open
+      | <% } else { %>
+      .closed
       |<% } %>
       .info_bar
         ul

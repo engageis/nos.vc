@@ -155,7 +155,46 @@ class Project < ActiveRecord::Base
   end
 
   def can_back?
-    visible? and not expired? and not rejected?
+    visible? and not expired? and not rejected? and vacancies?
+  end
+
+  def vacancies?
+    return true if total_vacancies > 0
+    false
+  end
+
+  def unlimited_vacancies?
+    return false if maximum_backers
+    return false unless unlimited_vacancies_from_rewards?
+    true
+  end
+
+  def unlimited_vacancies_from_rewards?
+    rewards.not_expired.each do |reward|
+      return true unless reward.maximum_backers
+    end
+    false
+  end
+
+  def total_vacancies
+    return total_vacancies_from_rewards unless unlimited_vacancies_from_rewards?
+    return maximum_backers - backers.confirmed.count if maximum_backers
+    false
+  end
+
+  def vacancies_from_rewards?
+    unless unlimited_vacancies_from_rewards?
+      return true if total_vacancies_from_rewards > 0
+    end
+  end
+
+  def total_vacancies_from_rewards
+    return false if unlimited_vacancies_from_rewards?
+    total = 0
+    rewards.not_expired.each do |reward|
+      total += reward.maximum_backers if reward.maximum_backers
+    end
+    total - backers.confirmed.count
   end
 
   def finish!
@@ -205,6 +244,7 @@ class Project < ActiveRecord::Base
       url: (self.permalink.blank? ? "/projects/#{self.to_param}" : '/' + self.permalink),
       full_uri: I18n.t('site.base_url') + (self.permalink.blank? ? Rails.application.routes.url_helpers.project_path(self) : '/' + self.permalink),
       expired: expired?,
+      can_back: can_back?,
       successful: successful?,
       waiting_confirmation: waiting_confirmation?,
       display_status_to_box: I18n.t("project.display_status.#{display_status}").capitalize,

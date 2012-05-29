@@ -63,7 +63,7 @@ css:
                   - if reward.sold_out?
                     .sold_out= t('reward.sold_out')
                   - else
-                    .remaining= reward.display_maximum_backers
+                    .remaining= reward.display_maximum_backers.html_safe
                 - else
                   .unlimited= t('reward.unlimited')
                 .expires_at= reward.display_expires_at || @project.display_expires_at
@@ -98,6 +98,15 @@ css:
         .media_content_backers.clearfix
           h1
             = t('.menu.backers')
+          .total_backers
+            = @project.total_backers
+            |  
+            = t('projects.show.total_backers')
+          .remaining
+            span= @project.total_vacancies if @project.total_vacancies
+            |  
+            = t('projects.show.total_remaining') unless @project.unlimited_vacancies?
+            = t('projects.show.unlimited_vacancies') if @project.unlimited_vacancies?
           #project_backers.content
         .clearfix
         #loading= image_tag "loading.gif"

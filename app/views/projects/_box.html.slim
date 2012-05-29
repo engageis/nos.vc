@@ -1,10 +1,10 @@
 .project[itemscope itemtype="http://schema.org/CreativeWork" class=(custom_class if defined?(custom_class))]
   meta[itemprop="dateCreated" content=project.created_at.to_date]
   .box
-    - if project.expired?
-      .closed
-    - else
+    - if project.can_back?
       .open
+    - else
+      .closed
     .info_bar
       ul
         li
