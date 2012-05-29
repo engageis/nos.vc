@@ -17,6 +17,22 @@ describe Project do
       it{ should validate_presence_of field }
     end
     it{ should ensure_length_of(:headline).is_at_most(140) }
+    it "should have integer maximum backers" do
+      r = Factory.build(:project)
+      r.maximum_backers = 10.01
+      r.should_not be_valid
+      r.maximum_backers = 10
+      r.should be_valid
+    end
+    it "should have maximum backers > 0" do
+      r = Factory.build(:project)
+      r.maximum_backers = -1
+      r.should_not be_valid
+      r.maximum_backers = 0
+      r.should_not be_valid
+      r.maximum_backers = 1
+      r.should be_valid
+    end
   end
 
   describe "#display_status" do
