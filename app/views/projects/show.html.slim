@@ -70,10 +70,13 @@ css:
                 .clearfix
         #when.clearfix
           h3= t('projects.show.when')
-          p= @project.when_long
+          - if current_user and current_user.admin
+            p= on_the_spot_edit @project, :when_long
+          - else
+            p= @project.when_long
         #location
           h3= t('projects.show.where')
-          p= raw(@project.location) if @project.location
+          p= (@project.location) if @project.location
         #creator_profile
           h3= t('project_by')
           .avatar= image_tag @project.user.display_image_large
@@ -121,9 +124,17 @@ css:
           - else
             = @project.name
         .info
-          .when= @project.when_short
+          .when
+            - if current_user and current_user.admin
+              = on_the_spot_edit @project, :when_short
+            - else
+              = @project.when_short
           .categorie= link_to(@project.category.name, explore_path(:anchor => @project.category.name.parameterize))
-        p.headline= @project.headline
+        p.headline
+          - if current_user and current_user.admin
+            = on_the_spot_edit @project, :headline
+          - else
+            = @project.headline
 
       #project_content.clearfix
         #project_about.content
