@@ -223,6 +223,31 @@
       margin-left: 0px
       width: 345px
       float: left
+      h3
+        color: #83b1df
+        font-family: "Dosis-Medium"
+        font-size: 21px
+        display: block
+        text-indent: 50px
+        padding-top: 10px
+        text-transform: uppercase
+        margin-bottom: 30px
+        height: 30px
+        +text-shadow(white 1px 1px 0px)
+      #when
+        width: 270px
+        margin-top: 40px
+        h3
+          background: image-url("nosvc/icon-when.gif") left top no-repeat 
+        p
+          font-family: "Helvetica Neue"
+          color: #5d5d5d
+          +text-shadow(white 1px 1px 0px)
+          font-size: 14px
+          padding-left: 50px
+          padding-right: 20px
+          line-height: 21px
+          width: 200px
       .user_social
         +grid(3)
         display: block
@@ -377,16 +402,6 @@
               color: $pink
           h3
             background: image-url("nosvc/icon-user.gif") left top no-repeat
-            color: #83b1df
-            font-family: "Dosis-Medium"
-            font-size: 21px
-            display: block
-            text-indent: 50px
-            padding-top: 10px
-            text-transform: uppercase
-            margin-bottom: 30px
-            height: 30px
-            +text-shadow(white 1px 1px 0px)
           .avatar
             +alpha
             img
