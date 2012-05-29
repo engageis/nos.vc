@@ -32,6 +32,7 @@ Factory.define :project do |f|
   f.video_url 'http://vimeo.com/17298435'
   f.when_short '28/10'
   f.when_long '28/10, 18:00'
+  f.location 'Porto Alegre'
 end
 Factory.define :reward do |f|
   f.association :project, :factory => :project

@@ -20,7 +20,6 @@ pt:
   tell_about_this_project: "Conte para o mundo sobre o seu projeto!"
   share_my_projects: "Confira o projeto "
   count_backed_projects: "apoiou %{total} projetos"
-  when: "Quando"
   footer:
     titles:
       info: "Menu"
@@ -338,6 +337,7 @@ pt:
         video_url: "Cole a URL de um vídeo no <a href=\"http://vimeo.com\" target=\"_blank\">Vimeo</a>. Nós escolhemos o Vimeo pois ele é mais bonito e não tem propaganda. Assim, seu projeto fica mais bonito também! <strong>Produza seu vídeo o melhor possível e faça um vídeo específico para a sua campanha</strong>. Se há um ponto que diferencia os projetos que antingem o mínimo dos outros é o vídeo. Observe ;)"
         when_short: "Resuma somente com o(s) dia(s)/mês, ex: '28/10'"
         when_long: "Descreva com o(s) dia(s)/mês e horário(s) de início e términio que irá acontecer o encontro, ex: 'Sábado, 28 de março de 2012. Das 9:00 às 17:00')"
+        location: "Local, endereço, cidade e estado"
       reward:
         description: "Descreva sua recompensa de um jeito que desperte o interesse das pessoas para apoiar o projeto. Não seja tímido!"
         maximum_backers: "Se sua recompensa é limitada, informe o máximo de pessoas."
@@ -359,6 +359,7 @@ pt:
         video_url: Vídeo
         when_short: "Data(s) do encontro"
         when_long: "Data(s) e horário(s) de início e términio"
+        location: "Onde?"
       reward:
         maximum_backers: "Máximo de apoiadores (opcional)"
         expires_at: "Qual o prazo para fazer a inscrição? (opcional)"
@@ -634,6 +635,8 @@ pt:
     send_mail:
       success: "Seu projeto foi enviado com sucesso! Logo entraremos em contato. Muito obrigado!"
     show:
+      where: "Onde?"
+      when: "Quando"
       about_title: "Sobre o projeto"
       menu:
         about: Sobre

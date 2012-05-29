@@ -69,8 +69,11 @@ css:
                 .expires_at= reward.display_expires_at || @project.display_expires_at
                 .clearfix
         #when.clearfix
-          h3= t('when')
+          h3= t('projects.show.when')
           p= @project.when_long
+        #location
+          h3= t('projects.show.where')
+          p= raw(@project.location) if @project.location
         #creator_profile
           h3= t('project_by')
           .avatar= image_tag @project.user.display_image_large

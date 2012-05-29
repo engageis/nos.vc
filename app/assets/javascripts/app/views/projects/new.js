@@ -51,6 +51,8 @@ CATARSE.ProjectsNewView = Backbone.View.extend({
         all_ok = false
       if(!ok('#project_when_long'))
         all_ok = false
+      if(!ok('#project_location'))
+        all_ok = false
       if(all_ok){
         $('#project_submit').attr('disabled', false)
       } else {
@@ -181,6 +183,7 @@ CATARSE.ProjectsNewView = Backbone.View.extend({
     $('#project_headline').keyup(everything_ok)
     $('#project_when_short').keyup(everything_ok)
     $('#project_when_long').keyup(everything_ok)
+    $('#project_location').keyup(everything_ok)
     $('#accept').click(everything_ok)
     $('.reward input,.reward textarea').live('keyup', everything_ok)
 

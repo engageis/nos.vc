@@ -35,6 +35,7 @@ ActiveAdmin.register Project do
       f.input :video_url, :as => :string
       f.input :when_short
       f.input :when_long
+      f.input :location
       f.input :can_finish
       f.input :finished
     end
