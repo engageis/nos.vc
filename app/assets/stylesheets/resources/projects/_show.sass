@@ -352,14 +352,23 @@
             font-family: "Dosis-Light"
             font-size: 11px
             text-transform: uppercase
-            background: #F7F6F0
             margin-left: -19px
             width: 308px
             height: 40px
+            background: #F7F6F0 image-url("nosvc/separador-pledge.gif") 140px top no-repeat 
             +border-radius(0 0 16px 16px)
             .remaining
               font-size: 24px
+              float: left 
+              margin-left: 20px
+              margin-top: 10px
               +text-shadow(white 1px 1px 1px)
+            .expires_at
+              font-family: "Helvetica Neue","Arial","Sans-serif"
+              font-size: 13px
+              +text-shadow(white 1px 1px 1px)
+              float: right
+              margin-right: 20px
       .info
         #pledge
         .statistics
