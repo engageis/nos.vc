@@ -260,7 +260,7 @@
         text-indent: 50px
         padding-top: 10px
         text-transform: uppercase
-        margin-bottom: 30px
+        margin-bottom: 20px
         height: 30px
         +text-shadow(white 1px 1px 0px)
       #when, #location
@@ -355,27 +355,32 @@
                 text-decoration: underline
           .maximum_backers
             color: #5d5d5d
-            font-family: "Dosis-Light"
+            font-family: "Dosis-Regular"
             font-size: 11px
             text-transform: uppercase
             margin-left: -19px
             width: 308px
             height: 40px
-            background: #F7F6F0 image-url("nosvc/separador-pledge.gif") 140px top no-repeat 
+            background: #F7F6F0 image-url("nosvc/separador-pledge.gif") center top no-repeat 
             +border-radius(0 0 16px 16px)
+            +text-shadow(white 1px 1px 1px)
             .remaining
-              font-size: 24px
               float: left 
-              margin-left: 20px
-              margin-top: 10px
-              +text-shadow(white 1px 1px 1px)
+              padding-top: 19px
+              text-indent: 10px
+              span
+                font-size: 24px
+                float: left 
+                margin-left: 10px
+                margin-top: -10px
             .expires_at
               font-family: "Helvetica Neue","Arial","Sans-serif"
-              font-size: 13px
-              +text-shadow(white 1px 1px 1px)
+              font-size: 13px  
               float: right
               margin-right: 20px
               margin-top: 16px
+              width: 120px
+              text-align: center
       .info
         #pledge
         .statistics
@@ -498,6 +503,22 @@
             margin-bottom: 30px
             height: 30px
             +text-shadow(white 1px 1px 0px)
+          .total_backers
+            font-family: "Dosis-Light"
+            font-size: 14px
+            +text-shadow(white 1px 1px 0px)
+          .remaining
+            color: #5d5d5d
+            +text-shadow(white 1px 1px 0px)
+            font-family: "Dosis-Light"
+            padding-left: 50px
+            text-transform: uppercase
+            width: 129px
+            font-size: 12px           
+            span
+              font-size: 24px
+              float: left 
+              margin-right: 10px
           ul.collection_list
             li
               width: 80px
