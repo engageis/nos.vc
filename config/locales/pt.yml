@@ -49,7 +49,7 @@ pt:
     titles:
       blog: blog
       facebook: "já curtiu nosso face?"
-      twitter: "@catarse_"
+      twitter: "@Nos_vc"
       newsletter: "quer novidades?"
       faq: "tá com dúvida?"
       schedule: agenda
@@ -598,7 +598,7 @@ pt:
       backed: levantados
       reached: atingido
     project_backers:
-      empty: "Ninguém apoiou este projeto ainda. Que tal ser o primeiro?"
+      empty: "Ninguém apoiou este projeto ainda. Que tal ser o segundo?"
     project_comments:
       require_login_html: "Quer enviar um comentário? %{link} para fazer login."
       submit: "Enviar comentário"
