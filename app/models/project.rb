@@ -178,9 +178,16 @@ class Project < ActiveRecord::Base
   end
 
   def total_vacancies
-    return total_vacancies_from_rewards unless unlimited_vacancies_from_rewards?
-    return maximum_backers - backers.confirmed.count if maximum_backers
-    false
+    total_from_rewards = (total_vacancies_from_rewards unless unlimited_vacancies_from_rewards?) || false
+    total = (maximum_backers - backers.confirmed.count if maximum_backers) || false
+    if total == false and not total_from_rewards == false
+      return total_from_rewards
+    elsif not total == false and total_from_rewards == false
+      return total
+    elsif not total == false and not total_from_rewards == false
+      return (total if total < total_from_rewards) || total_from_rewards
+    end
+    0
   end
 
   def vacancies_from_rewards?
