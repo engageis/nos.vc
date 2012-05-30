@@ -24,11 +24,11 @@ pt:
     titles:
       info: "Menu"
       opendata: "Números mágicos"
-      social: "curtiu o Nós.vc?"
+      social: "Junte-se a nós"
       newsletter: "receba nossa newsletter"
     stats:
       backers: "Pessoas fazem parte do Nós.vc"
-      backs: "Delas participaram dos encontros"
+      backs: "Delas participaram de encontros"
       total_backed: "É o total de inscrições feitas"
       users: Usuários
       funded_projects: "Encontros já foram realizados"
@@ -123,7 +123,7 @@ pt:
         text: "<span>Aprenda</span> algo novo. Inscreva-se em um encontro na <span>sua cidade</span>."
       create:
         title: "Criar um encontro"
-        text: "Compartilhe sua <span>paixão</span> e encontre outros <span>apaixonados</span>."
+        text: "Compartilhe sua <span>paixão</span> e <span>encontre</span> outros apaixonados."
       how_works:
         title: "Como funciona"
         text: "<span>Aprenda</span> e <span>ensine</span> ao lado de pessoas apaixonadas pelas mesmas coisas que você."
@@ -377,7 +377,7 @@ pt:
         new_curated_pages: "Já conhece os Canais Catárticos? <a href='#curated_pages' id='curated_link'>Olha aqui</a>!"
     header:
       signup: "cadastre-se"
-      signin: "login"
+      signin: "Entrar"
       explore: "Explorar encontros"
       submit_project: "Criar encontros"
       how_works: "Como funciona"
