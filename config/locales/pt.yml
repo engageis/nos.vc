@@ -44,7 +44,7 @@ pt:
     links:
       selected: "Veja todos os nossos destaques"
       expiring: "Veja todos em última chamada"
-      recents: "Veja todos saindo do forno"
+      recents: "Veja todos que estão saindo do forno"
   sidebar:
     titles:
       blog: blog
