@@ -37,6 +37,8 @@ ActiveAdmin.register Project do
       f.input :when_short
       f.input :when_long
       f.input :location
+      f.input :leader_bio
+      f.input :leader_id
       f.input :can_finish
       f.input :finished
     end

@@ -161,7 +161,44 @@ css:
               - else
                 = @project.about_html.html_safe
               = render "admin_fields" if current_user and current_user.admin
-        #project_updates.content
+        #leader_profile
+          - leader = (@project.leader if @project.leader) || @project.user
+          h3
+            = t('with')
+            |  
+            = leader.display_name
+            | :
+          .text
+            - if current_user and current_user.admin
+              p= on_the_spot_edit @project, :leader_bio, :type => :textarea
+            - else
+              p= @project.leader_bio
+
+            - if current_user and current_user.admin
+              p
+                b= t('leader_id')
+                |  
+                = on_the_spot_edit @project, :leader_id
+          .personal_info
+            .avatar= image_tag leader.display_image_large
+            p.name
+             = link_to leader.display_name, user_path(leader)
+            .user_social
+              ul
+                - if can? :manage, leader
+                  li.email
+                    = mail_to leader.email, "Me envie um email", :target => '_blank'
+                - if leader.facebook_link
+                  li.facebook
+                    = link_to "Perfil no facebook", leader.facebook_link, :target => '_blank'
+                - if leader.twitter
+                  li.twitter
+                    = link_to "Perfil no twitter", leader.twitter_link, :target => '_blank'
+                - if leader.other_link
+                  li.other
+                    = link_to leader.other_link, leader.other_link, :target => '_blank'
+              .clearfix
+        #project_updates.content.clearfix
           h1
             = t('.menu.updates')
             span.count=" (#{@project.updates.count})"
