@@ -464,9 +464,9 @@ pt:
     verify_if_video_exists_on_vimeo: "deve existir no Vimeo"
     vimeo_regex_validation: "somente URLs do Vimeo são aceitas"
     display_status:
-      expired: "não financiado"
-      successful: financiado
-      waiting_confirmation: aguardando
+      expired: "Encontro não realizado"
+      successful: "Encontro confirmado"
+      waiting_confirmation: "Aguardando"
   projects:
     box:
       by: "por "
