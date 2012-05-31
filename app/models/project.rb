@@ -157,7 +157,7 @@ class Project < ActiveRecord::Base
   end
 
   def can_back?
-    visible? and not expired? and not rejected? and vacancies?
+    visible? and not expired? and not rejected? and vacancies? and rewards.not_expired.count > 0
   end
 
   def vacancies?
