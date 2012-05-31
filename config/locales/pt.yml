@@ -47,16 +47,6 @@ pt:
       selected: "Veja todos os nossos destaques"
       expiring: "Veja todos em última chamada"
       recents: "Veja todos que estão saindo do forno"
-  sidebar:
-    titles:
-      blog: blog
-      facebook: "já curtiu nosso face?"
-      twitter: "@Nos_vc"
-      newsletter: "quer novidades?"
-      faq: "tá com dúvida?"
-      schedule: agenda
-    buttons:
-      newsletter: assinar
   sections:
     selection:
       title: "Nossos destaques"
@@ -74,6 +64,17 @@ pt:
   "no": Não
   "yes": Sim
   accept_terms_html: "Eu li e estou de acordo com os %{link}."
+  slider:
+    top:
+      explore:
+        title: "Explorar encontros"
+        text: "<span>Aprenda</span> algo novo. Inscreva-se em um encontro na <span>sua cidade</span>."
+      create:
+        title: "Criar um encontro"
+        text: "Compartilhe sua <span>paixão</span> e <span>encontre</span> outros apaixonados."
+      how_works:
+        title: "Como funciona"
+        text: "<span>Aprenda</span> e <span>ensine</span> ao lado de pessoas apaixonadas pelas mesmas coisas que você."
   activerecord:
     errors:
       models:
