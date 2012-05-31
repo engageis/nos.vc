@@ -78,9 +78,6 @@ gem 'httpclient', '2.2.5'
 gem 'selenium-webdriver', '2.21.2'
 gem 'bourbon'
 
-# Payment (paypal response)
-gem 'paypal-express', '~> 0.5.0', :require => 'paypal'
-
 # Server
 gem 'thin'
 gem 'unicorn'
