@@ -21,6 +21,7 @@ describe ProjectsMailer do
     email.encoded.should =~ /Rewards of the project\<br\>&lt;javascript&gt;/
     email.encoded.should =~ /Links of the project\<br\>&lt;javascript&gt;/
     email.encoded.should =~ /foo@bar.com/
-    email[:from].to_s.should == "#{I18n.t('site.name')} <#{I18n.t('site.email.system')}>"
+    puts email[:from].inspect
+    email[:from].to_s.should == "\"#{I18n.t('site.name')}\" <#{I18n.t('site.email.system')}>"
   end
 end

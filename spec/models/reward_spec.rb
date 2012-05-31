@@ -25,7 +25,9 @@ describe Reward do
     r.minimum_value = -0.01
     r.should_not be_valid
     r.minimum_value = 0.99
-    r.should_not be_valid
+    r.should be_valid
+    r.minimum_value = 0
+    r.should be_valid
     r.minimum_value = 1.00
     r.should be_valid
     r.minimum_value = 1.01
@@ -73,12 +75,12 @@ describe Reward do
   it "should have a HTML-safe name that is a HTML composition from minimum_value, description and sold_out" do
     I18n.locale = :pt
     r = Factory.build(:reward, :minimum_value => 0, :description => "Description", :maximum_backers => 0)
-    r.name.should == "<div class='reward_minimum_value'>Não quero recompensa</div><div class='reward_description'>Description</div><div class=\"sold_out\">Esgotada</div><div class='clear'></div>"
+    r.name.should == "<div class='reward_minimum_value'>GRÁTIS</div><div class='reward_description'>Description</div><div class=\"sold_out\">Esgotada</div><div class='clear'></div>"
     r.maximum_backers = 1
-    r.name.should == "<div class='reward_minimum_value'>Não quero recompensa</div><div class='reward_description'>Description</div><div class='clear'></div>"
+    r.name.should == "<div class='reward_minimum_value'>GRÁTIS</div><div class='reward_description'>Description</div><div class='clear'></div>"
     r.minimum_value = 1
-    r.name.should == "<div class='reward_minimum_value'>R$ 1,00+</div><div class='reward_description'>Description</div><div class='clear'></div>"
+    r.name.should == "<div class='reward_minimum_value'>R$ 1,00</div><div class='reward_description'>Description</div><div class='clear'></div>"
     r.description = "Description<javascript>XSS()</javascript>"
-    r.name.should == "<div class='reward_minimum_value'>R$ 1,00+</div><div class='reward_description'>Description&lt;javascript&gt;XSS()&lt;/javascript&gt;</div><div class='clear'></div>"
+    r.name.should == "<div class='reward_minimum_value'>R$ 1,00</div><div class='reward_description'>Description&lt;javascript&gt;XSS()&lt;/javascript&gt;</div><div class='clear'></div>"
   end
 end

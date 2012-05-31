@@ -9,6 +9,7 @@ describe Projects::BackersController do
     @user = create(:user)
     @user_backer = create(:user, :name => 'Lorem Ipsum')
     @project = create(:project)
+    @reward = create(:reward, project: @project)
     @backer = create(:backer, :value=> 10.00, :user => @user_backer, :confirmed => true, :project => @project)
   end
 
@@ -112,14 +113,14 @@ describe Projects::BackersController do
         request.session[:user_id]=@user.id
         request.session[:thank_you_id].should be_nil
         post :review, {:locale => :pt, :project_id => @project.id, :backer => {
-          :value => '20.00',
-          :reward_id => '0',
+          :value => '1.00',
+          :reward_id => @reward.id,
           :anonymous => '0'
         }}
         request.session[:thank_you_id].should == @project.id
         response.body =~ /#{I18n.t('projects.backers.checkout.title')}/
         response.body =~ /#{@project.name}/
-        response.body =~ /R\$ 20/
+        response.body =~ /R\$ 1/
       end
     end
   end
@@ -171,7 +172,7 @@ describe Projects::BackersController do
 
           response.body.should =~ /#{I18n.t('projects.backers.new.header.title')}/
           response.body.should =~ /#{I18n.t('projects.backers.new.submit')}/
-          response.body.should =~ /#{I18n.t('projects.backers.new.no_reward')}/
+          response.body.should =~ /#{@reward.description}/
           response.body.should =~ /#{@project.name}/
           response.should render_template("projects/backers/new")
         end
