@@ -161,7 +161,7 @@ class Project < ActiveRecord::Base
   end
 
   def vacancies?
-    return true if total_vacancies > 0
+    return true if total_vacancies != false
     false
   end
 
@@ -187,8 +187,10 @@ class Project < ActiveRecord::Base
       return total
     elsif not total == false and not total_from_rewards == false
       return (total if total < total_from_rewards) || total_from_rewards
+    elsif total == false and total_from_rewards == false
+      return true
     end
-    0
+    false
   end
 
   def vacancies_from_rewards?

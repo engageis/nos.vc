@@ -106,11 +106,15 @@ css:
             |  
             = t('projects.show.total_backers')
           .remaining
-            span= @project.total_vacancies if @project.total_vacancies
-            |  
-            = t('projects.show.total_remaining') unless @project.unlimited_vacancies?
-            = t('projects.show.unlimited_vacancies') if @project.unlimited_vacancies?
-          #project_backers.content
+            - if @project.can_back?
+              span= @project.total_vacancies if @project.total_vacancies and not @project.unlimited_vacancies?
+              |  
+              = t('projects.show.total_remaining') unless @project.unlimited_vacancies?
+              = t('projects.show.unlimited_vacancies') if @project.unlimited_vacancies?
+            - else
+              span 0
+              = t('projects.show.total_remaining')
+          #project_backers.content.clearfix
         .clearfix
         #loading= image_tag "loading.gif"
 
