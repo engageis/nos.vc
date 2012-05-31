@@ -38,6 +38,7 @@ class Projects::BackersController < ApplicationController
     @backer = @project.backers.new(backer_data)
 
     unless @backer.save
+      raise @backer.errors.inspect
       flash[:failure] = t('projects.backers.review.error')
       return redirect_to new_project_backer_path(@project)
     end
@@ -49,6 +50,18 @@ class Projects::BackersController < ApplicationController
     return unless require_login
 
     backer = current_user.backs.find params[:id]
+
+    # reward free
+    if backer.value == 0
+      current_user.update_attributes params[:user]
+      unless backer.confirmed
+        backer.update_attribute :payment_method, 'Free'
+        backer.confirm!
+      end
+      flash[:success] = t('projects.backers.checkout.success')
+      return redirect_to thank_you_path
+    end
+
     if backer.credits
       if current_user.credits < backer.value
         flash[:failure] = t('projects.backers.checkout.no_credits')

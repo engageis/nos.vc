@@ -51,7 +51,7 @@ css:
           - @rewards.each do |reward|
             div[class="box #{('clickable' if @project.can_back? and not reward.sold_out? and not reward.expired?)}"]
               = hidden_field_tag 'url', "#{new_project_backer_path(@project)}/?reward_id=#{reward.id}"
-              h2= reward.display_minimum
+              h2= reward.minimum_value > 0 ? reward.display_minimum : I18n.t('reward.free')
               .clearfix
               p
                 - if current_user and current_user.admin

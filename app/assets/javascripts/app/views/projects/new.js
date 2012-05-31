@@ -140,7 +140,7 @@ CATARSE.ProjectsNewView = Backbone.View.extend({
       $('.reward input').each(function(){
         if(/^(\d+)$/.test($(this).val())){
           if(/minimum_value/.test($(this).attr('id'))){
-            if(parseInt($(this).val()) > 0) {
+            if(parseInt($(this).val()) >= 0) {
               $(this).addClass("ok").removeClass("error")
             } else {
               $(this).addClass("error").removeClass("ok")

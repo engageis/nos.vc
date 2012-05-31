@@ -9,7 +9,7 @@
           = form.inputs do
             = hidden_field_tag 'credits', ("%0.0f" % current_user.credits)
             = form.input :value, :required => false, :as => :hidden
-            - if current_user.credits >= @rewards.first.minimum_value
+            - if current_user.credits >= @rewards.first.minimum_value and @rewards.first.minimum_value > 0
               .bootstrap-alert
                 .alert.alert-info
                   = form.input :credits, :hint => t('formtastic.hints.backer.credits', :credits => current_user.display_credits).html_safe

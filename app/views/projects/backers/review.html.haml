@@ -63,19 +63,28 @@
                 .bootstrap-twitter
                   = form.submit (@backer.credits ? t('.submit.credits') : t('.submit.moip')), :disabled => true, :class => 'btn', :id => 'user_submit'
           #payment.hide
-            .title
-              %h1= t('.choose_payment')
-            .choose_payment
-              .cc
-                = link_to pay_paypal_path(@backer), :method => :get do
-                  = image_tag 'catarse/cc_icon.png'
-                  %span= t('.choose_credit_card')
-                .clearfix
-              .or
-                %span= t('or')
-              .boleto
+            - if @backer.value > 0
+              .title
+                %h1= t('.choose_payment')
+              .choose_payment
+                .cc
+                  = link_to pay_paypal_path(@backer), :method => :get do
+                    = image_tag 'catarse/cc_icon.png'
+                    %span= t('.choose_credit_card')
+                  .clearfix
+                .or
+                  %span= t('or')
+                .boleto
+                  = link_to checkout_project_backer_path(@backer.project, @backer), :method => :put do
+                    = image_tag 'catarse/boleto_icon.png'
+                    %span= t('.choose_boleto')
+            - elsif @backer.value == 0
+              .title
+                %h1= t('.choose_free')
+              .free
                 = link_to checkout_project_backer_path(@backer.project, @backer), :method => :put do
-                  = image_tag 'catarse/boleto_icon.png'
-                  %span= t('.choose_boleto')
+                  = image_tag 'catarse/cc_icon.png'
+                  %span= t('.confirm_free')
+                .clearfix
 
     .clearfix

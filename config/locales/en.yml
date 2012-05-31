@@ -681,7 +681,7 @@ en:
   reward:
     display_remaining: "%{remaining} of %{maximum} available"
     display_maximum_backers: ~
-    dont_want: "I don't want a reward"
+    free: "I don't want a reward"
     limited: Limited
     unlimited: ~
     sold_out: "Sold out"

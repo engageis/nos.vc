@@ -8,7 +8,7 @@ class Backer < ActiveRecord::Base
   has_many :payment_logs
   has_one :payment_detail
   validates_presence_of :project, :user, :value
-  validates_numericality_of :value, :greater_than_or_equal_to => 10.00
+  validates_numericality_of :value, :greater_than_or_equal_to => 0.00
   validate :reward_must_be_from_project
   scope :anonymous, where(:anonymous => true)
   scope :not_anonymous, where(:anonymous => false)

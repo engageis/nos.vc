@@ -527,6 +527,8 @@ pt:
         choose_payment: "Como você quer pagar?"
         choose_credit_card: "Cartão de crédito"
         choose_boleto: "Boleto bancário"
+        choose_free: "Confirmar a inscrição?"
+        confirm_free: "Confirmar!"
         you_are_about_html: "Você está prestes a fazer parte do grupo que faz de tudo para o %{link} acontecer."
     create:
       success: "Seu projeto foi criado com sucesso! Logo entraremos em contato. Muito obrigado!"
@@ -700,7 +702,7 @@ pt:
   reward:
     display_remaining: "%{remaining} de %{maximum} disponíveis"
     display_maximum_backers: "<span>%{maximum}</span> disponíveis"
-    dont_want: "Não quero recompensa"
+    free: "GRÁTIS"
     limited: Limitada
     unlimited: "Ilimitada"
     sold_out: Esgotada
