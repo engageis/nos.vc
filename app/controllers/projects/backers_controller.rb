@@ -16,8 +16,8 @@ class Projects::BackersController < ApplicationController
     end
     @title = t('projects.backers.new.title', :name => @project.name)
     @backer = @project.backers.new(:user => current_user)
-    empty_reward = Reward.new(:id => 0, :minimum_value => 0, :description => t('projects.backers.new.no_reward'))
-    @rewards = [empty_reward] + @project.rewards.not_expired.order(:minimum_value)
+    #empty_reward = Reward.new(:id => 0, :minimum_value => 0, :description => t('projects.backers.new.no_reward'))
+    @rewards = @project.rewards.not_expired.order(:minimum_value)
     @reward = @project.rewards.find params[:reward_id] if params[:reward_id]
     @reward = nil if @reward and @reward.sold_out?
     if @reward
@@ -33,7 +33,9 @@ class Projects::BackersController < ApplicationController
     params[:backer][:reward_id] = nil if params[:backer][:reward_id] == '0'
     params[:backer][:user_id] = current_user.id
     @project = Project.find params[:project_id]
-    @backer = @project.backers.new(params[:backer])
+    backer_data = params[:backer]
+    backer_data[:value] = Reward.find(backer_data[:reward_id]).minimum_value
+    @backer = @project.backers.new(backer_data)
 
     unless @backer.save
       flash[:failure] = t('projects.backers.review.error')

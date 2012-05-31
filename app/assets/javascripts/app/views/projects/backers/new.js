@@ -40,7 +40,7 @@ CATARSE.BackersNewView = Backbone.View.extend({
     }
     value_ok = function(){
       var value = $('#backer_value').val()
-      if(/^(\d+)$/.test(value) && parseInt(value) >= 10){
+      if(/^(\d+)$/.test(value) && parseInt(value) >= 0){
         $('#backer_value').addClass("ok").removeClass("error")
         return true
       } else {

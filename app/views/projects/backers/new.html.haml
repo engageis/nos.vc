@@ -8,12 +8,11 @@
         = semantic_form_for @backer, :url => review_project_backers_path(@project), :html => { :id => 'backer_form' } do |form|
           = form.inputs do
             = hidden_field_tag 'credits', ("%0.0f" % current_user.credits)
-            = form.input :value, :required => false, :as => :string
-            - if current_user.credits >= 10
+            = form.input :value, :required => false, :as => :hidden
+            - if current_user.credits >= @rewards.first.minimum_value
               .bootstrap-alert
                 .alert.alert-info
                   = form.input :credits, :hint => t('formtastic.hints.backer.credits', :credits => current_user.display_credits).html_safe
-            - @rewards[0].id = 0
             %script
               var rewards = new Array()
               - @rewards.each do |reward|
