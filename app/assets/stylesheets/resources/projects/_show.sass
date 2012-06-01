@@ -122,6 +122,8 @@
             p
               margin: 10px 0
               line-height: 28px
+              iframe, img
+                margin-left: -40px
             strong
               font-weight: bold
             a
@@ -263,7 +265,7 @@
         margin-bottom: 20px
         height: 30px
         +text-shadow(white 1px 1px 0px)
-      #when, #location
+      #when, #location, #condition, #rewards
         margin-top: 40px
         padding-right: 50px
         h3
@@ -313,6 +315,10 @@
             &.other
               background: image-url("nosvc/icon-user_home.png") left top no-repeat 
       #rewards
+        margin-bottom: 20px
+        float: left
+        h3
+          background: image-url("nosvc/icon-rewards.gif") left top no-repeat  
         .box
           background: #fefefe
           padding: 20px 20px 1px
@@ -364,7 +370,7 @@
             background: #F7F6F0 image-url("nosvc/separador-pledge.gif") center top no-repeat 
             +border-radius(0 0 16px 16px)
             +text-shadow(white 1px 1px 1px)
-            .unlimited
+            .unlimited, .sold_out
               font-size: 16px
               color: #58b491
               width: 120px
@@ -372,6 +378,8 @@
               margin-left: 20px
               margin-top: 13px
               float: left
+            .sold_out
+              color: #ed6569
             .remaining
               float: left 
               padding-top: 19px
@@ -411,18 +419,18 @@
             &.time
               background: url($images_path+"time_icon19x30.png") 10px center no-repeat
         #condition
-          background: $_6f_gryn
-          padding: 10px 20px
           &.successful
             background: $green
           &.expired
             background: $red
+          h3
+            background: image-url("nosvc/icon-condition.gif") left top no-repeat
           p
-            line-height: 130%
-            font-family: Arial
-            font-size: 11px
-            text-transform: uppercase
-            color: white
+            line-height: 21px
+            font-family: "Helvetica Neue", "Arial", "Sans-serif"
+            font-size: 14px
+            color: #5d5d5d
+            padding-left: 50px
         #pledge
           padding-top: 20px
           padding-bottom: 20px
@@ -517,7 +525,7 @@
             font-family: "Dosis-Light"
             padding-left: 50px
             text-transform: uppercase
-            width: 130px
+            width: 100px
             font-size: 12px
             float: left  
             margin-bottom: 20px
@@ -530,6 +538,7 @@
             padding-left: 0px
           ul.collection_list
             padding-left: 40px
+            float: left
             li
               width: 70px
               float: left
