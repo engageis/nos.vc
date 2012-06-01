@@ -365,14 +365,15 @@ pt:
     back_project:
       project_warning:
         not_successful:
-          expired: "Não. Este encontro não foi realizado porque não atingiu o número mínimo de inscritos até %{date}. <br />Mas é possível reformular a proposta e criar um novo encontro. Interessou? Entre em contato com NOME. <br />Se você se inscreveu, também pode receber seu dinheiro de volta. Ou good vibes, se a inscrição foi gratuita."
+          expired: "Não. Este encontro não foi realizado porque não atingiu o número mínimo de inscritos até %{date}. <br />Mas é possível reformular a proposta e criar um novo encontro. Interessou? Entre em contato com %{name}. <br />Se você se inscreveu, também pode receber seu dinheiro de volta. Ou good vibes, se a inscrição foi gratuita."
           not_expired: "Ainda não. Este encontro precisa de você! Ele só será realizado se alcançar o número mínimo de inscritos até %{date}. <br />Se não alcançar, você vai receber seu dinheiro de volta. <br />A inscrição é gratuita? Bem, então você vai receber good vibes de volta."
         successful:
-          expired: "Sim! Este encontro atingiu o número mínimo de inscritos e está confirmado. <br />A galera se inscreveu e deu vida ao encontro. Mas inscrições já estão encerradas. <br />Você não conseguiu se inscrever? Entre em contato com NOME e dê vida a um novo encontro."
+          expired: "Sim! Este encontro atingiu o número mínimo de inscritos e está confirmado. <br />A galera se inscreveu e deu vida ao encontro. Mas inscrições já estão encerradas. <br />Você não conseguiu se inscrever? Entre em contato com %{name} e dê vida a um novo encontro."
           not_expired: "Sim! Este encontro atingiu o número mínimo de inscritos e está confirmado. <br />As inscrições estarão abertas até o dia %{date} ou enquanto durarem as vagas. <br />A galera se inscreveu e deu vida ao encontro. Vem também?"
         waiting_confirmation: "Talvez! As inscrições foram encerradas e os últimos pagamentos estão sendo processados. <br />Este encontro será confirmado se atingir o número mínimo de inscritos. <br />Volte mais tarde e veja se rolou ou não."
       reached_of: "Atingidos de"
-      submit: "Quero apoiar este projeto"
+      submit: "Me inscrever"
+      and_make_it_happen: "E fazer acontecer"
     backer:
       anonymous_backer: "Apoiador anônimo"
       anonymous_description: "Optou por permanecer incógnito"

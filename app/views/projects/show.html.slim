@@ -39,6 +39,7 @@ css:
                 = form_tag(new_project_backer_path(@project), :method => :get, :id => 'back_project_form') do
                   fieldset
                     = submit_tag t('projects.back_project.submit'), :disabled => (not @project.can_back?)
+                    span = t('projects.back_project.and_make_it_happen')
 
 
 
@@ -47,16 +48,16 @@ css:
           p
             - if @project.successful?
               - if @project.expired?
-                = t('projects.back_project.project_warning.successful.expired', :date => @project.display_expires_at)
+                = t('projects.back_project.project_warning.successful.expired', :date => @project.display_expires_at, :name => @project.user.display_name).html_safe
               - else
-                = t('projects.back_project.project_warning.successful.not_expired', :date => @project.display_expires_at)
+                = t('projects.back_project.project_warning.successful.not_expired', :date => @project.display_expires_at).html_safe
             - elsif @project.waiting_confirmation?
-              = t('projects.back_project.project_warning.waiting_confirmation')
+              = t('projects.back_project.project_warning.waiting_confirmation').html_safe
             - else
               - if @project.expired?
-                = t('projects.back_project.project_warning.not_successful.expired', :goal => @project.display_goal, :date => @project.display_expires_at)
+                = t('projects.back_project.project_warning.not_successful.expired', :goal => @project.display_goal, :date => @project.display_expires_at, :name => @project.user.display_name).html_safe
               - else
-                = t('projects.back_project.project_warning.not_successful.not_expired', :goal => @project.display_goal, :date => @project.display_expires_at)
+                = t('projects.back_project.project_warning.not_successful.not_expired', :goal => @project.display_goal, :date => @project.display_expires_at).html_safe
 
         #rewards
           h3= t('Quanto?')
