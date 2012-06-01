@@ -48,14 +48,14 @@ css:
           p
             - if @project.successful?
               - if @project.expired?
-                = t('projects.back_project.project_warning.successful.expired', :date => @project.display_expires_at, :name => @project.user.display_name).html_safe
+                = t('projects.back_project.project_warning.successful.expired', :date => @project.display_expires_at, :name => link_to(@project.user.display_name, user_path(@project.user))).html_safe
               - else
                 = t('projects.back_project.project_warning.successful.not_expired', :date => @project.display_expires_at).html_safe
             - elsif @project.waiting_confirmation?
               = t('projects.back_project.project_warning.waiting_confirmation').html_safe
             - else
               - if @project.expired?
-                = t('projects.back_project.project_warning.not_successful.expired', :goal => @project.display_goal, :date => @project.display_expires_at, :name => @project.user.display_name).html_safe
+                = t('projects.back_project.project_warning.not_successful.expired', :goal => @project.display_goal, :date => @project.display_expires_at, :name => link_to(@project.user.display_name, user_path(@project.user))).html_safe
               - else
                 = t('projects.back_project.project_warning.not_successful.not_expired', :goal => @project.display_goal, :date => @project.display_expires_at).html_safe
 
