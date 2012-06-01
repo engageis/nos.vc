@@ -401,7 +401,52 @@
         #pledge
         .statistics
           background: #323334
-          padding: 20px
+          width: 345px
+          height: 220px
+          position: relative
+          .open
+            background: image-url("nosvc/flag-inscabertas.png") left top no-repeat
+            width: 156px
+            height: 47px
+            position: absolute
+            left: -9px
+            margin-top: 16px
+            z-index: 1000 
+          .closed
+            background: image-url("nosvc/flag-inscencerradas.png") left top no-repeat
+            width: 156px
+            height: 47px
+            position: absolute
+            left: -9px
+            margin-top: 16px
+            z-index: 1000
+          .info_bar
+            background: #323334
+            float: left
+            height: 200px
+            width: 114px
+            padding: 10px
+            ul
+              padding-top: 60px
+              display: block
+              li
+                float: left
+                width: 115px
+                font-family: "Dosis-Light"
+                color: #dddddd
+                &:last-child
+                  margin-left: 0px
+                h6
+                  font-size: 38px
+                  margin-bottom: 3px
+                  float: left
+                p
+                  text-transform: uppercase
+                  font-size: 12px
+                  line-height: 13px
+                  width: 60px
+                  float: left
+                  padding-top: 4px     
           .item
             font-family: Arial
             font-size: 16px
@@ -440,18 +485,16 @@
           input[type="submit"]
             display: block
             margin: 0 auto
-            background: url($images_path+"submit_back_icon25x22.png") 6px center no-repeat $light_green
-            width: 266px
-            height: 55px
+            background: image-url("nosvc/button-pledge.png") left top no-repeat
+            width: 171px
+            height: 61px
             border: none
-            text-indent: 28px
-            +border-radius(10px)
+            text-indent: 40px
             +transition(all, 0.5s)
-            +text-shadow(rgba(black, 0.3) 1px 1px 1px)
-            +box-shadow(rgba(black, 0.3) 1px 1px 1px)
+            margin-top: 80px
             text-transform: uppercase
-            font-family: "Lato-Bold"
-            font-size: 15px
+            font-family: "Dosis-Medium"
+            font-size: 18px
             color: white
             &:hover
               +box-shadow(rgba(black, 0.3) 0 0 4px inset)
