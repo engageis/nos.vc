@@ -297,6 +297,7 @@ en:
       how_works: ~
       profile: "my profile"
       hello: ~
+      account: "my account"
     recommended_header:
       sugest_for_you: "suggested for you"
       highlight_project: "featured project"
