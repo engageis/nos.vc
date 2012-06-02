@@ -105,14 +105,14 @@
                   padding: 3px 10px 3px 30px
                   text-align: left
                   background: url($images_path+'link_icon14x14.png') 6px 4px no-repeat
-      #project_content
-        h1
+      #project_content, #leader_profile
+        h1, h3
           padding-bottom: 20px
           padding-left: 40px
           font-size: 24px
           color: #83b1df
           font-family: "Dosis-Regular"
-        #project_about
+        #project_about, #leader_profile
           .text
             color: #5d5d5d
             padding: 0px 40px 40px 40px
@@ -133,6 +133,63 @@
                 color: $pink
             h1
               padding-left: 0
+        #leader_profile
+          float: right
+          width: 614px
+          .personal_info
+            float: right
+            margin-right: 40px
+            width: 220px
+            text-align: center
+            .avatar
+              img
+                width: 220px
+                display: block
+                float: left
+                overflow: hidden
+                +border-radius(112px)
+            p.name
+              padding-bottom: 5px
+              float: left
+              a
+                font-family: "Dosis-Medium"
+                font-size: 18px
+                color: #3772ae
+                text-decoration: none
+                margin-top: 20px
+                display: block
+                width: 100%
+                text-align: center
+                +text-shadow(white 1px 1px 0px)
+          .user_social
+            +grid(3)
+            display: block
+            margin: 0 auto 40px
+            float: none
+            ul
+              margin-left: 10px
+              float: left
+              li
+                height: 26px
+                text-indent: -3000em
+                float: left
+                margin-right: 5px
+                width: 27px
+                a
+                  color: black
+                  +transition(all, 0.5s)
+                  text-decoration: none
+                  &:hover
+                    color: $pink
+                &.email
+                  background: image-url("nosvc/icon-user_face.png") left top no-repeat
+                  display: none
+                &.facebook
+                  background: image-url("nosvc/icon-user_face.png") left top no-repeat
+                &.twitter
+                  background: image-url("nosvc/icon-user_twitter.png") left top no-repeat
+                &.other
+                  background: image-url("nosvc/icon-user_home.png") left top no-repeat 
         #project_updates
           border-top: 1px #D8D3D3 dashed
           padding: 50px 0 50px 0
