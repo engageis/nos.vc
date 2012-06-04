@@ -75,7 +75,7 @@ describe Reward do
   it "should have a HTML-safe name that is a HTML composition from minimum_value, description and sold_out" do
     I18n.locale = :pt
     r = Factory.build(:reward, :minimum_value => 0, :description => "Description", :maximum_backers => 0)
-    r.name.should == "<div class='reward_minimum_value'>GRÁTIS</div><div class='reward_description'>Description</div><div class=\"sold_out\">Esgotada</div><div class='clear'></div>"
+    r.name.should == "<div class='reward_minimum_value'>GRÁTIS</div><div class='reward_description'>Description</div><div class=\"sold_out\">Vagas esgotadas</div><div class='clear'></div>"
     r.maximum_backers = 1
     r.name.should == "<div class='reward_minimum_value'>GRÁTIS</div><div class='reward_description'>Description</div><div class='clear'></div>"
     r.minimum_value = 1
