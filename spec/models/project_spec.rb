@@ -51,7 +51,7 @@ describe Project do
         project.stubs(:successful?).returns(true) 
         project.stubs(:in_time?).returns(true) 
       end
-      it{ should == 'in_time' }
+      it{ should == 'successful' }
     end
 
     context "when expired" do
@@ -97,16 +97,16 @@ describe Project do
 
   context "status changes" do
 
-    it "should be successful if pledged >= goal" do
+    it "should be successful if missing_participants <= 0" do
       p = Factory.build(:project)
-      p.goal = 3000.00
-      Factory(:backer, :project => p, :value => 2999.99)
-      p.successful?.should be_false
       p.backers.destroy_all
+      p.goal = 1
+      p.successful?.should be_false
       Factory(:backer, :project => p, :value => 3000.00)
       p.successful?.should be_true
       p.backers.destroy_all
       Factory(:backer, :project => p, :value => 3000.01)
+      Factory(:backer, :project => p, :value => 3000.02)
       p.successful?.should be_true
     end
 
@@ -127,7 +127,7 @@ describe Project do
     end
 
     it "should be waiting confirmation until 3 weekdays after the deadline unless it is already successful" do
-      p = Factory(:project, :goal => 100)
+      p = Factory(:project, :goal => 1)
       time = Time.local 2011, 03, 04
       Time.stubs(:now).returns(time)
       p.successful?.should be_false
@@ -168,8 +168,8 @@ describe Project do
     end
 
     it "should store successful = true when finished and successful? is true" do
-      project = Factory(:project, can_finish: true, finished: false, goal: 1000, expires_at: 1.day.ago)
-      backer = Factory(:backer, project: project, value: 1000)
+      project = Factory(:project, can_finish: true, finished: false, goal: 1, expires_at: 1.day.ago)
+      backer = Factory(:backer, project: project, value: 100)
       backer.confirm!
       project.successful?.should be_true
       project.successful.should be_false

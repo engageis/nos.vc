@@ -102,7 +102,7 @@ class Project < ActiveRecord::Base
   end
 
   def confirmed?
-    return true if missing_participants <= 0 or missing_participants < 0
+    return true if missing_participants <= 0
     false
   end
 
