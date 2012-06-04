@@ -470,6 +470,8 @@ pt:
       backed: levantados
       reached: atingido
       missing_participants: "Faltam <span>%{count}</span> inscritos para ser realizado"
+      open: "Inscrições Abertas"
+      closed: "Inscrições Encerradas"
     project_backers:
       empty: "Ninguém se inscreveu ainda. Você pode ser a primeiríssima pessoa a dar vida ao encontro."
     project_comments:

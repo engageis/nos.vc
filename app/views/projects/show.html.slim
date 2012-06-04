@@ -18,9 +18,9 @@ css:
         #statistics
           .statistics
             - if @project.can_back?
-              .open
+              .open= t('projects.project.open')
             - else
-              .closed
+              .closed= t('projects.project.closed')
             .info_bar
               ul
                 li

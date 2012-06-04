@@ -2,9 +2,9 @@
   meta[itemprop="dateCreated" content=project.created_at.to_date]
   .box
     - if project.can_back?
-      .open
+      .open= t('projects.project.open')
     - else
-      .closed
+      .closed= t('projects.project.closed')
     .info_bar
       ul
         li

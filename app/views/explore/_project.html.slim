@@ -9,9 +9,9 @@ script type="text/template" id="project_template"
     meta[itemprop="dateCreated" content="<%= created_at %>"]
     .box
       | <% if(can_back) { %>
-      .open
+      .open= t('projects.project.open')
       | <% } else { %>
-      .closed
+      .closed= t('projects.project.closed')
       |<% } %>
       .info_bar
         ul
