@@ -114,27 +114,44 @@ div.project
       height: 200px
       width: 114px
       padding: 10px
-    ul
-      padding-top: 60px
-      display: block
-      li
-        float: left
-        width: 115px
-        font-family: "Dosis-Light"
-        color: #dddddd
-        &:last-child
-          margin-left: 0px
+      ul
+        padding-top: 50px
+        display: block
+        li
+          float: left
+          width: 115px
+          font-family: "Dosis-Light"
+          color: #dddddd
+          margin-top: 20px
+          &:last-child
+            margin-left: 0px
         h6
           font-size: 38px
           margin-bottom: 3px
           float: left
+          margin-left: 5px
+        .little
+          width: 65px
         p
           text-transform: uppercase
           font-size: 12px
           line-height: 13px
-          width: 60px
           float: left
-          padding-top: 4px
+          padding-top: 4px     
+          margin-left: 10px
+          span 
+            color: #ed6569
+            font-size: 38px
+            margin-left: 5px
+        .confirmed, .not_confirmed
+          background: image-url("nosvc/icon-confirmed.gif") left top no-repeat
+          padding-left: 40px
+          color: #58a479
+          height: 32px
+          margin-top: 20px
+          margin-left: 0px
+        .not_confirmed
+          background: image-url("nosvc/icon-expired.gif") left top no-repeat       
     .follow_project
       clear: both
       display: block

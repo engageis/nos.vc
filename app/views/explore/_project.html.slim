@@ -17,7 +17,7 @@ script type="text/template" id="project_template"
         ul
           li
             h6 <%= time_to_go['time'] %>
-            p <%= time_to_go['unit'] %> <%= remaining_text %>
+            p.little <%= time_to_go['unit'] %> <%= remaining_text %>
           li
             | <% if(!successful && in_time) { %>
             p <%= display_missing_participants_to_box %>

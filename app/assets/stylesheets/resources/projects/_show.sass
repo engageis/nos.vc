@@ -115,10 +115,12 @@
         #project_about, #leader_profile
           .text
             color: #5d5d5d
-            padding: 0px 40px 40px 40px
-            font-family: "Helvetica Neue"
+            padding: 0 0 40px 40px
+            font-family: "Helvetica Neue", "Arial", "Sans-serif"
             font-size: 14px
             line-height: 20px
+            width: 300px
+            float: left
             p
               margin: 10px 0
               line-height: 28px
@@ -500,7 +502,7 @@
                   font-size: 38px
                   margin-bottom: 3px
                   float: left
-                  margin-left: 10px
+                  margin-left: 5px
                 .little
                   width: 65px
                 p
@@ -531,10 +533,6 @@
             &.time
               background: url($images_path+"time_icon19x30.png") 10px center no-repeat
         #condition
-          &.successful
-            background: $green
-          &.expired
-            background: $red
           h3
             background: image-url("nosvc/icon-condition.gif") left top no-repeat
           p

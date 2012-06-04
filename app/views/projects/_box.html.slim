@@ -9,7 +9,7 @@
       ul
         li
           h6= project.time_to_go[:time]
-          p= "#{project.time_to_go[:unit]} #{project.remaining_text}"
+          p.little= "#{project.time_to_go[:unit]} #{project.remaining_text}"
         li
           - if not project.successful? and project.in_time?
               p= t('projects.project.missing_participants', count: project.display_missing_participants).html_safe
