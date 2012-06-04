@@ -13,22 +13,29 @@ div.project
       background: image-url("redesign/success_pt110x110.png") left top no-repeat
   .box
     position: relative
-    .open
+    .open, .closed
       background: image-url("nosvc/flag-inscabertas.png") left top no-repeat
       width: 156px
-      height: 47px
+      height: 34px
       position: absolute
       left: -9px
       margin-top: 16px
       z-index: 1000
+      font-family: "Dosis-Medium"
+      text-indent: 12px
+      padding-top: 13px
+      color: #2b5d3f
+      font-size: 14px
+      text-transform: uppercase
+      +text-shadow(#75c297 1px 1px 0px)
     .closed
       background: image-url("nosvc/flag-inscencerradas.png") left top no-repeat
-      width: 156px
-      height: 47px
-      position: absolute
-      left: -9px
-      margin-top: 16px
-      z-index: 1000
+      color: #74171c
+      padding-top: 15px
+      text-indent: 11px
+      font-size: 12px
+      height: 32px
+      +text-shadow(#ee7980 1px 1px 0px)
     .project_content
       padding: 0px 5px
       border-bottom: 1px rgba(white, 0.2) solid
