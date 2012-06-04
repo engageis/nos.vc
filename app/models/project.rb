@@ -81,11 +81,29 @@ class Project < ActiveRecord::Base
   end
 
   def display_goal
-    number_to_currency goal, :unit => 'R$', :precision => 0, :delimiter => '.'
+    goal.to_i
+    #number_to_currency goal, :unit => 'R$', :precision => 0, :delimiter => '.'
   end
 
   def pledged
     backers.confirmed.sum(:value)
+  end
+
+  def participants
+    return total_backers
+  end
+
+  def missing_participants
+    goal.to_i - participants
+  end
+
+  def display_missing_participants
+    missing_participants
+  end
+
+  def confirmed?
+    return true if missing_participants <= 0 or missing_participants < 0
+    false
   end
 
   def total_backers
@@ -99,6 +117,8 @@ class Project < ActiveRecord::Base
       'expired'
     elsif waiting_confirmation?
       'waiting_confirmation'
+    elsif in_time? and successful?
+      'successful'
     elsif in_time?
       'in_time'
     end
@@ -106,7 +126,7 @@ class Project < ActiveRecord::Base
 
   def successful?
     return successful if finished
-    pledged >= goal
+    confirmed?
   end
 
   def expired?
@@ -259,6 +279,8 @@ class Project < ActiveRecord::Base
       successful: successful?,
       waiting_confirmation: waiting_confirmation?,
       display_status_to_box: I18n.t("project.display_status.#{display_status}").capitalize,
+      display_missing_participants_to_box: I18n.t('projects.project.missing_participants', count: display_missing_participants).html_safe,
+      class_status: successful? ? 'confirmed' : 'not_confirmed',
       display_expires_at: display_expires_at,
       in_time: in_time?,
       when_short: when_short

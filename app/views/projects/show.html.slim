@@ -24,24 +24,20 @@ css:
             .info_bar
               ul
                 li
-                  - if @project.in_time?
-                    h6= "#{@project.time_to_go[:time]} #{@project.time_to_go[:unit]}"
-                    p= "#{@project.remaining_text}"
-                  - else
-                    h6= I18n.t("project.display_status.#{@project.display_status}").capitalize
-                    p= @project.display_expires_at
+                  h6= @project.time_to_go[:time]
+                  p= "#{@project.time_to_go[:unit]} #{@project.remaining_text}"
                 li
-                  h6= "#{@project.display_pledged}"
-                  p= "#{t('projects.project.backed')}"
-
+                  - if not @project.successful? and @project.in_time?
+                      p= t('projects.project.missing_participants', count: @project.display_missing_participants).html_safe
+                  - else
+                      p[class={@project.successful? ? 'confirmed' : 'not_confirmed'}]
+                        = I18n.t("project.display_status.#{@project.display_status}").capitalize
             - if @project.can_back?
               #pledge
                 = form_tag(new_project_backer_path(@project), :method => :get, :id => 'back_project_form') do
                   fieldset
                     = submit_tag t('projects.back_project.submit'), :disabled => (not @project.can_back?)
                     span = t('projects.back_project.and_make_it_happen')
-
-
 
         #condition[class="#{@project.display_status}"]
           h3= t('Tá confirmado?')

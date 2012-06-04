@@ -29,10 +29,9 @@ pt:
       social: "Junte-se a nós"
       newsletter: "receba nossa newsletter"
     stats:
-      backers: "Pessoas fazem parte do Nós.vc"
+      users: "Pessoas fazem parte do Nós.vc"
       backs: "Delas participaram de encontros"
-      total_backed: "É o total de inscrições feitas"
-      users: Usuários
+      total_backers: "É o total de inscrições feitas"
       funded_projects: "Encontros já foram realizados"
       active_projects: "Estão com inscrições abertas"
     links:
@@ -470,6 +469,7 @@ pt:
     project:
       backed: levantados
       reached: atingido
+      missing_participants: "Faltam <sapn>%{count}</span> inscritos para ser realizado"
     project_backers:
       empty: "Ninguém se inscreveu ainda. Você pode ser a primeiríssima pessoa a dar vida ao encontro."
     project_comments:

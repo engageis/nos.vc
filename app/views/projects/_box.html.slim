@@ -8,19 +8,15 @@
     .info_bar
       ul
         li
-          - if project.in_time?
-            h6= "#{project.time_to_go[:time]} #{project.time_to_go[:unit]}"
-            p= "#{project.remaining_text}"
-          - else
-            h6= I18n.t("project.display_status.#{project.display_status}").capitalize
-            p= project.display_expires_at
+          h6= project.time_to_go[:time]
+          p= "#{project.time_to_go[:unit]} #{project.remaining_text}"
         li
-          h6= "#{project.display_pledged}"
-          p= "#{t('projects.project.backed')}"
+          - if not project.successful? and project.in_time?
+              p= t('projects.project.missing_participants', count: project.display_missing_participants).html_safe
+          - else
+              p[class={project.successful? ? 'confirmed' : 'not_confirmed'}]
+                = I18n.t("project.display_status.#{project.display_status}").capitalize
 
-        //li
-          //h6= "#{project.progress}%"
-          //p= "#{t('projects.project.reached')}"
     .cover
       p.black_box= project.category.name
       = link_to project do
@@ -35,16 +31,3 @@
       p.description[itemprop="description"]= truncate(project.headline, :length => 140)
       p.where
         = project.when_short
-
-
-
-  /- if project.expired?
-    /.status_image
-      /= link_to project_path(project) do
-        /- if project.successful?
-          /= image_tag "successful.#{I18n.locale}.png"
-        /- elsif project.waiting_confirmation?
-          /= image_tag "waiting_confirmation.#{I18n.locale}.png"
-        /- else
-          /= image_tag "not_successful.#{I18n.locale}.png"
-

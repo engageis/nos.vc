@@ -12,11 +12,11 @@ class ApplicationController < ActionController::Base
   before_filter do
     @total_backers = User.backers.count
     @total_backs = Backer.confirmed.count
-    @total_backed = Backer.confirmed.sum(:value)
+    #@total_backed = Backer.confirmed.sum(:value)
     @total_users = User.primary.count
-    @total_projects = Project.visible.count
+    #@total_projects = Project.visible.count
     @total_projects_success = Project.successful.count
-    @total_projects_online = Project.visible.not_expired.count
+    #@total_projects_online = Project.visible.not_expired.count
     @fb_admins = [567237711]
   end
 

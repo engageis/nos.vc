@@ -16,17 +16,14 @@
         h3= t('footer.titles.opendata')
         ul
           li
-            h5= @total_backers
-            p= t('footer.stats.backers')
+            h5= @total_users
+            p= t('footer.stats.users')
           li
             h5= @total_backs
             p= t('footer.stats.backs')
           li
-            h5= number_to_currency @total_backed, :unit => 'R$', :precision => 0, :delimiter => '.'
-            p= t('footer.stats.total_backed')
-          /li
-            /h5= @total_users
-            /p= t('footer.stats.users')
+            h5= @total_backers
+            p= t('footer.stats.total_backers')
           li
             h5= @total_projects_success
             p= t('footer.stats.funded_projects')
