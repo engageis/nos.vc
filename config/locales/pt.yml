@@ -606,9 +606,9 @@ pt:
   users:
     show:
       tabs:
-        backed_projects: "Encontros em que se inscreveu"
-        created_projects: "Encontros que criou"
-        comments: "Comentários"
+        backed_projects: "Me inscrevi"
+        created_projects: "Criei"
+        comments: "Depoimentos"
         credits: "Créditos"
         settings: "Preferências"
     admin_fields:
