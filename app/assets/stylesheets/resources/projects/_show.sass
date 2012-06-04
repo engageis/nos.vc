@@ -139,6 +139,7 @@
           .personal_info
             float: right
             margin-right: 40px
+            margin-bottom: 40px
             width: 220px
             text-align: center
             .avatar
@@ -148,15 +149,15 @@
                 float: left
                 overflow: hidden
                 +border-radius(112px)
-            p.name
-              padding-bottom: 5px
-              float: left
+            p
               a
                 font-family: "Dosis-Medium"
                 font-size: 18px
                 color: #3772ae
                 text-decoration: none
-                margin-top: 20px
+                margin-top: 15px
+                margin-bottom: 15px
+                float: left
                 display: block
                 width: 100%
                 text-align: center
@@ -164,11 +165,12 @@
           .user_social
             +grid(3)
             display: block
-            margin: 0 auto 40px
-            float: none
+            margin: 0 auto
+            width: 100%
             ul
-              margin-left: 10px
-              float: left
+              margin-left: 65px
+              float: left 
+              width: 96px
               li
                 height: 26px
                 text-indent: -3000em
@@ -589,17 +591,19 @@
           h3
             background: image-url("nosvc/icon-user.gif") left top no-repeat
           .avatar
-            +alpha
+            float: left
+            margin-left: 50px
             img
               width: 220px
               display: block
               float: left
-              margin-left: 45px
               overflow: hidden
               +border-radius(112px)
           .personal_info
-            +grid(5)
-            +omega
+            float: left 
+            margin-left: 50px
+            text-align: center
+            width: 65%
             p.name
               padding-bottom: 5px
               a
@@ -610,7 +614,6 @@
                 margin-top: 20px
                 display: block
                 width: 100%
-                text-align: center
                 +text-shadow(white 1px 1px 0px)
             p
               font-family: Arial
