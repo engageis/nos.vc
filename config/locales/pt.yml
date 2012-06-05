@@ -632,7 +632,7 @@ pt:
       other_link: "Link do seu site"
       change_password: "Senha"
       current_password_hint: "<i>Para que a senha seja alterada você precisa confirmar a sua senha atual.</i>"
-      email_hint: "Seu email não será visível no seu perfil. Mas você poderá receber emails dos organizadores dos encontros em que você se inscrever ou informações do Nós.vc."
+      email_hint: "Seu email não é visível às outras pessoas. Mas você poderá receber emails dos organizadores dos encontros em que você se inscrever ou informações do Nós.vc."
       email_tooltip: "Clique aqui para preencher seu email..."
       gravatar_hint_html: "Quer mudar sua foto? Use o %{link} com seu email. É tão simples quanto enviar uma imagem e funciona para outros sites também. ;)"
       my_data: "Email"
