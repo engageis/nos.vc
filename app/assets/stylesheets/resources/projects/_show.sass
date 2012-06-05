@@ -102,7 +102,7 @@
                 input[type="text"]
                   margin-top: -2px
                   color: #5d5d5d
-                  font-family: "Helvetica Neue"
+                  font-family: "Helvetica Neue", "Arial", "Sans-serif"
                   font-size: 12px
                   border: 1px $minimal_gryn solid
                   +border-radius(5px)
@@ -205,7 +205,7 @@
           border-top: 1px #D8D3D3 dashed
           padding: 50px 0 50px 0
           color: #5d5d5d
-          font-family: "Helvetica Neue"
+          font-family: "Helvetica Neue", "Arial", "Sans-serif"
           hr
             border: none
             border-top: 1px #D8D3D3 dashed
@@ -224,6 +224,13 @@
                   width: 100%
                   padding: 40px 0 0 0
                   min-height: 67px
+                  .comment
+                    p 
+                      font-family: "Helvetica Neue", "Arial", "Sans-serif"
+                      font-size: 13px
+                      line-height: 21px
+                      color: #5d5d5d
+                      margin: 10px 0
           &:last-child
             border-bottom: none
           .time
@@ -234,19 +241,24 @@
             font-family: "Dosis-Regular"
             font-size: 1.5em
             margin-bottom: 15px
+            padding-left: 0px
           p
             padding: 5px 0
             font-size: 17px
-            font-family: "Helvetica Neue"
+            font-family: "Helvetica Neue", "Arial", "Sans-serif"
             line-height: 28px
           img
             max-width: 614px
           a
-            font-family: Arial
-            color: $ultra_gryn
+            font-family: "Dosis-Medium"
+            color: #83b1df
             text-decoration: none
+            text-transform: uppercase
+            background: image-url("nosvc/icon-link.gif") right 4px no-repeat 
+            padding-right: 20px
+            +text-shadow(white 1px 1px 0px)
             &:hover
-              color: $pink
+              text-decoration: underline
           iframe, img
             margin-left: -40px
         strong
@@ -264,11 +276,11 @@
           textarea, input#update_title
             width: 524px
           label
-            font-family: "Helvetica Neue"
+            font-family: "Helvetica Neue", "Arial", "Sans-serif"
             font-size: 15px
             color: rgba(0, 0, 0, 0.8)
         #show_formatting_tips
-          font-family: "Helvetica Neue"
+          font-family: "Helvetica Neue", "Arial", "Sans-serif"
           text-align: left !important
           color: #666
           font-size: 14px
@@ -279,7 +291,7 @@
             &:hover
               color: $pink
         #formatting_tips
-          font-family: "Helvetica Neue"
+          font-family: "Helvetica Neue", "Arial", "Sans-serif"
           display: none
           text-align: left
           color: #666
@@ -306,6 +318,7 @@
         #project_comments
           border-top: 1px #D8D3D3 dashed
           padding: 50px 0 50px 0
+          background: #fff
           h1
             margin-bottom: 20px
             text-align: center
@@ -339,7 +352,7 @@
         h3
           background: image-url("nosvc/icon-when.gif") left top no-repeat 
         p
-          font-family: "Helvetica Neue"
+          font-family: "Helvetica Neue", "Arial", "Sans-serif"
           color: #5d5d5d
           +text-shadow(white 1px 1px 0px)
           font-size: 14px
@@ -418,9 +431,9 @@
             display: block
           p, .on_the_spot_editing
             color: #5d5d5d
-            font-family: "Helvetica Neue"
-            font-size: 12px
-            line-height: 18px
+            font-family: "Helvetica Neue", "Arial", "Sans-serif"
+            font-size: 13px
+            line-height: 21px
             padding-bottom: 10px
             a
               color: $pink
@@ -499,7 +512,7 @@
             background: #323334
             float: left
             height: 200px
-            width: 114px
+            width: 115px
             padding: 10px
             ul
               padding-top: 50px
@@ -518,7 +531,7 @@
                   float: left
                   margin-left: 5px
                 .little
-                  width: 65px
+                  width: 60px
                 p
                   text-transform: uppercase
                   font-size: 12px
@@ -691,8 +704,6 @@
               min-height: 67px
               &:last-child
                 border-bottom: none
-              h3
-                padding-left: 0px
               .backer
                 position: relative
                 .img
@@ -712,7 +723,7 @@
                 top: 25px
                 left: 25px
                 z-index: 1001
-                font-family: "Helvetica Neue"
+                font-family: "Helvetica Neue", "Arial", "Sans-serif"
                 background: white
                 +border-radius(4px)
                 +box-shadow(rgba(black, 0.7) 2px 2px 3px)
