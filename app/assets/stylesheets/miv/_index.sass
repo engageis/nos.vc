@@ -34,6 +34,9 @@
   font-family:  "Dosis-Light"
   color: #5d5d5d
   margin-bottom: 20px
+  strong
+    padding-bottom: 5px
+    display: block
 
 input.ok,textarea.ok
   background: url($images_path+'tick_16.png') no-repeat 96% center
@@ -54,7 +57,8 @@ input.error,textarea.error
     margin-bottom: 20px
 
 .on_the_spot_mouseover
-  background-color: #f7f6f0
+  background-color: #f8f5e8
+  padding: 4px 0 4px 0
 .on_the_spot_form
   &:after
     content: "" !important
@@ -63,28 +67,30 @@ input.error,textarea.error
     content: " " image-url("pencil_16.png")
   form
     input,textarea,select
+      color: #5d5d5d
+      font-family: "Helvetica Neue", "Arial", "Sans-serif"
+      font-size: 14px
+      line-height: 21px
       padding-left: 4px
       padding-right: 24px
-      background-color: rgb(255,255,255)
-      background-color: rgba(255,255,255,0.2)
-      font-size: 18px
-      border: 2px solid rgb(0,60,0)
-      border: 2px solid rgba(0,60,0,0.6)
+      margin-bottom: 10px
+      background-color: #f8f5e8
+      font-size: 13px
+      border: 1px solid #ccc
       +border-radius(5px)
       +text-shadow(rgba(255,255,255,0.85), 1px, 1px, 0px)
     input:focus,textarea:focus,select:focus
-      background-color: rgb(200,220,200)
-      background-color: rgba(0,150,0,0.2)
+      background-color: #fafafa
     textarea
-      padding-right: 28px
-      width: 96%
+      padding-right: 0px
+      width: 90%
       height: 200px
       overflow: auto
     button
       margin-left: 4px
       text-rendering: optimizeLegibility
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
-      color: #333
+      color: #5d5d5d
       font-size: 14px
       line-height: 16px
       +text-shadow(rgba(255,255,255,0.85), 1px, 1px, 0px)
