@@ -63,8 +63,10 @@
         padding-bottom: 20px
         .video
         .social
-          padding: 20px 40px
+          padding: 20px 0 30px 40px
           float: left
+          border-bottom: dashed 1px #ccc
+          margin-bottom: 20px
           #facebook_share, #facebook_share iframe
             width: 570px !important
             float: left
@@ -397,7 +399,7 @@
           +border-radius(16px)
           position: relative
           &.clickable:hover
-            background: rgba($light_green, 0.3)              
+            background: #f7f6f0             
           h2
             font-family: "Dosis-Regular"
             font-size: 38px
@@ -537,6 +539,7 @@
                   margin-left: 0px
                 .not_confirmed
                   background: image-url("nosvc/icon-expired.gif") left top no-repeat       
+                  color: #ed6569
           .item
             font-family: Arial
             font-size: 16px
@@ -688,6 +691,8 @@
               min-height: 67px
               &:last-child
                 border-bottom: none
+              h3
+                padding-left: 0px
               .backer
                 position: relative
                 .img
