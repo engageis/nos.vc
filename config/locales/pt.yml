@@ -538,7 +538,7 @@ pt:
       goal: "Qual é o número mínimo de inscritos?"
       goal_hint: "De verdade. Quantas pessoas são realmente necessárias para tornar o encontro possível? Só será realizado se alcançar o número mínimo."
       maximum_backers: "Qual é o número máximo de inscritos?"
-      maximum_hint: "Defina um número limite, mesmo, de pessoas. Quando chegar nele, as inscrições serão encerradas."
+      maximum_backers_hint: "Defina um número limite, mesmo, de pessoas. Quando chegar nele, as inscrições serão encerradas."
       how_works: "Como serão as inscrições?"
       how_works_hint: "Que tipos de inscrições teremos? Quanto custarão? Serão gratuitas?"
 
@@ -552,6 +552,11 @@ pt:
       submit_complement: "Apontar, Fogo!"
       subtitle: "Divirta-se!"
       title: "Compartilhe sua paixão e encontre outros apaixonados."
+      sidebar:
+        title: "Como criar e organizar um encontro sobre o que você quiser:"
+        first_step: "Preencha o formulário com todo seu gingado e talento. Crie um curso, debate, workshop ou qualquer outra atividade de aprendizado."
+        second_step: "Vamos ler e responder sua proposta com nossos próprios dedos. Quando estiver tudo ok, as inscrições serão abertas."
+        third_step: "O encontro será organizado por você no mundo real. É só alcançar o número mínimo de inscritos no prazo definido."
     twitter:
       take_a_look: "Confira o projeto %{name} no @Nos_vc"
     video_embed:
