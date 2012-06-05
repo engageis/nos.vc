@@ -87,9 +87,9 @@ pt:
       project:
         category: Cidade
         expires_at: Prazo
-        headline: "Frase de efeito"
+        headline: "Como você explicaria o encontro em um tweet?"
         image_url: "URL da imagem"
-        name: Nome
+        name: "Qual é o nome do encontro?"
         user_id: "Id do usuário"
         video_url: "URL do vídeo"
         leader_id: "Este encontro é com: (Id, número do perfil da pessoa que vai conduzí-lo)"
@@ -244,17 +244,17 @@ pt:
         credits: "Você possui <strong>%{credits}</strong> em créditos e pode utilizar até este valor sem precisar realizar um novo pagamento."
         value: "Você escolhe o valor ;) a partir de R$ 10 está ótimo."
       project:
-        about: "Conte-nos um pouco sobre o que você quer fazer, de quanto precisa e para que. Seja sucinto e pontual, mas não esqueça de presentear os leitores com algo que mexa com eles. Afinal, é sua criação e eles precisam ver sua paixão em prática!"
-        category: "Escolha em que categoria você quer que seu projeto apareça. Não se preocupe caso você ache que ele se enquadra em mais de uma. Escolha aquela onde você quer que as pessoas o encontrem."
-        expires_at: "Finalmente, escolha quanto tempo você quer que sua campanha dure. De novo, é uma escolha estratégica: se você botar muito tempo, as pessoas perderão interesse no meio do caminho; se botar muito pouco, poderá não atingir o mínimo a tempo."
-        goal: "Pense bastante no valor que você vai solicitar. Ele deve ser o <strong>mínimo necessário para o projeto acontecer</strong>. Nada mais, nada menos. Se você pedir demais, suas chances de atingir o mínimo serão menores; se pedir de menos, não conseguirá realizar o projeto e, conseqüentemente, terá sua reputação prejudicada, o que dificulta realizações futuras."
-        headline: "Resuma em 140 caracteres o seu projeto. Esta frase será o primeiro contato das pessoas com o seu projeto, antes mesmo de ver o vídeo. Seja criativo, transparente e direto :)"
-        name: "Qual o nome do seu projeto? Escolha com carinho, pois isto irá influenciar as chances do seu projeto atingir o mínimo."
-        video_url: "Cole a URL de um vídeo no <a href=\"http://vimeo.com\" target=\"_blank\">Vimeo</a>. Nós escolhemos o Vimeo pois ele é mais bonito e não tem propaganda. Assim, seu projeto fica mais bonito também! <strong>Produza seu vídeo o melhor possível e faça um vídeo específico para a sua campanha</strong>. Se há um ponto que diferencia os projetos que antingem o mínimo dos outros é o vídeo. Observe ;)"
-        when_short: "Resuma somente com o(s) dia(s)/mês, ex: '28/10'"
-        when_long: "Descreva com o(s) dia(s)/mês e horário(s) de início e términio que irá acontecer o encontro, ex: 'Sábado, 28 de março de 2012. Das 9:00 às 17:00')"
-        location: "Local, endereço, cidade e estado"
-        image_url: "url da imagem"
+        about: "Capriche, é hora de vender o peixe. Por que me inscrever? Como será o encontro? Qual será a programação? Para quem é indicado? Tem pré-requisistos? Seja verdadeiro, direto e procure organizar o texto por tópicos. Abra seu coração e mostre o valor do encontro."
+        category: "Escolha a cidade em que o encontro vai acontecer."
+        expires_at: "Tem que ser tempo suficiente pra divulgar e encontrar as pessoas que vão se inscrever. Por outro lado, tem que dar tempo de cancelar e avisar todo mundo, caso não alcance o número mínimo de inscritos, sem prejudicar ninguém. Por isso, sugerimos encerrar as inscrições uma semana antes da data do encontro."
+        goal: "De verdade. Quantas pessoas são realmente necessárias para tornar o encontro possível? Só será realizado se alcançar o número mínimo."
+        headline: "Até 140 caracteres, direto, reto e convidativo. Evite repetir o que já tem no nome. Este é o texto que vai sempre acompanhá-lo."
+        name: "Título bacanudo, auto-explicativo e curto, vale trocadilho. ;)"
+        video_url: 'Cole aqui o link do vídeo no <a href="http://vimeo.com" target="_blank">Vimeo</a>. Faça um vídeo mágico que explica o encontro, mostra seu rosto e cria empatia!'
+        when_short: "Data(s) do encontro, exemplo: '02 a 04/01/12'"
+        when_long: "Descreva detalhadamente a(s) data(s) e o(s) horário(s) de início e término do encontro, exemplo: 'Segunda, 2 de janeiro de 2012. Das 9:00 às 17:00')"
+        location: "Local, endereço, cidade e estado. Link do Google Maps é muito bem-vindo."
+        image_url: "Cole aqui o link da imagem fantástica que ilustra o encontro. Recomendamos imagens grandes, de pelo menos 1200 pixels de largura. Você pode usar um link do Flickr, por exemplo."
         leader_id: "id do leader desc"
         leader_bio: "leader bio desc"
         maximum_backers: "numero maximos de inscritos"
@@ -274,10 +274,9 @@ pt:
       project:
         expires_at: "Qual o prazo para atingir o mínimo?"
         goal: "De quanto você precisa?"
-        name: "Qual é o nome do encontro?"
         video_url: Vídeo
         when_short: "Data(s) do encontro"
-        when_long: "Data(s) e horário(s) de início e términio"
+        when_long: "Data(s) e horário(s) de início e término"
         location: "Onde?"
         about: "Sobre o encontro"
         maximum_backers: "Máximo de inscritos"
@@ -288,8 +287,8 @@ pt:
   found_plural: Encontrados
   found_singular: Encontrado
   here: aqui
-  i_backed: "Eu apoiei o projeto %{name} no @Catarse_"
-  i_just_backed: "Eu acabei de apoiar o projeto %{name} no @Catarse_"
+  i_backed: "Eu me inscrevi em %{name} no @Nos_vc"
+  i_just_backed: "Eu acabei de me inscrever em %{name} no @Nos_vc"
   layouts:
     application:
       notifications:
@@ -434,7 +433,7 @@ pt:
       subtitle_html: "Financie projetos de maneira colaborativa e torne-se parte de algo maior.<br/>Promova uma catarse coletiva! Você é a peça que falta nesta história."
       title: "Faça acontecer os projetos em que você acredita"
     new:
-      subtitle: "Divirta-se mais ainda!"
+      subtitle: "Divirta-se mais ainda! E preencha com carinho, não dá pra alterar depois. :)"
       title: "Agora é pra valer."
     pending:
       can_finish: "Pode finalizar?"
@@ -509,7 +508,7 @@ pt:
       unlimited_vacancies: "Vagas ilimitadas"
       about_title: "Sobre o encontro"
       menu:
-        about: Sobre
+        about: "Sobre"
         backers: "Quem vai?"
         comments: "Recomende, pergunte e construa este encontro:"
         updates: Atualizações
