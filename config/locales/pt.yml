@@ -3,7 +3,7 @@ pt:
   newsletter_ok_header: "Cadastro efetuado!"
   newsletter_ok_body: "Seu email foi cadastrado com sucesso, obrigado!"
   newsletter_error_header: "Ooops! Ocorreu um erro."
-  newsletter_error_body: "Seu email não foi cadastrado, tente novamente mais tarde!"
+  newsletter_error_body: "Seu email não foi cadastrado, por favor tente novamente mais tarde!"
   views:
     pagination:
       next: próxima
@@ -16,12 +16,12 @@ pt:
       subtitle: "atingidos de %{total}"
   project_by: "Quem está organizando?"
   with: "Com"
-  leader_id: "Id do líder:"
-  tell_about_this_back: "Conte para o mundo sobre o seu apoio!"
-  share_my_backs: "Confira o projeto "
-  tell_about_this_project: "Conte para o mundo sobre o seu projeto!"
-  share_my_projects: "Confira o projeto "
-  count_backed_projects: "apoiou %{total} projetos"
+  leader_id: "Este encontro é com: (Id, número do perfil da pessoa que vai conduzí-lo)"
+  tell_about_this_back: "Espalhe pra todo mundo que você se inscreveu!"
+  share_my_backs: "Confira o encontro"
+  tell_about_this_project: "Espalhe seu encontro pra todo mundo!"
+  share_my_projects: "Confira o encontro "
+  count_backed_projects: "se inscreveu em %{total} encontros"
   footer:
     titles:
       info: "Menu"
@@ -30,17 +30,17 @@ pt:
       newsletter: "receba nossa newsletter"
     stats:
       users: "Pessoas fazem parte do Nós.vc"
-      backs: "Delas participaram de encontros"
-      total_backers: "É o total de inscrições feitas"
+      backs: "Inscrições já foram feitas"
+      total_backers: "Pessoas se inscreveram em encontros"
       funded_projects: "Encontros já foram realizados"
-      active_projects: "Estão com inscrições abertas"
+      active_projects: "Encontros estão com inscrições abertas"
     links:
       how_works: "Como funciona"
-      faq: F.A.Q./Ajuda
+      faq: "Ajuda"
       terms: "Termos de Uso"
       policy: "Política de Privacidade"
-      contact: Contato
-      about: "sobre"
+      contact: "Contato"
+      about: "Sobre"
   main:
     links:
       selected: "Veja todos os nossos destaques"
@@ -60,8 +60,8 @@ pt:
       title: "Nossos amigos"
       description: "Veja os encontros que eles assinam embaixo:"
     mother_look_us: "Mãe, olha a gente:"
-  "no": Não
-  "yes": Sim
+  no: "Não"
+  yes: "Sim"
   accept_terms_html: "Eu li e estou de acordo com os %{link}."
   slider:
     top:
@@ -80,12 +80,12 @@ pt:
         user:
           attributes:
             email:
-              not_found: "O seu email não está cadastrado, verifique o endereço ou crie uma conta nova"
+              not_found: "O seu email não está cadastrado, verifique o endereço ou crie uma conta."
     attributes:
       backer:
         value: Valor
       project:
-        category: Categoria
+        category: Cidade
         expires_at: Prazo
         headline: "Frase de efeito"
         image_url: "URL da imagem"
@@ -113,10 +113,10 @@ pt:
         password_confirmation: "Confirmação de senha"
         phone_number: "Telefone celular"
     models:
-      backer: Apoiador
-      category: Categoria
-      project: Projeto
-      reward: Recompensa
+      backer: "Inscrito"
+      category: "Cidade"
+      project: "Encontro"
+      reward: "Inscrição"
   backer:
     display_confirmed_at: "Há %{time_ago}"
     reward_must_be_from_project: "deve ser do mesmo projeto"
@@ -130,38 +130,38 @@ pt:
     display_time: "Há %{time_ago}"
   credits:
     index:
-      back_date: "Data do apoio"
+      back_date: "Data da inscrição"
       current_credits_html: "Seu saldo atual é de <span id=\"current_credits\">%{credits}</span> em créditos."
-      important_html: "Você tem <strong>até 180 dias após a data de seu apoio</strong> para solicitar o estorno do mesmo. Caso você opte pelo estorno, o valor do apoio será descontado dos seus créditos."
-      project: Projeto
+      important_html: "Você tem <strong>até 60 dias após a data da sua inscrição</strong> para solicitar o estorno. Caso você opte pelo estorno, o valor da inscrição será descontada dos seus créditos."
+      project: "Encontro"
       refund_expration_date: "Prazo para estorno"
       refunded: "Pedido enviado com sucesso"
-      refunds_title: "Apoios que podem ter estorno realizado"
-      request_refund: "Solicitar estorno"
-      requested_refund: "Solicitado estorno"
-      status: Status
+      refunds_title: "Você pode resgatar o dinheiro das seguintes inscrições:"
+      request_refund: "Solicitar estorno."
+      requested_refund: "Estorno solicitado."
+      status: "Status"
       title: "Meus créditos"
-      value: Valor
+      value: "Valor"
     refund:
-      cannot_refund: "Este apoio não pode ser estornado."
+      cannot_refund: "Esta inscrição não pode ser estornada."
       error: "Oops. Ocorreu um erro ao solicitar seu estorno."
       no_credits: "Você não possui créditos suficientes para realizar este estorno."
-      refunded: "Este apoio já foi estornado."
-      requested_refund: "Você já solicitou estorno para este apoio."
+      refunded: "Esta inscrição já foi estornada."
+      requested_refund: "Você já solicitou estorno para esta inscrição."
     title: "Meus créditos"
   credits_mailer:
     request_refund_from:
-      subject: "Requisição de extorno feita por %{name}"
-      subject_html: "Usuário %{name} pediu extorno referente ao apoio %{backer_key} para o projeto %{backer_project} no valor de %{backer_value} efetuado pelo serviço %{backer_payment_service}."
+      subject: "Requisição de estorno feita por %{name}"
+      subject_html: "%{name} pediu estorno referente à inscrição %{backer_key} para o encontro %{backer_project} no valor de %{backer_value} efetuada pelo serviço %{backer_payment_service}."
   curated_pages:
     index:
-      title: "Páginas curadas"
+      title: "Nossos amigos"
     show:
-      backed: levantados
-      reached: atingido
+      backed: "levantados"
+      reached: "atingido"
   devise:
     confirmations:
-      confirmed: "Sua conta foi confirmada com sucesso. Você está logado a partir de agora."
+      confirmed: "Sua conta foi confirmada com sucesso. Você entrou à partir de agora."
       send_instructions: "Você receberá um email com instruções sobre como confirmar a sua conta em poucos minutos."
       send_paranoid_instructions: "Se seu e-mail existe no nosso banco de dados, você receberá um email com instruções sobre como confirmar a sua conta em poucos minutos."
     failure:
@@ -293,7 +293,7 @@ pt:
       signup: "Entrar"
       signin: "Entrar"
       explore: "Explorar encontros"
-      submit_project: "Criar encontros"
+      submit_project: "Criar um encontro"
       how_works: "Como funciona"
       profile: "Meu perfil"
       hello: "Olá"
@@ -367,7 +367,7 @@ pt:
           expired: "Não. Este encontro não foi realizado porque não atingiu o número mínimo de inscritos até %{date}. <br />Mas é possível reformular a proposta e criar um novo encontro. Interessou? Entre em contato com %{name}. <br />Se você se inscreveu, também pode receber seu dinheiro de volta. Ou good vibes, se a inscrição foi gratuita."
           not_expired: "Ainda não. Este encontro precisa de você! Ele só será realizado se alcançar o número mínimo de inscritos até %{date}. <br />Se não alcançar, você vai receber seu dinheiro de volta. <br />A inscrição é gratuita? Bem, então você vai receber good vibes de volta."
         successful:
-          expired: "Sim! Este encontro atingiu o número mínimo de inscritos e está confirmado. <br />A galera se inscreveu e deu vida ao encontro. Mas inscrições já estão encerradas. <br />Você não conseguiu se inscrever? Entre em contato com %{name} e dê vida a um novo encontro."
+          expired: "Sim! Este encontro atingiu o número mínimo de inscritos e foi confirmado. <br />Mas as inscrições já encerraram. <br />Você não conseguiu se inscrever? Entre em contato com %{name} e dê vida a um novo encontro."
           not_expired: "Sim! Este encontro atingiu o número mínimo de inscritos e está confirmado. <br />As inscrições estarão abertas até o dia %{date} ou enquanto durarem as vagas. <br />A galera se inscreveu e deu vida ao encontro. Vem também?"
         waiting_confirmation: "Talvez! As inscrições foram encerradas e os últimos pagamentos estão sendo processados. <br />Este encontro será confirmado se atingir o número mínimo de inscritos. <br />Volte mais tarde e veja se rolou ou não."
       reached_of: "Atingidos de"
@@ -375,7 +375,7 @@ pt:
       and_make_it_happen: "E fazer acontecer"
     backer:
       anonymous_backer: "Anônimo"
-      anonymous_description: "Essa pessoa preferiu se inscrever anonimamente."
+      anonymous_description: "Preferiu se inscrever anonimamente."
       no_reward: "Inscrição gratuita."
     backers:
       checkout:
@@ -610,51 +610,51 @@ pt:
         created_projects: "Criei"
         comments: "Depoimentos"
         credits: "Créditos"
-        settings: "Preferências"
+        settings: "Configurações"
     admin_fields:
       credits: "disponíveis em créditos"
       no_email: "ainda não preencheu seu email"
       title: "Dados de %{name}"
     backs:
       anonymous: "Apoio anônimo."
-      no_backs: "%{name} ainda não apoiou nenhum projeto. Mas a gente sabe que é só questão de tempo! :D"
-      no_backs_current_user_html: "Você ainda não se inscreveu em nenhum encontro. Que tal <a href=\"/\">começar agora</a>?"
-      no_reward: "Você não selecionou nenhuma recompensa"
-      title: "Projetos que %{name} já apoiou"
+      no_backs: "%{name} ainda não se inscreveu em nenhum encontro. Ainda."
+      no_backs_current_user_html: "Você ainda não se inscreveu em nenhum encontro no Nós.vc. Que tal <a href=\"/\">começar agora</a>?"
+      no_reward: "Você não selecionou nenhuma inscrição."
+      title: "Encontros em que %{name} já se inscreveu"
       title_current_user: "Projetos que já apoiei"
-      your_reward: "Sua recompensa"
+      your_reward: "Sua inscrição"
     current_user_fields:
-      updated: "As suas informações foram atualizadas"
-      update_social_info: "Atualizar informações"
-      social_info: "Informações para contato"
-      twitter: "twitter ( usuário )"
-      facebook_link: "perfil do facebook"
-      other_link: "link da sua página na internet"
-      change_password: "Alterar minha senha"
+      updated: "Suas informações foram atualizadas"
+      update_social_info: "Atualizar"
+      social_info: "Contatos"
+      twitter: "Seu usuário do twitter"
+      facebook_link: "Link do seu perfil do facebook"
+      other_link: "Link do seu site"
+      change_password: "Senha"
       current_password_hint: "<i>Para que a senha seja alterada você precisa confirmar a sua senha atual.</i>"
-      email_hint: "Seu email será utilizado apenas para envio de comunicações do Catarse e dos projetos que você apoiar. Ele não estará visível em seu perfil. Quando você apoiar um projeto, nós daremos seu email para o dono do projeto para que ele possa providenciar as recompensas."
+      email_hint: "Seu email não será visível no seu perfil. Mas você poderá receber emails dos organizadores dos encontros em que você se inscrever ou informações do Nós.vc."
       email_tooltip: "Clique aqui para preencher seu email..."
-      gravatar_hint_html: "Quer mudar sua foto? Use o %{link} com seu email. É tão simples quanto enviar uma imagem e já funciona para outros sites também ;)"
-      my_data: "Meus dados"
+      gravatar_hint_html: "Quer mudar sua foto? Use o %{link} com seu email. É tão simples quanto enviar uma imagem e funciona para outros sites também. ;)"
+      my_data: "Email"
       newsletter: "Quero receber novidades do Nós.vc por email. (Spam nunca!)"
       password_hint: "<i>Deixe em branco caso você não queira trocar sua senha.</i>"
     header:
       bio_tooltip: "O que você gostaria de ensinar e aprender?"
       name_tooltip: "Qual é o seu nome?"
     projects:
-      no_projects: "%{name} ainda não realizou nenhum projeto no Catarse. Será que a inspiração vai bater uma hora dessas?"
-      no_projects_current_user_html: "Você ainda não realizou nenhum projeto no Catarse. Deixe a inspiração bater e %{link} para começar!"
-      title: "Projetos de %{name}"
-      title_current_user: "Meus projetos"
+      no_projects: "%{name} ainda não criou nenhum encontro no Nós.vc. Ainda."
+      no_projects_current_user_html: "Você ainda não criou nenhum encontro no Nós.vc. Compartilhe sua paixão e encontre outros apaixonados: %{link}"
+      title: "Encontros de %{name}"
+      title_current_user: "Meus encontros"
   users_mailer:
     notification_email:
       alt: "Você deve habilitar imagens para visualizar corretamente essa mensagem."
-      forward: "Encaminhar para amigos"
-      hello: Olá
-      intro: "Você está recebendo esta mensagem pois se cadastrou no Catarse"
+      forward: "Encaminhar"
+      hello: "Olá"
+      intro: "Você está recebendo esta mensagem pois se cadastrou no Nós.vc"
       mailee: "Mensagem entregue pelo Mailee.me"
       salutation: "Um grande abraço,"
-      signature: "Equipe do Catarse"
+      signature: "Máquinas do Nós.vc"
       unsubscribe: "Descadastrar da lista"
       unsubscribe_long: "Se não quiser mais receber estes emails"
       weblink: "Ver na web"
