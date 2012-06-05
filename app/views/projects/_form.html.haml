@@ -1,30 +1,31 @@
 .clearfix
-#project_warning
-  .bootstrap-alert
-    .alert.alert-info
-      = t('.project_warning.content_html', :link => link_to(t('.project_warning.help_link'), "#{t('site.blog')}?p=2816685141", :target => :_blank))
 = semantic_form_for @project, :html => { :id => 'project_form' } do |form|
   = form.inputs do
     = form.input :user_id, :as => :hidden, :value => current_user.id
-    = form.input :name, :as => :string
-    = form.input :video_url, :as => :string
-    = form.input :about
-    = form.input :headline, :input_html => { :maxlength => 140 }
-    = form.input :category, :collection => Category.all(:order => :name)
-    = form.input :goal
-    .bootstrap-alert
-      .alert
-        .important= t('.important_html', :link => link_to("MoIP", "http://www.moip.com.br/", :target => :_blank))
+    %h2= t('projects.start.the_meeting')
+    %fieldset
+      = form.input :name, :as => :string
+      = form.input :headline, :input_html => { :maxlength => 140 }
+      = form.input :about
+      = form.input :when_short, :hint => t('formtastic.hints.project.when_short')
+      = form.input :when_long, :hint => t('formtastic.hints.project.when_long')
+      = form.input :category, :collection => Category.all(:order => :name)
+      = form.input :location
+      = form.input :video_url, :as => :string, :hint => t('formtastic.hints.project.video_url').html_safe
+      = form.input :image_url, :as => :string, :hint => t('formtastic.hints.project.image_url')
+    %h2= t('projects.start.the_people')
+    %fieldset
+      = form.input :leader_id, :as => :string, :hint => t('formtastic.hints.project.leader_id')
+      = form.input :leader_bio, :hint => t('formtastic.hints.project.leader_bio')
+    %h2= t('projects.start.the_registrations')
+    %fieldset
+      = form.input :goal
     = form.input :expires_at, :as => :string
-    = form.input :when_short, :hint => t('formtastic.hints.project.when_short')
-    = form.input :when_long, :hint => t('formtastic.hints.project.when_long')
-    = form.input :location
     #project_rewards
       :javascript
         var rewards_count = #{@project.rewards.size}
         var rewards_id = #{@project.rewards.size}
       .reward_title
-        %h3= t('.rewards_title')
         %p= t('.rewards_description')
       #rewards_wrapper
         = form.semantic_fields_for :rewards do |reward|
@@ -42,13 +43,16 @@
             .right
               = reward.input :expires_at, :as => :string, :label => t('formtastic.labels.reward.expires_at'), :hint => t('formtastic.hints.reward.expires_at'), :input_html =>  {:class => 'reward_expires_at'}
             .clearfix
-      #add_reward_wrapper
+      #add_reward_wrapper.clearfix
         .bootstrap-twitter
           = link_to '#', class: 'add_reward btn btn-success', id: 'add_reward' do
             %i.icon-plus.icon-white
             = t('.add_reward')
       .clearfix
     .submit
+      .bootstrap-alert
+        .alert
+          .important= t('.important_html', :link => link_to("MoIP", "http://www.moip.com.br/", :target => :_blank))
       %fieldset.accept
         = check_box_tag 'accept'
         = label_tag 'accept', t('accept_terms_html', :terms => link_to(t('terms'), terms_path, :target => :_blank), :guidelines => link_to(t('guidelines'), guidelines_path, :target => :_blank)), :class => 'inline'

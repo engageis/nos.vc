@@ -92,6 +92,8 @@ pt:
         name: Nome
         user_id: "Id do usuário"
         video_url: "URL do vídeo"
+        leader_id: "Este encontro é com: (Id, número do perfil da pessoa que vai conduzí-lo)"
+        leader_bio: "Descrição do cara"
       reward:
         description: Descrição
         maximum_backers: "Máximo de apoiadores"
@@ -251,6 +253,9 @@ pt:
         when_short: "Resuma somente com o(s) dia(s)/mês, ex: '28/10'"
         when_long: "Descreva com o(s) dia(s)/mês e horário(s) de início e términio que irá acontecer o encontro, ex: 'Sábado, 28 de março de 2012. Das 9:00 às 17:00')"
         location: "Local, endereço, cidade e estado"
+        image_url: "url da imagem"
+        leader_id: "id do leader desc"
+        leader_bio: "leader bio desc"
       reward:
         description: "Descreva sua recompensa de um jeito que desperte o interesse das pessoas para apoiar o projeto. Não seja tímido!"
         maximum_backers: "Se sua recompensa é limitada, informe o máximo de pessoas."
@@ -265,7 +270,6 @@ pt:
       comment:
         comment: "Deixe seu comentário sobre este projeto"
       project:
-        about: "Sobre o seu projeto"
         expires_at: "Qual o prazo para atingir o mínimo?"
         goal: "De quanto você precisa?"
         name: "Nome do projeto"
