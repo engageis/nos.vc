@@ -94,6 +94,7 @@ pt:
         video_url: "URL do vídeo"
         leader_id: "Este encontro é com: (Id, número do perfil da pessoa que vai conduzí-lo)"
         leader_bio: "Descrição do cara"
+        location: "Onde?"
       reward:
         description: Descrição
         maximum_backers: "Máximo de apoiadores"
