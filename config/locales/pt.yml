@@ -62,7 +62,7 @@ pt:
     mother_look_us: "Mãe, olha a gente:"
   no: "Não"
   yes: "Sim"
-  accept_terms_html: "Eu li e estou de acordo com os %{link}."
+  accept_terms_html: "Eu li %{guidelines} e os %{terms} do Nós.vc e estou de acordo."
   slider:
     top:
       explore:
@@ -516,28 +516,44 @@ pt:
         take_a_look: "Confira o encontro"
         title: "Faça parte disto e compartilhe este encontro"
     start:
-      about: "Descreva seu projeto e como o $ sera utilizado"
-      category: "Categoria do seu projeto"
-      how_much_you_need: "Quanto você pretende arrecadar?"
-      about_hint: "Conte-nos um pouco sobre o que você quer fazer, de quanto precisa e para que. Seja sucinto e pontual, mas não esqueça de presentear os leitores com algo que mexa com eles. Afinal, é sua criação e eles precisam ver sua paixão em prática!"
+      the_meeting: "O encontro"
+      name: "Qual é o nome do encontro?"
+      name_hint: "Título bacanudo, auto-explicativo e curto, vale trocadilho. ;)"
+      about: "O que as pessoas vão aprender?"
+      about_hint: "Por quê? Como? Compartilhe sua paixão."
+      when: "Quando?"
+      when_hint: "Data(s) e horário(s) de início e término."
+      where: "Onde?"
+      where_hint: "Local, endereço, cidade e estado."
+      video: "Já tem o video?"
+      video_hint: "Se sim, por favor, o link no Vimeo. Se não, pode ser enviado depois."
+
+      the_people: "As pessoas"
+      leader_name: "Qual é o nome da pessoa que conduzirá o encontro?"
+      leader_name_hint: "Nome do facilitador, host, oficineiro, prôfe, o que quiser. <br /> Pode ser você, ou não, pode ser mais de uma pessoa."
+      more_info: "Onde encontramos mais informações?"
+      more_info_hint: "Site(s), Twitter(s).................."
+
+      the_registrations: "As inscrições"
+      goal: "goal"
+      goal_hint: "goal hint"
+      maximum_backers: "maximum backers"
+      maximum_backers: "maximum backers hint"
+      how_works: "how_work"
+      how_works_hint: "how_work_hint"
+
+      the_contact: "O contato"
       contact: "Deixe seu email para entrarmos em contato"
-      links: "Mais algum link para conhecer mais sobre o seu projeto?"
-      links_hint: "Deixe-nos o máximo de links que você tiver, para que a gente possa conhecer melhor seu trabalho e seu projeto. Não precisa ser algo formal nem nada, só alguns links úteis."
-      video: "Já tem o video do projeto?"
-      video_hint: "Um link no vimeo"
-      twitter: "E aí já tem twitter?"
-      facebook: "E aí já tem facebook?"
-      blog: "Tem um blog sobre o projeto?"
+      contact_hint: "contact_hint"
       know_us_via: "Como você conheceu o catarse?"
-      how_works: "Como pretende mobilizar apoiadores para levantar o $ necessário para a execução?"
-      project_warning:
-        content_html: "Quer aumentar a chance de seu projeto ser selecionado? Não deixe de ler %{link}."
-        help_link: "nosso guia"
-      rewards: "Como irá recompensar seus apoiadores?"
-      rewards_hint: "A gente acredita que a melhor maneira de inspirar as pessoas a apoiar um projeto é oferecendo excelentes – e criativas! – recompensas. Todo mundo adora edições limitadas, coisas únicas e experiências divertidas (festas, guloseimas, viajar de balão!). Gaste um bom tempo bolando recompensas criativas e as pessoas se interessarão."
-      submit: "Enviar o projeto"
+      know_us_via_hint: "know_us_via_hint"
+
+      
+
+      submit: "Enviar"
+      submit_complement: "Apontar, Fogo!"
       subtitle: "A hora para fazer acontecer é agora! Estamos loucos para saber o que você está aprontando..."
-      title: "Envie seu projeto"
+      title: "Envie seu encontro"
     twitter:
       take_a_look: "Confira o projeto %{name} no @Catarse_"
     video_embed:
@@ -597,6 +613,7 @@ pt:
     terms:
       title: "Termos de uso"
   terms: "termos de uso"
+  guidelines: "como funciona"
   user:
     backs_text:
       many: "Se inscreveu neste e em mais %{total} outros encontros."
