@@ -257,6 +257,7 @@ pt:
         image_url: "url da imagem"
         leader_id: "id do leader desc"
         leader_bio: "leader bio desc"
+        maximum_backers: "numero maximos de inscritos"
       reward:
         description: "Descreva sua recompensa de um jeito que desperte o interesse das pessoas para apoiar o projeto. Não seja tímido!"
         maximum_backers: "Se sua recompensa é limitada, informe o máximo de pessoas."
@@ -278,6 +279,8 @@ pt:
         when_short: "Data(s) do encontro"
         when_long: "Data(s) e horário(s) de início e términio"
         location: "Onde?"
+        about: "Sobre o encontro"
+        maximum_backers: "Máximo de inscritos"
       reward:
         maximum_backers: "Máximo de apoiadores (opcional)"
         expires_at: "Qual o prazo para fazer a inscrição? (opcional)"

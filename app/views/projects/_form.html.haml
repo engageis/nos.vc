@@ -7,19 +7,20 @@
       = form.input :name, :as => :string
       = form.input :headline, :input_html => { :maxlength => 140 }
       = form.input :about
-      = form.input :when_short, :hint => t('formtastic.hints.project.when_short')
-      = form.input :when_long, :hint => t('formtastic.hints.project.when_long')
+      = form.input :when_short
+      = form.input :when_long
       = form.input :category, :collection => Category.all(:order => :name)
       = form.input :location
-      = form.input :video_url, :as => :string, :hint => t('formtastic.hints.project.video_url').html_safe
-      = form.input :image_url, :as => :string, :hint => t('formtastic.hints.project.image_url')
+      = form.input :video_url, :as => :string
+      = form.input :image_url, :as => :string
     %h2= t('projects.start.the_people')
     %fieldset
-      = form.input :leader_id, :as => :string, :hint => t('formtastic.hints.project.leader_id')
-      = form.input :leader_bio, :hint => t('formtastic.hints.project.leader_bio')
+      = form.input :leader_id, :as => :string
+      = form.input :leader_bio
     %h2= t('projects.start.the_registrations')
     %fieldset
       = form.input :goal
+      = form.input :maximum_backers
     = form.input :expires_at, :as => :string
     #project_rewards
       :javascript
@@ -41,7 +42,7 @@
             .left
               = reward.input :maximum_backers
             .right
-              = reward.input :expires_at, :as => :string, :label => t('formtastic.labels.reward.expires_at'), :hint => t('formtastic.hints.reward.expires_at'), :input_html =>  {:class => 'reward_expires_at'}
+              = reward.input :expires_at, :as => :string, :label => t('formtastic.labels.reward.expires_at'), :input_html =>  {:class => 'reward_expires_at'}
             .clearfix
       #add_reward_wrapper.clearfix
         .bootstrap-twitter
