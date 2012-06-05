@@ -2,8 +2,9 @@ CATARSE.ProjectsShowView = Backbone.View.extend({
 
   initialize: function() {
     $('#header header nav.actions ul li.explore').addClass('selected');
-    _.bindAll(this, "render", "BackerView", "BackersView", "updates", "backers", "embed", "isValid", "backWithReward")
+    _.bindAll(this, "render", "BackerView", "BackersView", "updates", "backers", "embed", "closed_embed", "isValid", "backWithReward")
     CATARSE.router.route("embed", "embed", this.embed)
+    CATARSE.router.route("closed_embed", "closed_embed", this.closed_embed)
 
     this.$('a.destroy_update').live('ajax:beforeSend', function(event, data){
       $(event.target).next('.deleting_update').show();
@@ -102,6 +103,11 @@ CATARSE.ProjectsShowView = Backbone.View.extend({
   embed: function(){
     this.$('#embed_overlay').show()
     this.$('#project_embed').fadeIn()
+  },
+
+  closed_embed: function(){
+    this.$('#project_embed').fadeOut()
+    this.$('#embed_overlay').hide()
   },
 
   selectItem: function(item) {
