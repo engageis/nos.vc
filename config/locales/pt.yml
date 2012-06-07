@@ -567,8 +567,8 @@ pt:
       a_project_by_html: "Um projeto de %{link} no"
   projects_mailer:
     start_project_email:
-      subject: "Projeto enviado por %{name}"
-      subject_html: "Projeto enviado por %{link}"
+      subject: "Encontro enviado por %{name}"
+      subject_html: "Encontro enviado por %{link}"
   registrations:
     new:
       site_title: Cadastre-se
@@ -601,7 +601,7 @@ pt:
     email:
       contact: contato@nos.vc
       payments: financeiro@nos.vc
-      projects: projetos@nos.vc
+      projects: josemarluedke@gmail.com #projetos@nos.vc
       system: system@nos.vc
     facebook: "http://www.facebook.com/nos.vc"
     name: "Nós.vc"

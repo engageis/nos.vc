@@ -50,17 +50,18 @@ class ProjectsController < ApplicationController
   def send_mail
     current_user.update_attribute :email, params[:contact] if current_user.email.nil?
     ProjectsMailer.start_project_email(
-      params[:how_much_you_need],
-      params[:category],
+      params[:name],
       params[:about],
-      params[:rewards],
+      params[:when],
+      params[:where],
       params[:video],
-      params[:facebook],
-      params[:twitter],
-      params[:blog],
-      params[:links],
-      params[:know_us_via],
+      params[:leader_name],
+      params[:more_info],
+      params[:goal],
+      params[:maximum_backers],
+      params[:how_works],
       params[:contact],
+      params[:know_us_via],
       current_user,
       "#{I18n.t('site.base_url')}#{user_path(current_user)}").deliver
 
