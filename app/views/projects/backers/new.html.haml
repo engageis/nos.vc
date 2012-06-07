@@ -1,3 +1,7 @@
+:css
+  .header_featured {
+    background: url("#{@project.display_image.html_safe}") center center no-repeat;
+  }
 #page_content
   .container
     .sidebar
@@ -5,7 +9,7 @@
         = image_tag @project.display_image, alt: @project.name, class: 'project_image', width: 280
         .back_faq
           = render 'back_text'
-      .clearfix     
+      .clearfix
     .main
       .backer_content
         .title
