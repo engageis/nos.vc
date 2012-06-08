@@ -2,8 +2,8 @@
 = semantic_form_for @project, :html => { :id => 'project_form' } do |form|
   = form.inputs do
     = form.input :user_id, :as => :hidden, :value => current_user.id
-    %h2= t('projects.start.the_meeting')
-    %fieldset
+    h2= t('projects.start.the_meeting')
+    fieldset
       = form.input :name, :as => :string
       = form.input :headline, :input_html => { :maxlength => 140 }
       = form.input :about
@@ -13,28 +13,28 @@
       = form.input :location
       = form.input :video_url, :as => :string
       = form.input :image_url, :as => :string
-    %h2= t('projects.start.the_people')
-    %fieldset
+    h2= t('projects.start.the_people')
+    fieldset
       = form.input :leader_id, :as => :string
       = form.input :leader_bio
-    %h2= t('projects.start.the_registrations')
-    %fieldset
+    h2= t('projects.start.the_registrations')
+    fieldset
       = form.input :goal
       = form.input :maximum_backers
     = form.input :expires_at, :as => :string
     #project_rewards
-      :javascript
+      javascript:
         var rewards_count = #{@project.rewards.size}
         var rewards_id = #{@project.rewards.size}
       .reward_title
-        %p= t('.rewards_description')
+        p= t('.rewards_description')
       #rewards_wrapper
         = form.semantic_fields_for :rewards do |reward|
           .reward
             .remove_reward_wrapper
               .bootstrap-twitter
                 = link_to '#', class: 'remove_reward btn btn-danger' do
-                  %i.icon-trash.icon-white
+                  i.icon-trash.icon-white
                   = t('remove')
             = reward.input :description
             .left
@@ -47,14 +47,14 @@
       #add_reward_wrapper.clearfix
         .bootstrap-twitter
           = link_to '#', class: 'add_reward btn btn-success', id: 'add_reward' do
-            %i.icon-plus.icon-white
+            i.icon-plus.icon-white
             = t('.add_reward')
       .clearfix
     .submit
       .bootstrap-alert
         .alert
           .important= t('.important_html', :link => link_to("MoIP", "http://www.moip.com.br/", :target => :_blank))
-      %fieldset.accept
+      fieldset.accept
         = check_box_tag 'accept'
         = label_tag 'accept', t('accept_terms_html', :terms => link_to(t('terms'), terms_path, :target => :_blank), :guidelines => link_to(t('guidelines'), guidelines_path, :target => :_blank)), :class => 'inline'
       = form.actions do

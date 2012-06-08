@@ -1,4 +1,4 @@
-:css
+css:
   .header_featured {
     background: url("#{@project.display_image.html_safe}") center center no-repeat;
   }
@@ -13,8 +13,8 @@
     .main
       .backer_content
         .title
-          %h1= t('.header.title')
-          %h2= t('.header.subtitle')
+          h1= t('.header.title')
+          h2= t('.header.subtitle')
         #project_info
           .project_name= link_to @project.name, project_path(@project)
           .infos
@@ -31,10 +31,10 @@
                 .bootstrap-alert
                   .alert.alert-info
                     = form.input :credits, :hint => t('formtastic.hints.backer.credits', :credits => current_user.display_credits).html_safe
-              %script
-                var rewards = new Array()
+              script
+                | var rewards = new Array(); 
                 - @rewards.each do |reward|
-                  rewards[#{reward.id || 0}] = #{reward.minimum_value}
+                   = "rewards[#{reward.id || 0}] = #{reward.minimum_value}; "
               = form.input :reward, :as => :radio, :collection => @rewards
               = form.input :anonymous
               #anonymous_warning.important.hide
