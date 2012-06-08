@@ -1,30 +1,20 @@
 .tab_container
-  float: left
-  width: 100%
-  height: 10px
-  padding: 11px 10px
-  border-bottom: 1px $df_gryn solid
-  margin-left: -10px
-  // margin-bottom: 30px
+  +grid(6)
+  width: 360px
+  margin: 0
+  margin-bottom: 20px
   nav
+    border-bottom: 1px #D8D3D3 dashed
     a
-      +border-radius(5px 5px 0 0)
-      margin-left: 10px
-      margin-right: 5px
-      padding: 6px 15px
-      background: $pink
-      color: white
-      font-family: Arial
-      font-size: 11px
-      text-transform: uppercase
+      border-top: 1px #D8D3D3 dashed
+      color: $blue
+      font-size: 24px
+      font-family: Dosis-Light
+      display: block
+      padding: 15px 15px
       text-decoration: none
-      +transition(all, 0.4s)
-      &:hover
-        +box-shadow(rgba(black, 0.4) 0px 0px 10px inset)
-      &.selected
-        color: black
+      +text-shadow(white 1px 1px 0px)
+      &:hover, &.selected
         background: white
-        border: 1px $df_gryn solid
-        border-bottom: 2px white solid
-        &:hover
-          +box-shadow(none)
+      &.selected
+        font-family: Dosis-SemiBold

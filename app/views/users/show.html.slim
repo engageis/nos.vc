@@ -23,9 +23,32 @@
 #page_content
   .container
     #user_profile[data-user="#{@user.to_json}"]
+      .tab_container
+        nav#user_profile_menu
+          = link_to t('.tabs.backed_projects'), '#backs', :id => 'backed_projects_link', :class => 'selected'
+          = link_to t('.tabs.created_projects'), '#projects', :id => 'created_projects_link'
+          = link_to t('.tabs.comments'), '#statements', :id => 'statements_link'
+          - if can? :manage, @user
+            = link_to t('.tabs.credits'), '#credits', :id => 'credits_link'
+            = link_to t('.tabs.settings'), '#settings', :id => 'settings_link'
       .section_header
-        .profile_image
-          = image_tag @user.display_image, :class => 'profile_pic', :size => '119x121'
+        .profile_left
+          .avatar
+            = image_tag @user.display_image_large, :class => 'profile_pic'
+          .user_social
+            ul
+              - if can? :manage, @user
+                li.email
+                  = mail_to @user.email, "Me envie um email", :target => '_blank'
+              - if @user.facebook_link
+                li.facebook
+                  = link_to "Perfil no facebook", @user.facebook_link, :target => '_blank'
+              - if @user.twitter
+                li.twitter
+                  = link_to "Perfil no twitter", @user.twitter_link, :target => '_blank'
+              - if @user.other_link
+                li.other
+                  = link_to @user.other_link, @user.other_link, :target => '_blank'
         .profile_title
           h1.profile
             - if current_user and @user == current_user
@@ -37,29 +60,6 @@
               = on_the_spot_edit @user, :bio, :type => :textarea, :tooltip => t('users.header.bio_tooltip')
             - else
               = @user.bio
-      .user_social
-        ul
-          - if can? :manage, @user
-            li.email
-              = mail_to @user.email, "Me envie um email", :target => '_blank'
-          - if @user.facebook_link
-            li.facebook
-              = link_to "Perfil no facebook", @user.facebook_link, :target => '_blank'
-          - if @user.twitter
-            li.twitter
-              = link_to "Perfil no twitter", @user.twitter_link, :target => '_blank'
-          - if @user.other_link
-            li.other
-              = link_to @user.other_link, @user.other_link, :target => '_blank'
-
-      .tab_container
-        nav#user_profile_menu
-          = link_to t('.tabs.backed_projects'), '#backs', :id => 'backed_projects_link', :class => 'selected'
-          = link_to t('.tabs.created_projects'), '#projects', :id => 'created_projects_link'
-          = link_to t('.tabs.comments'), '#statements', :id => 'statements_link'
-          - if can? :manage, @user
-            = link_to t('.tabs.credits'), '#credits', :id => 'credits_link'
-            = link_to t('.tabs.settings'), '#settings', :id => 'settings_link'
       .clearfix
       #user_profile_content
         #user_backed_projects.content
@@ -101,4 +101,5 @@
               .alert.alert-info
                 = t('credits.index.important_html')
       #loading= image_tag "loading.gif"
+      .clearfix
     .clearfix
