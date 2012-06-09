@@ -1,10 +1,14 @@
+- content_for :header_featured do
+  .project_image
+    =image_tag @project.display_image
+
 #page_content
   .container
     .sidebar
       #back_info
         .back_faq
           .tittle
-            = t('Boa Pergunta!')       
+            = t('.good_question')
           = render 'back_text'
       .clearfix
     .main
