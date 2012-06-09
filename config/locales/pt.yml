@@ -400,6 +400,7 @@ pt:
         no_reward: "Obrigado. Eu só quero ajudar o projeto."
         submit: "Revisar e realizar pagamento"
         title: "Apoie o %{name}"
+        good_question: "Boa Pergunta!"
       review:
         credits_notice_html: "Este apoio será pago com seus créditos. Após a confirmação, você ficará com um saldo de <strong>%{credits}</strong> em créditos para apoiar outros projetos."
         error: "Ooops. Ocorreu um erro ao registrar seu apoio. Por favor, tente novamente."
