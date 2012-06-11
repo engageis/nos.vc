@@ -35,7 +35,7 @@ gem 'cancan'
 gem 'rails_autolink', '~> 1.0.7'
 
 # Tools
-#gem "airbrake"
+gem "airbrake"
 gem 'feedzirra'
 gem 'formtastic'
 gem "auto_html", '= 1.4.2'
@@ -60,6 +60,7 @@ gem 'kaminari'
 gem 'tumblr-api'
 gem 'dalli'
 gem 'mailee', '0.5.4', git: 'https://github.com/danielweinmann/mailee-api.git'
+gem 'capybara', ">= 1.0.1"
 
 # Translations
 gem 'http_accept_language'
@@ -101,7 +102,6 @@ group :test, :development do
   gem 'rspec-rails', "~> 2.10.0"
   gem 'rcov', '= 0.9.11'
   gem 'mocha', '0.10.4'
-  gem 'capybara', ">= 1.0.1"
 end
 
 group :development do

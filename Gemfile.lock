@@ -449,6 +449,7 @@ DEPENDENCIES
   activeadmin!
   activemerchant (= 1.17.0)
   activerecord-postgresql-adapter
+  airbrake
   annotate
   auto_html (= 1.4.2)
   bourbon
