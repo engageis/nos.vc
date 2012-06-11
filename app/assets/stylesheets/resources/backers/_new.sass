@@ -64,7 +64,6 @@
               .inline-hints
                 font-family: "Lato-Regular"
                 font-size: 16px
-                color: rgba($ultra_gryn, 0.9)
               label
                 font-family: "Helvetica Neue", "Arial", "Sans-serif"
                 font-size: 14px
@@ -129,12 +128,40 @@
               #backer_anonymous_input
                 margin: 20px 0
                 font-size: 14px
+                text-align: center
                 input
                   display: inline
                   margin-right: 10px
                   vertical-align: top
-          #backer_submit
-            width: 100%
+              #backer_submit
+                display: block
+                margin: 0 auto
+                background: image-url("nosvc/button-backer.png") left top no-repeat
+                width: 178px
+                height: 58px
+                border: none
+                text-indent: 40px
+                cursor: pointer
+                +transition(all, 0.5s)
+                text-transform: uppercase
+                font-family: "Dosis-Medium"
+                font-size: 18px
+                color: white
+                padding-bottom: 21px
+                +text-shadow(#4c8e75 1px 1px 0px)
+                &:hover
+                  +box-shadow(rgba(black, 0.3) 0 0 4px inset)
+                &:active
+                  +box-shadow(rgba(black, 0.3) 0 0 10px inset)
+              span
+                color: #bef3df
+                +text-shadow(#4c8e75 1px 1px 0px)
+                font-family: "Dosis-Medium"
+                text-transform: uppercase
+                font-size: 12px
+                float: left 
+                margin-top: -25px
+                margin-left: 234px
           
       .sidebar
         +omega

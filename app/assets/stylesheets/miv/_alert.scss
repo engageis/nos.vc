@@ -6,17 +6,17 @@
     }
   }
   .alert {
-    font-size: 14px;
-    font-family: Lato-Regular;
-    padding: 8px 35px 8px 14px;
+    font-size: 13px;
+    font-family: "Helvetica Neue", "Arial", "Sans-serif";
+    padding: 10px 15px;
     margin-bottom: 18px;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-    background-color: #fcf8e3;
-    border: 1px solid #fbeed5;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    color: #c09853;
+    text-shadow: 0 1px 0 white;
+    background-color: #f7f6f0;
+    border: 1px solid #e7e6e1;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    color: #5d5d5d;
   }
   .alert-heading {
     color: inherit;
