@@ -52,7 +52,7 @@
           #payment.hide
             - if @backer.value > 0
               .title
-                h1= t('.choose_payment')
+                h2= t('.choose_payment')
               .choose_payment
                 .cc
                   = link_to pay_paypal_path(@backer), :method => :get do
