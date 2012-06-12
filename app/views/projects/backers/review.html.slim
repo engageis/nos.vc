@@ -5,6 +5,7 @@
 #page_content
   .container
     .sidebar
+      .project_info
       //= image_tag @project.display_image, :id => 'project_image', :alt => @project.name, :width => '250px'
       #review_text
         - if @backer.reward
@@ -14,10 +15,8 @@
       .clearfix
     
     .main
-      .project_info
-        h1= t('.you_are_about_html', :link => link_to(@project.name, project_path(@project)))
       .title
-        h1= t('.title')
+        h1= t('.you_are_about_html', :link => link_to(@project.name, project_path(@project)))
         h2= t('.subtitle')
       .clearfix
       - if @backer.credits
