@@ -6,7 +6,7 @@ end
 source 'http://rubygems.org'
 source 'http://gems.github.com'
 
-gem 'rails', '3.2.4'
+gem 'rails', '3.2.5'
 gem 'rake', '0.9.2.2'
 
 
@@ -22,7 +22,7 @@ gem 'slim-rails'
 gem 'mustache'
 
 # Authentication and Authorization
-gem 'omniauth', '1.1.0'
+gem 'omniauth', "~> 1.1.0"
 gem 'omniauth-openid', '~> 1.0.1'
 gem 'omniauth-twitter', '~> 0.0.11'
 gem 'omniauth-facebook', '~> 1.2.0'
