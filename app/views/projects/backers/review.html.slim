@@ -1,15 +1,21 @@
+- content_for :header_featured do
+  .project_image
+    =image_tag @project.display_image
+
 #page_content
   .container
-    #project_review
-      .project_info
-        = image_tag @project.display_image, :id => 'project_image', :alt => @project.name, :width => '250px'
-        h1= t('.you_are_about_html', :link => link_to(@project.name, project_path(@project)))
-        #review_text
-          - if @backer.reward
-            = t('.review_with_reward_html', :value => @backer.display_value, :reward => @backer.reward.description)
-          - else
-            = t('.review_without_reward_html', :value => @backer.display_value)
+    .sidebar
+      //= image_tag @project.display_image, :id => 'project_image', :alt => @project.name, :width => '250px'
+      #review_text
+        - if @backer.reward
+          = t('.review_with_reward_html', :value => @backer.display_value, :reward => @backer.reward.description)
+        - else
+          = t('.review_without_reward_html', :value => @backer.display_value)
       .clearfix
+    
+    .main
+      .project_info
+        h1= t('.you_are_about_html', :link => link_to(@project.name, project_path(@project)))
       .title
         h1= t('.title')
         h2= t('.subtitle')

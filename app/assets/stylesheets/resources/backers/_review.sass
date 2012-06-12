@@ -3,12 +3,24 @@
     display: none
   #page_content
     .container
-      #project_review
-        +grid(16)
-        padding-top: 15px
-        padding-bottom: 30px
+      .main 
+        +grid(12)
+        width: 614px
+        background: #f9f9f9
+        margin: 0 0 30px 0
+        padding: 50px 0 20px 0
+        .project_info
+          padding: 0 80px 40px
+          h1
+            font-family: "Dosis-Light"
+            font-size: 41px
+            line-height: 42px
+            float: left
+            color: #5d5d5d
+            a
+              color: $green
+              text-decoration: none
         .title
-          +grid(16)
           +alpha
           clear: both
           padding-top: 20px
@@ -22,44 +34,28 @@
             color: rgba($ultra_gryn, 0.7)
             font-family: Arial
             font-size: 18px
-        .project_info
+      .sidebar
+        +omega
+        border: none
+        margin-top: 125px
+        margin-left: 0px
+        width: 345px
+        float: left
+        #review_text
+          padding-right: 20px
+          font-family: Lato-Regular
+          font-size: 18px
+          line-height: 21px
           float: left
-          //padding-bottom: 40px
-          background: $ed_gryn
-          #project_image
-            @include box-shadow(rgba(black, 0.5) 1px 1px 3px)
-            float: left
-            margin-right: 20px
-          h1
-            float: left
-            width: 650px
-            font-family: 'Lato-Bold'
-            font-size: 22px
-            line-height: 130%
-            padding-bottom: 20px
-            padding-top: 10px
-            a
-              color: $green
-              text-decoration: none
-          #review_text
-            height: 80px
-            overflow: hidden
-            overflow-y: auto
-            padding-right: 20px
-            font-family: Lato-Regular
+          strong
             font-size: 18px
-            line-height: 140%
-            float: left
-            width: 640px
-            strong
-              font-size: 18px
-              color: black
-              font-weight: bold
-            .reward
-              font-size: 14px
-              font-style: italic
-              display: block
-              line-height: 120%
+            color: black
+            font-weight: bold
+          .reward
+            font-size: 14px
+            font-style: italic
+            display: block
+            line-height: 120%
         #credits_notice
           font-family: 'Lato-Regular'
           font-size: 16px
