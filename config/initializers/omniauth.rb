@@ -1,7 +1,8 @@
 require 'omniauth-openid'
 require 'openid/store/filesystem'
+OpenID.fetcher.ca_file = "#{Rails.root}/config/certs/ca-bundle.crt"
 
-Rails.application.config.middleware.use OmniAuth::Builder do  
+Rails.application.config.middleware.use OmniAuth::Builder do
   use Rack::Session::Cookie
   use OmniAuth::Strategies::OpenID, :store => OpenID::Store::Filesystem.new("#{Rails.root}/tmp")
 
