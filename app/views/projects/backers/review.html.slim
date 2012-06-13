@@ -13,7 +13,6 @@
         - else
           = t('.review_without_reward_html', :value => @backer.display_value)
       .clearfix
-    
     .main
       .title
         h1= t('.you_are_about_html', :link => link_to(@project.name, project_path(@project)))
@@ -52,7 +51,7 @@
           #payment.hide
             - if @backer.value > 0
               .title
-                h1= t('.choose_payment')
+                h2= t('.choose_payment')
               .choose_payment
                 .cc
                   = link_to pay_paypal_path(@backer), :method => :get do
