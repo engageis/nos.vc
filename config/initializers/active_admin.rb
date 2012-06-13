@@ -96,7 +96,5 @@ ActiveAdmin.setup do |config|
   #   config.register_stylesheet 'my_stylesheet.css'
   #
   # To load a javascript file:
-  config.register_javascript 'lib/jquery-1.7.1.min'
-  config.register_javascript 'lib/jquery-ui'
-  config.register_javascript 'lib/jquery-ui-1.8.6.custom.min'
+  #config.register_javascript 'my_javascript'
 end
