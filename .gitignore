@@ -20,3 +20,5 @@ db/structure.sql
 public/fonts
 public/images
 public/javascripts
+public/stylesheets/active_admin.css
+public/stylesheets/application.css
