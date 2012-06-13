@@ -504,6 +504,8 @@ pt:
       waiting: "Este encontro está aguardando análise e logo saberemos se ele entrará no Nós.vc ;)"
       where: "Onde?"
       when: "Quando"
+      is_confirmed: "Tá confirmado?"
+      how_much: "Quanto?"
       total_backers: "Pessoas inscritas"
       total_remaining: "Vagas restantes"
       unlimited_vacancies: "Vagas ilimitadas"
