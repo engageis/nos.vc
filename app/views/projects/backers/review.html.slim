@@ -5,13 +5,9 @@
 #page_content
   .container
     .sidebar
-      .project_info
-      //= image_tag @project.display_image, :id => 'project_image', :alt => @project.name, :width => '250px'
       #review_text
-        - if @backer.reward
-          = t('.review_with_reward_html', :value => @backer.display_value, :reward => @backer.reward.description)
-        - else
-          = t('.review_without_reward_html', :value => @backer.display_value)
+        h1 = @backer.value > 0 ? @backer.display_value : I18n.t('reward.free')
+        p= @backer.reward.description
       .clearfix
     .main
       .title
