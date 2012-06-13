@@ -600,9 +600,9 @@ pt:
     base_url: "http://localhost:3000"
     blog: "http://blog.nos.vc/"
     email:
-      contact: contato@nos.vc
-      payments: financeiro@nos.vc
-      projects: josemarluedke@gmail.com #projetos@nos.vc
+      contact: somos@nos.vc
+      payments: leo@nos.vc
+      projects: mauro@nos.vc
       system: system@nos.vc
     facebook: "http://www.facebook.com/nos.vc"
     name: "Nós.vc"
