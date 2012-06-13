@@ -1,6 +1,6 @@
 html
   head
-    meta{:content => "text/html; charset=UTF-8", 'http-equiv' => "Content-Type"}
+    meta[content="text/html; charset=UTF-8" http-equiv="Content-Type"]
   body
     h1= t('.subject_html', :link => link_to(@user.display_name, @user_url))
     p

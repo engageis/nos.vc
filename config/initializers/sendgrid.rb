@@ -4,7 +4,7 @@ begin
     :address        => 'smtp.sendgrid.net',
     :port           => '587',
     :authentication => :plain,
-    :user_name      => 'catarse',
+    :user_name      => 'nosvc',
     :password       =>  Configuration[:sendgrid],
     :domain         => 'heroku.com'
     }

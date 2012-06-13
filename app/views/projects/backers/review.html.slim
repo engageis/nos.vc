@@ -49,14 +49,14 @@
               .title
                 h2= t('.choose_payment')
               .choose_payment
-                .cc
-                  = link_to pay_paypal_path(@backer), :method => :get do
-                    = image_tag 'catarse/cc_icon.png'
-                    span= t('.choose_credit_card')
-                  .clearfix
-                .or
-                  span= t('or')
-                .boleto
+                /.cc
+                  /= link_to pay_paypal_path(@backer), :method => :get do
+                    /= image_tag 'catarse/cc_icon.png'
+                    /span= t('.choose_credit_card')
+                  /.clearfix
+                /.or
+                  /span= t('or')
+                .moip
                   = link_to checkout_project_backer_path(@backer.project, @backer), :method => :put do
                     = image_tag 'catarse/boleto_icon.png'
                     span= t('.choose_boleto')

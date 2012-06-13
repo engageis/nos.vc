@@ -58,7 +58,7 @@ css:
                     span = t('projects.back_project.and_make_it_happen')
 
         #condition[class="#{@project.display_status}"]
-          h3= t('Tá confirmado?')
+          h3= t('.is_confirmed')
           p
             - if @project.successful?
               - if @project.expired?
@@ -74,7 +74,7 @@ css:
                 = t('projects.back_project.project_warning.not_successful.not_expired', :goal => @project.display_goal, :date => @project.display_expires_at).html_safe
 
         #rewards
-          h3= t('Quanto?')
+          h3= t('.how_much')
           - @rewards.each do |reward|
             div[class="box #{('clickable' if @project.can_back? and not reward.sold_out? and not reward.expired?)}"]
               = hidden_field_tag 'url', "#{new_project_backer_path(@project)}/?reward_id=#{reward.id}"

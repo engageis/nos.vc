@@ -88,17 +88,17 @@ pt:
         category: Cidade
         expires_at: Prazo
         headline: "Como você explicaria o encontro em um tweet?"
-        image_url: "Imagem"
+        image_url: "Imagem:"
         name: "Qual é o nome do encontro?"
         user_id: "Id do usuário"
         video_url: "URL do vídeo"
         leader_id: "Este encontro é com:"
-        leader_bio: "Mini biografia"
+        leader_bio: "Mini, muito mini, biografia:"
         location: "Onde?"
       reward:
-        description: Descrição
+        description: "Tipo de inscrição"
         maximum_backers: "Máximo de apoiadores"
-        minimum_value: "Valor mínimo"
+        minimum_value: "Preço (R$)"
       user:
         address_city: Cidade
         address_complement: Complemento
@@ -246,43 +246,43 @@ pt:
       project:
         about: "Capriche, é hora de vender o peixe. Por que me inscrever? Como será o encontro? Qual será a programação? Para quem é indicado? Tem pré-requisistos? Seja verdadeiro, direto e procure organizar o texto por tópicos. Abra seu coração e mostre o valor do encontro."
         category: "Escolha a cidade em que o encontro vai acontecer."
-        expires_at: "Tem que ser tempo suficiente pra divulgar e encontrar as pessoas que vão se inscrever. Por outro lado, tem que dar tempo de cancelar e avisar todo mundo, caso não alcance o número mínimo de inscritos, sem prejudicar ninguém. Por isso, sugerimos encerrar as inscrições uma semana antes da data do encontro."
+        expires_at: "Tem que ser tempo suficiente pra divulgar e encontrar as pessoas que vão se inscrever. Por outro lado, tem que dar tempo de cancelar e avisar todo mundo sem prejudicar ninguém, caso não alcance o número mínimo de inscritos. Por isso, sugerimos encerrar as inscrições uma semana antes da data do encontro."
         goal: "De verdade. Quantas pessoas são realmente necessárias para tornar o encontro possível? Só será realizado se alcançar o número mínimo."
         headline: "Até 140 caracteres, direto, reto e convidativo. Evite repetir o que já tem no nome. Este é o texto que vai sempre acompanhá-lo."
         name: "Título bacanudo, auto-explicativo e curto, vale trocadilho. ;)"
-        video_url: 'Cole aqui o link do vídeo no Vimeo. Faça um vídeo mágico que explica o encontro, mostra seu rosto e provoca aplausos espontianeos. :)'
+        video_url: 'Cole aqui o link do vídeo no Vimeo. Faça um vídeo mágico que explica o encontro, mostra seu rosto e provoca aplausos espontâneos. :)'
         when_short: "Data(s) do encontro, exemplo: '02 a 04/01/12'"
         when_long: "Descreva detalhadamente a(s) data(s) e o(s) horário(s) de início e término do encontro, exemplo: 'Segunda, 2 de janeiro de 2012. Das 9:00 às 17:00')"
         location: "Local, endereço, cidade e estado. Link do Google Maps é muito bem-vindo."
         image_url: "Cole aqui o link da imagem fantástica que ilustra o encontro. Recomendamos imagens grandes, com, pelo menos, 1200 pixels de largura. Você pode usar um link do Flickr, por exemplo."
         leader_id: "Id, número do perfil da pessoa que vai conduzir o encontro. Pode ser você! Exemplo: 'X'. Se a página do perfil é http://nos.vc/pt/users/X"
-        leader_bio: "Fale um pouco sobre quem vai conduzir a atividade. Sua vida e experiência com o assunto do encontro."
-        maximum_backers: "numero maximos de inscritos"
+        leader_bio: "Fale um pouco sobre quem vai conduzir o encontro. Sua vida e experiência com o assunto."
+        maximum_backers: "Defina um número limite, mesmo, de pessoas. Quando chegar nele, as inscrições serão encerradas."
       reward:
-        description: "Descreva sua recompensa de um jeito que desperte o interesse das pessoas para apoiar o projeto. Não seja tímido!"
-        maximum_backers: "Se sua recompensa é limitada, informe o máximo de pessoas."
-        minimum_value: "Este é valor mínimo de apoio para escolher esta recompensa."
-        expires_at: "Esta inscrição tem um prozo limitado? Qual?"
+        description: "Descreva a inscrição de um jeito que desperte o interesse das pessoas. Solta o dedo no teclado!"
+        maximum_backers: "Se esse tipo de inscrição é limitada, informe o máximo de pessoas."
+        minimum_value: "Pode ser 0 para inscrições gratuitas. Ou à partir de R$ 10,00 para inscrições pagas."
+        expires_at: "Este tipo de inscrição tem um prazo limitado? Qual?"
     labels:
       backer:
         anonymous: "Quero que meu apoio seja anônimo."
         credits: "Quero usar meus créditos para este apoio."
-        reward: "Selecione sua recompensa"
+        reward: "Selecione sua inscrição"
         value: "Com quanto você quer apoiar?"
       comment:
         comment: "Deixe seu comentário sobre este projeto"
       project:
-        expires_at: "Qual o prazo para atingir o mínimo?"
-        goal: "De quanto você precisa?"
-        video_url: Vídeo
+        expires_at: "Quando encerram as inscrições?"
+        goal: "Qual é o número mínimo de inscritos?"
+        video_url: "Vídeo:"
         when_short: "Data(s) do encontro"
         when_long: "Data(s) com horário(s) de início e término"
         location: "Onde?"
         about: "Sobre o encontro"
-        maximum_backers: "Máximo de inscritos"
+        maximum_backers: "Qual é o número máximo de inscritos?"
       reward:
-        maximum_backers: "Máximo de apoiadores (opcional)"
-        expires_at: "Qual o prazo para fazer a inscrição? (opcional)"
+        maximum_backers: "Qual é o número máximo de inscritos desse tipo? (opcional)"
+        expires_at: "Quando encerra esse tipo de inscrição? (opcional)"
     optional: " (opcional)"
   found_plural: Encontrados
   found_singular: Encontrado
@@ -398,7 +398,7 @@ pt:
           subtitle: "Você está perto de se inscrever e fazer este encontro acontecer."
           title: "Obrigado!"
         no_reward: "Obrigado. Eu só quero ajudar o projeto."
-        submit: "Revisar e realizar pagamento"
+        submit: "Me inscrever"
         title: "Apoie o %{name}"
         good_question: "Boa Pergunta!"
       review:
@@ -421,13 +421,13 @@ pt:
         choose_boleto: "Pagamento nacional"
         you_are_about_html: "Quase lá! Por favor, preencha e revise sua inscrição."
     create:
-      success: "Seu projeto foi criado com sucesso! Logo entraremos em contato. Muito obrigado!"
+      success: "Seu encontro foi criado com sucesso! Logo entraremos em contato. Muito obrigado!"
     form:
-      add_reward: "Adicionar recompensa"
-      important_html: "Lembre-se que o Catarse ficará com 7,5%, e os meios de pagamento (MoIP e Paypal) cobram uma taxa que varia, em geral, entre 4% e 5% por transação. Inclua estes valores no seu orçamento, para executar o projeto sem problemas depois."
-      rewards_description: "A gente acredita que a melhor maneira de inspirar as pessoas a apoiar um projeto é oferecendo excelentes – e criativas! – recompensas. Todo mundo adora edições limitadas, coisas únicas e experiências divertidas (festas, guloseimas, viajar de balão!). Gaste um bom tempo bolando recompensas criativas e as pessoas se interessarão."
+      add_reward: "Adicionar tipo de inscrição"
+      important_html: "Não esqueça: o Nós.vc fica com 7,5% das inscrições dos encontros realizados + taxa do meio de pagamento, entre 1,9% e 7,4%. Não cobramos nada de inscrições gratuitas. Inclua estes valores no seu orçamento pra não ter problemas. Você deve receber em torno de 88% do valor total arrecadado."
+      rewards_description: "Você pode criar quantos tipos de inscrição quiser. Podem ter preços diferentes, ou serem até de graça. É possível definir um prazo de inscrição para cada tipo. Ou, ainda, permitir que a pessoa escolha quanto quer pagar, por exemplo. Crie tipos de inscrições atrativas para alcançar o número mínimo de pessoas mais rapidamente. Mas, lembre-se, suas contas devem fechar."
       rewards_title: "Inscrições"
-      submit: "Enviar o projeto"
+      submit: "Enviar e fazer acontecer!"
     index_header:
       subtitle_html: "Financie projetos de maneira colaborativa e torne-se parte de algo maior.<br/>Promova uma catarse coletiva! Você é a peça que falta nesta história."
       title: "Faça acontecer os projetos em que você acredita"
@@ -500,8 +500,12 @@ pt:
     send_mail:
       success: "Sua proposta de encontro foi enviada com sucesso! Logo entraremos em contato. Muito obrigado!"
     show:
+      rejected: "Este encontro não foi selecionado para participar do Nós.vc. Quem sabe numa próxima vez? :)"
+      waiting: "Este encontro está aguardando análise e logo saberemos se ele entrará no Nós.vc ;)"
       where: "Onde?"
       when: "Quando"
+      is_confirmed: "Tá confirmado?"
+      how_much: "Quanto?"
       total_backers: "Pessoas inscritas"
       total_remaining: "Vagas restantes"
       unlimited_vacancies: "Vagas ilimitadas"
@@ -576,8 +580,8 @@ pt:
   remaining_plural: restantes
   remaining_singular: restante
   remove: remover
-  require_admin: "Você precisa ser admin para realizar esta ação."
-  require_login: "Você precisa estar autenticado para realizar esta ação."
+  require_admin: "Antes, você precisa ser admin."
+  require_login: "Antes, você precisa entrar."
   require_permission: "Você não tem permissão para realizar esta ação."
   reward:
     display_remaining: "%{remaining} de %{maximum} vagas disponíveis"
@@ -600,7 +604,7 @@ pt:
     email:
       contact: somos@nos.vc
       payments: leo@nos.vc
-      projects: mauro@nos.vc
+      projects: larusso@nos.vc #mauro@nos.vc
       system: system@nos.vc
     facebook: "http://www.facebook.com/nos.vc"
     name: "Nós.vc"

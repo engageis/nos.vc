@@ -18,31 +18,32 @@
           hr
           = link_to t('main.links.selected'), explore_path()+"#recommended"
 
-      .expiring_projects.list
-        .list_title
-          .title
-            h2
-              = t('sections.expiring.title')
-              p = t('sections.expiring.description')
-        .projects
-          - @expiring.each_with_index do |item,i|
-            == render 'project', :project => item, :custom_class => ((@expiring.length == (i+1) ? 'last' : false) || (i==0 ? 'first' : false))
-        .explore_link
-          hr
-          = link_to t('main.links.expiring'), explore_path()+'#expiring'
-
-      .recents_projects.list
-        .list_title
-          .title
-            h2
-              = t('sections.recents.title')
-              p = t('sections.recents.description')
-        .projects
-          - @recent.each_with_index do |item,i|
-            == render 'project', :project => item, :custom_class => ((@recent.length == (i+1) ? 'last' : false) || (i==0 ? 'first' : false))
-        .explore_link
-          hr
-          = link_to t('main.links.recents'), explore_path()+'#recent'
+      - if @expiring.count > 0
+        .expiring_projects.list
+          .list_title
+            .title
+              h2
+                = t('sections.expiring.title')
+                p = t('sections.expiring.description')
+          .projects
+            - @expiring.each_with_index do |item,i|
+              == render 'project', :project => item, :custom_class => ((@expiring.length == (i+1) ? 'last' : false) || (i==0 ? 'first' : false))
+          .explore_link
+            hr
+            = link_to t('main.links.expiring'), explore_path()+'#expiring'
+      - if @recent.count > 0
+        .recents_projects.list
+          .list_title
+            .title
+              h2
+                = t('sections.recents.title')
+                p = t('sections.recents.description')
+          .projects
+            - @recent.each_with_index do |item,i|
+              == render 'project', :project => item, :custom_class => ((@recent.length == (i+1) ? 'last' : false) || (i==0 ? 'first' : false))
+          .explore_link
+            hr
+            = link_to t('main.links.recents'), explore_path()+'#recent'
     .clearfix
 
   = render :partial => 'curated_pages_list', :locals => {:curated_pages => @curated_pages} unless @curated_pages.empty?
