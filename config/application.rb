@@ -1,13 +1,6 @@
 require File.expand_path('../boot', __FILE__)
 require 'rails/all'
-
-if defined?(Bundler)
-  # If you precompile assets before deploying to production, use this line
-  Bundler.require *Rails.groups(:assets => %w(development test))
-  # If you want your assets lazily compiled in production, use this line
-  # Bundler.require(:default, :assets, Rails.env)
-end
-
+Bundler.require(:default, Rails.env) if defined?(Bundler)
 module Catarse
   class Application < Rails::Application
     config.active_record.schema_format = :sql
@@ -19,12 +12,6 @@ module Catarse
       g.template_engine :haml
       g.test_framework :rspec, :fixture => false, :views => false
     end
-
-    # Enable the asset pipeline
-    config.assets.enabled = true
-    config.assets.initialize_on_precompile = false
-
-    # Version of your assets, change this if you want to expire all your assets
-    config.assets.version = '1.0'
+    ActiveRecord::Base.include_root_in_json = false
   end
 end
