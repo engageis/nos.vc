@@ -1,8 +1,4 @@
 [data-controller="projects"][data-action="start"]
-  span.add-on
-    font-family: 'Lato-Regular'
-    margin-top: -3px
-    color: $gryn_almost_ccc
   #loading
     display: none
   #page_content
@@ -16,7 +12,7 @@
           padding: 50px 0 20px 0
           .title
             padding: 0 40px 40px
-            h1
+            h1, h2
               font-family: "Dosis-Light"
               font-size: 41px
               line-height: 42px
@@ -25,18 +21,7 @@
               padding: 0 40px 40px
               a
                 color: $green
-                text-decoration: none
-            h2
-              float: left
-              border-bottom: dashed 1px #d8d3d3
-              padding-bottom: 10px
-              margin-bottom: 40px
-              margin-top: 30px
-              width: 100%
-              font-family: "Dosis-Regular"
-              color: #5d5d5d
-              font-size: 24px
-              text-transform: uppercase
+                text-decoration: none              
           #project_warning
             .alert
               font-size: 15px
@@ -45,28 +30,71 @@
                 color: $pink
           .bootstrap-form
             form
+              h2
+                float: left
+                border-bottom: dashed 1px #d8d3d3
+                padding-bottom: 10px
+                margin-bottom: 40px
+                margin-top: 30px
+                width: 100%
+                font-family: "Dosis-Regular"
+                color: #5d5d5d
+                font-size: 24px
+                text-transform: uppercase
               .input
                 padding-bottom: 15px
+                float: left 
+                width: 100%
               .accept
-                padding-top: 20px
-                padding-bottom: 20px
+                padding: 20px 0px 20px 130px
+                width: 90%
+                float: left
                 input
                   display: inline
+                  margin-top: 6px
                 label
-                  display: inline
+                  display: block
+                  font-family: "Helvetica Neue", "Arial", "Sans-serif"
+                  float: left
+                  font-size: 14px
+                  color: #5d5d5d
+                  width: 260px
+                  margin-left: 10px
+                  text-align: center
+                  line-height: 18px
+                  a
+                    color: #b178ad
+                    text-decoration: none
+                    &:hover
+                      text-decoration: underline
+              li
+                width: 534px
+                margin-bottom: 20px
               label
-                font-family: 'Lato-Regular'
-                font-size: 15px
-                color: rgba(black, 0.8)
+                color: #b178ad
               textarea
-                width: 100%
                 height: 80px
+              textarea#know_us_via
+                width: 66%
               .inline-hints
                 font-size: 13px
-                font-family: Arial
-                line-height: 130%
-                color: rgba(black, 0.6)
+                font-family: "Helvetica Neue", "Arial", "Sans-serif"
+                line-height: 18px
+                color: #64635e
                 padding-bottom: 20px
+                float: left 
+                margin-left: 160px
+                width: 66%
+              .input-prepend
+                #contact
+                  width: 40%
+                  margin-left: 0
+                  float: none
+                span.add-on
+                  font-family: 'Lato-Regular'
+                  margin-top: -3px
+                  color: $gryn_almost_ccc
+                  margin-left: 20px
         .sidebar
           +omega
           border: none
@@ -74,3 +102,10 @@
           margin-left: 0px
           width: 345px
           float: left
+          h3
+            font-family: "Dosis-Light"
+            font-size: 24px
+            line-height: 24px
+            float: left
+            color: #5d5d5d
+            +text-shadow(white 1px 1px 0px)

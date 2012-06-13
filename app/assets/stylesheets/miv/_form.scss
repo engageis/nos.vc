@@ -1,11 +1,13 @@
 #bootstrap-form, .bootstrap-form {
   form {
     margin: 0 0 18px;
+    padding: 0 40px;
   }
   fieldset {
     padding: 0;
     margin: 0;
     border: 0;
+    float: left;
   }
   legend {
     display: block;
@@ -30,6 +32,7 @@
     font-size: 13px;
     font-weight: normal;
     line-height: 18px;
+    float: left;
   }
   input,
   button,
@@ -38,15 +41,18 @@
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
   label {
-    display: block;
-    margin-bottom: 5px;
-    color: #333333;
+    font-family: "Dosis-Light";
+    width: 140px;
+    float: left;
+    font-size: 21px;
+    text-align: right;
+    line-height: 24px;
   }
   input,
   textarea,
   select,
   .uneditable-input {
-    display: inline-block;
+    float: left;
     width: 210px;
     height: 18px;
     padding: 4px;
@@ -224,7 +230,9 @@
   input,
   textarea,
   .uneditable-input {
-    margin-left: 0;
+    width: 67%;
+    margin-left: 20px;
+    float: left;
   }
   input.span12, textarea.span12, .uneditable-input.span12 {
     width: 930px;
