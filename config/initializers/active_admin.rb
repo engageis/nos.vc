@@ -1,3 +1,4 @@
+# coding: utf-8
 ActiveAdmin.setup do |config|
 
   # == Site Title
@@ -5,7 +6,7 @@ ActiveAdmin.setup do |config|
   # Set the title that is displayed on the main layout
   # for each of the active admin pages.
   #
-  config.site_title = "Catarse"
+  config.site_title = "Nós.vc"
 
 
   # == Default Namespace
