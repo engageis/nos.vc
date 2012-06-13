@@ -96,7 +96,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* line 1, ../../app/assets/stylesheets/miv/_flash.sass */
 .flash {
-  font-family: Lato-Regular;
+  font-family: "Helvetica Neue";
   font-size: 1.6em;
   color: white;
   display: none;
@@ -1278,7 +1278,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   width: 60px;
   text-indent: -300em;
   cursor: pointer;
-  z-index: 1000;
+  z-index: 400;
   position: absolute;
   text-indent: -9999px;
 }
