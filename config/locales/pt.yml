@@ -88,12 +88,12 @@ pt:
         category: Cidade
         expires_at: Prazo
         headline: "Como você explicaria o encontro em um tweet?"
-        image_url: "Imagem"
+        image_url: "Imagem:"
         name: "Qual é o nome do encontro?"
         user_id: "Id do usuário"
         video_url: "URL do vídeo"
         leader_id: "Este encontro é com:"
-        leader_bio: "Mini, muito mini, biografia"
+        leader_bio: "Mini, muito mini, biografia:"
         location: "Onde?"
       reward:
         description: "Tipo de inscrição"
@@ -250,7 +250,7 @@ pt:
         goal: "De verdade. Quantas pessoas são realmente necessárias para tornar o encontro possível? Só será realizado se alcançar o número mínimo."
         headline: "Até 140 caracteres, direto, reto e convidativo. Evite repetir o que já tem no nome. Este é o texto que vai sempre acompanhá-lo."
         name: "Título bacanudo, auto-explicativo e curto, vale trocadilho. ;)"
-        video_url: 'Cole aqui o link do vídeo no Vimeo. Faça um vídeo mágico que explica o encontro, mostra seu rosto e provoca aplausos espontianeos. :)'
+        video_url: 'Cole aqui o link do vídeo no Vimeo. Faça um vídeo mágico que explica o encontro, mostra seu rosto e provoca aplausos espontâneos. :)'
         when_short: "Data(s) do encontro, exemplo: '02 a 04/01/12'"
         when_long: "Descreva detalhadamente a(s) data(s) e o(s) horário(s) de início e término do encontro, exemplo: 'Segunda, 2 de janeiro de 2012. Das 9:00 às 17:00')"
         location: "Local, endereço, cidade e estado. Link do Google Maps é muito bem-vindo."
@@ -274,7 +274,7 @@ pt:
       project:
         expires_at: "Quando encerram as inscrições?"
         goal: "Qual é o número mínimo de inscritos?"
-        video_url: Vídeo
+        video_url: "Vídeo:"
         when_short: "Data(s) do encontro"
         when_long: "Data(s) com horário(s) de início e término"
         location: "Onde?"
@@ -421,13 +421,13 @@ pt:
         choose_boleto: "Pagamento nacional"
         you_are_about_html: "Quase lá! Por favor, preencha e revise sua inscrição."
     create:
-      success: "Seu projeto foi criado com sucesso! Logo entraremos em contato. Muito obrigado!"
+      success: "Seu encontro foi criado com sucesso! Logo entraremos em contato. Muito obrigado!"
     form:
       add_reward: "Adicionar tipo de inscrição"
-      important_html: "Lembre-se que o Nós.vc ficará com 7,5%, e os meios de pagamento (MoIP e Paypal) cobram uma taxa que varia, em geral, entre 4% e 5% por transação. Inclua estes valores no seu orçamento, para executar o projeto sem problemas depois."
+      important_html: "Não esqueça: o Nós.vc fica com 7,5% das inscrições dos encontros realizados + taxa do meio de pagamento, entre 1,9% e 7,4%. Não cobramos nada de inscrições gratuitas. Inclua estes valores no seu orçamento pra não ter problemas. Você deve receber em torno de 88% do valor total arrecadado."
       rewards_description: "Você pode criar quantos tipos de inscrição quiser. Podem ter preços diferentes, ou serem até de graça. É possível definir um prazo de inscrição para cada tipo. Ou, ainda, permitir que a pessoa escolha quanto quer pagar, por exemplo. Crie tipos de inscrições atrativas para alcançar o número mínimo de pessoas mais rapidamente. Mas, lembre-se, suas contas devem fechar."
       rewards_title: "Inscrições"
-      submit: "Enviar o projeto"
+      submit: "Enviar e fazer acontecer!"
     index_header:
       subtitle_html: "Financie projetos de maneira colaborativa e torne-se parte de algo maior.<br/>Promova uma catarse coletiva! Você é a peça que falta nesta história."
       title: "Faça acontecer os projetos em que você acredita"
