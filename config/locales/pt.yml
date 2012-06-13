@@ -500,6 +500,8 @@ pt:
     send_mail:
       success: "Sua proposta de encontro foi enviada com sucesso! Logo entraremos em contato. Muito obrigado!"
     show:
+      rejected: "Este encontro não foi selecionado para participar do Nós.vc. Quem sabe numa próxima vez? :)"
+      waiting: "Este encontro está aguardando análise e logo saberemos se ele entrará no Nós.vc ;)"
       where: "Onde?"
       when: "Quando"
       total_backers: "Pessoas inscritas"
