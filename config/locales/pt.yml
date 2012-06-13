@@ -267,7 +267,7 @@ pt:
       backer:
         anonymous: "Quero que meu apoio seja anônimo."
         credits: "Quero usar meus créditos para este apoio."
-        reward: "Selecione sua recompensa"
+        reward: "Selecione sua inscrição"
         value: "Com quanto você quer apoiar?"
       comment:
         comment: "Deixe seu comentário sobre este projeto"
@@ -398,7 +398,7 @@ pt:
           subtitle: "Você está perto de se inscrever e fazer este encontro acontecer."
           title: "Obrigado!"
         no_reward: "Obrigado. Eu só quero ajudar o projeto."
-        submit: "Revisar e realizar pagamento"
+        submit: "Me inscrever"
         title: "Apoie o %{name}"
         good_question: "Boa Pergunta!"
       review:
