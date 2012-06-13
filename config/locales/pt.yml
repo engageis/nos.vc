@@ -88,12 +88,12 @@ pt:
         category: Cidade
         expires_at: Prazo
         headline: "Como você explicaria o encontro em um tweet?"
-        image_url: "URL da imagem"
+        image_url: "Imagem"
         name: "Qual é o nome do encontro?"
         user_id: "Id do usuário"
         video_url: "URL do vídeo"
-        leader_id: "Este encontro é com: (Id, número do perfil da pessoa que vai conduzí-lo)"
-        leader_bio: "Descrição do cara"
+        leader_id: "Este encontro é com:"
+        leader_bio: "Mini biografia"
         location: "Onde?"
       reward:
         description: Descrição
@@ -250,13 +250,13 @@ pt:
         goal: "De verdade. Quantas pessoas são realmente necessárias para tornar o encontro possível? Só será realizado se alcançar o número mínimo."
         headline: "Até 140 caracteres, direto, reto e convidativo. Evite repetir o que já tem no nome. Este é o texto que vai sempre acompanhá-lo."
         name: "Título bacanudo, auto-explicativo e curto, vale trocadilho. ;)"
-        video_url: 'Cole aqui o link do vídeo no <a href="http://vimeo.com" target="_blank">Vimeo</a>. Faça um vídeo mágico que explica o encontro, mostra seu rosto e cria empatia!'
+        video_url: 'Cole aqui o link do vídeo no Vimeo. Faça um vídeo mágico que explica o encontro, mostra seu rosto e provoca aplausos espontianeos. :)'
         when_short: "Data(s) do encontro, exemplo: '02 a 04/01/12'"
         when_long: "Descreva detalhadamente a(s) data(s) e o(s) horário(s) de início e término do encontro, exemplo: 'Segunda, 2 de janeiro de 2012. Das 9:00 às 17:00')"
         location: "Local, endereço, cidade e estado. Link do Google Maps é muito bem-vindo."
-        image_url: "Cole aqui o link da imagem fantástica que ilustra o encontro. Recomendamos imagens grandes, de pelo menos 1200 pixels de largura. Você pode usar um link do Flickr, por exemplo."
-        leader_id: "id do leader desc"
-        leader_bio: "leader bio desc"
+        image_url: "Cole aqui o link da imagem fantástica que ilustra o encontro. Recomendamos imagens grandes, com, pelo menos, 1200 pixels de largura. Você pode usar um link do Flickr, por exemplo."
+        leader_id: "Id, número do perfil da pessoa que vai conduzir o encontro. Pode ser você! Exemplo: 'X'. Se a página do perfil é http://nos.vc/pt/users/X"
+        leader_bio: "Fale um pouco sobre quem vai conduzir a atividade. Sua vida e experiência com o assunto do encontro."
         maximum_backers: "numero maximos de inscritos"
       reward:
         description: "Descreva sua recompensa de um jeito que desperte o interesse das pessoas para apoiar o projeto. Não seja tímido!"
