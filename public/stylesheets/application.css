@@ -13268,82 +13268,102 @@ body #page_content .container .list_title .title p {
 [data-controller="projects"][data-action="start"] #loading {
   display: none;
 }
-/* line 10, ../../app/assets/stylesheets/resources/projects/_start.sass */
-[data-controller="projects"][data-action="start"] #page_content .container .start_content {
+/* line 11, ../../app/assets/stylesheets/resources/projects/_start.sass */
+[data-controller="projects"][data-action="start"] #page_content .container .start_content .main {
   display: inline;
   float: left;
   margin-left: 10px;
   margin-right: 10px;
-  width: 940px;
-  padding-top: 15px;
-}
-/* line 13, ../../app/assets/stylesheets/resources/projects/_start.sass */
-[data-controller="projects"][data-action="start"] #page_content .container .start_content .title {
-  display: inline;
-  float: left;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 940px;
-  margin-left: 0;
-  padding-bottom: 40px;
+  width: 700px;
+  width: 614px;
+  background: #f9f9f9;
+  margin: 0 0 30px 0;
+  padding: 50px 0 20px 0;
 }
 /* line 17, ../../app/assets/stylesheets/resources/projects/_start.sass */
-[data-controller="projects"][data-action="start"] #page_content .container .start_content .title h1 {
-  color: #333333;
-  font-family: "Lato-Regular";
-  font-size: 28px;
-  padding: 5px 0;
+[data-controller="projects"][data-action="start"] #page_content .container .start_content .main .title {
+  padding: 0 40px 40px;
 }
-/* line 22, ../../app/assets/stylesheets/resources/projects/_start.sass */
-[data-controller="projects"][data-action="start"] #page_content .container .start_content .title h2 {
-  color: rgba(51, 51, 51, 0.7);
-  font-family: Arial;
-  font-size: 18px;
+/* line 19, ../../app/assets/stylesheets/resources/projects/_start.sass */
+[data-controller="projects"][data-action="start"] #page_content .container .start_content .main .title h1 {
+  font-family: "Dosis-Light";
+  font-size: 41px;
+  line-height: 42px;
+  float: left;
+  color: #5d5d5d;
+  padding: 0 40px 40px;
 }
-/* line 27, ../../app/assets/stylesheets/resources/projects/_start.sass */
-[data-controller="projects"][data-action="start"] #page_content .container #project_warning .alert {
+/* line 26, ../../app/assets/stylesheets/resources/projects/_start.sass */
+[data-controller="projects"][data-action="start"] #page_content .container .start_content .main .title h1 a {
+  color: #59af6d;
+  text-decoration: none;
+}
+/* line 29, ../../app/assets/stylesheets/resources/projects/_start.sass */
+[data-controller="projects"][data-action="start"] #page_content .container .start_content .main .title h2 {
+  float: left;
+  border-bottom: dashed 1px #d8d3d3;
+  padding-bottom: 10px;
+  margin-bottom: 40px;
+  margin-top: 30px;
+  width: 100%;
+  font-family: "Dosis-Regular";
+  color: #5d5d5d;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+/* line 41, ../../app/assets/stylesheets/resources/projects/_start.sass */
+[data-controller="projects"][data-action="start"] #page_content .container .start_content .main #project_warning .alert {
   font-size: 15px;
   font-family: Arial;
 }
-/* line 30, ../../app/assets/stylesheets/resources/projects/_start.sass */
-[data-controller="projects"][data-action="start"] #page_content .container #project_warning .alert a {
+/* line 44, ../../app/assets/stylesheets/resources/projects/_start.sass */
+[data-controller="projects"][data-action="start"] #page_content .container .start_content .main #project_warning .alert a {
   color: #e75297;
 }
-/* line 34, ../../app/assets/stylesheets/resources/projects/_start.sass */
-[data-controller="projects"][data-action="start"] #page_content .container .bootstrap-form form .input {
+/* line 48, ../../app/assets/stylesheets/resources/projects/_start.sass */
+[data-controller="projects"][data-action="start"] #page_content .container .start_content .main .bootstrap-form form .input {
   padding-bottom: 15px;
 }
-/* line 36, ../../app/assets/stylesheets/resources/projects/_start.sass */
-[data-controller="projects"][data-action="start"] #page_content .container .bootstrap-form form .accept {
+/* line 50, ../../app/assets/stylesheets/resources/projects/_start.sass */
+[data-controller="projects"][data-action="start"] #page_content .container .start_content .main .bootstrap-form form .accept {
   padding-top: 20px;
   padding-bottom: 20px;
 }
-/* line 39, ../../app/assets/stylesheets/resources/projects/_start.sass */
-[data-controller="projects"][data-action="start"] #page_content .container .bootstrap-form form .accept input {
+/* line 53, ../../app/assets/stylesheets/resources/projects/_start.sass */
+[data-controller="projects"][data-action="start"] #page_content .container .start_content .main .bootstrap-form form .accept input {
   display: inline;
 }
-/* line 41, ../../app/assets/stylesheets/resources/projects/_start.sass */
-[data-controller="projects"][data-action="start"] #page_content .container .bootstrap-form form .accept label {
+/* line 55, ../../app/assets/stylesheets/resources/projects/_start.sass */
+[data-controller="projects"][data-action="start"] #page_content .container .start_content .main .bootstrap-form form .accept label {
   display: inline;
 }
-/* line 43, ../../app/assets/stylesheets/resources/projects/_start.sass */
-[data-controller="projects"][data-action="start"] #page_content .container .bootstrap-form form label {
+/* line 57, ../../app/assets/stylesheets/resources/projects/_start.sass */
+[data-controller="projects"][data-action="start"] #page_content .container .start_content .main .bootstrap-form form label {
   font-family: "Lato-Regular";
   font-size: 15px;
   color: rgba(0, 0, 0, 0.8);
 }
-/* line 47, ../../app/assets/stylesheets/resources/projects/_start.sass */
-[data-controller="projects"][data-action="start"] #page_content .container .bootstrap-form form textarea {
+/* line 61, ../../app/assets/stylesheets/resources/projects/_start.sass */
+[data-controller="projects"][data-action="start"] #page_content .container .start_content .main .bootstrap-form form textarea {
   width: 100%;
   height: 80px;
 }
-/* line 50, ../../app/assets/stylesheets/resources/projects/_start.sass */
-[data-controller="projects"][data-action="start"] #page_content .container .bootstrap-form form .inline-hints {
+/* line 64, ../../app/assets/stylesheets/resources/projects/_start.sass */
+[data-controller="projects"][data-action="start"] #page_content .container .start_content .main .bootstrap-form form .inline-hints {
   font-size: 13px;
   font-family: Arial;
   line-height: 130%;
   color: rgba(0, 0, 0, 0.6);
   padding-bottom: 20px;
+}
+/* line 70, ../../app/assets/stylesheets/resources/projects/_start.sass */
+[data-controller="projects"][data-action="start"] #page_content .container .start_content .sidebar {
+  margin-right: 0;
+  border: none;
+  margin-top: 125px;
+  margin-left: 0px;
+  width: 345px;
+  float: left;
 }
 
 /* line 2, ../../app/assets/stylesheets/resources/projects/_new.sass */
