@@ -1,86 +1,87 @@
 #page_content
   .container
     .start_content
-      .title
-        h1= t('.title')
-        h2= t('.subtitle')
-      .clearfix
-      .bootstrap-form
-        = form_tag(send_mail_projects_path, :id => 'start_project_form') do
-          h2= t('.the_meeting')
-          fieldset
-            .input
-              = label_tag 'name', t('.name')
-              = text_field_tag 'name'
-              p.inline-hints= t('.name_hint')
-            .input
-              = label_tag 'about', t('.about')
-              = text_area_tag 'about'
-              p.inline-hints= t('.about_hint')
-            .input
-              = label_tag 'when', t('.when')
-              = text_field_tag 'when'
-              p.inline-hints= t('.when_hint')
-            .input
-              = label_tag 'where', t('.where')
-              = text_area_tag 'where'
-              p.inline-hints= t('.where_hint')
-            .input
-              = label_tag 'video', t('.video')
-              = text_field_tag 'video'
-              p.inline-hints= t('.video_hint')
-
-          h2= t('.the_people')
-          fieldset
-            .input
-              = label_tag 'leader_name', t('.leader_name')
-              = text_field_tag 'leader_name'
-              p.inline-hints= t('.leader_name_hint').html_safe
-            .input
-              = label_tag 'more_info', t('.more_info')
-              = text_area_tag 'more_info'
-              p.inline-hints= t('.more_info_hint')
-
-          h2= t('.the_registrations')
-          fieldset
-            .input
-              = label_tag 'goal', t('.goal')
-              = text_field_tag 'goal'
-              p.inline-hints= t('.goal_hint').html_safe
-            .input
-              = label_tag 'maximum_backers', t('.maximum_backers')
-              = text_field_tag 'maximum_backers'
-              p.inline-hints= t('.maximum_backers_hint').html_safe
-            .input
-              = label_tag 'how_works', t('.how_works')
-              = text_area_tag 'how_works'
-              p.inline-hints= t('.how_works_hint')
-
-
-          h2= t('.the_contact')
-          fieldset
-            .input
-              = label_tag 'contact', t('.contact')
-              .input-prepend
-                span.add-on
-                  .bootstrap-twitter
-                    i.icon-envelope
-                = text_field_tag 'contact', (current_user.email if current_user)
-                p.inline-hints= t('.contact_hint')
-            .input
-              = label_tag 'know_us_via', t('.know_us_via')
-              = text_area_tag 'know_us_via'
-              p.inline-hints= t('.know_us_via_hint')
-
-          .submit
-            fieldset.accept
-              = check_box_tag 'accept'
-              |  
-              = label_tag 'accept', t('accept_terms_html', :terms => link_to(t('terms'), terms_path, :target => :_blank), :guidelines => link_to(t('guidelines'), guidelines_path, :target => :_blank)), :class => 'inline'
+      .sidebar
+      .main
+        .title
+          h1= t('.title')
+          h2= t('.subtitle')
+        .clearfix
+        .bootstrap-form
+          = form_tag(send_mail_projects_path, :id => 'start_project_form') do
+            h2= t('.the_meeting')
             fieldset
-              .bootstrap-twitter
-                = submit_tag t('.submit'), :disabled => true, :class => 'btn btn-large'
-                span = t('.submit_complement')
-              .clearfix
-              = image_tag "loading.gif", :id => 'loading'
-    .clearfix
+              .input
+                = label_tag 'name', t('.name')
+                = text_field_tag 'name'
+                p.inline-hints= t('.name_hint')
+              .input
+                = label_tag 'about', t('.about')
+                = text_area_tag 'about'
+                p.inline-hints= t('.about_hint')
+              .input
+                = label_tag 'when', t('.when')
+                = text_field_tag 'when'
+                p.inline-hints= t('.when_hint')
+              .input
+                = label_tag 'where', t('.where')
+                = text_area_tag 'where'
+                p.inline-hints= t('.where_hint')
+              .input
+                = label_tag 'video', t('.video')
+                = text_field_tag 'video'
+                p.inline-hints= t('.video_hint')
+
+            h2= t('.the_people')
+            fieldset
+              .input
+                = label_tag 'leader_name', t('.leader_name')
+                = text_field_tag 'leader_name'
+                p.inline-hints= t('.leader_name_hint').html_safe
+              .input
+                = label_tag 'more_info', t('.more_info')
+                = text_area_tag 'more_info'
+                p.inline-hints= t('.more_info_hint')
+
+            h2= t('.the_registrations')
+            fieldset
+              .input
+                = label_tag 'goal', t('.goal')
+                = text_field_tag 'goal'
+                p.inline-hints= t('.goal_hint').html_safe
+              .input
+                = label_tag 'maximum_backers', t('.maximum_backers')
+                = text_field_tag 'maximum_backers'
+                p.inline-hints= t('.maximum_backers_hint').html_safe
+              .input
+                = label_tag 'how_works', t('.how_works')
+                = text_area_tag 'how_works'
+                p.inline-hints= t('.how_works_hint')
+
+
+            h2= t('.the_contact')
+            fieldset
+              .input
+                = label_tag 'contact', t('.contact')
+                .input-prepend
+                  span.add-on
+                    .bootstrap-twitter
+                      i.icon-envelope
+                  = text_field_tag 'contact', (current_user.email if current_user)
+                  p.inline-hints= t('.contact_hint')
+              .input
+                = label_tag 'know_us_via', t('.know_us_via')
+                = text_area_tag 'know_us_via'
+                p.inline-hints= t('.know_us_via_hint')
+
+            .submit
+              fieldset.accept
+                = check_box_tag 'accept'
+                |  
+                = label_tag 'accept', t('accept_terms_html', :terms => link_to(t('terms'), terms_path, :target => :_blank), :guidelines => link_to(t('guidelines'), guidelines_path, :target => :_blank)), :class => 'inline'
+              fieldset
+                .bootstrap-twitter
+                  = submit_tag t('.submit'), :disabled => true, :class => 'btn btn-large'
+                  span = t('.submit_complement')
+                .clearfix
+                = image_tag "loading.gif", :id => 'loading'
