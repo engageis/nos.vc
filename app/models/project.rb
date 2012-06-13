@@ -8,7 +8,7 @@ class Project < ActiveRecord::Base
   include Rails.application.routes.url_helpers
 
   belongs_to :user
-  belongs_to :leader, :class_name => User
+  belongs_to :leader, :class_name => "User", :foreign_key => "leader_id"
   belongs_to :category
   has_many :projects_curated_pages
   has_many :curated_pages, :through => :projects_curated_pages

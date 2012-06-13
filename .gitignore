@@ -17,3 +17,6 @@ config/locales/.wti
 npm-debug.log
 db/structure.sql
 .sass-cache
+public/fonts
+public/images
+public/javascripts

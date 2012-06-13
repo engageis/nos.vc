@@ -1,3 +1,3 @@
-#Airbrake.configure do |config|
-  #config.api_key = Configuration[:airbrake_key]
-#end
+Airbrake.configure do |config|
+  config.api_key = Configuration[:airbrake_key]
+end
