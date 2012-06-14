@@ -1,5 +1,7 @@
 nav.locales class=("notify" if flash[:locale])
   ul
-    - I18n.available_locales.map(&:to_s).sort.each do |locale|
-      li[class={'selected' if I18n.locale.to_s == locale.to_s}]
-        = link_to locale, replace_locale(locale)
+    li[class="selected" style="margin-top: 10px"]
+      = link_to "pt", replace_locale('pt')
+    /- I18n.available_locales.map(&:to_s).sort.each do |locale|
+      /li[class={'selected' if I18n.locale.to_s == locale.to_s}]
+        /= link_to locale, replace_locale(locale)

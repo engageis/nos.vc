@@ -434,6 +434,13 @@ pt:
     new:
       subtitle: "Preencha com carinho, você está construindo a página do seu encontro. :)"
       title: "Agora é pra valer. Divirta-se mais ainda!"
+      sidebar:
+        title: "Como criar e organizar um encontro sobre o que você quiser:"
+        first_step: "Preencha o formulário com todo seu gingado e talento. Crie um curso, debate, workshop ou qualquer outra atividade de aprendizado."
+        second_step: "Vamos ler e responder sua proposta com nossos próprios dedos. Quando estiver tudo ok, as inscrições serão abertas."
+        third_step: "O encontro será organizado por você no mundo real. É só alcançar o número mínimo de inscritos no prazo definido."
+        fourth_step: "Quer uma dica para fazer acontecer um encontro inspirador?"
+        link: "Nós temos várias pra te dar"
     pending:
       can_finish: "Pode finalizar?"
       finished: Finalizado?
@@ -564,6 +571,8 @@ pt:
         first_step: "Preencha o formulário com todo seu gingado e talento. Crie um curso, debate, workshop ou qualquer outra atividade de aprendizado."
         second_step: "Vamos ler e responder sua proposta com nossos próprios dedos. Quando estiver tudo ok, as inscrições serão abertas."
         third_step: "O encontro será organizado por você no mundo real. É só alcançar o número mínimo de inscritos no prazo definido."
+        fourth_step: "Quer uma dica para fazer acontecer um encontro inspirador?"
+        link: "Nós temos várias pra te dar"
     twitter:
       take_a_look: "Confira o projeto %{name} no @Nos_vc"
     video_embed:
