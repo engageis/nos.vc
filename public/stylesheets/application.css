@@ -13350,34 +13350,35 @@ body #page_content .container .list_title .title p {
   margin-left: 10px;
   text-align: center;
   line-height: 18px;
+  margin-top: 3px;
 }
-/* line 65, ../../app/assets/stylesheets/resources/projects/_start.sass */
+/* line 66, ../../app/assets/stylesheets/resources/projects/_start.sass */
 [data-controller="projects"][data-action="start"] #page_content .container .start_content .main .bootstrap-form form .accept label a {
   color: #b178ad;
   text-decoration: none;
 }
-/* line 68, ../../app/assets/stylesheets/resources/projects/_start.sass */
+/* line 69, ../../app/assets/stylesheets/resources/projects/_start.sass */
 [data-controller="projects"][data-action="start"] #page_content .container .start_content .main .bootstrap-form form .accept label a:hover {
   text-decoration: underline;
 }
-/* line 70, ../../app/assets/stylesheets/resources/projects/_start.sass */
+/* line 71, ../../app/assets/stylesheets/resources/projects/_start.sass */
 [data-controller="projects"][data-action="start"] #page_content .container .start_content .main .bootstrap-form form li {
   width: 534px;
   margin-bottom: 20px;
 }
-/* line 73, ../../app/assets/stylesheets/resources/projects/_start.sass */
+/* line 74, ../../app/assets/stylesheets/resources/projects/_start.sass */
 [data-controller="projects"][data-action="start"] #page_content .container .start_content .main .bootstrap-form form label {
   color: #b178ad;
 }
-/* line 75, ../../app/assets/stylesheets/resources/projects/_start.sass */
+/* line 76, ../../app/assets/stylesheets/resources/projects/_start.sass */
 [data-controller="projects"][data-action="start"] #page_content .container .start_content .main .bootstrap-form form textarea {
   height: 80px;
 }
-/* line 77, ../../app/assets/stylesheets/resources/projects/_start.sass */
+/* line 78, ../../app/assets/stylesheets/resources/projects/_start.sass */
 [data-controller="projects"][data-action="start"] #page_content .container .start_content .main .bootstrap-form form textarea#know_us_via {
   width: 66%;
 }
-/* line 79, ../../app/assets/stylesheets/resources/projects/_start.sass */
+/* line 80, ../../app/assets/stylesheets/resources/projects/_start.sass */
 [data-controller="projects"][data-action="start"] #page_content .container .start_content .main .bootstrap-form form .inline-hints {
   font-size: 13px;
   font-family: "Helvetica Neue", "Arial", "Sans-serif";
@@ -13388,29 +13389,29 @@ body #page_content .container .list_title .title p {
   margin-left: 160px;
   width: 66%;
 }
-/* line 89, ../../app/assets/stylesheets/resources/projects/_start.sass */
+/* line 90, ../../app/assets/stylesheets/resources/projects/_start.sass */
 [data-controller="projects"][data-action="start"] #page_content .container .start_content .main .bootstrap-form form .input-prepend #contact {
   width: 40%;
   margin-left: 0;
   float: none;
 }
-/* line 93, ../../app/assets/stylesheets/resources/projects/_start.sass */
+/* line 94, ../../app/assets/stylesheets/resources/projects/_start.sass */
 [data-controller="projects"][data-action="start"] #page_content .container .start_content .main .bootstrap-form form .input-prepend span.add-on {
   font-family: "Lato-Regular";
   margin-top: -3px;
   color: #999999;
   margin-left: 20px;
 }
-/* line 98, ../../app/assets/stylesheets/resources/projects/_start.sass */
+/* line 99, ../../app/assets/stylesheets/resources/projects/_start.sass */
 [data-controller="projects"][data-action="start"] #page_content .container .start_content .main .bootstrap-form form .input-prepend span.add-on .bootstrap-twitter {
   padding-left: 0px;
 }
-/* line 100, ../../app/assets/stylesheets/resources/projects/_start.sass */
+/* line 101, ../../app/assets/stylesheets/resources/projects/_start.sass */
 [data-controller="projects"][data-action="start"] #page_content .container .start_content .main .bootstrap-form form .bootstrap-twitter {
   float: left;
   padding-left: 190px;
 }
-/* line 103, ../../app/assets/stylesheets/resources/projects/_start.sass */
+/* line 104, ../../app/assets/stylesheets/resources/projects/_start.sass */
 [data-controller="projects"][data-action="start"] #page_content .container .start_content .main .bootstrap-form form .bootstrap-twitter .btn {
   background: url('/images/nosvc/button-start.gif?1339628509') left top no-repeat;
   width: 162px;
@@ -13425,7 +13426,7 @@ body #page_content .container .list_title .title p {
   text-transform: uppercase;
   text-shadow: #7b4a78 1px 1px 0px;
 }
-/* line 116, ../../app/assets/stylesheets/resources/projects/_start.sass */
+/* line 117, ../../app/assets/stylesheets/resources/projects/_start.sass */
 [data-controller="projects"][data-action="start"] #page_content .container .start_content .main .bootstrap-form form .bootstrap-twitter span {
   color: #fce2fa;
   text-shadow: #7b4a78 1px 1px 0px;
@@ -13436,7 +13437,7 @@ body #page_content .container .list_title .title p {
   margin-top: 35px;
   margin-left: -100px;
 }
-/* line 125, ../../app/assets/stylesheets/resources/projects/_start.sass */
+/* line 126, ../../app/assets/stylesheets/resources/projects/_start.sass */
 [data-controller="projects"][data-action="start"] #page_content .container .start_content .sidebar {
   margin-right: 0;
   border: none;
@@ -13445,7 +13446,7 @@ body #page_content .container .list_title .title p {
   width: 345px;
   float: left;
 }
-/* line 132, ../../app/assets/stylesheets/resources/projects/_start.sass */
+/* line 133, ../../app/assets/stylesheets/resources/projects/_start.sass */
 [data-controller="projects"][data-action="start"] #page_content .container .start_content .sidebar h3 {
   font-family: "Dosis-Light";
   font-size: 24px;
@@ -13453,6 +13454,63 @@ body #page_content .container .list_title .title p {
   float: left;
   color: #5d5d5d;
   text-shadow: white 1px 1px 0px;
+  margin-bottom: 50px;
+}
+/* line 142, ../../app/assets/stylesheets/resources/projects/_start.sass */
+[data-controller="projects"][data-action="start"] #page_content .container .start_content .sidebar ul li {
+  float: left;
+  margin-bottom: 60px;
+  width: 300px;
+}
+/* line 146, ../../app/assets/stylesheets/resources/projects/_start.sass */
+[data-controller="projects"][data-action="start"] #page_content .container .start_content .sidebar ul li span {
+  width: 60px;
+  height: 85px;
+  float: left;
+}
+/* line 150, ../../app/assets/stylesheets/resources/projects/_start.sass */
+[data-controller="projects"][data-action="start"] #page_content .container .start_content .sidebar ul li span.one {
+  background: url('/images/nosvc/number-1.png?1339633627') left 24px no-repeat;
+}
+/* line 152, ../../app/assets/stylesheets/resources/projects/_start.sass */
+[data-controller="projects"][data-action="start"] #page_content .container .start_content .sidebar ul li span.two {
+  background: url('/images/nosvc/number-2.png?1339633687') right 24px no-repeat;
+  float: right;
+}
+/* line 155, ../../app/assets/stylesheets/resources/projects/_start.sass */
+[data-controller="projects"][data-action="start"] #page_content .container .start_content .sidebar ul li span.three {
+  background: url('/images/nosvc/number-3.png?1339633716') left 24px no-repeat;
+}
+/* line 157, ../../app/assets/stylesheets/resources/projects/_start.sass */
+[data-controller="projects"][data-action="start"] #page_content .container .start_content .sidebar ul li span.four {
+  background: url('/images/nosvc/number-4.png?1339635807') right 24px no-repeat;
+  float: right;
+}
+/* line 160, ../../app/assets/stylesheets/resources/projects/_start.sass */
+[data-controller="projects"][data-action="start"] #page_content .container .start_content .sidebar ul li a {
+  background: url('/images/nosvc/arrow-purple.gif?1339636126') right 4px no-repeat;
+  padding-right: 20px;
+  color: #b178ad;
+  float: left;
+  margin-top: 20px;
+  font-family: "Helvetica Neue", "Arial", "Sans-serif";
+  font-size: 14px;
+  cursor: pointer;
+  display: block;
+}
+/* line 170, ../../app/assets/stylesheets/resources/projects/_start.sass */
+[data-controller="projects"][data-action="start"] #page_content .container .start_content .sidebar ul li a:hover {
+  text-decoration: underline;
+}
+/* line 173, ../../app/assets/stylesheets/resources/projects/_start.sass */
+[data-controller="projects"][data-action="start"] #page_content .container .start_content .sidebar ul li p {
+  width: 240px;
+  float: left;
+  font-family: "Helvetica Neue", "Arial", "Sans-serif";
+  font-size: 14px;
+  color: #5d5d5d;
+  text-shadow: white 1px 1px 0px;
+  line-height: 21px;
 }
 
 /* line 2, ../../app/assets/stylesheets/resources/projects/_new.sass */
