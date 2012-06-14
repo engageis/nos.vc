@@ -625,8 +625,12 @@ pt:
     guidelines:
       accept: "Eu li e entendi como funciona o Nós.vc."
       submit: "Quero enviar meu encontro"
-      subtitle: "Antes de enviar seu encontro, saiba um pouco mais sobre como funciona o Nós.vc."
       title: "Como funciona o Nós.vc?"
+      sidebar:
+        how_it_works: "Como funciona?"
+        who_organizes_the_meetings: "Quem organiza os encontros?"
+        how_much: "Quanto custa usar o Nós.vc?"
+        why_use: "Por que usar Nós.vc?"
     privacy:
       title: "Política de privacidade"
     terms:

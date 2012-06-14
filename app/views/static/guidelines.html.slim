@@ -1,25 +1,13 @@
-= content_for :title, t('.title')
+- content_for :header_featured do
+  #banner_how_it_works
 #page_content
   .container
     .static_default
-      .title
-        h1= t('.title')
-        h2= t('.subtitle')
-      .clearfix
-      .bootstrap-alert
-        .alert.alert-info
-          #how_it_works= render 'how_it_works'
-      .default_text
-        #more_tips.hide= render 'more_tips'
-        = render 'guidelines_text'
-      .bootstrap-form.center_form
-        = form_tag(start_projects_path, :method => :get, :id => 'guidelines_form') do
-          fieldset.check
-            = check_box_tag 'accept'
-            = label_tag 'accept', t('.accept')
-          fieldset
-            .bootstrap-twitter
-              = submit_tag t('.submit'), :disabled => true, :class=>'btn', :style=>'display:none'
-            .submit_loader
-              = image_tag('loading.gif')
+      .sidebar
+        ul
+          li.one= link_to t('.sidebar.how_it_works'), "#how_it_works", class: "how_it_works_link"
+          li.two= link_to t('.sidebar.who_organizes_the_meetings'), "#who_organizes_the_meetings", class: "who_organizes_the_meetings_link"
+          li.three= link_to t('.sidebar.how_much'), "#how_much", class: "how_much_link"
+          li.four= link_to t('.sidebar.why_use'), "#why_use", class: "why_use_link"
+      .default_text= render 'guidelines_text'
     .clearfix

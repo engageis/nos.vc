@@ -1566,7 +1566,7 @@ div.project .box .follow_project {
   margin-top: 35px;
   padding: 4px 0 4px 0;
   text-align: center;
-  font-family: Lato-Bold;
+  font-family: Helvetica Neue;
   font-size: 1em;
   color: black;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
@@ -1701,7 +1701,7 @@ div.project .box .follow_project:hover {
   margin-top: 151px;
   padding: 7px 0 1px 5px;
   color: white;
-  font-family: Lato-Regular;
+  font-family: "Helvetica Neue";
   font-size: 11px;
   width: 213px;
 }
@@ -1722,14 +1722,14 @@ div.project .box .follow_project:hover {
   font-size: 16px;
   color: #4383d1;
   padding: 7px 0 0 0;
-  font-family: Lato-Bold;
+  font-family: Helvetica Neue;
   overflow: hidden;
   margin-bottom: 3px;
 }
 /* line 42, ../../app/assets/stylesheets/miv/_projects_land.sass */
 .project_land .project_infos h4 a, .small_project_land .project_infos h4 a {
   color: black;
-  font-family: Lato-Bold;
+  font-family: Helvetica Neue;
   font-size: 18px;
   text-decoration: none;
   -moz-transition-property: all;
@@ -1804,7 +1804,7 @@ div.project .box .follow_project:hover {
 }
 /* line 84, ../../app/assets/stylesheets/miv/_projects_land.sass */
 .project_land .project_infos ul li h6, .small_project_land .project_infos ul li h6 {
-  font-family: Lato-Bold;
+  font-family: Helvetica Neue;
   font-size: 12px;
   color: black;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
@@ -1860,7 +1860,7 @@ div.project .box .follow_project:hover {
 }
 /* line 118, ../../app/assets/stylesheets/miv/_projects_land.sass */
 .project_land .back_info ul li h5, .project_land .small_back_info ul li h5, .small_project_land .back_info ul li h5, .small_project_land .small_back_info ul li h5 {
-  font-family: Lato-Bold;
+  font-family: Helvetica Neue;
   font-size: 17px;
   color: black;
 }
@@ -1999,7 +1999,7 @@ div.project .box .follow_project:hover {
 }
 /* line 31, ../../app/assets/stylesheets/miv/_embed.sass */
 #project_embed a.close {
-  font-family: "Lato-Bold";
+  font-family: "Helvetica Neue";
   color: white;
   text-decoration: none;
   position: absolute;
@@ -2193,7 +2193,7 @@ div.project .box .follow_project:hover {
 }
 /* line 17, ../../app/assets/stylesheets/miv/_tabs.sass */
 .tab_container nav a:hover, .tab_container nav a.selected {
-  background: white;
+  background: #f9f9f9;
 }
 /* line 19, ../../app/assets/stylesheets/miv/_tabs.sass */
 .tab_container nav a.selected {
@@ -3212,7 +3212,7 @@ table .span12 {
 }
 /* line 21, ../../app/assets/stylesheets/miv/_dropdown.sass */
 .dropdown li .small {
-  font-family: Lato-Bold;
+  font-family: Helvetica Neue;
   font-size: 11px;
   display: inline;
   color: #d6d5d0;
@@ -10257,7 +10257,7 @@ body #page_content .container .list_title .title p {
 #recommended_header .resume_about h1 {
   margin-top: 10px;
   display: inline-block;
-  font-family: "Lato-Regular";
+  font-family: "Helvetica Neue";
   font-size: 28px;
   color: white;
   line-height: 110%;
@@ -10298,7 +10298,7 @@ body #page_content .container .list_title .title p {
 }
 /* line 47, ../../app/assets/stylesheets/content/_recommended_header.sass */
 #recommended_header .project_info .institutional h3 {
-  font-family: "Lato-Regular";
+  font-family: "Helvetica Neue";
   font-size: 18px;
   color: #e75297;
   background: url("/images/catarse/institutional_video_icon16x16.png") left top no-repeat;
@@ -10315,7 +10315,7 @@ body #page_content .container .list_title .title p {
 }
 /* line 61, ../../app/assets/stylesheets/content/_recommended_header.sass */
 #recommended_header .project_info .info h3 {
-  font-family: "Lato-Regular";
+  font-family: "Helvetica Neue";
   font-size: 18px;
   color: #e75297;
   background: url("/images/catarse/min_star12x11.png") left 5px no-repeat;
@@ -10327,7 +10327,7 @@ body #page_content .container .list_title .title p {
 /* line 70, ../../app/assets/stylesheets/content/_recommended_header.sass */
 #recommended_header .project_info .info h2 {
   clear: both;
-  font-family: "Lato-Bold";
+  font-family: "Helvetica Neue";
   font-size: 14px;
   padding-bottom: 8px;
 }
@@ -10416,7 +10416,7 @@ body #page_content .container .list_title .title p {
 }
 /* line 119, ../../app/assets/stylesheets/content/_recommended_header.sass */
 #recommended_header .statistics ul li strong {
-  font-family: "Lato-Bold";
+  font-family: "Helvetica Neue";
   font-size: 12px;
 }
 /* line 122, ../../app/assets/stylesheets/content/_recommended_header.sass */
@@ -10465,7 +10465,7 @@ body #page_content .container .list_title .title p {
 }
 /* line 4, ../../app/assets/stylesheets/content/_explore.sass */
 [data-action="index"][data-controller="explore"] #page_content .container {
-  background: url('/images/nosvc/while_line.gif?1339595880') right repeat-y;
+  background: url('/images/nosvc/while_line.gif?1339694545') right repeat-y;
 }
 /* line 8, ../../app/assets/stylesheets/content/_explore.sass */
 [data-action="index"][data-controller="explore"] #page_content .container .sidebar .content section.highlights {
@@ -10512,7 +10512,7 @@ body #page_content .container .list_title .title p {
 }
 /* line 35, ../../app/assets/stylesheets/content/_explore.sass */
 [data-action="index"][data-controller="explore"] #page_content .container .sidebar .content section.highlights ul li a:hover, [data-action="index"][data-controller="explore"] #page_content .container .sidebar .content section.highlights ul li a.selected {
-  background: white;
+  background: #f9f9f9;
 }
 /* line 37, ../../app/assets/stylesheets/content/_explore.sass */
 [data-action="index"][data-controller="explore"] #page_content .container .sidebar .content section.highlights ul li a.selected {
@@ -10622,7 +10622,7 @@ body #page_content .container .list_title .title p {
 /* line 19, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="passwords"][data-action="new"] #page_content .container .devise_content form label,
 [data-controller="passwords"][data-action="edit"] #page_content .container .devise_content form label {
-  font-family: Lato-Regular;
+  font-family: "Helvetica Neue";
   font-size: 13px;
 }
 /* line 22, ../../app/assets/stylesheets/content/_sessions.sass */
@@ -10640,7 +10640,7 @@ body #page_content .container .list_title .title p {
 [data-controller="passwords"][data-action="new"] #page_content .container .devise_content .title h1,
 [data-controller="passwords"][data-action="edit"] #page_content .container .devise_content .title h1 {
   color: #333333;
-  font-family: "Lato-Regular";
+  font-family: "Helvetica Neue";
   font-size: 28px;
   padding: 5px 0;
 }
@@ -10670,14 +10670,14 @@ body #page_content .container .list_title .title p {
 }
 /* line 47, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .form_login h1, [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .form_register h1, [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .login_with_social h1 {
-  font-family: Lato-Bold;
+  font-family: Helvetica Neue;
   font-size: 20px;
   padding-bottom: 5px;
   color: #333333;
 }
 /* line 52, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .form_login h3, [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .form_register h3, [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .login_with_social h3 {
-  font-family: Lato-Regular;
+  font-family: "Helvetica Neue";
   font-size: 15px;
   padding-bottom: 15px;
   color: #6f6f6f;
@@ -10688,7 +10688,7 @@ body #page_content .container .list_title .title p {
 }
 /* line 60, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .form_login label, [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .form_register label, [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .login_with_social label {
-  font-family: Lato-Regular;
+  font-family: "Helvetica Neue";
   font-size: 12px;
   width: 220px;
 }
@@ -12964,7 +12964,7 @@ body #page_content .container .list_title .title p {
 }
 /* line 568, ../../app/assets/stylesheets/resources/projects/_show.sass */
 [data-namespace="null"][data-controller="projects"][data-action="show"] #page_content .sidebar .info .statistics .item p {
-  font-family: "Lato-Bold";
+  font-family: "Helvetica Neue";
   font-size: 34px;
   color: black;
 }
@@ -13407,7 +13407,7 @@ body #page_content .container .list_title .title p {
 }
 /* line 101, ../../app/assets/stylesheets/resources/projects/_start.sass */
 [data-controller="projects"][data-action="start"] #page_content .container .start_content .main .bootstrap-form form .input-prepend span.add-on {
-  font-family: "Lato-Regular";
+  font-family: "Helvetica Neue";
   margin-top: -3px;
   color: #999999;
   margin-left: 20px;
@@ -13566,7 +13566,7 @@ body #page_content .container .list_title .title p {
 }
 /* line 31, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .main .alert-heading {
-  font-family: "Lato-Bold";
+  font-family: "Helvetica Neue";
 }
 /* line 33, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .main .reward_title {
@@ -13574,7 +13574,7 @@ body #page_content .container .list_title .title p {
 }
 /* line 35, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .main .reward_title h3 {
-  font-family: "Lato-Bold";
+  font-family: "Helvetica Neue";
   font-size: 16px;
   color: rgba(0, 0, 0, 0.8);
 }
@@ -13819,7 +13819,7 @@ body #page_content .container .list_title .title p {
 [data-controller="projects"][data-action="pending_backers"] #page_content .container .project_content .title h1,
 [data-controller="projects"][data-action="pending"] #page_content .container .project_content .title h1 {
   color: #333333;
-  font-family: "Lato-Regular";
+  font-family: "Helvetica Neue";
   font-size: 28px;
   padding: 5px 0;
 }
@@ -13880,7 +13880,7 @@ body #page_content .container .list_title .title p {
 [data-controller="projects"][data-action="pending_backers"] #page_content .container .project_content #pending_backers fieldset .input label, [data-controller="projects"][data-action="pending_backers"] #page_content .container .project_content #pending_projects fieldset .input label,
 [data-controller="projects"][data-action="pending"] #page_content .container .project_content #pending_backers fieldset .input label,
 [data-controller="projects"][data-action="pending"] #page_content .container .project_content #pending_projects fieldset .input label {
-  font-family: "Lato-Regular";
+  font-family: "Helvetica Neue";
   font-size: 13px;
 }
 /* line 45, ../../app/assets/stylesheets/resources/projects/_pending_backers.sass */
@@ -13888,7 +13888,7 @@ body #page_content .container .list_title .title p {
 [data-controller="projects"][data-action="pending"] #page_content .container .project_content #pending_backers #total_results,
 [data-controller="projects"][data-action="pending"] #page_content .container .project_content #pending_projects #total_results {
   float: right;
-  font-family: "Lato-Regular";
+  font-family: "Helvetica Neue";
   font-size: 13px;
   padding-top: 2px;
 }
@@ -13896,7 +13896,7 @@ body #page_content .container .list_title .title p {
 [data-controller="projects"][data-action="pending_backers"] #page_content .container .project_content #pending_backers #total_results strong, [data-controller="projects"][data-action="pending_backers"] #page_content .container .project_content #pending_projects #total_results strong,
 [data-controller="projects"][data-action="pending"] #page_content .container .project_content #pending_backers #total_results strong,
 [data-controller="projects"][data-action="pending"] #page_content .container .project_content #pending_projects #total_results strong {
-  font-family: "Lato-Bold";
+  font-family: "Helvetica Neue";
   color: #59af6d;
 }
 /* line 53, ../../app/assets/stylesheets/resources/projects/_pending_backers.sass */
@@ -13905,7 +13905,7 @@ body #page_content .container .list_title .title p {
 [data-controller="projects"][data-action="pending"] #page_content .container .project_content #pending_projects .pagination {
   text-align: right;
   padding: 20px 0 40px;
-  font-family: "Lato-Regular";
+  font-family: "Helvetica Neue";
   font-size: 13px;
 }
 /* line 58, ../../app/assets/stylesheets/resources/projects/_pending_backers.sass */
@@ -13924,7 +13924,7 @@ body #page_content .container .list_title .title p {
 [data-controller="projects"][data-action="pending_backers"] #page_content .container .project_content #pending_backers .table thead th, [data-controller="projects"][data-action="pending_backers"] #page_content .container .project_content #pending_projects .table thead th,
 [data-controller="projects"][data-action="pending"] #page_content .container .project_content #pending_backers .table thead th,
 [data-controller="projects"][data-action="pending"] #page_content .container .project_content #pending_projects .table thead th {
-  font-family: "Lato-Bold";
+  font-family: "Helvetica Neue";
   font-size: 13px;
   text-align: center;
 }
@@ -13932,7 +13932,7 @@ body #page_content .container .list_title .title p {
 [data-controller="projects"][data-action="pending_backers"] #page_content .container .project_content #pending_backers .table tbody tr td, [data-controller="projects"][data-action="pending_backers"] #page_content .container .project_content #pending_projects .table tbody tr td,
 [data-controller="projects"][data-action="pending"] #page_content .container .project_content #pending_backers .table tbody tr td,
 [data-controller="projects"][data-action="pending"] #page_content .container .project_content #pending_projects .table tbody tr td {
-  font-family: "Lato-Regular";
+  font-family: "Helvetica Neue";
   font-size: 12px;
   text-align: center;
   vertical-align: middle;
@@ -13970,7 +13970,7 @@ body #page_content .container .list_title .title p {
 /* line 10, ../../app/assets/stylesheets/resources/projects/_thank_you.sass */
 #thank_you .title h1 {
   color: #333333;
-  font-family: "Lato-Regular";
+  font-family: "Helvetica Neue";
   font-size: 28px;
   padding: 5px 0;
 }
@@ -13999,7 +13999,7 @@ body #page_content .container .list_title .title p {
   margin-top: 30px;
   float: left;
   width: 600px;
-  font-family: "Lato-Bold";
+  font-family: "Helvetica Neue";
   font-size: 22px;
   line-height: 130%;
   padding-bottom: 20px;
@@ -14029,7 +14029,7 @@ body #page_content .container .list_title .title p {
 }
 /* line 51, ../../app/assets/stylesheets/resources/projects/_thank_you.sass */
 #thank_you h2 {
-  font-family: "Lato-Bold";
+  font-family: "Helvetica Neue";
 }
 
 /* line 4, ../../app/assets/stylesheets/resources/backers/_new.sass */
@@ -14120,7 +14120,7 @@ body #page_content .container .list_title .title p {
 }
 /* line 64, ../../app/assets/stylesheets/resources/backers/_new.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="new"] #page_content .container .main .backer_content #back_options #backer_form .inline-hints {
-  font-family: "Lato-Regular";
+  font-family: "Helvetica Neue";
   font-size: 16px;
 }
 /* line 67, ../../app/assets/stylesheets/resources/backers/_new.sass */
@@ -14137,7 +14137,7 @@ body #page_content .container .list_title .title p {
   font-size: 38px;
   padding-right: 20px;
   padding-left: 20px;
-  font-family: "Lato-Bold";
+  font-family: "Helvetica Neue";
 }
 /* line 79, ../../app/assets/stylesheets/resources/backers/_new.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="new"] #page_content .container .main .backer_content #back_options #backer_form .alert-info {
@@ -14145,7 +14145,7 @@ body #page_content .container .list_title .title p {
 }
 /* line 81, ../../app/assets/stylesheets/resources/backers/_new.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="new"] #page_content .container .main .backer_content #back_options #backer_form .alert-info label {
-  font-family: "Lato-Bold";
+  font-family: "Helvetica Neue";
 }
 /* line 83, ../../app/assets/stylesheets/resources/backers/_new.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="new"] #page_content .container .main .backer_content #back_options #backer_form .alert-info label input {
@@ -14155,7 +14155,7 @@ body #page_content .container .list_title .title p {
 }
 /* line 88, ../../app/assets/stylesheets/resources/backers/_new.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="new"] #page_content .container .main .backer_content #back_options #backer_form .alert-info .inline-hints strong {
-  font-family: "Lato-Bold";
+  font-family: "Helvetica Neue";
 }
 /* line 90, ../../app/assets/stylesheets/resources/backers/_new.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="new"] #page_content .container .main .backer_content #back_options #backer_form #backer_reward_input {
@@ -14399,17 +14399,17 @@ body #page_content .container .list_title .title p {
 }
 /* line 36, ../../app/assets/stylesheets/resources/backers/_review.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="review"] #page_content .container .main .bootstrap-form #credits_notice {
-  font-family: "Lato-Regular";
+  font-family: "Helvetica Neue";
   font-size: 16px;
 }
 /* line 39, ../../app/assets/stylesheets/resources/backers/_review.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="review"] #page_content .container .main .bootstrap-form #credits_notice strong {
-  font-family: "Lato-Bold";
+  font-family: "Helvetica Neue";
   font-size: 20px;
 }
 /* line 42, ../../app/assets/stylesheets/resources/backers/_review.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="review"] #page_content .container .main .bootstrap-form #international_payment {
-  font-family: "Lato-Regular";
+  font-family: "Helvetica Neue";
 }
 /* line 44, ../../app/assets/stylesheets/resources/backers/_review.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="review"] #page_content .container .main .bootstrap-form #international_payment h1 {
@@ -14513,7 +14513,7 @@ body #page_content .container .list_title .title p {
 }
 /* line 106, ../../app/assets/stylesheets/resources/backers/_review.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="review"] #page_content .container .main .bootstrap-form #review_form #payment .choose_payment .or span {
-  font-family: Lato-Bold;
+  font-family: Helvetica Neue;
   font-size: 22px;
 }
 /* line 109, ../../app/assets/stylesheets/resources/backers/_review.sass */
@@ -14576,118 +14576,132 @@ body #page_content .container .list_title .title p {
   margin-top: 20px;
 }
 
-/* line 4, ../../app/assets/stylesheets/resources/static/_default.sass */
-[data-controller="static"] #page_content .container .static_default {
-  display: inline;
+/* line 2, ../../app/assets/stylesheets/resources/static/_default.sass */
+[data-controller="static"] #banner_how_it_works {
+  background: url('/images/nosvc/banner_how_it_works.jpg?1339696089');
+  width: 614px;
+  height: 220px;
   float: left;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 940px;
-  padding-top: 15px;
 }
-/* line 7, ../../app/assets/stylesheets/resources/static/_default.sass */
-[data-controller="static"] #page_content .container .static_default .title {
-  display: inline;
+/* line 10, ../../app/assets/stylesheets/resources/static/_default.sass */
+[data-controller="static"] #page_content .container .static_default .sidebar {
+  margin-right: 0;
+  margin-top: 125px;
+  margin-left: 0px;
+  width: 345px;
   float: left;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 940px;
-  margin-left: 0;
-  padding-bottom: 40px;
-}
-/* line 11, ../../app/assets/stylesheets/resources/static/_default.sass */
-[data-controller="static"] #page_content .container .static_default .title h1 {
-  color: #333333;
-  font-family: "Lato-Regular";
-  font-size: 28px;
-  padding: 5px 0;
 }
 /* line 16, ../../app/assets/stylesheets/resources/static/_default.sass */
-[data-controller="static"] #page_content .container .static_default .title h2 {
-  color: rgba(51, 51, 51, 0.7);
-  font-family: Arial;
+[data-controller="static"] #page_content .container .static_default .sidebar ul {
+  margin-bottom: 20px;
+  border-bottom: 1px #d8d3d3 dashed;
 }
 /* line 19, ../../app/assets/stylesheets/resources/static/_default.sass */
-[data-controller="static"] #page_content .container .static_default #how_it_works.alert {
-  font-family: Arial;
-  font-size: 15px;
-  line-height: 140%;
+[data-controller="static"] #page_content .container .static_default .sidebar ul li {
+  border-top: 1px #d8d3d3 dashed;
+  text-align: right;
 }
-/* line 23, ../../app/assets/stylesheets/resources/static/_default.sass */
-[data-controller="static"] #page_content .container .static_default #how_it_works.alert strong {
-  font-weight: bold;
-}
-/* line 25, ../../app/assets/stylesheets/resources/static/_default.sass */
-[data-controller="static"] #page_content .container .static_default #how_it_works.alert a {
-  color: #e75297;
-}
-/* line 27, ../../app/assets/stylesheets/resources/static/_default.sass */
-[data-controller="static"] #page_content .container .static_default .default_text {
-  padding-top: 20px;
-}
-/* line 28, ../../app/assets/stylesheets/resources/static/_default.sass */
-[data-controller="static"] #page_content .container .static_default .default_text a {
-  color: #4383d1;
+/* line 22, ../../app/assets/stylesheets/resources/static/_default.sass */
+[data-controller="static"] #page_content .container .static_default .sidebar ul li a {
+  color: #5d5d5d;
+  font-size: 24px;
+  font-family: Dosis-Light;
+  display: block;
+  padding: 25px 5px;
+  padding-right: 65px;
+  text-decoration: none;
+  text-shadow: white 1px 1px 0px;
 }
 /* line 31, ../../app/assets/stylesheets/resources/static/_default.sass */
+[data-controller="static"] #page_content .container .static_default .sidebar ul li a:hover, [data-controller="static"] #page_content .container .static_default .sidebar ul li a.selected {
+  background: #f9f9f9;
+  color: #ec6569;
+}
+/* line 35, ../../app/assets/stylesheets/resources/static/_default.sass */
+[data-controller="static"] #page_content .container .static_default .default_text {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 580px;
+  width: 574px;
+  background: #f9f9f9;
+  margin: 0;
+  padding: 50px 20px 20px 20px;
+}
+/* line 41, ../../app/assets/stylesheets/resources/static/_default.sass */
+[data-controller="static"] #page_content .container .static_default .default_text .title {
+  font-family: "Dosis-ExtraLight";
+  font-size: 41px;
+  letter-spacing: -1px;
+  text-shadow: white 1px 1px 0px;
+  color: #5d5d5d;
+  line-height: 46px;
+  margin: auto;
+  margin-bottom: 35px;
+  text-align: center;
+}
+/* line 51, ../../app/assets/stylesheets/resources/static/_default.sass */
+[data-controller="static"] #page_content .container .static_default .default_text .title span {
+  color: #ec6569;
+}
+/* line 53, ../../app/assets/stylesheets/resources/static/_default.sass */
+[data-controller="static"] #page_content .container .static_default .default_text a {
+  color: #ec6569;
+}
+/* line 55, ../../app/assets/stylesheets/resources/static/_default.sass */
+[data-controller="static"] #page_content .container .static_default .default_text h1 {
+  font-family: "Helvetica Neue", Arial;
+  font-size: 21px;
+  color: #64635e;
+  padding-bottom: 20px;
+}
+/* line 60, ../../app/assets/stylesheets/resources/static/_default.sass */
 [data-controller="static"] #page_content .container .static_default .default_text h2 {
-  font-family: "Lato-Bold";
+  font-family: "Helvetica Neue", Arial;
   font-size: 18px;
-  color: rgba(89, 175, 109, 0.9);
+  color: rgba(236, 101, 105, 0.9);
   padding-bottom: 10px;
 }
-/* line 36, ../../app/assets/stylesheets/resources/static/_default.sass */
+/* line 65, ../../app/assets/stylesheets/resources/static/_default.sass */
 [data-controller="static"] #page_content .container .static_default .default_text h3 {
-  font-family: Arial;
+  font-family: "Helvetica Neue", Arial;
   font-weight: bold;
   font-size: 15px;
-  color: rgba(0, 0, 0, 0.9);
+  color: #64635e;
   padding-bottom: 5px;
 }
-/* line 42, ../../app/assets/stylesheets/resources/static/_default.sass */
+/* line 71, ../../app/assets/stylesheets/resources/static/_default.sass */
 [data-controller="static"] #page_content .container .static_default .default_text p, [data-controller="static"] #page_content .container .static_default .default_text ul, [data-controller="static"] #page_content .container .static_default .default_text ol {
-  font-family: Arial;
+  font-family: "Helvetica Neue", Arial;
   font-size: 15px;
   line-height: 130%;
   padding-bottom: 15px;
-  color: rgba(0, 0, 0, 0.7);
+  color: #64635e;
 }
-/* line 48, ../../app/assets/stylesheets/resources/static/_default.sass */
+/* line 77, ../../app/assets/stylesheets/resources/static/_default.sass */
+[data-controller="static"] #page_content .container .static_default .default_text strong {
+  font-family: "Helvetica Neue", Arial;
+  font-weight: bold;
+  color: #64635e;
+}
+/* line 81, ../../app/assets/stylesheets/resources/static/_default.sass */
 [data-controller="static"] #page_content .container .static_default .default_text ol {
   padding: 10px 30px;
 }
-/* line 50, ../../app/assets/stylesheets/resources/static/_default.sass */
+/* line 83, ../../app/assets/stylesheets/resources/static/_default.sass */
 [data-controller="static"] #page_content .container .static_default .default_text ol li {
   padding-bottom: 10px;
   list-style: decimal inside;
 }
-/* line 53, ../../app/assets/stylesheets/resources/static/_default.sass */
+/* line 86, ../../app/assets/stylesheets/resources/static/_default.sass */
 [data-controller="static"] #page_content .container .static_default .default_text ul {
   padding: 10px 30px;
 }
-/* line 55, ../../app/assets/stylesheets/resources/static/_default.sass */
+/* line 88, ../../app/assets/stylesheets/resources/static/_default.sass */
 [data-controller="static"] #page_content .container .static_default .default_text ul li {
   padding-bottom: 10px;
   list-style: disc inside;
-}
-/* line 58, ../../app/assets/stylesheets/resources/static/_default.sass */
-[data-controller="static"] #page_content .container .static_default .center_form {
-  text-align: center;
-}
-/* line 60, ../../app/assets/stylesheets/resources/static/_default.sass */
-[data-controller="static"] #page_content .container .static_default .center_form .check {
-  margin-bottom: 15px;
-}
-/* line 62, ../../app/assets/stylesheets/resources/static/_default.sass */
-[data-controller="static"] #page_content .container .static_default .center_form .check input {
-  display: inline;
-}
-/* line 64, ../../app/assets/stylesheets/resources/static/_default.sass */
-[data-controller="static"] #page_content .container .static_default .center_form .check label {
-  display: inline;
-  font-family: Arial;
-  font-size: 15px;
-  line-height: 130%;
 }
 
 /* line 3, ../../app/assets/stylesheets/resources/_curated_page.sass */
@@ -15085,7 +15099,7 @@ body #page_content .container .list_title .title p {
 /* line 39, ../../app/assets/stylesheets/resources/_curated_page.sass */
 [data-controller="curated_pages"][data-action="show"] #page_content .container .curated_content .curated_page_header .titles h1 {
   color: #333333;
-  font-family: "Lato-Regular";
+  font-family: "Helvetica Neue";
   font-size: 28px;
   padding: 5px 0;
 }
@@ -15105,25 +15119,25 @@ body #page_content .container .list_title .title p {
 
 /* line 3, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #creditsModal h3 {
-  font-family: Lato-Bold;
+  font-family: Helvetica Neue;
 }
 /* line 5, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #creditsModal .modal-body {
-  font-family: Lato-Regular;
+  font-family: "Helvetica Neue";
 }
 /* line 8, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #creditsModal .modal-footer a {
-  font-family: Lato-Regular;
+  font-family: "Helvetica Neue";
 }
 /* line 10, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #user_profile {
   padding-bottom: 20px;
-  background: url('/images/nosvc/while_line.gif?1339595880') right repeat-y;
+  background: url('/images/nosvc/while_line.gif?1339694545') right repeat-y;
 }
 /* line 15, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #user_profile #user_profile_content .content p.empty {
   text-align: center;
-  font-family: Lato-Regular;
+  font-family: "Helvetica Neue";
   font-size: 14px;
   width: 100%;
 }
@@ -15139,7 +15153,7 @@ body #page_content .container .list_title .title p {
   padding-right: 10px;
   padding-top: 10px;
   margin-top: -80px;
-  background: url('/images/nosvc/while_line.gif?1339595880') right repeat-y;
+  background: url('/images/nosvc/while_line.gif?1339694545') right repeat-y;
 }
 /* line 28, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #user_profile .section_header .profile_left {
@@ -15291,7 +15305,7 @@ body #page_content .container .list_title .title p {
 /* line 110, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #user_profile #user_credits .current_credits p {
   font-size: 24px;
-  font-family: Lato-Bold;
+  font-family: Helvetica Neue;
   color: #333333;
   padding-bottom: 5px;
 }
@@ -15301,7 +15315,7 @@ body #page_content .container .list_title .title p {
 }
 /* line 117, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #user_profile #user_credits .table_title {
-  font-family: Lato-Regular;
+  font-family: "Helvetica Neue";
   font-size: 20px;
   color: #284f31;
   padding-top: 14px;
@@ -15309,12 +15323,12 @@ body #page_content .container .list_title .title p {
 }
 /* line 124, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #user_profile #user_credits .table_content th {
-  font-family: Lato-Bold;
+  font-family: Helvetica Neue;
   font-size: 16px;
 }
 /* line 127, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #user_profile #user_credits .table_content td {
-  font-family: Lato-Regular;
+  font-family: "Helvetica Neue";
   font-size: 14px;
 }
 /* line 130, ../../app/assets/stylesheets/resources/users/_show.sass */
@@ -15336,7 +15350,7 @@ body #page_content .container .list_title .title p {
 }
 /* line 136, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #gravatar_hint.alert.alert-info {
-  font-family: Lato-Regular;
+  font-family: "Helvetica Neue";
   font-size: 16px;
 }
 /* line 140, ../../app/assets/stylesheets/resources/users/_show.sass */
@@ -15347,7 +15361,7 @@ body #page_content .container .list_title .title p {
 [data-namespace="null"][data-controller="users"][data-action="show"] #gravatar_hint.alert.alert-info p a {
   color: black;
   text-decoration: none;
-  font-family: Lato-Bold;
+  font-family: Helvetica Neue;
   -moz-transition-property: all;
   -webkit-transition-property: all;
   -o-transition-property: all;
@@ -15372,7 +15386,7 @@ body #page_content .container .list_title .title p {
 }
 /* line 156, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #my_data h1, [data-namespace="null"][data-controller="users"][data-action="show"] #social_info h1 {
-  font-family: Lato-Bold;
+  font-family: Helvetica Neue;
   font-size: 25px;
   color: #333333;
 }
@@ -15382,7 +15396,7 @@ body #page_content .container .list_title .title p {
 }
 /* line 162, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #my_data ul li, [data-namespace="null"][data-controller="users"][data-action="show"] #social_info ul li {
-  font-family: Lato-Regular;
+  font-family: "Helvetica Neue";
   font-size: 15px;
   margin-bottom: 15px;
 }
@@ -15397,7 +15411,7 @@ body #page_content .container .list_title .title p {
 }
 /* line 173, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #change_password h1 {
-  font-family: Lato-Bold;
+  font-family: Helvetica Neue;
   font-size: 25px;
   color: #333333;
   padding-top: 20px;
@@ -15408,7 +15422,7 @@ body #page_content .container .list_title .title p {
 }
 /* line 180, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #change_password ul li {
-  font-family: Lato-Regular;
+  font-family: "Helvetica Neue";
   font-size: 15px;
   margin-bottom: 15px;
 }
