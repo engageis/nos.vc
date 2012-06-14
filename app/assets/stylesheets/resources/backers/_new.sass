@@ -56,10 +56,6 @@
               .location
                 margin: 0px
           #back_options
-            width: 534px
-            float: left
-            margin-top: 80px
-            padding: 0 40px
             #backer_form
               .inline-hints
                 font-family: "Lato-Regular"
@@ -69,6 +65,8 @@
                 font-size: 14px
                 display: block
                 color: #5d5d5d
+                width: auto
+                text-align: left
               input[type="text"]
                 height: 60px
                 width: 600px
@@ -79,14 +77,10 @@
               .alert-info
                 margin-top: 20px
                 label
-                  font-family: 'Lato-Bold'
                   input
                     display: inline
                     margin-right: 10px
                     vertical-align: top
-                .inline-hints
-                  strong
-                    font-family: 'Lato-Bold'
               #backer_reward_input
                 padding-left: 0 !important
                 legend
@@ -102,40 +96,93 @@
                 ol
                   float: left
                   li.choice
-                    padding: 30px 20px 15px
-                    padding-left: 34px
+                    padding: 0px 0px 0px 30px
                     margin-bottom: 25px
-                    width: 480px
+                    width: 504px
+                    float: left
                     border: solid 1px #e7e6e1
                     @include border-radius(12px)
                     background: #fcfcfc
                     +text-shadow(white 1px 1px 0px)
+                    position: relative
                     &.selected
                       background: #f7f6f0
-                    .reward_minimum_value
-                      color: #5d5d5d
-                      font-family: "Dosis-Regular"
-                      font-size: 40px
-                      padding-bottom: 10px
-                      margin-left: 10px
-                    .reward_description
-                      font-family: "Helvetica Neue", "Arial", "Sans-serif"
-                      font-size: 13px
-                      line-height: 21px
-                      color: #5d5d5d
-                      margin-top: 10px
-                      margin-left: 10px
+                    label
+                      .left
+                        float: left
+                        width: 360px
+                        padding: 24px 0px 20px
+                        .reward_minimum_value
+                          color: #5d5d5d
+                          font-family: "Dosis-Regular"
+                          font-size: 40px
+                          padding-bottom: 10px
+                          margin-left: 10px
+                        .reward_description
+                          font-family: "Helvetica Neue", "Arial", "Sans-serif"
+                          font-size: 13px
+                          line-height: 21px
+                          color: #5d5d5d
+                          margin-top: 10px
+                          margin-left: 10px
+                      .right
+                        color: #5d5d5d
+                        font-family: "Dosis-Regular"
+                        font-size: 11px
+                        text-transform: uppercase
+                        right: 1px
+                        width: 120px
+                        background: #F7F6F0
+                        position: absolute
+                        height: 100%
+                        +border-radius(0 16px 16px 0px)
+                        +text-shadow(white 1px 1px 1px)
+                        .unlimited, .sold_out
+                          font-size: 16px
+                          color: #58b491
+                          text-align: left
+                          margin-left: 20px
+                          margin-top: 30px
+                          float: left
+                        .sold_out
+                          color: #ed6569
+                        .remaining
+                          float: left 
+                          margin-top: 30px
+                          line-height: 14px
+                          span
+                            font-size: 24px
+                            float: left
+                            margin-left: 10px
+                            margin-right: 6px
+                            margin-top: 4px
+                            color: #5d5d5d
+                            height: 50px
+                            +text-shadow(white 1px 1px 1px)
+                            font-family: "Dosis-Regular"
+                        .expires_at
+                          font-family: "Helvetica Neue","Arial","Sans-serif"
+                          font-size: 13px  
+                          position: absolute
+                          margin-left: 20px
+                          bottom: 30px
+                          padding-top: 20px
+                          width: 84px
+                          text-align: center
+                          background: image-url("nosvc/separador-new.gif") left top repeat-x
               #backer_anonymous_input
                 margin: 20px 0
                 font-size: 14px
                 text-align: center
-                input
-                  display: inline
-                  margin-right: 10px
-                  vertical-align: top
+                label
+                  padding-left: 125px
+                  input
+                    margin-right: 10px
+                    margin-top: 5px
+                    float: left
               #backer_submit
                 display: block
-                margin: 0 auto
+                margin: 20px 0 20px 170px
                 background: image-url("nosvc/button-backer.png") left top no-repeat
                 width: 178px
                 height: 58px
@@ -160,8 +207,8 @@
                 text-transform: uppercase
                 font-size: 12px
                 float: left 
-                margin-top: -25px
-                margin-left: 234px
+                margin-top: -44px
+                margin-left: 226px
           
       .sidebar
         +omega
