@@ -227,13 +227,13 @@ pt:
   error: "Ooops! Ocorreu um erro. Por favor, tente novamente."
   explore:
     index:
-      categories: Categorias
+      categories: "Cidades"
       expiring: "Na reta final"
-      quick_explore: "Busca rápida"
-      recent: Recentes
-      recommended: Recomendados
+      quick_explore: "Explorar"
+      recent: "Novos"
+      recommended: "Destaques"
       subtitle: "Explore os projetos, encontre aqueles que mexem com seu coração, e faça acontecer!"
-      successful: Bem-sucedidos
+      successful: "Realizados"
       title: "Encontre projetos incríveis"
     title: "Explore os projetos"
     project:
