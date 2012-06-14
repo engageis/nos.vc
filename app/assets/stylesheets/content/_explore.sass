@@ -9,7 +9,7 @@
             +grid(6)
             width: 360px
             margin: 0
-            margin-top: 100px
+            margin-top: 170px
             .section_header
               +alpha
               h1
@@ -19,23 +19,38 @@
                 color: #5d5d5d
                 +text-shadow(white 1px 1px 0px)
                 padding-bottom: 15px
+                padding-left: 15px
             ul
               margin-bottom: 20px
               border-bottom: 1px #D8D3D3 dashed
               li
                 border-top: 1px #D8D3D3 dashed
                 a
-                  color: $blue
+                  color: #5D5D5D
                   font-size: 24px
                   font-family: Dosis-Light
                   display: block
                   padding: 15px 15px
+                  text-indent: 40px
                   text-decoration: none
+                  background-repeat: no-repeat
+                  background-position: 5px
                   +text-shadow(white 1px 1px 0px)
                   &:hover, &.selected
-                    background: #F9F9F9
-                  &.selected
-                    font-family: Dosis-SemiBold
+                    background-color: #F9F9F9
+                    color: $blue
+                &.recommended
+                  a
+                    background-image: image-url("nosvc/icon-selected.png")
+                &.recent
+                  a
+                    background-image: image-url("nosvc/icon-recents.png")
+                &.successful
+                  a
+                    background-image: image-url("nosvc/icon-successful.png")
+                &.expiring
+                  a
+                    background-image: image-url("nosvc/icon-expiring.png")
           section.categories
             +grid(10)
             margin: 0
