@@ -116,6 +116,8 @@
   select,
   input[type="file"] {
     height: 28px;
+    float: left;
+    margin-left: 20px;
     /* In IE7, the height of the select element cannot be changed by height, only font-size */
 
     *margin-top: 4px;

@@ -2413,48 +2413,49 @@ table .span12 {
   -moz-border-radius: 10px;
   border-radius: 10px;
   color: #5d5d5d;
+  line-height: 21px;
 }
-/* line 21, ../../app/assets/stylesheets/miv/_alert.scss */
+/* line 22, ../../app/assets/stylesheets/miv/_alert.scss */
 #bootstrap-alert .alert-heading, .bootstrap-alert .alert-heading {
   color: inherit;
 }
-/* line 24, ../../app/assets/stylesheets/miv/_alert.scss */
+/* line 25, ../../app/assets/stylesheets/miv/_alert.scss */
 #bootstrap-alert .alert .closeAlert, .bootstrap-alert .alert .closeAlert {
   position: relative;
   top: -2px;
   right: -21px;
   line-height: 18px;
 }
-/* line 30, ../../app/assets/stylesheets/miv/_alert.scss */
+/* line 31, ../../app/assets/stylesheets/miv/_alert.scss */
 #bootstrap-alert .alert-success, .bootstrap-alert .alert-success {
   background-color: #dff0d8;
   border-color: #d6e9c6;
   color: #468847;
 }
-/* line 36, ../../app/assets/stylesheets/miv/_alert.scss */
+/* line 37, ../../app/assets/stylesheets/miv/_alert.scss */
 #bootstrap-alert .alert-danger,
 #bootstrap-alert .alert-error, .bootstrap-alert .alert-danger, .bootstrap-alert .alert-error {
   background-color: #f2dede;
   border-color: #eed3d7;
   color: #b94a48;
 }
-/* line 41, ../../app/assets/stylesheets/miv/_alert.scss */
+/* line 42, ../../app/assets/stylesheets/miv/_alert.scss */
 #bootstrap-alert .alert-info, .bootstrap-alert .alert-info {
   background-color: #d9edf7;
   border-color: #bce8f1;
   color: #3a87ad;
 }
-/* line 46, ../../app/assets/stylesheets/miv/_alert.scss */
+/* line 47, ../../app/assets/stylesheets/miv/_alert.scss */
 #bootstrap-alert .alert-block, .bootstrap-alert .alert-block {
   padding-top: 14px;
   padding-bottom: 14px;
 }
-/* line 51, ../../app/assets/stylesheets/miv/_alert.scss */
+/* line 52, ../../app/assets/stylesheets/miv/_alert.scss */
 #bootstrap-alert .alert-block > p,
 #bootstrap-alert .alert-block > ul, .bootstrap-alert .alert-block > p, .bootstrap-alert .alert-block > ul {
   margin-bottom: 0;
 }
-/* line 54, ../../app/assets/stylesheets/miv/_alert.scss */
+/* line 55, ../../app/assets/stylesheets/miv/_alert.scss */
 #bootstrap-alert .alert-block p + p, .bootstrap-alert .alert-block p + p {
   margin-top: 5px;
 }
@@ -2589,56 +2590,58 @@ table .span12 {
 #bootstrap-form select,
 #bootstrap-form input[type="file"], .bootstrap-form select, .bootstrap-form input[type="file"] {
   height: 28px;
+  float: left;
+  margin-left: 20px;
   /* In IE7, the height of the select element cannot be changed by height, only font-size */
   *margin-top: 4px;
   /* For IE7, add top margin to align select with labels */
   line-height: 28px;
 }
-/* line 126, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 128, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form input[type="file"], .bootstrap-form input[type="file"] {
   line-height: 18px \9;
 }
-/* line 129, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 131, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form select, .bootstrap-form select {
   width: 220px;
   background-color: #ffffff;
 }
-/* line 134, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 136, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form select[multiple],
 #bootstrap-form select[size], .bootstrap-form select[multiple], .bootstrap-form select[size] {
   height: auto;
 }
-/* line 137, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 139, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form input[type="image"], .bootstrap-form input[type="image"] {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
 }
-/* line 142, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 144, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form textarea, .bootstrap-form textarea {
   height: auto;
 }
-/* line 145, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 147, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form input[type="hidden"], .bootstrap-form input[type="hidden"] {
   display: none;
 }
-/* line 149, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 151, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .radio,
 #bootstrap-form .checkbox, .bootstrap-form .radio, .bootstrap-form .checkbox {
   padding-left: 18px;
 }
-/* line 153, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 155, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .radio input[type="radio"],
 #bootstrap-form .checkbox input[type="checkbox"], .bootstrap-form .radio input[type="radio"], .bootstrap-form .checkbox input[type="checkbox"] {
   float: left;
   margin-left: -18px;
 }
-/* line 158, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 160, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .controls > .radio:first-child,
 #bootstrap-form .controls > .checkbox:first-child, .bootstrap-form .controls > .radio:first-child, .bootstrap-form .controls > .checkbox:first-child {
   padding-top: 5px;
 }
-/* line 162, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 164, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .radio.inline,
 #bootstrap-form .checkbox.inline, .bootstrap-form .radio.inline, .bootstrap-form .checkbox.inline {
   display: inline-block;
@@ -2646,12 +2649,12 @@ table .span12 {
   margin-bottom: 0;
   vertical-align: middle;
 }
-/* line 169, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 171, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .radio.inline + .radio.inline,
 #bootstrap-form .checkbox.inline + .checkbox.inline, .bootstrap-form .radio.inline + .radio.inline, .bootstrap-form .checkbox.inline + .checkbox.inline {
   margin-left: 10px;
 }
-/* line 173, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 175, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form input,
 #bootstrap-form textarea, .bootstrap-form input, .bootstrap-form textarea {
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
@@ -2663,7 +2666,7 @@ table .span12 {
   -o-transition: border linear 0.2s, box-shadow linear 0.2s;
   transition: border linear 0.2s, box-shadow linear 0.2s;
 }
-/* line 184, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 186, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form input:focus,
 #bootstrap-form textarea:focus, .bootstrap-form input:focus, .bootstrap-form textarea:focus {
   border-color: rgba(82, 168, 236, 0.8);
@@ -2674,7 +2677,7 @@ table .span12 {
   outline: thin dotted \9;
   /* IE6-9 */
 }
-/* line 197, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 199, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form input[type="file"]:focus,
 #bootstrap-form input[type="radio"]:focus,
 #bootstrap-form input[type="checkbox"]:focus,
@@ -2686,31 +2689,31 @@ table .span12 {
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
-/* line 205, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 207, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .input-mini, .bootstrap-form .input-mini {
   width: 60px;
 }
-/* line 208, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 210, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .input-small, .bootstrap-form .input-small {
   width: 90px;
 }
-/* line 211, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 213, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .input-medium, .bootstrap-form .input-medium {
   width: 150px;
 }
-/* line 214, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 216, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .input-large, .bootstrap-form .input-large {
   width: 210px;
 }
-/* line 217, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 219, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .input-xlarge, .bootstrap-form .input-xlarge {
   width: 270px;
 }
-/* line 220, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 222, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .input-xxlarge, .bootstrap-form .input-xxlarge {
   width: 530px;
 }
-/* line 226, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 228, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form input[class*="span"],
 #bootstrap-form select[class*="span"],
 #bootstrap-form textarea[class*="span"],
@@ -2718,7 +2721,7 @@ table .span12 {
   float: none;
   margin-left: 0;
 }
-/* line 232, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 234, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form input,
 #bootstrap-form textarea,
 #bootstrap-form .uneditable-input, .bootstrap-form input, .bootstrap-form textarea, .bootstrap-form .uneditable-input {
@@ -2726,55 +2729,55 @@ table .span12 {
   margin-left: 20px;
   float: left;
 }
-/* line 237, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 239, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form input.span12, #bootstrap-form textarea.span12, #bootstrap-form .uneditable-input.span12, .bootstrap-form input.span12, .bootstrap-form textarea.span12, .bootstrap-form .uneditable-input.span12 {
   width: 930px;
 }
-/* line 240, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 242, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form input.span11, #bootstrap-form textarea.span11, #bootstrap-form .uneditable-input.span11, .bootstrap-form input.span11, .bootstrap-form textarea.span11, .bootstrap-form .uneditable-input.span11 {
   width: 850px;
 }
-/* line 243, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 245, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form input.span10, #bootstrap-form textarea.span10, #bootstrap-form .uneditable-input.span10, .bootstrap-form input.span10, .bootstrap-form textarea.span10, .bootstrap-form .uneditable-input.span10 {
   width: 770px;
 }
-/* line 246, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 248, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form input.span9, #bootstrap-form textarea.span9, #bootstrap-form .uneditable-input.span9, .bootstrap-form input.span9, .bootstrap-form textarea.span9, .bootstrap-form .uneditable-input.span9 {
   width: 690px;
 }
-/* line 249, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 251, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form input.span8, #bootstrap-form textarea.span8, #bootstrap-form .uneditable-input.span8, .bootstrap-form input.span8, .bootstrap-form textarea.span8, .bootstrap-form .uneditable-input.span8 {
   width: 610px;
 }
-/* line 252, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 254, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form input.span7, #bootstrap-form textarea.span7, #bootstrap-form .uneditable-input.span7, .bootstrap-form input.span7, .bootstrap-form textarea.span7, .bootstrap-form .uneditable-input.span7 {
   width: 530px;
 }
-/* line 255, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 257, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form input.span6, #bootstrap-form textarea.span6, #bootstrap-form .uneditable-input.span6, .bootstrap-form input.span6, .bootstrap-form textarea.span6, .bootstrap-form .uneditable-input.span6 {
   width: 450px;
 }
-/* line 258, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 260, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form input.span5, #bootstrap-form textarea.span5, #bootstrap-form .uneditable-input.span5, .bootstrap-form input.span5, .bootstrap-form textarea.span5, .bootstrap-form .uneditable-input.span5 {
   width: 370px;
 }
-/* line 261, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 263, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form input.span4, #bootstrap-form textarea.span4, #bootstrap-form .uneditable-input.span4, .bootstrap-form input.span4, .bootstrap-form textarea.span4, .bootstrap-form .uneditable-input.span4 {
   width: 290px;
 }
-/* line 264, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 266, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form input.span3, #bootstrap-form textarea.span3, #bootstrap-form .uneditable-input.span3, .bootstrap-form input.span3, .bootstrap-form textarea.span3, .bootstrap-form .uneditable-input.span3 {
   width: 210px;
 }
-/* line 267, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 269, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form input.span2, #bootstrap-form textarea.span2, #bootstrap-form .uneditable-input.span2, .bootstrap-form input.span2, .bootstrap-form textarea.span2, .bootstrap-form .uneditable-input.span2 {
   width: 130px;
 }
-/* line 270, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 272, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form input.span1, #bootstrap-form textarea.span1, #bootstrap-form .uneditable-input.span1, .bootstrap-form input.span1, .bootstrap-form textarea.span1, .bootstrap-form .uneditable-input.span1 {
   width: 50px;
 }
-/* line 278, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 280, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form input[disabled],
 #bootstrap-form select[disabled],
 #bootstrap-form textarea[disabled],
@@ -2785,20 +2788,20 @@ table .span12 {
   border-color: #ddd;
   cursor: not-allowed;
 }
-/* line 285, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 287, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .control-group.warning > label,
 #bootstrap-form .control-group.warning .help-block,
 #bootstrap-form .control-group.warning .help-inline, .bootstrap-form .control-group.warning > label, .bootstrap-form .control-group.warning .help-block, .bootstrap-form .control-group.warning .help-inline {
   color: #c09853;
 }
-/* line 290, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 292, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .control-group.warning input,
 #bootstrap-form .control-group.warning select,
 #bootstrap-form .control-group.warning textarea, .bootstrap-form .control-group.warning input, .bootstrap-form .control-group.warning select, .bootstrap-form .control-group.warning textarea {
   color: #c09853;
   border-color: #c09853;
 }
-/* line 296, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 298, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .control-group.warning input:focus,
 #bootstrap-form .control-group.warning select:focus,
 #bootstrap-form .control-group.warning textarea:focus, .bootstrap-form .control-group.warning input:focus, .bootstrap-form .control-group.warning select:focus, .bootstrap-form .control-group.warning textarea:focus {
@@ -2807,27 +2810,27 @@ table .span12 {
   -moz-box-shadow: 0 0 6px #dbc59e;
   box-shadow: 0 0 6px #dbc59e;
 }
-/* line 303, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 305, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .control-group.warning .input-prepend .add-on,
 #bootstrap-form .control-group.warning .input-append .add-on, .bootstrap-form .control-group.warning .input-prepend .add-on, .bootstrap-form .control-group.warning .input-append .add-on {
   color: #c09853;
   background-color: #fcf8e3;
   border-color: #c09853;
 }
-/* line 310, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 312, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .control-group.error > label,
 #bootstrap-form .control-group.error .help-block,
 #bootstrap-form .control-group.error .help-inline, .bootstrap-form .control-group.error > label, .bootstrap-form .control-group.error .help-block, .bootstrap-form .control-group.error .help-inline {
   color: #b94a48;
 }
-/* line 315, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 317, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .control-group.error input,
 #bootstrap-form .control-group.error select,
 #bootstrap-form .control-group.error textarea, .bootstrap-form .control-group.error input, .bootstrap-form .control-group.error select, .bootstrap-form .control-group.error textarea {
   color: #b94a48;
   border-color: #b94a48;
 }
-/* line 321, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 323, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .control-group.error input:focus,
 #bootstrap-form .control-group.error select:focus,
 #bootstrap-form .control-group.error textarea:focus, .bootstrap-form .control-group.error input:focus, .bootstrap-form .control-group.error select:focus, .bootstrap-form .control-group.error textarea:focus {
@@ -2836,27 +2839,27 @@ table .span12 {
   -moz-box-shadow: 0 0 6px #d59392;
   box-shadow: 0 0 6px #d59392;
 }
-/* line 328, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 330, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .control-group.error .input-prepend .add-on,
 #bootstrap-form .control-group.error .input-append .add-on, .bootstrap-form .control-group.error .input-prepend .add-on, .bootstrap-form .control-group.error .input-append .add-on {
   color: #b94a48;
   background-color: #f2dede;
   border-color: #b94a48;
 }
-/* line 335, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 337, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .control-group.success > label,
 #bootstrap-form .control-group.success .help-block,
 #bootstrap-form .control-group.success .help-inline, .bootstrap-form .control-group.success > label, .bootstrap-form .control-group.success .help-block, .bootstrap-form .control-group.success .help-inline {
   color: #468847;
 }
-/* line 340, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 342, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .control-group.success input,
 #bootstrap-form .control-group.success select,
 #bootstrap-form .control-group.success textarea, .bootstrap-form .control-group.success input, .bootstrap-form .control-group.success select, .bootstrap-form .control-group.success textarea {
   color: #468847;
   border-color: #468847;
 }
-/* line 346, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 348, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .control-group.success input:focus,
 #bootstrap-form .control-group.success select:focus,
 #bootstrap-form .control-group.success textarea:focus, .bootstrap-form .control-group.success input:focus, .bootstrap-form .control-group.success select:focus, .bootstrap-form .control-group.success textarea:focus {
@@ -2865,21 +2868,21 @@ table .span12 {
   -moz-box-shadow: 0 0 6px #7aba7b;
   box-shadow: 0 0 6px #7aba7b;
 }
-/* line 353, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 355, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .control-group.success .input-prepend .add-on,
 #bootstrap-form .control-group.success .input-append .add-on, .bootstrap-form .control-group.success .input-prepend .add-on, .bootstrap-form .control-group.success .input-append .add-on {
   color: #468847;
   background-color: #dff0d8;
   border-color: #468847;
 }
-/* line 360, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 362, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form input:focus:required:invalid,
 #bootstrap-form textarea:focus:required:invalid,
 #bootstrap-form select:focus:required:invalid, .bootstrap-form input:focus:required:invalid, .bootstrap-form textarea:focus:required:invalid, .bootstrap-form select:focus:required:invalid {
   color: #b94a48;
   border-color: #ee5f5b;
 }
-/* line 366, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 368, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form input:focus:required:invalid:focus,
 #bootstrap-form textarea:focus:required:invalid:focus,
 #bootstrap-form select:focus:required:invalid:focus, .bootstrap-form input:focus:required:invalid:focus, .bootstrap-form textarea:focus:required:invalid:focus, .bootstrap-form select:focus:required:invalid:focus {
@@ -2888,7 +2891,7 @@ table .span12 {
   -moz-box-shadow: 0 0 6px #f8b9b7;
   box-shadow: 0 0 6px #f8b9b7;
 }
-/* line 372, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 374, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .form-actions, .bootstrap-form .form-actions {
   padding: 17px 20px 18px;
   margin-top: 18px;
@@ -2897,17 +2900,17 @@ table .span12 {
   border-top: 1px solid #ddd;
   *zoom: 1;
 }
-/* line 381, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 383, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .form-actions:before,
 #bootstrap-form .form-actions:after, .bootstrap-form .form-actions:before, .bootstrap-form .form-actions:after {
   display: table;
   content: "";
 }
-/* line 385, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 387, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .form-actions:after, .bootstrap-form .form-actions:after {
   clear: both;
 }
-/* line 388, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 390, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .uneditable-input, .bootstrap-form .uneditable-input {
   display: block;
   background-color: #ffffff;
@@ -2917,25 +2920,25 @@ table .span12 {
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
   cursor: not-allowed;
 }
-/* line 397, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 399, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form :-moz-placeholder, .bootstrap-form :-moz-placeholder {
   color: #999999;
 }
-/* line 400, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 402, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form ::-webkit-input-placeholder, .bootstrap-form ::-webkit-input-placeholder {
   color: #999999;
 }
-/* line 404, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 406, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .help-block,
 #bootstrap-form .help-inline, .bootstrap-form .help-block, .bootstrap-form .help-inline {
   color: #555555;
 }
-/* line 407, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 409, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .help-block, .bootstrap-form .help-block {
   display: block;
   margin-bottom: 9px;
 }
-/* line 411, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 413, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .help-inline, .bootstrap-form .help-inline {
   display: inline-block;
   *display: inline;
@@ -2944,12 +2947,12 @@ table .span12 {
   vertical-align: middle;
   padding-left: 5px;
 }
-/* line 421, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 423, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .input-prepend,
 #bootstrap-form .input-append, .bootstrap-form .input-prepend, .bootstrap-form .input-append {
   margin-bottom: 5px;
 }
-/* line 429, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 431, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .input-prepend input,
 #bootstrap-form .input-append input,
 #bootstrap-form .input-prepend select,
@@ -2961,7 +2964,7 @@ table .span12 {
   -moz-border-radius: 0 3px 3px 0;
   border-radius: 0 3px 3px 0;
 }
-/* line 440, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 442, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .input-prepend input:focus,
 #bootstrap-form .input-append input:focus,
 #bootstrap-form .input-prepend select:focus,
@@ -2971,12 +2974,12 @@ table .span12 {
   position: relative;
   z-index: 2;
 }
-/* line 445, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 447, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .input-prepend .uneditable-input,
 #bootstrap-form .input-append .uneditable-input, .bootstrap-form .input-prepend .uneditable-input, .bootstrap-form .input-append .uneditable-input {
   border-left-color: #ccc;
 }
-/* line 449, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 451, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .input-prepend .add-on,
 #bootstrap-form .input-append .add-on, .bootstrap-form .input-prepend .add-on, .bootstrap-form .input-append .add-on {
   display: inline-block;
@@ -2992,7 +2995,7 @@ table .span12 {
   background-color: #eeeeee;
   border: 1px solid #ccc;
 }
-/* line 466, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 468, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .input-prepend .add-on,
 #bootstrap-form .input-append .add-on,
 #bootstrap-form .input-prepend .btn,
@@ -3001,30 +3004,30 @@ table .span12 {
   -moz-border-radius: 3px 0 0 3px;
   border-radius: 3px 0 0 3px;
 }
-/* line 472, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 474, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .input-prepend .active,
 #bootstrap-form .input-append .active, .bootstrap-form .input-prepend .active, .bootstrap-form .input-append .active {
   background-color: #a9dba9;
   border-color: #46a546;
 }
-/* line 477, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 479, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .input-prepend .add-on,
 #bootstrap-form .input-prepend .btn, .bootstrap-form .input-prepend .add-on, .bootstrap-form .input-prepend .btn {
   margin-right: -1px;
 }
-/* line 481, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 483, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .input-append input,
 #bootstrap-form .input-append select .uneditable-input, .bootstrap-form .input-append input, .bootstrap-form .input-append select .uneditable-input {
   -webkit-border-radius: 3px 0 0 3px;
   -moz-border-radius: 3px 0 0 3px;
   border-radius: 3px 0 0 3px;
 }
-/* line 486, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 488, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .input-append .uneditable-input, .bootstrap-form .input-append .uneditable-input {
   border-left-color: #eee;
   border-right-color: #ccc;
 }
-/* line 491, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 493, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .input-append .add-on,
 #bootstrap-form .input-append .btn, .bootstrap-form .input-append .add-on, .bootstrap-form .input-append .btn {
   margin-left: -1px;
@@ -3032,7 +3035,7 @@ table .span12 {
   -moz-border-radius: 0 3px 3px 0;
   border-radius: 0 3px 3px 0;
 }
-/* line 499, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 501, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .input-prepend.input-append input,
 #bootstrap-form .input-prepend.input-append select,
 #bootstrap-form .input-prepend.input-append .uneditable-input, .bootstrap-form .input-prepend.input-append input, .bootstrap-form .input-prepend.input-append select, .bootstrap-form .input-prepend.input-append .uneditable-input {
@@ -3040,7 +3043,7 @@ table .span12 {
   -moz-border-radius: 0;
   border-radius: 0;
 }
-/* line 505, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 507, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .input-prepend.input-append .add-on:first-child,
 #bootstrap-form .input-prepend.input-append .btn:first-child, .bootstrap-form .input-prepend.input-append .add-on:first-child, .bootstrap-form .input-prepend.input-append .btn:first-child {
   margin-right: -1px;
@@ -3048,7 +3051,7 @@ table .span12 {
   -moz-border-radius: 3px 0 0 3px;
   border-radius: 3px 0 0 3px;
 }
-/* line 512, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 514, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .input-prepend.input-append .add-on:last-child,
 #bootstrap-form .input-prepend.input-append .btn:last-child, .bootstrap-form .input-prepend.input-append .add-on:last-child, .bootstrap-form .input-prepend.input-append .btn:last-child {
   margin-left: -1px;
@@ -3056,7 +3059,7 @@ table .span12 {
   -moz-border-radius: 0 3px 3px 0;
   border-radius: 0 3px 3px 0;
 }
-/* line 518, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 520, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .search-query, .bootstrap-form .search-query {
   padding-left: 14px;
   padding-right: 14px;
@@ -3065,7 +3068,7 @@ table .span12 {
   -moz-border-radius: 14px;
   border-radius: 14px;
 }
-/* line 546, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 548, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .form-search input,
 #bootstrap-form .form-inline input,
 #bootstrap-form .form-horizontal input,
@@ -3090,25 +3093,25 @@ table .span12 {
   display: inline-block;
   margin-bottom: 0;
 }
-/* line 552, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 554, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .form-search .hide,
 #bootstrap-form .form-inline .hide,
 #bootstrap-form .form-horizontal .hide, .bootstrap-form .form-search .hide, .bootstrap-form .form-inline .hide, .bootstrap-form .form-horizontal .hide {
   display: none;
 }
-/* line 556, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 558, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .form-search label,
 #bootstrap-form .form-inline label, .bootstrap-form .form-search label, .bootstrap-form .form-inline label {
   display: inline-block;
 }
-/* line 562, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 564, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .form-search .input-append,
 #bootstrap-form .form-inline .input-append,
 #bootstrap-form .form-search .input-prepend,
 #bootstrap-form .form-inline .input-prepend, .bootstrap-form .form-search .input-append, .bootstrap-form .form-inline .input-append, .bootstrap-form .form-search .input-prepend, .bootstrap-form .form-inline .input-prepend {
   margin-bottom: 0;
 }
-/* line 568, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 570, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .form-search .radio,
 #bootstrap-form .form-search .checkbox,
 #bootstrap-form .form-inline .radio,
@@ -3117,7 +3120,7 @@ table .span12 {
   margin-bottom: 0;
   vertical-align: middle;
 }
-/* line 576, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 578, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .form-search .radio input[type="radio"],
 #bootstrap-form .form-search .checkbox input[type="checkbox"],
 #bootstrap-form .form-inline .radio input[type="radio"],
@@ -3126,38 +3129,38 @@ table .span12 {
   margin-left: 0;
   margin-right: 3px;
 }
-/* line 581, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 583, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .control-group, .bootstrap-form .control-group {
   margin-bottom: 9px;
 }
-/* line 584, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 586, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form legend + .control-group, .bootstrap-form legend + .control-group {
   margin-top: 18px;
   -webkit-margin-top-collapse: separate;
 }
-/* line 588, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 590, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .form-horizontal .control-group, .bootstrap-form .form-horizontal .control-group {
   margin-bottom: 18px;
   *zoom: 1;
 }
-/* line 593, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 595, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .form-horizontal .control-group:before,
 #bootstrap-form .form-horizontal .control-group:after, .bootstrap-form .form-horizontal .control-group:before, .bootstrap-form .form-horizontal .control-group:after {
   display: table;
   content: "";
 }
-/* line 597, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 599, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .form-horizontal .control-group:after, .bootstrap-form .form-horizontal .control-group:after {
   clear: both;
 }
-/* line 600, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 602, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .form-horizontal .control-label, .bootstrap-form .form-horizontal .control-label {
   float: left;
   width: 140px;
   padding-top: 5px;
   text-align: right;
 }
-/* line 606, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 608, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .form-horizontal .controls, .bootstrap-form .form-horizontal .controls {
   margin-left: 160px;
   /* Super jank IE7 fix to ensure the inputs in .input-append and input-prepend don't inherit the margin of the parent, in this case .controls */
@@ -3165,12 +3168,12 @@ table .span12 {
   *margin-left: 0;
   *padding-left: 20px;
 }
-/* line 614, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 616, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .form-horizontal .help-block, .bootstrap-form .form-horizontal .help-block {
   margin-top: 9px;
   margin-bottom: 0;
 }
-/* line 618, ../../app/assets/stylesheets/miv/_form.scss */
+/* line 620, ../../app/assets/stylesheets/miv/_form.scss */
 #bootstrap-form .form-horizontal .form-actions, .bootstrap-form .form-horizontal .form-actions {
   padding-left: 160px;
 }
@@ -13526,35 +13529,58 @@ body #page_content .container .list_title .title p {
 [data-controller="projects"][data-action="new"] #loading {
   display: none;
 }
-/* line 6, ../../app/assets/stylesheets/resources/projects/_new.sass */
-[data-controller="projects"][data-action="new"] #page_content .container .start_content {
+/* line 5, ../../app/assets/stylesheets/resources/projects/_new.sass */
+[data-controller="projects"][data-action="new"] .project_image #banner-create {
+  background: url('/images/nosvc/banner-create.jpg?1339637511') left top no-repeat;
+  width: 614px;
+  height: 220px;
+  float: left;
+}
+/* line 13, ../../app/assets/stylesheets/resources/projects/_new.sass */
+[data-controller="projects"][data-action="new"] #page_content .container .start_content .main {
   display: inline;
   float: left;
   margin-left: 10px;
   margin-right: 10px;
-  width: 940px;
-  padding-top: 15px;
+  width: 700px;
+  width: 614px;
+  background: #f9f9f9;
+  margin: 0 0 30px 0;
+  padding: 50px 0 20px 0;
 }
-/* line 10, ../../app/assets/stylesheets/resources/projects/_new.sass */
-[data-controller="projects"][data-action="new"] #page_content .container .start_content .accept input, [data-controller="projects"][data-action="new"] #page_content .container .start_content .accept label {
+/* line 19, ../../app/assets/stylesheets/resources/projects/_new.sass */
+[data-controller="projects"][data-action="new"] #page_content .container .start_content .main .title {
+  padding: 0 40px 40px;
+}
+/* line 21, ../../app/assets/stylesheets/resources/projects/_new.sass */
+[data-controller="projects"][data-action="new"] #page_content .container .start_content .main .title h1, [data-controller="projects"][data-action="new"] #page_content .container .start_content .main .title h2 {
+  font-family: "Dosis-Light";
+  font-size: 41px;
+  line-height: 42px;
+  float: left;
+  color: #5d5d5d;
+  padding: 0 40px 40px;
+}
+/* line 29, ../../app/assets/stylesheets/resources/projects/_new.sass */
+[data-controller="projects"][data-action="new"] #page_content .container .start_content .main .accept input, [data-controller="projects"][data-action="new"] #page_content .container .start_content .main .accept label {
   display: inline;
 }
-/* line 12, ../../app/assets/stylesheets/resources/projects/_new.sass */
-[data-controller="projects"][data-action="new"] #page_content .container .start_content .alert-heading {
+/* line 31, ../../app/assets/stylesheets/resources/projects/_new.sass */
+[data-controller="projects"][data-action="new"] #page_content .container .start_content .main .alert-heading {
   font-family: "Lato-Bold";
 }
-/* line 14, ../../app/assets/stylesheets/resources/projects/_new.sass */
-[data-controller="projects"][data-action="new"] #page_content .container .start_content .reward_title {
+/* line 33, ../../app/assets/stylesheets/resources/projects/_new.sass */
+[data-controller="projects"][data-action="new"] #page_content .container .start_content .main .reward_title {
   padding-top: 20px;
 }
-/* line 16, ../../app/assets/stylesheets/resources/projects/_new.sass */
-[data-controller="projects"][data-action="new"] #page_content .container .start_content .reward_title h3 {
+/* line 35, ../../app/assets/stylesheets/resources/projects/_new.sass */
+[data-controller="projects"][data-action="new"] #page_content .container .start_content .main .reward_title h3 {
   font-family: "Lato-Bold";
   font-size: 16px;
   color: rgba(0, 0, 0, 0.8);
 }
-/* line 20, ../../app/assets/stylesheets/resources/projects/_new.sass */
-[data-controller="projects"][data-action="new"] #page_content .container .start_content .reward_title p {
+/* line 39, ../../app/assets/stylesheets/resources/projects/_new.sass */
+[data-controller="projects"][data-action="new"] #page_content .container .start_content .main .reward_title p {
   font-family: Arial;
   font-size: 13px;
   color: rgba(0, 0, 0, 0.6);
@@ -13562,118 +13588,211 @@ body #page_content .container .list_title .title p {
   padding-top: 5px;
   padding-bottom: 10px;
 }
-/* line 27, ../../app/assets/stylesheets/resources/projects/_new.sass */
-[data-controller="projects"][data-action="new"] #page_content .container .start_content .title {
-  display: inline;
-  float: left;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 940px;
-  margin-left: 0;
-  padding-bottom: 40px;
-}
-/* line 31, ../../app/assets/stylesheets/resources/projects/_new.sass */
-[data-controller="projects"][data-action="new"] #page_content .container .start_content .title h1 {
-  color: #333333;
-  font-family: "Lato-Regular";
-  font-size: 28px;
-  padding: 5px 0;
-}
-/* line 36, ../../app/assets/stylesheets/resources/projects/_new.sass */
-[data-controller="projects"][data-action="new"] #page_content .container .start_content .title h2 {
-  color: rgba(51, 51, 51, 0.7);
-  font-family: Arial;
-  font-size: 18px;
-}
-/* line 41, ../../app/assets/stylesheets/resources/projects/_new.sass */
-[data-controller="projects"][data-action="new"] #page_content .container #project_warning .alert {
+/* line 47, ../../app/assets/stylesheets/resources/projects/_new.sass */
+[data-controller="projects"][data-action="new"] #page_content .container .start_content .main #project_warning .alert {
   font-size: 15px;
   font-family: Arial;
-}
-/* line 44, ../../app/assets/stylesheets/resources/projects/_new.sass */
-[data-controller="projects"][data-action="new"] #page_content .container #project_warning .alert a {
-  color: #e75297;
-}
-/* line 47, ../../app/assets/stylesheets/resources/projects/_new.sass */
-[data-controller="projects"][data-action="new"] #page_content .container .formtastic.project .accept {
-  padding-top: 20px;
-  padding-bottom: 20px;
 }
 /* line 50, ../../app/assets/stylesheets/resources/projects/_new.sass */
-[data-controller="projects"][data-action="new"] #page_content .container .formtastic.project .accept input {
-  display: inline;
-}
-/* line 52, ../../app/assets/stylesheets/resources/projects/_new.sass */
-[data-controller="projects"][data-action="new"] #page_content .container .formtastic.project .accept label {
-  display: inline;
+[data-controller="projects"][data-action="new"] #page_content .container .start_content .main #project_warning .alert a {
+  color: #e75297;
 }
 /* line 54, ../../app/assets/stylesheets/resources/projects/_new.sass */
-[data-controller="projects"][data-action="new"] #page_content .container .formtastic.project label {
-  font-family: "Lato-Regular";
-  font-size: 15px;
-  color: rgba(0, 0, 0, 0.8);
+[data-controller="projects"][data-action="new"] #page_content .container .start_content .main .bootstrap-form form h2 {
+  float: left;
+  border-bottom: dashed 1px #d8d3d3;
+  padding-bottom: 10px;
+  margin-bottom: 40px;
+  margin-top: 30px;
+  width: 100%;
+  font-family: "Dosis-Regular";
+  color: #5d5d5d;
+  font-size: 24px;
+  text-transform: uppercase;
 }
-/* line 58, ../../app/assets/stylesheets/resources/projects/_new.sass */
-[data-controller="projects"][data-action="new"] #page_content .container .formtastic.project input[type="text"] {
-  width: 99%;
+/* line 65, ../../app/assets/stylesheets/resources/projects/_new.sass */
+[data-controller="projects"][data-action="new"] #page_content .container .start_content .main .bootstrap-form form .input {
+  padding-bottom: 15px;
+  float: left;
+  margin-bottom: 25px;
+  width: 100%;
 }
-/* line 60, ../../app/assets/stylesheets/resources/projects/_new.sass */
-[data-controller="projects"][data-action="new"] #page_content .container .formtastic.project textarea {
-  width: 99%;
-  height: 80px;
+/* line 70, ../../app/assets/stylesheets/resources/projects/_new.sass */
+[data-controller="projects"][data-action="new"] #page_content .container .start_content .main .bootstrap-form form .accept {
+  padding: 20px 0px 20px 130px;
+  width: 90%;
+  float: left;
 }
-/* line 63, ../../app/assets/stylesheets/resources/projects/_new.sass */
-[data-controller="projects"][data-action="new"] #page_content .container .formtastic.project .inline-hints {
-  font-size: 13px;
-  font-family: Arial;
-  line-height: 130%;
-  color: rgba(0, 0, 0, 0.6);
-  padding-bottom: 20px;
-}
-/* line 69, ../../app/assets/stylesheets/resources/projects/_new.sass */
-[data-controller="projects"][data-action="new"] #page_content .container .remove_reward_wrapper {
-  height: 30px;
-}
-/* line 71, ../../app/assets/stylesheets/resources/projects/_new.sass */
-[data-controller="projects"][data-action="new"] #page_content .container .remove_reward_wrapper a {
-  margin-left: 843px;
-  font-family: Arial;
-  font-size: 15px;
-}
-/* line 75, ../../app/assets/stylesheets/resources/projects/_new.sass */
-[data-controller="projects"][data-action="new"] #page_content .container #add_reward_wrapper {
-  margin-bottom: 20px;
+/* line 74, ../../app/assets/stylesheets/resources/projects/_new.sass */
+[data-controller="projects"][data-action="new"] #page_content .container .start_content .main .bootstrap-form form .accept input {
+  display: inline;
+  margin-top: 6px;
 }
 /* line 77, ../../app/assets/stylesheets/resources/projects/_new.sass */
-[data-controller="projects"][data-action="new"] #page_content .container #add_reward_wrapper a {
-  margin-left: 753px;
+[data-controller="projects"][data-action="new"] #page_content .container .start_content .main .bootstrap-form form .accept label {
+  display: block;
+  font-family: "Helvetica Neue", "Arial", "Sans-serif";
+  float: left;
+  font-size: 14px;
+  color: #5d5d5d;
+  width: 260px;
+  margin-left: 10px;
+  text-align: center;
+  line-height: 18px;
+  margin-top: 3px;
+}
+/* line 88, ../../app/assets/stylesheets/resources/projects/_new.sass */
+[data-controller="projects"][data-action="new"] #page_content .container .start_content .main .bootstrap-form form .accept label a {
+  color: #b178ad;
+  text-decoration: none;
+}
+/* line 91, ../../app/assets/stylesheets/resources/projects/_new.sass */
+[data-controller="projects"][data-action="new"] #page_content .container .start_content .main .bootstrap-form form .accept label a:hover {
+  text-decoration: underline;
+}
+/* line 93, ../../app/assets/stylesheets/resources/projects/_new.sass */
+[data-controller="projects"][data-action="new"] #page_content .container .start_content .main .bootstrap-form form li {
+  width: 534px;
+  margin-bottom: 20px;
+}
+/* line 97, ../../app/assets/stylesheets/resources/projects/_new.sass */
+[data-controller="projects"][data-action="new"] #page_content .container .start_content .main .formtastic.project label {
+  color: #b178ad;
+}
+/* line 99, ../../app/assets/stylesheets/resources/projects/_new.sass */
+[data-controller="projects"][data-action="new"] #page_content .container .start_content .main .formtastic.project textarea {
+  width: 66%;
+  height: 80px;
+}
+/* line 102, ../../app/assets/stylesheets/resources/projects/_new.sass */
+[data-controller="projects"][data-action="new"] #page_content .container .start_content .main .formtastic.project .inline-hints {
+  font-size: 13px;
+  font-family: "Helvetica Neue", "Arial", "Sans-serif";
+  line-height: 18px;
+  color: #64635e;
+  padding-bottom: 20px;
+  float: left;
+  margin-left: 160px;
+  width: 66%;
+}
+/* line 111, ../../app/assets/stylesheets/resources/projects/_new.sass */
+[data-controller="projects"][data-action="new"] #page_content .container .start_content .main .remove_reward_wrapper {
+  height: 30px;
+}
+/* line 113, ../../app/assets/stylesheets/resources/projects/_new.sass */
+[data-controller="projects"][data-action="new"] #page_content .container .start_content .main .remove_reward_wrapper a {
   font-family: Arial;
   font-size: 15px;
 }
-/* line 81, ../../app/assets/stylesheets/resources/projects/_new.sass */
-[data-controller="projects"][data-action="new"] #page_content .container .reward {
+/* line 116, ../../app/assets/stylesheets/resources/projects/_new.sass */
+[data-controller="projects"][data-action="new"] #page_content .container .start_content .main #add_reward_wrapper {
+  margin-bottom: 20px;
+}
+/* line 118, ../../app/assets/stylesheets/resources/projects/_new.sass */
+[data-controller="projects"][data-action="new"] #page_content .container .start_content .main #add_reward_wrapper a {
+  font-family: Arial;
+  font-size: 15px;
+}
+/* line 121, ../../app/assets/stylesheets/resources/projects/_new.sass */
+[data-controller="projects"][data-action="new"] #page_content .container .start_content .main .reward {
   padding-top: 10px;
   padding-bottom: 10px;
   margin-bottom: 10px;
 }
-/* line 85, ../../app/assets/stylesheets/resources/projects/_new.sass */
-[data-controller="projects"][data-action="new"] #page_content .container .reward .left {
+/* line 125, ../../app/assets/stylesheets/resources/projects/_new.sass */
+[data-controller="projects"][data-action="new"] #page_content .container .start_content .main .reward .left {
   float: left;
   width: 30%;
   margin-right: 5%;
 }
-/* line 89, ../../app/assets/stylesheets/resources/projects/_new.sass */
-[data-controller="projects"][data-action="new"] #page_content .container .reward .left input {
+/* line 129, ../../app/assets/stylesheets/resources/projects/_new.sass */
+[data-controller="projects"][data-action="new"] #page_content .container .start_content .main .reward .left input {
   width: 99%;
 }
-/* line 91, ../../app/assets/stylesheets/resources/projects/_new.sass */
-[data-controller="projects"][data-action="new"] #page_content .container .reward .right {
+/* line 131, ../../app/assets/stylesheets/resources/projects/_new.sass */
+[data-controller="projects"][data-action="new"] #page_content .container .start_content .main .reward .right {
   float: left;
   width: 30%;
 }
-/* line 94, ../../app/assets/stylesheets/resources/projects/_new.sass */
-[data-controller="projects"][data-action="new"] #page_content .container .reward .right input {
+/* line 134, ../../app/assets/stylesheets/resources/projects/_new.sass */
+[data-controller="projects"][data-action="new"] #page_content .container .start_content .main .reward .right input {
   width: 99%;
+}
+/* line 136, ../../app/assets/stylesheets/resources/projects/_new.sass */
+[data-controller="projects"][data-action="new"] #page_content .container .start_content .sidebar {
+  margin-right: 0;
+  border: none;
+  margin-top: 125px;
+  margin-left: 0px;
+  width: 345px;
+  float: left;
+}
+/* line 143, ../../app/assets/stylesheets/resources/projects/_new.sass */
+[data-controller="projects"][data-action="new"] #page_content .container .start_content .sidebar h3 {
+  font-family: "Dosis-Light";
+  font-size: 24px;
+  line-height: 24px;
+  float: left;
+  color: #5d5d5d;
+  text-shadow: white 1px 1px 0px;
+  margin-bottom: 50px;
+  width: 300px;
+}
+/* line 153, ../../app/assets/stylesheets/resources/projects/_new.sass */
+[data-controller="projects"][data-action="new"] #page_content .container .start_content .sidebar ul li {
+  float: left;
+  margin-bottom: 60px;
+  width: 300px;
+}
+/* line 157, ../../app/assets/stylesheets/resources/projects/_new.sass */
+[data-controller="projects"][data-action="new"] #page_content .container .start_content .sidebar ul li span {
+  width: 60px;
+  height: 85px;
+  float: left;
+}
+/* line 161, ../../app/assets/stylesheets/resources/projects/_new.sass */
+[data-controller="projects"][data-action="new"] #page_content .container .start_content .sidebar ul li span.one {
+  background: url('/images/nosvc/number-1.png?1339633627') left 24px no-repeat;
+}
+/* line 163, ../../app/assets/stylesheets/resources/projects/_new.sass */
+[data-controller="projects"][data-action="new"] #page_content .container .start_content .sidebar ul li span.two {
+  background: url('/images/nosvc/number-2.png?1339633687') right 24px no-repeat;
+  float: right;
+}
+/* line 166, ../../app/assets/stylesheets/resources/projects/_new.sass */
+[data-controller="projects"][data-action="new"] #page_content .container .start_content .sidebar ul li span.three {
+  background: url('/images/nosvc/number-3.png?1339633716') left 24px no-repeat;
+}
+/* line 168, ../../app/assets/stylesheets/resources/projects/_new.sass */
+[data-controller="projects"][data-action="new"] #page_content .container .start_content .sidebar ul li span.four {
+  background: url('/images/nosvc/number-4.png?1339635807') right 24px no-repeat;
+  float: right;
+}
+/* line 171, ../../app/assets/stylesheets/resources/projects/_new.sass */
+[data-controller="projects"][data-action="new"] #page_content .container .start_content .sidebar ul li a {
+  background: url('/images/nosvc/arrow-purple.gif?1339636126') right 4px no-repeat;
+  padding-right: 20px;
+  color: #b178ad;
+  float: left;
+  margin-top: 20px;
+  font-family: "Helvetica Neue", "Arial", "Sans-serif";
+  font-size: 14px;
+  cursor: pointer;
+  display: block;
+}
+/* line 181, ../../app/assets/stylesheets/resources/projects/_new.sass */
+[data-controller="projects"][data-action="new"] #page_content .container .start_content .sidebar ul li a:hover {
+  text-decoration: underline;
+}
+/* line 184, ../../app/assets/stylesheets/resources/projects/_new.sass */
+[data-controller="projects"][data-action="new"] #page_content .container .start_content .sidebar ul li p {
+  width: 240px;
+  float: left;
+  font-family: "Helvetica Neue", "Arial", "Sans-serif";
+  font-size: 14px;
+  color: #5d5d5d;
+  text-shadow: white 1px 1px 0px;
+  line-height: 21px;
 }
 
 /* line 5, ../../app/assets/stylesheets/resources/projects/_pending_backers.sass */

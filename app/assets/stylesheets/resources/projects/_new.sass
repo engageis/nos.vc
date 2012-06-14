@@ -1,95 +1,191 @@
 [data-controller="projects"][data-action="new"]
   #loading
     display: none
+  .project_image
+    #banner-create
+      background: image-url("nosvc/banner-create.jpg") left top no-repeat
+      width: 614px
+      height: 220px
+      float: left    
   #page_content
     .container
       .start_content
-        +grid(16)
-        padding-top: 15px
-        .accept
-          input, label
-            display: inline
-        .alert-heading
-          font-family: 'Lato-Bold'
-        .reward_title
-          padding-top: 20px
-          h3
+        .main 
+          +grid(12)
+          width: 614px
+          background: #f9f9f9
+          margin: 0 0 30px 0
+          padding: 50px 0 20px 0
+          .title
+            padding: 0 40px 40px
+            h1, h2
+              font-family: "Dosis-Light"
+              font-size: 41px
+              line-height: 42px
+              float: left
+              color: #5d5d5d
+              padding: 0 40px 40px
+          .accept
+            input, label
+              display: inline
+          .alert-heading
             font-family: 'Lato-Bold'
-            font-size: 16px
-            color: rgba(black, 0.8)
-          p
-            font-family: Arial
-            font-size: 13px
-            color: rgba(black, 0.6)
-            line-height: 130%
-            padding-top: 5px
+          .reward_title
+            padding-top: 20px
+            h3
+              font-family: 'Lato-Bold'
+              font-size: 16px
+              color: rgba(black, 0.8)
+            p
+              font-family: Arial
+              font-size: 13px
+              color: rgba(black, 0.6)
+              line-height: 130%
+              padding-top: 5px
+              padding-bottom: 10px
+          #project_warning
+            .alert
+              font-size: 15px
+              font-family: Arial
+              a
+                color: $pink
+          .bootstrap-form
+            form
+              h2
+                float: left
+                border-bottom: dashed 1px #d8d3d3
+                padding-bottom: 10px
+                margin-bottom: 40px
+                margin-top: 30px
+                width: 100%
+                font-family: "Dosis-Regular"
+                color: #5d5d5d
+                font-size: 24px
+                text-transform: uppercase
+              .input
+                padding-bottom: 15px
+                float: left 
+                margin-bottom: 25px
+                width: 100%
+              .accept
+                padding: 20px 0px 20px 130px
+                width: 90%
+                float: left
+                input
+                  display: inline
+                  margin-top: 6px
+                label
+                  display: block
+                  font-family: "Helvetica Neue", "Arial", "Sans-serif"
+                  float: left
+                  font-size: 14px
+                  color: #5d5d5d
+                  width: 260px
+                  margin-left: 10px
+                  text-align: center
+                  line-height: 18px
+                  margin-top: 3px
+                  a
+                    color: #b178ad
+                    text-decoration: none
+                    &:hover
+                      text-decoration: underline
+              li
+                width: 534px
+                margin-bottom: 20px
+          .formtastic.project
+            label
+              color: #b178ad
+            textarea
+              width: 66%
+              height: 80px
+            .inline-hints
+              font-size: 13px
+              font-family: "Helvetica Neue", "Arial", "Sans-serif"
+              line-height: 18px
+              color: #64635e
+              padding-bottom: 20px
+              float: left 
+              margin-left: 160px
+              width: 66% 
+          .remove_reward_wrapper
+            height: 30px
+            a
+              font-family: Arial
+              font-size: 15px
+          #add_reward_wrapper
+            margin-bottom: 20px
+            a
+              font-family: Arial
+              font-size: 15px
+          .reward
+            padding-top: 10px
             padding-bottom: 10px
-        .title
-          +grid(16)
-          +alpha
-          padding-bottom: 40px
-          h1
-            color: $ultra_gryn
-            font-family: "Lato-Regular"
-            font-size: 28px
-            padding: 5px 0
-          h2
-            color: rgba($ultra_gryn, 0.7)
-            font-family: Arial
-            font-size: 18px
-      #project_warning
-        .alert
-          font-size: 15px
-          font-family: Arial
-          a
-            color: $pink
-      .formtastic.project
-        .accept
-          padding-top: 20px
-          padding-bottom: 20px
-          input
-            display: inline
-          label
-            display: inline
-        label
-          font-family: 'Lato-Regular'
-          font-size: 15px
-          color: rgba(black, 0.8)
-        input[type="text"]
-          width: 99%
-        textarea
-          width: 99%
-          height: 80px
-        .inline-hints
-          font-size: 13px
-          font-family: Arial
-          line-height: 130%
-          color: rgba(black, 0.6)
-          padding-bottom: 20px
-      .remove_reward_wrapper
-        height: 30px
-        a
-          margin-left: 843px
-          font-family: Arial
-          font-size: 15px
-      #add_reward_wrapper
-        margin-bottom: 20px
-        a
-          margin-left: 753px
-          font-family: Arial
-          font-size: 15px
-      .reward
-        padding-top: 10px
-        padding-bottom: 10px
-        margin-bottom: 10px
-        .left
+            margin-bottom: 10px
+            .left
+              float: left
+              width: 30%
+              margin-right: 5%
+              input
+                width: 99%
+            .right
+              float: left
+              width: 30%
+              input
+                width: 99%
+        .sidebar
+          +omega
+          border: none
+          margin-top: 125px
+          margin-left: 0px
+          width: 345px
           float: left
-          width: 30%
-          margin-right: 5%
-          input
-            width: 99%
-        .right
-          float: left
-          width: 30%
-          input
-            width: 99%
+          h3
+            font-family: "Dosis-Light"
+            font-size: 24px
+            line-height: 24px
+            float: left
+            color: #5d5d5d
+            +text-shadow(white 1px 1px 0px)
+            margin-bottom: 50px
+            width: 300px
+          ul
+            li
+              float: left
+              margin-bottom: 60px
+              width: 300px
+              span
+                width: 60px
+                height: 85px
+                float: left
+              span.one
+                background: image-url("nosvc/number-1.png") left 24px no-repeat
+              span.two
+                background: image-url("nosvc/number-2.png") right 24px no-repeat
+                float: right
+              span.three
+                background: image-url("nosvc/number-3.png") left 24px no-repeat
+              span.four
+                background: image-url("nosvc/number-4.png") right 24px no-repeat
+                float: right
+              a
+                background: image-url("nosvc/arrow-purple.gif") right 4px no-repeat
+                padding-right: 20px
+                color: #b178ad
+                float: left
+                margin-top: 20px
+                font-family: "Helvetica Neue", "Arial", "Sans-serif"
+                font-size: 14px
+                cursor: pointer
+                display: block
+                &:hover
+                  text-decoration: underline
+
+              p
+                width: 240px
+                float: left
+                font-family: "Helvetica Neue", "Arial", "Sans-serif"
+                font-size: 14px
+                color: #5d5d5d
+                +text-shadow(white 1px 1px 0px)
+                line-height: 21px

@@ -1,9 +1,29 @@
+- content_for :header_featured do
+  .project_image
+    #banner-create
 #page_content
   .container
     .start_content
-      .title
-        h1= t('.title')
-        h2= t('.subtitle')
-      .bootstrap-form
-        = render 'form'
+      .sidebar
+        h3= 'Como criar e organizar um encontro sobre o que você quiser:'
+        ul
+          li
+            span.one
+            p= 'Preencha o formulário com todo seu gingado e talento. Crie um curso, debate, workshop ou qualquer outra atividade de aprendizado.'
+          li
+            span.two
+            p= 'Vamos ler e responder sua proposta com nossos próprios dedos. Quando estiver tudo ok, as inscrições serão abertas.'
+          li
+            span.three
+            p= 'O encontro será organizado por você no mundo real. É só alcançar o número mínimo de inscritos no prazo definido. '       
+          li
+            span.four
+            p= 'Quer uma dica para fazer acontecer um encontro inspirador?'
+            a= 'Nós temos várias pra te dar' 
+      .main
+	      .title
+	        h1= t('.title')
+	        h2= t('.subtitle')
+	      .bootstrap-form
+	        = render 'form'
     .clearfix
