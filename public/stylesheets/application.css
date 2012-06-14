@@ -13326,20 +13326,21 @@ body #page_content .container .list_title .title p {
 [data-controller="projects"][data-action="start"] #page_content .container .start_content .main .bootstrap-form form .input {
   padding-bottom: 15px;
   float: left;
+  margin-bottom: 25px;
   width: 100%;
 }
-/* line 48, ../../app/assets/stylesheets/resources/projects/_start.sass */
+/* line 49, ../../app/assets/stylesheets/resources/projects/_start.sass */
 [data-controller="projects"][data-action="start"] #page_content .container .start_content .main .bootstrap-form form .accept {
   padding: 20px 0px 20px 130px;
   width: 90%;
   float: left;
 }
-/* line 52, ../../app/assets/stylesheets/resources/projects/_start.sass */
+/* line 53, ../../app/assets/stylesheets/resources/projects/_start.sass */
 [data-controller="projects"][data-action="start"] #page_content .container .start_content .main .bootstrap-form form .accept input {
   display: inline;
   margin-top: 6px;
 }
-/* line 55, ../../app/assets/stylesheets/resources/projects/_start.sass */
+/* line 56, ../../app/assets/stylesheets/resources/projects/_start.sass */
 [data-controller="projects"][data-action="start"] #page_content .container .start_content .main .bootstrap-form form .accept label {
   display: block;
   font-family: "Helvetica Neue", "Arial", "Sans-serif";
@@ -13352,33 +13353,33 @@ body #page_content .container .list_title .title p {
   line-height: 18px;
   margin-top: 3px;
 }
-/* line 66, ../../app/assets/stylesheets/resources/projects/_start.sass */
+/* line 67, ../../app/assets/stylesheets/resources/projects/_start.sass */
 [data-controller="projects"][data-action="start"] #page_content .container .start_content .main .bootstrap-form form .accept label a {
   color: #b178ad;
   text-decoration: none;
 }
-/* line 69, ../../app/assets/stylesheets/resources/projects/_start.sass */
+/* line 70, ../../app/assets/stylesheets/resources/projects/_start.sass */
 [data-controller="projects"][data-action="start"] #page_content .container .start_content .main .bootstrap-form form .accept label a:hover {
   text-decoration: underline;
 }
-/* line 71, ../../app/assets/stylesheets/resources/projects/_start.sass */
+/* line 72, ../../app/assets/stylesheets/resources/projects/_start.sass */
 [data-controller="projects"][data-action="start"] #page_content .container .start_content .main .bootstrap-form form li {
   width: 534px;
   margin-bottom: 20px;
 }
-/* line 74, ../../app/assets/stylesheets/resources/projects/_start.sass */
+/* line 75, ../../app/assets/stylesheets/resources/projects/_start.sass */
 [data-controller="projects"][data-action="start"] #page_content .container .start_content .main .bootstrap-form form label {
   color: #b178ad;
 }
-/* line 76, ../../app/assets/stylesheets/resources/projects/_start.sass */
+/* line 77, ../../app/assets/stylesheets/resources/projects/_start.sass */
 [data-controller="projects"][data-action="start"] #page_content .container .start_content .main .bootstrap-form form textarea {
   height: 80px;
 }
-/* line 78, ../../app/assets/stylesheets/resources/projects/_start.sass */
+/* line 79, ../../app/assets/stylesheets/resources/projects/_start.sass */
 [data-controller="projects"][data-action="start"] #page_content .container .start_content .main .bootstrap-form form textarea#know_us_via {
   width: 66%;
 }
-/* line 80, ../../app/assets/stylesheets/resources/projects/_start.sass */
+/* line 81, ../../app/assets/stylesheets/resources/projects/_start.sass */
 [data-controller="projects"][data-action="start"] #page_content .container .start_content .main .bootstrap-form form .inline-hints {
   font-size: 13px;
   font-family: "Helvetica Neue", "Arial", "Sans-serif";
@@ -13389,29 +13390,29 @@ body #page_content .container .list_title .title p {
   margin-left: 160px;
   width: 66%;
 }
-/* line 90, ../../app/assets/stylesheets/resources/projects/_start.sass */
+/* line 91, ../../app/assets/stylesheets/resources/projects/_start.sass */
 [data-controller="projects"][data-action="start"] #page_content .container .start_content .main .bootstrap-form form .input-prepend #contact {
   width: 40%;
   margin-left: 0;
   float: none;
 }
-/* line 94, ../../app/assets/stylesheets/resources/projects/_start.sass */
+/* line 95, ../../app/assets/stylesheets/resources/projects/_start.sass */
 [data-controller="projects"][data-action="start"] #page_content .container .start_content .main .bootstrap-form form .input-prepend span.add-on {
   font-family: "Lato-Regular";
   margin-top: -3px;
   color: #999999;
   margin-left: 20px;
 }
-/* line 99, ../../app/assets/stylesheets/resources/projects/_start.sass */
+/* line 100, ../../app/assets/stylesheets/resources/projects/_start.sass */
 [data-controller="projects"][data-action="start"] #page_content .container .start_content .main .bootstrap-form form .input-prepend span.add-on .bootstrap-twitter {
   padding-left: 0px;
 }
-/* line 101, ../../app/assets/stylesheets/resources/projects/_start.sass */
+/* line 102, ../../app/assets/stylesheets/resources/projects/_start.sass */
 [data-controller="projects"][data-action="start"] #page_content .container .start_content .main .bootstrap-form form .bootstrap-twitter {
   float: left;
   padding-left: 190px;
 }
-/* line 104, ../../app/assets/stylesheets/resources/projects/_start.sass */
+/* line 105, ../../app/assets/stylesheets/resources/projects/_start.sass */
 [data-controller="projects"][data-action="start"] #page_content .container .start_content .main .bootstrap-form form .bootstrap-twitter .btn {
   background: url('/images/nosvc/button-start.gif?1339628509') left top no-repeat;
   width: 162px;
@@ -13426,7 +13427,7 @@ body #page_content .container .list_title .title p {
   text-transform: uppercase;
   text-shadow: #7b4a78 1px 1px 0px;
 }
-/* line 117, ../../app/assets/stylesheets/resources/projects/_start.sass */
+/* line 118, ../../app/assets/stylesheets/resources/projects/_start.sass */
 [data-controller="projects"][data-action="start"] #page_content .container .start_content .main .bootstrap-form form .bootstrap-twitter span {
   color: #fce2fa;
   text-shadow: #7b4a78 1px 1px 0px;
@@ -13437,7 +13438,7 @@ body #page_content .container .list_title .title p {
   margin-top: 35px;
   margin-left: -100px;
 }
-/* line 126, ../../app/assets/stylesheets/resources/projects/_start.sass */
+/* line 127, ../../app/assets/stylesheets/resources/projects/_start.sass */
 [data-controller="projects"][data-action="start"] #page_content .container .start_content .sidebar {
   margin-right: 0;
   border: none;
@@ -13446,7 +13447,7 @@ body #page_content .container .list_title .title p {
   width: 345px;
   float: left;
 }
-/* line 133, ../../app/assets/stylesheets/resources/projects/_start.sass */
+/* line 134, ../../app/assets/stylesheets/resources/projects/_start.sass */
 [data-controller="projects"][data-action="start"] #page_content .container .start_content .sidebar h3 {
   font-family: "Dosis-Light";
   font-size: 24px;
@@ -13455,38 +13456,39 @@ body #page_content .container .list_title .title p {
   color: #5d5d5d;
   text-shadow: white 1px 1px 0px;
   margin-bottom: 50px;
+  width: 300px;
 }
-/* line 142, ../../app/assets/stylesheets/resources/projects/_start.sass */
+/* line 144, ../../app/assets/stylesheets/resources/projects/_start.sass */
 [data-controller="projects"][data-action="start"] #page_content .container .start_content .sidebar ul li {
   float: left;
   margin-bottom: 60px;
   width: 300px;
 }
-/* line 146, ../../app/assets/stylesheets/resources/projects/_start.sass */
+/* line 148, ../../app/assets/stylesheets/resources/projects/_start.sass */
 [data-controller="projects"][data-action="start"] #page_content .container .start_content .sidebar ul li span {
   width: 60px;
   height: 85px;
   float: left;
 }
-/* line 150, ../../app/assets/stylesheets/resources/projects/_start.sass */
+/* line 152, ../../app/assets/stylesheets/resources/projects/_start.sass */
 [data-controller="projects"][data-action="start"] #page_content .container .start_content .sidebar ul li span.one {
   background: url('/images/nosvc/number-1.png?1339633627') left 24px no-repeat;
 }
-/* line 152, ../../app/assets/stylesheets/resources/projects/_start.sass */
+/* line 154, ../../app/assets/stylesheets/resources/projects/_start.sass */
 [data-controller="projects"][data-action="start"] #page_content .container .start_content .sidebar ul li span.two {
   background: url('/images/nosvc/number-2.png?1339633687') right 24px no-repeat;
   float: right;
 }
-/* line 155, ../../app/assets/stylesheets/resources/projects/_start.sass */
+/* line 157, ../../app/assets/stylesheets/resources/projects/_start.sass */
 [data-controller="projects"][data-action="start"] #page_content .container .start_content .sidebar ul li span.three {
   background: url('/images/nosvc/number-3.png?1339633716') left 24px no-repeat;
 }
-/* line 157, ../../app/assets/stylesheets/resources/projects/_start.sass */
+/* line 159, ../../app/assets/stylesheets/resources/projects/_start.sass */
 [data-controller="projects"][data-action="start"] #page_content .container .start_content .sidebar ul li span.four {
   background: url('/images/nosvc/number-4.png?1339635807') right 24px no-repeat;
   float: right;
 }
-/* line 160, ../../app/assets/stylesheets/resources/projects/_start.sass */
+/* line 162, ../../app/assets/stylesheets/resources/projects/_start.sass */
 [data-controller="projects"][data-action="start"] #page_content .container .start_content .sidebar ul li a {
   background: url('/images/nosvc/arrow-purple.gif?1339636126') right 4px no-repeat;
   padding-right: 20px;
@@ -13498,11 +13500,11 @@ body #page_content .container .list_title .title p {
   cursor: pointer;
   display: block;
 }
-/* line 170, ../../app/assets/stylesheets/resources/projects/_start.sass */
+/* line 172, ../../app/assets/stylesheets/resources/projects/_start.sass */
 [data-controller="projects"][data-action="start"] #page_content .container .start_content .sidebar ul li a:hover {
   text-decoration: underline;
 }
-/* line 173, ../../app/assets/stylesheets/resources/projects/_start.sass */
+/* line 175, ../../app/assets/stylesheets/resources/projects/_start.sass */
 [data-controller="projects"][data-action="start"] #page_content .container .start_content .sidebar ul li p {
   width: 240px;
   float: left;
