@@ -232,9 +232,9 @@ pt:
       quick_explore: "Explorar"
       recent: "Novos"
       recommended: "Destaques"
-      subtitle: "Explore os projetos, encontre aqueles que mexem com seu coração, e faça acontecer!"
+      subtitle: "<span>Aprenda</span> algo novo. Inscreva-se em um encontro na <span>sua cidade</span>:"
       successful: "Realizados"
-      title: "Encontre projetos incríveis"
+      title: "Explore os encontros inspiradores"
     title: "Explore os projetos"
     project:
       empty: "Desculpe, nossas máquinas não acharam nenhum encontro com o texto que você procurou. Você pode tentar outras palavras?"

@@ -30,23 +30,12 @@
 
         - unless @categories.empty?
           section.categories
-            h1
-              span Aprenda
-              |  algo novo. Inscreva-se em um encontro na 
-              span sua cidade
-              | :
-
-            /select#categories
-              /- @categories.each_with_index do |category, index|
-                /option[value="##{category.name.parameterize}" data-id=category.id]
-                  /= category.name
-
+            h1= t('.subtitle').html_safe
             ul#explore_categories
               - @categories.each_with_index do |category, index|
                 li class="#{(index%2==1 ? 'no_margin':'')}"
                   a href="##{category.name.parameterize}" data-id=category.id
                     = category.name
-
     .clearfix
     .main
       #explore_results
