@@ -153,7 +153,8 @@
   .radio input[type="radio"],
   .checkbox input[type="checkbox"] {
     float: left;
-    margin-left: -18px;
+    margin-left: -15px;
+    margin-top: 30px;
   }
   .controls > .radio:first-child,
   .controls > .checkbox:first-child {
