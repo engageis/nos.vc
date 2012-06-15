@@ -13454,8 +13454,8 @@ body #page_content .container .list_title .title p {
   line-height: 18px;
   color: #64635e;
   padding-bottom: 20px;
-  float: left;
-  margin-left: 160px;
+  float: right;
+  margin-right: 20px;
   width: 66%;
 }
 /* line 94, ../../app/assets/stylesheets/resources/projects/_start.sass */
@@ -13657,7 +13657,6 @@ body #page_content .container .list_title .title p {
 }
 /* line 54, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .main .bootstrap-form form h2 {
-  float: left;
   border-bottom: dashed 1px #d8d3d3;
   padding-bottom: 10px;
   margin-bottom: 40px;
@@ -13668,25 +13667,25 @@ body #page_content .container .list_title .title p {
   font-size: 24px;
   text-transform: uppercase;
 }
-/* line 65, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 64, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .main .bootstrap-form form .input {
   padding-bottom: 15px;
   float: left;
   margin-bottom: 25px;
   width: 100%;
 }
-/* line 70, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 69, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .main .bootstrap-form form .accept {
   padding: 20px 0px 20px 130px;
   width: 90%;
   float: left;
 }
-/* line 74, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 73, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .main .bootstrap-form form .accept input {
   display: inline;
   margin-top: 6px;
 }
-/* line 77, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 76, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .main .bootstrap-form form .accept label {
   display: block;
   font-family: "Helvetica Neue", "Arial", "Sans-serif";
@@ -13699,84 +13698,84 @@ body #page_content .container .list_title .title p {
   line-height: 18px;
   margin-top: 3px;
 }
-/* line 88, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 87, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .main .bootstrap-form form .accept label a {
   color: #b178ad;
   text-decoration: none;
 }
-/* line 91, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 90, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .main .bootstrap-form form .accept label a:hover {
   text-decoration: underline;
 }
-/* line 93, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 92, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .main .bootstrap-form form li {
   width: 534px;
   margin-bottom: 20px;
 }
-/* line 97, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 96, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .main .formtastic.project label {
   color: #b178ad;
 }
-/* line 99, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 98, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .main .formtastic.project textarea {
   width: 66%;
   height: 80px;
 }
-/* line 102, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 101, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .main .formtastic.project .inline-hints {
   font-size: 13px;
   font-family: "Helvetica Neue", "Arial", "Sans-serif";
   line-height: 18px;
   color: #64635e;
   padding-bottom: 20px;
-  float: left;
-  margin-left: 160px;
+  float: right;
+  margin-right: 20px;
   width: 66%;
 }
-/* line 111, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 110, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .main .remove_reward_wrapper {
   height: 30px;
 }
-/* line 113, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 112, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .main .remove_reward_wrapper a {
   font-family: Arial;
   font-size: 15px;
 }
-/* line 116, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 115, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .main #add_reward_wrapper {
   margin-bottom: 20px;
 }
-/* line 118, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 117, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .main #add_reward_wrapper a {
   font-family: Arial;
   font-size: 15px;
 }
-/* line 121, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 120, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .main .reward {
   padding-top: 10px;
   padding-bottom: 10px;
   margin-bottom: 10px;
 }
-/* line 125, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 124, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .main .reward .left {
   float: left;
   width: 30%;
   margin-right: 5%;
 }
-/* line 129, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 128, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .main .reward .left input {
   width: 99%;
 }
-/* line 131, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 130, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .main .reward .right {
   float: left;
   width: 30%;
 }
-/* line 134, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 133, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .main .reward .right input {
   width: 99%;
 }
-/* line 136, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 135, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .sidebar {
   margin-right: 0;
   border: none;
@@ -13785,7 +13784,7 @@ body #page_content .container .list_title .title p {
   width: 345px;
   float: left;
 }
-/* line 143, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 142, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .sidebar h3 {
   font-family: "Dosis-Light";
   font-size: 24px;
@@ -13796,37 +13795,37 @@ body #page_content .container .list_title .title p {
   margin-bottom: 50px;
   width: 300px;
 }
-/* line 153, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 152, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .sidebar ul li {
   float: left;
   margin-bottom: 60px;
   width: 300px;
 }
-/* line 157, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 156, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .sidebar ul li span {
   width: 60px;
   height: 85px;
   float: left;
 }
-/* line 161, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 160, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .sidebar ul li span.one {
   background: url('/images/nosvc/number-1.png?1339633627') left 24px no-repeat;
 }
-/* line 163, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 162, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .sidebar ul li span.two {
   background: url('/images/nosvc/number-2.png?1339633687') right 24px no-repeat;
   float: right;
 }
-/* line 166, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 165, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .sidebar ul li span.three {
   background: url('/images/nosvc/number-3.png?1339633716') left 24px no-repeat;
 }
-/* line 168, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 167, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .sidebar ul li span.four {
   background: url('/images/nosvc/number-4.png?1339635807') right 24px no-repeat;
   float: right;
 }
-/* line 171, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 170, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .sidebar ul li a {
   background: url('/images/nosvc/arrow-purple.gif?1339636126') right 4px no-repeat;
   padding-right: 20px;
@@ -13838,11 +13837,11 @@ body #page_content .container .list_title .title p {
   cursor: pointer;
   display: block;
 }
-/* line 181, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 180, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .sidebar ul li a:hover {
   text-decoration: underline;
 }
-/* line 184, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 183, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .sidebar ul li p {
   width: 240px;
   float: left;
@@ -14120,20 +14119,19 @@ body #page_content .container .list_title .title p {
   font-family: "Dosis-Light";
   font-size: 41px;
   line-height: 42px;
-  float: left;
 }
-/* line 23, ../../app/assets/stylesheets/resources/backers/_new.sass */
+/* line 22, ../../app/assets/stylesheets/resources/backers/_new.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="new"] #page_content .container .main .backer_content .title h2 {
   color: #5d5d5d;
 }
-/* line 26, ../../app/assets/stylesheets/resources/backers/_new.sass */
+/* line 25, ../../app/assets/stylesheets/resources/backers/_new.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="new"] #page_content .container .main .backer_content #project_info .project_name {
   margin-top: 40px;
   margin-bottom: 20px;
   float: left;
   width: 100%;
 }
-/* line 31, ../../app/assets/stylesheets/resources/backers/_new.sass */
+/* line 30, ../../app/assets/stylesheets/resources/backers/_new.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="new"] #page_content .container .main .backer_content #project_info .project_name a {
   font-family: "Dosis-Medium";
   color: #5d5d5d;
@@ -14146,14 +14144,14 @@ body #page_content .container .list_title .title p {
   width: 454px;
   padding: 0 80px;
 }
-/* line 42, ../../app/assets/stylesheets/resources/backers/_new.sass */
+/* line 41, ../../app/assets/stylesheets/resources/backers/_new.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="new"] #page_content .container .main .backer_content #project_info .infos {
   text-align: center;
   float: left;
   padding: 0 40px;
   width: 534px;
 }
-/* line 47, ../../app/assets/stylesheets/resources/backers/_new.sass */
+/* line 46, ../../app/assets/stylesheets/resources/backers/_new.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="new"] #page_content .container .main .backer_content #project_info .infos .project_owner, [data-controller="backers"][data-namespace="projects"][data-action="new"] #page_content .container .main .backer_content #project_info .infos .when, [data-controller="backers"][data-namespace="projects"][data-action="new"] #page_content .container .main .backer_content #project_info .infos .location {
   font-family: "Dosis-Regular";
   color: #5d5d5d;
@@ -14161,21 +14159,21 @@ body #page_content .container .list_title .title p {
   float: left;
   margin: 0 10px 0 0;
 }
-/* line 53, ../../app/assets/stylesheets/resources/backers/_new.sass */
+/* line 52, ../../app/assets/stylesheets/resources/backers/_new.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="new"] #page_content .container .main .backer_content #project_info .infos .project_owner a, [data-controller="backers"][data-namespace="projects"][data-action="new"] #page_content .container .main .backer_content #project_info .infos .when a, [data-controller="backers"][data-namespace="projects"][data-action="new"] #page_content .container .main .backer_content #project_info .infos .location a {
   text-decoration: none;
   color: #83b1df;
 }
-/* line 56, ../../app/assets/stylesheets/resources/backers/_new.sass */
+/* line 55, ../../app/assets/stylesheets/resources/backers/_new.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="new"] #page_content .container .main .backer_content #project_info .infos .location {
   margin: 0px;
 }
-/* line 60, ../../app/assets/stylesheets/resources/backers/_new.sass */
+/* line 59, ../../app/assets/stylesheets/resources/backers/_new.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="new"] #page_content .container .main .backer_content #back_options #backer_form .inline-hints {
   font-family: "Helvetica Neue";
   font-size: 16px;
 }
-/* line 63, ../../app/assets/stylesheets/resources/backers/_new.sass */
+/* line 62, ../../app/assets/stylesheets/resources/backers/_new.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="new"] #page_content .container .main .backer_content #back_options #backer_form label {
   font-family: "Helvetica Neue", "Arial", "Sans-serif";
   font-size: 14px;
@@ -14184,7 +14182,7 @@ body #page_content .container .list_title .title p {
   width: auto;
   text-align: left;
 }
-/* line 70, ../../app/assets/stylesheets/resources/backers/_new.sass */
+/* line 69, ../../app/assets/stylesheets/resources/backers/_new.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="new"] #page_content .container .main .backer_content #back_options #backer_form input[type="text"] {
   height: 60px;
   width: 600px;
@@ -14193,39 +14191,39 @@ body #page_content .container .list_title .title p {
   padding-left: 20px;
   font-family: "Helvetica Neue";
 }
-/* line 77, ../../app/assets/stylesheets/resources/backers/_new.sass */
+/* line 76, ../../app/assets/stylesheets/resources/backers/_new.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="new"] #page_content .container .main .backer_content #back_options #backer_form .alert-info {
   margin-top: 20px;
 }
-/* line 80, ../../app/assets/stylesheets/resources/backers/_new.sass */
+/* line 79, ../../app/assets/stylesheets/resources/backers/_new.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="new"] #page_content .container .main .backer_content #back_options #backer_form .alert-info label input {
   display: inline;
   margin-right: 10px;
   vertical-align: top;
 }
-/* line 84, ../../app/assets/stylesheets/resources/backers/_new.sass */
+/* line 83, ../../app/assets/stylesheets/resources/backers/_new.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="new"] #page_content .container .main .backer_content #back_options #backer_form #backer_reward_input {
   padding-left: 0 !important;
 }
-/* line 86, ../../app/assets/stylesheets/resources/backers/_new.sass */
+/* line 85, ../../app/assets/stylesheets/resources/backers/_new.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="new"] #page_content .container .main .backer_content #back_options #backer_form #backer_reward_input legend {
   float: left;
   border-bottom: dashed 1px #d8d3d3;
   padding-bottom: 10px;
   margin-top: 40px;
 }
-/* line 91, ../../app/assets/stylesheets/resources/backers/_new.sass */
+/* line 90, ../../app/assets/stylesheets/resources/backers/_new.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="new"] #page_content .container .main .backer_content #back_options #backer_form #backer_reward_input legend label {
   font-family: "Dosis-Regular";
   color: #5d5d5d;
   font-size: 24px;
   text-transform: uppercase;
 }
-/* line 96, ../../app/assets/stylesheets/resources/backers/_new.sass */
+/* line 95, ../../app/assets/stylesheets/resources/backers/_new.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="new"] #page_content .container .main .backer_content #back_options #backer_form #backer_reward_input ol {
   float: left;
 }
-/* line 98, ../../app/assets/stylesheets/resources/backers/_new.sass */
+/* line 97, ../../app/assets/stylesheets/resources/backers/_new.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="new"] #page_content .container .main .backer_content #back_options #backer_form #backer_reward_input ol li.choice {
   padding: 0px 0px 0px 30px;
   margin-bottom: 25px;
@@ -14242,17 +14240,17 @@ body #page_content .container .list_title .title p {
   text-shadow: white 1px 1px 0px;
   position: relative;
 }
-/* line 108, ../../app/assets/stylesheets/resources/backers/_new.sass */
+/* line 107, ../../app/assets/stylesheets/resources/backers/_new.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="new"] #page_content .container .main .backer_content #back_options #backer_form #backer_reward_input ol li.choice.selected {
   background: #f7f6f0;
 }
-/* line 111, ../../app/assets/stylesheets/resources/backers/_new.sass */
+/* line 110, ../../app/assets/stylesheets/resources/backers/_new.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="new"] #page_content .container .main .backer_content #back_options #backer_form #backer_reward_input ol li.choice label .left {
   float: left;
   width: 360px;
   padding: 24px 0px 20px;
 }
-/* line 115, ../../app/assets/stylesheets/resources/backers/_new.sass */
+/* line 114, ../../app/assets/stylesheets/resources/backers/_new.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="new"] #page_content .container .main .backer_content #back_options #backer_form #backer_reward_input ol li.choice label .left .reward_minimum_value {
   color: #5d5d5d;
   font-family: "Dosis-Regular";
@@ -14260,7 +14258,7 @@ body #page_content .container .list_title .title p {
   padding-bottom: 10px;
   margin-left: 10px;
 }
-/* line 121, ../../app/assets/stylesheets/resources/backers/_new.sass */
+/* line 120, ../../app/assets/stylesheets/resources/backers/_new.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="new"] #page_content .container .main .backer_content #back_options #backer_form #backer_reward_input ol li.choice label .left .reward_description {
   font-family: "Helvetica Neue", "Arial", "Sans-serif";
   font-size: 13px;
@@ -14269,7 +14267,7 @@ body #page_content .container .list_title .title p {
   margin-top: 10px;
   margin-left: 10px;
 }
-/* line 128, ../../app/assets/stylesheets/resources/backers/_new.sass */
+/* line 127, ../../app/assets/stylesheets/resources/backers/_new.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="new"] #page_content .container .main .backer_content #back_options #backer_form #backer_reward_input ol li.choice label .right {
   color: #5d5d5d;
   font-family: "Dosis-Regular";
@@ -14288,7 +14286,7 @@ body #page_content .container .list_title .title p {
   border-radius: 0 16px 16px 0px;
   text-shadow: white 1px 1px 1px;
 }
-/* line 140, ../../app/assets/stylesheets/resources/backers/_new.sass */
+/* line 139, ../../app/assets/stylesheets/resources/backers/_new.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="new"] #page_content .container .main .backer_content #back_options #backer_form #backer_reward_input ol li.choice label .right .unlimited, [data-controller="backers"][data-namespace="projects"][data-action="new"] #page_content .container .main .backer_content #back_options #backer_form #backer_reward_input ol li.choice label .right .sold_out {
   font-size: 16px;
   color: #58b491;
@@ -14297,17 +14295,17 @@ body #page_content .container .list_title .title p {
   margin-top: 30px;
   float: left;
 }
-/* line 147, ../../app/assets/stylesheets/resources/backers/_new.sass */
+/* line 146, ../../app/assets/stylesheets/resources/backers/_new.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="new"] #page_content .container .main .backer_content #back_options #backer_form #backer_reward_input ol li.choice label .right .sold_out {
   color: #ed6569;
 }
-/* line 149, ../../app/assets/stylesheets/resources/backers/_new.sass */
+/* line 148, ../../app/assets/stylesheets/resources/backers/_new.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="new"] #page_content .container .main .backer_content #back_options #backer_form #backer_reward_input ol li.choice label .right .remaining {
   float: left;
   margin-top: 30px;
   line-height: 14px;
 }
-/* line 153, ../../app/assets/stylesheets/resources/backers/_new.sass */
+/* line 152, ../../app/assets/stylesheets/resources/backers/_new.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="new"] #page_content .container .main .backer_content #back_options #backer_form #backer_reward_input ol li.choice label .right .remaining span {
   font-size: 24px;
   float: left;
@@ -14319,7 +14317,7 @@ body #page_content .container .list_title .title p {
   text-shadow: white 1px 1px 1px;
   font-family: "Dosis-Regular";
 }
-/* line 163, ../../app/assets/stylesheets/resources/backers/_new.sass */
+/* line 162, ../../app/assets/stylesheets/resources/backers/_new.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="new"] #page_content .container .main .backer_content #back_options #backer_form #backer_reward_input ol li.choice label .right .expires_at {
   font-family: "Helvetica Neue", "Arial", "Sans-serif";
   font-size: 13px;
@@ -14331,23 +14329,23 @@ body #page_content .container .list_title .title p {
   text-align: center;
   background: url('/images/nosvc/separador-new.gif?1339698491') left top repeat-x;
 }
-/* line 173, ../../app/assets/stylesheets/resources/backers/_new.sass */
+/* line 172, ../../app/assets/stylesheets/resources/backers/_new.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="new"] #page_content .container .main .backer_content #back_options #backer_form #backer_anonymous_input {
   margin: 20px 0;
   font-size: 14px;
   text-align: center;
 }
-/* line 177, ../../app/assets/stylesheets/resources/backers/_new.sass */
+/* line 176, ../../app/assets/stylesheets/resources/backers/_new.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="new"] #page_content .container .main .backer_content #back_options #backer_form #backer_anonymous_input label {
   padding-left: 125px;
 }
-/* line 179, ../../app/assets/stylesheets/resources/backers/_new.sass */
+/* line 178, ../../app/assets/stylesheets/resources/backers/_new.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="new"] #page_content .container .main .backer_content #back_options #backer_form #backer_anonymous_input label input {
   margin-right: 10px;
   margin-top: 5px;
   float: left;
 }
-/* line 183, ../../app/assets/stylesheets/resources/backers/_new.sass */
+/* line 182, ../../app/assets/stylesheets/resources/backers/_new.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="new"] #page_content .container .main .backer_content #back_options #backer_form #backer_submit {
   display: block;
   margin: 20px 0 20px 170px;
@@ -14372,21 +14370,21 @@ body #page_content .container .list_title .title p {
   padding-bottom: 21px;
   text-shadow: #4c8e75 1px 1px 0px;
 }
-/* line 199, ../../app/assets/stylesheets/resources/backers/_new.sass */
+/* line 198, ../../app/assets/stylesheets/resources/backers/_new.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="new"] #page_content .container .main .backer_content #back_options #backer_form #backer_submit:hover {
   -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 0 4px inset;
   -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 0 4px inset;
   -o-box-shadow: rgba(0, 0, 0, 0.3) 0 0 4px inset;
   box-shadow: rgba(0, 0, 0, 0.3) 0 0 4px inset;
 }
-/* line 201, ../../app/assets/stylesheets/resources/backers/_new.sass */
+/* line 200, ../../app/assets/stylesheets/resources/backers/_new.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="new"] #page_content .container .main .backer_content #back_options #backer_form #backer_submit:active {
   -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 0 10px inset;
   -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 0 10px inset;
   -o-box-shadow: rgba(0, 0, 0, 0.3) 0 0 10px inset;
   box-shadow: rgba(0, 0, 0, 0.3) 0 0 10px inset;
 }
-/* line 203, ../../app/assets/stylesheets/resources/backers/_new.sass */
+/* line 202, ../../app/assets/stylesheets/resources/backers/_new.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="new"] #page_content .container .main .backer_content #back_options #backer_form span {
   color: #bef3df;
   text-shadow: #4c8e75 1px 1px 0px;
@@ -14397,7 +14395,7 @@ body #page_content .container .list_title .title p {
   margin-top: -44px;
   margin-left: 226px;
 }
-/* line 213, ../../app/assets/stylesheets/resources/backers/_new.sass */
+/* line 212, ../../app/assets/stylesheets/resources/backers/_new.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="new"] #page_content .container .sidebar {
   margin-right: 0;
   border: none;
@@ -14406,7 +14404,7 @@ body #page_content .container .list_title .title p {
   width: 345px;
   float: left;
 }
-/* line 220, ../../app/assets/stylesheets/resources/backers/_new.sass */
+/* line 219, ../../app/assets/stylesheets/resources/backers/_new.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="new"] #page_content .container .sidebar #back_info {
   display: inline;
   float: left;
@@ -14415,7 +14413,7 @@ body #page_content .container .list_title .title p {
   width: 280px;
   margin-right: 0;
 }
-/* line 224, ../../app/assets/stylesheets/resources/backers/_new.sass */
+/* line 223, ../../app/assets/stylesheets/resources/backers/_new.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="new"] #page_content .container .sidebar .back_faq .tittle {
   font-family: "Dosis-Regular";
   font-size: 24px;
@@ -14423,7 +14421,7 @@ body #page_content .container .list_title .title p {
   margin-bottom: 40px;
   text-shadow: white 1px 1px 0px;
 }
-/* line 230, ../../app/assets/stylesheets/resources/backers/_new.sass */
+/* line 229, ../../app/assets/stylesheets/resources/backers/_new.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="new"] #page_content .container .sidebar .back_faq h3 {
   font-family: "Helvetica Neue", "Arial", "Sans-serif";
   font-size: 14px;
@@ -14446,11 +14444,11 @@ body #page_content .container .list_title .title p {
   -o-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
-/* line 244, ../../app/assets/stylesheets/resources/backers/_new.sass */
+/* line 243, ../../app/assets/stylesheets/resources/backers/_new.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="new"] #page_content .container .sidebar .back_faq h3:hover {
   color: #5db18d;
 }
-/* line 246, ../../app/assets/stylesheets/resources/backers/_new.sass */
+/* line 245, ../../app/assets/stylesheets/resources/backers/_new.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="new"] #page_content .container .sidebar .back_faq p {
   padding-bottom: 30px;
   padding-left: 15px;
@@ -14459,12 +14457,12 @@ body #page_content .container .list_title .title p {
   font-size: 14px;
   color: #5d5d5d;
 }
-/* line 253, ../../app/assets/stylesheets/resources/backers/_new.sass */
+/* line 252, ../../app/assets/stylesheets/resources/backers/_new.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="new"] #page_content .container .sidebar .back_faq p a {
   color: #5db18d;
   text-decoration: none;
 }
-/* line 256, ../../app/assets/stylesheets/resources/backers/_new.sass */
+/* line 255, ../../app/assets/stylesheets/resources/backers/_new.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="new"] #page_content .container .sidebar .back_faq p a:hover {
   text-decoration: underline;
 }
