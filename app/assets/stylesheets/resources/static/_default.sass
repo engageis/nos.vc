@@ -41,10 +41,33 @@
                 padding: 25px 5px
                 padding-right: 65px
                 text-decoration: none
+                background-position: 300px 23px
+                background-repeat: no-repeat
                 +text-shadow(white 1px 1px 0px)
                 &:hover, &.selected
-                  background: #F9F9F9
+                  background-color: #F9F9F9
                   color: #EC6569
+              &.one
+                a
+                  background-image: image-url("nosvc/icon-inactive-1.png")
+                  &.selected, &:hover
+                    background-image: image-url("nosvc/icon-active-1.png")
+              &.two
+                a
+                  background-image: image-url("nosvc/icon-inactive-2.png")
+                  &.selected, &:hover
+                    background-image: image-url("nosvc/icon-active-2.png")
+              &.three
+                a
+                  background-image: image-url("nosvc/icon-inactive-3.png")
+                  &.selected, &:hover
+                    background-image: image-url("nosvc/icon-active-3.png")
+              &.four
+                a
+                  background-image: image-url("nosvc/icon-inactive-4.png")
+                  &.selected, &:hover
+                    background-image: image-url("nosvc/icon-active-4.png")
+
         .default_text
           +grid(10)
           width: 534px
