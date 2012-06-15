@@ -54,10 +54,10 @@
                     background-image: image-url("nosvc/icon-expiring.png")
           section.categories
             +grid(10)
-            width: 534px
+            width: 614px
             background: #f9f9f9
             margin: 0
-            padding: 50px 40px 20px
+            padding: 50px 0px 20px
             h1
               font-family: "Dosis-ExtraLight"
               font-size: 41px
@@ -70,6 +70,51 @@
               margin-bottom: 35px
               span
                 color: #83b1df
+            h2
+              font-family: "Dosis-Light"
+              font-size: 61px
+              color: #5d5d5d
+              +text-shadow(white 1px 1px 0px)
+              width: 100%
+              height: 70px
+              text-align: center
+            .list_categories
+              background: #ffffff
+              border-top: 1px dashed #d8d3d3
+              border-bottom: 1px dashed #d8d3d3
+              padding-top: 10px
+              padding-bottom: 10px
+              margin-top: 30px
+              margin-bottom: 40px
+              font-family: "Dosis-Regular"
+              font-size: 18px
+              a.more_categories
+                background-image: image-url("nosvc/more-categories.gif")
+                height: 19px
+                width: 18px
+                display: block
+                cursor: pointer
+                text-indent: -9999em
+                margin-right: 20px
+                margin-top: 10px
+                float: right
+              ul
+                padding: 0 10px 0 30px
+                li
+                  margin-right: 25px
+                  float: left
+                  a
+                    color: #5d5d5d
+                    text-decoration: none
+                    line-height: 38px
+                    padding: 0 4px
+                    &:hover, &.selected
+                      color: white
+                      background: #83b1df
+                      padding: 0 4px
+                      @include border-radius(3px)
+                  &.other_categorie
+                    display: none
       .main
         margin-top: 20px
         #explore_results
