@@ -2407,51 +2407,50 @@ table .span12 {
   -moz-border-radius: 10px;
   border-radius: 10px;
   color: #5d5d5d;
-  float: left;
   margin-top: 20px;
   line-height: 21px;
 }
-/* line 24, ../../app/assets/stylesheets/miv/_alert.scss */
+/* line 23, ../../app/assets/stylesheets/miv/_alert.scss */
 #bootstrap-alert .alert-heading, .bootstrap-alert .alert-heading {
   color: inherit;
 }
-/* line 27, ../../app/assets/stylesheets/miv/_alert.scss */
+/* line 26, ../../app/assets/stylesheets/miv/_alert.scss */
 #bootstrap-alert .alert .closeAlert, .bootstrap-alert .alert .closeAlert {
   position: relative;
   top: -2px;
   right: -21px;
   line-height: 18px;
 }
-/* line 33, ../../app/assets/stylesheets/miv/_alert.scss */
+/* line 32, ../../app/assets/stylesheets/miv/_alert.scss */
 #bootstrap-alert .alert-success, .bootstrap-alert .alert-success {
   background-color: #dff0d8;
   border-color: #d6e9c6;
   color: #468847;
 }
-/* line 39, ../../app/assets/stylesheets/miv/_alert.scss */
+/* line 38, ../../app/assets/stylesheets/miv/_alert.scss */
 #bootstrap-alert .alert-danger,
 #bootstrap-alert .alert-error, .bootstrap-alert .alert-danger, .bootstrap-alert .alert-error {
   background-color: #f2dede;
   border-color: #eed3d7;
   color: #b94a48;
 }
-/* line 44, ../../app/assets/stylesheets/miv/_alert.scss */
+/* line 43, ../../app/assets/stylesheets/miv/_alert.scss */
 #bootstrap-alert .alert-info, .bootstrap-alert .alert-info {
   background-color: #d9edf7;
   border-color: #bce8f1;
   color: #3a87ad;
 }
-/* line 49, ../../app/assets/stylesheets/miv/_alert.scss */
+/* line 48, ../../app/assets/stylesheets/miv/_alert.scss */
 #bootstrap-alert .alert-block, .bootstrap-alert .alert-block {
   padding-top: 14px;
   padding-bottom: 14px;
 }
-/* line 54, ../../app/assets/stylesheets/miv/_alert.scss */
+/* line 53, ../../app/assets/stylesheets/miv/_alert.scss */
 #bootstrap-alert .alert-block > p,
 #bootstrap-alert .alert-block > ul, .bootstrap-alert .alert-block > p, .bootstrap-alert .alert-block > ul {
   margin-bottom: 0;
 }
-/* line 57, ../../app/assets/stylesheets/miv/_alert.scss */
+/* line 56, ../../app/assets/stylesheets/miv/_alert.scss */
 #bootstrap-alert .alert-block p + p, .bootstrap-alert .alert-block p + p {
   margin-top: 5px;
 }
