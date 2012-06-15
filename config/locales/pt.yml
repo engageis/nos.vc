@@ -229,7 +229,7 @@ pt:
   explore:
     index:
       categories: "Cidades"
-      expiring: "Na reta final"
+      expiring: "Última chamada"
       quick_explore: "Explorar"
       recent: "Novos"
       recommended: "Destaques"

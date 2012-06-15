@@ -7,9 +7,6 @@
       .content
         - unless @recommended.empty? and @expiring.empty? and @recent.empty? and @successful.empty?
           section.highlights
-            .section_header
-              .original_title
-                h1= t('.quick_explore')
             ul#explore_quick
               - unless @recommended.empty?
                 li.recommended
@@ -27,16 +24,22 @@
                 li.successful
                   a href='#successful'
                     = t('.successful')
-
-        - unless @categories.empty?
-          section.categories
-            h1= t('.subtitle').html_safe
+        section.categories
+          h1= t('.subtitle').html_safe
+          h2.selected_categorie
+          .list_categories
+            a.more_categories +
             ul#explore_categories
-              - @categories.each_with_index do |category, index|
-                li class="#{(index%2==1 ? 'no_margin':'')}"
+              - @featured_categories.each do |category|
+                li.featured_categorie
                   a href="##{category.name.parameterize}" data-id=category.id
                     = category.name
-    .clearfix
+              - @other_categories.each do |category|
+                li.other_categorie
+                  a href="##{category.name.parameterize}" data-id=category.id
+                    = category.name
+
+          .clearfix
     .main
       #explore_results
         .results &nbsp;

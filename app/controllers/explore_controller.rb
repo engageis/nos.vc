@@ -2,7 +2,8 @@ class ExploreController < ApplicationController
 
   def index
     @title = t('explore.title')
-    @categories = Category.with_projects.order(:name).all
+    @other_categories = Category.not_featured.with_projects.order(:name).all
+    @featured_categories = Category.featured.order(:name).limit(5)
 
     # Just to know if we should present the menu entries, the actual projects are fetched via AJAX
     @recommended = Project.visible.not_expired.recommended.limit(3)

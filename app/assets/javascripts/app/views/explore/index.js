@@ -1,8 +1,10 @@
 CATARSE.ExploreIndexView = Backbone.View.extend({
-
+  events: {
+    "click section.categories a.more_categories": "more_categories"
+  },
   initialize: function() {
     $('#header header nav.actions ul li.explore').addClass('selected');
-    _.bindAll(this, "render", "ProjectView", "ProjectsView", "initializeView", "recommended", "expiring", "recent", "successful", "category", "search", "updateSearch")
+    _.bindAll(this, "render", "ProjectView", "ProjectsView", "initializeView", "recommended", "expiring", "recent", "successful", "category", "search", "updateSearch", "more_categories")
     CATARSE.router.route(":name", "category", this.category)
     CATARSE.router.route("recommended", "recommended", this.recommended)
     CATARSE.router.route("expiring", "expiring", this.expiring)
@@ -103,8 +105,11 @@ CATARSE.ExploreIndexView = Backbone.View.extend({
       category_id_equals: this.selectedItem.data("id"),
       meta_sort: "explore"
     })
+    this.$('section.categories h2.selected_categorie').html(this.selectedItem.html())
   },
-
+  more_categories: function(){
+    $('section.categories ul li.other_categorie').toggle('hide');
+  },
   initializeView: function(search){
     if(this.projectsView)
       this.projectsView.destroy()
@@ -129,6 +134,7 @@ CATARSE.ExploreIndexView = Backbone.View.extend({
     this.selectedItem = $('.sidebar a[href=#' + name + ']')
     $('.sidebar .selected').removeClass('selected')
     this.selectedItem.addClass('selected')
+    this.$('section.categories h2.selected_categorie').html('')
   },
 
   render: function(){
