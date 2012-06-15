@@ -39,11 +39,13 @@
       .content
         .links
           p
-           = link_to "Blog", "http://blog.nos.vc"
+           = link_to t('footer.links.help'), t('site.help')
            | |
-           = link_to t('footer.links.about'), faq_path
+           = link_to t('footer.links.about'), about_us_path
            | |
-           = mail_to t('site.email.contact'), t('footer.links.contact'), :target => :_blank
+           = link_to t('footer.links.contact'), contact_path
+           | |
+           = link_to "Blog", t('site.blog')
            | |
            = link_to t('footer.links.terms'), terms_path
            | |

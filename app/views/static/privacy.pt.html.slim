@@ -1,10 +1,11 @@
-= content_for :title, t('.title')
+- content_for :header_featured do
+  #banner_privacy
 #page_content
   .container
     .static_default
-      .title
-        h1 Política de privacidade
-        h2 Confira nossa política de privacidade e veja porque sua privacidade está protegida conosco.
+      .sidebar
+        .title= t('.title')
+        p Confira nossa política de privacidade e veja porque sua privacidade está protegida conosco.
       .text.default_text
         h2 Explicando de uma maneira simples
         p Nós trabalhamos para lhe oferecer o melhor serviço possível – para tornar mais fácil organizar uma angariação de fundos e o gerenciamento de seu projeto.

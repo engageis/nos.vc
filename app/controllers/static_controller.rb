@@ -1,32 +1,22 @@
 class StaticController < ApplicationController
-
-  def new_home
+  def terms
+    @title = t('static.terms.title')
   end
 
-  def new_blog
-  end
-
-  def new_profile
-  end
-
-  def new_project_profile
-  end
-
-  def new_discover
-  end
-
-  def new_payment
-  end
-
-  def new_opendata
+  def privacy
+    @title = t('static.privacy.title')
   end
 
   def guidelines
     @title = t('static.guidelines.title')
   end
 
-  def faq
-    @title = t('static.faq.title')
+  def about_us
+    @title = t('static.about_us.title')
+  end
+
+  def contact
+    @title = t('static.contact.title')
   end
 
   def sitemap

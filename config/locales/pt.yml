@@ -41,6 +41,7 @@ pt:
       policy: "Política de Privacidade"
       contact: "Contato"
       about: "Sobre"
+      help: "Help!"
   main:
     links:
       selected: "Veja todos os nossos destaques"
@@ -610,6 +611,7 @@ pt:
     host: "nos.vc"
     base_url: "http://localhost:3000"
     blog: "http://blog.nos.vc/"
+    help: "http://help.nos.vc/"
     email:
       contact: somos@nos.vc
       payments: leo@nos.vc
@@ -631,6 +633,10 @@ pt:
         who_organizes_the_meetings: "Quem organiza os encontros?"
         how_much: "Quanto custa usar o Nós.vc?"
         why_use: "Por que usar Nós.vc?"
+    about_us:
+      title: "pagina sobre"
+    contact:
+      title: "pagina de contato"
     privacy:
       title: "Política de privacidade"
     terms:

@@ -14659,32 +14659,50 @@ body #page_content .container .list_title .title p {
   margin-top: 20px;
 }
 
-/* line 2, ../../app/assets/stylesheets/resources/static/_default.sass */
-[data-controller="static"] #banner_how_it_works {
-  background: url('/images/nosvc/banner_how_it_works.jpg?1339696089');
-  width: 614px;
-  height: 220px;
-  float: left;
-}
-/* line 10, ../../app/assets/stylesheets/resources/static/_default.sass */
+/* line 5, ../../app/assets/stylesheets/resources/static/_default.sass */
 [data-controller="static"] #page_content .container .static_default .sidebar {
   margin-right: 0;
-  margin-top: 125px;
+  margin-top: 50px;
   margin-left: 0px;
   width: 345px;
   float: left;
 }
-/* line 16, ../../app/assets/stylesheets/resources/static/_default.sass */
+/* line 11, ../../app/assets/stylesheets/resources/static/_default.sass */
+[data-controller="static"] #page_content .container .static_default .sidebar .title {
+  font-family: "Dosis-ExtraLight";
+  font-size: 41px;
+  letter-spacing: -1px;
+  text-shadow: white 1px 1px 0px;
+  color: #5d5d5d;
+  line-height: 46px;
+  margin: auto;
+  margin-bottom: 20px;
+  text-align: center;
+  padding: 0 10px;
+}
+/* line 22, ../../app/assets/stylesheets/resources/static/_default.sass */
+[data-controller="static"] #page_content .container .static_default .sidebar .title span {
+  color: #ec6569;
+}
+/* line 24, ../../app/assets/stylesheets/resources/static/_default.sass */
+[data-controller="static"] #page_content .container .static_default .sidebar p {
+  font-family: "Helvetica Neue", Arial;
+  font-size: 14px;
+  line-height: 21px;
+  padding-bottom: 15px;
+  color: #5d5d5d;
+}
+/* line 30, ../../app/assets/stylesheets/resources/static/_default.sass */
 [data-controller="static"] #page_content .container .static_default .sidebar ul {
   margin-bottom: 20px;
   border-bottom: 1px #d8d3d3 dashed;
 }
-/* line 19, ../../app/assets/stylesheets/resources/static/_default.sass */
+/* line 33, ../../app/assets/stylesheets/resources/static/_default.sass */
 [data-controller="static"] #page_content .container .static_default .sidebar ul li {
   border-top: 1px #d8d3d3 dashed;
   text-align: right;
 }
-/* line 22, ../../app/assets/stylesheets/resources/static/_default.sass */
+/* line 36, ../../app/assets/stylesheets/resources/static/_default.sass */
 [data-controller="static"] #page_content .container .static_default .sidebar ul li a {
   color: #5d5d5d;
   font-size: 24px;
@@ -14695,12 +14713,12 @@ body #page_content .container .list_title .title p {
   text-decoration: none;
   text-shadow: white 1px 1px 0px;
 }
-/* line 31, ../../app/assets/stylesheets/resources/static/_default.sass */
+/* line 45, ../../app/assets/stylesheets/resources/static/_default.sass */
 [data-controller="static"] #page_content .container .static_default .sidebar ul li a:hover, [data-controller="static"] #page_content .container .static_default .sidebar ul li a.selected {
   background: #f9f9f9;
   color: #ec6569;
 }
-/* line 34, ../../app/assets/stylesheets/resources/static/_default.sass */
+/* line 48, ../../app/assets/stylesheets/resources/static/_default.sass */
 [data-controller="static"] #page_content .container .static_default .default_text {
   display: inline;
   float: left;
@@ -14712,7 +14730,7 @@ body #page_content .container .list_title .title p {
   margin: 0;
   padding: 50px 40px 20px;
 }
-/* line 40, ../../app/assets/stylesheets/resources/static/_default.sass */
+/* line 54, ../../app/assets/stylesheets/resources/static/_default.sass */
 [data-controller="static"] #page_content .container .static_default .default_text .title {
   font-family: "Dosis-ExtraLight";
   font-size: 41px;
@@ -14725,15 +14743,15 @@ body #page_content .container .list_title .title p {
   text-align: center;
   padding: 0 10px;
 }
-/* line 51, ../../app/assets/stylesheets/resources/static/_default.sass */
+/* line 65, ../../app/assets/stylesheets/resources/static/_default.sass */
 [data-controller="static"] #page_content .container .static_default .default_text .title span {
   color: #ec6569;
 }
-/* line 53, ../../app/assets/stylesheets/resources/static/_default.sass */
+/* line 67, ../../app/assets/stylesheets/resources/static/_default.sass */
 [data-controller="static"] #page_content .container .static_default .default_text a {
   color: #ec6569;
 }
-/* line 55, ../../app/assets/stylesheets/resources/static/_default.sass */
+/* line 69, ../../app/assets/stylesheets/resources/static/_default.sass */
 [data-controller="static"] #page_content .container .static_default .default_text h1, [data-controller="static"] #page_content .container .static_default .default_text h3 {
   font-family: "Dosis-Light";
   font-size: 24px;
@@ -14743,7 +14761,7 @@ body #page_content .container .list_title .title p {
   line-height: 31px;
   float: left;
 }
-/* line 63, ../../app/assets/stylesheets/resources/static/_default.sass */
+/* line 77, ../../app/assets/stylesheets/resources/static/_default.sass */
 [data-controller="static"] #page_content .container .static_default .default_text h2 {
   font-family: "Dosis-Regular";
   font-size: 21px;
@@ -14757,7 +14775,7 @@ body #page_content .container .list_title .title p {
   margin-top: 20px;
   line-height: 24px;
 }
-/* line 75, ../../app/assets/stylesheets/resources/static/_default.sass */
+/* line 89, ../../app/assets/stylesheets/resources/static/_default.sass */
 [data-controller="static"] #page_content .container .static_default .default_text p, [data-controller="static"] #page_content .container .static_default .default_text ul, [data-controller="static"] #page_content .container .static_default .default_text ol {
   font-family: "Helvetica Neue", Arial;
   font-size: 14px;
@@ -14765,29 +14783,77 @@ body #page_content .container .list_title .title p {
   padding-bottom: 15px;
   color: #5d5d5d;
 }
-/* line 81, ../../app/assets/stylesheets/resources/static/_default.sass */
+/* line 95, ../../app/assets/stylesheets/resources/static/_default.sass */
 [data-controller="static"] #page_content .container .static_default .default_text strong {
   font-family: "Helvetica Neue", Arial;
   font-weight: bold;
   color: #5d5d5d;
 }
-/* line 85, ../../app/assets/stylesheets/resources/static/_default.sass */
+/* line 99, ../../app/assets/stylesheets/resources/static/_default.sass */
 [data-controller="static"] #page_content .container .static_default .default_text ol {
   padding: 10px 30px;
 }
-/* line 87, ../../app/assets/stylesheets/resources/static/_default.sass */
+/* line 101, ../../app/assets/stylesheets/resources/static/_default.sass */
 [data-controller="static"] #page_content .container .static_default .default_text ol li {
   padding-bottom: 10px;
   list-style: decimal inside;
 }
-/* line 90, ../../app/assets/stylesheets/resources/static/_default.sass */
+/* line 104, ../../app/assets/stylesheets/resources/static/_default.sass */
 [data-controller="static"] #page_content .container .static_default .default_text ul {
   padding: 10px 30px;
 }
-/* line 92, ../../app/assets/stylesheets/resources/static/_default.sass */
+/* line 106, ../../app/assets/stylesheets/resources/static/_default.sass */
 [data-controller="static"] #page_content .container .static_default .default_text ul li {
   padding-bottom: 10px;
   list-style: disc inside;
+}
+
+/* line 2, ../../app/assets/stylesheets/resources/static/_guidelines.sass */
+[data-controller="static"][data-action="guidelines"] #banner_how_it_works {
+  background: url('/images/nosvc/banner_how_it_works.jpg?1339696089');
+  width: 614px;
+  height: 220px;
+  float: left;
+}
+/* line 10, ../../app/assets/stylesheets/resources/static/_guidelines.sass */
+[data-controller="static"][data-action="guidelines"] #page_content .container .static_default .sidebar {
+  margin-top: 125px;
+}
+
+/* line 2, ../../app/assets/stylesheets/resources/static/_about_us.sass */
+[data-controller="static"][data-action="about_us"] #banner_about_us {
+  background: url('/images/nosvc/banner_how_it_works.jpg?1339696089');
+  width: 614px;
+  height: 220px;
+  float: left;
+}
+
+/* line 2, ../../app/assets/stylesheets/resources/static/_contact.sass */
+[data-controller="static"][data-action="contact"] #banner_contact {
+  background: url('/images/nosvc/banner_how_it_works.jpg?1339696089');
+  width: 614px;
+  height: 220px;
+  float: left;
+}
+/* line 10, ../../app/assets/stylesheets/resources/static/_contact.sass */
+[data-controller="static"][data-action="contact"] #page_content .container .static_default .sidebar {
+  margin-top: 25px;
+}
+
+/* line 2, ../../app/assets/stylesheets/resources/static/_terms.sass */
+[data-controller="static"][data-action="terms"] #banner_terms {
+  background: url('/images/nosvc/banner_how_it_works.jpg?1339696089');
+  width: 614px;
+  height: 220px;
+  float: left;
+}
+
+/* line 2, ../../app/assets/stylesheets/resources/static/_privacy.sass */
+[data-controller="static"][data-action="privacy"] #banner_privacy {
+  background: url('/images/nosvc/banner_how_it_works.jpg?1339696089');
+  width: 614px;
+  height: 220px;
+  float: left;
 }
 
 /* line 3, ../../app/assets/stylesheets/resources/_curated_page.sass */
