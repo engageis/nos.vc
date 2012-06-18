@@ -10674,7 +10674,7 @@ body #page_content .container .list_title .title p {
 /* line 15, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="passwords"][data-action="new"] #page_content .container .devise_content .links a:hover,
 [data-controller="passwords"][data-action="edit"] #page_content .container .devise_content .links a:hover {
-  color: #e75297;
+  color: #5d5d5d;
 }
 /* line 19, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="passwords"][data-action="new"] #page_content .container .devise_content form label,
