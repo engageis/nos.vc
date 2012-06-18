@@ -10674,15 +10674,16 @@ body #page_content .container .list_title .title p {
 /* line 15, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="passwords"][data-action="new"] #page_content .container .devise_content .links a:hover,
 [data-controller="passwords"][data-action="edit"] #page_content .container .devise_content .links a:hover {
-  color: #5d5d5d;
+  color: #4383d1;
+  text-decoration: underline;
 }
-/* line 19, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 20, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="passwords"][data-action="new"] #page_content .container .devise_content form label,
 [data-controller="passwords"][data-action="edit"] #page_content .container .devise_content form label {
   font-family: "Helvetica Neue";
   font-size: 13px;
 }
-/* line 22, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 23, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="passwords"][data-action="new"] #page_content .container .devise_content .title,
 [data-controller="passwords"][data-action="edit"] #page_content .container .devise_content .title {
   display: inline;
@@ -10693,7 +10694,7 @@ body #page_content .container .list_title .title p {
   margin-left: 0;
   padding-bottom: 40px;
 }
-/* line 26, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 27, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="passwords"][data-action="new"] #page_content .container .devise_content .title h1,
 [data-controller="passwords"][data-action="edit"] #page_content .container .devise_content .title h1 {
   color: #333333;
@@ -10701,7 +10702,7 @@ body #page_content .container .list_title .title p {
   font-size: 28px;
   padding: 5px 0;
 }
-/* line 31, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 32, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="passwords"][data-action="new"] #page_content .container .devise_content .title h2,
 [data-controller="passwords"][data-action="edit"] #page_content .container .devise_content .title h2 {
   color: rgba(51, 51, 51, 0.7);
@@ -10709,49 +10710,49 @@ body #page_content .container .list_title .title p {
   font-size: 18px;
 }
 
-/* line 37, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 38, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .form_login, [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .form_register, [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .login_with_social {
   padding-top: 40px !important;
   padding-bottom: 30px;
   padding-left: 0px;
   padding-right: 0px;
 }
-/* line 42, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 43, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .form_login.actived, [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .form_register.actived, [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .login_with_social.actived {
   padding-top: 17px !important;
 }
-/* line 44, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 45, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .form_login.actived .content_form, [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .form_register.actived .content_form, [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .login_with_social.actived .content_form {
   float: left;
   border: 3px #dfdfdf solid;
   padding: 20px 20px 0 20px;
   background: rgba(237, 237, 237, 0.4);
 }
-/* line 49, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 50, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .form_login h1, [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .form_register h1, [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .login_with_social h1 {
   font-family: Helvetica Neue;
   font-size: 20px;
   padding-bottom: 5px;
   color: #333333;
 }
-/* line 54, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 55, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .form_login h3, [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .form_register h3, [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .login_with_social h3 {
   font-family: "Helvetica Neue";
   font-size: 15px;
   padding-bottom: 15px;
   color: #6f6f6f;
 }
-/* line 60, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 61, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .form_login .input.check label, [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .form_register .input.check label, [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .login_with_social .input.check label {
   font-size: 11px !important;
 }
-/* line 62, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 63, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .form_login label, [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .form_register label, [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .login_with_social label {
   font-family: "Helvetica Neue";
   font-size: 12px;
   width: 220px;
 }
-/* line 66, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 67, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .form_login {
   display: inline;
   float: left;
@@ -10759,31 +10760,31 @@ body #page_content .container .list_title .title p {
   margin-right: 10px;
   width: 280px;
 }
-/* line 68, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 69, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .form_login input[type="checkbox"] {
   float: left;
   margin-right: 5px;
 }
-/* line 71, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 72, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .form_login .content_form {
   padding: 0px 23px 0 23px;
 }
-/* line 73, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 74, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .form_login .content_form p.forgot_link {
   padding: 15px 0 0;
 }
-/* line 75, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 76, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .form_login .content_form p.forgot_link a {
   color: #4383d1;
   font-family: Arial;
   font-size: 13px;
   text-decoration: none;
 }
-/* line 80, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 81, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .form_login .content_form p.forgot_link a:hover {
   color: #e75297;
 }
-/* line 82, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 83, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .form_register {
   display: inline;
   float: left;
@@ -10791,7 +10792,7 @@ body #page_content .container .list_title .title p {
   margin-right: 10px;
   width: 280px;
 }
-/* line 84, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 85, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .login_with_social {
   display: inline;
   float: left;
@@ -10799,20 +10800,20 @@ body #page_content .container .list_title .title p {
   margin-right: 10px;
   width: 340px;
 }
-/* line 86, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 87, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .login_with_social .content_form {
   padding-left: 20px;
 }
-/* line 89, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 90, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .login_with_social .another_social a {
   text-decoration: none;
   font-weight: bold;
 }
-/* line 92, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 93, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .login_with_social .another_social a.first {
   margin-left: -10px;
 }
-/* line 94, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 95, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .login_with_social .another_social a img {
   width: 55px;
   -moz-transition-property: all;
@@ -10824,7 +10825,7 @@ body #page_content .container .list_title .title p {
   -o-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
-/* line 97, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 98, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .login_with_social .another_social a img:hover, [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .login_with_social .another_social a img:focus {
   -moz-transform: scale(1.2, 1.2);
   -webkit-transform: scale(1.2, 1.2);
@@ -10832,12 +10833,12 @@ body #page_content .container .list_title .title p {
   -ms-transform: scale(1.2, 1.2);
   transform: scale(1.2, 1.2);
 }
-/* line 100, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 101, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .login_with_social .another_social a.disabled img {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
   opacity: 0.6;
 }
-/* line 102, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 103, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .login_with_social .another_social a.disabled img:hover, [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .login_with_social .another_social a.disabled img:focus, [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .login_with_social .another_social a.disabled img:active {
   -moz-transform: scale(1, 1);
   -webkit-transform: scale(1, 1);
@@ -10845,7 +10846,7 @@ body #page_content .container .list_title .title p {
   -ms-transform: scale(1, 1);
   transform: scale(1, 1);
 }
-/* line 104, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 105, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .login_with_social .facebook_start {
   margin-bottom: 40px !important;
   clear: both;
@@ -10867,14 +10868,14 @@ body #page_content .container .list_title .title p {
   text-shadow: black 1px 1px 1px;
   text-align: left;
 }
-/* line 119, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 120, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .login_with_social .facebook_start:hover, [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .login_with_social .facebook_start:focus {
   -moz-box-shadow: rgba(0, 0, 0, 0.75) 0px 0px 5px inset !important;
   -webkit-box-shadow: rgba(0, 0, 0, 0.75) 0px 0px 5px inset !important;
   -o-box-shadow: rgba(0, 0, 0, 0.75) 0px 0px 5px inset !important;
   box-shadow: rgba(0, 0, 0, 0.75) 0px 0px 5px inset !important;
 }
-/* line 121, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 122, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .login_with_social .facebook_start:active {
   -moz-box-shadow: black 0px 0px 15px inset !important;
   -webkit-box-shadow: black 0px 0px 15px inset !important;
