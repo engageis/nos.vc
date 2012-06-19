@@ -35,120 +35,181 @@
             color: rgba($ultra_gryn, 0.7)
             font-family: Arial
             font-size: 18px
+
 [data-controller="sessions"][data-namespace="devise"][data-action="new"]
-  .container
-    .form_login, .form_register, .login_with_social
-      padding-top: 40px !important
-      padding-bottom: 30px
-      padding-left: 0px
-      padding-right: 0px
-      font-family: "Helvetica Neue", "Arial", "Sans-Serif"
-      .content_form
+  #page_content
+    .container
+      .sidebar
+        +omega
+        margin-top: 50px
+        margin-left: 0px
+        width: 345px
         float: left
-        border: 1px #E7E6E1 solid
-        padding: 17px 23px 0 23px
-        background: #F9F9F9
-        @include border-radius(15px)
-        form
-          padding: 0px
-          float: left
-          .input
-            label
-              text-align: left
-              color: #5d5d5d
-            input
-              margin-left: 0px
-              width: 96%
-          .check
-            margin: 6px 0
-            #user_remember_me, #user_newsletter
-              width: auto
-            label
-              width: 90%
-              line-height: 14px
-              color: #5d5d5d
-              font-family: "Helvetica Neue", "Arial", "Sans-serif"
-              padding-top: 3px
-          .bootstrap-twitter
-            margin: 10px 0px
-            width: 100%
-            float: left
-      h1
-        font-family: "Dosis-Regular"
-        font-size: 24px
-        padding-bottom: 5px
-        color: #77a0da
-        +text-shadow(white, 1px, 1px, 1px)
-      h3
-        font-family: "Dosis-Regular"
-        font-size: 15px
-        padding-bottom: 15px
-        color: #5d5d5d
-      .input.check
-        label
-          font-size: 11px !important
-      label
-        font-family: "Helvetica Neue"
-        font-size: 12px
-        width: 220px
-    .form_login
-      +grid(5)
-      input[type="checkbox"]
-        float: left
-        margin-right: 5px
-    .new_session
-      .content_form 
-        border: none
-        background: none 
-        p.forgot_link
-          margin-top: 5px
-          float: left
-          a
-            color: $blue
-            font-family: "Helvetica Neue", "Arial", "Sans-serif"
-            font-size: 13px
-            text-decoration: none
-            &:hover
-              color: $pink
-    .form_register
-      +grid(5)
-    .login_with_social
-      +grid(6)
-      .content_form  
-        background: none
-        border: 0px
-        .another_social
-          a
-            text-decoration: none
-            font-weight: bold
-            &.first
-              margin-left: -10px
-            img
-              width: 55px
-              +transition(all, 0.3s)
-            img:hover, img:focus
-              +scale(1.2)
-          a.disabled
-            img
-              +opacity(0.6)
-            img:hover, img:focus, img:active
-              +scale(1)      
-        .facebook_start
-          margin-bottom: 40px !important
-          clear: both
-          +border-radius(4px)
-          width: 246px
-          height: 27px
-          background: image-url("login_with_facebook_button310x60.png") left top no-repeat
+        padding-top: 40px
+      .main
+        +grid(12)
+        width: 534px
+        background: #f9f9f9
+        margin: 0 0 30px 0
+        padding: 0 40px 20px
+        span
+          color: #5D5D5D
+          font-family: "Dosis-ExtraLight"
+          font-size: 41px
+          letter-spacing: -1px
+          line-height: 46px
+          margin: 40px auto
+          +text-shadow(white 1px 1px 1px)
+          width: 87%
+          text-align: center
           display: block
-          padding: 33px 0 0 64px
-          color: white
-          font-size: 13px
-          font-family: Arial
-          text-decoration: none
-          +text-shadow(black, 1px, 1px, 1px)
-          text-align: left
-          &:hover, &:focus
-            +box-shadow(rgba(black,0.75) 0px 0px 5px inset !important)
-          &:active
-            +box-shadow(rgba(black, 1) 0px 0px 15px inset !important)      
+        .login_with_social
+          padding: 0px 50px 0 0
+          h3
+            border-bottom: dashed 1px #d8d3d3
+            padding-bottom: 10px
+            margin-bottom: 40px
+            margin-top: 30px
+            width: 100%
+            font-family: "Dosis-Regular"
+            color: #5d5d5d
+            font-size: 24px
+            text-transform: uppercase
+          .content_form  
+            background: none
+            border: 0px
+            width: 100%
+            padding: 10px 0 0
+            border-bottom: dashed 1px #ccc
+            float: left 
+            h2
+              float: left
+              font-family: "Dosis-Light"
+              font-size: 21px
+              line-height: 24px
+              text-align: right
+              width: 144px
+              color: #77a0da
+            p
+              float: left
+              width: 125px
+              clear: both
+              font-family: "Dosis-Regular"
+              color: #5D5D5D
+              font-size: 16px
+              margin-bottom: 70px
+              text-align: right
+              margin-top: 6px
+              margin-left: 18px
+            .facebook_start
+              +border-radius(4px)
+              width: 230px
+              height: 27px
+              margin-top: -40px
+              background: image-url("login_with_facebook_button310x60.png") left top no-repeat
+              display: block
+              padding: 33px 0 0 64px
+              color: white
+              font-size: 13px
+              font-family: Arial
+              text-decoration: none
+              +text-shadow(black, 1px, 1px, 1px)
+              text-align: left
+              float: right
+              &:hover, &:focus
+                +box-shadow(rgba(black,0.75) 0px 0px 5px inset !important)
+              &:active
+                +box-shadow(rgba(black, 1) 0px 0px 15px inset !important)  
+            .another_social
+              float: left
+              margin-top: -46px
+              margin-left: 50px
+              a
+                text-decoration: none
+                font-weight: bold
+                &.first
+                  margin-left: -10px
+                img
+                  width: 55px
+                  +transition(all, 0.3s)
+                img:hover, img:focus
+                  +scale(1.2)
+              a.disabled
+                img
+                  +opacity(0.6)
+                img:hover, img:focus, img:active
+                  +scale(1)          
+        .form_login, .form_register
+          padding-top: 40px
+          padding-bottom: 30px
+          padding-left: 0px
+          padding-right: 0px
+          font-family: "Helvetica Neue", "Arial", "Sans-Serif"
+          .content_form
+            float: left
+            border: 1px #E7E6E1 solid
+            padding: 17px 23px 0 23px
+            background: #F9F9F9
+            form
+              padding: 0px
+              float: left
+              .input
+                label
+                  text-align: left
+                  color: #5d5d5d
+                input
+                  margin-left: 0px
+                  width: 96%
+              .check
+                margin: 6px 0
+                #user_remember_me, #user_newsletter
+                  width: auto
+                label
+                  width: 90%
+                  line-height: 14px
+                  color: #5d5d5d
+                  font-family: "Helvetica Neue", "Arial", "Sans-serif"
+                  padding-top: 3px
+              .bootstrap-twitter
+                margin: 10px 0px
+                width: 100%
+                float: left
+          h1
+            font-family: "Dosis-Regular"
+            font-size: 24px
+            padding-bottom: 5px
+            color: #77a0da
+            +text-shadow(white, 1px, 1px, 1px)
+          h3
+            font-family: "Dosis-Regular"
+            font-size: 15px
+            padding-bottom: 15px
+            color: #5d5d5d
+          .input.check
+            label
+              font-size: 11px !important
+          label
+            font-family: "Helvetica Neue"
+            font-size: 12px
+            width: 220px
+        .form_login
+          +grid(5)
+          input[type="checkbox"]
+            float: left
+            margin-right: 5px
+        .new_session
+          .content_form 
+            border: none
+            background: none 
+            p.forgot_link
+              margin-top: 5px
+              float: left
+              a
+                color: $blue
+                font-family: "Helvetica Neue", "Arial", "Sans-serif"
+                font-size: 13px
+                text-decoration: none
+                &:hover
+                  color: $pink
+        .form_register
+          +grid(5)
