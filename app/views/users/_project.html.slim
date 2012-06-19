@@ -8,45 +8,42 @@ script type="text/template" id="empty_user_project_template"
     p.empty= t('users.projects.no_projects_current_user_html', link: link_to(t('site.base_url'), t('site.base_url') )).html_safe
 
 script type="text/template" id="user_project_template"
-  .small_project_land
-    | <% if(expired) { %>
-    .status_image
-      a href="<%= url %>"
-        |<% if(successful) { %>
-        = image_tag "successful.#{I18n.locale}.png"
-        |<% } else if(waiting_confirmation) { %>
-        = image_tag "waiting_confirmation.#{I18n.locale}.png"
-        |<% } else { %>
-        = image_tag "not_successful.#{I18n.locale}.png"
-        |<% } %>
-    | <% } %>
-    .cover
-      p.black_box <%= category['name'] %>
-      img[src="<%= image %>" width="218px" height="175px"]
-    .project_infos
-      .title
+  .project[itemscope itemtype="http://schema.org/CreativeWork" class=(custom_class if defined?(custom_class))]
+    meta[itemprop="dateCreated" content="<%= created_at %>"]
+    .box
+      | <% if(can_back) { %>
+      .open= t('projects.project.open')
+      | <% } else { %>
+      .closed= t('projects.project.closed')
+      |<% } %>
+      .info_bar
+        ul
+          li
+            h6 <%= time_to_go['time'] %>
+            p.little <%= time_to_go['unit'] %> <%= remaining_text %>
+          li
+            | <% if(!successful && in_time) { %>
+            p <%= display_missing_participants_to_box %>
+            | <% } else { %>
+            p[class="<%= class_status %>"] <%= display_status_to_box %>
+            | <% } %>
+      .cover
+        p.black_box
+          | <%= category.name %>
+        a href="<%= url %>"
+          img src="<%= image %>" itemprop="image"
+      .project_content
         h4
-          a href='<%= url %>'
+          a href="<%= url %>" itemprop="url"
             | <%= name %>
-        p.author== "#{t('project_by')} <%= user['name'] %>"
-        p.headline <%= headline %>
-      .status_bar
-        .progress style="width: <%= display_progress %>%;"
-      ul
-        li
-          |<% if(time_to_go['time'] > 0){ %>
-          h6 <%= time_to_go['time'] %> <%= time_to_go['unit'] %>
-          p <%= remaining_text %>
-          |<% } else { %>
-          h6 <%= display_status_to_box %>
-          p <%= display_expires_at %>
-          |<% } %>
-        li
-          h6 <%= progress %>%
-          p= t('projects.project.backed')
-        li
-          h6 <%= pledged %>
-          p= t('projects.project.reached')
+        p.author
+          = "#{t('projects.box.by')} "
+          span[itemprop="author"] <%= user['name'] %>
+        p.description[itemprop="description"]
+          | <%= headline %>
+        p.where
+          | <%= when_short %>
+
     - if current_user == @user
       .tell_about
         p= t('tell_about_this_project')
