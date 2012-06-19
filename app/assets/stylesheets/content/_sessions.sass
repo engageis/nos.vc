@@ -10,7 +10,7 @@
           padding: 15px 0 20px 15px
           a
             color: $blue
-            font-family: Arial
+            font-family: "Helvetica Neue", "Arial", "Sans-serif"
             font-size: 13px
             text-decoration: none
             &:hover
@@ -21,13 +21,14 @@
           label
             font-family: "Helvetica Neue"
             font-size: 13px
+            color: #5d5d5d
         .title
           +grid(16)
           +alpha
           padding-bottom: 40px
           h1
             color: $ultra_gryn
-            font-family: "Helvetica Neue"
+            font-family: "Dosis-Regular"
             font-size: 28px
             padding: 5px 0
           h2
@@ -41,6 +42,7 @@
       padding-bottom: 30px
       padding-left: 0px
       padding-right: 0px
+      font-family: "Helvetica Neue", "Arial", "Sans-Serif"
       &.actived
         padding-top: 17px !important
         .content_form
@@ -48,16 +50,41 @@
           border: 3px $df_gryn solid
           padding: 20px 20px 0 20px
           background: rgba($ed_gryn, 0.4)
+          form
+            padding: 0px
+            float: left
+            .input
+              label
+                text-align: left
+              input
+                margin-left: 0px
+                width: 96%
+            .check  
+              margin: 6px 0
+              #user_remember_me
+                width: auto
+              label
+                width: 90%
+                line-height: 14px
+                color: #5d5d5d
+                font-family: "Helvetica Neue", "Arial", "Sans-serif"
+                padding-top: 3px
+            .bootstrap-twitter
+              margin: 10px 0px
+              width: 100%
+              float: left
+
       h1
-        font-family: Helvetica Neue
-        font-size: 20px
+        font-family: "Dosis-Regular"
+        font-size: 24px
         padding-bottom: 5px
-        color: $ultra_gryn
+        color: #77a0da
+        +text-shadow(white, 1px, 1px, 1px)
       h3
-        font-family: "Helvetica Neue"
+        font-family: "Dosis-Regular"
         font-size: 15px
         padding-bottom: 15px
-        color: $_6f_gryn
+        color: #5d5d5d
       .input.check
         label
           font-size: 11px !important
@@ -73,10 +100,11 @@
       .content_form
         padding: 0px 23px 0 23px
         p.forgot_link
-          padding: 15px 0 0
+          margin-top: 5px
+          float: left
           a
             color: $blue
-            font-family: Arial
+            font-family: "Helvetica Neue", "Arial", "Sans-serif"
             font-size: 13px
             text-decoration: none
             &:hover
