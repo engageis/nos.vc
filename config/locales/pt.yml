@@ -342,9 +342,9 @@ pt:
       title: "Muito obrigado"
   project:
     start:
-      email_subject: "O seu projeto foi recebido pela equipe do Catarse"
-      email_text: "Muito obrigado por confiar no Catarse e enviar seu projeto pra gente :)<br><br>A gente sabe que você deve querer uma resposta super rápido, mas, confesso, levamos até 4 dias úteis para responder cada um dos projetos, ok? Isso porque temos pouca gente na equipe e vários projetos sendo enviados. De qualquer forma, pode sim acontecer de respondermos antes. Então, fique esperto com a sua caixa de entrada.<br><br>Enquanto isso, vale a pena conhecer os projetos que estão no ar (<a href='%{explore_link}' style='color: #E75297 !important;'>%{explore_link}</a>) e - se gostar de algum deles- apoiar! Essa é a melhor maneira de mostrar que acredita na cultura do crowdfunding no Brasil e fomentar o ecossistema que está se formando ao redor do Catarse.<br><br>Além é claro de se inspirar para o seu projeto...<br><br>Fique ligado em nossas novidades no <a href='%{facebook}' style='color: #E75297 !important;'>Facebook</a> e conhecer mais sobre o Catarse lendo nossos posts no <a href='%{blog}' style='color: #E75297 !important;'>blog</a>.<br><br>Se ficou com alguma dúvida, entre em contato conosco no: %{email}"
-      notification_text: "O seu projeto foi recebido pela equipe do Catarse"
+      email_subject: "Yeah! Seu encontro foi recebido!"
+      email_text: "Eu sou o Mauro do Nós.vc e vou te ajudar a fazer este encontro acontecer.<br><br>Mas, antes, eu preciso ler o que você criou. O que ainda não fiz.<br><br>Pode ser que eu demore alguns dias. Pode ser que seja rápido.<br><br>É tudo uma questão de sorte e de quantas pessoas estão criando encontros agora.<br><br>Se tudo estiver ok, logo, logo seu encontro vai pro ar.<br><br>Por enquanto, você pode explorar outros encontros. (<a href='%{explore_link}' style='color: #1aa79c !important;'>%{explore_link}</a>)<br><br>Ler nosso<a href='%{blog}' style='color: #1aa79c !important;'>blog</a> e nosso <a href='%{help}' style='color: #1aa79c !important;'>Help!</a>, que tem várias dicas quentes.<br><br>E, ainda, curtir nosso <a href='%{facebook}' style='color: #1aa79c !important;'>facebook</a> e seguir nosso <a href='%{twitter}' style='color: #1aa79c !important;'>twitter</a>.<br><br>Qualquer dúvida, só vir falar comigo.<br><br>Grande abraço!<br><br>Mauro."
+      notification_text: "Yeah! Seu encontro foi recebido!"
     finish:
       successful:
         email_subject: "Uhuu! O projeto que você apoiou foi bem-sucedido no Catarse!"
