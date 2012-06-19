@@ -10491,45 +10491,45 @@ body #page_content .container .list_title .title p {
   margin-bottom: 20px;
   border-bottom: 1px #d8d3d3 dashed;
 }
-/* line 27, ../../app/assets/stylesheets/content/_explore.sass */
+/* line 28, ../../app/assets/stylesheets/content/_explore.sass */
 [data-action="index"][data-controller="explore"] #page_content .container .sidebar .content section.highlights ul li {
   border-top: 1px #d8d3d3 dashed;
 }
-/* line 29, ../../app/assets/stylesheets/content/_explore.sass */
+/* line 30, ../../app/assets/stylesheets/content/_explore.sass */
 [data-action="index"][data-controller="explore"] #page_content .container .sidebar .content section.highlights ul li a {
   color: #5d5d5d;
   font-size: 24px;
   font-family: Dosis-Light;
   display: block;
-  padding: 15px 15px;
+  padding: 20px 15px;
   text-indent: 40px;
   text-decoration: none;
   background-repeat: no-repeat;
   background-position: 5px;
   text-shadow: white 1px 1px 0px;
 }
-/* line 40, ../../app/assets/stylesheets/content/_explore.sass */
+/* line 41, ../../app/assets/stylesheets/content/_explore.sass */
 [data-action="index"][data-controller="explore"] #page_content .container .sidebar .content section.highlights ul li a:hover, [data-action="index"][data-controller="explore"] #page_content .container .sidebar .content section.highlights ul li a.selected, [data-action="index"][data-controller="explore"] #page_content .container .sidebar .content section.highlights ul li a.selected_categorie {
   background-color: #f9f9f9;
   color: #4383d1;
 }
-/* line 44, ../../app/assets/stylesheets/content/_explore.sass */
+/* line 45, ../../app/assets/stylesheets/content/_explore.sass */
 [data-action="index"][data-controller="explore"] #page_content .container .sidebar .content section.highlights ul li.recommended a {
   background-image: url('/images/nosvc/icon-selected.png?1339700781');
 }
-/* line 47, ../../app/assets/stylesheets/content/_explore.sass */
+/* line 48, ../../app/assets/stylesheets/content/_explore.sass */
 [data-action="index"][data-controller="explore"] #page_content .container .sidebar .content section.highlights ul li.recent a {
   background-image: url('/images/nosvc/icon-recents.png?1339700671');
 }
-/* line 50, ../../app/assets/stylesheets/content/_explore.sass */
+/* line 51, ../../app/assets/stylesheets/content/_explore.sass */
 [data-action="index"][data-controller="explore"] #page_content .container .sidebar .content section.highlights ul li.successful a {
   background-image: url('/images/nosvc/icon-successful.png?1339705258');
 }
-/* line 53, ../../app/assets/stylesheets/content/_explore.sass */
+/* line 54, ../../app/assets/stylesheets/content/_explore.sass */
 [data-action="index"][data-controller="explore"] #page_content .container .sidebar .content section.highlights ul li.expiring a {
   background-image: url('/images/nosvc/icon-expiring.png?1339700736');
 }
-/* line 55, ../../app/assets/stylesheets/content/_explore.sass */
+/* line 56, ../../app/assets/stylesheets/content/_explore.sass */
 [data-action="index"][data-controller="explore"] #page_content .container .sidebar .content section.categories {
   display: inline;
   float: left;
@@ -10541,7 +10541,7 @@ body #page_content .container .list_title .title p {
   margin: 0;
   padding: 50px 0px 20px;
 }
-/* line 61, ../../app/assets/stylesheets/content/_explore.sass */
+/* line 62, ../../app/assets/stylesheets/content/_explore.sass */
 [data-action="index"][data-controller="explore"] #page_content .container .sidebar .content section.categories h1 {
   font-family: "Dosis-ExtraLight";
   font-size: 41px;
@@ -10553,11 +10553,11 @@ body #page_content .container .list_title .title p {
   margin: auto;
   margin-bottom: 35px;
 }
-/* line 71, ../../app/assets/stylesheets/content/_explore.sass */
+/* line 72, ../../app/assets/stylesheets/content/_explore.sass */
 [data-action="index"][data-controller="explore"] #page_content .container .sidebar .content section.categories h1 span {
   color: #83b1df;
 }
-/* line 73, ../../app/assets/stylesheets/content/_explore.sass */
+/* line 74, ../../app/assets/stylesheets/content/_explore.sass */
 [data-action="index"][data-controller="explore"] #page_content .container .sidebar .content section.categories h2 {
   font-family: "Dosis-Light";
   font-size: 61px;
@@ -10567,7 +10567,7 @@ body #page_content .container .list_title .title p {
   height: 70px;
   text-align: center;
 }
-/* line 81, ../../app/assets/stylesheets/content/_explore.sass */
+/* line 82, ../../app/assets/stylesheets/content/_explore.sass */
 [data-action="index"][data-controller="explore"] #page_content .container .sidebar .content section.categories .list_categories {
   background: white;
   border-top: 1px dashed #d8d3d3;
@@ -10579,7 +10579,7 @@ body #page_content .container .list_title .title p {
   font-family: "Dosis-Regular";
   font-size: 18px;
 }
-/* line 91, ../../app/assets/stylesheets/content/_explore.sass */
+/* line 92, ../../app/assets/stylesheets/content/_explore.sass */
 [data-action="index"][data-controller="explore"] #page_content .container .sidebar .content section.categories .list_categories a.more_categories {
   background-image: url('/images/nosvc/more-categories.gif?1339793760');
   height: 19px;
@@ -10591,23 +10591,23 @@ body #page_content .container .list_title .title p {
   margin-top: 10px;
   float: right;
 }
-/* line 101, ../../app/assets/stylesheets/content/_explore.sass */
+/* line 102, ../../app/assets/stylesheets/content/_explore.sass */
 [data-action="index"][data-controller="explore"] #page_content .container .sidebar .content section.categories .list_categories ul {
   padding: 0 10px 0 30px;
 }
-/* line 103, ../../app/assets/stylesheets/content/_explore.sass */
+/* line 104, ../../app/assets/stylesheets/content/_explore.sass */
 [data-action="index"][data-controller="explore"] #page_content .container .sidebar .content section.categories .list_categories ul li {
-  margin-right: 25px;
+  margin-right: 18px;
   float: left;
 }
-/* line 106, ../../app/assets/stylesheets/content/_explore.sass */
+/* line 107, ../../app/assets/stylesheets/content/_explore.sass */
 [data-action="index"][data-controller="explore"] #page_content .container .sidebar .content section.categories .list_categories ul li a {
   color: #5d5d5d;
   text-decoration: none;
   line-height: 38px;
   padding: 0 4px;
 }
-/* line 111, ../../app/assets/stylesheets/content/_explore.sass */
+/* line 112, ../../app/assets/stylesheets/content/_explore.sass */
 [data-action="index"][data-controller="explore"] #page_content .container .sidebar .content section.categories .list_categories ul li a:hover, [data-action="index"][data-controller="explore"] #page_content .container .sidebar .content section.categories .list_categories ul li a.selected {
   color: white;
   background: #83b1df;
@@ -10619,23 +10619,23 @@ body #page_content .container .list_title .title p {
   -khtml-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 116, ../../app/assets/stylesheets/content/_explore.sass */
+/* line 117, ../../app/assets/stylesheets/content/_explore.sass */
 [data-action="index"][data-controller="explore"] #page_content .container .sidebar .content section.categories .list_categories ul li.other_categorie {
   display: none;
 }
-/* line 118, ../../app/assets/stylesheets/content/_explore.sass */
+/* line 119, ../../app/assets/stylesheets/content/_explore.sass */
 [data-action="index"][data-controller="explore"] #page_content .container .main {
   margin-top: 20px;
 }
-/* line 120, ../../app/assets/stylesheets/content/_explore.sass */
+/* line 121, ../../app/assets/stylesheets/content/_explore.sass */
 [data-action="index"][data-controller="explore"] #page_content .container .main #explore_results {
   padding-bottom: 20px;
 }
-/* line 123, ../../app/assets/stylesheets/content/_explore.sass */
+/* line 124, ../../app/assets/stylesheets/content/_explore.sass */
 [data-action="index"][data-controller="explore"] #page_content .container .main #explore_results .results .empty {
-  font-family: "Dosis-Regular";
+  font-family: "Helvetica Neue", "Arial", "Sans-serif";
   color: #5d5d5d;
-  font-size: 18px;
+  font-size: 14px;
   width: 534px;
   float: right;
   text-align: center;
@@ -10643,12 +10643,12 @@ body #page_content .container .list_title .title p {
   padding: 0 40px 30px;
   text-shadow: white 1px 1px 0px;
 }
-/* line 135, ../../app/assets/stylesheets/content/_explore.sass */
+/* line 136, ../../app/assets/stylesheets/content/_explore.sass */
 [data-action="index"][data-controller="explore"] #page_content .container .main #explore_results .results ul.collection_list li {
   clear: both;
 }
 
-/* line 5, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 6, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="passwords"][data-action="new"] #page_content .container .devise_content,
 [data-controller="passwords"][data-action="edit"] #page_content .container .devise_content {
   display: inline;
@@ -10658,12 +10658,12 @@ body #page_content .container .list_title .title p {
   width: 940px;
   padding-top: 15px;
 }
-/* line 8, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 9, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="passwords"][data-action="new"] #page_content .container .devise_content .links,
 [data-controller="passwords"][data-action="edit"] #page_content .container .devise_content .links {
-  padding: 15px 0 20px;
+  padding: 15px 0 20px 15px;
 }
-/* line 10, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 11, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="passwords"][data-action="new"] #page_content .container .devise_content .links a,
 [data-controller="passwords"][data-action="edit"] #page_content .container .devise_content .links a {
   color: #4383d1;
@@ -10671,18 +10671,20 @@ body #page_content .container .list_title .title p {
   font-size: 13px;
   text-decoration: none;
 }
-/* line 15, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 16, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="passwords"][data-action="new"] #page_content .container .devise_content .links a:hover,
 [data-controller="passwords"][data-action="edit"] #page_content .container .devise_content .links a:hover {
-  color: #e75297;
+  color: #4383d1;
+  text-decoration: underline;
+  font-size: 13px;
 }
-/* line 19, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 21, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="passwords"][data-action="new"] #page_content .container .devise_content form label,
 [data-controller="passwords"][data-action="edit"] #page_content .container .devise_content form label {
   font-family: "Helvetica Neue";
   font-size: 13px;
 }
-/* line 22, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 24, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="passwords"][data-action="new"] #page_content .container .devise_content .title,
 [data-controller="passwords"][data-action="edit"] #page_content .container .devise_content .title {
   display: inline;
@@ -10693,7 +10695,7 @@ body #page_content .container .list_title .title p {
   margin-left: 0;
   padding-bottom: 40px;
 }
-/* line 26, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 28, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="passwords"][data-action="new"] #page_content .container .devise_content .title h1,
 [data-controller="passwords"][data-action="edit"] #page_content .container .devise_content .title h1 {
   color: #333333;
@@ -10701,7 +10703,7 @@ body #page_content .container .list_title .title p {
   font-size: 28px;
   padding: 5px 0;
 }
-/* line 31, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 33, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="passwords"][data-action="new"] #page_content .container .devise_content .title h2,
 [data-controller="passwords"][data-action="edit"] #page_content .container .devise_content .title h2 {
   color: rgba(51, 51, 51, 0.7);
@@ -10709,47 +10711,49 @@ body #page_content .container .list_title .title p {
   font-size: 18px;
 }
 
-/* line 37, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 39, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .form_login, [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .form_register, [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .login_with_social {
   padding-top: 40px !important;
   padding-bottom: 30px;
+  padding-left: 0px;
+  padding-right: 0px;
 }
-/* line 40, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 44, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .form_login.actived, [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .form_register.actived, [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .login_with_social.actived {
   padding-top: 17px !important;
 }
-/* line 42, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 46, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .form_login.actived .content_form, [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .form_register.actived .content_form, [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .login_with_social.actived .content_form {
   float: left;
   border: 3px #dfdfdf solid;
   padding: 20px 20px 0 20px;
   background: rgba(237, 237, 237, 0.4);
 }
-/* line 47, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 51, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .form_login h1, [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .form_register h1, [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .login_with_social h1 {
   font-family: Helvetica Neue;
   font-size: 20px;
   padding-bottom: 5px;
   color: #333333;
 }
-/* line 52, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 56, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .form_login h3, [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .form_register h3, [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .login_with_social h3 {
   font-family: "Helvetica Neue";
   font-size: 15px;
   padding-bottom: 15px;
   color: #6f6f6f;
 }
-/* line 58, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 62, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .form_login .input.check label, [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .form_register .input.check label, [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .login_with_social .input.check label {
   font-size: 11px !important;
 }
-/* line 60, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 64, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .form_login label, [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .form_register label, [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .login_with_social label {
   font-family: "Helvetica Neue";
   font-size: 12px;
   width: 220px;
 }
-/* line 64, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 68, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .form_login {
   display: inline;
   float: left;
@@ -10757,31 +10761,31 @@ body #page_content .container .list_title .title p {
   margin-right: 10px;
   width: 280px;
 }
-/* line 66, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 70, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .form_login input[type="checkbox"] {
   float: left;
   margin-right: 5px;
 }
-/* line 69, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 73, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .form_login .content_form {
   padding: 0px 23px 0 23px;
 }
-/* line 71, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 75, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .form_login .content_form p.forgot_link {
   padding: 15px 0 0;
 }
-/* line 73, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 77, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .form_login .content_form p.forgot_link a {
   color: #4383d1;
   font-family: Arial;
   font-size: 13px;
   text-decoration: none;
 }
-/* line 78, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 82, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .form_login .content_form p.forgot_link a:hover {
   color: #e75297;
 }
-/* line 80, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 84, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .form_register {
   display: inline;
   float: left;
@@ -10789,7 +10793,7 @@ body #page_content .container .list_title .title p {
   margin-right: 10px;
   width: 280px;
 }
-/* line 82, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 86, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .login_with_social {
   display: inline;
   float: left;
@@ -10797,20 +10801,20 @@ body #page_content .container .list_title .title p {
   margin-right: 10px;
   width: 340px;
 }
-/* line 84, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 88, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .login_with_social .content_form {
   padding-left: 20px;
 }
-/* line 87, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 91, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .login_with_social .another_social a {
   text-decoration: none;
   font-weight: bold;
 }
-/* line 90, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 94, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .login_with_social .another_social a.first {
   margin-left: -10px;
 }
-/* line 92, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 96, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .login_with_social .another_social a img {
   width: 55px;
   -moz-transition-property: all;
@@ -10822,7 +10826,7 @@ body #page_content .container .list_title .title p {
   -o-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
-/* line 95, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 99, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .login_with_social .another_social a img:hover, [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .login_with_social .another_social a img:focus {
   -moz-transform: scale(1.2, 1.2);
   -webkit-transform: scale(1.2, 1.2);
@@ -10830,12 +10834,12 @@ body #page_content .container .list_title .title p {
   -ms-transform: scale(1.2, 1.2);
   transform: scale(1.2, 1.2);
 }
-/* line 98, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 102, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .login_with_social .another_social a.disabled img {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
   opacity: 0.6;
 }
-/* line 100, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 104, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .login_with_social .another_social a.disabled img:hover, [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .login_with_social .another_social a.disabled img:focus, [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .login_with_social .another_social a.disabled img:active {
   -moz-transform: scale(1, 1);
   -webkit-transform: scale(1, 1);
@@ -10843,7 +10847,7 @@ body #page_content .container .list_title .title p {
   -ms-transform: scale(1, 1);
   transform: scale(1, 1);
 }
-/* line 102, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 106, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .login_with_social .facebook_start {
   margin-bottom: 40px !important;
   clear: both;
@@ -10865,14 +10869,14 @@ body #page_content .container .list_title .title p {
   text-shadow: black 1px 1px 1px;
   text-align: left;
 }
-/* line 117, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 121, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .login_with_social .facebook_start:hover, [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .login_with_social .facebook_start:focus {
   -moz-box-shadow: rgba(0, 0, 0, 0.75) 0px 0px 5px inset !important;
   -webkit-box-shadow: rgba(0, 0, 0, 0.75) 0px 0px 5px inset !important;
   -o-box-shadow: rgba(0, 0, 0, 0.75) 0px 0px 5px inset !important;
   box-shadow: rgba(0, 0, 0, 0.75) 0px 0px 5px inset !important;
 }
-/* line 119, ../../app/assets/stylesheets/content/_sessions.sass */
+/* line 123, ../../app/assets/stylesheets/content/_sessions.sass */
 [data-controller="sessions"][data-namespace="devise"][data-action="new"] .container .login_with_social .facebook_start:active {
   -moz-box-shadow: black 0px 0px 15px inset !important;
   -webkit-box-shadow: black 0px 0px 15px inset !important;
