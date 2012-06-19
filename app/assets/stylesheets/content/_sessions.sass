@@ -43,37 +43,36 @@
       padding-left: 0px
       padding-right: 0px
       font-family: "Helvetica Neue", "Arial", "Sans-Serif"
-      &.actived
-        padding-top: 17px !important
-        .content_form
+      .content_form
+        float: left
+        border: 1px #E7E6E1 solid
+        padding: 17px 23px 0 23px
+        background: #F9F9F9
+        @include border-radius(15px)
+        form
+          padding: 0px
           float: left
-          border: 3px $df_gryn solid
-          padding: 20px 20px 0 20px
-          background: rgba($ed_gryn, 0.4)
-          form
-            padding: 0px
+          .input
+            label
+              text-align: left
+              color: #5d5d5d
+            input
+              margin-left: 0px
+              width: 96%
+          .check
+            margin: 6px 0
+            #user_remember_me, #user_newsletter
+              width: auto
+            label
+              width: 90%
+              line-height: 14px
+              color: #5d5d5d
+              font-family: "Helvetica Neue", "Arial", "Sans-serif"
+              padding-top: 3px
+          .bootstrap-twitter
+            margin: 10px 0px
+            width: 100%
             float: left
-            .input
-              label
-                text-align: left
-              input
-                margin-left: 0px
-                width: 96%
-            .check  
-              margin: 6px 0
-              #user_remember_me
-                width: auto
-              label
-                width: 90%
-                line-height: 14px
-                color: #5d5d5d
-                font-family: "Helvetica Neue", "Arial", "Sans-serif"
-                padding-top: 3px
-            .bootstrap-twitter
-              margin: 10px 0px
-              width: 100%
-              float: left
-
       h1
         font-family: "Dosis-Regular"
         font-size: 24px
@@ -97,8 +96,10 @@
       input[type="checkbox"]
         float: left
         margin-right: 5px
-      .content_form
-        padding: 0px 23px 0 23px
+    .new_session
+      .content_form 
+        border: none
+        background: none 
         p.forgot_link
           margin-top: 5px
           float: left
@@ -113,40 +114,41 @@
       +grid(5)
     .login_with_social
       +grid(6)
-      .content_form
-        padding-left: 20px
-      .another_social
-        a
+      .content_form  
+        background: none
+        border: 0px
+        .another_social
+          a
+            text-decoration: none
+            font-weight: bold
+            &.first
+              margin-left: -10px
+            img
+              width: 55px
+              +transition(all, 0.3s)
+            img:hover, img:focus
+              +scale(1.2)
+          a.disabled
+            img
+              +opacity(0.6)
+            img:hover, img:focus, img:active
+              +scale(1)      
+        .facebook_start
+          margin-bottom: 40px !important
+          clear: both
+          +border-radius(4px)
+          width: 246px
+          height: 27px
+          background: image-url("login_with_facebook_button310x60.png") left top no-repeat
+          display: block
+          padding: 33px 0 0 64px
+          color: white
+          font-size: 13px
+          font-family: Arial
           text-decoration: none
-          font-weight: bold
-          &.first
-            margin-left: -10px
-          img
-            width: 55px
-            +transition(all, 0.3s)
-          img:hover, img:focus
-            +scale(1.2)
-        a.disabled
-          img
-            +opacity(0.6)
-          img:hover, img:focus, img:active
-            +scale(1)      
-      .facebook_start
-        margin-bottom: 40px !important
-        clear: both
-        +border-radius(4px)
-        width: 246px
-        height: 27px
-        background: image-url("login_with_facebook_button310x60.png") left top no-repeat
-        display: block
-        padding: 33px 0 0 64px
-        color: white
-        font-size: 13px
-        font-family: Arial
-        text-decoration: none
-        +text-shadow(black, 1px, 1px, 1px)
-        text-align: left
-        &:hover, &:focus
-          +box-shadow(rgba(black,0.75) 0px 0px 5px inset !important)
-        &:active
-          +box-shadow(rgba(black, 1) 0px 0px 15px inset !important)      
+          +text-shadow(black, 1px, 1px, 1px)
+          text-align: left
+          &:hover, &:focus
+            +box-shadow(rgba(black,0.75) 0px 0px 5px inset !important)
+          &:active
+            +box-shadow(rgba(black, 1) 0px 0px 15px inset !important)      
