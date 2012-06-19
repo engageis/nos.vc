@@ -13778,6 +13778,10 @@ body #page_content .container .list_title .title p {
   height: 80px;
 }
 /* line 101, ../../app/assets/stylesheets/resources/projects/_new.sass */
+[data-controller="projects"][data-action="new"] #page_content .container .start_content .main .formtastic.project input.loading {
+  background: url('/images/loading.gif?1339595878') no-repeat 99% 8px;
+}
+/* line 103, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .main .formtastic.project .inline-hints {
   font-size: 13px;
   font-family: "Helvetica Neue", "Arial", "Sans-serif";
@@ -13788,50 +13792,50 @@ body #page_content .container .list_title .title p {
   margin-right: 20px;
   width: 66%;
 }
-/* line 110, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 112, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .main .remove_reward_wrapper {
   height: 30px;
 }
-/* line 112, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 114, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .main .remove_reward_wrapper a {
   font-family: Arial;
   font-size: 15px;
 }
-/* line 115, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 117, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .main #add_reward_wrapper {
   margin-bottom: 20px;
 }
-/* line 117, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 119, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .main #add_reward_wrapper a {
   font-family: Arial;
   font-size: 15px;
 }
-/* line 120, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 122, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .main .reward {
   padding-top: 10px;
   padding-bottom: 10px;
   margin-bottom: 10px;
 }
-/* line 124, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 126, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .main .reward .left {
   float: left;
   width: 30%;
   margin-right: 5%;
 }
-/* line 128, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 130, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .main .reward .left input {
   width: 99%;
 }
-/* line 130, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 132, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .main .reward .right {
   float: left;
   width: 30%;
 }
-/* line 133, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 135, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .main .reward .right input {
   width: 99%;
 }
-/* line 135, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 137, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .sidebar {
   margin-right: 0;
   border: none;
@@ -13840,7 +13844,7 @@ body #page_content .container .list_title .title p {
   width: 345px;
   float: left;
 }
-/* line 142, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 144, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .sidebar h3 {
   font-family: "Dosis-Light";
   font-size: 24px;
@@ -13851,37 +13855,37 @@ body #page_content .container .list_title .title p {
   margin-bottom: 50px;
   width: 300px;
 }
-/* line 152, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 154, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .sidebar ul li {
   float: left;
   margin-bottom: 60px;
   width: 300px;
 }
-/* line 156, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 158, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .sidebar ul li span {
   width: 60px;
   height: 85px;
   float: left;
 }
-/* line 160, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 162, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .sidebar ul li span.one {
   background: url('/images/nosvc/number-1.png?1339681046') left 24px no-repeat;
 }
-/* line 162, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 164, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .sidebar ul li span.two {
   background: url('/images/nosvc/number-2.png?1339681046') right 24px no-repeat;
   float: right;
 }
-/* line 165, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 167, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .sidebar ul li span.three {
   background: url('/images/nosvc/number-3.png?1339681046') left 24px no-repeat;
 }
-/* line 167, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 169, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .sidebar ul li span.four {
   background: url('/images/nosvc/number-4.png?1339681046') right 24px no-repeat;
   float: right;
 }
-/* line 170, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 172, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .sidebar ul li a {
   background: url('/images/nosvc/arrow-purple.gif?1339681046') right 4px no-repeat;
   padding-right: 20px;
@@ -13893,11 +13897,11 @@ body #page_content .container .list_title .title p {
   cursor: pointer;
   display: block;
 }
-/* line 180, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 182, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .sidebar ul li a:hover {
   text-decoration: underline;
 }
-/* line 183, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 185, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .sidebar ul li p {
   width: 240px;
   float: left;
