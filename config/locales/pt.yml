@@ -1,5 +1,6 @@
 pt:
   or: ou
+  until: "até"
   newsletter_ok_header: "Cadastro efetuado!"
   newsletter_ok_body: "Seu email foi cadastrado com sucesso, obrigado!"
   newsletter_error_header: "Ooops! Ocorreu um erro."
