@@ -70,10 +70,12 @@ class ProjectsController < ApplicationController
     email_subject = I18n.t('project.start.email_subject', :locale => current_user.locale)
     email_text = I18n.t('project.start.email_text', 
                         :facebook => I18n.t('site.facebook', :locale => current_user.locale), 
+                        :twitter => "http://twitter.com/#{I18n.t('site.twitter', :locale => current_user.locale)}", 
                         :blog => I18n.t('site.blog', :locale => current_user.locale), 
                         :explore_link => explore_url, 
                         :email => (I18n.t('site.email.contact', :locale => current_user.locale)), 
-                        :locale => current_user.locale)
+                        :locale => current_user.locale,
+                        :help => (I18n.t('site.help', :locale => current_user.locale)))
     Notification.create :user => current_user, :text => notification_text, :email_subject => email_subject, :email_text => email_text
     flash[:success] = t('projects.send_mail.success')
     redirect_to :root
