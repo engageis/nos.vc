@@ -232,10 +232,10 @@ pt:
       categories: "Cidades"
       expiring: "Última chamada"
       quick_explore: "Explorar"
-      recent: "Novos"
-      recommended: "Destaques"
+      recent: "Saindo do forno"
+      recommended: "Nossos destaques"
       subtitle: "<span>Aprenda</span> algo novo. Inscreva-se em um encontro na <span>sua cidade</span>:"
-      successful: "Realizados"
+      successful: "Confirmados"
       title: "Explore os encontros inspiradores"
     title: "Explore os projetos"
     project:
@@ -244,18 +244,18 @@ pt:
     hints:
       backer:
         credits: "Você possui <strong>%{credits}</strong> em créditos e pode utilizar até este valor sem precisar realizar um novo pagamento."
-        value: "Você escolhe o valor ;) a partir de R$ 10 está ótimo."
+        value: "Você escolhe o valor. À partir de R$ 10 está ótimo."
       project:
         about: "Capriche, é hora de vender o peixe. Por que me inscrever? Como será o encontro? Qual será a programação? Para quem é indicado? Tem pré-requisistos? Seja verdadeiro, direto e procure organizar o texto por tópicos. Abra seu coração e mostre o valor do encontro."
         category: "Escolha a cidade em que o encontro vai acontecer."
         expires_at: "Tem que ser tempo suficiente pra divulgar e encontrar as pessoas que vão se inscrever. Por outro lado, tem que dar tempo de cancelar e avisar todo mundo sem prejudicar ninguém, caso não alcance o número mínimo de inscritos. Por isso, sugerimos encerrar as inscrições uma semana antes da data do encontro."
         goal: "De verdade. Quantas pessoas são realmente necessárias para tornar o encontro possível? Só será realizado se alcançar o número mínimo."
         headline: "Até 140 caracteres, direto, reto e convidativo. Evite repetir o que já tem no nome. Este é o texto que vai sempre acompanhá-lo."
-        name: "Título bacanudo, auto-explicativo e curto, vale trocadilho. ;)"
-        video_url: 'Cole aqui o link do vídeo no Vimeo. Faça um vídeo mágico que explica o encontro, mostra seu rosto e provoca aplausos espontâneos. :)'
+        name: "Título bacanudo, auto-explicativo e curto, vale trocadilho."
+        video_url: 'Cole aqui o link do vídeo no Vimeo. Faça um vídeo mágico que explica o encontro, mostra seu rosto e provoca aplausos espontâneos.'
         when_short: "Data(s) do encontro, exemplo: '02 a 04/01/12'"
         when_long: "Descreva detalhadamente a(s) data(s) e o(s) horário(s) de início e término do encontro, exemplo: 'Segunda, 2 de janeiro de 2012. Das 9:00 às 17:00')"
-        location: "Local, endereço, cidade e estado. Link do Google Maps é muito bem-vindo."
+        location: "Local, endereço, cidade e estado."
         image_url: "Cole aqui o link da imagem fantástica que ilustra o encontro. Recomendamos imagens grandes, com, pelo menos, 1200 pixels de largura. Você pode usar um link do Flickr, por exemplo."
         leader_id: "Id, número do perfil da pessoa que vai conduzir o encontro. Pode ser você! Exemplo: 'X'. Se a página do perfil é http://nos.vc/pt/users/X"
         leader_bio: "Fale um pouco sobre quem vai conduzir o encontro. Sua vida e experiência com o assunto."
@@ -336,10 +336,10 @@ pt:
   payment_stream:
     thank_you:
       error: "Ooops. Você só pode acessar esta página depois de se inscvrever em um encontro."
-      header_subtitle: "Sem você talvez este projeto não tivesse uma chance. Bem-vindo ao time!"
-      header_title: "Muito obrigado! :D"
-      text_subtitle: "Conte para todo mundo o que você acabou de fazer"
-      text_title_html: "Você agora é parte do grupo que faz de tudo para o %{link} acontecer."
+      header_subtitle: "Você está dando vida a este encontro."
+      header_title: "Muito obrigado!"
+      text_subtitle: "Espalhe:"
+      text_title_html: "%{link} tá confirmado?"
       title: "Muito obrigado"
   project:
     start:
@@ -377,7 +377,7 @@ pt:
           not_expired: "Ainda não. Este encontro precisa de você! Ele só será realizado se alcançar o número mínimo de inscritos até %{date}. <br />Se não alcançar, você vai receber seu dinheiro de volta. <br />A inscrição é gratuita? Bem, então você vai receber good vibes de volta."
         successful:
           expired: "Sim! Este encontro atingiu o número mínimo de inscritos e foi confirmado. <br />Mas as inscrições já encerraram. <br />Você não conseguiu se inscrever? Entre em contato com %{name} e dê vida a um novo encontro."
-          not_expired: "Sim! Este encontro atingiu o número mínimo de inscritos e está confirmado. <br />As inscrições estarão abertas até o dia %{date} ou enquanto durarem as vagas. <br />A galera se inscreveu e deu vida ao encontro. Vem também?"
+          not_expired: "Sim! Este encontro atingiu o número mínimo de inscritos e está confirmado. <br />As inscrições estarão abertas até o dia %{date} ou enquanto durarem as vagas. <br />A galera se inscreveu e deu vida ao encontro."
         waiting_confirmation: "Talvez! As inscrições foram encerradas e os últimos pagamentos estão sendo processados. <br />Este encontro será confirmado se atingir o número mínimo de inscritos. <br />Volte mais tarde e veja se rolou ou não."
       reached_of: "Atingidos de"
       submit: "Me inscrever"
@@ -399,12 +399,12 @@ pt:
         header:
           subtitle: "Você está perto de se inscrever e fazer este encontro acontecer."
           title: "Obrigado!"
-        no_reward: "Obrigado. Eu só quero ajudar o projeto."
+        no_reward: "Obrigado. Eu só quero ajudar o encontro."
         submit: "Me inscrever"
         title: "Apoie o %{name}"
-        good_question: "Boa Pergunta!"
+        good_question: "Boa pergunta!"
       review:
-        credits_notice_html: "Este apoio será pago com seus créditos. Após a confirmação, você ficará com um saldo de <strong>%{credits}</strong> em créditos para apoiar outros projetos."
+        credits_notice_html: "Esta inscrição será paga com seus créditos. Após a confirmação, você ficará com um saldo de <strong>%{credits}</strong> em créditos para se inscrever em outros encontros."
         error: "Ooops. Ocorreu um erro ao registrar seu apoio. Por favor, tente novamente."
         international:
           description: "Você pode usar o PayPal para realizar pagamentos internacionais"
@@ -434,7 +434,7 @@ pt:
       subtitle_html: "Financie projetos de maneira colaborativa e torne-se parte de algo maior.<br/>Promova uma catarse coletiva! Você é a peça que falta nesta história."
       title: "Faça acontecer os projetos em que você acredita"
     new:
-      subtitle: "Preencha com carinho, você está construindo a página do seu encontro. :)"
+      subtitle: "Preencha com carinho, você está construindo a página do seu encontro."
       title: "Agora é pra valer. Divirta-se mais ainda!"
       sidebar:
         title: "Como criar e organizar um encontro sobre o que você quiser:"
@@ -513,16 +513,16 @@ pt:
       destroy: "Remover atualização"
       destroy_confirmation: "Deseja remover a atualização?"
     project_warning:
-      rejected: "Não foi dessa vez. Este encontro não foi selecionado pra participar do Nós.vc. Quem sabe na próxima? :)"
-      waiting: "Estamos analisando este encontro. Logo, logo saberemos se ele entrará no Nós.vc. :)"
+      rejected: "Não foi dessa vez. Este encontro não foi selecionado pra participar do Nós.vc. Quem sabe na próxima?"
+      waiting: "Estamos revisando este encontro. Logo, logo saberemos se ele entrará no Nós.vc."
     rewards:
       reward_title: "Para %{minimum} ou mais"
       title: "Apoie e ganhe..."
     send_mail:
       success: "Sua proposta de encontro foi enviada com sucesso! Logo entraremos em contato. Muito obrigado!"
     show:
-      rejected: "Este encontro não foi selecionado para participar do Nós.vc. Quem sabe numa próxima vez? :)"
-      waiting: "Este encontro está aguardando análise e logo saberemos se ele entrará no Nós.vc ;)"
+      rejected: "Não foi dessa vez. Este encontro não foi selecionado pra participar do Nós.vc. Quem sabe na próxima?"
+      waiting: "Estamos revisando este encontro. Logo, logo saberemos se ele entrará no Nós.vc."
       where: "Onde?"
       when: "Quando"
       is_confirmed: "Tá confirmado?"
@@ -546,13 +546,13 @@ pt:
     start:
       the_meeting: "O encontro"
       name: "Qual é o nome do encontro?"
-      name_hint: "Título bacanudo, auto-explicativo e curto, vale trocadilho. ;)"
+      name_hint: "Título bacanudo, auto-explicativo e curto, vale trocadilho."
       about: "O que as pessoas vão aprender?"
       about_hint: "Capriche, é hora de vender o peixe. Por que aprender isso? Como será o encontro? Qual será a programação? Para quem é indicado? Tem pré-requisistos? Seja verdadeiro, direto e procure organizar o texto por tópicos. Abra seu coração e mostre o valor do encontro."
       when: "Quando?"
       when_hint: "Data(s) e horário(s) de início e término."
       where: "Onde?"
-      where_hint: "Local, endereço, cidade e estado. Link do Google Maps é bem-vindo."
+      where_hint: "Local, endereço, cidade e estado."
       video: "Já tem vídeo?"
       video_hint: "Se sim, por favor, o link no Vimeo. Se não, pode ser enviado depois."
 
@@ -572,7 +572,7 @@ pt:
 
       the_contact: "O contato"
       contact: "Qual é o seu email?"
-      contact_hint: "Aquele que você lê e responde. É por ele que vamos entrar em contato. :)"
+      contact_hint: "Aquele que você lê e responde. É por ele que vamos entrar em contato."
       know_us_via: "Como você conheceu o Nós.vc?"
       know_us_via_hint: "Bem-vindo! O que, ou quem, te fez chegar até aqui?"
 
@@ -647,7 +647,7 @@ pt:
         how_much: "Quanto custa usar o Nós.vc?"
         why_use: "Por que usar Nós.vc?"
     about_us:
-      title: "pagina sobre"
+      title: "Sobre Nós.vc"
     contact:
       title: "pagina de contato"
     privacy:
@@ -695,7 +695,7 @@ pt:
       current_password_hint: "<i>Para que a senha seja alterada você precisa confirmar a sua senha atual.</i>"
       email_hint: "Seu email não é visível às outras pessoas. Mas você poderá receber emails dos organizadores dos encontros em que você se inscrever ou informações do Nós.vc."
       email_tooltip: "Clique aqui para preencher seu email..."
-      gravatar_hint_html: "Quer mudar sua foto? Use o %{link} com seu email. É tão simples quanto enviar uma imagem e funciona para outros sites também. ;)"
+      gravatar_hint_html: "Quer mudar sua foto? Use o %{link} com seu email. É tão simples quanto enviar uma imagem e funciona para outros sites também."
       my_data: "Email"
       newsletter: "Quero receber novidades do Nós.vc por email. (Spam nunca!)"
       password_hint: "<i>Deixe em branco caso você não queira trocar sua senha.</i>"
