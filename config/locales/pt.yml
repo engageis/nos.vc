@@ -344,7 +344,7 @@ pt:
   project:
     start:
       email_subject: "Yeah! Seu encontro foi recebido!"
-      email_text: "Eu sou o Mauro do Nós.vc e vou te ajudar a fazer este encontro acontecer.<br><br>Mas, antes, eu preciso ler o que você criou. O que ainda não fiz.<br><br>Pode ser que eu demore alguns dias. Pode ser que seja rápido.<br><br>É tudo uma questão de sorte e de quantas pessoas estão criando encontros agora.<br><br>Se tudo estiver ok, logo, logo seu encontro vai pro ar.<br><br>Por enquanto, você pode explorar outros encontros. (<a href='%{explore_link}' style='color: #1aa79c !important;'>%{explore_link}</a>)<br><br>Ler nosso<a href='%{blog}' style='color: #1aa79c !important;'>blog</a> e nosso <a href='%{help}' style='color: #1aa79c !important;'>Help!</a>, que tem várias dicas quentes.<br><br>E, ainda, curtir nosso <a href='%{facebook}' style='color: #1aa79c !important;'>facebook</a> e seguir nosso <a href='%{twitter}' style='color: #1aa79c !important;'>twitter</a>.<br><br>Qualquer dúvida, só vir falar comigo.<br><br>Grande abraço!<br><br>Mauro."
+      email_text: "Eu sou o Mauro do Nós.vc e vou te ajudar a fazer este encontro acontecer.<br><br>Mas, antes, eu preciso ler o que você criou. O que ainda não fiz.<br><br>Pode ser que eu demore alguns dias. Pode ser que seja rápido.<br><br>É tudo uma questão de sorte e de quantas pessoas estão criando encontros agora.<br><br>Se tudo estiver ok, logo, logo seu encontro vai pro ar.<br><br>Por enquanto, você pode explorar outros encontros. (<a href='%{explore_link}' style='color: #1aa79c !important;'>%{explore_link}</a>)<br><br>Ler nosso <a href='%{blog}' style='color: #1aa79c !important;'>blog</a> e nosso <a href='%{help}' style='color: #1aa79c !important;'>Help!</a>, que tem várias dicas quentes.<br><br>E, ainda, curtir nosso <a href='%{facebook}' style='color: #1aa79c !important;'>facebook</a> e seguir nosso <a href='%{twitter}' style='color: #1aa79c !important;'>twitter</a>.<br><br>Qualquer dúvida, só vir falar comigo.<br><br>Grande abraço!<br><br>Mauro."
       notification_text: "Yeah! Seu encontro foi recebido!"
     finish:
       successful:
@@ -628,7 +628,7 @@ pt:
     email:
       contact: somos@nos.vc
       payments: leo@nos.vc
-      projects: barrosdaniel@gmail.com, mauro@nos.vc, josemarluedke@gmail.com
+      projects: barrosdaniel@gmail.com, mauroalex@gmail.com
       system: somos@nos.vc
     facebook: "http://www.facebook.com/nos.vc"
     name: "Nós.vc"
