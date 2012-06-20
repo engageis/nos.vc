@@ -9,7 +9,7 @@ CATARSE.LayoutsApplicationView = Backbone.View.extend({
   },
 
   events: {
-    "submit .search": "search",
+    "submit .search_input": "search",
     "click #login .close": "closeLogin",
     "click #login a.provider": "submitLogin",
     "click a.my_profile_link":"currentUserDropDown",
@@ -64,7 +64,7 @@ CATARSE.LayoutsApplicationView = Backbone.View.extend({
   
   search: function(event) {
     var query = this.$(event.target).find("#search").val()
-    if(!(CATARSE.loader.namespace.text == "" && CATARSE.loader.controller == "explore" && CATARSE.loader.action == "index") && query.length > 0)       
+    if(!($('#main_content').data("controller-name") == "explore" && $('#main_content').data("action") == "index") && query.length > 0)
       location.href = "/explore#search/" + query
     return false
   },
