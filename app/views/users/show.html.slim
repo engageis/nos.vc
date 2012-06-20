@@ -66,9 +66,9 @@
         #user_created_projects.content
         #user_statements.content= render 'statements'
         - if can? :manage, @user
-          #user_settings.content.hide
+          #user_settings.content.hide.user_content_right
             = render 'current_user_fields'
-          #user_credits.content.hide
+          #user_credits.content.hide.user_content_right.clearfix
             .current_credits
               p= t('credits.index.current_credits_html', :credits => @user.display_credits)
 
@@ -100,6 +100,7 @@
             .bootstrap-alert
               .alert.alert-info
                 = t('credits.index.important_html')
-      #loading= image_tag "loading.gif"
+          .clearfix
+      #loading.clearfix= image_tag "loading.gif"
       .clearfix
     .clearfix
