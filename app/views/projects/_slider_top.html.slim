@@ -2,14 +2,14 @@
   .container
     .slider
       .content.explore
-        a
+        = link_to explore_path do
           .title = t('slider.top.explore.title')
           p = t('slider.top.explore.text').html_safe
       .content.create
-        a
+        = link_to start_projects_path do
           .title = t('slider.top.create.title')
           p = t('slider.top.create.text').html_safe
       .content.how_works
-        a
+        = link_to guidelines_path do
           .title = t('slider.top.how_works.title')
           p = t('slider.top.how_works.text').html_safe
