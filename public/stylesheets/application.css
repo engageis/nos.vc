@@ -840,8 +840,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
   padding-left: 350px;
   padding-top: 35px;
+  text-decoration: none;
 }
-/* line 32, ../../app/assets/stylesheets/miv/_slider.sass */
+/* line 33, ../../app/assets/stylesheets/miv/_slider.sass */
 #page_content .slider_wrapper .container .slider .explore a .title {
   font-family: "Dosis-SemiBold";
   font-size: 16px;
@@ -853,7 +854,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   width: 300px;
   height: 30px;
 }
-/* line 42, ../../app/assets/stylesheets/miv/_slider.sass */
+/* line 43, ../../app/assets/stylesheets/miv/_slider.sass */
 #page_content .slider_wrapper .container .slider .explore a p {
   font-family: "Dosis-ExtraLight";
   font-size: 41px;
@@ -864,11 +865,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   color: #5d5d5d;
   line-height: 46px;
 }
-/* line 51, ../../app/assets/stylesheets/miv/_slider.sass */
+/* line 52, ../../app/assets/stylesheets/miv/_slider.sass */
 #page_content .slider_wrapper .container .slider .explore a p span {
   color: #83b1df;
 }
-/* line 54, ../../app/assets/stylesheets/miv/_slider.sass */
+/* line 55, ../../app/assets/stylesheets/miv/_slider.sass */
 #page_content .slider_wrapper .container .slider .create a {
   background: url('/images/nosvc/slider-criar.gif?1338834312') 127px top no-repeat;
   height: 120px;
@@ -877,8 +878,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   padding-left: 360px;
   padding-top: 35px;
   cursor: pointer;
+  text-decoration: none;
 }
-/* line 62, ../../app/assets/stylesheets/miv/_slider.sass */
+/* line 64, ../../app/assets/stylesheets/miv/_slider.sass */
 #page_content .slider_wrapper .container .slider .create a .title {
   font-family: "Dosis-SemiBold";
   font-size: 16px;
@@ -890,7 +892,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   width: 300px;
   height: 30px;
 }
-/* line 72, ../../app/assets/stylesheets/miv/_slider.sass */
+/* line 74, ../../app/assets/stylesheets/miv/_slider.sass */
 #page_content .slider_wrapper .container .slider .create a p {
   font-family: "Dosis-ExtraLight";
   font-size: 41px;
@@ -901,11 +903,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   line-height: 46px;
   text-align: center;
 }
-/* line 81, ../../app/assets/stylesheets/miv/_slider.sass */
+/* line 83, ../../app/assets/stylesheets/miv/_slider.sass */
 #page_content .slider_wrapper .container .slider .create a p span {
   color: #b178ad;
 }
-/* line 84, ../../app/assets/stylesheets/miv/_slider.sass */
+/* line 86, ../../app/assets/stylesheets/miv/_slider.sass */
 #page_content .slider_wrapper .container .slider .how_works a {
   background: url('/images/nosvc/slider-comofunciona.gif?1338834312') 80px top no-repeat;
   height: 120px;
@@ -914,8 +916,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   padding-left: 255px;
   padding-top: 35px;
   cursor: pointer;
+  text-decoration: none;
 }
-/* line 92, ../../app/assets/stylesheets/miv/_slider.sass */
+/* line 95, ../../app/assets/stylesheets/miv/_slider.sass */
 #page_content .slider_wrapper .container .slider .how_works a .title {
   font-family: "Dosis-SemiBold";
   font-size: 16px;
@@ -927,7 +930,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   width: 260px;
   height: 30px;
 }
-/* line 102, ../../app/assets/stylesheets/miv/_slider.sass */
+/* line 105, ../../app/assets/stylesheets/miv/_slider.sass */
 #page_content .slider_wrapper .container .slider .how_works a p {
   font-family: "Dosis-ExtraLight";
   font-size: 41px;
@@ -938,11 +941,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   color: #5d5d5d;
   line-height: 46px;
 }
-/* line 111, ../../app/assets/stylesheets/miv/_slider.sass */
+/* line 114, ../../app/assets/stylesheets/miv/_slider.sass */
 #page_content .slider_wrapper .container .slider .how_works a p span {
   color: #ed6569;
 }
-/* line 113, ../../app/assets/stylesheets/miv/_slider.sass */
+/* line 116, ../../app/assets/stylesheets/miv/_slider.sass */
 #page_content .slider_wrapper .slider-nav {
   margin-left: auto;
   margin-right: auto;
@@ -1272,7 +1275,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 #page_content .slider_wrapper .slider-nav .pull_15 {
   left: -900px;
 }
-/* line 115, ../../app/assets/stylesheets/miv/_slider.sass */
+/* line 118, ../../app/assets/stylesheets/miv/_slider.sass */
 #page_content .slider_wrapper .slider-nav span {
   height: 160px;
   width: 60px;
@@ -1282,35 +1285,35 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   position: absolute;
   text-indent: -9999px;
 }
-/* line 123, ../../app/assets/stylesheets/miv/_slider.sass */
+/* line 126, ../../app/assets/stylesheets/miv/_slider.sass */
 #page_content .slider_wrapper .slider-nav .left {
   background: url('/images/nosvc/arrow-top-left.gif?1338834312') 18px top no-repeat;
   left: 0px;
   margin-top: -160px;
   background-color: #f9f9f9;
 }
-/* line 128, ../../app/assets/stylesheets/miv/_slider.sass */
+/* line 131, ../../app/assets/stylesheets/miv/_slider.sass */
 #page_content .slider_wrapper .slider-nav .right {
   background: url('/images/nosvc/arrow-top-right.gif?1338834312') 0px top no-repeat;
   right: 0px;
   margin-top: -160px;
   background-color: #f9f9f9;
 }
-/* line 134, ../../app/assets/stylesheets/miv/_slider.sass */
+/* line 137, ../../app/assets/stylesheets/miv/_slider.sass */
 #page_content .partners .slider_wrapper.bottom {
   background: none;
   border: none;
 }
-/* line 139, ../../app/assets/stylesheets/miv/_slider.sass */
+/* line 142, ../../app/assets/stylesheets/miv/_slider.sass */
 #page_content .partners .slider_wrapper.bottom .container .slider div.content {
   background: none;
 }
-/* line 142, ../../app/assets/stylesheets/miv/_slider.sass */
+/* line 145, ../../app/assets/stylesheets/miv/_slider.sass */
 #page_content .partners .slider_wrapper.bottom .slider-nav .left {
   background: url('/images/nosvc/arrow-down-left.gif?1338834312') 18px top no-repeat;
   background-color: #f7f6f0;
 }
-/* line 145, ../../app/assets/stylesheets/miv/_slider.sass */
+/* line 148, ../../app/assets/stylesheets/miv/_slider.sass */
 #page_content .partners .slider_wrapper.bottom .slider-nav .right {
   background: url('/images/nosvc/arrow-down-right.gif?1338834312') 0px top no-repeat;
   background-color: #f7f6f0;
@@ -1409,7 +1412,7 @@ div.project .box .cover .black_box {
   background-color: rgba(0, 0, 0, 0.6);
   height: 28px;
   overflow: hidden;
-  margin-top: 150px;
+  margin-top: 155px;
   padding: 7px 10px 1px 10px;
   color: white;
   font-family: "Dosis-Light";
@@ -1458,16 +1461,17 @@ div.project .box .author {
 }
 /* line 96, ../../app/assets/stylesheets/miv/_projects.sass */
 div.project .box .where {
-  padding: 8px 10px 8px 20px;
+  padding: 7px 10px 1px;
   background-color: #83b1df;
   color: white;
-  font-family: "Helvetica Neue";
-  font-size: 16px;
+  font-family: "Dosis-Regular";
+  font-size: 18px;
   position: absolute;
   left: -10px;
   bottom: 0px;
+  height: 22px;
 }
-/* line 105, ../../app/assets/stylesheets/miv/_projects.sass */
+/* line 106, ../../app/assets/stylesheets/miv/_projects.sass */
 div.project .box .status_bar {
   background-color: white;
   width: 202px;
@@ -1482,7 +1486,7 @@ div.project .box .status_bar {
   -khtml-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 113, ../../app/assets/stylesheets/miv/_projects.sass */
+/* line 114, ../../app/assets/stylesheets/miv/_projects.sass */
 div.project .box .status_bar .progress {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -1494,7 +1498,7 @@ div.project .box .status_bar .progress {
   height: 10px;
   overflow: hidden;
 }
-/* line 118, ../../app/assets/stylesheets/miv/_projects.sass */
+/* line 119, ../../app/assets/stylesheets/miv/_projects.sass */
 div.project .box .info_bar {
   background: #323334;
   float: left;
@@ -1502,12 +1506,12 @@ div.project .box .info_bar {
   width: 115px;
   padding: 10px;
 }
-/* line 124, ../../app/assets/stylesheets/miv/_projects.sass */
+/* line 125, ../../app/assets/stylesheets/miv/_projects.sass */
 div.project .box .info_bar ul {
   padding-top: 50px;
   display: block;
 }
-/* line 127, ../../app/assets/stylesheets/miv/_projects.sass */
+/* line 128, ../../app/assets/stylesheets/miv/_projects.sass */
 div.project .box .info_bar ul li {
   float: left;
   width: 115px;
@@ -1515,22 +1519,22 @@ div.project .box .info_bar ul li {
   color: #dddddd;
   margin-top: 20px;
 }
-/* line 133, ../../app/assets/stylesheets/miv/_projects.sass */
+/* line 134, ../../app/assets/stylesheets/miv/_projects.sass */
 div.project .box .info_bar ul li:last-child {
   margin-left: 0px;
 }
-/* line 135, ../../app/assets/stylesheets/miv/_projects.sass */
+/* line 136, ../../app/assets/stylesheets/miv/_projects.sass */
 div.project .box .info_bar ul h6 {
   font-size: 38px;
   margin-bottom: 3px;
   float: left;
   margin-left: 5px;
 }
-/* line 140, ../../app/assets/stylesheets/miv/_projects.sass */
+/* line 141, ../../app/assets/stylesheets/miv/_projects.sass */
 div.project .box .info_bar ul .little {
   width: 60px;
 }
-/* line 142, ../../app/assets/stylesheets/miv/_projects.sass */
+/* line 143, ../../app/assets/stylesheets/miv/_projects.sass */
 div.project .box .info_bar ul p {
   text-transform: uppercase;
   font-size: 12px;
@@ -1539,13 +1543,13 @@ div.project .box .info_bar ul p {
   padding-top: 4px;
   margin-left: 10px;
 }
-/* line 149, ../../app/assets/stylesheets/miv/_projects.sass */
+/* line 150, ../../app/assets/stylesheets/miv/_projects.sass */
 div.project .box .info_bar ul p span {
   color: #ed6569;
   font-size: 38px;
   margin-left: 5px;
 }
-/* line 153, ../../app/assets/stylesheets/miv/_projects.sass */
+/* line 154, ../../app/assets/stylesheets/miv/_projects.sass */
 div.project .box .info_bar ul .confirmed, div.project .box .info_bar ul .not_confirmed {
   background: url('/images/nosvc/icon-confirmed.gif?1338839427') left top no-repeat;
   padding-left: 40px;
@@ -1554,12 +1558,12 @@ div.project .box .info_bar ul .confirmed, div.project .box .info_bar ul .not_con
   margin-top: 20px;
   margin-left: 0px;
 }
-/* line 160, ../../app/assets/stylesheets/miv/_projects.sass */
+/* line 161, ../../app/assets/stylesheets/miv/_projects.sass */
 div.project .box .info_bar ul .not_confirmed {
   background: url('/images/nosvc/icon-expired.gif?1338839427') left top no-repeat;
   color: #ee7980;
 }
-/* line 163, ../../app/assets/stylesheets/miv/_projects.sass */
+/* line 164, ../../app/assets/stylesheets/miv/_projects.sass */
 div.project .box .follow_project {
   clear: both;
   display: block;
@@ -1580,7 +1584,7 @@ div.project .box .follow_project {
   background: url('/images/redesign/follow_project_start12x11.png?1338834313') 4px 4px no-repeat #cccccc;
   text-transform: uppercase;
 }
-/* line 176, ../../app/assets/stylesheets/miv/_projects.sass */
+/* line 177, ../../app/assets/stylesheets/miv/_projects.sass */
 div.project .box .follow_project:hover {
   -moz-box-shadow: #363636 0 0 6px;
   -webkit-box-shadow: #363636 0 0 6px;
@@ -1588,7 +1592,7 @@ div.project .box .follow_project:hover {
   box-shadow: #363636 0 0 6px;
 }
 
-/* line 178, ../../app/assets/stylesheets/miv/_projects.sass */
+/* line 179, ../../app/assets/stylesheets/miv/_projects.sass */
 .project_comment {
   display: inline;
   float: left;
@@ -1596,13 +1600,13 @@ div.project .box .follow_project:hover {
   margin-right: 10px;
   width: 220px;
 }
-/* line 180, ../../app/assets/stylesheets/miv/_projects.sass */
+/* line 181, ../../app/assets/stylesheets/miv/_projects.sass */
 .project_comment h3 {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   opacity: 0.8;
   padding: 40px 0 20px;
 }
-/* line 183, ../../app/assets/stylesheets/miv/_projects.sass */
+/* line 184, ../../app/assets/stylesheets/miv/_projects.sass */
 .project_comment p {
   font-family: Arial;
   font-size: 1.3em;
@@ -1612,7 +1616,7 @@ div.project .box .follow_project:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
   opacity: 0.7;
 }
-/* line 190, ../../app/assets/stylesheets/miv/_projects.sass */
+/* line 191, ../../app/assets/stylesheets/miv/_projects.sass */
 .project_comment p.author {
   font-size: 1.1em;
   font-style: italic;
@@ -1620,7 +1624,7 @@ div.project .box .follow_project:hover {
   opacity: 0.5;
 }
 
-/* line 194, ../../app/assets/stylesheets/miv/_projects.sass */
+/* line 195, ../../app/assets/stylesheets/miv/_projects.sass */
 .compost_project {
   display: inline;
   float: left;
@@ -1629,11 +1633,11 @@ div.project .box .follow_project:hover {
   width: 460px;
   padding-top: 30px;
 }
-/* line 197, ../../app/assets/stylesheets/miv/_projects.sass */
+/* line 198, ../../app/assets/stylesheets/miv/_projects.sass */
 .compost_project .project {
   margin-left: 0;
 }
-/* line 199, ../../app/assets/stylesheets/miv/_projects.sass */
+/* line 200, ../../app/assets/stylesheets/miv/_projects.sass */
 .compost_project .project_comment {
   margin-right: 0;
 }
@@ -1698,7 +1702,7 @@ div.project .box .follow_project:hover {
   background-color: rgba(0, 0, 0, 0.6);
   height: 16px;
   overflow: hidden;
-  margin-top: 151px;
+  margin-top: 155px;
   padding: 7px 0 1px 5px;
   color: white;
   font-family: "Helvetica Neue";
@@ -9422,102 +9426,115 @@ body #page_content .container .list_title .title p {
   font-size: 13px;
   margin-top: 0px;
   color: #d7d6d0;
-  height: 20px;
+  height: 26px;
   text-indent: 33px;
   padding-top: 14px;
+  width: 100%;
   text-shadow: black 1px 1px 0px;
 }
-/* line 41, ../../app/assets/stylesheets/content/_header.sass */
+/* line 42, ../../app/assets/stylesheets/content/_header.sass */
 #header nav.actions ul li.explore:hover, #header nav.actions ul li.explore.selected {
   background: #83b1df;
 }
-/* line 43, ../../app/assets/stylesheets/content/_header.sass */
+/* line 44, ../../app/assets/stylesheets/content/_header.sass */
 #header nav.actions ul li.explore:hover a, #header nav.actions ul li.explore.selected a {
   color: #fafafa;
 }
-/* line 45, ../../app/assets/stylesheets/content/_header.sass */
+/* line 46, ../../app/assets/stylesheets/content/_header.sass */
 #header nav.actions ul li.explore a {
   background: url('/images/nosvc/icon-explorar.png?1338834312') left top no-repeat;
   text-indent: 32px;
 }
-/* line 49, ../../app/assets/stylesheets/content/_header.sass */
+/* line 50, ../../app/assets/stylesheets/content/_header.sass */
 #header nav.actions ul li.submit_project:hover, #header nav.actions ul li.submit_project.selected {
   background: #b178ad;
 }
-/* line 51, ../../app/assets/stylesheets/content/_header.sass */
+/* line 52, ../../app/assets/stylesheets/content/_header.sass */
 #header nav.actions ul li.submit_project:hover a, #header nav.actions ul li.submit_project.selected a {
   color: #fafafa;
 }
-/* line 53, ../../app/assets/stylesheets/content/_header.sass */
+/* line 54, ../../app/assets/stylesheets/content/_header.sass */
 #header nav.actions ul li.submit_project a {
   background: url('/images/nosvc/icon-criar.png?1338834312') 7px top no-repeat;
   text-indent: 39px;
 }
-/* line 57, ../../app/assets/stylesheets/content/_header.sass */
+/* line 58, ../../app/assets/stylesheets/content/_header.sass */
 #header nav.actions ul li.how_works:hover, #header nav.actions ul li.how_works.selected {
   background: #ed6569;
 }
-/* line 59, ../../app/assets/stylesheets/content/_header.sass */
+/* line 60, ../../app/assets/stylesheets/content/_header.sass */
 #header nav.actions ul li.how_works:hover a, #header nav.actions ul li.how_works.selected a {
   color: #fafafa;
 }
-/* line 61, ../../app/assets/stylesheets/content/_header.sass */
+/* line 62, ../../app/assets/stylesheets/content/_header.sass */
 #header nav.actions ul li.how_works a {
   background: url('/images/nosvc/icon-comofunciona.png?1338834312') 18px top no-repeat;
   text-indent: 50px;
 }
-/* line 64, ../../app/assets/stylesheets/content/_header.sass */
+/* line 65, ../../app/assets/stylesheets/content/_header.sass */
 #header nav.account {
   display: inline;
   float: left;
   margin-left: 10px;
   margin-right: 10px;
   width: 160px;
-  width: 199px;
+  width: 200px;
   background: #696862;
   margin: 0;
   padding-left: 10px;
   border-left: 1px solid #4b4a4a;
 }
-/* line 71, ../../app/assets/stylesheets/content/_header.sass */
+/* line 72, ../../app/assets/stylesheets/content/_header.sass */
 #header nav.account a {
   color: #333333;
   font-size: 14px;
-  margin-right: 12px;
   color: #d6d5d0;
+  font-family: "Helvetica Neue";
 }
-/* line 76, ../../app/assets/stylesheets/content/_header.sass */
+/* line 79, ../../app/assets/stylesheets/content/_header.sass */
+#header nav.account .dropdown li a {
+  background: url('/images/nosvc/bullet-user.png?1340218039') 1px 3px no-repeat;
+  text-indent: 15px;
+  font-size: 13px;
+  text-indent: 15px;
+  padding-bottom: 2px;
+}
+/* line 85, ../../app/assets/stylesheets/content/_header.sass */
 #header nav.account .login {
   text-align: center;
   margin-top: 0px;
   background: url('/images/nosvc/icon-login.gif?1338834312') 50px top no-repeat;
   height: 40px;
 }
-/* line 81, ../../app/assets/stylesheets/content/_header.sass */
+/* line 90, ../../app/assets/stylesheets/content/_header.sass */
 #header nav.account .login a {
   color: #b5b4af;
   text-shadow: black 1px 1px 0px;
   text-transform: uppercase;
   font-size: 14px;
   padding-top: 12px;
+  width: 100%;
+  height: 26px;
 }
-/* line 88, ../../app/assets/stylesheets/content/_header.sass */
+/* line 99, ../../app/assets/stylesheets/content/_header.sass */
 #header nav.account a.my_profile_link {
   width: 200px;
   display: block;
   float: left;
   margin-right: 0;
   margin-top: 14px;
-  color: #b5b4af;
+  color: #d6d5d0;
   text-transform: uppercase;
   font-size: 13px;
+  font-family: "Dosis-Medium";
+  background: none;
 }
-/* line 97, ../../app/assets/stylesheets/content/_header.sass */
+/* line 110, ../../app/assets/stylesheets/content/_header.sass */
 #header nav.account a.my_profile_link .current_user_name {
   float: left;
   padding-right: 10px;
 }
-/* line 100, ../../app/assets/stylesheets/content/_header.sass */
+/* line 113, ../../app/assets/stylesheets/content/_header.sass */
 #header nav.account a.my_profile_link img.profile_picture {
   border: 1px #333333;
   -moz-box-shadow: rgba(181, 180, 175, 0.4) 1px 1px 2px;
@@ -9543,25 +9560,25 @@ body #page_content .container .list_title .title p {
   margin-top: -10px;
   margin-right: 5px;
 }
-/* line 109, ../../app/assets/stylesheets/content/_header.sass */
+/* line 122, ../../app/assets/stylesheets/content/_header.sass */
 #header nav.account a.my_profile_link img.profile_picture:hover {
   -moz-box-shadow: rgba(0, 0, 0, 0.6) 1px 1px 2px inset;
   -webkit-box-shadow: rgba(0, 0, 0, 0.6) 1px 1px 2px inset;
   -o-box-shadow: rgba(0, 0, 0, 0.6) 1px 1px 2px inset;
   box-shadow: rgba(0, 0, 0, 0.6) 1px 1px 2px inset;
 }
-/* line 111, ../../app/assets/stylesheets/content/_header.sass */
+/* line 124, ../../app/assets/stylesheets/content/_header.sass */
 #header nav.account a.my_profile_link .dropdown_arrow {
   float: right;
   position: relative;
   margin-top: 3px;
   margin-right: 15px;
 }
-/* line 116, ../../app/assets/stylesheets/content/_header.sass */
+/* line 129, ../../app/assets/stylesheets/content/_header.sass */
 #header nav.account a:last-child {
   margin-right: none;
 }
-/* line 118, ../../app/assets/stylesheets/content/_header.sass */
+/* line 131, ../../app/assets/stylesheets/content/_header.sass */
 #header nav.locales {
   display: inline;
   float: left;
@@ -9572,7 +9589,7 @@ body #page_content .container .list_title .title p {
   margin-left: 5px;
   margin-right: 5px;
 }
-/* line 125, ../../app/assets/stylesheets/content/_header.sass */
+/* line 138, ../../app/assets/stylesheets/content/_header.sass */
 #header nav.locales ul li a {
   text-transform: uppercase;
   font-size: 11px;
@@ -9582,19 +9599,19 @@ body #page_content .container .list_title .title p {
   text-indent: 25px;
   background: url('/images/nosvc/icon-arrowinactive.gif?1338834312') left top no-repeat;
 }
-/* line 133, ../../app/assets/stylesheets/content/_header.sass */
+/* line 146, ../../app/assets/stylesheets/content/_header.sass */
 #header nav.locales ul li a:hover {
   color: #b5b4af;
   background: url('/images/nosvc/icon-arrowactive.gif?1338834312') left top no-repeat;
   text-shadow: none;
 }
-/* line 138, ../../app/assets/stylesheets/content/_header.sass */
+/* line 151, ../../app/assets/stylesheets/content/_header.sass */
 #header nav.locales ul li.selected a {
   color: #b5b4af;
   background: url('/images/nosvc/icon-arrowactive.gif?1338834312') left top no-repeat;
   text-shadow: none;
 }
-/* line 142, ../../app/assets/stylesheets/content/_header.sass */
+/* line 155, ../../app/assets/stylesheets/content/_header.sass */
 #header .search {
   display: inline;
   float: left;
@@ -9607,7 +9624,7 @@ body #page_content .container .list_title .title p {
   border-right: 1px solid #4b4a4a;
   height: 40px;
 }
-/* line 149, ../../app/assets/stylesheets/content/_header.sass */
+/* line 162, ../../app/assets/stylesheets/content/_header.sass */
 #header .search form {
   width: 140px;
   height: 24px;
@@ -9625,7 +9642,7 @@ body #page_content .container .list_title .title p {
   margin: auto;
   margin-top: 7px;
 }
-/* line 157, ../../app/assets/stylesheets/content/_header.sass */
+/* line 170, ../../app/assets/stylesheets/content/_header.sass */
 #header .search form input[type="text"] {
   border: none;
   width: 112px;
@@ -9635,11 +9652,11 @@ body #page_content .container .list_title .title p {
   background: transparent;
   color: #b5b4af;
 }
-/* line 165, ../../app/assets/stylesheets/content/_header.sass */
+/* line 178, ../../app/assets/stylesheets/content/_header.sass */
 #header .search form input[type="text"]:focus {
   outline: none;
 }
-/* line 167, ../../app/assets/stylesheets/content/_header.sass */
+/* line 180, ../../app/assets/stylesheets/content/_header.sass */
 #header .search form input[type="submit"] {
   background: url('/images/nosvc/icon-search.png?1338834312') left 2px no-repeat;
   width: 18px;
@@ -10523,7 +10540,7 @@ body #page_content .container .list_title .title p {
 }
 /* line 50, ../../app/assets/stylesheets/content/_explore.sass */
 [data-action="index"][data-controller="explore"] #page_content .container .sidebar .content section.highlights ul li.successful a {
-  background-image: url('/images/nosvc/icon-successful.png?1339707010');
+  background-image: url('/images/nosvc/icon-successful.png?1340215635');
 }
 /* line 53, ../../app/assets/stylesheets/content/_explore.sass */
 [data-action="index"][data-controller="explore"] #page_content .container .sidebar .content section.highlights ul li.expiring a {
@@ -10767,7 +10784,7 @@ body #page_content .container .list_title .title p {
   background: none;
   border: 0px;
   width: 100%;
-  padding: 30px 0;
+  padding: 10px 0 0;
   border-bottom: dashed 1px #cccccc;
   float: left;
 }
@@ -15632,10 +15649,12 @@ body #page_content .container .list_title .title p {
   margin-left: 10px;
   margin-right: 10px;
   width: 940px;
+  width: 534px;
+  margin-right: 0px;
   margin-right: 0;
   display: none;
 }
-/* line 95, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 97, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #user_profile #user_credits {
   display: inline;
   float: left;
@@ -15645,18 +15664,18 @@ body #page_content .container .list_title .title p {
   margin-right: 0;
   display: none;
 }
-/* line 100, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 102, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #user_profile #user_credits .current_credits p {
   font-size: 24px;
   font-family: Helvetica Neue;
   color: #333333;
   padding-bottom: 5px;
 }
-/* line 105, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 107, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #user_profile #user_credits #current_credits {
   color: #64cb64;
 }
-/* line 107, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 109, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #user_profile #user_credits .table_title {
   font-family: "Helvetica Neue";
   font-size: 20px;
@@ -15664,17 +15683,17 @@ body #page_content .container .list_title .title p {
   padding-top: 14px;
   padding-bottom: 10px;
 }
-/* line 114, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 116, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #user_profile #user_credits .table_content th {
   font-family: Helvetica Neue;
   font-size: 16px;
 }
-/* line 117, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 119, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #user_profile #user_credits .table_content td {
   font-family: "Helvetica Neue";
   font-size: 14px;
 }
-/* line 120, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 122, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #user_profile #user_credits .table_content td a {
   text-decoration: none;
   color: #4383d1;
@@ -15687,20 +15706,20 @@ body #page_content .container .list_title .title p {
   -o-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
-/* line 124, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 126, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #user_profile #user_credits .table_content td a:hover {
   color: #e75297;
 }
-/* line 126, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 128, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #gravatar_hint.alert.alert-info {
   font-family: "Helvetica Neue";
   font-size: 16px;
 }
-/* line 130, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 132, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #gravatar_hint.alert.alert-info p {
   padding: 10px 0 0;
 }
-/* line 132, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 134, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #gravatar_hint.alert.alert-info p a {
   color: black;
   text-decoration: none;
@@ -15714,66 +15733,66 @@ body #page_content .container .list_title .title p {
   -o-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
-/* line 137, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 139, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #gravatar_hint.alert.alert-info p a:hover {
   color: #e75297;
 }
-/* line 140, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 142, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #gravatar_hint.alert.alert-info a img {
   float: left;
   margin-right: 20px;
 }
-/* line 143, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 145, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #social_info {
   margin-top: 20px;
 }
-/* line 146, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 148, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #my_data h1, [data-namespace="null"][data-controller="users"][data-action="show"] #social_info h1 {
   font-family: Helvetica Neue;
   font-size: 25px;
   color: #333333;
 }
-/* line 150, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 152, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #my_data ul, [data-namespace="null"][data-controller="users"][data-action="show"] #social_info ul {
   padding-top: 15px;
 }
-/* line 152, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 154, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #my_data ul li, [data-namespace="null"][data-controller="users"][data-action="show"] #social_info ul li {
   font-family: "Helvetica Neue";
   font-size: 15px;
   margin-bottom: 15px;
 }
-/* line 156, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 158, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #my_data ul li .on_the_spot_editing, [data-namespace="null"][data-controller="users"][data-action="show"] #social_info ul li .on_the_spot_editing {
   color: #e75297;
 }
-/* line 158, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 160, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #my_data ul li .hint, [data-namespace="null"][data-controller="users"][data-action="show"] #social_info ul li .hint {
   padding-top: 5px;
   font-size: 13px;
 }
-/* line 163, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 165, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #change_password h1 {
   font-family: Helvetica Neue;
   font-size: 25px;
   color: #333333;
   padding-top: 20px;
 }
-/* line 168, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 170, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #change_password ul {
   padding-top: 15px;
 }
-/* line 170, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 172, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #change_password ul li {
   font-family: "Helvetica Neue";
   font-size: 15px;
   margin-bottom: 15px;
 }
-/* line 174, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 176, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #change_password ul li .on_the_spot_editing {
   color: #e75297;
 }
-/* line 176, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 178, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #change_password ul li .hint {
   padding-top: 5px;
   font-size: 13px;
