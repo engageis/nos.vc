@@ -25,8 +25,8 @@
     #user_profile[data-user="#{@user.to_json}"]
       .tab_container
         nav#user_profile_menu
-          = link_to t('.tabs.backed_projects'), '#backs', :id => 'backed_projects_link', :class => 'selected'
-          = link_to t('.tabs.created_projects'), '#projects', :id => 'created_projects_link'
+          = link_to t(".tabs.#{@user == current_user ? 'me_' : ''}backed_projects"), '#backs', :id => 'backed_projects_link', :class => 'selected'
+          = link_to t(".tabs.#{@user == current_user ? 'me_' : ''}created_projects"), '#projects', :id => 'created_projects_link'
           = link_to t('.tabs.comments'), '#statements', :id => 'statements_link'
           - if can? :manage, @user
             = link_to t('.tabs.credits'), '#credits', :id => 'credits_link'

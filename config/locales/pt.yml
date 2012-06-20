@@ -664,8 +664,10 @@ pt:
   users:
     show:
       tabs:
-        backed_projects: "Me inscrevi"
-        created_projects: "Criei"
+        me_backed_projects: "Me inscrevi"
+        me_created_projects: "Criei"
+        backed_projects: "Se inscreveu"
+        created_projects: "Criou"
         comments: "Depoimentos"
         credits: "Créditos"
         settings: "Configurações"
