@@ -93,7 +93,10 @@ css:
                     .remaining= reward.display_maximum_backers.html_safe
                 - else
                   .unlimited= t('reward.unlimited')
-                .expires_at= reward.display_expires_at || @project.display_expires_at
+                .expires_at
+                  span= t('until')
+                  |  
+                  = reward.display_expires_at || @project.display_expires_at
                 .clearfix
         #when.clearfix
           h3= t('projects.show.when')

@@ -1,5 +1,6 @@
 pt:
   or: ou
+  until: "até"
   newsletter_ok_header: "Cadastro efetuado!"
   newsletter_ok_body: "Seu email foi cadastrado com sucesso, obrigado!"
   newsletter_error_header: "Ooops! Ocorreu um erro."
@@ -627,7 +628,7 @@ pt:
     email:
       contact: somos@nos.vc
       payments: leo@nos.vc
-      projects: larusso@nos.vc #mauro@nos.vc
+      projects: larusso@nos.vc, mauro@nos.vc, josemarluedke@gmail.com
       system: system@nos.vc
     facebook: "http://www.facebook.com/nos.vc"
     name: "Nós.vc"

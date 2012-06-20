@@ -26,8 +26,6 @@
       javascript:
         var rewards_count = #{@project.rewards.size}
         var rewards_id = #{@project.rewards.size}
-      .reward_title
-        p= t('.rewards_description')
       #rewards_wrapper
         = form.semantic_fields_for :rewards do |reward|
           .reward
