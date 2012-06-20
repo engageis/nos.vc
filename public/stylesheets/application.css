@@ -11785,7 +11785,7 @@ body #page_content .container .list_title .title p {
   text-transform: uppercase;
   margin: 0px;
   text-shadow: white 1px 1px 0px;
-  background: url('/images/nosvc/icon-link.gif?1338834312') right 2px no-repeat;
+  background: url('/images/nosvc/icon-link.png?1340223251') right 2px no-repeat;
   text-align: right;
   padding-right: 25px;
   padding-left: 25px;
@@ -12598,20 +12598,20 @@ body #page_content .container .list_title .title p {
 }
 /* line 200, ../../app/assets/stylesheets/resources/projects/_show.sass */
 [data-namespace="null"][data-controller="projects"][data-action="show"] #page_content .main #project_content #leader_profile .user_social ul li.email, [data-namespace="null"][data-controller="projects"][data-action="show"] #page_content .main #leader_profile #leader_profile .user_social ul li.email {
-  background: url('/images/nosvc/icon-user_face.png?1338834312') left top no-repeat;
+  background: url('/images/nosvc/icon-user_face.png?1340220733') left top no-repeat;
   display: none;
 }
 /* line 203, ../../app/assets/stylesheets/resources/projects/_show.sass */
 [data-namespace="null"][data-controller="projects"][data-action="show"] #page_content .main #project_content #leader_profile .user_social ul li.facebook, [data-namespace="null"][data-controller="projects"][data-action="show"] #page_content .main #leader_profile #leader_profile .user_social ul li.facebook {
-  background: url('/images/nosvc/icon-user_face.png?1338834312') left top no-repeat;
+  background: url('/images/nosvc/icon-user_face.png?1340220733') left top no-repeat;
 }
 /* line 205, ../../app/assets/stylesheets/resources/projects/_show.sass */
 [data-namespace="null"][data-controller="projects"][data-action="show"] #page_content .main #project_content #leader_profile .user_social ul li.twitter, [data-namespace="null"][data-controller="projects"][data-action="show"] #page_content .main #leader_profile #leader_profile .user_social ul li.twitter {
-  background: url('/images/nosvc/icon-user_twitter.png?1338834312') left top no-repeat;
+  background: url('/images/nosvc/icon-user_twitter.png?1340220702') left top no-repeat;
 }
 /* line 207, ../../app/assets/stylesheets/resources/projects/_show.sass */
 [data-namespace="null"][data-controller="projects"][data-action="show"] #page_content .main #project_content #leader_profile .user_social ul li.other, [data-namespace="null"][data-controller="projects"][data-action="show"] #page_content .main #leader_profile #leader_profile .user_social ul li.other {
-  background: url('/images/nosvc/icon-user_home.png?1338834312') left top no-repeat;
+  background: url('/images/nosvc/icon-user_home.png?1340220659') left top no-repeat;
 }
 /* line 209, ../../app/assets/stylesheets/resources/projects/_show.sass */
 [data-namespace="null"][data-controller="projects"][data-action="show"] #page_content .main #project_content #project_updates, [data-namespace="null"][data-controller="projects"][data-action="show"] #page_content .main #leader_profile #project_updates {
@@ -12701,7 +12701,7 @@ body #page_content .container .list_title .title p {
   font-family: "Dosis-Medium";
   color: #83b1df;
   text-decoration: none;
-  background: url('/images/nosvc/icon-link.gif?1338834312') right 4px no-repeat;
+  background: url('/images/nosvc/icon-link.png?1340223251') right 4px no-repeat;
   padding-right: 20px;
   text-shadow: white 1px 1px 0px;
 }
@@ -12910,20 +12910,20 @@ body #page_content .container .list_title .title p {
 }
 /* line 402, ../../app/assets/stylesheets/resources/projects/_show.sass */
 [data-namespace="null"][data-controller="projects"][data-action="show"] #page_content .sidebar .user_social ul li.email {
-  background: url('/images/nosvc/icon-user_face.png?1338834312') left top no-repeat;
+  background: url('/images/nosvc/icon-user_face.png?1340220733') left top no-repeat;
   display: none;
 }
 /* line 405, ../../app/assets/stylesheets/resources/projects/_show.sass */
 [data-namespace="null"][data-controller="projects"][data-action="show"] #page_content .sidebar .user_social ul li.facebook {
-  background: url('/images/nosvc/icon-user_face.png?1338834312') left top no-repeat;
+  background: url('/images/nosvc/icon-user_face.png?1340220733') left top no-repeat;
 }
 /* line 407, ../../app/assets/stylesheets/resources/projects/_show.sass */
 [data-namespace="null"][data-controller="projects"][data-action="show"] #page_content .sidebar .user_social ul li.twitter {
-  background: url('/images/nosvc/icon-user_twitter.png?1338834312') left top no-repeat;
+  background: url('/images/nosvc/icon-user_twitter.png?1340220702') left top no-repeat;
 }
 /* line 409, ../../app/assets/stylesheets/resources/projects/_show.sass */
 [data-namespace="null"][data-controller="projects"][data-action="show"] #page_content .sidebar .user_social ul li.other {
-  background: url('/images/nosvc/icon-user_home.png?1338834312') left top no-repeat;
+  background: url('/images/nosvc/icon-user_home.png?1340220659') left top no-repeat;
 }
 /* line 411, ../../app/assets/stylesheets/resources/projects/_show.sass */
 [data-namespace="null"][data-controller="projects"][data-action="show"] #page_content .sidebar #rewards {
@@ -15496,31 +15496,48 @@ body #page_content .container .list_title .title p {
   width: 540px;
 }
 
-/* line 4, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 3, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #creditsModal h3 {
   font-family: "Helvetica Neue";
 }
-/* line 6, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 5, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #creditsModal .modal-body {
   font-family: "Helvetica Neue";
 }
-/* line 9, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 8, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #creditsModal .modal-footer a {
   font-family: "Helvetica Neue";
 }
-/* line 11, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 10, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #user_profile {
   padding-bottom: 20px;
   background: url('/images/nosvc/while_line.gif?1339790303') right repeat-y;
 }
-/* line 16, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 15, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #user_profile #user_profile_content .content p.empty {
   text-align: center;
   font-family: "Helvetica Neue";
   font-size: 14px;
-  width: 100%;
+  width: 414px;
+  background: white;
+  border-top: 1px dashed #cccccc;
+  border-bottom: 1px dashed #cccccc;
+  line-height: 21px;
+  padding: 30px 100px;
+  float: right;
+  color: #5d5d5d;
+  margin-top: -241px;
 }
-/* line 21, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 28, ../../app/assets/stylesheets/resources/users/_show.sass */
+[data-namespace="null"][data-controller="users"][data-action="show"] #user_profile #user_profile_content .content p.empty a {
+  color: #83b1df;
+  text-decoration: none;
+}
+/* line 31, ../../app/assets/stylesheets/resources/users/_show.sass */
+[data-namespace="null"][data-controller="users"][data-action="show"] #user_profile #user_profile_content .content p.empty a:hover {
+  text-decoration: underline;
+}
+/* line 33, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #user_profile #user_profile_content .user_content_right {
   display: inline;
   float: left;
@@ -15532,26 +15549,26 @@ body #page_content .container .list_title .title p {
   padding: 10px 10px 20px;
   float: right;
 }
-/* line 27, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 39, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #user_profile #user_profile_content .user_content_right .fb-comments {
   margin: auto;
   width: 534px;
   display: block;
 }
-/* line 31, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 43, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #user_profile .section_header {
   display: inline;
   float: left;
   margin-left: 10px;
   margin-right: 10px;
   width: 580px;
-  width: 594px;
+  width: 534px;
   background: #f9f9f9;
   margin: 0;
   margin-top: -80px;
-  padding: 10px 10px 20px;
+  padding: 40px 40px 20px;
 }
-/* line 38, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 50, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #user_profile .section_header .profile_left {
   display: inline;
   float: left;
@@ -15560,7 +15577,7 @@ body #page_content .container .list_title .title p {
   width: 160px;
   margin-left: 0;
 }
-/* line 42, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 54, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #user_profile .section_header .profile_left .avatar img {
   width: 150px;
   display: block;
@@ -15572,19 +15589,19 @@ body #page_content .container .list_title .title p {
   -khtml-border-radius: 50%;
   border-radius: 50%;
 }
-/* line 47, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 59, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #user_profile .section_header .profile_left .user_social {
   display: block;
-  margin: 0 auto;
+  margin: 15px auto 0;
   width: 100%;
 }
-/* line 51, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 63, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #user_profile .section_header .profile_left .user_social ul {
   margin-left: 30px;
   margin-top: 5px;
   width: 96px;
 }
-/* line 55, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 67, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #user_profile .section_header .profile_left .user_social ul li {
   height: 26px;
   text-indent: -3000em;
@@ -15592,7 +15609,7 @@ body #page_content .container .list_title .title p {
   margin-right: 5px;
   width: 27px;
 }
-/* line 61, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 73, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #user_profile .section_header .profile_left .user_social ul li a {
   color: black;
   -moz-transition-property: all;
@@ -15606,61 +15623,62 @@ body #page_content .container .list_title .title p {
   text-decoration: none;
   display: block;
 }
-/* line 66, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 78, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #user_profile .section_header .profile_left .user_social ul li a:hover {
   color: #e75297;
 }
-/* line 68, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 80, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #user_profile .section_header .profile_left .user_social ul li.email {
   background: url("/images/catarse/social_icons.png") left top no-repeat;
   display: none;
 }
-/* line 71, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 83, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #user_profile .section_header .profile_left .user_social ul li.facebook {
-  background: url('/images/nosvc/icon-user_face.png?1338834312') left top no-repeat;
+  background: url('/images/nosvc/icon-user_face.png?1340220733') left top no-repeat;
 }
-/* line 73, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 85, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #user_profile .section_header .profile_left .user_social ul li.twitter {
-  background: url('/images/nosvc/icon-user_twitter.png?1338834312') left top no-repeat;
+  background: url('/images/nosvc/icon-user_twitter.png?1340220702') left top no-repeat;
 }
-/* line 75, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 87, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #user_profile .section_header .profile_left .user_social ul li.other {
-  background: url('/images/nosvc/icon-user_home.png?1338834312') left top no-repeat;
+  background: url('/images/nosvc/icon-user_home.png?1340220659') left top no-repeat;
 }
-/* line 77, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 89, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #user_profile .section_header .profile_title {
   display: inline;
   float: left;
   margin-left: 10px;
   margin-right: 10px;
   width: 400px;
-  margin-right: 0;
+  width: 364px;
+  margin-right: 0px;
+  margin-left: 0px;
 }
-/* line 80, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 94, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #user_profile .section_header .profile_title h1 {
   font-family: "Dosis-ExtraLight";
   font-size: 41px;
   letter-spacing: -1px;
-  width: 460px;
   text-shadow: white 1px 1px 0px;
   color: #5d5d5d;
   line-height: 46px;
   margin: auto;
   margin-bottom: 15px;
 }
-/* line 90, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 103, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #user_profile .section_header .profile_title h4 {
   color: #5d5d5d;
   font-size: 16px;
   font-family: Dosis-Light;
   line-height: 140%;
 }
-/* line 95, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 108, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #user_profile .tab_container {
-  padding-top: 20px;
+  padding-top: 130px;
   margin-bottom: 20px;
 }
-/* line 101, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 114, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #user_profile #user_settings {
   display: inline;
   float: left;
@@ -15672,28 +15690,31 @@ body #page_content .container .list_title .title p {
   margin-right: 0;
   display: none;
 }
-/* line 108, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 121, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #user_profile #user_credits {
   display: inline;
   float: left;
   margin-left: 10px;
   margin-right: 10px;
   width: 940px;
-  margin-right: 0;
+  width: 534px;
+  float: right;
+  padding: 40px;
+  margin: -250px 0px 0px 0px;
   display: none;
 }
-/* line 113, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 129, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #user_profile #user_credits .current_credits p {
   font-size: 24px;
   font-family: Helvetica Neue;
   color: #333333;
   padding-bottom: 5px;
 }
-/* line 118, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 134, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #user_profile #user_credits #current_credits {
   color: #64cb64;
 }
-/* line 120, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 136, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #user_profile #user_credits .table_title {
   font-family: "Helvetica Neue";
   font-size: 20px;
@@ -15701,17 +15722,17 @@ body #page_content .container .list_title .title p {
   padding-top: 14px;
   padding-bottom: 10px;
 }
-/* line 127, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 143, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #user_profile #user_credits .table_content th {
   font-family: Helvetica Neue;
   font-size: 16px;
 }
-/* line 130, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 146, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #user_profile #user_credits .table_content td {
   font-family: "Helvetica Neue";
   font-size: 14px;
 }
-/* line 133, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 149, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #user_profile #user_credits .table_content td a {
   text-decoration: none;
   color: #4383d1;
@@ -15724,20 +15745,20 @@ body #page_content .container .list_title .title p {
   -o-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
-/* line 137, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 153, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #user_profile #user_credits .table_content td a:hover {
   color: #e75297;
 }
-/* line 139, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 155, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #gravatar_hint.alert.alert-info {
   font-family: "Helvetica Neue";
   font-size: 16px;
 }
-/* line 143, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 159, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #gravatar_hint.alert.alert-info p {
   padding: 10px 0 0;
 }
-/* line 145, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 161, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #gravatar_hint.alert.alert-info p a {
   color: black;
   text-decoration: none;
@@ -15751,66 +15772,66 @@ body #page_content .container .list_title .title p {
   -o-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
-/* line 150, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 166, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #gravatar_hint.alert.alert-info p a:hover {
   color: #e75297;
 }
-/* line 153, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 169, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #gravatar_hint.alert.alert-info a img {
   float: left;
   margin-right: 20px;
 }
-/* line 156, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 172, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #social_info {
   margin-top: 20px;
 }
-/* line 159, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 175, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #my_data h1, [data-namespace="null"][data-controller="users"][data-action="show"] #social_info h1 {
   font-family: Helvetica Neue;
   font-size: 25px;
   color: #333333;
 }
-/* line 163, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 179, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #my_data ul, [data-namespace="null"][data-controller="users"][data-action="show"] #social_info ul {
   padding-top: 15px;
 }
-/* line 165, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 181, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #my_data ul li, [data-namespace="null"][data-controller="users"][data-action="show"] #social_info ul li {
   font-family: "Helvetica Neue";
   font-size: 15px;
   margin-bottom: 15px;
 }
-/* line 169, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 185, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #my_data ul li .on_the_spot_editing, [data-namespace="null"][data-controller="users"][data-action="show"] #social_info ul li .on_the_spot_editing {
   color: #e75297;
 }
-/* line 171, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 187, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #my_data ul li .hint, [data-namespace="null"][data-controller="users"][data-action="show"] #social_info ul li .hint {
   padding-top: 5px;
   font-size: 13px;
 }
-/* line 176, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 192, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #change_password h1 {
   font-family: Helvetica Neue;
   font-size: 25px;
   color: #333333;
   padding-top: 20px;
 }
-/* line 181, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 197, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #change_password ul {
   padding-top: 15px;
 }
-/* line 183, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 199, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #change_password ul li {
   font-family: "Helvetica Neue";
   font-size: 15px;
   margin-bottom: 15px;
 }
-/* line 187, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 203, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #change_password ul li .on_the_spot_editing {
   color: #e75297;
 }
-/* line 189, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 205, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #change_password ul li .hint {
   padding-top: 5px;
   font-size: 13px;

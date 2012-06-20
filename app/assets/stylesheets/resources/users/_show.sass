@@ -16,7 +16,20 @@
           text-align: center
           font-family: "Helvetica Neue"
           font-size: 14px
-          width: 100%
+          width: 414px
+          background: #FFF
+          border-top: 1px dashed #ccc
+          border-bottom: 1px dashed #ccc
+          line-height: 21px
+          padding: 30px 100px
+          float: right
+          color: #5d5d5d
+          margin-top: -241px
+          a
+            color: #83b1df
+            text-decoration: none
+            &:hover
+              text-decoration: underline
       .user_content_right
         +grid(10)
         width: 594px
@@ -29,11 +42,11 @@
           display: block
     .section_header
       +grid(10)
-      width: 594px
+      width: 534px
       background: #f9f9f9
       margin: 0
       margin-top: -80px
-      padding: 10px 10px 20px
+      padding: 40px 40px 20px
       .profile_left
         +grid(3)
         +alpha
@@ -45,7 +58,7 @@
             +border-radius(50%)
         .user_social
           display: block
-          margin: 0 auto
+          margin: 15px auto 0
           width: 100%
           ul
             margin-left: 30px
@@ -75,12 +88,13 @@
                 background: image-url("nosvc/icon-user_home.png") left top no-repeat
       .profile_title
         +grid(7)
-        +omega
+        width: 364px
+        margin-right: 0px
+        margin-left: 0px
         h1
           font-family: "Dosis-ExtraLight"
           font-size: 41px
           letter-spacing: -1px
-          width: 460px
           +text-shadow(white 1px 1px 0px)
           color: #5d5d5d
           line-height: 46px
@@ -92,7 +106,7 @@
           font-family: Dosis-Light
           line-height: 140%
     .tab_container
-      padding-top: 20px
+      padding-top: 130px
       margin-bottom:  20px
     #user_backed_projects, #user_created_projects
       div.project
@@ -106,7 +120,10 @@
 
     #user_credits
       +grid(16)
-      +omega
+      width: 534px
+      float: right
+      padding: 40px
+      margin: -250px 0px 0px 0px
       display: none
       .current_credits
         p
