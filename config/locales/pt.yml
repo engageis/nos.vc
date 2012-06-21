@@ -622,7 +622,7 @@ pt:
       error: "Ocorreu um erro ao realizar o login. Por favor, tente novamente."
   site:
     host: "nos.vc"
-    base_url: "http://localhost:3000"
+    base_url: "http://nos.vc"
     blog: "http://blog.nos.vc/"
     help: "http://help.nos.vc/"
     email:
