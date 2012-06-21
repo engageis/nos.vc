@@ -1,15 +1,28 @@
 [data-namespace="null"][data-controller="users"][data-action="show"]
   #creditsModal
     h3
-      font-family: "Helvetica Neue"
+      font-family: "Helvetica", "Arial", "Sans-serif"
     .modal-body
-      font-family: "Helvetica Neue"
+      font-family: "Helvetica", "Arial", "Sans-serif"
     .modal-footer
       a
-        font-family: "Helvetica Neue"
+        font-family: "Helvetica", "Arial", "Sans-serif"
   #user_profile
     padding-bottom: 20px
     background: image-url('nosvc/while_line.gif') right repeat-y
+    #backed_projects_link, #created_projects_link, #statements_link, #credits_link, #settings_link 
+      background-position: left 13px
+      background-repeat: no-repeat
+    #backed_projects_link
+      background-image: image-url('nosvc/icon-successful.png')    
+    #created_projects_link
+      background-image: image-url('nosvc/icon-user-create.png')
+    #statements_link
+      background-image: image-url('nosvc/icon-user-statement.png')
+    #credits_link
+      background-image: image-url('nosvc/icon-rewards.png')
+    #settings_link
+      background-image: image-url('nosvc/icon-user-config.png')
     #user_profile_content
       .content
         p.empty
@@ -108,9 +121,48 @@
     .tab_container
       padding-top: 130px
       margin-bottom:  20px
+      a
+        text-indent: 40px
+        padding: 20px 15px!important
     #user_backed_projects, #user_created_projects
       div.project
         //margin-left: 0px
+        .back_info
+          display: none
+          padding: 10px
+          width: 400px
+          position: absolute
+          top: 25px
+          left: 25px
+          z-index: 1001
+          font-family: "Helvetica Neue", "Arial", "Sans-serif"
+          background: white
+          +border-radius(4px)
+          +box-shadow(rgba(black, 0.7) 2px 2px 3px)
+          #text
+            a, em.anon
+              font-size: 17px
+              padding-bottom: 5px
+              font-weight: bold
+              color: #83b1df
+              text-decoration: none
+              display: inline-block
+          #confirmed
+            padding-top: 8px
+          #confirmed, #backed
+            padding-top: 2px
+            font-family: Arial
+            font-size: 12px
+            color: $ultra_gryn
+          .reward
+            clear: both
+            padding: 10px
+            font-size: 12px
+            background: $ed_gryn
+            margin-top: 10px
+            line-height: 18px
+            +border-radius(4px)
+
     #user_settings.user_content_right, #user_credits.user_content_right
       +grid(16)
       width: 534px
@@ -122,6 +174,7 @@
         margin-top: 0px
         margin-bottom: 40px
     #user_credits.user_content_right
+      margin-top: -300px
       .current_credits
         p
           font-size: 24px
@@ -147,7 +200,7 @@
           color: #5d5d5d
           text-transform: uppercase
           font-weight: normal
-          padding: 0px
+          padding: 15px 10px
           vertical-align: top
           width: 120px
           &:first-child
@@ -159,10 +212,29 @@
           font-size: 14px
           a
             text-decoration: none
-            color: $blue
+            color: #83b1df
             +transition(all, 0.5s)
             &:hover
-              color: $pink
+              text-decoration: underline
+        tbody
+          tr
+            margin-top: 20px
+            td
+              font-family: "Helvetica", "Arial", "Sans-serif"
+              font-weight: lighter
+              font-size: 13px
+              padding: 15px 10px
+              color: #5d5d5d
+              vertical-align: middle
+              &:last-child
+                text-align: right
+              a
+                text-decoration: none
+                color: #83b1df
+                +transition(all, 0.5s)
+                &:hover
+                  color: $pink
+
   #gravatar_hint.alert.alert-info
     font-family: "Helvetica", "Arial", "Sans-serif"
     font-size: 16px

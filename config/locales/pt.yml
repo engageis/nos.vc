@@ -137,7 +137,7 @@ pt:
     index:
       back_date: "Data da inscrição"
       current_credits_html: "Seu saldo atual é de <span id=\"current_credits\">%{credits}</span> em créditos."
-      important_html: "Você tem <strong>até 60 dias após a data da sua inscrição</strong> para solicitar o estorno. Caso você opte pelo estorno, o valor da inscrição será descontada dos seus créditos."
+      important_html: "Você tem <strong>até 180 dias após a data da sua inscrição</strong> para solicitar o estorno. Caso você opte pelo estorno, o valor da inscrição será descontada dos seus créditos."
       project: "Encontro"
       refund_expration_date: "Prazo para estorno"
       refunded: "Pedido enviado com sucesso"
@@ -335,7 +335,7 @@ pt:
       site_title: "Recuperar senha"
   payment_stream:
     thank_you:
-      error: "Ooops. Você só pode acessar esta página depois de se inscvrever em um encontro."
+      error: "Ooops. Você só pode acessar esta página depois de se inscrever em um encontro."
       header_subtitle: "Você está dando vida a este encontro."
       header_title: "Muito obrigado!"
       text_subtitle: "Espalhe:"
@@ -373,12 +373,12 @@ pt:
     back_project:
       project_warning:
         not_successful:
-          expired: "Não. Este encontro não foi realizado porque não atingiu o número mínimo de inscritos até %{date}. <br />Mas é possível reformular a proposta e criar um novo encontro. Interessou? Entre em contato com %{name}. <br />Se você se inscreveu, também pode receber seu dinheiro de volta. Ou good vibes, se a inscrição foi gratuita."
-          not_expired: "Ainda não. Este encontro precisa de você! Ele só será realizado se alcançar o número mínimo de inscritos até %{date}. <br />Se não alcançar, você vai receber seu dinheiro de volta. <br />A inscrição é gratuita? Bem, então você vai receber good vibes de volta."
+          expired: "Não. Este encontro não foi realizado porque não atingiu o número mínimo de inscritos até %{date}. Mas é possível reformular a proposta e criar um novo encontro. Interessou? Entre em contato com %{name}. Se você se inscreveu, também pode receber seu dinheiro de volta. Ou good vibes, se a inscrição foi gratuita."
+          not_expired: "Ainda não. Este encontro precisa de você! Ele só será realizado se alcançar o número mínimo de inscritos até %{date}. Se não alcançar, você vai receber seu dinheiro de volta. A inscrição é gratuita? Bem, então você vai receber good vibes de volta."
         successful:
-          expired: "Sim! Este encontro atingiu o número mínimo de inscritos e foi confirmado. <br />Mas as inscrições já encerraram. <br />Você não conseguiu se inscrever? Entre em contato com %{name} e dê vida a um novo encontro."
-          not_expired: "Sim! Este encontro atingiu o número mínimo de inscritos e está confirmado. <br />As inscrições estarão abertas até o dia %{date} ou enquanto durarem as vagas. <br />A galera se inscreveu e deu vida ao encontro."
-        waiting_confirmation: "Talvez! As inscrições foram encerradas e os últimos pagamentos estão sendo processados. <br />Este encontro será confirmado se atingir o número mínimo de inscritos. <br />Volte mais tarde e veja se rolou ou não."
+          expired: "Sim! Este encontro atingiu o número mínimo de inscritos e foi confirmado. Mas as inscrições já encerraram. Você não conseguiu se inscrever? Entre em contato com %{name} e dê vida a um novo encontro."
+          not_expired: "Sim! Este encontro atingiu o número mínimo de inscritos e está confirmado. As inscrições estarão abertas até o dia %{date} ou enquanto durarem as vagas. A galera se inscreveu e deu vida ao encontro."
+        waiting_confirmation: "Talvez! As inscrições foram encerradas e os últimos pagamentos estão sendo processados. Este encontro será confirmado se atingir o número mínimo de inscritos. Volte mais tarde e veja se rolou ou não."
       reached_of: "Atingidos de"
       submit: "Me inscrever"
       and_make_it_happen: "E fazer acontecer"
@@ -437,12 +437,12 @@ pt:
       subtitle: "Preencha com carinho, você está construindo a página do seu encontro."
       title: "Agora é pra valer. Divirta-se mais ainda!"
       sidebar:
-        title: "Como criar e organizar um encontro sobre o que você quiser:"
-        first_step: "Preencha o formulário com todo seu gingado e talento. Crie um curso, debate, workshop ou qualquer outra atividade de aprendizado."
-        second_step: "Vamos ler e responder sua proposta com nossos próprios dedos. Quando estiver tudo ok, as inscrições serão abertas."
-        third_step: "O encontro será organizado por você no mundo real. É só alcançar o número mínimo de inscritos no prazo definido."
-        fourth_step: "Quer uma dica para fazer acontecer um encontro inspirador?"
-        link: "Nós temos várias pra te dar"
+        title: "Como fazer seu encontro acontecer:"
+        first_step: "Defina quantos tipos de inscrição quiser. Podem ter preços e prazos diferentes ou até serem de graça."
+        second_step: "Crie tipos de inscrições atrativas para alcançar o número mínimo de pessoas mais rapidamente."
+        third_step: "Mas, lembre-se, suas contas devem fechar. Considere todos os custos e o valor mínimo arrecadado."
+        fourth_step: "Você já conhece as dicas da nossa comunidade?"
+        link: "Descubra nosso Help!"
     footer_featured:
       mi_casa_su_casa:
         title: "Mi saca, su casa."
@@ -583,14 +583,14 @@ pt:
       sidebar:
         title: "Como criar e organizar um encontro sobre o que você quiser:"
         first_step: "Preencha o formulário com todo seu gingado e talento. Crie um curso, debate, workshop ou qualquer outra atividade de aprendizado."
-        second_step: "Vamos ler e responder sua proposta com nossos próprios dedos. Quando estiver tudo ok, as inscrições serão abertas."
+        second_step: "Vamos ler sua proposta e responder com nossos próprios dedos. Quando estiver tudo ok, as inscrições serão abertas."
         third_step: "O encontro será organizado por você no mundo real. É só alcançar o número mínimo de inscritos no prazo definido."
         fourth_step: "Quer uma dica para fazer acontecer um encontro inspirador?"
         link: "Nós temos várias pra te dar"
     twitter:
-      take_a_look: "Confira o projeto %{name} no @Nos_vc"
+      take_a_look: "%{name} via @Nos_vc"
     video_embed:
-      a_project_by_html: "Um projeto de %{link} no"
+      a_project_by_html: "Um encontro de %{link} no"
   projects_mailer:
     start_project_email:
       subject: "Encontro enviado por %{name}"
@@ -649,7 +649,7 @@ pt:
     about_us:
       title: "Sobre Nós.vc"
     contact:
-      title: "pagina de contato"
+      title: "Contato"
     privacy:
       title: "Política de privacidade"
     terms:

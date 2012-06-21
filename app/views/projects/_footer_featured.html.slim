@@ -1,20 +1,22 @@
 .footer_featured
-  .mi_casa_su_casa
-    .title= t('.mi_casa_su_casa.title')
-    p= t('.mi_casa_su_casa.text')
-    = link_to t('.mi_casa_su_casa.link'), "#"
+  .content
+    .mi_casa_su_casa
+      .title= t('.mi_casa_su_casa.title')
+      p= t('.mi_casa_su_casa.text')
+      = link_to t('.mi_casa_su_casa.link'), "#"
 
-  .not_repress
-    .title= t('.not_repress.title')
-    p= t('.not_repress.text')
-    = form_tag 'http://nosvc.mailee.me/go/add_contact_form', id: 'mailee-form', method: 'post' do
-      = hidden_field_tag 'key', '0699c9'
-      = hidden_field_tag 'url_ok', "http://#{request.env['HTTP_HOST']}/?newsletter=ok"
-      = hidden_field_tag 'url_error', "http://#{request.env['HTTP_HOST']}/?newsletter=error"
-      = text_field_tag 'email', nil, placeholder: 'email@email.com'
-      = submit_tag "OK"
+    .not_repress
+      .title= t('.not_repress.title')
+      p= t('.not_repress.text')
+      = form_tag 'http://nosvc.mailee.me/go/add_contact_form', id: 'mailee-form', method: 'post' do
+        = hidden_field_tag 'key', '0699c9'
+        = hidden_field_tag 'url_ok', "http://#{request.env['HTTP_HOST']}/?newsletter=ok"
+        = hidden_field_tag 'url_error', "http://#{request.env['HTTP_HOST']}/?newsletter=error"
+        = text_field_tag 'email', nil, placeholder: 'email@email.com'
+        = submit_tag "OK"
 
-  .it_will
-    .title= t('.it_will.title')
-    p= t('.it_will.text')
-    = link_to t('.it_will.link'), t('site.blog'), target: "_blanck"
+    .it_will
+      .title= t('.it_will.title')
+      p= t('.it_will.text')
+      = link_to t('.it_will.link'), t('site.blog'), target: "_blanck"
+    .clearfix

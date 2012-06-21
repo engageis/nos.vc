@@ -38,6 +38,57 @@
           padding-left: 25px
           &:hover
             text-decoration: underline
+    .footer_featured
+      padding-top: 5px
+      padding-bottom: 30px
+      border-top: 1px #d8d3d3 dashed 
+      border-bottom: 1px #d8d3d3 dashed
+      margin-bottom: 50px
+      .content
+        +grid-system(16)
+        margin: 0 auto
+        .mi_casa_su_casa, .not_repress, .it_will
+          width: 200px
+          float: left 
+          margin-top: 30px
+          padding-left: 65px
+          margin-right: 80px
+          .title
+            color: #83B1DF
+            font-family: "Dosis-Medium"
+            font-size: 21px
+            margin-bottom: 25px
+            text-transform: uppercase
+            +text-shadow(white 1px 1px 0px)
+          p
+            font-family: "Helvetica", "Arial", "Sans-serif"
+            font-size: 14px
+            color: #5d5d5d
+            line-height: 21px
+          a
+            color: #83B1DF
+            text-decoration: none
+            +text-shadow(white 1px 1px 0px)
+            font-size: 14px
+            font-family: "Helvetica", "Arial", "Sans-serif"
+            background: image-url("nosvc/mini-link.gif") right top no-repeat
+            display: block
+            padding-top: 2px
+            margin-top: 10px
+            padding-right: 15px
+            float: left
+            &:hover
+              text-decoration: underline
+        .mi_casa_su_casa
+          background: image-url("nosvc/icon-locale.gif") left 2px no-repeat
+        .not_repress
+          background: image-url("nosvc/icon-news.gif") left 2px no-repeat
+        .it_will
+          background: image-url("nosvc/icon-blog.gif") left 2px no-repeat
+          margin-right: 0px
+          float: right
+
+
     .partners
       padding-top: 20px
       padding-bottom: 10px
