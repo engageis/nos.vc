@@ -565,18 +565,19 @@ en:
     failure:
       error: "There was an error while loggin in. Please try again."
   site:
-    host: catarse.me
-    base_url: "http://catarse.me"
-    blog: "http://blog.catarse.me/"
+    host: "nos.vc"
+    base_url: "http://nos.vc"
+    blog: "http://blog.nos.vc/"
+    help: "http://help.nos.vc/"
     email:
-      contact: contato@catarse.me
-      payments: financeiro@catarse.me
-      projects: projetos@catarse.me
-      system: system@catarse.me
-    facebook: "http://www.facebook.com/Catarse.me"
-    name: Catarse
-    title: "The first crowdfunding platform from Brazil"
-    twitter: Catarse_
+      contact: somos@nos.vc
+      payments: leo@nos.vc
+      projects: barrosdaniel@gmail.com, mauroalex@gmail.com
+      system: somos@nos.vc
+    facebook: "http://www.facebook.com/nos.vc"
+    name: "Nós.vc"
+    title: "Encontros Inspiradores"
+    twitter: "Nos_vc"
   static:
     faq:
       title: "Frequent asked questions"
