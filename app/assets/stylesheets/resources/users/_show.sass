@@ -111,38 +111,49 @@
     #user_backed_projects, #user_created_projects
       div.project
         //margin-left: 0px
-    #user_settings
-      +grid(16)
-      width: 534px
-      margin-right: 0px
-      +omega
-      display: none
-
-    #user_credits
+    #user_settings.user_content_right, #user_credits.user_content_right
       +grid(16)
       width: 534px
       float: right
       padding: 40px
       margin: -250px 0px 0px 0px
       display: none
+      #gravatar_hint.alert
+        margin-top: 0px
+        margin-bottom: 40px
+    #user_credits.user_content_right
       .current_credits
         p
           font-size: 24px
-          font-family: Helvetica Neue
-          color: $ultra_gryn
+          font-family: "Dosis-Light"
+          color: #5d5d5d
           padding-bottom: 5px
       #current_credits
-        color: $light_green
+        color: #77a0da
       .table_title
-        font-family: "Helvetica Neue"
-        font-size: 20px
-        color: $dark_green
-        padding-top: 14px
-        padding-bottom: 10px
+        font-family: "Helvetica", "Arial", "Sans-serif"
+        font-size: 14px
+        color: #5d5d5d
+        padding-top: 5px
+        padding-bottom: 14px
+        font-weight: lighter
+        border-bottom: dashed 1px #ccc
+        margin-bottom: 40px
+
       .table_content
         th
-          font-family: Helvetica Neue
+          font-family: "Dosis-Regular"
           font-size: 16px
+          color: #5d5d5d
+          text-transform: uppercase
+          font-weight: normal
+          padding: 0px
+          vertical-align: top
+          width: 120px
+          &:first-child
+            width: 300px
+          &:last-child
+            text-align: right
         td
           font-family: "Helvetica Neue"
           font-size: 14px
@@ -153,7 +164,7 @@
             &:hover
               color: $pink
   #gravatar_hint.alert.alert-info
-    font-family: "Helvetica Neue"
+    font-family: "Helvetica", "Arial", "Sans-serif"
     font-size: 16px
     // color: rgba(black, 0.5)
     p
@@ -169,13 +180,17 @@
       img
         float: left
         margin-right: 20px
-  #social_info
-    margin-top: 20px
-  #my_data, #social_info
+  .alert-info
+    margin-top: 50px
+  #my_data
     h1
-      font-family: Helvetica Neue
-      font-size: 25px
-      color: $ultra_gryn
+      font-family: "Dosis-Regular"
+      font-size: 24px
+      color: #5d5d5d
+      border-bottom: 1px dashed #d8d3d3
+      padding-bottom: 10px
+      margin-bottom: 10px
+      text-transform: uppercase
     ul
       padding-top: 15px
       li
@@ -183,10 +198,37 @@
         font-size: 15px
         margin-bottom: 15px
         .on_the_spot_editing
-          color: $pink
-        .hint
-          padding-top: 5px
-          font-size: 13px
+          color: #83b1df
+        .hint, label
+          padding-top: 10px
+          font-size: 14px
+          font-family: "Helvetica", "Arial", "Sans-serif"
+          color: #5d5d5d
+          line-height: 21px
+        label
+          margin-left: 5px
+        &:last-child
+          margin-bottom: 55px
+  #social_info
+    h1
+      font-family: "Dosis-Regular"
+      font-size: 24px
+      color: #5d5d5d
+      border-bottom: 1px dashed #d8d3d3
+      padding-bottom: 10px
+      margin-bottom: 10px
+      text-transform: uppercase
+    form
+      padding: 0px
+      ul
+        margin-top: 40px
+        li
+          float: left
+          margin-bottom: 25px
+          padding-bottom: 15px
+          width: 100%
+          label
+            color: #83b1df
 
   #change_password
     h1

@@ -2401,7 +2401,8 @@ table .span12 {
 /* line 8, ../../app/assets/stylesheets/miv/_alert.scss */
 #bootstrap-alert .alert, .bootstrap-alert .alert {
   font-size: 13px;
-  font-family: "Helvetica Neue", "Arial", "Sans-serif";
+  font-family: "Helvetica", "Arial", "Sans-serif";
+  font-weight: lighter;
   padding: 10px 15px;
   margin-bottom: 18px;
   text-shadow: 0 1px 0 white;
@@ -2414,47 +2415,47 @@ table .span12 {
   margin-top: 20px;
   line-height: 21px;
 }
-/* line 23, ../../app/assets/stylesheets/miv/_alert.scss */
+/* line 24, ../../app/assets/stylesheets/miv/_alert.scss */
 #bootstrap-alert .alert-heading, .bootstrap-alert .alert-heading {
   color: inherit;
 }
-/* line 26, ../../app/assets/stylesheets/miv/_alert.scss */
+/* line 27, ../../app/assets/stylesheets/miv/_alert.scss */
 #bootstrap-alert .alert .closeAlert, .bootstrap-alert .alert .closeAlert {
   position: relative;
   top: -2px;
   right: -21px;
   line-height: 18px;
 }
-/* line 32, ../../app/assets/stylesheets/miv/_alert.scss */
+/* line 33, ../../app/assets/stylesheets/miv/_alert.scss */
 #bootstrap-alert .alert-success, .bootstrap-alert .alert-success {
   background-color: #dff0d8;
   border-color: #d6e9c6;
   color: #468847;
 }
-/* line 38, ../../app/assets/stylesheets/miv/_alert.scss */
+/* line 39, ../../app/assets/stylesheets/miv/_alert.scss */
 #bootstrap-alert .alert-danger,
 #bootstrap-alert .alert-error, .bootstrap-alert .alert-danger, .bootstrap-alert .alert-error {
   background-color: #f2dede;
   border-color: #eed3d7;
   color: #b94a48;
 }
-/* line 43, ../../app/assets/stylesheets/miv/_alert.scss */
+/* line 44, ../../app/assets/stylesheets/miv/_alert.scss */
 #bootstrap-alert .alert-info, .bootstrap-alert .alert-info {
   background-color: #d9edf7;
   border-color: #bce8f1;
   color: #3a87ad;
 }
-/* line 48, ../../app/assets/stylesheets/miv/_alert.scss */
+/* line 49, ../../app/assets/stylesheets/miv/_alert.scss */
 #bootstrap-alert .alert-block, .bootstrap-alert .alert-block {
   padding-top: 14px;
   padding-bottom: 14px;
 }
-/* line 53, ../../app/assets/stylesheets/miv/_alert.scss */
+/* line 54, ../../app/assets/stylesheets/miv/_alert.scss */
 #bootstrap-alert .alert-block > p,
 #bootstrap-alert .alert-block > ul, .bootstrap-alert .alert-block > p, .bootstrap-alert .alert-block > ul {
   margin-bottom: 0;
 }
-/* line 56, ../../app/assets/stylesheets/miv/_alert.scss */
+/* line 57, ../../app/assets/stylesheets/miv/_alert.scss */
 #bootstrap-alert .alert-block p + p, .bootstrap-alert .alert-block p + p {
   margin-top: 5px;
 }
@@ -9377,7 +9378,7 @@ body #page_content .container .list_title .title p {
   display: block;
   background: #696862;
   height: 40px;
-  font-family: Dosis-SemiBold;
+  font-family: "Dosis-SemiBold";
 }
 /* line 12, ../../app/assets/stylesheets/content/_header.sass */
 #header header {
@@ -9515,8 +9516,9 @@ body #page_content .container .list_title .title p {
   padding-top: 12px;
   width: 100%;
   height: 26px;
+  font-family: "Dosis-SemiBold";
 }
-/* line 99, ../../app/assets/stylesheets/content/_header.sass */
+/* line 100, ../../app/assets/stylesheets/content/_header.sass */
 #header nav.account a.my_profile_link {
   width: 200px;
   display: block;
@@ -9529,12 +9531,12 @@ body #page_content .container .list_title .title p {
   font-family: "Dosis-Medium";
   background: none;
 }
-/* line 110, ../../app/assets/stylesheets/content/_header.sass */
+/* line 111, ../../app/assets/stylesheets/content/_header.sass */
 #header nav.account a.my_profile_link .current_user_name {
   float: left;
   padding-right: 10px;
 }
-/* line 113, ../../app/assets/stylesheets/content/_header.sass */
+/* line 114, ../../app/assets/stylesheets/content/_header.sass */
 #header nav.account a.my_profile_link img.profile_picture {
   border: 1px #333333;
   -moz-box-shadow: rgba(181, 180, 175, 0.4) 1px 1px 2px;
@@ -9560,25 +9562,25 @@ body #page_content .container .list_title .title p {
   margin-top: -10px;
   margin-right: 5px;
 }
-/* line 122, ../../app/assets/stylesheets/content/_header.sass */
+/* line 123, ../../app/assets/stylesheets/content/_header.sass */
 #header nav.account a.my_profile_link img.profile_picture:hover {
   -moz-box-shadow: rgba(0, 0, 0, 0.6) 1px 1px 2px inset;
   -webkit-box-shadow: rgba(0, 0, 0, 0.6) 1px 1px 2px inset;
   -o-box-shadow: rgba(0, 0, 0, 0.6) 1px 1px 2px inset;
   box-shadow: rgba(0, 0, 0, 0.6) 1px 1px 2px inset;
 }
-/* line 124, ../../app/assets/stylesheets/content/_header.sass */
+/* line 125, ../../app/assets/stylesheets/content/_header.sass */
 #header nav.account a.my_profile_link .dropdown_arrow {
   float: right;
   position: relative;
   margin-top: 3px;
   margin-right: 15px;
 }
-/* line 129, ../../app/assets/stylesheets/content/_header.sass */
+/* line 130, ../../app/assets/stylesheets/content/_header.sass */
 #header nav.account a:last-child {
   margin-right: none;
 }
-/* line 131, ../../app/assets/stylesheets/content/_header.sass */
+/* line 132, ../../app/assets/stylesheets/content/_header.sass */
 #header nav.locales {
   display: inline;
   float: left;
@@ -9589,7 +9591,7 @@ body #page_content .container .list_title .title p {
   margin-left: 5px;
   margin-right: 5px;
 }
-/* line 138, ../../app/assets/stylesheets/content/_header.sass */
+/* line 139, ../../app/assets/stylesheets/content/_header.sass */
 #header nav.locales ul li a {
   text-transform: uppercase;
   font-size: 11px;
@@ -9599,19 +9601,19 @@ body #page_content .container .list_title .title p {
   text-indent: 25px;
   background: url('/images/nosvc/icon-arrowinactive.gif?1338834312') left top no-repeat;
 }
-/* line 146, ../../app/assets/stylesheets/content/_header.sass */
+/* line 147, ../../app/assets/stylesheets/content/_header.sass */
 #header nav.locales ul li a:hover {
   color: #b5b4af;
   background: url('/images/nosvc/icon-arrowactive.gif?1338834312') left top no-repeat;
   text-shadow: none;
 }
-/* line 151, ../../app/assets/stylesheets/content/_header.sass */
+/* line 152, ../../app/assets/stylesheets/content/_header.sass */
 #header nav.locales ul li.selected a {
   color: #b5b4af;
   background: url('/images/nosvc/icon-arrowactive.gif?1338834312') left top no-repeat;
   text-shadow: none;
 }
-/* line 155, ../../app/assets/stylesheets/content/_header.sass */
+/* line 156, ../../app/assets/stylesheets/content/_header.sass */
 #header .search {
   display: inline;
   float: left;
@@ -9624,7 +9626,7 @@ body #page_content .container .list_title .title p {
   border-right: 1px solid #4b4a4a;
   height: 40px;
 }
-/* line 162, ../../app/assets/stylesheets/content/_header.sass */
+/* line 163, ../../app/assets/stylesheets/content/_header.sass */
 #header .search form {
   width: 140px;
   height: 24px;
@@ -9642,7 +9644,7 @@ body #page_content .container .list_title .title p {
   margin: auto;
   margin-top: 7px;
 }
-/* line 170, ../../app/assets/stylesheets/content/_header.sass */
+/* line 171, ../../app/assets/stylesheets/content/_header.sass */
 #header .search form input[type="text"] {
   border: none;
   width: 112px;
@@ -9652,11 +9654,11 @@ body #page_content .container .list_title .title p {
   background: transparent;
   color: #b5b4af;
 }
-/* line 178, ../../app/assets/stylesheets/content/_header.sass */
+/* line 179, ../../app/assets/stylesheets/content/_header.sass */
 #header .search form input[type="text"]:focus {
   outline: none;
 }
-/* line 180, ../../app/assets/stylesheets/content/_header.sass */
+/* line 181, ../../app/assets/stylesheets/content/_header.sass */
 #header .search form input[type="submit"] {
   background: url('/images/nosvc/icon-search.png?1338834312') left 2px no-repeat;
   width: 18px;
@@ -11785,7 +11787,7 @@ body #page_content .container .list_title .title p {
   text-transform: uppercase;
   margin: 0px;
   text-shadow: white 1px 1px 0px;
-  background: url('/images/nosvc/icon-link.png?1340223251') right 2px no-repeat;
+  background: url('/images/nosvc/icon-link.png?1340223975') right 2px no-repeat;
   text-align: right;
   padding-right: 25px;
   padding-left: 25px;
@@ -12598,20 +12600,20 @@ body #page_content .container .list_title .title p {
 }
 /* line 200, ../../app/assets/stylesheets/resources/projects/_show.sass */
 [data-namespace="null"][data-controller="projects"][data-action="show"] #page_content .main #project_content #leader_profile .user_social ul li.email, [data-namespace="null"][data-controller="projects"][data-action="show"] #page_content .main #leader_profile #leader_profile .user_social ul li.email {
-  background: url('/images/nosvc/icon-user_face.png?1340220733') left top no-repeat;
+  background: url('/images/nosvc/icon-user_face.png?1340223975') left top no-repeat;
   display: none;
 }
 /* line 203, ../../app/assets/stylesheets/resources/projects/_show.sass */
 [data-namespace="null"][data-controller="projects"][data-action="show"] #page_content .main #project_content #leader_profile .user_social ul li.facebook, [data-namespace="null"][data-controller="projects"][data-action="show"] #page_content .main #leader_profile #leader_profile .user_social ul li.facebook {
-  background: url('/images/nosvc/icon-user_face.png?1340220733') left top no-repeat;
+  background: url('/images/nosvc/icon-user_face.png?1340223975') left top no-repeat;
 }
 /* line 205, ../../app/assets/stylesheets/resources/projects/_show.sass */
 [data-namespace="null"][data-controller="projects"][data-action="show"] #page_content .main #project_content #leader_profile .user_social ul li.twitter, [data-namespace="null"][data-controller="projects"][data-action="show"] #page_content .main #leader_profile #leader_profile .user_social ul li.twitter {
-  background: url('/images/nosvc/icon-user_twitter.png?1340220702') left top no-repeat;
+  background: url('/images/nosvc/icon-user_twitter.png?1340223975') left top no-repeat;
 }
 /* line 207, ../../app/assets/stylesheets/resources/projects/_show.sass */
 [data-namespace="null"][data-controller="projects"][data-action="show"] #page_content .main #project_content #leader_profile .user_social ul li.other, [data-namespace="null"][data-controller="projects"][data-action="show"] #page_content .main #leader_profile #leader_profile .user_social ul li.other {
-  background: url('/images/nosvc/icon-user_home.png?1340220659') left top no-repeat;
+  background: url('/images/nosvc/icon-user_home.png?1340223975') left top no-repeat;
 }
 /* line 209, ../../app/assets/stylesheets/resources/projects/_show.sass */
 [data-namespace="null"][data-controller="projects"][data-action="show"] #page_content .main #project_content #project_updates, [data-namespace="null"][data-controller="projects"][data-action="show"] #page_content .main #leader_profile #project_updates {
@@ -12701,7 +12703,7 @@ body #page_content .container .list_title .title p {
   font-family: "Dosis-Medium";
   color: #83b1df;
   text-decoration: none;
-  background: url('/images/nosvc/icon-link.png?1340223251') right 4px no-repeat;
+  background: url('/images/nosvc/icon-link.png?1340223975') right 4px no-repeat;
   padding-right: 20px;
   text-shadow: white 1px 1px 0px;
 }
@@ -12910,20 +12912,20 @@ body #page_content .container .list_title .title p {
 }
 /* line 402, ../../app/assets/stylesheets/resources/projects/_show.sass */
 [data-namespace="null"][data-controller="projects"][data-action="show"] #page_content .sidebar .user_social ul li.email {
-  background: url('/images/nosvc/icon-user_face.png?1340220733') left top no-repeat;
+  background: url('/images/nosvc/icon-user_face.png?1340223975') left top no-repeat;
   display: none;
 }
 /* line 405, ../../app/assets/stylesheets/resources/projects/_show.sass */
 [data-namespace="null"][data-controller="projects"][data-action="show"] #page_content .sidebar .user_social ul li.facebook {
-  background: url('/images/nosvc/icon-user_face.png?1340220733') left top no-repeat;
+  background: url('/images/nosvc/icon-user_face.png?1340223975') left top no-repeat;
 }
 /* line 407, ../../app/assets/stylesheets/resources/projects/_show.sass */
 [data-namespace="null"][data-controller="projects"][data-action="show"] #page_content .sidebar .user_social ul li.twitter {
-  background: url('/images/nosvc/icon-user_twitter.png?1340220702') left top no-repeat;
+  background: url('/images/nosvc/icon-user_twitter.png?1340223975') left top no-repeat;
 }
 /* line 409, ../../app/assets/stylesheets/resources/projects/_show.sass */
 [data-namespace="null"][data-controller="projects"][data-action="show"] #page_content .sidebar .user_social ul li.other {
-  background: url('/images/nosvc/icon-user_home.png?1340220659') left top no-repeat;
+  background: url('/images/nosvc/icon-user_home.png?1340223975') left top no-repeat;
 }
 /* line 411, ../../app/assets/stylesheets/resources/projects/_show.sass */
 [data-namespace="null"][data-controller="projects"][data-action="show"] #page_content .sidebar #rewards {
@@ -15634,15 +15636,15 @@ body #page_content .container .list_title .title p {
 }
 /* line 83, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #user_profile .section_header .profile_left .user_social ul li.facebook {
-  background: url('/images/nosvc/icon-user_face.png?1340220733') left top no-repeat;
+  background: url('/images/nosvc/icon-user_face.png?1340223975') left top no-repeat;
 }
 /* line 85, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #user_profile .section_header .profile_left .user_social ul li.twitter {
-  background: url('/images/nosvc/icon-user_twitter.png?1340220702') left top no-repeat;
+  background: url('/images/nosvc/icon-user_twitter.png?1340223975') left top no-repeat;
 }
 /* line 87, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #user_profile .section_header .profile_left .user_social ul li.other {
-  background: url('/images/nosvc/icon-user_home.png?1340220659') left top no-repeat;
+  background: url('/images/nosvc/icon-user_home.png?1340223975') left top no-repeat;
 }
 /* line 89, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #user_profile .section_header .profile_title {
@@ -15679,19 +15681,7 @@ body #page_content .container .list_title .title p {
   margin-bottom: 20px;
 }
 /* line 114, ../../app/assets/stylesheets/resources/users/_show.sass */
-[data-namespace="null"][data-controller="users"][data-action="show"] #user_profile #user_settings {
-  display: inline;
-  float: left;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 940px;
-  width: 534px;
-  margin-right: 0px;
-  margin-right: 0;
-  display: none;
-}
-/* line 121, ../../app/assets/stylesheets/resources/users/_show.sass */
-[data-namespace="null"][data-controller="users"][data-action="show"] #user_profile #user_credits {
+[data-namespace="null"][data-controller="users"][data-action="show"] #user_profile #user_settings.user_content_right, [data-namespace="null"][data-controller="users"][data-action="show"] #user_profile #user_credits.user_content_right {
   display: inline;
   float: left;
   margin-left: 10px;
@@ -15703,37 +15693,59 @@ body #page_content .container .list_title .title p {
   margin: -250px 0px 0px 0px;
   display: none;
 }
-/* line 129, ../../app/assets/stylesheets/resources/users/_show.sass */
-[data-namespace="null"][data-controller="users"][data-action="show"] #user_profile #user_credits .current_credits p {
+/* line 121, ../../app/assets/stylesheets/resources/users/_show.sass */
+[data-namespace="null"][data-controller="users"][data-action="show"] #user_profile #user_settings.user_content_right #gravatar_hint.alert, [data-namespace="null"][data-controller="users"][data-action="show"] #user_profile #user_credits.user_content_right #gravatar_hint.alert {
+  margin-top: 0px;
+  margin-bottom: 40px;
+}
+/* line 126, ../../app/assets/stylesheets/resources/users/_show.sass */
+[data-namespace="null"][data-controller="users"][data-action="show"] #user_profile #user_credits.user_content_right .current_credits p {
   font-size: 24px;
-  font-family: Helvetica Neue;
-  color: #333333;
+  font-family: "Dosis-Light";
+  color: #5d5d5d;
   padding-bottom: 5px;
 }
-/* line 134, ../../app/assets/stylesheets/resources/users/_show.sass */
-[data-namespace="null"][data-controller="users"][data-action="show"] #user_profile #user_credits #current_credits {
-  color: #64cb64;
+/* line 131, ../../app/assets/stylesheets/resources/users/_show.sass */
+[data-namespace="null"][data-controller="users"][data-action="show"] #user_profile #user_credits.user_content_right #current_credits {
+  color: #77a0da;
 }
-/* line 136, ../../app/assets/stylesheets/resources/users/_show.sass */
-[data-namespace="null"][data-controller="users"][data-action="show"] #user_profile #user_credits .table_title {
-  font-family: "Helvetica Neue";
-  font-size: 20px;
-  color: #284f31;
-  padding-top: 14px;
-  padding-bottom: 10px;
+/* line 133, ../../app/assets/stylesheets/resources/users/_show.sass */
+[data-namespace="null"][data-controller="users"][data-action="show"] #user_profile #user_credits.user_content_right .table_title {
+  font-family: "Helvetica", "Arial", "Sans-serif";
+  font-size: 14px;
+  color: #5d5d5d;
+  padding-top: 5px;
+  padding-bottom: 14px;
+  font-weight: lighter;
+  border-bottom: dashed 1px #cccccc;
+  margin-bottom: 40px;
 }
-/* line 143, ../../app/assets/stylesheets/resources/users/_show.sass */
-[data-namespace="null"][data-controller="users"][data-action="show"] #user_profile #user_credits .table_content th {
-  font-family: Helvetica Neue;
+/* line 144, ../../app/assets/stylesheets/resources/users/_show.sass */
+[data-namespace="null"][data-controller="users"][data-action="show"] #user_profile #user_credits.user_content_right .table_content th {
+  font-family: "Dosis-Regular";
   font-size: 16px;
+  color: #5d5d5d;
+  text-transform: uppercase;
+  font-weight: normal;
+  padding: 0px;
+  vertical-align: top;
+  width: 120px;
 }
-/* line 146, ../../app/assets/stylesheets/resources/users/_show.sass */
-[data-namespace="null"][data-controller="users"][data-action="show"] #user_profile #user_credits .table_content td {
+/* line 153, ../../app/assets/stylesheets/resources/users/_show.sass */
+[data-namespace="null"][data-controller="users"][data-action="show"] #user_profile #user_credits.user_content_right .table_content th:first-child {
+  width: 300px;
+}
+/* line 155, ../../app/assets/stylesheets/resources/users/_show.sass */
+[data-namespace="null"][data-controller="users"][data-action="show"] #user_profile #user_credits.user_content_right .table_content th:last-child {
+  text-align: right;
+}
+/* line 157, ../../app/assets/stylesheets/resources/users/_show.sass */
+[data-namespace="null"][data-controller="users"][data-action="show"] #user_profile #user_credits.user_content_right .table_content td {
   font-family: "Helvetica Neue";
   font-size: 14px;
 }
-/* line 149, ../../app/assets/stylesheets/resources/users/_show.sass */
-[data-namespace="null"][data-controller="users"][data-action="show"] #user_profile #user_credits .table_content td a {
+/* line 160, ../../app/assets/stylesheets/resources/users/_show.sass */
+[data-namespace="null"][data-controller="users"][data-action="show"] #user_profile #user_credits.user_content_right .table_content td a {
   text-decoration: none;
   color: #4383d1;
   -moz-transition-property: all;
@@ -15745,20 +15757,20 @@ body #page_content .container .list_title .title p {
   -o-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
-/* line 153, ../../app/assets/stylesheets/resources/users/_show.sass */
-[data-namespace="null"][data-controller="users"][data-action="show"] #user_profile #user_credits .table_content td a:hover {
+/* line 164, ../../app/assets/stylesheets/resources/users/_show.sass */
+[data-namespace="null"][data-controller="users"][data-action="show"] #user_profile #user_credits.user_content_right .table_content td a:hover {
   color: #e75297;
 }
-/* line 155, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 166, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #gravatar_hint.alert.alert-info {
-  font-family: "Helvetica Neue";
+  font-family: "Helvetica", "Arial", "Sans-serif";
   font-size: 16px;
 }
-/* line 159, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 170, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #gravatar_hint.alert.alert-info p {
   padding: 10px 0 0;
 }
-/* line 161, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 172, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #gravatar_hint.alert.alert-info p a {
   color: black;
   text-decoration: none;
@@ -15772,66 +15784,110 @@ body #page_content .container .list_title .title p {
   -o-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
-/* line 166, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 177, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #gravatar_hint.alert.alert-info p a:hover {
   color: #e75297;
 }
-/* line 169, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 180, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #gravatar_hint.alert.alert-info a img {
   float: left;
   margin-right: 20px;
 }
-/* line 172, ../../app/assets/stylesheets/resources/users/_show.sass */
-[data-namespace="null"][data-controller="users"][data-action="show"] #social_info {
-  margin-top: 20px;
+/* line 183, ../../app/assets/stylesheets/resources/users/_show.sass */
+[data-namespace="null"][data-controller="users"][data-action="show"] .alert-info {
+  margin-top: 50px;
 }
-/* line 175, ../../app/assets/stylesheets/resources/users/_show.sass */
-[data-namespace="null"][data-controller="users"][data-action="show"] #my_data h1, [data-namespace="null"][data-controller="users"][data-action="show"] #social_info h1 {
-  font-family: Helvetica Neue;
-  font-size: 25px;
-  color: #333333;
+/* line 186, ../../app/assets/stylesheets/resources/users/_show.sass */
+[data-namespace="null"][data-controller="users"][data-action="show"] #my_data h1 {
+  font-family: "Dosis-Regular";
+  font-size: 24px;
+  color: #5d5d5d;
+  border-bottom: 1px dashed #d8d3d3;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
 }
-/* line 179, ../../app/assets/stylesheets/resources/users/_show.sass */
-[data-namespace="null"][data-controller="users"][data-action="show"] #my_data ul, [data-namespace="null"][data-controller="users"][data-action="show"] #social_info ul {
+/* line 194, ../../app/assets/stylesheets/resources/users/_show.sass */
+[data-namespace="null"][data-controller="users"][data-action="show"] #my_data ul {
   padding-top: 15px;
 }
-/* line 181, ../../app/assets/stylesheets/resources/users/_show.sass */
-[data-namespace="null"][data-controller="users"][data-action="show"] #my_data ul li, [data-namespace="null"][data-controller="users"][data-action="show"] #social_info ul li {
+/* line 196, ../../app/assets/stylesheets/resources/users/_show.sass */
+[data-namespace="null"][data-controller="users"][data-action="show"] #my_data ul li {
   font-family: "Helvetica Neue";
   font-size: 15px;
   margin-bottom: 15px;
 }
-/* line 185, ../../app/assets/stylesheets/resources/users/_show.sass */
-[data-namespace="null"][data-controller="users"][data-action="show"] #my_data ul li .on_the_spot_editing, [data-namespace="null"][data-controller="users"][data-action="show"] #social_info ul li .on_the_spot_editing {
-  color: #e75297;
+/* line 200, ../../app/assets/stylesheets/resources/users/_show.sass */
+[data-namespace="null"][data-controller="users"][data-action="show"] #my_data ul li .on_the_spot_editing {
+  color: #83b1df;
 }
-/* line 187, ../../app/assets/stylesheets/resources/users/_show.sass */
-[data-namespace="null"][data-controller="users"][data-action="show"] #my_data ul li .hint, [data-namespace="null"][data-controller="users"][data-action="show"] #social_info ul li .hint {
-  padding-top: 5px;
-  font-size: 13px;
+/* line 202, ../../app/assets/stylesheets/resources/users/_show.sass */
+[data-namespace="null"][data-controller="users"][data-action="show"] #my_data ul li .hint, [data-namespace="null"][data-controller="users"][data-action="show"] #my_data ul li label {
+  padding-top: 10px;
+  font-size: 14px;
+  font-family: "Helvetica", "Arial", "Sans-serif";
+  color: #5d5d5d;
+  line-height: 21px;
 }
-/* line 192, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 208, ../../app/assets/stylesheets/resources/users/_show.sass */
+[data-namespace="null"][data-controller="users"][data-action="show"] #my_data ul li label {
+  margin-left: 5px;
+}
+/* line 210, ../../app/assets/stylesheets/resources/users/_show.sass */
+[data-namespace="null"][data-controller="users"][data-action="show"] #my_data ul li:last-child {
+  margin-bottom: 55px;
+}
+/* line 213, ../../app/assets/stylesheets/resources/users/_show.sass */
+[data-namespace="null"][data-controller="users"][data-action="show"] #social_info h1 {
+  font-family: "Dosis-Regular";
+  font-size: 24px;
+  color: #5d5d5d;
+  border-bottom: 1px dashed #d8d3d3;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+/* line 221, ../../app/assets/stylesheets/resources/users/_show.sass */
+[data-namespace="null"][data-controller="users"][data-action="show"] #social_info form {
+  padding: 0px;
+}
+/* line 223, ../../app/assets/stylesheets/resources/users/_show.sass */
+[data-namespace="null"][data-controller="users"][data-action="show"] #social_info form ul {
+  margin-top: 40px;
+}
+/* line 225, ../../app/assets/stylesheets/resources/users/_show.sass */
+[data-namespace="null"][data-controller="users"][data-action="show"] #social_info form ul li {
+  float: left;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  width: 100%;
+}
+/* line 230, ../../app/assets/stylesheets/resources/users/_show.sass */
+[data-namespace="null"][data-controller="users"][data-action="show"] #social_info form ul li label {
+  color: #83b1df;
+}
+/* line 234, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #change_password h1 {
   font-family: Helvetica Neue;
   font-size: 25px;
   color: #333333;
   padding-top: 20px;
 }
-/* line 197, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 239, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #change_password ul {
   padding-top: 15px;
 }
-/* line 199, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 241, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #change_password ul li {
   font-family: "Helvetica Neue";
   font-size: 15px;
   margin-bottom: 15px;
 }
-/* line 203, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 245, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #change_password ul li .on_the_spot_editing {
   color: #e75297;
 }
-/* line 205, ../../app/assets/stylesheets/resources/users/_show.sass */
+/* line 247, ../../app/assets/stylesheets/resources/users/_show.sass */
 [data-namespace="null"][data-controller="users"][data-action="show"] #change_password ul li .hint {
   padding-top: 5px;
   font-size: 13px;
