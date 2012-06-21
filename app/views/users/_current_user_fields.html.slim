@@ -20,12 +20,16 @@
     li
       .bootstrap-form
         = form_for(@user, :as => :user, :html => { :method => :put }) do |f|
-          = f.label :twitter, t('.twitter')
-          = f.text_field :twitter
-          = f.label :facebook_link, t('.facebook_link')
-          = f.text_field :facebook_link
-          = f.label :other_link, t('.other_link')
-          = f.text_field :other_link
+          ul
+            li
+              = f.label :twitter, t('.twitter')
+              = f.text_field :twitter
+            li
+              = f.label :facebook_link, t('.facebook_link')
+              = f.text_field :facebook_link
+            li
+              = f.label :other_link, t('.other_link')
+              = f.text_field :other_link
           br
           p= f.submit t('.update_social_info'), :class => 'btn', :id => "user_submit"
 - if @user.is_devise?
