@@ -237,7 +237,7 @@ pt:
       subtitle: "<span>Aprenda</span> algo novo. Inscreva-se em um encontro na <span>sua cidade</span>:"
       successful: "Confirmados"
       title: "Explore os encontros inspiradores"
-    title: "Explore os projetos"
+    title: "Explorar encontros"
     project:
       empty: "Desculpe, nossas máquinas não acharam nenhum encontro com o texto que você procurou. Você pode tentar outras palavras?"
   formtastic:
@@ -269,7 +269,7 @@ pt:
       backer:
         anonymous: "Quero que meu apoio seja anônimo."
         credits: "Quero usar meus créditos para este apoio."
-        reward: "Selecione sua inscrição"
+        reward: "Selecione sua inscrição:"
         value: "Com quanto você quer apoiar?"
       comment:
         comment: "Deixe seu comentário sobre este projeto"
