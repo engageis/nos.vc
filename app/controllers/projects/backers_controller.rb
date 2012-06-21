@@ -1,3 +1,4 @@
+# Encoding: utf-8
 class Projects::BackersController < ApplicationController
   inherit_resources
   actions :index, :new
@@ -94,7 +95,7 @@ class Projects::BackersController < ApplicationController
         payment = {
           :valor => "%0.0f" % (backer.value),
           :id_proprio => backer.key,
-          :razao => "Apoio para o projeto '#{backer.project.name}'",
+          :razao => "Inscrição para '#{backer.project.name}'",
           :forma => "BoletoBancario",
           :dias_expiracao => 2,
           :pagador => payer,
