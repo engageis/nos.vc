@@ -85,38 +85,38 @@ pt:
               not_found: "O seu email não está cadastrado, verifique o endereço ou crie uma conta."
     attributes:
       backer:
-        value: Valor
+        value: "Valor:"
       project:
-        category: Cidade
-        expires_at: Prazo
+        category: "Cidade:"
+        expires_at: "Prazo:"
         headline: "Como você explicaria o encontro em um tweet?"
         image_url: "Imagem:"
         name: "Qual é o nome do encontro?"
-        user_id: "Id do usuário"
-        video_url: "URL do vídeo"
+        user_id: "Id do usuário:"
+        video_url: "URL do vídeo:"
         leader_id: "Este encontro é com:"
         leader_bio: "Mini, muito mini, biografia:"
         location: "Onde?"
       reward:
-        description: "Tipo de inscrição"
-        maximum_backers: "Máximo de apoiadores"
-        minimum_value: "Preço (R$)"
+        description: "Tipo de inscrição:"
+        maximum_backers: "Máximo de inscritos:"
+        minimum_value: "Preço (R$):"
       user:
-        address_city: Cidade
-        address_complement: Complemento
-        address_neighbourhood: Bairro
-        address_number: Número
-        address_state: Estado
-        address_street: Logradouro
-        address_zip_code: CEP
-        cpf: CPF
-        current_password: "Senha atual"
-        email: Email
-        full_name: "Nome completo"
-        name: Nome
-        password: Senha
-        password_confirmation: "Confirmação de senha"
-        phone_number: "Telefone celular"
+        address_city: "Cidade:"
+        address_complement: "Complemento:"
+        address_neighbourhood: "Bairro:"
+        address_number: "Número:"
+        address_state: "Estado:"
+        address_street: "Endereço:"
+        address_zip_code: "CEP:"
+        cpf: "CPF:"
+        current_password: "Senha atual:"
+        email: "Email:"
+        full_name: "Nome completo:"
+        name: "Nome:"
+        password: "Senha:"
+        password_confirmation: "Digite de novo:"
+        phone_number: "Celular:"
     models:
       backer: "Inscrito"
       category: "Cidade"
@@ -267,8 +267,8 @@ pt:
         expires_at: "Este tipo de inscrição tem um prazo limitado? Qual?"
     labels:
       backer:
-        anonymous: "Quero que meu apoio seja anônimo."
-        credits: "Quero usar meus créditos para este apoio."
+        anonymous: "Quero que minha inscrição seja anônima."
+        credits: "Quero usar meus créditos para me inscrever."
         reward: "Selecione sua inscrição:"
         value: "Com quanto você quer apoiar?"
       comment:
@@ -414,14 +414,14 @@ pt:
         submit:
           credits: "Confirmar apoio com créditos"
           moip: "Efetuar pagamento pelo MoIP"
-        subtitle: "Último passo para fazer a diferença e se tornar parte deste projeto."
-        title: "Preencha e revise seus dados"
+        subtitle: "Por favor, preencha e revise sua inscrição."
+        title: "Preencha e revise sua inscrição"
         choose_payment: "Como você quer pagar?"
         choose_free: "Confirmar a inscrição?"
         confirm_free: "Confirmar!"
         choose_credit_card: "Pagamento internacional"
         choose_boleto: "Pagamento nacional"
-        you_are_about_html: "Quase lá! Por favor, preencha e revise sua inscrição."
+        you_are_about_html: "Quase lá!"
     create:
       success: "Seu encontro foi criado com sucesso! Logo entraremos em contato. Muito obrigado!"
     form:

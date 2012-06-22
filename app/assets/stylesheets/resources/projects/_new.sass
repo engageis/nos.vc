@@ -61,6 +61,8 @@
                 color: #5d5d5d
                 font-size: 24px
                 text-transform: uppercase
+              select
+                width: 67%
               .input
                 padding-bottom: 15px
                 float: left 
@@ -89,6 +91,11 @@
                     text-decoration: none
                     &:hover
                       text-decoration: underline
+              .actions
+                width: 100%
+                text-align: center
+                .bootstrap-twitter
+                  padding-left: 190px
               li
                 width: 534px
                 margin-bottom: 20px
@@ -190,3 +197,25 @@
                 color: #5d5d5d
                 +text-shadow(white 1px 1px 0px)
                 line-height: 21px
+[data-locale="pt"]
+  .bootstrap-twitter
+    input[disabled]
+      background: image-url("nosvc/button-desactived.gif") left top no-repeat !important
+      text-indent: -99999em!important
+      cursor: default
+      border: none!important
+      width: 170px!important
+      height: 62px!important
+    input[disabled] + span 
+      display: none
+[data-locale="en"]
+  .bootstrap-twitter
+    input[disabled]
+      background: image-url("nosvc/button-desactived-en.gif") left top no-repeat !important
+      text-indent: -99999em!important
+      cursor: default
+      border: none!important
+      width: 170px!important
+      height: 62px!important
+    input[disabled] + span 
+      display: none
