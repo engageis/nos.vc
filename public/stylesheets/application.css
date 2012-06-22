@@ -14353,47 +14353,53 @@ body #page_content .container .list_title .title p {
 /* line 120, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .main .remove_reward_wrapper {
   height: 30px;
+  margin-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  float: right;
 }
-/* line 122, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 126, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .main .remove_reward_wrapper a {
-  font-family: Arial;
+  font-family: "Helvetica Neue", "Arial", "Sans-serif";
   font-size: 15px;
 }
-/* line 125, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 129, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .main #add_reward_wrapper {
   margin-bottom: 20px;
+  float: right;
+  margin-top: 20px;
 }
-/* line 127, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 133, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .main #add_reward_wrapper a {
-  font-family: Arial;
+  font-family: "Helvetica Neue", "Arial", "Sans-serif";
   font-size: 15px;
 }
-/* line 130, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 136, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .main .reward {
   padding-top: 10px;
-  padding-bottom: 10px;
   margin-bottom: 10px;
+  border-bottom: dashed 1px #d8d3d3;
 }
-/* line 134, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 140, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .main .reward .left {
   float: left;
   width: 30%;
   margin-right: 5%;
 }
-/* line 138, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 144, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .main .reward .left input {
   width: 99%;
 }
-/* line 140, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 146, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .main .reward .right {
   float: left;
   width: 30%;
 }
-/* line 143, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 149, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .main .reward .right input {
   width: 99%;
 }
-/* line 145, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 151, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .sidebar {
   margin-right: 0;
   border: none;
@@ -14402,7 +14408,7 @@ body #page_content .container .list_title .title p {
   width: 345px;
   float: left;
 }
-/* line 152, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 158, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .sidebar h3 {
   font-family: "Dosis-Light";
   font-size: 24px;
@@ -14413,37 +14419,37 @@ body #page_content .container .list_title .title p {
   margin-bottom: 50px;
   width: 300px;
 }
-/* line 162, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 168, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .sidebar ul li {
   float: left;
   margin-bottom: 60px;
   width: 300px;
 }
-/* line 166, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 172, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .sidebar ul li span {
   width: 60px;
   height: 85px;
   float: left;
 }
-/* line 170, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 176, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .sidebar ul li span.one {
   background: url('/images/nosvc/number-1.png?1339954470') left 24px no-repeat;
 }
-/* line 172, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 178, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .sidebar ul li span.two {
   background: url('/images/nosvc/number-2.png?1339954470') right 24px no-repeat;
   float: right;
 }
-/* line 175, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 181, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .sidebar ul li span.three {
   background: url('/images/nosvc/number-3.png?1339954470') left 24px no-repeat;
 }
-/* line 177, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 183, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .sidebar ul li span.four {
   background: url('/images/nosvc/number-4.png?1339954470') right 24px no-repeat;
   float: right;
 }
-/* line 180, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 186, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .sidebar ul li a {
   background: url('/images/nosvc/arrow-purple.gif?1339954470') right 4px no-repeat;
   padding-right: 20px;
@@ -14455,11 +14461,11 @@ body #page_content .container .list_title .title p {
   cursor: pointer;
   display: block;
 }
-/* line 190, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 196, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .sidebar ul li a:hover {
   text-decoration: underline;
 }
-/* line 193, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 199, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-controller="projects"][data-action="new"] #page_content .container .start_content .sidebar ul li p {
   width: 240px;
   float: left;
@@ -14470,7 +14476,7 @@ body #page_content .container .list_title .title p {
   line-height: 21px;
 }
 
-/* line 203, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 209, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-locale="pt"] .bootstrap-twitter input[disabled] {
   background: url('/images/nosvc/button-desactived.gif?1340401750') left top no-repeat !important;
   text-indent: -99999em !important;
@@ -14479,12 +14485,12 @@ body #page_content .container .list_title .title p {
   width: 170px !important;
   height: 62px !important;
 }
-/* line 210, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 216, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-locale="pt"] .bootstrap-twitter input[disabled] + span {
   display: none;
 }
 
-/* line 214, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 220, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-locale="en"] .bootstrap-twitter input[disabled] {
   background: url('/images/nosvc/button-desactived-en.gif') left top no-repeat !important;
   text-indent: -99999em !important;
@@ -14493,7 +14499,7 @@ body #page_content .container .list_title .title p {
   width: 170px !important;
   height: 62px !important;
 }
-/* line 221, ../../app/assets/stylesheets/resources/projects/_new.sass */
+/* line 227, ../../app/assets/stylesheets/resources/projects/_new.sass */
 [data-locale="en"] .bootstrap-twitter input[disabled] + span {
   display: none;
 }
