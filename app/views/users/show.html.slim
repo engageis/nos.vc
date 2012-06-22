@@ -62,9 +62,9 @@
               = @user.bio
       .clearfix
       #user_profile_content
-        #user_backed_projects.content
-        #user_created_projects.content
-        #user_statements.content= render 'statements'
+        #user_backed_projects.content[style="#{ current_user == @user ? '' : 'margin-top: 45px'}"]
+        #user_created_projects.content[style="#{ current_user == @user ? '' : 'margin-top: 45px'}"]
+        #user_statements.content[style="#{ current_user == @user ? '' : 'margin-top: -220px'}"]= render 'statements'
         - if can? :manage, @user
           #user_settings.content.hide.user_content_right
             = render 'current_user_fields'
