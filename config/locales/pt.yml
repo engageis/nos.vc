@@ -638,7 +638,7 @@ pt:
     guidelines:
       accept: "Eu li e entendi como funciona o Nós.vc."
       submit: "Quero enviar meu encontro"
-      title: "Como funciona o Nós.vc?"
+      title: "Como funciona"
       sidebar:
         how_it_works: "Como funciona?"
         who_organizes_the_meetings: "Quem organiza os encontros?"
