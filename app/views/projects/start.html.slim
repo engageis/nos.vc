@@ -22,8 +22,7 @@
             = link_to t('.sidebar.link'), t('site.help'), target: "_blanck"
       .main
         .title
-          h1= t('.title')
-          h2= t('.subtitle')
+          h1= t('.title').html_safe
         .clearfix
         .bootstrap-form
           = form_tag(send_mail_projects_path, :id => 'start_project_form') do

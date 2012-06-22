@@ -434,8 +434,7 @@ pt:
       subtitle_html: "Financie projetos de maneira colaborativa e torne-se parte de algo maior.<br/>Promova uma catarse coletiva! Você é a peça que falta nesta história."
       title: "Faça acontecer os projetos em que você acredita"
     new:
-      subtitle: "Preencha com carinho, você está construindo a página do seu encontro."
-      title: "Agora é pra valer. Divirta-se mais ainda!"
+      title: "Agora é pra valer. <span>Construa</span> a página do seu <span>encontro</span>."
       sidebar:
         title: "Como fazer seu encontro acontecer:"
         first_step: "Defina quantos tipos de inscrição quiser. Podem ter preços e prazos diferentes ou até serem de graça."
@@ -578,8 +577,7 @@ pt:
 
       submit: "Enviar"
       submit_complement: "Apontar, Fogo!"
-      subtitle: "Divirta-se!"
-      title: "Compartilhe sua paixão e encontre outros apaixonados."
+      title: "Compartilhe sua <span>paixão</span> e <br /><span>encontre</span> outros apaixonados."
       sidebar:
         title: "Como criar e organizar um encontro sobre o que você quiser:"
         first_step: "Preencha o formulário com todo seu gingado e talento. Crie um curso, debate, workshop ou qualquer outra atividade de aprendizado."
