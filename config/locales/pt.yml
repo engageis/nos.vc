@@ -663,6 +663,8 @@ pt:
       two: "Se inscreveu neste e em mais 1 outro encontro."
     no_name: "Nome não informado"
   users:
+    statements:
+      title: "Recomende, qualifique, deixe seu depoimento aqui:"
     show:
       tabs:
         me_backed_projects: "Me inscrevi"
