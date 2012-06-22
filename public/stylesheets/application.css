@@ -96,7 +96,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* line 1, ../../app/assets/stylesheets/miv/_flash.sass */
 .flash {
-  font-family: "Helvetica Neue";
+  font-family: "Dosis-Regular";
   font-size: 1.6em;
   color: white;
   display: none;
@@ -112,15 +112,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 /* line 13, ../../app/assets/stylesheets/miv/_flash.sass */
 .flash .success.wrapper, .flash .notice.wrapper {
-  background-color: #59af6d;
+  background-color: #5db18d;
 }
 /* line 15, ../../app/assets/stylesheets/miv/_flash.sass */
 .flash .failure.wrapper, .flash .error.wrapper, .flash .alert.wrapper {
-  background-color: #cc1529;
+  background-color: #ec6569;
 }
 /* line 17, ../../app/assets/stylesheets/miv/_flash.sass */
 .flash .locale.wrapper {
-  background-color: #4383d1;
+  background-color: #83b1df;
 }
 
 @-webkit-keyframes pulse {
@@ -1359,7 +1359,7 @@ div.project .box .open, div.project .box .closed {
   position: absolute;
   left: -9px;
   margin-top: 16px;
-  z-index: 1000;
+  z-index: 400;
   font-family: "Dosis-Medium";
   text-indent: 12px;
   padding-top: 13px;
