@@ -263,11 +263,12 @@
           img
             max-width: 614px
           a
-            font-family: "Dosis-Medium"
+            font-family: "Helvetica Neue", "Arial", "Sans-serif"
             color: #83b1df
             text-decoration: none
-            background: image-url("nosvc/icon-link.png") right 4px no-repeat 
+            background: image-url("nosvc/icon-link.png") right 2px no-repeat 
             padding-right: 20px
+            font-size: 14px
             +text-shadow(white 1px 1px 0px)
             &:hover
               text-decoration: underline
@@ -294,39 +295,43 @@
         #show_formatting_tips
           font-family: "Helvetica Neue", "Arial", "Sans-serif"
           text-align: left !important
-          color: #666
+          color: #5d5d5d
           font-size: 14px
           margin-bottom: 15px
           a
-            color: $ultra_gryn
+            color: #83b1df
             text-decoration: none
             &:hover
-              color: $blue
+              color: #83b1df
         #formatting_tips
           font-family: "Helvetica Neue", "Arial", "Sans-serif"
           display: none
           text-align: left
-          color: #666
+          color: #5d5d5d
           strong
             font-weight: bold
           em
             font-style: italic
           h3
-            font-weight: bold
-            font-size: 1.17em
+            font-size: 21px
             margin-bottom: 15px
+            padding-top: 15px
+            width: 100%
+            color: #5d5d5d
+            float: left
           ul li
-            font-size: 14px
-            padding-bottom: 8px
-            margin-bottom: 8px
+            font-size: 13px
+            padding-bottom: 12px
+            margin-bottom: 16px
+            line-height: 21px
             border-bottom: 1px dashed #D8D3D3
             &:last-child
               border: none
           a
-            color: $ultra_gryn
+            color: #83b1df
             text-decoration: none
             &:hover
-              color: $blue
+              text-decoration: underline
         #project_comments
           border-top: 1px #D8D3D3 dashed
           padding: 50px 0 50px 0
@@ -739,16 +744,20 @@
               .back_info
                 display: none
                 padding: 10px
-                width: 400px
+                width: 300px
                 position: absolute
                 top: 25px
                 left: 25px
                 z-index: 1001
-                font-family: "Helvetica Neue", "Arial", "Sans-serif"
+                font-family: "Helvetica", "Arial", "Sans-serif"
                 background: white
+                font-weight: lighter
                 +border-radius(4px)
-                +box-shadow(rgba(black, 0.7) 2px 2px 3px)
+                +box-shadow(rgba(black, 0.4) 1px 1px 2px)
                 #text
+                  padding: 0 10px
+                  font-family: "Dosis-ExtraLight"
+                  text-transform: uppercase
                   a, em.anon
                     font-size: 17px
                     padding-bottom: 5px
@@ -758,16 +767,21 @@
                     display: inline-block
                 #confirmed
                   padding-top: 8px
+                  padding-left: 10px
                 #confirmed, #backed
                   padding-top: 2px
-                  font-family: Arial
+                  padding-left: 10px
+                  line-height: 18px
+                  font-family: "Helvetica", "Arial", "Sans-serif"
                   font-size: 12px
-                  color: $ultra_gryn
+                  color: #5D5D5D
                 .reward
                   clear: both
                   padding: 10px
                   font-size: 12px
                   background: $ed_gryn
+                  font-weight: normal
                   margin-top: 10px
                   line-height: 18px
                   +border-radius(4px)
+                  font-family: "Helvetica", "Arial", "Sans-serif"

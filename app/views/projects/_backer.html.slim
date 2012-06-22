@@ -38,7 +38,6 @@ script type="text/template" id="backer_template"
           | <% if(user['email']) { %>
           | <%= user['email'] %>
           | <% } else { %>
-          | &nbsp;
           = t('not_informed')
           |.
           | <% } %>
@@ -47,7 +46,6 @@ script type="text/template" id="backer_template"
           = "#{t('activerecord.models.reward')}: "
           | <%= reward['display_minimum'] %> - <%= reward['medium_description'] %>
           | <% } else { %>
-          | &nbsp;
           = t('.no_reward')
           | <% } %>
         .clear

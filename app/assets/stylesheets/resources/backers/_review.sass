@@ -79,7 +79,7 @@
             abbr
               color: red
               font-size: 16px
-              margin-left: 5px
+              margin-left: 3px
             .submit
               .accept_terms
                 padding: 20px 0 20px 130px
@@ -139,20 +139,24 @@
         float: left
         .project_info
         #review_text
-          padding-right: 20px
-          font-family: "Dosis-Light"
-          font-size: 24px
-          line-height: 24px
+          background: #fefefe
+          padding: 20px 20px 1px
+          margin-top: 60px
           float: left
-          color: #5d5d5d
-          +text-shadow(white 1px 1px 0px)
-          strong
-            font-size: 24px
-            font-family: "Dosis-Medium"
-          .reward
-            font-size: 14px
-            font-style: italic
-            display: block
-            line-height: 21px
+          +transition(all, 0.3s)
+          width: 270px
+          border: solid 1px #e7e6e1
+          margin-bottom: 20px
+          +border-radius(16px)
+          h1
+            font-family: "Dosis-Regular"
+            font-size: 38px
+            color: #5d5d5d
+            text-transform: uppercase
+            padding-bottom: 5px
+          p
+            color: #5d5d5d
             font-family: "Helvetica Neue", "Arial", "Sans-serif"
-            margin-top: 20px
+            font-size: 13px
+            line-height: 21px
+            padding-bottom: 10px
