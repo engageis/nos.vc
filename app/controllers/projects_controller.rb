@@ -44,7 +44,7 @@ class ProjectsController < ApplicationController
 
   def start
     return unless require_login
-    @title = t('projects.start.title')
+    @title = t('projects.start.title').gsub(/<\/?[^>]*>/, "")
   end
 
   def send_mail
@@ -84,7 +84,7 @@ class ProjectsController < ApplicationController
   def new
     return unless require_login
     new! do
-      @title = t('projects.new.title')
+      @title = t('projects.new.title').gsub(/<\/?[^>]*>/, "")
       @project.rewards.build
     end
   end
