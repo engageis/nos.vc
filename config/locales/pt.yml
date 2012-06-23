@@ -82,7 +82,7 @@ pt:
         user:
           attributes:
             email:
-              not_found: "O seu email não está cadastrado, verifique o endereço ou crie uma conta."
+              not_found: "Seu email não está cadastrado, verifique o endereço ou crie uma conta."
     attributes:
       backer:
         value: "Valor:"
@@ -124,11 +124,11 @@ pt:
       reward: "Inscrição"
   backer:
     display_confirmed_at: "Há %{time_ago}"
-    reward_must_be_from_project: "deve ser do mesmo projeto"
-    should_not_back_if_maximum_backers_been_reached: "já atingiu seu número máximo de apoiadores"
+    reward_must_be_from_project: "deve ser do mesmo encontro"
+    should_not_back_if_maximum_backers_been_reached: "já atingiu seu número máximo de inscritos"
     value_must_be_at_least_rewards_value: "deve ser pelo menos %{minimum_value} para a recompensa selecionada"
-  backer_plural: apoiadores
-  backer_singular: apoiador
+  backer_plural: inscritos
+  backer_singular: inscrito
   click_here: "Clique aqui"
   clicking_here: "clicando aqui"
   comment:
@@ -173,7 +173,7 @@ pt:
       already_authenticated: "Você já está logado."
       inactive: "Sua conta ainda não foi ativada."
       invalid: "Email ou senha inválidos."
-      invalid_token: "Token de autenticação invalido."
+      invalid_token: "Token de autenticação inválido."
       locked: "Sua conta está bloqueada."
       timeout: "Sua sessão expirou, loge-se novamente para continuar."
       unauthenticated: "Você precisa entrar ou criar uma conta antes de continuar."
@@ -199,7 +199,7 @@ pt:
       updated: "Sua senha foi alterada com sucesso. Você está logado a partir de agora."
       updated_not_active: "Sua senha foi alterada com sucesso."
     registrations:
-      destroyed: "Bye! Sua conta foi cancelada com sucesso. Nós esperamos vê-lo novamente em breve."
+      destroyed: "Bye! Sua conta foi cancelada com sucesso. Esperamos vê-lo novamente em breve."
       inactive_signed_up: "Você se registrou com sucesso. Mas não pode entrar porque a sua conta é %{reason}."
       reasons:
         inactive: inativo
@@ -239,7 +239,7 @@ pt:
       title: "Explore os encontros inspiradores"
     title: "Explorar encontros"
     project:
-      empty: "Desculpe, nossas máquinas não acharam nenhum encontro com o texto que você procurou. Você pode tentar outras palavras?"
+      empty: "Desculpe, não encontramos nenhum encontro com o texto que você procurou. Você pode tentar outras palavras?"
   formtastic:
     hints:
       backer:
@@ -272,7 +272,7 @@ pt:
         reward: "Selecione sua inscrição:"
         value: "Com quanto você quer apoiar?"
       comment:
-        comment: "Deixe seu comentário sobre este projeto"
+        comment: "Deixe seu comentário sobre este encontro"
       project:
         expires_at: "Quando encerram as inscrições?"
         goal: "Qual é o número mínimo de inscritos?"
@@ -294,7 +294,7 @@ pt:
   layouts:
     application:
       notifications:
-        new_curated_pages: "Já conhece os Canais Catárticos? <a href='#curated_pages' id='curated_link'>Olha aqui</a>!"
+        new_curated_pages: "Já conhece Nossos Amigos? <a href='#curated_pages' id='curated_link'>Olha aqui</a>!"
     login:
       login_with_facebook: "entre com sua conta do facebook"
       remember_me: "Lembre-se de mim e mantenha-me conectado."
@@ -356,7 +356,7 @@ pt:
         twitter_text: "Yeah! O encontro '%{name}' foi confirmado no @Nos_vc. Eu vou! %{short_url}"
       unsuccessful:
         email_subject: "O encontro em que você se inscreveu não será realizado"
-        email_text: "%{project_link}, em que você se inscreveu, não alcançou o número mínimo de inscritos e não será realizado. Quem sabe numa próxima vez?Por isso, você recebeu <strong>%{value}</strong> em créditos para se inscrever em outros encontros. Caso prefira, você pode receber seu dinheiro de volta %{credits_link}."
+        email_text: "%{project_link}, em que você se inscreveu, não alcançou o número mínimo de inscritos e não será realizado. Quem sabe numa próxima vez? <br><br>Por isso, você recebeu <strong>%{value}</strong> em créditos para se inscrever em outros encontros. Caso prefira, você pode receber seu dinheiro de volta %{credits_link}."
         notification_text: "Você recebeu %{value} em créditos para se inscrever em outros encontros. Caso prefira, você pode pedir seu dinheiro de volta %{link}."
         unsuccessful_text: "%{link}, em que você se inscreveu, não será realizado. Quem sabe numa próxima vez?"
     verify_if_video_exists_on_vimeo: "deve existir no Vimeo"
@@ -369,7 +369,7 @@ pt:
     box:
       by: por
     admin_fields:
-      title: "Campos para o admin"
+      title: "Administração"
     back_project:
       project_warning:
         not_successful:
@@ -395,24 +395,24 @@ pt:
         paypal_error: "Ooops. Ocorreu um erro ao enviar seu pagamento para o PayPal. Por favor, tente novamente."
         success: "Sua inscrição foi realizada com sucesso. Muito obrigado!"
       new:
-        cannot_back: "Não é possível apoiar este projeto no momento. Por favor, apoie outros projetos."
+        cannot_back: "Não é possível se inscrever neste encontro no momento. Por favor, tente mais tarde."
         header:
           subtitle: "Você está perto de se inscrever e fazer este encontro acontecer."
           title: "Obrigado!"
         no_reward: "Obrigado. Eu só quero ajudar o encontro."
         submit: "Me inscrever"
-        title: "Apoie o %{name}"
+        title: "Inscreva-se em %{name}"
         good_question: "Boa pergunta!"
       review:
         credits_notice_html: "Esta inscrição será paga com seus créditos. Após a confirmação, você ficará com um saldo de <strong>%{credits}</strong> em créditos para se inscrever em outros encontros."
-        error: "Ooops. Ocorreu um erro ao registrar seu apoio. Por favor, tente novamente."
+        error: "Ooops. Ocorreu um erro ao registrar sua inscrição. Por favor, tente novamente."
         international:
           description: "Você pode usar o PayPal para realizar pagamentos internacionais"
-          important_html: "<p>O uso do PayPal é destinado preferencialmente para apoios internacionais. Isto porque ao realizar o pagamento pelo PayPal, você tem apenas 60 dias para receber seu dinheiro de volta sem taxas.</p><p>Caso você possa realizar o pagamento normal pelo MoIP, nós recomendamos.</p><p>Mas se você não pode, não se preocupe: você sempre poderá receber seu dinheiro de volta. Apenas, caso o estorno seja realizado mais de 60 dias depois do seu pagamento, você terá que pagar a taxa do PayPal, que é de 5,4% + R$ 0,60 por transação.</p>"
+          important_html: "<p>O uso do PayPal é destinado preferencialmente para inscrições internacionais. Isto porque ao realizar o pagamento pelo PayPal, você tem apenas 60 dias para receber seu dinheiro de volta sem taxas.</p><p>Caso você possa realizar o pagamento normal pelo MoIP, nós recomendamos.</p><p>Mas se você não pode, não se preocupe: você sempre poderá receber seu dinheiro de volta. Apenas, caso o estorno seja realizado mais de 60 dias depois do seu pagamento, você terá que pagar a taxa do PayPal, que é de 5,4% + R$ 0,60 por transação.</p>"
           submit: "Efetuar pagamento pelo PayPal"
           title: "Quer fazer pagamento internacional?"
         submit:
-          credits: "Confirmar apoio com créditos"
+          credits: "Confirmar inscrição com créditos"
           moip: "Efetuar pagamento pelo MoIP"
         subtitle: "Por favor, preencha e revise sua inscrição."
         title: "Preencha e revise sua inscrição"
@@ -460,14 +460,14 @@ pt:
       home_page: "Home page?"
       id: Id
       name: Nome
-      no_projects: "Nenhum projeto encontrado."
+      no_projects: "Nenhum encontro encontrado."
       order: Ordem
-      project: Projeto
+      project: Encontro
       slug: Slug
       recommended: Recomendado?
       rejected: Rejeitado?
       submit: Pesquisar
-      title: "Gerenciamento dos projetos"
+      title: "Gerenciamento dos encontros"
       user: Usuário
       visible: Visível?
     pending_backers:
@@ -476,16 +476,16 @@ pt:
       credits: "Usou créditos?"
       id: Id
       key: Chave
-      no_backers: "Nenhum apoiador encontrado."
-      project: Projeto
+      no_backers: "Nenhum inscrito encontrado."
+      project: Encontro
       refunded: "Estorno realizado?"
       requested_refund: "Solicitou estorno?"
       reward: "Inscrição"
       submit: Pesquisar
-      title: "Gerenciamento de apoios"
+      title: "Gerenciamento de inscrições"
       total_backed: arrecadados
-      total_backers: apoiadores
-      total_backs: apoios
+      total_backers: inscritos
+      total_backs: inscrições
       total_users: usuários
       user: Usuário
       value: Valor
@@ -516,7 +516,7 @@ pt:
       waiting: "Estamos revisando este encontro. Logo, logo saberemos se ele entrará no Nós.vc."
     rewards:
       reward_title: "Para %{minimum} ou mais"
-      title: "Apoie e ganhe..."
+      title: "Inscrições"
     send_mail:
       success: "Sua proposta de encontro foi enviada com sucesso! Logo entraremos em contato. Muito obrigado!"
     show:
@@ -626,7 +626,7 @@ pt:
     email:
       contact: somos@nos.vc
       payments: leo@nos.vc
-      projects: barrosdaniel@gmail.com, mauroalex@gmail.com
+      projects: "barrosdaniel@gmail.com, mauroalex@gmail.com"
       system: somos@nos.vc
     facebook: "http://www.facebook.com/nos.vc"
     name: "Nós.vc"
@@ -643,7 +643,7 @@ pt:
         how_it_works: "Como funciona?"
         who_organizes_the_meetings: "Quem organiza os encontros?"
         how_much: "Quanto custa usar o Nós.vc?"
-        why_use: "Por que usar Nós.vc?"
+        why_use: "Por que usar o Nós.vc?"
     about_us:
       title: "Sobre Nós.vc"
     contact:
@@ -652,8 +652,8 @@ pt:
       title: "Política de privacidade"
     terms:
       title: "Termos de uso"
-  terms: "termos de uso"
-  guidelines: "como funciona"
+  terms: "Termos de uso"
+  guidelines: "Como funciona"
   user:
     backs_text:
       many: "Se inscreveu neste e em mais %{total} outros encontros."
@@ -677,12 +677,12 @@ pt:
       no_email: "ainda não preencheu seu email"
       title: "Dados de %{name}"
     backs:
-      anonymous: "Apoio anônimo."
+      anonymous: "Inscrição anônima."
       no_backs: "%{name} ainda não se inscreveu em nenhum encontro. Ainda."
       no_backs_current_user_html: "Você ainda não se inscreveu em nenhum encontro no Nós.vc. Que tal <a href=\"/\">começar agora</a>?"
       no_reward: "Você não selecionou nenhuma inscrição."
       title: "Encontros em que %{name} já se inscreveu"
-      title_current_user: "Projetos que já apoiei"
+      title_current_user: "Encontros em que me inscrevi"
       your_reward: "Sua inscrição"
     current_user_fields:
       updated: "Suas informações foram atualizadas"
@@ -714,7 +714,7 @@ pt:
       hello: "Olá"
       intro: "Você está recebendo esta mensagem pois se cadastrou no Nós.vc"
       mailee: "Mensagem entregue pelo Mailee.me"
-      salutation: "Um grande abraço,"
+      salutation: "Grande abraço,"
       signature: "Nós.vc"
       unsubscribe: "Descadastrar da lista"
       unsubscribe_long: "Se não quiser mais receber estes emails"
