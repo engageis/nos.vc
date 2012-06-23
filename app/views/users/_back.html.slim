@@ -43,25 +43,25 @@ script type="text/template" id="user_back_template"
           | <%= project['headline'] %>
         p.where
           | <%= project['when_short'] %>
-
-
-    - if current_user == @user
-      div.back_info
-        ul
-          li.date
-            h5 <%= confirmed_at %>
-          |<% if(display_value) { %>
-          li.value
-            h5 <%= display_value %>
-          |<% } %>
-          |<% if(reward) { %>
-          li.reward
-            h5 <%= reward['display_with_label'] %>
-            p <%= reward['description']%>
-          |<% } %>
-      .tell_about
-        p= t('tell_about_this_back')
-        ul
-          li= link_to image_tag('catarse/facebook_black_icon.png'), "http://www.facebook.com/sharer.php?u=<%= encodeURIComponent(project['full_uri']) %>&t=#{t('share_my_backs')}<%= encodeURIComponent(project['name']) %>".html_safe, :target => '_blank'
-          li= link_to image_tag('catarse/twitter_black_icon.png'), "http://twitter.com/share?text=#{t('share_my_backs')}<%= encodeURIComponent(project['name']) %>&url=<%= encodeURIComponent(project['full_uri']) %>".html_safe, :target => '_blank'
+        .extras
+          - if current_user == @user
+            div.info
+              div.back_info
+                ul
+                  li.date
+                    h5 <%= confirmed_at %>
+                  |<% if(display_value) { %>
+                  li.value
+                    h5 <%= display_value %>
+                  |<% } %>
+                  |<% if(reward) { %>
+                  li.reward
+                    h5 <%= reward['display_with_label'] %>
+                    p <%= reward['description']%>
+                  |<% } %>
+            .tell_about
+              ul
+                li= link_to image_tag('nosvc/icon-user_face.png'), "http://www.facebook.com/sharer.php?u=<%= encodeURIComponent(project['full_uri']) %>&t=#{t('share_my_backs')}<%= encodeURIComponent(project['name']) %>".html_safe, :target => '_blank'
+                li= link_to image_tag('nosvc/icon-user_twitter.png'), "http://twitter.com/share?text=#{t('share_my_backs')}<%= encodeURIComponent(project['name']) %>&url=<%= encodeURIComponent(project['full_uri']) %>".html_safe, :target => '_blank'
+      .line
   .clearfix

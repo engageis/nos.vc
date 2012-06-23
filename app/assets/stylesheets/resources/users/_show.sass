@@ -141,41 +141,68 @@
     #user_backed_projects, #user_created_projects
       div.project
         //margin-left: 0px
-        .back_info
-          display: none
-          padding: 10px
-          width: 400px
+        .line
+          border-bottom: dashed 1px #ccc
+          height: 1px
+          float: right
+          width: 614px
+          margin: 30px 0 40px
+        .extras
           position: absolute
-          top: 25px
-          left: 25px
-          z-index: 1001
-          font-family: "Helvetica Neue", "Arial", "Sans-serif"
-          background: white
-          +border-radius(4px)
-          +box-shadow(rgba(black, 0.7) 2px 2px 3px)
-          #text
-            a, em.anon
-              font-size: 17px
-              padding-bottom: 5px
-              font-weight: bold
-              color: #83b1df
-              text-decoration: none
-              display: inline-block
-          #confirmed
-            padding-top: 8px
-          #confirmed, #backed
-            padding-top: 2px
-            font-family: Arial
-            font-size: 12px
-            color: $ultra_gryn
-          .reward
-            clear: both
-            padding: 10px
-            font-size: 12px
-            background: $ed_gryn
-            margin-top: 10px
-            line-height: 18px
-            +border-radius(4px)
+          bottom: 0px
+          right: 10px
+          height: 27px
+          .tell_about
+            float: left
+            width: 65px
+            ul
+              li
+                a
+                  display: block
+                  float: left
+                  margin-right: 5px
+                  &:hover
+                    opacity: 0.8
+          .info
+            background: image-url("nosvc/icon-info.png") left top no-repeat
+            width: 27px
+            height: 26px
+            float: left
+            margin-right: 5px
+            .back_info
+              display: none
+              padding: 10px
+              width: 400px
+              position: absolute
+              top: 25px
+              left: 25px
+              z-index: 1001
+              font-family: "Helvetica Neue", "Arial", "Sans-serif"
+              background: white
+              +box-shadow(rgba(black, 0.7) 2px 2px 3px)
+              #text
+                a, em.anon
+                  font-size: 17px
+                  padding-bottom: 5px
+                  font-weight: bold
+                  color: #83b1df
+                  text-decoration: none
+                  display: inline-block
+              #confirmed
+                padding-top: 8px
+              #confirmed, #backed
+                padding-top: 2px
+                font-family: Arial
+                font-size: 12px
+                color: $ultra_gryn
+              .reward
+                clear: both
+                padding: 10px
+                font-size: 12px
+                background: $ed_gryn
+                margin-top: 10px
+                line-height: 18px
+                +border-radius(4px)
 
     #user_settings.user_content_right, #user_credits.user_content_right
       +grid(16)
