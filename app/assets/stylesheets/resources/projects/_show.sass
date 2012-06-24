@@ -12,6 +12,7 @@
         letter-spacing: -1px
         text-align: center
         text-transform: uppercase
+        
       h4
         color: rgba($ultra_gryn, 0.7)
         font-family: Arial
@@ -41,16 +42,18 @@
             background: #434242
             color: white
             font-family: "Dosis-Light"
-            font-size: 16px
+            font-size: 18px
             padding: 5px 10px
             text-decoration: none
             float: right
         .when
+          padding: 5px 10px 2px
           background-color: #83b1df
-          padding: 5px 10px
           color: white
-          font-family: "Helvetica Neue","Arial","Sans-serif"
+          font-family: "Dosis-Regular"
+          font-size: 16px
           float: right
+          height: 21px         
     .main
       +grid(12)
       width: 614px
@@ -596,6 +599,11 @@
             font-size: 14px
             color: #5d5d5d
             padding-left: 50px
+            a
+              color: #83b1df
+              text-decoration: none
+              &:hover
+                text-decoration: underline
         #pledge
           padding-top: 20px
           padding-bottom: 20px
