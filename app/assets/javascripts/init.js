@@ -49,6 +49,13 @@ CATARSE_INIT = {
     show: function(){
       window.view = new CATARSE.UsersShowView({el: $("body") });
     }
+  },
+  devise: {
+    sessions: {
+      'new': function(){
+        window.view = new CATARSE.SessionsNewView({el: $("body") });
+      }
+    }
   }
 }
 

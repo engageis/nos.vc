@@ -210,11 +210,13 @@ pt:
     sessions:
       new:
         site_title: "Entrar"
+        subtitle: "Faça parte desta rede. Cadastre-se no Nós.vc."
         submit: "Entrar"
         title: "Entre utilizando o seu endereço de email"
+        social: "Redes Sociais"
         login_title: "Entre sem bater"
         login_subtitle: "se você já possui uma conta"
-        register_title: "Ou cadastre-se"
+        register_title: "Cadastre-se"
         register_subtitle: "do bom e velho jeito tradicional"
         with_facebook: "Entre com sua conta do facebook"
         with_facebook_subtitle: "é fácil e mais rápido"
