@@ -46,6 +46,25 @@
         width: 345px
         float: left
         padding-top: 40px
+        ul.menu
+          margin-bottom: 20px
+          border-bottom: 1px #D8D3D3 dashed
+          li
+            border-top: 1px #D8D3D3 dashed
+            a
+              color: #5D5D5D
+              font-size: 24px
+              font-family: Dosis-Light
+              display: block
+              padding: 20px 15px
+              //text-indent: 40px
+              text-decoration: none
+              background-repeat: no-repeat
+              background-position: 5px
+              +text-shadow(white 1px 1px 0px)
+              &:hover, &.selected
+                background-color: #F9F9F9
+                color: $blue
       .main
         +grid(12)
         width: 534px
@@ -64,7 +83,7 @@
           text-align: center
           display: block
         .login_with_social
-          padding: 0px 50px 0 0
+          padding: 0
           h3
             border-bottom: dashed 1px #d8d3d3
             padding-bottom: 10px
@@ -75,13 +94,12 @@
             color: #5d5d5d
             font-size: 24px
             text-transform: uppercase
-          .content_form  
+          .content_form
             background: none
             border: 0px
             width: 100%
-            padding: 10px 0 0
-            border-bottom: dashed 1px #ccc
-            float: left 
+            padding: 0
+            float: left
             h2
               float: left
               font-family: "Dosis-Light"
@@ -106,6 +124,7 @@
               width: 230px
               height: 27px
               margin-top: -40px
+              margin-left: 45px
               background: image-url("login_with_facebook_button310x60.png") left top no-repeat
               display: block
               padding: 33px 0 0 64px
@@ -115,11 +134,11 @@
               text-decoration: none
               +text-shadow(black, 1px, 1px, 1px)
               text-align: left
-              float: right
+              float: left
               &:hover, &:focus
                 +box-shadow(rgba(black,0.75) 0px 0px 5px inset !important)
               &:active
-                +box-shadow(rgba(black, 1) 0px 0px 15px inset !important)  
+                +box-shadow(rgba(black, 1) 0px 0px 15px inset !important)
             .another_social
               float: left
               margin-top: -46px
@@ -138,17 +157,14 @@
                 img
                   +opacity(0.6)
                 img:hover, img:focus, img:active
-                  +scale(1)          
+                  +scale(1)
         .form_login, .form_register
-          padding-top: 40px
           padding-bottom: 30px
           padding-left: 0px
           padding-right: 0px
           font-family: "Helvetica Neue", "Arial", "Sans-Serif"
           .content_form
-            float: left
-            border: 1px #E7E6E1 solid
-            padding: 17px 23px 0 23px
+            padding: 0
             background: #F9F9F9
             form
               padding: 0px
@@ -175,16 +191,21 @@
                 width: 100%
                 float: left
           h1
-            font-family: "Dosis-Regular"
-            font-size: 24px
             padding-bottom: 5px
-            color: #77a0da
-            +text-shadow(white, 1px, 1px, 1px)
+            margin-top: 30px
+            width: 100%
+            font-family: "Dosis-Regular"
+            color: #5d5d5d
+            font-size: 24px
+            text-transform: uppercase
           h3
             font-family: "Dosis-Regular"
             font-size: 15px
             padding-bottom: 15px
             color: #5d5d5d
+            border-bottom: dashed 1px #d8d3d3
+            padding-bottom: 10px
+            margin-bottom: 20px
           .input.check
             label
               font-size: 11px !important
@@ -193,7 +214,6 @@
             font-size: 12px
             width: 220px
         .form_login
-          +grid(5)
           input[type="checkbox"]
             float: left
             margin-right: 5px

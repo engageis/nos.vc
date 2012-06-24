@@ -4,10 +4,14 @@
 #page_content
   .container
     .sidebar
+      ul.menu
+        li= link_to t('.social'), "#social", class: "#{'selected' unless params[:active_register]}", id: "social_link"
+        li= link_to t('.login_title'), "#login", class: "#{'selected' if params[:active_register]}", id: "login_link"
+        li= link_to t('.register_title'), '#register', id: "register_link"
     .main
-      span = 'Faça parte desta rede. Cadastre-se no Nós.vc.'  
-      .login_with_social
-        h3= 'Redes Sociais'
+      span= t('.subtitle')
+      .login_with_social.social_content.content
+        h3= t('.social')
         .content_form
           h2=t('.with_facebook')
           p=t('.with_facebook_subtitle')
@@ -19,8 +23,8 @@
             = link_to image_tag('auth/google_128.png', :title => 'Google'), '/auth/google', :class => 'provider first'
             = link_to image_tag('auth/orkut_128.png', :title => 'Orkut'), '/auth/google', :class => 'provider'
             - OauthProvider.where("path <> 'facebook'").order('"order"').all.each do |p|
-              = link_to image_tag("auth/#{p.path}_128.png", :title => p.name), "/auth/#{p.path}", :class => 'provider'            
-      .form_login.bootstrap-form.new_registration[class="#{('actived' if params[:active_register])}"]
+              = link_to image_tag("auth/#{p.path}_128.png", :title => p.name), "/auth/#{p.path}", :class => 'provider'
+      .form_login.bootstrap-form.new_registration.register_content.content.hide
         .content_form
           h1=t('.register_title')
           h3=t('.register_subtitle')
@@ -45,7 +49,7 @@
             p.action
               .bootstrap-twitter
                 = f.submit t('registrations.new.submit'), class: 'btn', id: 'user_submit'
-      .form_login.bootstrap-form.new_session[class="#{('actived' unless params[:active_register])}"]
+      .form_login.bootstrap-form.new_session.login_content.content.hide
         .content_form
           h1=t('.login_title')
           h3=t('.login_subtitle')
