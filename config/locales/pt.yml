@@ -517,7 +517,7 @@ pt:
       rejected: "Não foi dessa vez. Este encontro não foi selecionado pra participar do Nós.vc. Quem sabe na próxima?"
       waiting: "Estamos revisando este encontro. Logo, logo saberemos se ele entrará no Nós.vc."
     rewards:
-      reward_title: "Para %{minimum} ou mais"
+      reward_title: "%{minimum}"
       title: "Inscrições"
     send_mail:
       success: "Sua proposta de encontro foi enviada com sucesso! Logo entraremos em contato. Muito obrigado!"

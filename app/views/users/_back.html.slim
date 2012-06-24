@@ -50,10 +50,6 @@ script type="text/template" id="user_back_template"
                 ul
                   li.date
                     h5 <%= confirmed_at %>
-                  |<% if(display_value) { %>
-                  li.value
-                    h5 <%= display_value %>
-                  |<% } %>
                   |<% if(reward) { %>
                   li.reward
                     h5 <%= reward['display_with_label'] %>
