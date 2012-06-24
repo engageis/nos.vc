@@ -39,8 +39,16 @@ ActiveAdmin.register Project do
       f.input :location
       f.input :leader_bio
       f.input :leader_id
+      f.input :short_url, :as => :string
+      f.input :image_url, :as => :string
+      f.input :permalink, :as => :string
+      f.input :order
       f.input :can_finish
       f.input :finished
+      f.input :visible
+      f.input :rejected
+      f.input :recommended
+      f.input :home_page
     end
 
     f.buttons do
