@@ -15911,24 +15911,35 @@ body #page_content .container .list_title .title p {
 }
 
 /* line 2, ../../app/assets/stylesheets/resources/static/_terms.sass */
-#banner_terms {
+[data-controller="static"][data-action="terms"] #banner_privacy {
   background: url('/images/nosvc/banner_terms.jpg?1340403048');
   width: 614px;
   height: 220px;
   float: left;
 }
-
-/* line 9, ../../app/assets/stylesheets/resources/static/_terms.sass */
-.static_default .sidebar .title {
+/* line 10, ../../app/assets/stylesheets/resources/static/_terms.sass */
+[data-controller="static"][data-action="terms"] #page_content .container .static_default .sidebar {
+  margin-right: 0;
+  border: none;
+  margin-top: 125px;
+  margin-left: 0px;
+  width: 345px;
+  float: left;
+}
+/* line 17, ../../app/assets/stylesheets/resources/static/_terms.sass */
+[data-controller="static"][data-action="terms"] #page_content .container .static_default .sidebar .title {
   font-family: "Dosis-Light";
   font-size: 24px;
   line-height: 28px;
   color: #5d5d5d;
   text-shadow: white 1px 1px 0px;
   width: 80%;
+  text-align: left;
+  padding-left: 0px;
+  float: left;
 }
-/* line 16, ../../app/assets/stylesheets/resources/static/_terms.sass */
-.static_default .sidebar p {
+/* line 27, ../../app/assets/stylesheets/resources/static/_terms.sass */
+[data-controller="static"][data-action="terms"] #page_content .container .static_default .sidebar p {
   width: 300px;
   margin-top: 10px;
 }
@@ -15957,9 +15968,12 @@ body #page_content .container .list_title .title p {
   color: #5d5d5d;
   text-shadow: white 1px 1px 0px;
   width: 80%;
+  text-align: left;
+  padding-left: 0px;
+  float: left;
 }
-/* line 24, ../../app/assets/stylesheets/resources/static/_privacy.sass */
-[data-controller="static"][data-action="privacy"] #page_content .container .static_default .sidebar .title p {
+/* line 27, ../../app/assets/stylesheets/resources/static/_privacy.sass */
+[data-controller="static"][data-action="privacy"] #page_content .container .static_default .sidebar p {
   width: 300px;
   margin-top: 10px;
 }
