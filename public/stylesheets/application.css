@@ -15390,7 +15390,7 @@ body #page_content .container .list_title .title p {
   text-shadow: #4c8e75 1px 1px 0px;
 }
 /* line 124, ../../app/assets/stylesheets/resources/backers/_review.sass */
-[data-controller="backers"][data-namespace="projects"][data-action="review"] #page_content .container .main .bootstrap-form #review_form #payment .free span {
+[data-controller="backers"][data-namespace="projects"][data-action="review"] #page_content .container .main .bootstrap-form #review_form #payment .free a span {
   color: #bef3df;
   text-shadow: #4c8e75 1px 1px 0px;
   font-family: "Dosis-Medium";
