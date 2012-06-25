@@ -1,20 +1,28 @@
 #thank_you
-  margin: 30px 20px
   text-align: center
+  &.main
+    +grid(10)
+    width: 614px
+    background: #f9f9f9
+    margin: 0
+    padding: 50px 0px 20px
+    float: right
   .title
-    +grid(16)
-    +alpha
-    padding-bottom: 40px
-    text-align: left
-    position: relative
     h1
-      color: $ultra_gryn
-      font-family: "Helvetica Neue"
-      font-size: 28px
-      padding: 5px 0
+      font-family: "Dosis-ExtraLight"
+      font-size: 41px
+      letter-spacing: -1px
+      width: 460px
+      +text-shadow(white 1px 1px 0px)
+      color: #5d5d5d
+      line-height: 46px
+      margin: auto
+      margin-bottom: 35px
+      span
+        color: #83b1df
     h2
       color: rgba($ultra_gryn, 0.7)
-      font-family: Arial
+      font-family: "Dosis-ExtraLight"
       font-size: 18px
   .project_info
     float: left

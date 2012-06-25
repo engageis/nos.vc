@@ -1,11 +1,14 @@
+- content_for :header_featured do
+  .project_image
+    =image_tag @project.display_image
+
 #page_content
   .container
-    #thank_you
+    #thank_you.main
       .title
         h1 = t('.header_title')
         h2= t('.header_subtitle')
       .project_info
-        = image_tag @project.display_image, :id => 'project_image', :alt => @project.name, :width => '250px'
         h1= t('.text_title_html', :link => link_to(@project.name, project_path(@project)))
         #review_text
           - if @project.successful?
