@@ -20,7 +20,7 @@
           .infos
             .project_owner por #{link_to @project.user.display_name, user_path(@project.user)}
             .when= @project.when_short
-            .location= raw(@project.location) if @project.location
+            .location= @project.category.name
         .clearfix  
         #back_options.bootstrap-form
           = semantic_form_for @backer, :url => review_project_backers_path(@project), :html => { :id => 'backer_form' } do |form|
