@@ -15347,25 +15347,58 @@ body #page_content .container .list_title .title p {
   text-decoration: underline;
 }
 /* line 102, ../../app/assets/stylesheets/resources/backers/_review.sass */
-[data-controller="backers"][data-namespace="projects"][data-action="review"] #page_content .container .main .bootstrap-form #review_form #payment .title {
-  padding: 0;
-  margin-top: 40px;
-  width: 494px;
+[data-controller="backers"][data-namespace="projects"][data-action="review"] #page_content .container .main .bootstrap-form #review_form #payment .free {
+  background: url('/images/nosvc/button-backer.png?1339271967') left top no-repeat;
+  display: block;
+  margin: 20px 0 0px 170px;
+  width: 164px;
+  height: 23px;
+  border: none;
+  cursor: pointer;
+  -moz-transition-property: all;
+  -webkit-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  padding: 15px 0 21px 60px;
 }
-/* line 106, ../../app/assets/stylesheets/resources/backers/_review.sass */
-[data-controller="backers"][data-namespace="projects"][data-action="review"] #page_content .container .main .bootstrap-form #review_form #payment .title h1 {
-  float: left;
-  border-bottom: dashed 1px #d8d3d3;
-  padding-bottom: 10px;
-  margin-bottom: 40px;
-  padding-left: 0px;
-  width: 100%;
-  font-family: "Dosis-Regular";
-  color: #5d5d5d;
-  font-size: 24px;
+/* line 112, ../../app/assets/stylesheets/resources/backers/_review.sass */
+[data-controller="backers"][data-namespace="projects"][data-action="review"] #page_content .container .main .bootstrap-form #review_form #payment .free:hover {
+  -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 0 4px inset;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 0 4px inset;
+  -o-box-shadow: rgba(0, 0, 0, 0.3) 0 0 4px inset;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 0 4px inset;
+}
+/* line 114, ../../app/assets/stylesheets/resources/backers/_review.sass */
+[data-controller="backers"][data-namespace="projects"][data-action="review"] #page_content .container .main .bootstrap-form #review_form #payment .free:active {
+  -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 0 10px inset;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 0 10px inset;
+  -o-box-shadow: rgba(0, 0, 0, 0.3) 0 0 10px inset;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 0 10px inset;
+}
+/* line 116, ../../app/assets/stylesheets/resources/backers/_review.sass */
+[data-controller="backers"][data-namespace="projects"][data-action="review"] #page_content .container .main .bootstrap-form #review_form #payment .free a {
   text-transform: uppercase;
+  text-decoration: none;
+  font-family: "Dosis-Medium";
+  font-size: 18px;
+  color: white;
+  display: block;
+  text-shadow: #4c8e75 1px 1px 0px;
 }
-/* line 119, ../../app/assets/stylesheets/resources/backers/_review.sass */
+/* line 124, ../../app/assets/stylesheets/resources/backers/_review.sass */
+[data-controller="backers"][data-namespace="projects"][data-action="review"] #page_content .container .main .bootstrap-form #review_form #payment .free span {
+  color: #bef3df;
+  text-shadow: #4c8e75 1px 1px 0px;
+  font-family: "Dosis-Medium";
+  text-transform: uppercase;
+  font-size: 12px;
+  float: left;
+}
+/* line 133, ../../app/assets/stylesheets/resources/backers/_review.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="review"] #page_content .container .main .bootstrap-form #review_form #payment .choose_payment .or {
   display: inline;
   float: left;
@@ -15375,17 +15408,17 @@ body #page_content .container .list_title .title p {
   padding-top: 30px;
   text-align: center;
 }
-/* line 123, ../../app/assets/stylesheets/resources/backers/_review.sass */
+/* line 137, ../../app/assets/stylesheets/resources/backers/_review.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="review"] #page_content .container .main .bootstrap-form #review_form #payment .choose_payment .or span {
   font-family: Helvetica Neue;
   font-size: 22px;
 }
-/* line 126, ../../app/assets/stylesheets/resources/backers/_review.sass */
+/* line 140, ../../app/assets/stylesheets/resources/backers/_review.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="review"] #page_content .container .main .bootstrap-form #review_form #payment .choose_payment .cc, [data-controller="backers"][data-namespace="projects"][data-action="review"] #page_content .container .main .bootstrap-form #review_form #payment .choose_payment .boleto {
   margin: 0px;
   float: left;
 }
-/* line 129, ../../app/assets/stylesheets/resources/backers/_review.sass */
+/* line 143, ../../app/assets/stylesheets/resources/backers/_review.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="review"] #page_content .container .main .bootstrap-form #review_form #payment .choose_payment .cc a, [data-controller="backers"][data-namespace="projects"][data-action="review"] #page_content .container .main .bootstrap-form #review_form #payment .choose_payment .boleto a {
   display: block;
   font-size: 18px;
@@ -15395,18 +15428,23 @@ body #page_content .container .list_title .title p {
   width: 240px;
   float: left;
 }
-/* line 137, ../../app/assets/stylesheets/resources/backers/_review.sass */
+/* line 151, ../../app/assets/stylesheets/resources/backers/_review.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="review"] #page_content .container .main .bootstrap-form #review_form #payment .choose_payment .cc a img, [data-controller="backers"][data-namespace="projects"][data-action="review"] #page_content .container .main .bootstrap-form #review_form #payment .choose_payment .boleto a img {
   float: left;
 }
-/* line 139, ../../app/assets/stylesheets/resources/backers/_review.sass */
+/* line 153, ../../app/assets/stylesheets/resources/backers/_review.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="review"] #page_content .container .main .bootstrap-form #review_form #payment .choose_payment .cc a span, [data-controller="backers"][data-namespace="projects"][data-action="review"] #page_content .container .main .bootstrap-form #review_form #payment .choose_payment .boleto a span {
   float: left;
   margin-top: 6px;
   margin-left: 20px;
   width: 130px;
 }
-/* line 144, ../../app/assets/stylesheets/resources/backers/_review.sass */
+/* line 159, ../../app/assets/stylesheets/resources/backers/_review.sass */
+[data-controller="backers"][data-namespace="projects"][data-action="review"] #page_content .container .main .bootstrap-form #review_form .payment_disabled .bootstrap-twitter {
+  padding-left: 190px;
+  float: left;
+}
+/* line 162, ../../app/assets/stylesheets/resources/backers/_review.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="review"] #page_content .container .sidebar {
   margin-right: 0;
   border: none;
@@ -15415,7 +15453,7 @@ body #page_content .container .list_title .title p {
   width: 345px;
   float: left;
 }
-/* line 152, ../../app/assets/stylesheets/resources/backers/_review.sass */
+/* line 170, ../../app/assets/stylesheets/resources/backers/_review.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="review"] #page_content .container .sidebar #review_text {
   background: #fefefe;
   padding: 20px 20px 1px;
@@ -15439,7 +15477,7 @@ body #page_content .container .list_title .title p {
   -khtml-border-radius: 16px;
   border-radius: 16px;
 }
-/* line 162, ../../app/assets/stylesheets/resources/backers/_review.sass */
+/* line 180, ../../app/assets/stylesheets/resources/backers/_review.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="review"] #page_content .container .sidebar #review_text h1 {
   font-family: "Dosis-Regular";
   font-size: 38px;
@@ -15447,7 +15485,7 @@ body #page_content .container .list_title .title p {
   text-transform: uppercase;
   padding-bottom: 5px;
 }
-/* line 168, ../../app/assets/stylesheets/resources/backers/_review.sass */
+/* line 186, ../../app/assets/stylesheets/resources/backers/_review.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="review"] #page_content .container .sidebar #review_text p {
   color: #5d5d5d;
   font-family: "Helvetica Neue", "Arial", "Sans-serif";

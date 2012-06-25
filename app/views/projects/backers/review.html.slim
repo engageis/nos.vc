@@ -60,8 +60,6 @@
                     = image_tag 'catarse/boleto_icon.png'
                     span= t('.choose_boleto')
             - elsif @backer.value == 0
-              .title
-                h1= t('.choose_free')
               .free
                 = link_to checkout_project_backer_path(@backer.project, @backer), :method => :put do
                   = image_tag 'catarse/cc_icon.png'

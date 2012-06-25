@@ -99,21 +99,35 @@
                     &:hover
                       text-decoration: underline
             #payment 
-              .title
-                padding: 0
-                margin-top: 40px
-                width: 494px
-                h1
-                  float: left
-                  border-bottom: dashed 1px #d8d3d3
-                  padding-bottom: 10px
-                  margin-bottom: 40px
-                  padding-left: 0px
-                  width: 100%
-                  font-family: "Dosis-Regular"
-                  color: #5d5d5d
-                  font-size: 24px
+              .free
+                background: image-url("nosvc/button-backer.png") left top no-repeat
+                display: block
+                margin: 20px 0 0px 170px
+                width: 164px
+                height: 23px
+                border: none
+                cursor: pointer
+                +transition(all, 0.5s)
+                padding: 15px 0 21px 60px
+                &:hover
+                  +box-shadow(rgba(black, 0.3) 0 0 4px inset)
+                &:active
+                  +box-shadow(rgba(black, 0.3) 0 0 10px inset)
+                a
                   text-transform: uppercase
+                  text-decoration: none
+                  font-family: "Dosis-Medium"
+                  font-size: 18px
+                  color: white 
+                  display: block
+                  +text-shadow(#4c8e75 1px 1px 0px)
+                  span 
+                    color: #bef3df
+                    +text-shadow(#4c8e75 1px 1px 0px)
+                    font-family: "Dosis-Medium"
+                    text-transform: uppercase
+                    font-size: 12px
+                    float: left 
 
               .choose_payment
                 .or
@@ -141,6 +155,10 @@
                       margin-top: 6px
                       margin-left: 20px
                       width: 130px
+            .payment_disabled
+              .bootstrap-twitter
+                padding-left: 190px
+                float: left
       .sidebar
         +omega
         border: none
