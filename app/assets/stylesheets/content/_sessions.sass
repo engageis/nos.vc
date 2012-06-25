@@ -3,18 +3,25 @@
 
   #page_content
     .container
+      .sidebar
+        +omega
+        margin-top: 50px
+        margin-left: 0px
+        width: 345px
+        float: left
+        padding-top: 40px
       .devise_content
         +grid(16)
         padding-top: 15px
         .links
           padding: 15px 0 20px 15px
           a
-            color: $blue
+            color: #83b1df
             font-family: "Helvetica Neue", "Arial", "Sans-serif"
             font-size: 13px
             text-decoration: none
             &:hover
-              color: $blue
+              color: #83b1df
               text-decoration: underline
               font-size: 13px
         form
@@ -27,12 +34,12 @@
           +alpha
           padding-bottom: 40px
           h1
-            color: $ultra_gryn
+            color: #5d5d5d
             font-family: "Dosis-Regular"
             font-size: 28px
             padding: 5px 0
           h2
-            color: rgba($ultra_gryn, 0.7)
+            color: #5d5d5d
             font-family: Arial
             font-size: 18px
 
