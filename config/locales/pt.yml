@@ -399,8 +399,7 @@ pt:
       new:
         cannot_back: "Não é possível se inscrever neste encontro no momento. Por favor, tente mais tarde."
         header:
-          subtitle: "Você está perto de se inscrever e fazer este encontro acontecer."
-          title: "Obrigado!"
+          title: "Obrigado! Você está perto de se inscrever e fazer este encontro acontecer."
         no_reward: "Obrigado. Eu só quero ajudar o encontro."
         submit: "Me inscrever"
         title: "Inscreva-se em %{name}"

@@ -47,7 +47,6 @@
           #payment.hide
             - if @backer.value > 0
               .title
-                h2= t('.choose_payment')
               .choose_payment
                 /.cc
                   /= link_to pay_paypal_path(@backer), :method => :get do
@@ -56,6 +55,12 @@
                   /.clearfix
                 /.or
                   /span= t('or')
+
+                fieldset
+                  .bootstrap-twitter
+                    = submit_tag t('.submit'), :disabled => true, :class => 'btn btn-large'
+                    span = t('.submit_complement')      
+                                
                 .moip
                   = link_to checkout_project_backer_path(@backer.project, @backer), :method => :put do
                     = image_tag 'catarse/boleto_icon.png'
