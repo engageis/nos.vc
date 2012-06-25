@@ -401,7 +401,8 @@ pt:
         header:
           title: "Obrigado! Você está perto de se inscrever e fazer este encontro acontecer."
         no_reward: "Obrigado. Eu só quero ajudar o encontro."
-        submit: "Me inscrever"
+        submit: "selecionar"
+        and_make_it_happen: "minha inscrição"       
         title: "Inscreva-se em %{name}"
         good_question: "Boa pergunta!"
       review:
