@@ -210,18 +210,18 @@ pt:
     sessions:
       new:
         site_title: "Entrar"
-        subtitle: "Faça parte desta rede. Cadastre-se no Nós.vc."
+        subtitle: "Entre sem bater"
         submit: "Entrar"
         title: "Entre utilizando o seu endereço de email"
-        social: "Redes Sociais"
-        login_title: "Entre sem bater"
-        login_subtitle: "se você já possui uma conta"
-        register_title: "Cadastre-se"
-        register_subtitle: "do bom e velho jeito tradicional"
-        with_facebook: "Entre com sua conta do facebook"
-        with_facebook_subtitle: "é fácil e mais rápido"
+        social: "Com rede social"
+        login_title: "Sem rede social"
+        login_subtitle: "Entre você já tem uma conta criada no Nós.vc."
+        register_title: "Me cadastrar"
+        register_subtitle: "Crie uma conta no Nós.vc do bom e velho jeito tradicional."
+        with_facebook: "É mais fácil e mais rápido."
+        with_facebook_subtitle: "Não publicamos no seu mural."
         with_another_social: "Não tem conta no facebook?"
-        with_another_social_subtitle: "entre utilizando outra conta"
+        with_another_social_subtitle: "Entre com outra conta."
       signed_in: "Login realizado com sucesso. Seja bem-vindo!"
       signed_out: "Logout realizado com sucesso. Até logo!"
     unlocks:
@@ -416,14 +416,14 @@ pt:
         submit:
           credits: "Confirmar inscrição com créditos"
           moip: "Efetuar pagamento pelo MoIP"
-        subtitle: "Por favor, preencha e revise sua inscrição."
+        subtitle: "Seus dados"
         title: "Preencha e revise sua inscrição"
         choose_payment: "Como você quer pagar?"
         choose_free: "Confirmar a inscrição?"
         confirm_free: "Confirmar!"
         choose_credit_card: "Pagamento internacional"
         choose_boleto: "Pagamento nacional"
-        you_are_about_html: "Quase lá!"
+        you_are_about_html: "Quase lá! Por favor, preencha e revise sua inscrição."
     create:
       success: "Seu encontro foi criado com sucesso! Logo entraremos em contato. Muito obrigado!"
     form:
@@ -687,7 +687,7 @@ pt:
       title_current_user: "Encontros em que me inscrevi"
       your_reward: "Sua inscrição"
     current_user_fields:
-      updated: "Suas informações foram atualizadas"
+      updated: "Suas configurações foram atualizadas."
       update_social_info: "Atualizar"
       social_info: "Contatos"
       twitter: "Seu usuário do twitter"
