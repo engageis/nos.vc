@@ -103,16 +103,17 @@
                 background: image-url("nosvc/button-backer.png") left top no-repeat
                 display: block
                 margin: 20px 0 0px 170px
-                width: 164px
+                width: 119px
                 height: 23px
                 border: none
                 cursor: pointer
                 +transition(all, 0.5s)
                 padding: 15px 0 21px 60px
+                @include border-radius(15px)
                 &:hover
-                  +box-shadow(rgba(black, 0.3) 0 0 4px inset)
+                  +box-shadow(rgba(black, 0.6) 0 0 4px inset)
                 &:active
-                  +box-shadow(rgba(black, 0.3) 0 0 10px inset)
+                  +box-shadow(rgba(black, 0.6) 0 0 10px inset)
                 a
                   text-transform: uppercase
                   text-decoration: none
@@ -121,13 +122,13 @@
                   color: white 
                   display: block
                   +text-shadow(#4c8e75 1px 1px 0px)
-                  span 
-                    color: #bef3df
-                    +text-shadow(#4c8e75 1px 1px 0px)
-                    font-family: "Dosis-Medium"
-                    text-transform: uppercase
-                    font-size: 12px
-                    float: left 
+                span 
+                  color: #bef3df
+                  +text-shadow(#4c8e75 1px 1px 0px)
+                  font-family: "Dosis-Medium"
+                  text-transform: uppercase
+                  font-size: 12px
+                  float: left 
 
               .choose_payment
                 .or
