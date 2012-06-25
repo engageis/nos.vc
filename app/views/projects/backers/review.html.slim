@@ -55,12 +55,6 @@
                   /.clearfix
                 /.or
                   /span= t('or')
-
-                fieldset
-                  .bootstrap-twitter
-                    = submit_tag t('.submit'), :disabled => true, :class => 'btn btn-large'
-                    span = t('.submit_complement')      
-                                
                 .moip
                   = link_to checkout_project_backer_path(@backer.project, @backer), :method => :put do
                     = image_tag 'catarse/boleto_icon.png'
@@ -73,4 +67,8 @@
                   = image_tag 'catarse/cc_icon.png'
                   span= t('.confirm_free')
                 .clearfix
+          .payment_disabled
+            .bootstrap-twitter
+                    = submit_tag t('.submit'), :disabled => true, :class => 'btn btn-large'
+
     .clearfix
