@@ -423,7 +423,7 @@ pt:
         confirm_free: "Confirmar!"
         choose_credit_card: "Pagamento internacional"
         choose_boleto: "Pagamento nacional"
-        you_are_about_html: "Quase lá! Por favor, preencha e revise sua inscrição."
+        you_are_about_html: "<span>Quase lá!</span> Por favor, preencha e revise sua <span>inscrição.</span>"
     create:
       success: "Seu encontro foi criado com sucesso! Logo entraremos em contato. Muito obrigado!"
     form:
