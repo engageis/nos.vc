@@ -14730,7 +14730,7 @@ body #page_content .container .list_title .title p {
   padding: 50px 0px 20px;
   float: right;
 }
-/* line 11, ../../app/assets/stylesheets/resources/projects/_thank_you.sass */
+/* line 12, ../../app/assets/stylesheets/resources/projects/_thank_you.sass */
 #thank_you .title h1 {
   font-family: "Dosis-ExtraLight";
   font-size: 41px;
@@ -14742,22 +14742,22 @@ body #page_content .container .list_title .title p {
   margin: auto;
   margin-bottom: 35px;
 }
-/* line 21, ../../app/assets/stylesheets/resources/projects/_thank_you.sass */
+/* line 22, ../../app/assets/stylesheets/resources/projects/_thank_you.sass */
 #thank_you .title h1 span {
   color: #83b1df;
 }
-/* line 23, ../../app/assets/stylesheets/resources/projects/_thank_you.sass */
+/* line 24, ../../app/assets/stylesheets/resources/projects/_thank_you.sass */
 #thank_you .title h2 {
   color: rgba(51, 51, 51, 0.7);
   font-family: "Dosis-ExtraLight";
   font-size: 18px;
 }
-/* line 27, ../../app/assets/stylesheets/resources/projects/_thank_you.sass */
+/* line 28, ../../app/assets/stylesheets/resources/projects/_thank_you.sass */
 #thank_you .project_info {
   float: left;
   padding-bottom: 40px;
 }
-/* line 30, ../../app/assets/stylesheets/resources/projects/_thank_you.sass */
+/* line 31, ../../app/assets/stylesheets/resources/projects/_thank_you.sass */
 #thank_you .project_info #project_image {
   -moz-box-shadow: rgba(0, 0, 0, 0.5) 1px 1px 3px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.5) 1px 1px 3px;
@@ -14766,7 +14766,7 @@ body #page_content .container .list_title .title p {
   float: left;
   margin-right: 20px;
 }
-/* line 34, ../../app/assets/stylesheets/resources/projects/_thank_you.sass */
+/* line 35, ../../app/assets/stylesheets/resources/projects/_thank_you.sass */
 #thank_you .project_info h1 {
   margin-top: 30px;
   float: left;
@@ -14776,12 +14776,12 @@ body #page_content .container .list_title .title p {
   line-height: 130%;
   padding-bottom: 20px;
 }
-/* line 42, ../../app/assets/stylesheets/resources/projects/_thank_you.sass */
+/* line 43, ../../app/assets/stylesheets/resources/projects/_thank_you.sass */
 #thank_you .project_info h1 a {
   color: #e75297;
   text-decoration: none;
 }
-/* line 45, ../../app/assets/stylesheets/resources/projects/_thank_you.sass */
+/* line 46, ../../app/assets/stylesheets/resources/projects/_thank_you.sass */
 #thank_you .project_info #review_text {
   height: 80px;
   overflow: hidden;
@@ -14793,13 +14793,13 @@ body #page_content .container .list_title .title p {
   float: left;
   width: 600px;
 }
-/* line 55, ../../app/assets/stylesheets/resources/projects/_thank_you.sass */
+/* line 56, ../../app/assets/stylesheets/resources/projects/_thank_you.sass */
 #thank_you .project_info #review_text strong {
   font-size: 18px;
   color: #59af6d;
   font-weight: bold;
 }
-/* line 59, ../../app/assets/stylesheets/resources/projects/_thank_you.sass */
+/* line 60, ../../app/assets/stylesheets/resources/projects/_thank_you.sass */
 #thank_you h2 {
   font-family: "Helvetica Neue";
 }
@@ -15360,7 +15360,7 @@ body #page_content .container .list_title .title p {
   background: url('/images/nosvc/button-backer.png?1339595880') left top no-repeat;
   display: block;
   margin: 20px 0 0px 170px;
-  width: 164px;
+  width: 119px;
   height: 23px;
   border: none;
   cursor: pointer;
@@ -15373,22 +15373,28 @@ body #page_content .container .list_title .title p {
   -o-transition-duration: 0.5s;
   transition-duration: 0.5s;
   padding: 15px 0 21px 60px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -o-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -khtml-border-radius: 15px;
+  border-radius: 15px;
 }
-/* line 112, ../../app/assets/stylesheets/resources/backers/_review.sass */
+/* line 113, ../../app/assets/stylesheets/resources/backers/_review.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="review"] #page_content .container .main .bootstrap-form #review_form #payment .free:hover {
-  -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 0 4px inset;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 0 4px inset;
-  -o-box-shadow: rgba(0, 0, 0, 0.3) 0 0 4px inset;
-  box-shadow: rgba(0, 0, 0, 0.3) 0 0 4px inset;
+  -moz-box-shadow: rgba(0, 0, 0, 0.6) 0 0 4px inset;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.6) 0 0 4px inset;
+  -o-box-shadow: rgba(0, 0, 0, 0.6) 0 0 4px inset;
+  box-shadow: rgba(0, 0, 0, 0.6) 0 0 4px inset;
 }
-/* line 114, ../../app/assets/stylesheets/resources/backers/_review.sass */
+/* line 115, ../../app/assets/stylesheets/resources/backers/_review.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="review"] #page_content .container .main .bootstrap-form #review_form #payment .free:active {
-  -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 0 10px inset;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 0 10px inset;
-  -o-box-shadow: rgba(0, 0, 0, 0.3) 0 0 10px inset;
-  box-shadow: rgba(0, 0, 0, 0.3) 0 0 10px inset;
+  -moz-box-shadow: rgba(0, 0, 0, 0.6) 0 0 10px inset;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.6) 0 0 10px inset;
+  -o-box-shadow: rgba(0, 0, 0, 0.6) 0 0 10px inset;
+  box-shadow: rgba(0, 0, 0, 0.6) 0 0 10px inset;
 }
-/* line 116, ../../app/assets/stylesheets/resources/backers/_review.sass */
+/* line 117, ../../app/assets/stylesheets/resources/backers/_review.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="review"] #page_content .container .main .bootstrap-form #review_form #payment .free a {
   text-transform: uppercase;
   text-decoration: none;
@@ -15398,8 +15404,8 @@ body #page_content .container .list_title .title p {
   display: block;
   text-shadow: #4c8e75 1px 1px 0px;
 }
-/* line 124, ../../app/assets/stylesheets/resources/backers/_review.sass */
-[data-controller="backers"][data-namespace="projects"][data-action="review"] #page_content .container .main .bootstrap-form #review_form #payment .free a span {
+/* line 125, ../../app/assets/stylesheets/resources/backers/_review.sass */
+[data-controller="backers"][data-namespace="projects"][data-action="review"] #page_content .container .main .bootstrap-form #review_form #payment .free span {
   color: #bef3df;
   text-shadow: #4c8e75 1px 1px 0px;
   font-family: "Dosis-Medium";
@@ -15407,7 +15413,7 @@ body #page_content .container .list_title .title p {
   font-size: 12px;
   float: left;
 }
-/* line 133, ../../app/assets/stylesheets/resources/backers/_review.sass */
+/* line 134, ../../app/assets/stylesheets/resources/backers/_review.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="review"] #page_content .container .main .bootstrap-form #review_form #payment .choose_payment .or {
   display: inline;
   float: left;
@@ -15417,17 +15423,17 @@ body #page_content .container .list_title .title p {
   padding-top: 30px;
   text-align: center;
 }
-/* line 137, ../../app/assets/stylesheets/resources/backers/_review.sass */
+/* line 138, ../../app/assets/stylesheets/resources/backers/_review.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="review"] #page_content .container .main .bootstrap-form #review_form #payment .choose_payment .or span {
   font-family: Helvetica Neue;
   font-size: 22px;
 }
-/* line 140, ../../app/assets/stylesheets/resources/backers/_review.sass */
+/* line 141, ../../app/assets/stylesheets/resources/backers/_review.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="review"] #page_content .container .main .bootstrap-form #review_form #payment .choose_payment .cc, [data-controller="backers"][data-namespace="projects"][data-action="review"] #page_content .container .main .bootstrap-form #review_form #payment .choose_payment .boleto {
   margin: 0px;
   float: left;
 }
-/* line 143, ../../app/assets/stylesheets/resources/backers/_review.sass */
+/* line 144, ../../app/assets/stylesheets/resources/backers/_review.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="review"] #page_content .container .main .bootstrap-form #review_form #payment .choose_payment .cc a, [data-controller="backers"][data-namespace="projects"][data-action="review"] #page_content .container .main .bootstrap-form #review_form #payment .choose_payment .boleto a {
   display: block;
   font-size: 18px;
@@ -15437,23 +15443,23 @@ body #page_content .container .list_title .title p {
   width: 240px;
   float: left;
 }
-/* line 151, ../../app/assets/stylesheets/resources/backers/_review.sass */
+/* line 152, ../../app/assets/stylesheets/resources/backers/_review.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="review"] #page_content .container .main .bootstrap-form #review_form #payment .choose_payment .cc a img, [data-controller="backers"][data-namespace="projects"][data-action="review"] #page_content .container .main .bootstrap-form #review_form #payment .choose_payment .boleto a img {
   float: left;
 }
-/* line 153, ../../app/assets/stylesheets/resources/backers/_review.sass */
+/* line 154, ../../app/assets/stylesheets/resources/backers/_review.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="review"] #page_content .container .main .bootstrap-form #review_form #payment .choose_payment .cc a span, [data-controller="backers"][data-namespace="projects"][data-action="review"] #page_content .container .main .bootstrap-form #review_form #payment .choose_payment .boleto a span {
   float: left;
   margin-top: 6px;
   margin-left: 20px;
   width: 130px;
 }
-/* line 159, ../../app/assets/stylesheets/resources/backers/_review.sass */
+/* line 160, ../../app/assets/stylesheets/resources/backers/_review.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="review"] #page_content .container .main .bootstrap-form #review_form .payment_disabled .bootstrap-twitter {
   padding-left: 190px;
   float: left;
 }
-/* line 162, ../../app/assets/stylesheets/resources/backers/_review.sass */
+/* line 163, ../../app/assets/stylesheets/resources/backers/_review.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="review"] #page_content .container .sidebar {
   margin-right: 0;
   border: none;
@@ -15462,7 +15468,7 @@ body #page_content .container .list_title .title p {
   width: 345px;
   float: left;
 }
-/* line 170, ../../app/assets/stylesheets/resources/backers/_review.sass */
+/* line 171, ../../app/assets/stylesheets/resources/backers/_review.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="review"] #page_content .container .sidebar #review_text {
   background: #fefefe;
   padding: 20px 20px 1px;
@@ -15486,7 +15492,7 @@ body #page_content .container .list_title .title p {
   -khtml-border-radius: 16px;
   border-radius: 16px;
 }
-/* line 180, ../../app/assets/stylesheets/resources/backers/_review.sass */
+/* line 181, ../../app/assets/stylesheets/resources/backers/_review.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="review"] #page_content .container .sidebar #review_text h1 {
   font-family: "Dosis-Regular";
   font-size: 38px;
@@ -15494,7 +15500,7 @@ body #page_content .container .list_title .title p {
   text-transform: uppercase;
   padding-bottom: 5px;
 }
-/* line 186, ../../app/assets/stylesheets/resources/backers/_review.sass */
+/* line 187, ../../app/assets/stylesheets/resources/backers/_review.sass */
 [data-controller="backers"][data-namespace="projects"][data-action="review"] #page_content .container .sidebar #review_text p {
   color: #5d5d5d;
   font-family: "Helvetica Neue", "Arial", "Sans-serif";
@@ -15958,7 +15964,7 @@ body #page_content .container .list_title .title p {
 }
 
 /* line 2, ../../app/assets/stylesheets/resources/static/_terms.sass */
-[data-controller="static"][data-action="terms"] #banner_privacy {
+[data-controller="static"][data-action="terms"] #banner_terms {
   background: url('/images/nosvc/banner_terms.jpg?1340401533');
   width: 614px;
   height: 220px;
