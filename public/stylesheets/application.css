@@ -15704,33 +15704,47 @@ body #page_content .container .list_title .title p {
   margin-top: 125px;
 }
 /* line 13, ../../app/assets/stylesheets/resources/static/_guidelines.sass */
-[data-controller="static"][data-action="guidelines"] #page_content .container .static_default .default_text h2 {
+[data-controller="static"][data-action="guidelines"] #page_content .container .static_default .default_text .title {
   font-family: "Dosis-Light";
+  font-size: 41px;
+  line-height: 42px;
   color: #5d5d5d;
-  font-size: 24px;
-  line-height: 32px;
+  padding: 0;
+  margin: 0px 0px 10px 0;
   text-align: center;
-  float: left;
-  margin-top: 50px;
-  text-transform: inherit;
-  width: auto;
-  border: none;
-  padding-bottom: 0px;
 }
-/* line 25, ../../app/assets/stylesheets/resources/static/_guidelines.sass */
+/* line 21, ../../app/assets/stylesheets/resources/static/_guidelines.sass */
+[data-controller="static"][data-action="guidelines"] #page_content .container .static_default .default_text .title span {
+  color: #ec6569;
+}
+/* line 23, ../../app/assets/stylesheets/resources/static/_guidelines.sass */
+[data-controller="static"][data-action="guidelines"] #page_content .container .static_default .default_text h2 {
+  color: #5d5d5d;
+  float: left;
+  font-family: "Dosis-Light";
+  font-size: 28px;
+  line-height: 31px;
+  margin: 50px 0 50px;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+  text-transform: inherit;
+  border: none;
+}
+/* line 35, ../../app/assets/stylesheets/resources/static/_guidelines.sass */
 [data-controller="static"][data-action="guidelines"] #page_content .container .static_default .default_text .box {
   float: left;
   width: 160px;
-  margin-top: 40px;
+  margin-top: 0px;
   text-align: center;
   margin-right: 22px;
 }
-/* line 31, ../../app/assets/stylesheets/resources/static/_guidelines.sass */
+/* line 41, ../../app/assets/stylesheets/resources/static/_guidelines.sass */
 [data-controller="static"][data-action="guidelines"] #page_content .container .static_default .default_text .box p {
   font-weight: lighter;
   font-family: "Helvetica", "Arial", "Sans-serif";
 }
-/* line 34, ../../app/assets/stylesheets/resources/static/_guidelines.sass */
+/* line 44, ../../app/assets/stylesheets/resources/static/_guidelines.sass */
 [data-controller="static"][data-action="guidelines"] #page_content .container .static_default .default_text .box h3 {
   border-bottom: 1px dashed #d8d3d3;
   color: #5d5d5d;
@@ -15744,21 +15758,102 @@ body #page_content .container .list_title .title p {
   text-transform: uppercase;
   width: 100%;
 }
-/* line 46, ../../app/assets/stylesheets/resources/static/_guidelines.sass */
+/* line 56, ../../app/assets/stylesheets/resources/static/_guidelines.sass */
 [data-controller="static"][data-action="guidelines"] #page_content .container .static_default .default_text .box.right {
   margin-right: 0px;
 }
-/* line 48, ../../app/assets/stylesheets/resources/static/_guidelines.sass */
-[data-controller="static"][data-action="guidelines"] #page_content .container .static_default .default_text span {
-  color: #83b1df;
+/* line 58, ../../app/assets/stylesheets/resources/static/_guidelines.sass */
+[data-controller="static"][data-action="guidelines"] #page_content .container .static_default .default_text span.footer {
+  color: #ec6569;
   float: left;
   font-family: "Dosis-Light";
   font-size: 28px;
   line-height: 31px;
-  margin: 50px 0 30px;
-  padding: 40px 0 0;
+  margin: 30px 0;
+  padding: 0;
   text-align: center;
   width: 100%;
+  background: none;
+}
+/* line 70, ../../app/assets/stylesheets/resources/static/_guidelines.sass */
+[data-controller="static"][data-action="guidelines"] #page_content .container .static_default .who_organizes_the_meetings .title, [data-controller="static"][data-action="guidelines"] #page_content .container .static_default .how_much .title, [data-controller="static"][data-action="guidelines"] #page_content .container .static_default .why_use .title {
+  margin-bottom: 70px;
+}
+/* line 72, ../../app/assets/stylesheets/resources/static/_guidelines.sass */
+[data-controller="static"][data-action="guidelines"] #page_content .container .static_default .who_organizes_the_meetings .box, [data-controller="static"][data-action="guidelines"] #page_content .container .static_default .how_much .box, [data-controller="static"][data-action="guidelines"] #page_content .container .static_default .why_use .box {
+  width: 230px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+/* line 76, ../../app/assets/stylesheets/resources/static/_guidelines.sass */
+[data-controller="static"][data-action="guidelines"] #page_content .container .static_default .who_organizes_the_meetings .box h3, [data-controller="static"][data-action="guidelines"] #page_content .container .static_default .how_much .box h3, [data-controller="static"][data-action="guidelines"] #page_content .container .static_default .why_use .box h3 {
+  border-bottom: 1px dashed #d8d3d3;
+  color: #5d5d5d;
+  float: left;
+  font-family: "Dosis-Regular";
+  font-size: 17px;
+  line-height: 21px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding: 0 0 14px;
+  text-transform: uppercase;
+  width: 100%;
+}
+/* line 88, ../../app/assets/stylesheets/resources/static/_guidelines.sass */
+[data-controller="static"][data-action="guidelines"] #page_content .container .static_default .who_organizes_the_meetings h3, [data-controller="static"][data-action="guidelines"] #page_content .container .static_default .how_much h3, [data-controller="static"][data-action="guidelines"] #page_content .container .static_default .why_use h3 {
+  border-bottom: 1px dashed #d8d3d3;
+  color: #5d5d5d;
+  float: left;
+  font-family: "Dosis-Regular";
+  font-size: 17px;
+  line-height: 21px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding: 0 0 14px;
+  text-transform: uppercase;
+  width: 100%;
+}
+/* line 100, ../../app/assets/stylesheets/resources/static/_guidelines.sass */
+[data-controller="static"][data-action="guidelines"] #page_content .container .static_default .who_organizes_the_meetings iframe, [data-controller="static"][data-action="guidelines"] #page_content .container .static_default .how_much iframe, [data-controller="static"][data-action="guidelines"] #page_content .container .static_default .why_use iframe {
+  margin-bottom: 30px;
+}
+/* line 102, ../../app/assets/stylesheets/resources/static/_guidelines.sass */
+[data-controller="static"][data-action="guidelines"] #page_content .container .static_default .who_organizes_the_meetings table, [data-controller="static"][data-action="guidelines"] #page_content .container .static_default .how_much table, [data-controller="static"][data-action="guidelines"] #page_content .container .static_default .why_use table {
+  margin-bottom: 30px;
+}
+/* line 105, ../../app/assets/stylesheets/resources/static/_guidelines.sass */
+[data-controller="static"][data-action="guidelines"] #page_content .container .static_default .who_organizes_the_meetings table tr:hover, [data-controller="static"][data-action="guidelines"] #page_content .container .static_default .how_much table tr:hover, [data-controller="static"][data-action="guidelines"] #page_content .container .static_default .why_use table tr:hover {
+  background: #f5f5f5;
+}
+/* line 107, ../../app/assets/stylesheets/resources/static/_guidelines.sass */
+[data-controller="static"][data-action="guidelines"] #page_content .container .static_default .who_organizes_the_meetings table tr:first-child, [data-controller="static"][data-action="guidelines"] #page_content .container .static_default .how_much table tr:first-child, [data-controller="static"][data-action="guidelines"] #page_content .container .static_default .why_use table tr:first-child {
+  background: none;
+}
+/* line 109, ../../app/assets/stylesheets/resources/static/_guidelines.sass */
+[data-controller="static"][data-action="guidelines"] #page_content .container .static_default .who_organizes_the_meetings table tr th, [data-controller="static"][data-action="guidelines"] #page_content .container .static_default .how_much table tr th, [data-controller="static"][data-action="guidelines"] #page_content .container .static_default .why_use table tr th {
+  font-family: "Dosis-Regular";
+  font-size: 14px;
+  color: #5d5d5d;
+  text-transform: uppercase;
+  font-weight: normal;
+  padding: 15px 15px 20px 0;
+  vertical-align: middle;
+  width: 240px;
+  line-height: 21px;
+}
+/* line 119, ../../app/assets/stylesheets/resources/static/_guidelines.sass */
+[data-controller="static"][data-action="guidelines"] #page_content .container .static_default .who_organizes_the_meetings table tr th:first-child, [data-controller="static"][data-action="guidelines"] #page_content .container .static_default .how_much table tr th:first-child, [data-controller="static"][data-action="guidelines"] #page_content .container .static_default .why_use table tr th:first-child {
+  width: 80px;
+}
+/* line 122, ../../app/assets/stylesheets/resources/static/_guidelines.sass */
+[data-controller="static"][data-action="guidelines"] #page_content .container .static_default .who_organizes_the_meetings table tr td, [data-controller="static"][data-action="guidelines"] #page_content .container .static_default .how_much table tr td, [data-controller="static"][data-action="guidelines"] #page_content .container .static_default .why_use table tr td {
+  font-family: "Helvetica", "Arial", "Sans-serif";
+  font-weight: lighter;
+  font-size: 13px;
+  padding: 15px 10px;
+  color: #5d5d5d;
+  vertical-align: middle;
+  border-top: 1px solid #dddddd;
 }
 
 /* line 2, ../../app/assets/stylesheets/resources/static/_about_us.sass */
