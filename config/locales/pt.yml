@@ -419,9 +419,10 @@ pt:
         title: "Preencha e revise sua inscrição"
         choose_payment: "Como você quer pagar?"
         choose_free: "Confirmar a inscrição?"
-        confirm_free: "Confirmar!"
-        choose_credit_card: "Pagamento internacional"
-        choose_boleto: "Pagamento nacional"
+        confirm_free: "Confirmar"
+        confirm_free_hind: "E concluir"
+        confirm_payment: "Confirmar"
+        confirm_payment_hind: "E fazer pagamento"
         you_are_about_html: "<span>Quase lá!</span> Por favor, preencha e revise sua <span>inscrição.</span>"
     create:
       success: "Seu encontro foi criado com sucesso! Logo entraremos em contato. Muito obrigado!"

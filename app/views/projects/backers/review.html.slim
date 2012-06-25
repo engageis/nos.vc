@@ -56,14 +56,12 @@
                 /.or
                   /span= t('or')
                 .moip
-                  = link_to checkout_project_backer_path(@backer.project, @backer), :method => :put do
-                    = image_tag 'catarse/boleto_icon.png'
-                    span= t('.choose_boleto')
+                  = link_to t('.confirm_payment'), checkout_project_backer_path(@backer.project, @backer), :method => :put
+                  span= t('.confirm_payment_hind')
             - elsif @backer.value == 0
               .free
-                = link_to checkout_project_backer_path(@backer.project, @backer), :method => :put do
-                  = image_tag 'catarse/cc_icon.png'
-                  span= t('.confirm_free')
+                = link_to t('.confirm_free'), checkout_project_backer_path(@backer.project, @backer), :method => :put
+                span= t('.confirm_free_hind')
                 .clearfix
           .payment_disabled
             .bootstrap-twitter
