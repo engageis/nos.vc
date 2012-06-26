@@ -608,7 +608,7 @@ pt:
   require_login: "Antes, você precisa entrar."
   require_permission: "Você não tem permissão para realizar esta ação."
   reward:
-    display_remaining: "%{remaining} de %{maximum} vagas disponíveis"
+    display_remaining: "<span>%{remaining}</span> vagas disponíveis"
     display_maximum_backers: "<span>%{maximum}</span> vagas disponíveis"
     free: "GRÁTIS"
     limited: "Vagas limitadas"

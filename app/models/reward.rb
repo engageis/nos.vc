@@ -28,7 +28,7 @@ class Reward < ActiveRecord::Base
     maximum_backers - backers.confirmed.count
   end
   def display_remaining
-    I18n.t('reward.display_remaining', :remaining => remaining, :maximum => maximum_backers)
+    I18n.t('reward.display_remaining', :remaining => remaining)
   end
   def display_maximum_backers
     I18n.t('reward.display_maximum_backers', :maximum => maximum_backers)
@@ -38,7 +38,7 @@ class Reward < ActiveRecord::Base
       if sold_out?
         status = "<div class='sold_out'>#{I18n.t('reward.sold_out')}</div>"
       else
-        status = "<div class='remaining'>#{display_maximum_backers.html_safe}</div>"
+        status = "<div class='remaining'>#{display_remaining.html_safe}</div>"
       end
     else
       status = "<div class='unlimited'>#{I18n.t('reward.unlimited')}</div>"

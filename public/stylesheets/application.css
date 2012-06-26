@@ -10483,15 +10483,15 @@ body #page_content .container .list_title .title p {
   height: 220px;
   float: left;
 }
-/* line 8, ../../app/assets/stylesheets/content/_explore.sass */
+/* line 7, ../../app/assets/stylesheets/content/_explore.sass */
 [data-action="index"][data-controller="explore"] #page_content {
   margin-top: -20px;
 }
-/* line 10, ../../app/assets/stylesheets/content/_explore.sass */
+/* line 9, ../../app/assets/stylesheets/content/_explore.sass */
 [data-action="index"][data-controller="explore"] #page_content .container {
   background: url('/images/nosvc/while_line.gif?1339777637') right repeat-y;
 }
-/* line 14, ../../app/assets/stylesheets/content/_explore.sass */
+/* line 13, ../../app/assets/stylesheets/content/_explore.sass */
 [data-action="index"][data-controller="explore"] #page_content .container .sidebar .content section.highlights {
   margin-right: 0;
   margin-top: 50px;
@@ -10499,11 +10499,11 @@ body #page_content .container .list_title .title p {
   width: 345px;
   float: left;
 }
-/* line 20, ../../app/assets/stylesheets/content/_explore.sass */
+/* line 19, ../../app/assets/stylesheets/content/_explore.sass */
 [data-action="index"][data-controller="explore"] #page_content .container .sidebar .content section.highlights .section_header {
   margin-left: 0;
 }
-/* line 22, ../../app/assets/stylesheets/content/_explore.sass */
+/* line 21, ../../app/assets/stylesheets/content/_explore.sass */
 [data-action="index"][data-controller="explore"] #page_content .container .sidebar .content section.highlights .section_header h1 {
   font-family: "Dosis-SemiBold";
   text-transform: uppercase;
@@ -10513,16 +10513,16 @@ body #page_content .container .list_title .title p {
   padding-bottom: 15px;
   padding-left: 15px;
 }
-/* line 30, ../../app/assets/stylesheets/content/_explore.sass */
+/* line 29, ../../app/assets/stylesheets/content/_explore.sass */
 [data-action="index"][data-controller="explore"] #page_content .container .sidebar .content section.highlights ul {
   margin-bottom: 20px;
   border-bottom: 1px #d8d3d3 dashed;
 }
-/* line 33, ../../app/assets/stylesheets/content/_explore.sass */
+/* line 32, ../../app/assets/stylesheets/content/_explore.sass */
 [data-action="index"][data-controller="explore"] #page_content .container .sidebar .content section.highlights ul li {
   border-top: 1px #d8d3d3 dashed;
 }
-/* line 35, ../../app/assets/stylesheets/content/_explore.sass */
+/* line 34, ../../app/assets/stylesheets/content/_explore.sass */
 [data-action="index"][data-controller="explore"] #page_content .container .sidebar .content section.highlights ul li a {
   color: #5d5d5d;
   font-size: 24px;
@@ -10535,28 +10535,28 @@ body #page_content .container .list_title .title p {
   background-position: 5px;
   text-shadow: white 1px 1px 0px;
 }
-/* line 46, ../../app/assets/stylesheets/content/_explore.sass */
+/* line 45, ../../app/assets/stylesheets/content/_explore.sass */
 [data-action="index"][data-controller="explore"] #page_content .container .sidebar .content section.highlights ul li a:hover, [data-action="index"][data-controller="explore"] #page_content .container .sidebar .content section.highlights ul li a.selected, [data-action="index"][data-controller="explore"] #page_content .container .sidebar .content section.highlights ul li a.selected_categorie {
   background-color: #f9f9f9;
   color: #4383d1;
 }
-/* line 50, ../../app/assets/stylesheets/content/_explore.sass */
+/* line 49, ../../app/assets/stylesheets/content/_explore.sass */
 [data-action="index"][data-controller="explore"] #page_content .container .sidebar .content section.highlights ul li.recommended a {
   background-image: url('/images/nosvc/icon-selected.png?1339700781');
 }
-/* line 53, ../../app/assets/stylesheets/content/_explore.sass */
+/* line 52, ../../app/assets/stylesheets/content/_explore.sass */
 [data-action="index"][data-controller="explore"] #page_content .container .sidebar .content section.highlights ul li.recent a {
   background-image: url('/images/nosvc/icon-recents.png?1339700671');
 }
-/* line 56, ../../app/assets/stylesheets/content/_explore.sass */
+/* line 55, ../../app/assets/stylesheets/content/_explore.sass */
 [data-action="index"][data-controller="explore"] #page_content .container .sidebar .content section.highlights ul li.successful a {
   background-image: url('/images/nosvc/icon-successful.png?1340222780');
 }
-/* line 59, ../../app/assets/stylesheets/content/_explore.sass */
+/* line 58, ../../app/assets/stylesheets/content/_explore.sass */
 [data-action="index"][data-controller="explore"] #page_content .container .sidebar .content section.highlights ul li.expiring a {
   background-image: url('/images/nosvc/icon-expiring.png?1339700736');
 }
-/* line 61, ../../app/assets/stylesheets/content/_explore.sass */
+/* line 60, ../../app/assets/stylesheets/content/_explore.sass */
 [data-action="index"][data-controller="explore"] #page_content .container .sidebar .content section.categories {
   display: inline;
   float: left;
@@ -10568,7 +10568,7 @@ body #page_content .container .list_title .title p {
   margin: 0;
   padding: 50px 0px 20px;
 }
-/* line 67, ../../app/assets/stylesheets/content/_explore.sass */
+/* line 66, ../../app/assets/stylesheets/content/_explore.sass */
 [data-action="index"][data-controller="explore"] #page_content .container .sidebar .content section.categories h1 {
   font-family: "Dosis-ExtraLight";
   font-size: 41px;
@@ -10580,11 +10580,11 @@ body #page_content .container .list_title .title p {
   margin: auto;
   margin-bottom: 35px;
 }
-/* line 77, ../../app/assets/stylesheets/content/_explore.sass */
+/* line 76, ../../app/assets/stylesheets/content/_explore.sass */
 [data-action="index"][data-controller="explore"] #page_content .container .sidebar .content section.categories h1 span {
   color: #83b1df;
 }
-/* line 79, ../../app/assets/stylesheets/content/_explore.sass */
+/* line 78, ../../app/assets/stylesheets/content/_explore.sass */
 [data-action="index"][data-controller="explore"] #page_content .container .sidebar .content section.categories h2 {
   font-family: "Dosis-Light";
   font-size: 61px;
@@ -10594,7 +10594,7 @@ body #page_content .container .list_title .title p {
   height: 70px;
   text-align: center;
 }
-/* line 87, ../../app/assets/stylesheets/content/_explore.sass */
+/* line 86, ../../app/assets/stylesheets/content/_explore.sass */
 [data-action="index"][data-controller="explore"] #page_content .container .sidebar .content section.categories .list_categories {
   background: white;
   border-top: 1px dashed #d8d3d3;
@@ -10606,7 +10606,7 @@ body #page_content .container .list_title .title p {
   font-family: "Dosis-Regular";
   font-size: 18px;
 }
-/* line 97, ../../app/assets/stylesheets/content/_explore.sass */
+/* line 96, ../../app/assets/stylesheets/content/_explore.sass */
 [data-action="index"][data-controller="explore"] #page_content .container .sidebar .content section.categories .list_categories a.more_categories {
   background-image: url('/images/nosvc/more-categories.gif?1339793760');
   height: 19px;
@@ -10618,23 +10618,23 @@ body #page_content .container .list_title .title p {
   margin-top: 10px;
   float: right;
 }
-/* line 107, ../../app/assets/stylesheets/content/_explore.sass */
+/* line 106, ../../app/assets/stylesheets/content/_explore.sass */
 [data-action="index"][data-controller="explore"] #page_content .container .sidebar .content section.categories .list_categories ul {
   padding: 0 10px 0 30px;
 }
-/* line 109, ../../app/assets/stylesheets/content/_explore.sass */
+/* line 108, ../../app/assets/stylesheets/content/_explore.sass */
 [data-action="index"][data-controller="explore"] #page_content .container .sidebar .content section.categories .list_categories ul li {
   margin-right: 18px;
   float: left;
 }
-/* line 112, ../../app/assets/stylesheets/content/_explore.sass */
+/* line 111, ../../app/assets/stylesheets/content/_explore.sass */
 [data-action="index"][data-controller="explore"] #page_content .container .sidebar .content section.categories .list_categories ul li a {
   color: #5d5d5d;
   text-decoration: none;
   line-height: 38px;
   padding: 0 4px;
 }
-/* line 117, ../../app/assets/stylesheets/content/_explore.sass */
+/* line 116, ../../app/assets/stylesheets/content/_explore.sass */
 [data-action="index"][data-controller="explore"] #page_content .container .sidebar .content section.categories .list_categories ul li a:hover, [data-action="index"][data-controller="explore"] #page_content .container .sidebar .content section.categories .list_categories ul li a.selected {
   color: white;
   background: #83b1df;
@@ -10646,19 +10646,19 @@ body #page_content .container .list_title .title p {
   -khtml-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 122, ../../app/assets/stylesheets/content/_explore.sass */
+/* line 121, ../../app/assets/stylesheets/content/_explore.sass */
 [data-action="index"][data-controller="explore"] #page_content .container .sidebar .content section.categories .list_categories ul li.other_categorie {
   display: none;
 }
-/* line 124, ../../app/assets/stylesheets/content/_explore.sass */
+/* line 123, ../../app/assets/stylesheets/content/_explore.sass */
 [data-action="index"][data-controller="explore"] #page_content .container .main {
   margin-top: 20px;
 }
-/* line 126, ../../app/assets/stylesheets/content/_explore.sass */
+/* line 125, ../../app/assets/stylesheets/content/_explore.sass */
 [data-action="index"][data-controller="explore"] #page_content .container .main #explore_results {
   padding-bottom: 20px;
 }
-/* line 129, ../../app/assets/stylesheets/content/_explore.sass */
+/* line 128, ../../app/assets/stylesheets/content/_explore.sass */
 [data-action="index"][data-controller="explore"] #page_content .container .main #explore_results .results .empty {
   font-family: "Helvetica Neue", "Arial", "Sans-serif";
   color: #5d5d5d;
@@ -10670,11 +10670,11 @@ body #page_content .container .list_title .title p {
   padding: 0 40px 30px;
   text-shadow: white 1px 1px 0px;
 }
-/* line 141, ../../app/assets/stylesheets/content/_explore.sass */
+/* line 140, ../../app/assets/stylesheets/content/_explore.sass */
 [data-action="index"][data-controller="explore"] #page_content .container .main #explore_results .results ul.collection_list li {
   clear: both;
 }
-/* line 143, ../../app/assets/stylesheets/content/_explore.sass */
+/* line 142, ../../app/assets/stylesheets/content/_explore.sass */
 [data-action="index"][data-controller="explore"] #page_content .container .main #explore_results .results ul.collection_list li .line {
   border-bottom: dashed 1px #cccccc;
   height: 1px;
