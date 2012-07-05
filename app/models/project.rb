@@ -222,7 +222,7 @@ class Project < ActiveRecord::Base
   def total_vacancies_from_rewards
     return false if unlimited_vacancies_from_rewards?
     total = 0
-    rewards.not_expired.each do |reward|
+    rewards.each do |reward|
       total += reward.maximum_backers if reward.maximum_backers
     end
     total - backers.confirmed.count

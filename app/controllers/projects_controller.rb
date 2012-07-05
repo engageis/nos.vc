@@ -14,6 +14,9 @@ class ProjectsController < ApplicationController
   def date_format_convert
     # TODO localize here and on the datepicker on project_form.js
     params["project"]["expires_at"] = Date.strptime(params["project"]["expires_at"], '%d/%m/%Y')
+    params["project"]["rewards_attributes"].each_with_index do |value, index|
+      params["project"]["rewards_attributes"][index.to_s]["expires_at"] = Date.strptime(params["project"]["rewards_attributes"][index.to_s]["expires_at"], '%d/%m/%Y') + 23.hours + 59.minutes
+    end
   end
 
   def index
