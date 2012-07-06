@@ -181,7 +181,7 @@ class Project < ActiveRecord::Base
   end
 
   def vacancies?
-    return true if total_vacancies != false
+    return true if total_vacancies != false and total_vacancies > 0
     false
   end
 
