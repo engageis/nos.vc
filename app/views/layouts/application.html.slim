@@ -15,14 +15,7 @@ html lang="#{I18n.locale}" xmlns:fb="http://ogp.me/ns/fb#"
     /[if lt IE 9]
       = javascript_include_tag "http://html5shiv.googlecode.com/svn/trunk/html5.js"
     = yield :js_templates
-    /= javascript_include_tag 'application'
-
-    /JS libs
-    = javascript_include_tag 'lib/jquery-1.7.1.min', 'lib/underscore-min', 'lib/backbone-min', 'lib/mustache', 'lib/jquery-ui-1.8.6.custom.min', 'lib/jquery.orbit-1.2.3.min', 'lib/jquery.numeric', 'lib/jquery.maxlength', 'lib/jquery.timers-1.2', 'lib/timedKeyup', 'lib/waypoints.min', 'lib/jquery.scrollto', 'lib/jquery.jeditable.mini', 'lib/jquery.maskedinput-1.2.2.min', 'lib/jquery.cpf', 'lib/twitter', 'jquery_ujs', 'lib/jquery.ui.datepicker-pt-BR', 'lib/on_the_spot', 'app/catarse', 'lib/bootstrap'
-    /Catarse's Backbone code
-    = javascript_include_tag 'app/router', 'app/views/layouts/application', 'app/models/project', 'app/models/backer', 'app/models/user', 'app/models/user_back', 'app/models/user_project', 'app/collections/paginated', 'app/views/model', 'app/views/paginated', 'app/collections/projects', 'app/collections/backers', 'app/collections/user_backs', 'app/collections/user_projects', 'app/views/credits/index', 'app/views/explore/index', 'app/views/projects/backers/new', 'app/views/projects/backers/review', 'app/views/projects/embed.js', 'app/views/projects/index', 'app/views/projects/new', 'app/views/projects/pending', 'app/views/projects/pending_backers', 'app/views/projects/show', 'app/views/projects/start', 'app/views/projects/video_embed', 'app/views/static/guidelines', 'app/views/users/show', 'app/views/sessions/new'
-    /JS Init
-    = javascript_include_tag 'init'
+    = javascript_include_tag 'application'
 
     = csrf_meta_tag
     link rel='shortcut icon' href="/images/favicon.ico"
