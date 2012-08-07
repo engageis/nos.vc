@@ -47,7 +47,6 @@
                   = form.submit (@backer.credits ? t('.submit.credits') : t('.submit.moip')), :disabled => true, :class => 'btn', :id => 'user_submit'
           #payment.hide
             - if @backer.value > 0
-              .title
               .choose_payment
                 .moip
                   = link_to t('.confirm_payment'),  'javascript:void(0);', :"data-payment_method_url" => catarse_moip.checkout_payment_moip_path(@backer), :method => :get, :class => 'payment_link'
