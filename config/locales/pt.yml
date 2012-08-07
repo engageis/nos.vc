@@ -215,7 +215,7 @@ pt:
         title: "Entre utilizando o seu endereço de email"
         social: "Com rede social"
         login_title: "Sem rede social"
-        login_subtitle: "Entre você já tem uma conta criada no Nós.vc."
+        login_subtitle: "Entre se você já tem uma conta criada no Nós.vc."
         register_title: "Me cadastrar"
         register_subtitle: "Crie uma conta no Nós.vc do bom e velho jeito tradicional."
         with_facebook: "É mais fácil e mais rápido."
@@ -346,7 +346,7 @@ pt:
   project:
     start:
       email_subject: "Yeah! Seu encontro foi recebido!"
-      email_text: "Eu sou o Mauro do Nós.vc e vou te ajudar a fazer este encontro acontecer.<br><br>Mas, antes, eu preciso ler o que você criou. O que ainda não fiz.<br><br>Pode ser que eu demore alguns dias. Pode ser que seja rápido.<br><br>É tudo uma questão de sorte e de quantas pessoas estão criando encontros agora.<br><br>Se tudo estiver ok, logo, logo seu encontro vai pro ar.<br><br>Por enquanto, você pode explorar outros encontros. (<a href='%{explore_link}' style='color: #1aa79c !important;'>%{explore_link}</a>)<br><br>Ler nosso <a href='%{blog}' style='color: #1aa79c !important;'>blog</a> e nosso <a href='%{help}' style='color: #1aa79c !important;'>Help!</a>, que tem várias dicas quentes.<br><br>E, ainda, curtir nosso <a href='%{facebook}' style='color: #1aa79c !important;'>facebook</a> e seguir nosso <a href='%{twitter}' style='color: #1aa79c !important;'>twitter</a>.<br><br>Qualquer dúvida, só vir falar comigo.<br><br>Grande abraço!<br><br>Mauro."
+      email_text: "Eu sou o Mauro do Nós.vc e vou te ajudar a fazer este encontro acontecer.<br><br>Mas, antes, eu preciso ler o que você criou. O que ainda não fiz.<br><br>Pode ser que eu demore alguns dias. Pode ser que seja rápido.<br><br>É tudo uma questão de sorte e de quantas pessoas estão criando encontros agora.<br><br>Se tudo estiver ok, logo, logo seu encontro vai pro ar.<br><br>Por enquanto, você pode explorar outros encontros. (<a href='%{explore_link}' style='color: #1aa79c !important;'>%{explore_link}</a>)<br><br>Ler nosso <a href='%{blog}' style='color: #1aa79c !important;'>blog</a> e nosso <a href='%{help}' style='color: #1aa79c !important;'>Help!</a>, que tem várias dicas quentes.<br><br>E, ainda, curtir nosso <a href='%{facebook}' style='color: #1aa79c !important;'>facebook</a> e seguir nosso <a href='%{twitter}' style='color: #1aa79c !important;'>twitter</a>.<br><br>Qualquer dúvida, só vir falar comigo."
       notification_text: "Yeah! Seu encontro foi recebido!"
     finish:
       successful:
@@ -379,7 +379,7 @@ pt:
       project_warning:
         not_successful:
           expired: "Não. Este encontro não foi realizado porque não atingiu o número mínimo de inscritos até %{date}. Mas é possível reformular a proposta e criar um novo encontro. Interessou? Entre em contato com %{name}. Se você se inscreveu, também pode receber seu dinheiro de volta. Ou good vibes, se a inscrição foi gratuita."
-          not_expired: "Ainda não. Este encontro precisa de você! Ele só será realizado se alcançar o número mínimo de inscritos até %{date}. Se não alcançar, você vai receber seu dinheiro de volta. A inscrição é gratuita? Bem, então você vai receber good vibes de volta."
+          not_expired: "Ainda não. Este encontro precisa de você! Ele só será realizado se alcançar o número mínimo de inscritos até %{date}. Se não alcançar, você vai receber seu dinheiro de volta. Se a inscrição for gratuita, você vai receber good vibes de volta."
         successful:
           expired: "Sim! Este encontro atingiu o número mínimo de inscritos e foi confirmado. Mas as inscrições já encerraram. Você não conseguiu se inscrever? Entre em contato com %{name} e dê vida a um novo encontro."
           not_expired: "Sim! Este encontro atingiu o número mínimo de inscritos e está confirmado. As inscrições estarão abertas até o dia %{date} ou enquanto durarem as vagas. A galera se inscreveu e deu vida ao encontro."
@@ -451,7 +451,7 @@ pt:
     footer_featured:
       mi_casa_su_casa:
         title: "Mi casa, su casa."
-        text: "Receba encontros inspiradores no seu espaço, sala, coworking, bar ou casa na àrvore."
+        text: "Receba encontros inspiradores no seu espaço, sala, coworking, bar ou casa na árvore."
         link: "Locais"
       not_repress:
         title: "Não se reprima!"
@@ -632,7 +632,7 @@ pt:
     email:
       contact: somos@nos.vc
       payments: leo@nos.vc
-      projects: "barrosdaniel@gmail.com, mauroalex@gmail.com"
+      projects: "barrosdaniel@gmail.com, mauroalex@gmail.com, leocorrea.leonardo@gmail.com, badjolo@gmail.com"
       system: somos@nos.vc
     facebook: "http://www.facebook.com/nos.vc"
     name: "Nós.vc"
