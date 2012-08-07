@@ -38,16 +38,14 @@ script type="text/template" id="user_project_template"
             | <%= name %>
         p.author
           = "#{t('projects.box.by')} "
-          span[itemprop="author"] <%= user['name'] %>
+          span[itemprop="author"] <%= leader_name %>
         p.description[itemprop="description"]
           | <%= headline %>
         p.where
           | <%= when_short %>
 
-    - if current_user == @user
-      .tell_about
-        p= t('tell_about_this_project')
-        ul
-          li= link_to image_tag('catarse/facebook_black_icon.png'), "http://www.facebook.com/sharer.php?u=<%= encodeURIComponent(full_uri) %>&t=#{t('share_my_projects')}<%= encodeURIComponent(name) %>".html_safe, :target => '_blank'
-          li= link_to image_tag('catarse/twitter_black_icon.png'), "http://twitter.com/share?text=#{t('share_my_projects')}<%= encodeURIComponent(name) %>&url=<%= encodeURIComponent(full_uri) %>".html_safe, :target => '_blank'
-
+        - if current_user == @user
+          .tell_about
+            ul
+              li= link_to image_tag('nosvc/icon-user_face.png'), "http://www.facebook.com/sharer.php?u=<%= encodeURIComponent(full_uri) %>&t=#{t('share_my_projects')}<%= encodeURIComponent(name) %>".html_safe, :target => '_blank'
+              li= link_to image_tag('nosvc/icon-user_twitter.png'), "http://twitter.com/share?text=#{t('share_my_projects')}<%= encodeURIComponent(name) %>&url=<%= encodeURIComponent(full_uri) %>".html_safe, :target => '_blank'

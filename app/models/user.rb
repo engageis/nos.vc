@@ -36,12 +36,6 @@ class User < ActiveRecord::Base
   include Rails.application.routes.url_helpers
   extend ActiveSupport::Memoizable
 
-  begin
-    sync_with_mailee :news => :newsletter, :list => "Newsletter"
-  rescue Exception => e
-    Rails.logger.error "Error when syncing with mailee: #{e.inspect}"
-  end
-
   validates_presence_of :provider, :uid
   validates_uniqueness_of :uid, :scope => :provider
   validates_length_of :bio, :maximum => 140
@@ -60,11 +54,12 @@ class User < ActiveRecord::Base
   has_many :updates
   has_many :notifications
   has_many :secondary_users, :class_name => 'User', :foreign_key => :primary_user_id
+  has_one :backer_total
   has_and_belongs_to_many :manages_projects, :join_table => "projects_managers", :class_name => 'Project'
   belongs_to :primary, :class_name => 'User', :foreign_key => :primary_user_id
   scope :primary, :conditions => ["primary_user_id IS NULL"]
   scope :backers, :conditions => ["id IN (SELECT DISTINCT user_id FROM backers WHERE confirmed)"]
-  scope :most_backeds, lambda {
+  scope :most_backeds, ->{
     joins(:backs).select(
     <<-SQL
       users.id,
@@ -78,11 +73,25 @@ class User < ActiveRecord::Base
     group("users.name, users.id, users.email")
   }
   #before_save :store_primary_user
-  before_save :fix_twitter_user
+  before_save :fix_twitter_user, :fix_facebook_link, :fix_other_link
+  scope :by_email, ->(email){ where('email ~* ?', email) }
+  scope :by_name, ->(name){ where('name ~* ?', name) }
+  scope :by_id, ->(id){ where('id = ?', id) }
+  scope :by_key, ->(key){ where('EXISTS(SELECT true FROM backers WHERE backers.user_id = users.id AND backers.key ~* ?)', key) }
+  scope :has_credits, joins(:backer_total).where('backer_totals.credits > 0 OR users.credits > 0')
 
   def self.find_for_database_authentication(warden_conditions)
     conditions = warden_conditions.dup
     where(conditions).where(:provider => 'devise').first
+  end
+
+  def self.backer_totals
+    connection.select_one(
+      self.scoped.
+        joins(:backer_total).
+        select('count(DISTINCT user_id) as users, count(*) as backers, sum(backer_totals.sum) as backed, sum(backer_totals.credits) as credits, sum(users.credits) as credits_table').
+        to_sql
+    ).reduce({}){|memo,el| memo.merge({ el[0].to_sym => BigDecimal.new(el[1] || '0') }) }
   end
 
   def admin?
@@ -90,18 +99,7 @@ class User < ActiveRecord::Base
   end
 
   def calculate_credits(sum = 0, backs = [], first = true)
-   # return sum if backs.size == 0 and not first
-   backs = self.backs.where(:confirmed => true, :requested_refund => false).order("created_at").all if backs == [] and first
-   back = backs.first
-   return sum unless back
-   sum -= back.value if back.credits
-   if back.project.finished?
-     unless back.project.successful?
-       sum += back.value
-       # puts "#{back.project.name}: +#{back.value}"
-     end
-   end
-   calculate_credits(sum, backs.drop(1), false)
+    backer_total ? backer_total.credits : 0.0
   end
 
   def facebook_id
@@ -110,14 +108,6 @@ class User < ActiveRecord::Base
 
   def update_credits
     self.update_attribute :credits, self.calculate_credits
-  end
-
-  def store_primary_user
-    return if email.nil? or self.primary_user_id
-    primary_user = User.primary.where(:email => email).first
-    if primary_user and primary_user.id != self.id
-      self.primary_user_id = primary_user.id
-    end
   end
 
   def to_param
@@ -160,31 +150,30 @@ class User < ActiveRecord::Base
   def display_name
     name || nickname || I18n.t('user.no_name')
   end
-  def display_nickname
-    if nickname =~ /profile\.php/
-      name
-    else
-      nickname||name
-    end
-  end
+
   def short_name
     truncate display_name, :length => 26
   end
+
   def medium_name
     truncate display_name, :length => 42
   end
+
   def display_image
-    gravatar_url || image_url || '/images/user.png'
+    gravatar_url || image_url || '/assets/user.png'
   end
+
   def display_image_large
-    gravatar_url('&s=220') || image_url || '/images/user.png'
+    gravatar_url('&s=220') || image_url || '/assets/user.png'
   end
   def backer?
     backs.confirmed.not_anonymous.count > 0
   end
+
   def total_backs
     backs.confirmed.not_anonymous.count
   end
+
   def backs_text
     if total_backs == 2
       I18n.t('user.backs_text.two')
@@ -194,24 +183,17 @@ class User < ActiveRecord::Base
       I18n.t('user.backs_text.one')
     end
   end
+
   def remember_me_hash
     Digest::MD5.new.update("#{self.provider}###{self.uid}").to_s
   end
+
   def display_credits
     number_to_currency credits, :unit => 'R$', :precision => 0, :delimiter => '.'
   end
+
   def display_total_of_backs
     number_to_currency backs.confirmed.sum(:value), :unit => 'R$', :precision => 0, :delimiter => '.'
-  end
-  def merge_into!(new_user)
-    self.primary = new_user
-    new_user.credits += self.credits
-    self.credits = 0
-    self.backs.update_all :user_id => new_user.id
-    self.projects.update_all :user_id => new_user.id
-    self.notifications.update_all :user_id => new_user.id
-    self.save
-    new_user.save
   end
 
   def as_json(options={})
@@ -251,9 +233,33 @@ class User < ActiveRecord::Base
     "http://twitter.com/#{self.twitter}"
   end
 
+  def merge_into!(new_user)
+    self.primary = new_user
+    new_user.credits += self.credits
+    self.credits = 0
+    self.backs.update_all :user_id => new_user.id
+    self.projects.update_all :user_id => new_user.id
+    self.notifications.update_all :user_id => new_user.id
+    self.save
+    new_user.save
+  end
+
   protected
   def fix_twitter_user
+    self.twitter.gsub! /http(s)?:\/\/twitter.com\//, '' if self.twitter
     self.twitter.gsub! /@/, '' if self.twitter
+  end
+
+  def fix_facebook_link
+    unless self.facebook_link[0..7] =~ /http(s)?:\/\//
+      self.facebook_link = "https://#{self.facebook_link}"
+    end
+  end
+
+  def fix_other_link
+    unless self.other_link[0..7] =~ /http(s)?:\/\//
+      self.other_link = "http://#{self.other_link}"
+    end
   end
 
   def password_required?
@@ -263,7 +269,7 @@ class User < ActiveRecord::Base
   # Returns a Gravatar URL associated with the email parameter
   def gravatar_url params=''
     return unless email
-    "http://gravatar.com/avatar/#{Digest::MD5.new.update(email)}.jpg?default=#{image_url or "#{I18n.t('site.base_url')}/images/user.png"}#{params}"
+    "http://gravatar.com/avatar/#{Digest::MD5.new.update(email)}.jpg?default=#{image_url or "#{I18n.t('site.base_url')}/assets/user.png"}#{params}"
   end
 
 end

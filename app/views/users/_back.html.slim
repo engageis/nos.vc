@@ -38,7 +38,7 @@ script type="text/template" id="user_back_template"
             | <%= project['name'] %>
         p.author
           = "#{t('projects.box.by')} "
-          span[itemprop="author"] <%= project['user']['name'] %>
+          span[itemprop="author"] <%= project['leader_name'] %>
         p.description[itemprop="description"]
           | <%= project['headline'] %>
         p.where

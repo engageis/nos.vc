@@ -1,1 +1,1 @@
-rvm --create 1.9.2@nosvc-rails.3.0.3
+rvm --create 1.9.2@nosvc

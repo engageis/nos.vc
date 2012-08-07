@@ -6,9 +6,16 @@
       &:hover
         color: $pink
     .container
+      .sidebar
+        +omega
+        margin-top: 50px
+        margin-left: 0px
+        width: 345px
+        height: 200px
+        float: left
       .curated_content
-        +grid-system(16)
-        padding-top: 20px
+        background: image-url('nosvc/while_line.gif') right repeat-y
+        margin: 0 0 30px 0
         .curated_page_header
           padding-bottom: 40px
           img
@@ -17,36 +24,47 @@
         .curated_project
           margin-bottom: 20px
         .curated_project_list
-          +grid(14)
-          +alpha
         .project_curator_description
-          +grid(4)
-          +omega
+          width: 614px
+          float: right
+          margin: -60px 0px 60px
+          background: #fff
+          border-top: dashed 1px #ccc
+          border-bottom: dashed 1px #ccc
           p
-            +grid(3)
-            +alpha
-            +omega
+            width: 320px
             color: rgba($ultra_gryn, 0.8)
             font-family: Arial
             font-size: 13px
-            line-height: 130%
-            padding-top: 30px
+            line-height: 18px
+            margin-left: 0px
+            margin-right: 20px
+            float: right
+            padding: 30px 0px 27px 0px
             font-style: italic
         .curated_page_header
           .titles
             float: left
-            width: 550px
+            width: 574px
+            padding: 20px
             h1
-              color: $ultra_gryn
-              font-family: "Helvetica Neue"
-              font-size: 28px
+              color: #5d5d5d
+              font-family: "Dosis-Regular"
+              font-size: 41px
               padding: 5px 0
-            h2
-              color: rgba($ultra_gryn, 0.7)
-              font-family: Arial
-              font-size: 15px
-              line-height: 130%
-              padding-bottom: 30px
-              padding-top: 10px
+              text-transform: uppercase
+          .description
+            padding-bottom: 20px
+            padding-top: 20px
+            width: 614px
+            background:  #fff
+            border-top: dashed 1px #ccc
+            border-bottom: dashed 1px #ccc
+            float: right
+          .curated_social
+            margin-top: 50px
+            margin-left: 0px
+            width: 345px
+            float: left
             #facebook_share
               width: 540px

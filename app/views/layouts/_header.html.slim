@@ -15,8 +15,8 @@
         = link_to '#', class: 'my_profile_link' do
           span.current_user_name
             = t('layouts.header.hello')
-            |, 
-            = current_user.display_name.split(' ').first
+            |,
+            = " #{current_user.display_name.split(' ').first}"
           = image_tag('dropdown.png', :class => 'dropdown_arrow')
           = image_tag(current_user.display_image, :size => "30x30", :class => 'profile_picture')
         ul.dropdown.user
@@ -24,6 +24,9 @@
           li
             = link_to t('layouts.user.my_credits'), user_path(current_user, anchor: 'credits')
             .small (#{current_user.display_credits})
+          - if current_user.admin?
+            - for menu, path in Adm::BaseController.menu do
+              li= link_to menu, path
           li= link_to t('layouts.user.logout'), logout_path
       - else
         .login

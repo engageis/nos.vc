@@ -14,25 +14,47 @@ class ProjectsController < ApplicationController
   def date_format_convert
     # TODO localize here and on the datepicker on project_form.js
     params["project"]["expires_at"] = Date.strptime(params["project"]["expires_at"], '%d/%m/%Y')
+    params["project"]["rewards_attributes"].each_with_index do |value, index|
+      params["project"]["rewards_attributes"][index.to_s]["expires_at"] = Date.strptime(params["project"]["rewards_attributes"][index.to_s]["expires_at"], '%d/%m/%Y') + 23.hours + 59.minutes if params["project"]["rewards_attributes"][index.to_s]["expires_at"].present?
+    end
   end
 
   def index
     index! do |format|
       format.html do
         @title = t("site.title")
-        presenter = ProjectPresenter::Home.new({:current_user => current_user})
-        presenter.fetch_projects
-
-        @recommended_project  = presenter.recommended_project
-        #@project_of_day       = presenter.project_of_day
-        @first_project        = presenter.first_project
-        @second_project       = presenter.second_project
-        @third_project        = presenter.third_project
-        @fourth_project       = presenter.fourth_project
-        @expiring             = presenter.expiring
-        @recent               = presenter.recent
 
         @curated_pages = CuratedPage.visible.order("created_at desc")
+        collection_projects = Project.recommended_for_home
+        unless collection_projects.empty?
+          @first_project, @second_project, @third_project, @fourth_project = collection_projects.all
+        end
+
+        project_ids = collection_projects.map{|p| p.id }
+
+        @expiring = Project.expiring_for_home(project_ids)
+        @recent = Project.recent_for_home(project_ids)
+
+        @blog_posts = Blog.fetch_last_posts.inject([]) do |total,item|
+          if total.size < 2
+            total << item
+          end
+          total
+        end || []
+
+        calendar = Calendar.new
+        @events = Rails.cache.fetch 'calendar', expires_in: 30.minutes do
+          calendar.fetch_events_from("catarse.me_237l973l57ir0v6279rhrr1qs0@group.calendar.google.com") || []
+        end
+        @curated_pages = CuratedPage.visible.order("created_at desc").limit(8)
+        @last_tweets = Rails.cache.fetch('last_tweets', :expires_in => 30.minutes) do
+          begin
+            JSON.parse(Net::HTTP.get(URI("http://api.twitter.com/1/statuses/user_timeline.json?screen_name=#{t('site.twitter')}")))[0..1]
+          rescue
+            []
+          end
+        end
+        @last_tweets ||= []
       end
       format.json do
         # After the search params we order by ID to avoid ties and therefore duplicate items in pagination
@@ -68,12 +90,12 @@ class ProjectsController < ApplicationController
     # Send project receipt
     notification_text = I18n.t('project.start.notification_text', :locale => current_user.locale)
     email_subject = I18n.t('project.start.email_subject', :locale => current_user.locale)
-    email_text = I18n.t('project.start.email_text', 
-                        :facebook => I18n.t('site.facebook', :locale => current_user.locale), 
-                        :twitter => "http://twitter.com/#{I18n.t('site.twitter', :locale => current_user.locale)}", 
-                        :blog => I18n.t('site.blog', :locale => current_user.locale), 
-                        :explore_link => explore_url, 
-                        :email => (I18n.t('site.email.contact', :locale => current_user.locale)), 
+    email_text = I18n.t('project.start.email_text',
+                        :facebook => I18n.t('site.facebook', :locale => current_user.locale),
+                        :twitter => "http://twitter.com/#{I18n.t('site.twitter', :locale => current_user.locale)}",
+                        :blog => I18n.t('site.blog', :locale => current_user.locale),
+                        :explore_link => explore_url,
+                        :email => (I18n.t('site.email.contact', :locale => current_user.locale)),
                         :locale => current_user.locale,
                         :help => (I18n.t('site.help', :locale => current_user.locale)))
     Notification.create :user => current_user, :text => notification_text, :email_subject => email_subject, :email_text => email_text
@@ -195,7 +217,7 @@ class ProjectsController < ApplicationController
 
   def can_update_on_the_spot?
     project_fields = []
-    project_admin_fields = ["name", "about", "headline", "can_finish", "expires_at", "user_id", "image_url", "video_url", "visible", "rejected", "recommended", "home_page", "order", "permalink", "when_short", "when_long", "leader_bio", "leader_id", "location"]
+    project_admin_fields = ["name", "about", "headline", "can_finish", "expires_at", "user_id", "image_url", "video_url", "visible", "rejected", "recommended", "home_page",  "permalink", "when_short", "when_long", "leader_bio", "leader_id", "location"]
     backer_fields = ["display_notice"]
     backer_admin_fields = ["confirmed", "requested_refund", "refunded", "anonymous", "user_id"]
     reward_fields = []

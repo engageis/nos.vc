@@ -27,7 +27,7 @@
       p.author
         = t('.by')
         |&nbsp;
-        span[itemprop="author"]= project.user.name
+        span[itemprop="author"]= project.leader_name
       p.description[itemprop="description"]= truncate(project.headline, :length => 140)
       p.where
         = project.when_short

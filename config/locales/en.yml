@@ -298,9 +298,6 @@ en:
       profile: "my profile"
       hello: ~
       account: "my account"
-    recommended_header:
-      sugest_for_you: "suggested for you"
-      highlight_project: "featured project"
     user:
       logout: Logout
       my_credits: "My credit"
@@ -357,6 +354,9 @@ en:
       successful: funded
       waiting_confirmation: waiting
   projects:
+    recommended_header:
+      sugest_for_you: "suggested for you"
+      highlight_project: "featured project"
     box:
       by: by
     admin_fields:
@@ -572,7 +572,7 @@ en:
     email:
       contact: somos@nos.vc
       payments: leo@nos.vc
-      projects: barrosdaniel@gmail.com, mauroalex@gmail.com
+      projects: barrosdaniel@gmail.com, mauroalex@gmail.com, leocorrea.leonardo@gmail.com, badjolo@gmail.com
       system: somos@nos.vc
     facebook: "http://www.facebook.com/nos.vc"
     name: "Nós.vc"
@@ -599,6 +599,7 @@ en:
     no_name: Unnamed
   users:
     show:
+      attention: Attention
       tabs:
         backed_projects: "Backed projects"
         created_projects: "Created projects"
@@ -609,6 +610,10 @@ en:
       credits: "available in credits"
       no_email: "haven't filled the email yet"
       title: "%{name}' info"
+      user_social:
+        email: "Send me an email"
+        facebook: "Profile on facebook"
+        twitter: "Profile on twiiter"
     backs:
       anonymous: "Anonymous back."
       no_backs: "%{name} haven't backed any project yet. But we know it's just a matter of time! :D"

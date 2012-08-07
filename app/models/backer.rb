@@ -28,6 +28,10 @@ class Backer < ActiveRecord::Base
     self.update_attribute :payment_method, 'MoIP'
   end
 
+  def price_in_cents
+    (self.value * 100).round
+  end
+
   before_save :confirm?
 
   def confirm?
@@ -78,12 +82,7 @@ class Backer < ActiveRecord::Base
   end
 
   def payment_service_fee
-    if payment_detail
-      payment_detail.service_tax_amount.to_f
-    else
-      build_payment_detail.update_from_service
-      payment_detail.service_tax_amount.to_f
-    end
+    (payment_detail || build_payment_detail.update_from_service).service_tax_amount.to_f
   end
 
   def moip_value
