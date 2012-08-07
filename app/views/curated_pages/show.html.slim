@@ -20,16 +20,16 @@ css:
       #index_header
         #index_header_text
           .curated_page_header
+            .curated_social
+              #twitter_share= render :partial => 'projects/twitter', :locals => { :text => @curated_page.name }
+              #facebook_share= render 'projects/facebook', width: '550px'
+            .titles
+              h1= @curated_page.name
+              h2== @curated_page.description_html              
             - unless @curated_page.video_url.present?
               = image_tag @curated_page.logo.thumb.url
             - else
               iframe(style="float:left;margin-right:10px" src="#{@curated_page.vimeo.embed_url}?title=0&amp;byline=0&amp;portrait=0&amp" width=375 height=203)
-            .titles
-              h1= @curated_page.name
-              h2== @curated_page.description_html
-              .curated_social
-                #twitter_share= render :partial => 'projects/twitter', :locals => { :text => @curated_page.name }
-                #facebook_share= render 'projects/facebook', width: '550px'
             .clearfix
         .clear
       - unless @curated_page.projects.empty?
@@ -37,4 +37,3 @@ css:
           - @curated_page.projects.order("finished").each do |project|
             = render :partial => 'projects/project', :locals => { :project => project,:project_curated_page => project.projects_curated_pages.where(:curated_page_id => @curated_page)}
         .clearfix
-    .clearfix
