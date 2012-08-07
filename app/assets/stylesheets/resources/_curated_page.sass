@@ -18,9 +18,17 @@
         margin: 0 0 30px 0
         .curated_page_header
           padding-bottom: 40px
-          img
+          .logo
             float: left
-            margin-right: 10px
+            margin-top: 30px
+            margin-bottom: 30px
+            img
+              width: 150px
+              height: 150px
+              display: block
+              float: left
+              overflow: hidden
+              +border-radius(112px)
         .curated_project
           margin-bottom: 20px
         .curated_project_list
@@ -53,17 +61,30 @@
               font-size: 41px
               padding: 5px 0
               text-transform: uppercase
-            h2
-              color: rgba($ultra_gryn, 0.7)
-              font-family: Arial
-              font-size: 15px
-              line-height: 130%
-              padding-bottom: 30px
-              padding-top: 10px
+              margin-top: 60px
+              float: left
+              margin-left: 20px
+          .description
+            padding-top: 20px
+            width: 614px
+            background:  #fff
+            border-top: dashed 1px #ccc
+            border-bottom: dashed 1px #ccc
+            float: right
+            p
+              color: #5D5D5D
+              float: left
+              font-family: "Dosis-Light"
+              font-size: 24px
+              line-height: 32px
+              margin-top: 20px
+              padding: 0 40px 20px
+              text-align: center
           .curated_social
             margin-top: 50px
             margin-left: 0px
             width: 345px
             float: left
+            margin-top: 150px
             #facebook_share
               width: 540px
