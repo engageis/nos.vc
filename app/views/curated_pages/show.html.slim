@@ -8,6 +8,12 @@
   meta property="og:site_name" content=t('site.name')
   meta property="og:description" content=strip_tags(@curated_page.description_html)
   meta property="fb:admins" content="567237711"
+
+css:
+  .logo_header {
+    background: url("#{@curated_page.banner_url.html_safe}") center center no-repeat;
+  }
+
 #page_content
   .container
     .curated_content
