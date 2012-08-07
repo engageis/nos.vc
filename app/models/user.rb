@@ -246,19 +246,19 @@ class User < ActiveRecord::Base
 
   protected
   def fix_twitter_user
-    self.twitter.gsub! /http(s)?:\/\/twitter.com\//, '' if self.twitter
+    self.twitter.gsub! /http(s)?:\/\/(www.)?twitter.com\//, '' if self.twitter
     self.twitter.gsub! /@/, '' if self.twitter
   end
 
   def fix_facebook_link
     unless self.facebook_link[0..7] =~ /http(s)?:\/\//
-      self.facebook_link = "https://#{self.facebook_link}"
+      self.facebook_link = "https://#{self.facebook_link}" if self.facebook_link.present?
     end
   end
 
   def fix_other_link
     unless self.other_link[0..7] =~ /http(s)?:\/\//
-      self.other_link = "http://#{self.other_link}"
+      self.other_link = "http://#{self.other_link}" if self.other_link.present?
     end
   end
 
