@@ -25,7 +25,7 @@ css:
               #facebook_share= render 'projects/facebook', width: '550px'
             .titles
               h1= @curated_page.name
-              h2== @curated_page.description_html              
+            .description== @curated_page.description_html              
             - unless @curated_page.video_url.present?
               = image_tag @curated_page.logo.thumb.url
             - else
