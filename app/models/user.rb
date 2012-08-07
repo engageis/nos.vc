@@ -78,7 +78,7 @@ class User < ActiveRecord::Base
     group("users.name, users.id, users.email")
   }
   #before_save :store_primary_user
-  before_save :fix_twitter_user
+  before_save :fix_twitter_user, :fix_facebook_link, :fix_other_link
 
   def self.find_for_database_authentication(warden_conditions)
     conditions = warden_conditions.dup
@@ -253,7 +253,20 @@ class User < ActiveRecord::Base
 
   protected
   def fix_twitter_user
+    self.twitter.gsub! /http(s)?:\/\/twitter.com\//, '' if self.twitter
     self.twitter.gsub! /@/, '' if self.twitter
+  end
+
+  def fix_facebook_link
+    unless self.facebook_link[0..7] =~ /http(s)?:\/\//
+      self.facebook_link = "https://#{self.facebook_link}"
+    end
+  end
+
+  def fix_other_link
+    unless self.other_link[0..7] =~ /http(s)?:\/\//
+      self.other_link = "http://#{self.other_link}"
+    end
   end
 
   def password_required?
