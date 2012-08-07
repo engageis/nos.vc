@@ -8,7 +8,7 @@ script type="text/template" id="backer_template"
   .backer
     .img
       | <% if(anonymous) { %>
-      img src="/images/user.png" class="backer_avatar"
+      img src="/assets/user.png" class="backer_avatar"
       | <% } else { %>
       a href="<%= user['url'] %>"
         img src="<%= user['image'] %>" class="backer_avatar"
