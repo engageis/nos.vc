@@ -110,6 +110,10 @@ class Project < ActiveRecord::Base
     backers.confirmed.count
   end
 
+  def leader_name
+     (leader.display_name if leader) || user.display_name
+  end
+
   def display_status
     if successful? and expired?
       'successful'
@@ -263,6 +267,7 @@ class Project < ActiveRecord::Base
       id: id,
       name: name,
       user: user,
+      leader_name: leader_name,
       category: category,
       image: display_image,
       headline: headline,
