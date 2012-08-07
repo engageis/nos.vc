@@ -2,6 +2,9 @@ require 'spec_helper'
 
 describe User do
   let(:user){ Factory(:user, :provider => "foo", :uid => "bar") }
+  let(:unfinished_project){ Factory(:project, :finished => false, :successful => true) }
+  let(:successful_project){ Factory(:project, :finished => true, :successful => true) }
+  let(:failed_project){ Factory(:project, :finished => true, :successful => false) }
 
   describe "associations" do
     it{ should have_many :backs }
@@ -9,6 +12,7 @@ describe User do
     it{ should have_many :notifications }
     it{ should have_many :secondary_users }
     it{ should have_many :updates }
+    it{ should have_one :backer_total }
   end
 
   describe "validations" do 
@@ -25,16 +29,109 @@ describe User do
     it{ should validate_uniqueness_of(:uid).scoped_to(:provider) }
   end
 
+  describe ".has_credits" do
+    subject{ User.has_credits }
+
+    context "when he has credits in the user table" do
+      before do
+        @u = Factory(:user, :credits => 100)
+        Factory(:backer, :project => successful_project, :user => @u)
+        Factory(:user, :credits => 0)
+        Factory(:backer, :project => successful_project)
+      end
+      it{ should == [@u] }
+    end
+
+    context "when he has credits in the backer_total" do
+      before do
+        b = Factory(:backer, :value => 100, :project => failed_project)
+        @u = b.user
+        b = Factory(:backer, :value => 100, :project => successful_project)
+      end
+      it{ should == [@u] }
+    end
+  end
+
+  describe ".by_key" do
+    before do
+      b = Factory(:backer)
+      @u = b.user
+      b.key = 'abc'
+      b.save!
+      b = Factory(:backer, :user => @u)
+      b.key = 'abcde'
+      b.save!
+      b = Factory(:backer)
+      b.key = 'def'
+      b.save!
+    end
+    subject{ User.by_key 'abc' }
+    it{ should == [@u] }
+  end
+
+  describe ".by_id" do
+    before do
+      @u = Factory(:user)
+      Factory(:user)
+    end
+    subject{ User.by_id @u.id }
+    it{ should == [@u] }
+  end
+
+  describe ".by_name" do
+    before do
+      @u = Factory(:user, :name => 'Foo Bar')
+      Factory(:user, :name => 'Baz Qux')
+    end
+    subject{ User.by_name 'Bar' }
+    it{ should == [@u] }
+  end
+
+  describe ".by_email" do
+    before do
+      @u = Factory(:user, :email => 'foo@bar.com')
+      Factory(:user, :email => 'another_email@bar.com')
+    end
+    subject{ User.by_email 'foo@bar' }
+    it{ should == [@u] }
+  end
+
   describe ".primary" do
     subject{ Factory(:user, :primary_user_id => user.id).primary }
     it{ should == user }
+  end
+
+  describe ".backer_totals" do
+    before do
+      Factory(:backer, :value => 100)
+      Factory(:backer, :value => 50)
+      user = Factory(:backer, :value => 25, :project => failed_project).user
+      user.credits = 10.0
+      user.save!
+      @u = Factory(:user)
+    end
+
+    context "when we call upon user without backs" do
+      subject{ User.where(:id => @u.id).backer_totals }
+      it{ should == {:users => 0.0, :backers => 0.0, :backed => 0.0, :credits => 0.0, :credits_table => 0.0} }
+    end
+
+    context "when we call without scopes" do
+      subject{ User.backer_totals }
+      it{ should == {:users => 3.0, :backers => 3.0, :backed => 175.0, :credits => 25.0, :credits_table => 10.0} }
+    end
+
+    context "when we call with scopes" do
+      subject{ User.has_credits.backer_totals }
+      it{ should == {:users => 1.0, :backers => 1.0, :backed => 25.0, :credits => 25.0, :credits_table => 10.0} }
+    end
   end
 
   describe ".create_with_omniauth" do
     let(:auth) do {
         'provider' => "twitter",
         'uid' => "foobar",
-        'user_info' => {
+        'info' => {
           'name' => "Foo bar",
           'email' => 'another_email@anotherdomain.com',
           'nickname' => "foobar",
@@ -46,10 +143,10 @@ describe User do
     subject{ User.create_with_omniauth(auth) }
     its(:provider){ should == auth['provider'] }
     its(:uid){ should == auth['uid'] }
-    its(:name){ should == auth['user_info']['name'] }
-    its(:nickname){ should == auth['user_info']['nickname'] }
-    its(:bio){ should == auth['user_info']['description'][0..139] }
-    its(:image_url){ should == auth['user_info']['image'] }
+    its(:name){ should == auth['info']['name'] }
+    its(:nickname){ should == auth['info']['nickname'] }
+    its(:bio){ should == auth['info']['description'][0..139] }
+    its(:image_url){ should == auth['info']['image'] }
   end
 
   describe ".find_with_omniauth" do
@@ -71,16 +168,19 @@ describe User do
     its(:twitter){ should == 'dbiazus' }
   end
 
-  describe "#display_nickname" do
-    context "when user don't have the nickname" do
-      subject{ create(:user,:name=>'Lorem Ipsum',:nickname=>'profile.php?id=1234').display_nickname }
-      it{ should == 'Lorem Ipsum' }
+  describe "#calculate_credits" do
+    before do
+      @u = Factory(:user)
+      Factory(:backer, :credits => false, :value => 100, :user_id => @u.id, :project => successful_project)
+      Factory(:backer, :credits => false, :value => 100, :user_id => @u.id, :project => unfinished_project)
+      Factory(:backer, :credits => false, :value => 200, :user_id => @u.id, :project => failed_project)
+      Factory(:backer, :credits => true, :value => 100, :user_id => @u.id, :project => successful_project)
+      Factory(:backer, :credits => true, :value => 50, :user_id => @u.id, :project => unfinished_project)
+      Factory(:backer, :credits => true, :value => 100, :user_id => @u.id, :project => failed_project)
+      Factory(:backer, :credits => false, :requested_refund => true, :value => 200, :user_id => @u.id, :project => failed_project)
     end
-
-    context 'user with nickname' do
-      subject{ create(:user,:name=>'Lorem Ipsum',:nickname=>'lorem.ipsum').display_nickname }
-      it{ should == 'lorem.ipsum' }
-    end
+    subject{ @u.calculate_credits }
+    it{ should == 50.0 }
   end
 
   describe "#primary" do
@@ -161,39 +261,40 @@ describe User do
     end
   end
 
-  it "should merge into another account, taking the credits, backs, projects and notifications with it" do
-    old_user = Factory(:user, :credits => 50)
-    new_user = Factory(:user, :credits => 20)
-    backed_project = Factory(:project)
-    old_user_back = backed_project.backers.create!(:user => old_user, :value => 10)
-    new_user_back = backed_project.backers.create!(:user => new_user, :value => 10)
-    old_user_project = Factory(:project, :user => old_user)
-    new_user_project = Factory(:project, :user => new_user)
-    old_user_notification = old_user.notifications.create!(:text => "Foo bar")
-    new_user_notification = new_user.notifications.create!(:text => "Foo bar")
+  describe "#merge_into!" do
+    it "should merge into another account, taking the credits, backs, projects and notifications with it" do
+      old_user = Factory(:user, :credits => 50)
+      new_user = Factory(:user, :credits => 20)
+      backed_project = Factory(:project)
+      old_user_back = backed_project.backers.create!(:user => old_user, :value => 10)
+      new_user_back = backed_project.backers.create!(:user => new_user, :value => 10)
+      old_user_project = Factory(:project, :user => old_user)
+      new_user_project = Factory(:project, :user => new_user)
+      old_user_notification = old_user.notifications.create!(:text => "Foo bar")
+      new_user_notification = new_user.notifications.create!(:text => "Foo bar")
 
-    old_user.credits.should == 50
-    new_user.credits.should == 20
-    old_user.backs.should == [old_user_back]
-    new_user.backs.should == [new_user_back]
-    old_user.projects.should == [old_user_project]
-    new_user.projects.should == [new_user_project]
-    old_user.notifications.should == [old_user_notification]
-    new_user.notifications.should == [new_user_notification]
+      old_user.credits.should == 50
+      new_user.credits.should == 20
+      old_user.backs.should == [old_user_back]
+      new_user.backs.should == [new_user_back]
+      old_user.projects.should == [old_user_project]
+      new_user.projects.should == [new_user_project]
+      old_user.notifications.should == [old_user_notification]
+      new_user.notifications.should == [new_user_notification]
 
-    old_user.merge_into!(new_user)
-    old_user.reload
-    new_user.reload
+      old_user.merge_into!(new_user)
+      old_user.reload
+      new_user.reload
 
-    old_user.primary.should == new_user
-    old_user.credits.should == 0
-    new_user.credits.should == 70
-    old_user.backs.should == []
-    new_user.backs.order(:created_at).should == [old_user_back, new_user_back]
-    old_user.projects.should == []
-    new_user.projects.order(:created_at).should == [old_user_project, new_user_project]
-    old_user.notifications.should == []
-    new_user.notifications.order(:created_at).should == [old_user_notification, new_user_notification]
+      old_user.primary.should == new_user
+      old_user.credits.should == 0
+      new_user.credits.should == 70
+      old_user.backs.should == []
+      new_user.backs.order(:created_at).should == [old_user_back, new_user_back]
+      old_user.projects.should == []
+      new_user.projects.order(:created_at).should == [old_user_project, new_user_project]
+      old_user.notifications.should == []
+      new_user.notifications.order(:created_at).should == [old_user_notification, new_user_notification]
+    end
   end
-
 end

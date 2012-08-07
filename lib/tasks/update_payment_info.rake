@@ -20,4 +20,24 @@ namespace :payment do
     end
     puts "OK!"
   end
+
+  desc 'look with moip what the backer already have refunded'
+  task :mark_refunded => :environment do
+    Backer.where(:payment_method => 'MoIP', :confirmed => true, :refunded => false, :requested_refund => true).where('payment_token is not null').each do |backer|
+      response = MoIP::Client.query(backer.payment_token)
+      puts "pesquisando sobre --> #{backer.inspect}"
+      begin
+        if response['Pagamento'].present?
+          if response["Pagamento"]["Status"]["Tipo"].to_i == 7 || response["Pagamento"]["Status"]["Tipo"].to_i == 9
+            puts "preparando para extornar o apoio ---> #{backer.inspect}"
+            backer.update_attribute :refunded, true
+            backer.update_attribute :requested_refund, true
+            backer.user.update_credits
+          end
+        end
+      rescue
+        puts "error on process response for --> #{backer.inspect}"
+      end
+    end
+  end
 end

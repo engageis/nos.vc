@@ -26,8 +26,8 @@ class CreateSites < ActiveRecord::Migration
       t.blog :not_blank => true
     end
     execute "INSERT INTO sites (name, title, path, host, gender, email, twitter, facebook, blog, created_at, updated_at) VALUES
-    ('Catarse', 'A primeira plataforma de financiamento colaborativo de projetos criativos do Brasil', 'catarse', 'catarse.me', 'male', 'contato@catarse.me', 'Catarse_', 'http://www.facebook.com/Catarse.me', 'http://blog.catarse.me', now(), now()),
-    ('Multidão', 'Produção Cultural Colaborativa', 'multidao', 'multidao.localhost', 'female', 'contato@multidao.art.br', 'multidao_art', 'http://www.facebook.com/pages/Multidaoart/139326962792941', 'http://blog.multidao.art.br', now(), now())
+    ('Catarse', 'A primeira plataforma de financiamento colaborativo de projetos criativos do Brasil', 'catarse', 'catarse.me', 'male', 'contato@catarse.me', 'Catarse_', 'http://www.facebook.com/Catarse.me', 'http://blog.catarse.me', current_timestamp, current_timestamp),
+    ('Multidão', 'Produção Cultural Colaborativa', 'multidao', 'multidao.localhost', 'female', 'contato@multidao.art.br', 'multidao_art', 'http://www.facebook.com/pages/Multidaoart/139326962792941', 'http://blog.multidao.art.br', current_timestamp, current_timestamp)
     "
   end
 
