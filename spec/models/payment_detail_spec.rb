@@ -4,6 +4,9 @@ describe PaymentDetail do
   before do
     @project = create(:project)
     @backer = create(:backer, :project => @project)
+    Configuration.create!(name: "paypal_username", value: "usertest_api1.teste.com")
+    Configuration.create!(name: "paypal_password", value: "HVN4PQBGZMHKFVGW")
+    Configuration.create!(name: "paypal_signature", value: "AeL-u-Ox.N6Jennvu1G3BcdiTJxQAWdQcjdpLTB9ZaP0-Xuf-U0EQtnS")
   end
 
   subject {
@@ -25,21 +28,44 @@ describe PaymentDetail do
         @backer.reload
       end
 
+      its(:class){ should == PaymentDetail }
+
       it "with invalid response" do
-        PaypalApi.stubs(:transaction_details).returns({})
+        PaymentGateway.any_instance.stubs(:details_for).returns({})
         subject.expects(:process_paypal_response).never
         subject.update_from_service
       end
 
       context "with valid response" do
+        let(:time){ Time.now }
         before do
-          HTTParty.stubs(:get).returns(FakeResponse.new)
+          fake_response = mock()
+          fake_response.stubs(:params).returns({
+            'tax_total' => '5.72',
+            'order_total' => '6.66',
+            'handling_total' => '1.61',
+            'timestamp' => time.to_s,
+            'payer' => 'foo@bar.com'
+          })
+          fake_response.stubs(:address).returns({
+            'name' => 'Foo Bar',
+            'city' => 'Foo City',
+            'state' => 'Foo State'
+          })
+          PaymentGateway.any_instance.stubs(:details_for).returns(fake_response)
+          subject.update_from_service
         end
 
-        it "should update service_tax_amount" do
-          subject.update_from_service
-          subject.service_tax_amount.should == 5.72
-        end
+        it{ should be_persisted }
+        its(:payer_email){ should == 'foo@bar.com' }
+        its(:net_amount){ should == 6.66 }
+        its(:total_amount){ should == 1.61 }
+        its(:service_tax_amount){ should == 5.72 }
+        its(:payment_date){ should == time.to_date.to_time }
+
+        its(:payer_name){ should == 'Foo Bar' }
+        its(:city){ should == 'Foo City' }
+        its(:uf){ should == 'Foo State' }
       end
     end
 

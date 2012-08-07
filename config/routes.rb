@@ -12,6 +12,9 @@ Catarse::Application.routes.draw do
 
   ActiveAdmin.routes(self)
 
+  mount CatarsePaypalExpress::Engine => "/", :as => "catarse_paypal_express"
+  mount CatarseMoip::Engine => "/", :as => "catarse_moip"
+
   filter :locale
 
   root to: 'projects#index'
@@ -20,6 +23,8 @@ Catarse::Application.routes.draw do
   match "/reports/location/:project_id/backers" => "reports#location_by_project", :as => :backers_location_report
   match "/reports/users_most_backed" => "reports#users_most_backed", :as => :most_backed_report
   match "/reports/all_confirmed_backers" => "reports#all_confirmed_backers", :as => :all_confirmed_backers_report
+  match "/reports/all_projects_owners" => "reports#all_projects_owner", :as => :all_projects_owner_report
+  match "/reports/all_emails" => "reports#all_emails_to_newsletter", :as => :all_emails_to_newsletter
 
   # Static Pages
   match '/sitemap' => "static#sitemap", :as => :sitemap
@@ -101,6 +106,12 @@ Catarse::Application.routes.draw do
   match "/pages/:permalink" => "curated_pages#show", as: :curated_page
 
   match "/beta" => redirect("http://nos.vc")
+  namespace :adm do
+    resources :backers
+    resources :users
+  end
+
+  resources :tests
 
   match "/:permalink" => "projects#show", as: :project_by_slug
 

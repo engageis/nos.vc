@@ -7,6 +7,7 @@ describe Project do
     it{ should have_many :projects_curated_pages }
     it{ should have_many :curated_pages }
     it{ should have_many :backers }
+    it{ should have_one  :project_total }
     it{ should have_many :rewards }
     it{ should have_many :updates }
     it{ should have_many :notifications }
@@ -35,6 +36,84 @@ describe Project do
     end
   end
 
+  describe ".recommended_for_home" do
+    subject{ Project.recommended_for_home }
+
+    before do
+      Project.expects(:includes).with(:user, :category, :project_total).returns(Project)
+      Project.expects(:recommended).returns(Project)
+      Project.expects(:visible).returns(Project)
+      Project.expects(:not_expired).returns(Project)
+      Project.expects(:order).with('random()').returns(Project)
+      Project.expects(:limit).with(4)
+    end
+
+    it{ should be_empty }
+  end
+
+  describe ".expiring_for_home" do
+    subject{ Project.expiring_for_home(1) }
+
+    before do
+      Project.expects(:includes).with(:user, :category, :project_total).returns(Project)
+      Project.expects(:visible).returns(Project)
+      Project.expects(:expiring).returns(Project)
+      Project.expects(:order).with('date(expires_at), random()').returns(Project)
+      Project.expects(:where).with("coalesce(id NOT IN (?), true)", 1).returns(Project)
+      Project.expects(:limit).with(3)
+    end
+
+    it{ should be_empty }
+  end
+
+  describe ".recent_for_home" do
+    subject{ Project.recent_for_home(1) }
+
+    before do
+      Project.expects(:includes).with(:user, :category, :project_total).returns(Project)
+      Project.expects(:visible).returns(Project)
+      Project.expects(:recent).returns(Project)
+      Project.expects(:not_expiring).returns(Project)
+      Project.expects(:order).with('date(created_at) DESC, random()').returns(Project)
+      Project.expects(:where).with("coalesce(id NOT IN (?), true)", 1).returns(Project)
+      Project.expects(:limit).with(3)
+    end
+
+    it{ should be_empty }
+  end
+
+  describe ".not_expired" do
+    before do
+      @p = Factory(:project, :finished => false, :expires_at => (Date.today + 1.day))
+      Factory(:project, :finished => false, :expires_at => (Date.today - 1.day))
+      Factory(:project, :finished => true, :expires_at => (Date.today + 1.day))
+    end
+    subject{ Project.not_expired }
+    it{ should == [@p] }
+  end
+
+  describe ".expiring" do
+    before do
+      @p = Factory(:project, :finished => false, :expires_at => (Date.today + 14.day))
+      Factory(:project, :finished => false, :expires_at => (Date.today - 1.day))
+      Factory(:project, :finished => true, :expires_at => (Date.today + 1.day))
+      Factory(:project, :finished => false, :expires_at => (Date.today + 15.day))
+    end
+    subject{ Project.expiring }
+    it{ should == [@p] }
+  end
+
+  describe ".not_expiring" do
+    before do
+      @p = Factory(:project, :finished => false, :expires_at => (Date.today + 15.day))
+      Factory(:project, :finished => false, :expires_at => (Date.today - 1.day))
+      Factory(:project, :finished => false, :expires_at => (Date.today - 1.day))
+      Factory(:project, :finished => true, :expires_at => (Date.today + 1.day))
+    end
+    subject{ Project.not_expiring }
+    it{ should == [@p] }
+  end
+
   describe ".recent" do
     before do
       @p = Factory(:project, :created_at => (Date.today - 14.days))
@@ -44,21 +123,59 @@ describe Project do
     it{ should == [@p] }
   end
 
+  describe "#pledged" do
+    let(:project){ Project.new }
+    subject{ project.pledged }
+    context "when project_total is nil" do
+      before do
+        project.stubs(:project_total).returns(nil)
+      end
+      it{ should == 0 }
+    end
+    context "when project_total exists" do
+      before do
+        project_total = mock()
+        project_total.stubs(:pledged).returns(10.0)
+        project.stubs(:project_total).returns(project_total)
+      end
+      it{ should == 10.0 }
+    end
+  end
+
+  describe "#total_backers" do
+    let(:project){ Project.new }
+    subject{ project.total_backers }
+    context "when project_total is nil" do
+      before do
+        project.stubs(:project_total).returns(nil)
+      end
+      it{ should == 0 }
+    end
+    context "when project_total exists" do
+      before do
+        project_total = mock()
+        project_total.stubs(:total_backers).returns(1)
+        project.stubs(:project_total).returns(project_total)
+      end
+      it{ should == 1 }
+    end
+  end
+
   describe "#display_status" do
     let(:project){ Factory(:project) }
     subject{ project.display_status }
     context "when successful and expired" do
-      before do 
-        project.stubs(:successful?).returns(true) 
-        project.stubs(:expired?).returns(true) 
+      before do
+        project.stubs(:successful?).returns(true)
+        project.stubs(:expired?).returns(true)
       end
       it{ should == 'successful' }
     end
 
     context "when successful and in_time" do
-      before do 
-        project.stubs(:successful?).returns(true) 
-        project.stubs(:in_time?).returns(true) 
+      before do
+        project.stubs(:successful?).returns(true)
+        project.stubs(:in_time?).returns(true)
       end
       it{ should == 'successful' }
     end
@@ -104,37 +221,60 @@ describe Project do
 
   end
 
+  describe "#successful?" do
+    let(:project){ Project.new :goal => 1 }
+    subject{ project.successful? }
+    context "when pledged is inferior to goal" do
+      before{ project.stubs(:pledged).returns(2999.99) }
+      it{ should be_false }
+    end
+    context "when pledged is equal to goal" do
+      before{ project.stubs(:pledged).returns(3000) }
+      it{ should be_true }
+    end
+    context "when pledged is equal to goal" do
+      before{ project.stubs(:pledged).returns(3001) }
+      it{ should be_true }
+    end
+  end
+
+  describe "#expired?" do
+    subject{ project.expired? }
+    context "when expires_at is in the future" do
+      let(:project){ Project.new :expires_at => 2.seconds.from_now }
+      it{ should be_false }
+    end
+
+    context "when expires_at is in the past" do
+      let(:project){ Project.new :expires_at => 2.seconds.ago }
+      it{ should be_true }
+    end
+
+    context "when project is finished" do
+      let(:project){ Project.new :expires_at => 2.seconds.from_now, :finished => true }
+      it{ should be_true }
+    end
+  end
+
+  describe "#in_time?" do
+    subject{ project.in_time? }
+    context "when expires_at is in the future" do
+      let(:project){ Project.new :expires_at => 2.seconds.from_now }
+      it{ should be_true }
+    end
+
+    context "when expires_at is in the past" do
+      let(:project){ Project.new :expires_at => 2.seconds.ago }
+      it{ should be_false }
+    end
+
+    context "when project is finished" do
+      let(:project){ Project.new :expires_at => 2.seconds.from_now, :finished => true }
+      it{ should be_false }
+    end
+  end
+
   describe "status changes" do
-
-    it "should be successful if missing_participants <= 0" do
-      p = Factory.build(:project)
-      p.backers.destroy_all
-      p.goal = 1
-      p.successful?.should be_false
-      Factory(:backer, :project => p, :value => 3000.00)
-      p.successful?.should be_true
-      p.backers.destroy_all
-      Factory(:backer, :project => p, :value => 3000.01)
-      Factory(:backer, :project => p, :value => 3000.02)
-      p.successful?.should be_true
-    end
-
-    it "should be expired if expires_at is passed" do
-      p = Factory.build(:project)
-      p.expires_at = 2.seconds.from_now
-      p.expired?.should be_false
-      p.expires_at = 2.seconds.ago
-      p.expired?.should be_true
-    end
-
-    it "should be in time if expires_at is not passed" do
-      p = Factory.build(:project)
-      p.expires_at = 2.seconds.ago
-      p.in_time?.should be_false
-      p.expires_at = 2.seconds.from_now
-      p.in_time?.should be_true
-    end
-
     it "should be waiting confirmation until 3 weekdays after the deadline unless it is already successful" do
       p = Factory(:project, :goal => 1)
       time = Time.local 2011, 03, 04
@@ -150,7 +290,7 @@ describe Project do
       p.waiting_confirmation?.should be_true
       p.expires_at = 2.weekdays_ago
       p.waiting_confirmation?.should be_true
-      Factory(:backer, :project => p, :value => 100, :confirmed => true)
+      p.stubs(:pledged).returns(100)
       p.successful?.should be_true
       p.expires_at = 3.weekdays_ago + 1.minute
       p.waiting_confirmation?.should be_false
@@ -159,9 +299,8 @@ describe Project do
     end
 
   end
-  
+
   describe "#finish!" do
-    
     it "should generate credits for users when project finishes and didn't succeed" do
       user = Factory(:user)
       project = Factory(:project, can_finish: true, finished: false, goal: 1000, expires_at: 1.day.ago)
@@ -187,7 +326,7 @@ describe Project do
       project.successful?.should be_true
       project.successful.should be_true
     end
-    
+
     it "should store successful = false when finished and successful? is false" do
       project = Factory(:project, can_finish: true, finished: false, goal: 1000, expires_at: 1.day.ago)
       backer = Factory(:backer, project: project, value: 999)
@@ -199,9 +338,9 @@ describe Project do
       project.successful?.should be_false
       project.successful.should be_false
     end
-    
+
   end
-  
+
   describe "display methods" do
 
     it "should have a display image" do
@@ -260,7 +399,7 @@ describe Project do
     end
 
   end
-  
+
   describe "#curated_pages" do
 
     it "should be able to be in more than one curated page" do
@@ -272,38 +411,4 @@ describe Project do
     end
 
   end
-
-  describe "scopes" do
-    
-    it "should have a special order for exploring projects" do
-      
-      projects = [
-        # First come active projects, ordered by expires_at ASC
-        Factory(:project, expires_at: 2.days.from_now),
-        Factory(:project, expires_at: 3.days.from_now),
-        Factory(:project, expires_at: 4.days.from_now),
-        Factory(:project, expires_at: 5.days.from_now),
-        # Then come successful projects, ordered by expires_at DESC
-        Factory(:project, expires_at: 2.days.ago, finished: true, successful: true),
-        Factory(:project, expires_at: 3.days.ago, finished: true, successful: true),
-        Factory(:project, expires_at: 4.days.ago, finished: true, successful: true),
-        Factory(:project, expires_at: 5.days.ago, finished: true, successful: true),
-        # Then come unsuccesful projects, ordered by expires_at DESC
-        Factory(:project, expires_at: 2.days.ago, finished: true, successful: false),
-        Factory(:project, expires_at: 3.days.ago, finished: true, successful: false),
-        Factory(:project, expires_at: 4.days.ago, finished: true, successful: false),
-        Factory(:project, expires_at: 5.days.ago, finished: true, successful: false),
-        # Then come expired but not finished projects, ordered by expires_at DESC
-        Factory(:project, expires_at: 2.days.ago, finished: false, successful: false),
-        Factory(:project, expires_at: 3.days.ago, finished: false, successful: false),
-        Factory(:project, expires_at: 4.days.ago, finished: false, successful: false),
-        Factory(:project, expires_at: 5.days.ago, finished: false, successful: false)
-      ]
-      
-      Project.sort_by_explore_asc.all.map(&:id).should == projects.map(&:id)
-      
-    end
-    
-  end
-  
 end

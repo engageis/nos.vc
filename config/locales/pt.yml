@@ -368,6 +368,9 @@ pt:
       successful: "Encontro confirmado"
       waiting_confirmation: "Aguardando"
   projects:
+    recommended_header:
+      sugest_for_you: "sugerido para você"
+      highlight_project: "projeto em destaque"
     box:
       by: por
     admin_fields:
@@ -393,7 +396,7 @@ pt:
         moip_error: "Ooops. Ocorreu um erro ao enviar seu pagamento para o MoIP. Por favor, tente novamente."
         no_credits: "Você não possui créditos suficientes para fazer a inscrição."
         paypal_cancel: "Seu pagamento no PayPal foi cancelado. Por favor, tente novamente."
-        paypal_description: "Inscrição no encontro"
+        paypal_description: "Inscrição no encontro %{project_name} no valor de %{value}"
         paypal_error: "Ooops. Ocorreu um erro ao enviar seu pagamento para o PayPal. Por favor, tente novamente."
         success: "Sua inscrição foi realizada com sucesso. Muito obrigado!"
       new:
@@ -667,6 +670,7 @@ pt:
     statements:
       title: "Recomende, qualifique, deixe seu depoimento aqui:"
     show:
+      attention: "Atenção"
       tabs:
         me_backed_projects: "Me inscrevi"
         me_created_projects: "Criei"
@@ -679,6 +683,10 @@ pt:
       credits: "disponíveis em créditos"
       no_email: "ainda não preencheu seu email"
       title: "Dados de %{name}"
+      user_social:
+        email: "Me envie um email"
+        facebook: "Perfil no facebook"
+        twitter: "Perfil no twitter"
     backs:
       anonymous: "Inscrição anônima."
       no_backs: "%{name} ainda não se inscreveu em nenhum encontro. Ainda."
@@ -724,3 +732,40 @@ pt:
       weblink: "Ver na web"
       whitelist: "Adicionar contato"
       whitelist_long: "Adicione nosso email a seus contatos"
+  admin:
+    users:
+      title: "Gerenciamento de apoiadores"
+      menu: "Apoiadores"
+      credits: "Créditos"
+      credits_view: "Créditos calculados"
+      id: Id
+      key: Chave
+      submit: Pesquisar
+      total_backed: arrecadados
+      total_backers: apoiadores
+      total_backs: apoios
+      total_users: usuários
+      total_credits: créditos
+      total_credits_view: créditos calculados
+      user: Usuário
+      value: Valor
+    backers:
+      title: "Gerenciamento de apoios"
+      menu: "Apoios"
+      anonymous: Anônimo?
+      confirmed: Confirmado?
+      credits: "Usou créditos?"
+      id: Id
+      key: Chave
+      no_backers: "Nenhum apoiador encontrado."
+      project: Projeto
+      refunded: "Estorno realizado?"
+      requested_refund: "Solicitou estorno?"
+      reward: Recompensa
+      submit: Pesquisar
+      total_backed: arrecadados
+      total_backers: apoiadores
+      total_backs: apoios
+      total_users: usuários
+      user: Usuário
+      value: Valor

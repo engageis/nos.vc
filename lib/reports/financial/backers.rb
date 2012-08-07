@@ -15,6 +15,7 @@ module Reports
               'Nome do apoiador',
               'Valor do apoio',
               'Recompensa selecionada (valor)',
+              'Recompensa selecionada (nome)',
               'Serviço de pagamento',
               'Forma de pagamento',
               'Taxa do meio de pagamento',
@@ -31,7 +32,9 @@ module Reports
               'Bairro',
               'Cidade',
               'Estado',
-              'CEP'
+              'CEP',
+              'Solicitou estorno',
+              'Estorno Realizado'
             ]
 
             @backers.each do |backer|
@@ -39,6 +42,7 @@ module Reports
                 backer.user.name,
                 backer.value,
                 (backer.reward.minimum_value if backer.reward),
+                (backer.reward.description if backer.reward),
                 backer.payment_method,
                 (backer.payment_detail.payment_method if backer.payment_detail),
                 (backer.payment_service_fee),
@@ -55,7 +59,9 @@ module Reports
                 backer.user.address_neighbourhood,
                 backer.user.address_city,
                 backer.user.address_state,
-                backer.user.address_zip_code
+                backer.user.address_zip_code,
+                backer.requested_refund,
+                backer.refunded
               ]
             end
           end

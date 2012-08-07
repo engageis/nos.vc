@@ -3,20 +3,19 @@ class ApplicationController < ActionController::Base
 
   protect_from_forgery
 
-  helper_method :current_user, :replace_locale, :align_logo_when_home, :is_homepage?, :namespace,
+  helper_method :current_user, :replace_locale, :namespace,
                 :fb_admins, :has_institutional_videos?, :institutional_video
   before_filter :set_locale
   before_filter :detect_locale
 
   # TODO: Change this way to get the opendata
   before_filter do
+    statistics = Statistics.first
     @total_backers = User.backers.count
-    @total_backs = Backer.confirmed.count
-    #@total_backed = Backer.confirmed.sum(:value)
-    @total_users = User.primary.count
-    #@total_projects = Project.visible.count
-    @total_projects_success = Project.successful.count
-    @total_projects_online = Project.visible.not_expired.count
+    @total_backs = statistics.total_backs
+    @total_users = statistics.total_users
+    @total_projects_success = statistics.total_projects_success
+    @total_projects_online = statistics.total_projects_online
     @fb_admins = [567237711]
   end
 
@@ -27,9 +26,7 @@ class ApplicationController < ActionController::Base
     end
   end
 
-
   private
-
   def has_institutional_videos?
     InstitutionalVideo.visibles.present?
   end
@@ -55,14 +52,6 @@ class ApplicationController < ActionController::Base
     names = self.class.to_s.split('::')
     return "null" if names.length < 2
     names[0..(names.length-2)].map(&:downcase).join('_')
-  end
-
-  def is_homepage?
-    controller_name == 'projects' && action_name == 'index'
-  end
-
-  def align_logo_when_home
-    'home_logo' if is_homepage?
   end
 
   def set_locale

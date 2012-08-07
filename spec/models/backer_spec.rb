@@ -105,33 +105,24 @@ describe Backer do
   end
 
   describe "#payment_service_fee" do
-    before(:each) do
-      @project = create(:project)
-    end
-    context "when payment is MoIP" do
+    let(:backer){ Backer.new }
+    subject{ backer.payment_service_fee }
+    context "when there is a payment detail" do
       before(:each) do
-        @backer = create(:backer, :project => @project, :payment_method => 'MoIP')
-        create(:payment_detail, :backer => @backer)
-        @backer.reload
+        backer.build_payment_detail
+        backer.payment_detail.stubs(:service_tax_amount).returns('5.75')
       end
-
-      it "get moip tax" do
-        @backer.payment_service_fee.should == 19.37
-      end
+      it{ should == 5.75 }
     end
 
-    context "when payment is PayPal" do
+    context "when there is not a payment detail" do
       before(:each) do
-        @backer = create(:backer, :project => @project, :payment_method => 'PayPal')
-        @backer.reload
-        HTTParty.stubs(:get).returns(FakeResponse.new)
+        payment_detail = mock()
+        payment_detail.expects(:update_from_service).returns(payment_detail)
+        backer.expects(:build_payment_detail).returns(payment_detail)
+        payment_detail.stubs(:service_tax_amount).returns('5.75')
       end
-
-      it "get paypal tax" do
-        @backer.payment_method = 'PayPal'
-        @backer.save!
-        @backer.payment_service_fee.should == 5.72
-      end
+      it{ should == 5.75 }
     end
   end
 

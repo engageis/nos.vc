@@ -16,6 +16,7 @@ class Project < ActiveRecord::Base
   has_many :rewards, :dependent => :destroy
   has_many :updates, :dependent => :destroy
   has_many :notifications, :dependent => :destroy
+  has_one :project_total
   has_and_belongs_to_many :managers, :join_table => "projects_managers", :class_name => 'User'
   accepts_nested_attributes_for :rewards
 
@@ -35,22 +36,29 @@ class Project < ActiveRecord::Base
   end
 
   scope :visible, where(visible: true)
-  scope :home_page, where(home_page: true)
-  scope :not_home_page, where(home_page: false)
   scope :recommended, where(recommended: true)
-  scope :not_recommended, where(recommended: false)
-  scope :with_homepage_comment, where("home_page_comment IS NOT NULL AND home_page_comment <> ''")
-  scope :pending, where("visible = false AND rejected = false")
   scope :expired, where("finished OR expires_at < current_timestamp")
   scope :not_expired, where("finished = false AND expires_at >= current_timestamp")
-  scope :expiring, where("finished = false AND expires_at >= current_timestamp AND expires_at < (current_timestamp + interval '2 weeks')")
-  scope :not_expiring, where("NOT (finished = false AND expires_at >= current_timestamp AND expires_at < (current_timestamp + interval '2 weeks'))")
+  scope :expiring, not_expired.where("expires_at < (current_timestamp + interval '2 weeks')")
+  scope :not_expiring, not_expired.where("NOT (expires_at < (current_timestamp + interval '2 weeks'))")
   scope :recent, where("current_timestamp - projects.created_at <= '15 days'::interval")
-  scope :last_week, where("projects.created_at > (current_timestamp - interval '1 week')")
   scope :successful, where(successful: true)
-  scope :sort_by_explore_asc, order('(expires_at < current_timestamp) ASC, successful DESC, finished DESC, abs(EXTRACT(epoch FROM current_timestamp - expires_at)), created_at DESC')
+  scope :recommended_for_home, ->{ 
+    includes(:user, :category, :project_total).
+    recommended.
+    visible.
+    not_expired.
+    order('random()').
+    limit(4)
+  }
+  scope :expiring_for_home, ->(exclude_ids){ 
+    includes(:user, :category, :project_total).where("coalesce(id NOT IN (?), true)", exclude_ids).visible.expiring.order('date(expires_at), random()').limit(3)
+  }
+  scope :recent_for_home, ->(exclude_ids){ 
+    includes(:user, :category, :project_total).where("coalesce(id NOT IN (?), true)", exclude_ids).visible.recent.not_expiring.order('date(created_at) DESC, random()').limit(3)
+  }
 
-  search_methods :visible, :home_page, :not_home_page, :recommended, :not_recommended, :expired, :not_expired, :expiring, :not_expiring, :recent, :successful
+  search_methods :visible, :recommended, :expired, :not_expired, :expiring, :not_expiring, :recent, :successful
 
   validates_presence_of :name, :user, :category, :about, :headline, :goal, :expires_at, :video_url, :when_short, :when_long, :location
   validates_length_of :headline, :maximum => 140
@@ -86,7 +94,7 @@ class Project < ActiveRecord::Base
   end
 
   def pledged
-    backers.confirmed.sum(:value)
+    project_total ? project_total.pledged : 0.0
   end
 
   def participants
@@ -107,7 +115,7 @@ class Project < ActiveRecord::Base
   end
 
   def total_backers
-    backers.confirmed.count
+    project_total ? project_total.total_backers : 0
   end
 
   def leader_name
@@ -134,8 +142,7 @@ class Project < ActiveRecord::Base
   end
 
   def expired?
-    return true if finished
-    expires_at < Time.now
+    finished || expires_at < Time.now
   end
 
   def waiting_confirmation?
@@ -144,8 +151,7 @@ class Project < ActiveRecord::Base
   end
 
   def in_time?
-    return false if finished
-    expires_at >= Time.now
+    !expired?
   end
 
   def progress

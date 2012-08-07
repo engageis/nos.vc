@@ -23,6 +23,7 @@
         = semantic_form_for current_user, :url => checkout_project_backer_path(@backer.project, @backer), :html => { :id => 'review_form', :class => "form-horizontal #{('dont_align' if @backer.credits)}" } do |form|
           = hidden_field_tag 'backer_id', @backer.id
           = hidden_field_tag 'backer_credits', @backer.credits
+          = hidden_field_tag 'payment_method_url', nil
           - unless @backer.credits
             = form.inputs do
               = form.input :full_name, :required => true, :as => :string
@@ -48,15 +49,8 @@
             - if @backer.value > 0
               .title
               .choose_payment
-                /.cc
-                  /= link_to pay_paypal_path(@backer), :method => :get do
-                    /= image_tag 'catarse/cc_icon.png'
-                    /span= t('.choose_credit_card')
-                  /.clearfix
-                /.or
-                  /span= t('or')
                 .moip
-                  = link_to t('.confirm_payment'), checkout_project_backer_path(@backer.project, @backer), :method => :put
+                  = link_to t('.confirm_payment'),  'javascript:void(0);', :"data-payment_method_url" => catarse_moip.checkout_payment_moip_path(@backer), :method => :get, :class => 'payment_link'
                   span= t('.confirm_payment_hind')
             - elsif @backer.value == 0
               .free
@@ -65,6 +59,5 @@
                 .clearfix
           .payment_disabled
             .bootstrap-twitter
-                    = submit_tag t('.submit'), :disabled => true, :class => 'btn btn-large'
-
+              = submit_tag t('.submit'), :disabled => true, :class => 'btn btn-large'
     .clearfix
