@@ -45,3 +45,12 @@
               .bootstrap-twitter
                 = form.submit t('.submit'), :disabled => true, :class => 'btn btn-primary btn-large', :id => "backer_submit"
                 span = t('projects.backers.new.and_make_it_happen')
+        .cards
+          h3 = 'Através do moip aceitamos:'
+          ul
+            li.boleto
+              p = 'Boleto'
+            li.cartao
+              p = 'Cartões em até 6x. 1,99%(a.m)'
+            li.transferencia
+              p = 'Transferência'
