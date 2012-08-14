@@ -732,6 +732,14 @@ pt:
       weblink: "Ver na web"
       whitelist: "Adicionar contato"
       whitelist_long: "Adicione nosso email a seus contatos"
+  notifications:
+    backers:
+      to_backer:
+        subject: "Obrigado! Seu apoio para %{project} foi confirmado!"
+        text: "Sucesso! <br />Seu apoio acabou de ser confirmado.<br /><br />Confira: %{backer_name}<br />%{backer_value}<br />%{reward}<br /><br />%{project_name}"
+    updates:
+      subject: "Se liga! Atualização de %{project_name} por %{project_owner}: %{update_title}"
+      text: "%{update_title}<br />%{update_text}<br />Comentários? Mande ver na página do projeto: <a href='%{project_link}'>%{project_name}</a>."
   admin:
     users:
       title: "Gerenciamento de apoiadores"
@@ -741,7 +749,8 @@ pt:
       id: Id
       key: Chave
       submit: Pesquisar
-      total_backed: arrecadados
+      has_credits_difference: Discrepância nos créditos
+      total_backed: Total de apoios
       total_backers: apoiadores
       total_backs: apoios
       total_users: usuários
