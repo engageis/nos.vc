@@ -660,11 +660,14 @@ en:
   notifications:
     backers:
       to_backer:
-        subject: "Thank you! Your back for %{project} has been confirmed!"
-        text: "Success! <br />Your back has just been confirmed.<br /><br />Check: %{backer_name}<br />%{backer_value}<br />%{reward}<br /><br />%{project_name}"
+        subject: "Obrigado! Sua inscrição para %{project} foi confirmada!"
+        text: "Sucesso! <br />Sua inscrição acabou de ser confirmada.<br /><br />Confira: %{backer_name}<br />%{backer_value}<br />%{reward}<br /><br /><a href='%{project_link}'>%{project_name}</a><br />%{city} <br />%{date}<br /><br /> <h3>Você já pode:</h3> - Tirar qualquer dúvida com %{user_name}: %{user_email}<br />- Divulgar o Encontro e fazer ele acontecer. <br /> - Fazer uma dancinha. &lt;o/"
+      to_project_owner:
+        subject: "Presente! %{backer_name} se inscreveu no seu encontro!"
+        text: "Sucesso! <br />Uma inscrição acabou de ser confirmada.<br /><br />Confira: <br />%{backer_name}<br />%{backer_email}<br />%{backer_value}<br />%{reward}<br /><br /> <h3>Você já pode:</h3> - Dar as boas-vindas.<br />- Criar um grupo no facebook.<br />- Convidar pra ajudar na divulgação.<br />- Descobrir o que o inscrito espera do Encontro.<br />- Dar uma checada nos comentários: <a href='%{project_link}'>%{project_name}</a><br />- Fazer uma dancinha. &lt;o/"
     updates:
-      subject: "If the league! Update of %{project_name} by %{project_owner}: %{update_title}"
-      text: "%{update_title}<br />%{update_text}<br />Comments? Send it on in the project page: <a href='%{project_link}'>%{project_name}</a>."
+      subject: "Se liga! Atualização de %{project_name} por %{project_owner}: %{update_title}"
+      text: "%{update_title}<br />%{update_text}<br />Comentários? Mande ver na página do Encontro: <a href='%{project_link}'>%{project_name}</a>."
   admin:
     users:
       title: "Management backers"

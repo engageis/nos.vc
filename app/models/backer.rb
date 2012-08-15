@@ -138,10 +138,30 @@ class Backer < ActiveRecord::Base
 
   protected
   def notify_confirmation
-    text = I18n.t('notifications.backers.to_backer.text', :backer_name => user.display_name, :backer_value => display_value, :reward => "#{reward.description if reward}", :project_name => project.name)
+    text = I18n.t('notifications.backers.to_backer.text',
+                  :backer_name => user.display_name,
+                  :backer_value => display_value,
+                  :reward => "#{reward.description if reward}",
+                  :city => project.category.name,
+                  :date => project.when_long,
+                  :project_link => Rails.application.routes.url_helpers.project_url(project, :host => I18n.t('site.host')),
+                  :project_name => project.name,
+                  :user_name => project.user.display_name,
+                  :user_email => project.user.email)
     Notification.create! :user => user,
                          :email_subject => I18n.t('notifications.backers.to_backer.subject', :project => project.name),
                          :email_text => text,
                          :text => text
+    text_project_owner = I18n.t('notifications.backers.to_project_owner.text',
+                                :backer_name => user.display_name,
+                                :backer_email => user.email,
+                                :backer_value => display_value,
+                                :reward => "#{reward.description if reward}",
+                                :project_link => Rails.application.routes.url_helpers.project_url(project, :host => I18n.t('site.host')),
+                                :project_name => project.name)
+    Notification.create! :user => project.user,
+                         :email_subject => I18n.t('notifications.backers.to_project_owner.subject', :backer_name => user.display_name),
+                         :email_text => text_project_owner,
+                         :text => text_project_owner
   end
 end

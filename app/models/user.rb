@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable#, :validatable
 
   delegate  :display_name, :display_image, :short_name,
-            :medium_name, :display_credits, :display_total_of_backs,
+            :medium_name, :display_credits, :display_total_of_backs, :display_image_large,
             :to => :decorator
 
   # Setup accessible (or protected) attributes for your model
