@@ -79,6 +79,7 @@ class User < ActiveRecord::Base
   #before_save :store_primary_user
   before_save :fix_twitter_user, :fix_facebook_link, :fix_other_link
   scope :by_email, ->(email){ where('email ~* ?', email) }
+  scope :by_payer_email, ->(email){  where('EXISTS(SELECT true FROM backers JOIN payment_details ON backers.id = payment_details.backer_id WHERE backers.user_id = users.id AND payment_details.payer_email ~* ?)', email) }
   scope :by_name, ->(name){ where('name ~* ?', name) }
   scope :by_id, ->(id){ where('id = ?', id) }
   scope :by_key, ->(key){ where('EXISTS(SELECT true FROM backers WHERE backers.user_id = users.id AND backers.key ~* ?)', key) }
@@ -108,17 +109,12 @@ class User < ActiveRecord::Base
     admin
   end
 
-  def calculate_credits(sum = 0, backs = [], first = true)
+  def credits
     user_total ? user_total.credits : 0.0
   end
 
   def facebook_id
     provider == 'facebook' && uid || secondary_users.where(provider: 'facebook').first && secondary_users.where(provider: 'facebook').first.uid
-  end
-
-  def update_credits
-    self.credits = self.calculate_credits
-    self.save
   end
 
   def to_param

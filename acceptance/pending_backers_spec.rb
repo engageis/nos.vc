@@ -49,7 +49,6 @@ feature "Pending Backers" do
 
     visit pending_backers_projects_path
 
-    find("#confirmed__#{backer.id}")[:checked].should == nil
     find("#anonymous__#{backer.id}")[:checked].should == "true"
     find("#refunded__#{backer.id}")[:checked].should == nil
 
@@ -61,33 +60,17 @@ feature "Pending Backers" do
       page.should have_content("#{other_user.id}")
     end
 
-    check "confirmed__#{backer.id}"
     uncheck "anonymous__#{backer.id}"
     check "refunded__#{backer.id}"
 
     verify_translations
 
-    find("#confirmed__#{backer.id}")[:checked].should == "true"
     find("#anonymous__#{backer.id}")[:checked].should == nil
     find("#refunded__#{backer.id}")[:checked].should == "true"
 
     backer.reload
     backer.user.should == other_user
-    backer.confirmed.should == true
     backer.anonymous.should == false
     backer.refunded.should == true
-
-    visit project_path(project)
-    verify_translations
-    click_on "Apoiadores"
-    verify_translations
-
-    within "#project_backers" do
-      list = all("li")
-      list.should have(1).items
-      list[0].find("a")[:href].should match(/\/users\/#{other_user.to_param}/)
-    end
-
   end
-
 end

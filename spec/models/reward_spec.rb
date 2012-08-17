@@ -75,12 +75,12 @@ describe Reward do
   it "should have a HTML-safe name that is a HTML composition from minimum_value, description and sold_out" do
     I18n.locale = :pt
     r = Factory.build(:reward, :minimum_value => 0, :description => "Description", :maximum_backers => 0)
-    r.name.should == "<div class='left'><div class='reward_minimum_value'>GRÁTIS</div><div class='reward_description'>Description</div><div class=\"sold_out\">Vagas esgotadas</div></div><div class='right'><div class='sold_out'>Vagas esgotadas</div><div class='expires_at'><span>até</span> 31/08/2012</div><div class='clearfix'></div></div><div class='clear'></div>"
+    r.name.should == "<div class='left'><div class='reward_minimum_value'>GRÁTIS</div><div class='reward_description'>Description</div><div class=\"sold_out\">Vagas esgotadas</div></div><div class='right'><div class='sold_out'>Vagas esgotadas</div><div class='expires_at'><span>até</span> #{r.project.display_expires_at}</div><div class='clearfix'></div></div><div class='clear'></div>"
     r.maximum_backers = 1
-    r.name.should == "<div class='left'><div class='reward_minimum_value'>GRÁTIS</div><div class='reward_description'>Description</div></div><div class='right'><div class='remaining'><span>1</span> vagas disponíveis</div><div class='expires_at'><span>até</span> 31/08/2012</div><div class='clearfix'></div></div><div class='clear'></div>"
+    r.name.should == "<div class='left'><div class='reward_minimum_value'>GRÁTIS</div><div class='reward_description'>Description</div></div><div class='right'><div class='remaining'><span>1</span> vagas disponíveis</div><div class='expires_at'><span>até</span> #{r.project.display_expires_at}</div><div class='clearfix'></div></div><div class='clear'></div>"
     r.minimum_value = 1
-    r.name.should == "<div class='left'><div class='reward_minimum_value'>R$ 1,00</div><div class='reward_description'>Description</div></div><div class='right'><div class='remaining'><span>1</span> vagas disponíveis</div><div class='expires_at'><span>até</span> 31/08/2012</div><div class='clearfix'></div></div><div class='clear'></div>"
+    r.name.should == "<div class='left'><div class='reward_minimum_value'>R$ 1,00</div><div class='reward_description'>Description</div></div><div class='right'><div class='remaining'><span>1</span> vagas disponíveis</div><div class='expires_at'><span>até</span> #{r.project.display_expires_at}</div><div class='clearfix'></div></div><div class='clear'></div>"
     r.description = "Description<javascript>XSS()</javascript>"
-    r.name.should == "<div class='left'><div class='reward_minimum_value'>R$ 1,00</div><div class='reward_description'>Description&lt;javascript&gt;XSS()&lt;/javascript&gt;</div></div><div class='right'><div class='remaining'><span>1</span> vagas disponíveis</div><div class='expires_at'><span>até</span> 31/08/2012</div><div class='clearfix'></div></div><div class='clear'></div>"
+    r.name.should == "<div class='left'><div class='reward_minimum_value'>R$ 1,00</div><div class='reward_description'>Description&lt;javascript&gt;XSS()&lt;/javascript&gt;</div></div><div class='right'><div class='remaining'><span>1</span> vagas disponíveis</div><div class='expires_at'><span>até</span> #{r.project.display_expires_at}</div><div class='clearfix'></div></div><div class='clear'></div>"
   end
 end

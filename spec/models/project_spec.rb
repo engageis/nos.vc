@@ -224,17 +224,16 @@ describe Project do
   describe "#successful?" do
     let(:project){ Project.new :goal => 1 }
     subject{ project.successful? }
-    context "when pledged is inferior to goal" do
-      before{ project.stubs(:pledged).returns(2999.99) }
+    context "when is missing_participants" do
       it{ should be_false }
     end
-    context "when pledged is equal to goal" do
-      before{ project.stubs(:pledged).returns(3000) }
+    context "when is no missing_participants" do
+      before {project.stubs(:missing_participants).returns(0)}
       it{ should be_true }
     end
-    context "when pledged is equal to goal" do
-      before{ project.stubs(:pledged).returns(3001) }
-      it{ should be_true }
+    context "when is missing_participants = 1" do
+      before {project.stubs(:missing_participants).returns(1)}
+      it{ should be_false }
     end
   end
 
@@ -290,7 +289,7 @@ describe Project do
       p.waiting_confirmation?.should be_true
       p.expires_at = 2.weekdays_ago
       p.waiting_confirmation?.should be_true
-      p.stubs(:pledged).returns(100)
+      p.stubs(:missing_participants).returns(0)
       p.successful?.should be_true
       p.expires_at = 3.weekdays_ago + 1.minute
       p.waiting_confirmation?.should be_false
@@ -306,11 +305,7 @@ describe Project do
       project = Factory(:project, can_finish: true, finished: false, goal: 1000, expires_at: 1.day.ago)
       backer = Factory(:backer, project: project, user: user, value: 50)
       backer.confirm!
-      backer.reload
-      backer.can_refund.should be_false
       project.finish!
-      backer.reload
-      backer.can_refund.should be_true
       user.reload
       user.credits.should == 50
     end

@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe Projects::BackersController do
   render_views
+  let(:failed_project){ Factory(:project, :finished => true, :successful => false) }
 
   subject{ response }
 
@@ -32,16 +33,16 @@ describe Projects::BackersController do
       context "credits" do
         it "when user don't have credits enough" do
           request.session[:user_id]=@user_backer.id
-          @user_backer.credits = 8
-          @user_backer.save
-          @backer.update_attributes({:value => 10, :credits => true, :confirmed => false})
+          @backer.update_attributes({:value => 10, :credits => true})
+          @backer.confirmed = false
+          @backer.save!
 
           put :checkout, { :locale => :pt, :project_id => @project.id, :id => @backer.id }
 
           @user_backer.reload
           @backer.reload
 
-          @user_backer.credits.to_i.should == 8
+          @user_backer.credits.to_i.should == 0
           @backer.confirmed.should be_false
 
           request.flash[:failure].should == I18n.t('projects.backers.checkout.no_credits')
@@ -50,9 +51,10 @@ describe Projects::BackersController do
 
         it "when user have credits enough" do
           request.session[:user_id]=@user_backer.id
-          @user_backer.credits = 100
-          @user_backer.save
-          @backer.update_attributes({:value => 10, :credits => true, :confirmed => false})
+          Factory(:backer, :value=> 100.00, :user => @user_backer, :confirmed => true, :project => failed_project)
+          @backer.update_attributes({:value => 10, :credits => true })
+          @backer.confirmed=false
+          @backer.save!
 
           put :checkout, { :locale => :pt, :project_id => @project.id, :id => @backer.id }
 
@@ -71,7 +73,7 @@ describe Projects::BackersController do
 
   describe "POST review" do
     context "without user" do
-      before do 
+      before do
         request.env['REQUEST_URI'] = "/test_path"
         post :review, {:locale => :pt, :project_id => @project.id}
       end

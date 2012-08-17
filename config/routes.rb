@@ -97,7 +97,11 @@ Catarse::Application.routes.draw do
 
   match "/beta" => redirect("http://nos.vc")
   namespace :adm do
-    resources :backers
+    resources :backers do
+      collection do
+        post 'update_attribute_on_the_spot'
+      end
+    end
     resources :users
   end
 
