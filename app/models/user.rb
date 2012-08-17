@@ -141,7 +141,7 @@ class User < ActiveRecord::Base
       user.email = auth["extra"]["user_hash"]["email"] if auth["extra"] and auth["extra"]["raw_info"] and user.email.nil?
       user.nickname = auth["info"]["nickname"]
       user.bio = auth["info"]["description"][0..139] if auth["info"]["description"]
-      user.image_url = auth["info"]["image"]
+      user.image_url = auth["info"]["image"] if auth["info"]["image"]
       user.locale = I18n.locale.to_s
     end
   end
@@ -234,13 +234,13 @@ class User < ActiveRecord::Base
   end
 
   def fix_facebook_link
-    unless self.facebook_link[0..7] =~ /http(s)?:\/\//
+    unless !self.facebook_link.nil? and self.facebook_link[0..7] =~ /http(s)?:\/\//
       self.facebook_link = "https://#{self.facebook_link}" if self.facebook_link.present?
     end
   end
 
   def fix_other_link
-    unless self.other_link[0..7] =~ /http(s)?:\/\//
+    unless !self.other_link.nil? and self.other_link[0..7] =~ /http(s)?:\/\//
       self.other_link = "http://#{self.other_link}" if self.other_link.present?
     end
   end
