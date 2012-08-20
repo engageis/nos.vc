@@ -59,7 +59,7 @@ pt:
       title: "Saindo do forno"
       description: "Garanta sua vaga, inscreva-se e faça acontecer."
     partners:
-      title: "Nossos amigos"
+      title: "Canais"
       description: "Veja os encontros que eles assinam embaixo:"
     mother_look_us: "Mãe, olha a gente:"
   no: "Não"
@@ -160,7 +160,7 @@ pt:
       subject_html: "%{name} pediu estorno referente à inscrição %{backer_key} para o encontro %{backer_project} no valor de %{backer_value} efetuada pelo serviço %{backer_payment_service}."
   curated_pages:
     index:
-      title: "Nossos amigos"
+      title: "Canais"
     show:
       backed: "levantados"
       reached: "atingido"
