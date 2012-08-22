@@ -46,6 +46,33 @@
               i.icon-plus.icon-white
               = t('.add_reward')
       .clearfix
+
+    #project_dynamic_fields
+      = check_box_tag "has_dynamic_fields"
+      = label_tag "has_dynamic_fields", t('.has_dynamic_fields')
+      javascript:
+        var dynamic_fields_count = #{@project.rewards.size}
+        var dynamic_fields_id = #{@project.dynamic_fields.size}
+      #dynamic_fields_wrapper
+        = form.semantic_fields_for :dynamic_fields do |dynamic_field|
+          .dynamic_field
+            .remove_dynamic_field_wrapper
+              .bootstrap-twitter
+                = link_to '#', class: 'remove_dynamic_field btn btn-danger' do
+                  i.icon-trash.icon-white
+                  = t('remove')
+            = dynamic_field.input :input_name
+            /= dynamic_field.input :input_value
+            = dynamic_field.input :required
+            .clearfix
+      #add_dynamic_field_wrapper.clearfix
+        .bootstrap-twitter
+          .form-actions
+            = link_to '#', class: 'add_dynamic_field btn btn-success', id: 'add_dynamic_field' do
+              i.icon-plus.icon-white
+              = t('.add_dynamic_field')
+      .clearfix
+
     .submit
       .bootstrap-alert
         .alert

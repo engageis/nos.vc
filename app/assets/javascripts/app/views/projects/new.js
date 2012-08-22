@@ -22,6 +22,23 @@ CATARSE.ProjectsNewView = Backbone.View.extend({
       rewards_count++
       rewards_id++
     })
+
+    $('#add_dynamic_field').click(function(e){
+      e.preventDefault()
+      var new_dynamic_field = '<div class="clearfix"></div><div class="dynamic_field">' + $($('.dynamic_field')[0]).html() + '</div>'
+      new_dynamic_field = new_dynamic_field.replace(/\_0\_/g, '_' + dynamic_fields_id + '_')
+      new_dynamic_field = new_dynamic_field.replace(/\[0\]/g, '[' + dynamic_fields_id + ']')
+      new_dynamic_field = $(new_dynamic_field)
+      new_dynamic_field.find('input').val(null)
+      new_dynamic_field.find('input[type=checkbox]').attr('checked', false)
+      new_dynamic_field.find('input, textarea').removeClass('ok').removeClass('error')
+      $('#dynamic_fields_wrapper').append(new_dynamic_field)
+      new_dynamic_field.find('textarea').focus()
+
+      dynamic_fields_count++
+      dynamic_fields_id++
+    })
+
     var video_valid = null
     everything_ok = function(){
       var all_ok = true
@@ -44,6 +61,8 @@ CATARSE.ProjectsNewView = Backbone.View.extend({
       if(!expires_at_ok())
         all_ok = false
       if(!rewards_ok())
+        all_ok = false
+      if(!dynamic_fields_ok())
         all_ok = false
       if(!accepted_terms())
         all_ok = false
@@ -172,6 +191,33 @@ CATARSE.ProjectsNewView = Backbone.View.extend({
       })
       return okey
     }
+
+
+
+    dynamic_fields_ok = function(){
+      if(!$('#has_dynamic_fields').is(':checked')){
+        $('.dynamic_field input').each(function(){
+          if(/input_name/.test($(this).attr('id'))){
+              $(this).addClass("ok").removeClass("error")
+          }
+        })
+        return true
+      }
+      var okey = true
+      $('.dynamic_field input').each(function(){
+          if(/input_name/.test($(this).attr('id'))){
+             if($(this).val() && $(this).val().length > 0){
+              $(this).addClass("ok").removeClass("error")
+            } else {
+              $(this).addClass("error").removeClass("ok")
+              okey = false
+            }
+          }
+      })
+      return okey
+    }
+
+
     accepted_terms = function(){
       return $('#accept').is(':checked')
     }
@@ -191,6 +237,9 @@ CATARSE.ProjectsNewView = Backbone.View.extend({
     $('#project_leader_bio').keyup(everything_ok)
     $('#accept').click(everything_ok)
     $('.reward input,.reward textarea').live('keyup', everything_ok)
+    $('.dynamic_field input').live('keyup', everything_ok)
+    $('#has_dynamic_fields').click(everything_ok)
+
 
     $('#project_goal').numeric(false)
     $('.reward input').numeric(false)
@@ -220,6 +269,28 @@ CATARSE.ProjectsNewView = Backbone.View.extend({
         rewards_count--
       }
     })
+
+
+    $('.dynamic_field').live('mouseover', function(){
+      $('.remove_dynamic_field').hide()
+      if(dynamic_fields_count > 1){
+        $(this).find('.remove_dynamic_field').show()
+      }
+    })
+    $('.dynamic_field').live('mouseout', function(){
+      $(this).find('.remove_dynamic_field').hide()
+    })
+    $('.remove_dynamic_field').live('click', function(e){
+      e.preventDefault()
+      if(dynamic_fields_count > 1){
+        dynamic_field = $(this).parentsUntil('.dynamic_field').parent()
+        dynamic_field.remove()
+        dynamic_fields_count--
+        dynamic_fields_id--
+      }
+    })
+
+
     $('#project_name').focus()
     $('textarea').maxlength()
   }

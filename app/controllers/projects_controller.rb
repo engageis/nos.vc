@@ -108,12 +108,14 @@ class ProjectsController < ApplicationController
     new! do
       @title = t('projects.new.title').gsub(/<\/?[^>]*>/, "")
       @project.rewards.build
+      @project.dynamic_fields.build
     end
   end
 
   def create
     params[:project][:expires_at] += (23.hours + 59.minutes + 59.seconds) if params[:project][:expires_at]
     validate_rewards_attributes if params[:project][:rewards_attributes].present?
+    params[:project].delete(:dynamic_fields_attributes) unless params[:has_dynamic_fields]
     create!(:notice => t('projects.create.success'))
     # When it can't create the project the @project doesn't exist and then it causes a record not found
     # because @project.reload *works only with created records*
