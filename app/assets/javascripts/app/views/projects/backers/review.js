@@ -27,6 +27,20 @@ CATARSE.BackersReviewView = Backbone.View.extend({
       }
       if(!accepted_terms())
         all_ok = false
+
+      $('input[data-validate-presence]').each(function(){
+        if($(this).data('validate-presence') == true){
+          if($(this).val() && $(this).val().length > 0){
+            $(this).addClass("ok").removeClass("error")
+          } else {
+            $(this).addClass("error").removeClass("ok")
+            all_ok = false
+          }
+        }else{
+          $(this).addClass("ok").removeClass("error")
+        }
+      })
+
       if(all_ok){
         $('#user_submit').attr('disabled', false)
         if($('#back_with_credits').length < 1) {

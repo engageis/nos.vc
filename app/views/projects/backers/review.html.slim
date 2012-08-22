@@ -37,6 +37,15 @@
               = form.input :address_city, :as => :string
               = form.input :address_state, :as => :select, :collection => State.array
               = form.input :phone_number, :as => :string, :input_html => {:autocomplete => 'off'}
+              - if @backer.project.has_dynamic_fields?
+                #dynamic_values_wrapper
+                  = semantic_fields_for @backer do |backer|
+                    = backer.semantic_fields_for :dynamic_values do |dynamic_value|
+                      - dynamic_field = DynamicField.find dynamic_value.object.dynamic_field_id
+                      .dynamic_value
+                        = dynamic_value.input :dynamic_field_id, :as => :hidden
+                        = dynamic_value.input :value, :label => dynamic_field.input_name, :hint => "", :required => dynamic_field.required, :input_html => { :"data-validate-presence" => dynamic_field.required == true }
+
           .submit
             fieldset.accept_terms
               = check_box_tag 'accept'
@@ -53,8 +62,9 @@
                   span= t('.confirm_payment_hind')
             - elsif @backer.value == 0
               .free
-                = link_to t('.confirm_free'), checkout_project_backer_path(@backer.project, @backer), :method => :put
-                span= t('.confirm_free_hind')
+                = link_to t('.confirm_free'), "javascript: $('form#review_form')[0].submit();"
+                span
+                  = t('.confirm_free_hind')
                 .clearfix
           .payment_disabled
             .bootstrap-twitter

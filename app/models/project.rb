@@ -67,6 +67,11 @@ class Project < ActiveRecord::Base
   validates_numericality_of :maximum_backers, :only_integer => true, :greater_than => 0, :allow_nil => true
   before_create :store_image_url
 
+
+  def has_dynamic_fields?
+    true if dynamic_fields.count > 0
+  end
+
   def store_image_url
     self.image_url = vimeo.thumbnail unless self.image_url
   end

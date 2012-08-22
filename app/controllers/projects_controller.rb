@@ -108,7 +108,7 @@ class ProjectsController < ApplicationController
     new! do
       @title = t('projects.new.title').gsub(/<\/?[^>]*>/, "")
       @project.rewards.build
-      @project.dynamic_fields.build
+      @project.dynamic_fields.build()
     end
   end
 

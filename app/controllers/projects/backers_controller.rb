@@ -43,17 +43,21 @@ class Projects::BackersController < ApplicationController
       flash[:failure] = t('projects.backers.review.error')
       return redirect_to new_project_backer_path(@project)
     end
-
+    if @backer.project.has_dynamic_fields?
+      @backer.project.dynamic_fields.each do |dynamic_field|
+        @backer.dynamic_values.build dynamic_field_id: dynamic_field.id
+      end
+    end
     session[:thank_you_id] = @project.id
   end
 
   def checkout
     return unless require_login
     backer = current_user.backs.find params[:id]
-
     # reward free
     if backer.value == 0
       current_user.update_attributes params[:user]
+      update_dynamic_values_attributes backer
       unless backer.confirmed
         backer.update_attribute :payment_method, 'Free'
         backer.confirm!
@@ -65,6 +69,7 @@ class Projects::BackersController < ApplicationController
     if params[:payment_method_url].present?
       current_user.update_attributes params[:user]
       current_user.reload
+      update_dynamic_values_attributes backer
       return redirect_to params[:payment_method_url]
     else
       if backer.credits
@@ -85,6 +90,9 @@ class Projects::BackersController < ApplicationController
   end
 
   private
+  def update_dynamic_values_attributes backer
+    backer.update_attributes({:dynamic_values_attributes => params[:backer][:dynamic_values_attributes]}) if params[:backer].present? and params[:backer][:dynamic_values_attributes].present?
+  end
   def load_project
     @project = Project.find params[:project_id]
   end
