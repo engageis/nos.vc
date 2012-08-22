@@ -11,6 +11,7 @@ describe Project do
     it{ should have_many :rewards }
     it{ should have_many :updates }
     it{ should have_many :notifications }
+    it{ should have_many :dynamic_fields }
   end
 
   describe "validations" do
