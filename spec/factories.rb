@@ -106,3 +106,9 @@ Factory.define :dynamic_field do |f|
   f.required false
   f.association :project, :factory => :project
 end
+
+Factory.define :dynamic_value do |f|
+  f.association :dynamic_field, :factory => :dynamic_field
+  f.association :backer, :factory => :backer
+  f.value "MyString"
+end
