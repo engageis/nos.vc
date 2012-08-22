@@ -99,3 +99,10 @@ Factory.define :update do |f|
   f.comment "This is a comment"
   f.comment_html "<p>This is a comment</p>"
 end
+
+Factory.define :dynamic_field do |f|
+  f.input_name "MyString"
+  f.input_value "MyString"
+  f.required false
+  f.association :project, :factory => :project
+end

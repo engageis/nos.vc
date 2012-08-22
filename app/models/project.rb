@@ -16,6 +16,7 @@ class Project < ActiveRecord::Base
   has_many :rewards, :dependent => :destroy
   has_many :updates, :dependent => :destroy
   has_many :notifications, :dependent => :destroy
+  has_many :dynamic_fields, :dependent => :destroy
   has_one :project_total
   has_and_belongs_to_many :managers, :join_table => "projects_managers", :class_name => 'User'
   accepts_nested_attributes_for :rewards
@@ -43,7 +44,7 @@ class Project < ActiveRecord::Base
   scope :not_expiring, not_expired.where("NOT (expires_at < (current_timestamp + interval '2 weeks'))")
   scope :recent, where("current_timestamp - projects.created_at <= '15 days'::interval")
   scope :successful, where(successful: true)
-  scope :recommended_for_home, ->{ 
+  scope :recommended_for_home, ->{
     includes(:user, :category, :project_total).
     recommended.
     visible.
@@ -51,10 +52,10 @@ class Project < ActiveRecord::Base
     order('random()').
     limit(4)
   }
-  scope :expiring_for_home, ->(exclude_ids){ 
+  scope :expiring_for_home, ->(exclude_ids){
     includes(:user, :category, :project_total).where("coalesce(id NOT IN (?), true)", exclude_ids).visible.expiring.order('date(expires_at), random()').limit(3)
   }
-  scope :recent_for_home, ->(exclude_ids){ 
+  scope :recent_for_home, ->(exclude_ids){
     includes(:user, :category, :project_total).where("coalesce(id NOT IN (?), true)", exclude_ids).visible.recent.not_expiring.order('date(created_at) DESC, random()').limit(3)
   }
 
