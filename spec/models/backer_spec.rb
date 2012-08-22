@@ -158,4 +158,9 @@ describe Backer do
       @backer.platform_fee(5).should == 5.00
     end
   end
+  describe "associations" do
+    subject { Factory(:backer) }
+
+    it { should have_many(:dynamic_values) }
+   end
 end
