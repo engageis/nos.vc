@@ -20,7 +20,7 @@ class Backer < ActiveRecord::Base
   scope :can_refund, where(:can_refund => true)
   scope :within_refund_deadline, where("date(current_timestamp) <= date(created_at + interval '180 days')")
   after_create :define_key, :define_payment_method
-  attr_protected :confirmed
+  #attr_protected :confirmed
   accepts_nested_attributes_for :dynamic_values
 
   def define_key

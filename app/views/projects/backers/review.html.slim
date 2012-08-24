@@ -44,7 +44,7 @@
                       - dynamic_field = DynamicField.find dynamic_value.object.dynamic_field_id
                       .dynamic_value
                         = dynamic_value.input :dynamic_field_id, :as => :hidden
-                        = dynamic_value.input :value, :label => dynamic_field.input_name, :hint => "", :required => dynamic_field.required, :input_html => { :"data-validate-presence" => dynamic_field.required == true }
+                        = dynamic_value.input :value, :label => "#{dynamic_field.input_name}:", :hint => "", :required => dynamic_field.required, :input_html => { :"data-validate-presence" => dynamic_field.required == true }
 
           .submit
             fieldset.accept_terms
