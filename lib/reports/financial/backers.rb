@@ -11,7 +11,7 @@ module Reports
 
             # TODO: Change this later *order and names to use i18n*
             # for moment header only in portuguese.
-            csv_string << [
+             csv_header = [
               'Nome do apoiador',
               'Valor do apoio',
               'Recompensa selecionada (valor)',
@@ -37,8 +37,13 @@ module Reports
               'Estorno Realizado'
             ]
 
+            if @project.has_dynamic_fields?
+              @project.dynamic_fields.each { |item| csv_header << item.input_name }
+            end
+            csv_string << csv_header
+
             @backers.each do |backer|
-              csv_string << [
+              csv_line = [
                 backer.user.name,
                 backer.value,
                 (backer.reward.minimum_value if backer.reward),
@@ -63,6 +68,18 @@ module Reports
                 backer.requested_refund,
                 backer.refunded
               ]
+
+              if @project.has_dynamic_fields?
+                @project.dynamic_fields.each do |dynamic_field|
+                  dynamic_value = backer.dynamic_values.where(dynamic_field_id: dynamic_field.id).first
+                  if dynamic_value.present?
+                    csv_line << dynamic_value.value
+                  else
+                    csv_line << ""
+                  end
+                end
+              end
+              csv_string << csv_line
             end
           end
         end
