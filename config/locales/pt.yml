@@ -118,7 +118,8 @@ pt:
         password_confirmation: "Digite de novo:"
         phone_number: "Celular:"
       dynamic_field:
-        input_name: "Nome no campo"
+        input_name: "Nome do campo"
+        required: "Obrigatório?"
         project: "Projeto"
     models:
       backer: "Inscritos"
@@ -275,6 +276,8 @@ pt:
         maximum_backers: "Se esse tipo de inscrição é limitada, informe o máximo de pessoas."
         minimum_value: "Pode ser 0 para inscrições gratuitas. Ou à partir de R$ 10,00 para inscrições pagas."
         expires_at: "Este tipo de inscrição tem um prazo limitado? Qual?"
+      dynamic_field:
+        input_name: "Nome, label, identifição do que é o campo."
     labels:
       backer:
         anonymous: "Quero que minha inscrição seja anônima."
@@ -444,6 +447,8 @@ pt:
       rewards_description: "Você pode criar quantos tipos de inscrição quiser. Podem ter preços diferentes, ou serem até de graça. É possível definir um prazo de inscrição para cada tipo. Ou, ainda, permitir que a pessoa escolha quanto quer pagar, por exemplo. Crie tipos de inscrições atrativas para alcançar o número mínimo de pessoas mais rapidamente. Mas, lembre-se, suas contas devem fechar."
       rewards_title: "Inscrições"
       submit: "Enviar e fazer acontecer!"
+      has_dynamic_fields: "Irá ter campos dinâmicos?"
+      add_dynamic_field: "Adicionar campo dinâmico"
     index_header:
       subtitle_html: "Financie projetos de maneira colaborativa e torne-se parte de algo maior.<br/>Promova uma catarse coletiva! Você é a peça que falta nesta história."
       title: "Faça acontecer os projetos em que você acredita"
