@@ -117,11 +117,19 @@ pt:
         password: "Senha:"
         password_confirmation: "Digite de novo:"
         phone_number: "Celular:"
+      dynamic_field:
+        input_name: "Nome no campo"
+        project: "Projeto"
     models:
-      backer: "Inscrito"
-      category: "Cidade"
-      project: "Encontro"
-      reward: "Inscrição"
+      backer: "Inscritos"
+      category: "Cidades"
+      project: "Encontros"
+      reward: "Tipo de inscrições"
+      dynamic_field: "Campos dinâmicos"
+      curated_page: "Canais"
+      update: "Atualizações"
+      user: "Usuários"
+      projects_curated_page: "Projetos vs Canais"
   backer:
     display_confirmed_at: "Há %{time_ago}"
     reward_must_be_from_project: "deve ser do mesmo encontro"
