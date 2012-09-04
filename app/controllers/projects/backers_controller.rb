@@ -44,7 +44,7 @@ class Projects::BackersController < ApplicationController
       return redirect_to new_project_backer_path(@project)
     end
     if @backer.project.has_dynamic_fields?
-      @backer.project.dynamic_fields.each do |dynamic_field|
+      @backer.project.dynamic_fields.order(:created_at).each do |dynamic_field|
         @backer.dynamic_values.build dynamic_field_id: dynamic_field.id
       end
     end
