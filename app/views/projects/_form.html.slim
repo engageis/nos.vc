@@ -38,7 +38,6 @@
             = reward.input :minimum_value
             = reward.input :maximum_backers
             = reward.input :expires_at, :as => :string, :label => t('formtastic.labels.reward.expires_at'), :input_html =>  {:class => 'reward_expires_at'}
-            .clearfix
       #add_reward_wrapper.clearfix
         .bootstrap-twitter
           .form-actions
@@ -83,4 +82,5 @@
       = form.actions do
         .bootstrap-twitter
           = form.submit t('.submit'), :disabled => true, :class => 'btn', :id => 'project_submit'
+          span = t('.submit_complement')
 

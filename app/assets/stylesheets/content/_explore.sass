@@ -93,6 +93,7 @@
               margin-bottom: 40px
               font-family: "Dosis-Regular"
               font-size: 18px
+              position: relative
               a.more_categories
                 background-image: image-url("nosvc/more-categories.gif")
                 height: 19px
@@ -100,14 +101,16 @@
                 display: block
                 cursor: pointer
                 text-indent: -9999em
-                margin-right: 20px
-                margin-top: 10px
-                float: right
+                right: 10px
+                top: 20px
+                position: absolute
               ul
-                padding: 0 10px 0 30px
+                padding: 0 10px 0 10px
                 li
                   margin-right: 10px
                   float: left
+                  &.featured_categorie + .featured_categorie + .featured_categorie + .featured_categorie
+                    margin-right: 0px
                   a
                     color: #5d5d5d
                     text-decoration: none

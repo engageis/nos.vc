@@ -446,7 +446,8 @@ pt:
       important_html: "Não esqueça: o Nós.vc fica com 7,5% das inscrições dos encontros realizados + taxa do meio de pagamento, entre 1,9% e 7,4%. Não cobramos nada de inscrições gratuitas. Inclua estes valores no seu orçamento pra não ter problemas. Você deve receber em torno de 88% do valor total arrecadado."
       rewards_description: "Você pode criar quantos tipos de inscrição quiser. Podem ter preços diferentes, ou serem até de graça. É possível definir um prazo de inscrição para cada tipo. Ou, ainda, permitir que a pessoa escolha quanto quer pagar, por exemplo. Crie tipos de inscrições atrativas para alcançar o número mínimo de pessoas mais rapidamente. Mas, lembre-se, suas contas devem fechar."
       rewards_title: "Inscrições"
-      submit: "Enviar e fazer acontecer!"
+      submit: "Enviar"
+      submit_complement: "e fazer acontecer!"
       has_dynamic_fields: "Adicionar pergunta na inscrição (opcional)."
       add_dynamic_field: "Adicionar campo dinâmico"
     index_header:
