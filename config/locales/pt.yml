@@ -592,8 +592,8 @@ pt:
       the_contact: "O contato"
       contact: "Qual é o seu email?"
       contact_hint: "Aquele que você lê e responde. É por ele que vamos entrar em contato."
-      know_us_via: "Como você conheceu o Nós.vc?"
-      know_us_via_hint: "Bem-vindo! O que, ou quem, te fez chegar até aqui?"
+      know_us_via: "Você já conversou sobre este encontro com alguém do Nós.vc? Quem?"
+      know_us_via_hint: "Bem-vindo! Quem te fez chegar até aqui?"
 
       submit: "Enviar"
       submit_complement: "Apontar, Fogo!"
