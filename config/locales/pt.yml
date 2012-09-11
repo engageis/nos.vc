@@ -357,7 +357,7 @@ pt:
   project:
     start:
       email_subject: "Yeah! Seu encontro foi recebido!"
-      email_text: "Eu sou o Mauro do Nós.vc e vou te ajudar a fazer este encontro acontecer.<br><br>Mas, antes, eu preciso ler o que você criou. O que ainda não fiz.<br><br>Pode ser que eu demore alguns dias. Pode ser que seja rápido.<br><br>É tudo uma questão de sorte e de quantas pessoas estão criando encontros agora.<br><br>Se tudo estiver ok, logo, logo seu encontro vai pro ar.<br><br>Por enquanto, você pode explorar outros encontros. (<a href='%{explore_link}' style='color: #1aa79c !important;'>%{explore_link}</a>)<br><br>Ler nosso <a href='%{blog}' style='color: #1aa79c !important;'>blog</a> e nosso <a href='%{help}' style='color: #1aa79c !important;'>Help!</a>, que tem várias dicas quentes.<br><br>E, ainda, curtir nosso <a href='%{facebook}' style='color: #1aa79c !important;'>facebook</a> e seguir nosso <a href='%{twitter}' style='color: #1aa79c !important;'>twitter</a>.<br><br>Qualquer dúvida, só vir falar comigo."
+      email_text: "Olá! Eu sou um robô do Nós.vc e vou te ajudar a fazer este encontro acontecer.<br><br>Mas, antes, uma pessoa de verdade precisa ler o que você criou. O que ainda não aconteceu.<br><br>Pode ser que demore alguns dias. Pode ser que seja rápido.<br><br>É tudo uma questão de sorte e de quantas pessoas estão criando encontros agora.<br><br>Se tudo estiver ok, logo, logo seu encontro vai pro ar.<br><br>Por enquanto, você pode explorar outros encontros. (<a href='%{explore_link}' style='color: #1aa79c !important;'>%{explore_link}</a>)<br><br>Ler o nosso blog, o <a href='%{blog}' style='color: #1aa79c !important;'>Ponto de Encontro</a>, que tem várias dicas quentes.<br><br>E, ainda, curtir nosso <a href='%{facebook}' style='color: #1aa79c !important;'>facebook</a> e seguir nosso <a href='%{twitter}' style='color: #1aa79c !important;'>twitter</a>.<br><br>Qualquer dúvida, só vir falar comigo. Sou uma máquina, mas posso responder."
       notification_text: "Yeah! Seu encontro foi recebido!"
     finish:
       successful:
@@ -472,7 +472,7 @@ pt:
         text: "Uma vez por mês, e olhe lá, contamos as novidades pros amigos. Se você é um, por favor:"
       it_will:
         title: "Tudo passará..."
-        text: "Pelo blog. Aprendizados, boas ideias e o que nos deixa feliz. Dá uma olhada:"
+        text: "Pelo Ponto de Encontro. Nosso blog trás dicas, aprendizados e o que nos deixa feliz."
         link: "Quero lê-lo!"
     pending:
       can_finish: "Pode finalizar?"
