@@ -238,6 +238,9 @@ CATARSE.ProjectsNewView = Backbone.View.extend({
     $('#accept').click(everything_ok)
     $('.reward input,.reward textarea').live('keyup', everything_ok)
     $('.dynamic_field input').live('keyup', everything_ok)
+    $('.dynamic_field input').live('keyup', function(){
+      $('#has_dynamic_fields').attr('checked', true)
+    })
     $('#has_dynamic_fields').click(everything_ok)
 
 
