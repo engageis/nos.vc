@@ -119,7 +119,7 @@ pt:
         phone_number: "Celular:"
       dynamic_field:
         input_name: "Que pergunta você precisa fazer aos inscritos?"
-        required: "Resposta obrigatória:"
+        required: "Resposta obrigatória."
         project: "Projeto"
     models:
       backer: "Inscritos"
@@ -443,13 +443,13 @@ pt:
       success: "Seu encontro foi criado com sucesso! Logo entraremos em contato. Muito obrigado!"
     form:
       add_reward: "Adicionar tipo de inscrição"
-      important_html: "Não esqueça: o Nós.vc fica com 7,5% das inscrições dos encontros realizados + taxa do meio de pagamento, entre 1,9% e 7,4%. Não cobramos nada de inscrições gratuitas. Inclua estes valores no seu orçamento pra não ter problemas. Você deve receber em torno de 88% do valor total arrecadado."
+      important_html: "Não esqueça: o Nós.vc fica com 7,5% das inscrições dos encontros realizados + taxa do meio de pagamento, entre 1,9% e 7,4%. Não cobramos nada de inscrições gratuitas. Inclua estes valores no seu orçamento pra não ter problemas. Você deve receber em torno de 85% do valor total arrecadado."
       rewards_description: "Você pode criar quantos tipos de inscrição quiser. Podem ter preços diferentes, ou serem até de graça. É possível definir um prazo de inscrição para cada tipo. Ou, ainda, permitir que a pessoa escolha quanto quer pagar, por exemplo. Crie tipos de inscrições atrativas para alcançar o número mínimo de pessoas mais rapidamente. Mas, lembre-se, suas contas devem fechar."
       rewards_title: "Inscrições"
       submit: "Enviar"
       submit_complement: "e fazer acontecer!"
       has_dynamic_fields: "Adicionar pergunta na inscrição (opcional)."
-      add_dynamic_field: "Adicionar campo dinâmico"
+      add_dynamic_field: "Adicionar pergunta"
     index_header:
       subtitle_html: "Financie projetos de maneira colaborativa e torne-se parte de algo maior.<br/>Promova uma catarse coletiva! Você é a peça que falta nesta história."
       title: "Faça acontecer os projetos em que você acredita"
