@@ -472,7 +472,7 @@ pt:
         text: "Uma vez por mês, e olhe lá, contamos as novidades pros amigos. Se você é um, por favor:"
       it_will:
         title: "Tudo passará..."
-        text: "Pelo Ponto de Encontro. Nosso blog trás dicas, aprendizados e o que nos deixa feliz."
+        text: "Pelo Ponto de Encontro. Nosso blog traz dicas, aprendizados e o que nos deixa feliz."
         link: "Quero lê-lo!"
     pending:
       can_finish: "Pode finalizar?"
