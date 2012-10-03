@@ -121,7 +121,7 @@ GEM
     crack (0.1.8)
     curb (0.7.18)
     daemons (1.1.8)
-    dalli (2.1.0)
+    dalli (2.2.1)
     database_cleaner (0.8.0)
     devise (1.5.3)
       bcrypt-ruby (~> 3.0)
@@ -454,7 +454,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.2)
   compass-960-plugin (~> 0.10.4)
   compass-rails (~> 1.0.1)
-  dalli
+  dalli (~> 2.2.1)
   database_cleaner
   devise (= 1.5.3)
   draper

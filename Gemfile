@@ -14,7 +14,7 @@ gem 'catarse_moip', '~> 0.1.1'
 gem 'moip_catarse', '~> 1.0.6', require: 'moip'
 
 gem 'maxim-sexy_pg_constraints'
-gem 'dalli'
+gem 'dalli', '~> 2.2.1'
 gem 'draper'
 
 # Frontend stuff
