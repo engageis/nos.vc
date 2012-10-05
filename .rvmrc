@@ -1,1 +1,1 @@
-rvm --create 1.9.3@nosvc
+rvm --create 1.9.2@nosvc
