@@ -19,7 +19,7 @@
 
     .cover
       p.black_box= project.category.name
-      = link_to project do
+      = link_to project, :target => ( defined?(embed_link) ? '__blank' : '' ) do
         = image_tag project.display_image, :itemprop => 'image'
     .project_content
       h4= link_to project, :target => ( defined?(embed_link) ? '__blank' : '' ), :itemprop => 'url' do
