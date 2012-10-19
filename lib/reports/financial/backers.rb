@@ -14,6 +14,7 @@ module Reports
              csv_header = [
               'Nome do apoiador',
               'Valor do apoio',
+              'Valor do pago',
               'Recompensa selecionada (valor)',
               'Recompensa selecionada (nome)',
               'Serviço de pagamento',
@@ -46,6 +47,7 @@ module Reports
               csv_line = [
                 backer.user.name,
                 backer.value,
+                backer.total_paid,
                 (backer.reward.minimum_value if backer.reward),
                 (backer.reward.description if backer.reward),
                 backer.payment_method,

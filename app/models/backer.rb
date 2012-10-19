@@ -74,6 +74,10 @@ class Backer < ActiveRecord::Base
     number_to_currency value, :unit => "R$", :precision => 0, :delimiter => '.'
   end
 
+  def display_total_paid
+    number_to_currency total_paid, :unit => "R$", :precision => 0, :delimiter => '.'
+  end
+
   def display_confirmed_at
     I18n.l(confirmed_at.to_date) if confirmed_at
   end
