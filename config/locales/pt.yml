@@ -156,7 +156,6 @@ pt:
       status: "Status"
       title: "Meus créditos"
       value: "Valor"
-      total_paid: "Valor pago"
     refund:
       cannot_refund: "Esta inscrição não pode ser estornada."
       error: "Oops. Ocorreu um erro ao solicitar seu estorno."
@@ -510,6 +509,7 @@ pt:
       total_users: usuários
       user: Usuário
       value: Valor
+      total_paid: "Valor pago"
     project:
       backed: levantados
       reached: atingido
