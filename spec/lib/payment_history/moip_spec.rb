@@ -118,6 +118,7 @@ describe PaymentHistory::Moip do
           subject.backer.expects(:confirm!).returns(true)
           # subject.backer.expects(:build_payment_detail)
           subject.process_request!
+          subject.backer.total_paid == 21.9
         end
       end
 

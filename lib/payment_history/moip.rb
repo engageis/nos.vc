@@ -23,7 +23,10 @@ module PaymentHistory
 
           case @params[:status_pagamento].to_i
           when TransactionStatus::AUTHORIZED
-            @backer.confirm! if not @backer.confirmed
+            unless @backer.confirmed
+              @backer.confirm!
+              @backer.update_attributes :total_paid => moip_value_to_f(@params[:valor])
+            end
           when TransactionStatus::WRITTEN_BACK
             unless @backer.refunded
               @backer.update_attributes({refunded: true, requested_refund: true})
@@ -60,6 +63,10 @@ module PaymentHistory
       @backer = Backer.find_by_key! @params[:id_transacao]
     end
 
+    def moip_value_to_f v
+      v.to_s.sub("#{v[v.size - 2]}#{v[v.size - 1]}", ".#{v[v.size - 2]}#{v[v.size - 1]}").to_f
+    end
+
     class ResponseCode < EnumerateIt::Base
       associate_values(
         :not_processed => 422,
@@ -93,4 +100,5 @@ module PaymentHistory
       )
     end
   end
+
 end
