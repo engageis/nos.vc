@@ -10,9 +10,9 @@ module PaymentHistory
     def process_request!
       begin
         @backer = find_backer
-        puts "Debug info ----------"
-        puts @params.inspect
-        puts "Debug info ----------"
+        #puts "Debug info ----------"
+        #puts @params.inspect
+        #puts "Debug info ----------"
         if @backer.moip_value == @params[:valor].to_s or @params[:parcelas].to_i > 1
           build_log
 
