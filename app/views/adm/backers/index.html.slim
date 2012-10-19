@@ -66,6 +66,7 @@
                   th= t('.project')
                   th= t('.user')
                   th= t('.value')
+                  th= t('.total_paid')
                   th= t('.reward')
                   th= t('.key')
                   th= t('.confirmed')
@@ -85,6 +86,7 @@
                         = image_tag backer.user.display_image, class: 'user_img'
                       .user_id= on_the_spot_edit backer, :user_id
                     td= backer.display_value
+                    td= backer.display_total_paid
                     td title=("#{backer.reward.display_minimum} - #{backer.reward.description}" if backer.reward)
                       - if backer.reward
                         = backer.reward.display_minimum

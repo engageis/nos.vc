@@ -14,7 +14,7 @@ module Reports
              csv_header = [
               'Nome do apoiador',
               'Valor do apoio',
-              'Valor do pago',
+              'Valor pago',
               'Recompensa selecionada (valor)',
               'Recompensa selecionada (nome)',
               'Serviço de pagamento',
