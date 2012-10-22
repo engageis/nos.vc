@@ -83,4 +83,17 @@ describe Reward do
     r.description = "Description<javascript>XSS()</javascript>"
     r.name.should == "<div class='left'><div class='reward_minimum_value'>R$ 1,00</div><div class='reward_description'>Description&lt;javascript&gt;XSS()&lt;/javascript&gt;</div></div><div class='right'><div class='remaining'><span>1</span> vagas disponíveis</div><div class='expires_at'><span>até</span> #{r.project.display_expires_at}</div><div class='clearfix'></div></div><div class='clear'></div>"
   end
+
+
+  describe "private reward" do
+    it "should create a token when is private reward" do
+      reward = Factory(:reward, :private => true)
+      reward.token.should_not be_nil
+    end
+
+    it "should not create a token when is not private reward" do
+      reward = Factory(:reward, :private => false)
+      reward.token.should be_nil
+    end
+  end
 end
