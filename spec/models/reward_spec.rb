@@ -96,4 +96,29 @@ describe Reward do
       reward.token.should be_nil
     end
   end
+
+  describe "scopes" do
+    describe "#public" do
+      before do
+        4.times { Factory(:reward, :private => false) }
+        2.times { Factory(:reward, :private => true) }
+      end
+
+      it "should return only public reward" do
+        Reward.public.should have(4).items
+      end
+    end
+
+    describe "#with_token" do
+      before do
+        4.times { Factory(:reward, :private => false) }
+        @reward = Factory(:reward, :private => true)
+      end
+
+      it "should return the reward with specified token" do
+        Reward.with_token(@reward.token).should have(1).item
+        Reward.with_token(@reward.token).should == [@reward]
+      end
+    end
+  end
 end
