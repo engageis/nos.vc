@@ -134,13 +134,26 @@ class ProjectsController < ApplicationController
       end
 
       @project = Project.find params[:id] if params[:id].present?
+      @link = @project
       if !params[:permalink].present? and @project.permalink.present?
+        @link = project_by_slug_url(permalink: @project.permalink)
         return redirect_to project_by_slug_url(permalink: @project.permalink)
       end
 
+      if params[:token].present?
+        session[:tokens] ||= []
+        session[:tokens] << { id: @project.id, token: params[:token] }
+        return redirect_to @link
+      end
+
       show!{
+        @rewards = []
+        reward_token = session[:tokens].select { |item| item[:id] == @project.id }.first
+        if reward_token.present?
+          @rewards = @project.rewards.with_token reward_token[:token]
+        end
         @title = @project.name
-        @rewards = @project.rewards.order(:minimum_value).all
+        @rewards.concat @project.rewards.order(:minimum_value).public
         @backers = @project.backers.confirmed.limit(12).order("confirmed_at DESC").all
         fb_admins_add(@project.user.facebook_id) if @project.user.facebook_id
       }
