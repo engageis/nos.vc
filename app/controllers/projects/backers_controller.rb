@@ -58,6 +58,7 @@ class Projects::BackersController < ApplicationController
   def checkout
     return unless require_login
     backer = current_user.backs.find params[:id]
+    session[:token] = nil # remove the token of reward
     # reward free
     if backer.value == 0
       current_user.update_attributes params[:user]
