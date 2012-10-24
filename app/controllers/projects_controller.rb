@@ -141,16 +141,14 @@ class ProjectsController < ApplicationController
       end
 
       if params[:token].present?
-        session[:tokens] ||= []
-        session[:tokens] << { id: @project.id, token: params[:token] }
+        session[:token] = params[:token]
         return redirect_to @link
       end
 
       show!{
         @rewards = []
-        reward_token = session[:tokens].select { |item| item[:id] == @project.id }.first
-        if reward_token.present?
-          @rewards = @project.rewards.with_token reward_token[:token]
+        if session[:token].present?
+          @rewards = @project.rewards.with_token session[:token]
         end
         @title = @project.name
         @rewards.concat @project.rewards.order(:minimum_value).public

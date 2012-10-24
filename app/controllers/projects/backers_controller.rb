@@ -19,9 +19,8 @@ class Projects::BackersController < ApplicationController
     @backer = @project.backers.new(:user => current_user)
     #empty_reward = Reward.new(:id => 0, :minimum_value => 0, :description => t('projects.backers.new.no_reward'))
     @rewards = []
-    reward_token = session[:tokens].select { |item| item[:id] == @project.id }.first
-    if reward_token.present?
-      @rewards = @project.rewards.with_token reward_token[:token]
+    if session[:token].present?
+      @rewards = @project.rewards.with_token session[:token]
     end
     @rewards.concat @project.rewards.not_expired.order(:minimum_value).public
     @reward = @project.rewards.find params[:reward_id] if params[:reward_id]
