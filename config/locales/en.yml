@@ -494,6 +494,7 @@ en:
       total_remaining: ~
       unlimited_vacancies: ~
       about_title: "About this project"
+      private_rewards_title: "Inscrições 'escondidas'"
       menu:
         about: About
         backers: Backers

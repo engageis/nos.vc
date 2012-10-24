@@ -551,6 +551,7 @@ pt:
       total_remaining: "Vagas restantes"
       unlimited_vacancies: "Vagas ilimitadas"
       about_title: "Sobre o encontro"
+      private_rewards_title: "Inscrições 'escondidas'"
       menu:
         about: "Sobre"
         backers: "Quem vai?"
