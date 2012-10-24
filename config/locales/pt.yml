@@ -298,6 +298,7 @@ pt:
       reward:
         maximum_backers: "Qual é o número máximo de inscritos desse tipo? (opcional)"
         expires_at: "Quando encerra esse tipo de inscrição? (opcional)"
+        private: "Inscrição 'escondida'"
     optional: " (opcional)"
   found_plural: Encontrados
   found_singular: Encontrado
