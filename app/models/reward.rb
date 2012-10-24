@@ -12,9 +12,10 @@ class Reward < ActiveRecord::Base
   scope :remaining, where("maximum_backers IS NULL OR (maximum_backers IS NOT NULL AND (SELECT COUNT(*) FROM backers WHERE confirmed AND reward_id = rewards.id) < maximum_backers)")
   scope :not_expired, where("expires_at >= current_timestamp OR expires_at IS NULL")
   scope :public, -> { where(:private => false) }
+  scope :not_public, -> { where(:private => true) }
   scope :with_token, ->(token) { where(:token => token) }
 
-  before_create :set_token
+  before_save :set_token
 
   def sold_out?
     maximum_backers and backers.confirmed.count >= maximum_backers
@@ -73,6 +74,6 @@ class Reward < ActiveRecord::Base
 
   private
   def set_token
-    self.token = SecureRandom::hex(30) if self.private == true
+    self.token ||= SecureRandom::hex(30) if self.private == true
   end
 end
