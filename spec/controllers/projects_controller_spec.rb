@@ -42,4 +42,32 @@ describe ProjectsController do
 
     it{ should redirect_to root_path }
   end
+
+  describe "private rewards" do
+    before do
+      @project = Factory(:project, :permalink => nil)
+      @reward = Factory(:reward, :project => @project)
+      @reward_with_token = Factory(:reward, :project => @project, :private => true)
+    end
+
+    describe "without token param" do
+      it "should have only one reward" do
+        get :show, :id => @project, :locale => :pt
+        assigns(:rewards).should have(1).item
+        assigns(:rewards).should == [@reward]
+      end
+    end
+
+    describe "with token param" do
+      it "should have only one reward" do
+        get :show, :id => @project, :locale => :pt, :token => @reward_with_token.token
+        page.should redirect_to @project
+        session[:token].should == @reward_with_token.token
+
+        get :show, :id => @project, :locale => :pt
+        assigns(:rewards).should have(2).items
+        assigns(:rewards).should == [@reward_with_token, @reward]
+      end
+    end
+  end
 end
