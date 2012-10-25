@@ -254,6 +254,7 @@ CATARSE.ProjectsNewView = Backbone.View.extend({
     $('input,textarea,select').live('focus', function(){
       $('p.inline-hints').hide()
       $(this).next('p.inline-hints').show()
+      $('.boolean p.inline-hints').show()
     })
     $('.reward').live('mouseover', function(){
       $('.remove_reward').hide()
