@@ -19,6 +19,7 @@ Factory.define :user do |f|
 end
 Factory.define :category do |f|
   f.name { Factory.next(:name) }
+  f.featured false
 end
 Factory.define :project do |f|
   f.name "Foo bar"

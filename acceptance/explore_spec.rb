@@ -7,8 +7,8 @@ feature "Explore projects Feature" do
   before(:each) do
 
     #Categories
-    category_1 = Factory(:category)
-    category_2 = Factory(:category)
+    category_1 = Factory(:category, :featured => true)
+    category_2 = Factory(:category, :featured => true)
 
     # Recommended projects (some of them expired)
     10.times do
@@ -48,18 +48,18 @@ feature "Explore projects Feature" do
     visit homepage
     verify_translations
 
-    click_on "explore"
+    click_on "Explorar encontros"
     verify_translations
 
     within 'head title' do
-      page.should have_content("Explore os projetos · #{I18n.t('site.name')}") 
+      page.should have_content("Explorar encontros · #{I18n.t('site.name')}")
     end
 
     quick_list = find("#explore_quick").all("li")
-    quick_list[0].text.should == "Recomendados"
-    quick_list[1].text.should == "Na reta final"
-    quick_list[2].text.should == "Recentes"
-    quick_list[3].text.should == "Bem-sucedidos"
+    quick_list[0].text.should == "Nossos destaques"
+    quick_list[1].text.should == "Última chamada"
+    quick_list[2].text.should == "Saindo do forno"
+    quick_list[3].text.should == "Confirmados"
 
     categories_list = find("#explore_categories").all("li")
     categories_list.each_index do |index|
@@ -73,11 +73,11 @@ feature "Explore projects Feature" do
         list[index].find("a")[:href].should match(/\/projects\/#{recommended[index].to_param}/)
       end
     end
-    find('.sidebar .content .selected').text.should == "Recomendados"
+    find('.sidebar .content .selected').text.should == "Nossos destaques"
 
     # Now I go to expiring projects
     within ".sidebar .content" do
-      click_on "Na reta final"
+      click_on "Última chamada"
     end
     verify_translations
     within "#explore_results" do
@@ -86,11 +86,11 @@ feature "Explore projects Feature" do
         list[index].find("a")[:href].should match(/\/projects\/#{expiring[index].to_param}/)
       end
     end
-    find('.sidebar .content .selected').text.should == "Na reta final"
+    find('.sidebar .content .selected').text.should == "Última chamada"
 
     # Now I go to recent projects
     within ".sidebar .content" do
-      click_on "Recentes"
+      click_on "Saindo do forno"
     end
     verify_translations
     within "#explore_results" do
@@ -99,11 +99,11 @@ feature "Explore projects Feature" do
         list[index].find("a")[:href].should match(/\/projects\/#{recent[index].to_param}/)
       end
     end
-    find('.sidebar .content .selected').text.should == "Recentes"
+    find('.sidebar .content .selected').text.should == "Saindo do forno"
 
     # Now I go to successful projects
     within ".sidebar .content" do
-      click_on "Bem-sucedidos"
+      click_on "Confirmados"
     end
     verify_translations
     within "#explore_results" do
@@ -112,11 +112,11 @@ feature "Explore projects Feature" do
         list[index].find("a")[:href].should match(/\/projects\/#{successful[index].to_param}/)
       end
     end
-    find('.sidebar .content .selected').text.should == "Bem-sucedidos"
+    find('.sidebar .content .selected').text.should == "Confirmados"
 
     # Now I go to recommended projects again
     within ".sidebar .content" do
-      click_on "Recomendados"
+      click_on "Nossos destaques"
     end
     verify_translations
     within "#explore_results" do
@@ -125,7 +125,7 @@ feature "Explore projects Feature" do
         list[index].find("a")[:href].should match(/\/projects\/#{recommended[index].to_param}/)
       end
     end
-    find('.sidebar .content .selected').text.should == "Recomendados"
+    find('.sidebar .content .selected').text.should == "Nossos destaques"
 
     # Now I search for "eird"
     within "#header .search" do
@@ -149,14 +149,14 @@ feature "Explore projects Feature" do
     verify_translations
     within "#explore_results" do
       all(".project_box").empty?.should == true
-      page.should have_content("Ei, não encontramos nenhum projeto com o texto que você procurou. Que tal experimentar com outras palavras? =D")
+      page.should have_content("Desculpe, não encontramos nenhum encontro com o texto que você procurou. Você pode tentar outras palavras?")
     end
     page.should have_no_css('.sidebar .content .selected')
 
     # Now I go through every category
     categories.each do |category|
       projects = Project.visible.where(category_id: category.id).order('created_at DESC').all
-      within ".sidebar .content" do
+      within ".list_categories" do
         click_on category.name
       end
       within "#explore_results" do
@@ -165,7 +165,7 @@ feature "Explore projects Feature" do
           list[index].find("a")[:href].should match(/\/projects\/#{projects[index].to_param}/)
         end
       end
-      find('.sidebar .content .selected').text.should == category.name
+      find('.list_categories .selected').text.should == category.name
     end
 
     visit "/pt/explore#recommended"
@@ -178,7 +178,7 @@ feature "Explore projects Feature" do
         list[index].find("a")[:href].should match(/\/projects\/#{projects[index].to_param}/)
       end
     end
-    find('.sidebar .content .selected').text.should == "Recomendados"
+    find('.sidebar .content .selected').text.should == "Nossos destaques"
 
     visit "/pt/explore#expiring"
     verify_translations
@@ -190,7 +190,7 @@ feature "Explore projects Feature" do
         list[index].find("a")[:href].should match(/\/projects\/#{projects[index].to_param}/)
       end
     end
-    find('.sidebar .content .selected').text.should == "Na reta final"
+    find('.sidebar .content .selected').text.should == "Última chamada"
 
     visit "/pt/explore#recent"
     verify_translations
@@ -202,7 +202,7 @@ feature "Explore projects Feature" do
         list[index].find("a")[:href].should match(/\/projects\/#{projects[index].to_param}/)
       end
     end
-    find('.sidebar .content .selected').text.should == "Recentes"
+    find('.sidebar .content .selected').text.should == "Saindo do forno"
 
     visit "/pt/explore#successful"
     verify_translations
@@ -214,7 +214,7 @@ feature "Explore projects Feature" do
         list[index].find("a")[:href].should match(/\/projects\/#{projects[index].to_param}/)
       end
     end
-    find('.sidebar .content .selected').text.should == "Bem-sucedidos"
+    find('.sidebar .content .selected').text.should == "Confirmados"
 
   end
 
