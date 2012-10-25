@@ -53,10 +53,7 @@ CATARSE.BackersNewView = Backbone.View.extend({
       var id = /^backer_reward_id_(\d+)$/.exec($(this).attr('id'))
       id = parseFloat(id[1])
       var minimum = rewards[id]
-      var value = $('#backer_value').val()
-      if(!(/^(\d+)$/.test(value)) || (parseInt(value) < minimum)){
-        $('#backer_value').val(parseInt(minimum))
-      }
+      $('#backer_value').val(parseInt(minimum))
       $('li.radio ol li').removeClass('selected')
       $(this).parent().parent().addClass('selected')
       everything_ok()

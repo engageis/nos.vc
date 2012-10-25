@@ -53,20 +53,21 @@
             - if @backer.credits
               = form.actions do
                 .bootstrap-twitter
-                  = form.submit (@backer.credits ? t('.submit.credits') : t('.submit.moip')), :disabled => true, :class => 'btn', :id => 'user_submit'
-          #payment.hide
-            - if @backer.value > 0
-              .choose_payment
-                .moip
-                  = link_to t('.confirm_payment'),  'javascript:void(0);', :"data-payment_method_url" => catarse_moip.pay_payment_moip_path(@backer), :method => :get, :class => 'payment_link'
-                  span= t('.confirm_payment_hind')
-            - elsif @backer.value == 0
-              .free
-                = link_to t('.confirm_free'), "javascript: $('form#review_form')[0].submit();"
-                span
-                  = t('.confirm_free_hind')
-                .clearfix
-          .payment_disabled
-            .bootstrap-twitter
-              = submit_tag t('.submit'), :disabled => true, :class => 'btn btn-large'
+                  = form.submit t('.submit.credits'), :disabled => true, :class => 'btn', :id => 'user_submit'
+          - unless @backer.credits
+            #payment.hide
+              - if @backer.value > 0
+                .choose_payment
+                  .moip
+                    = link_to t('.confirm_payment'),  'javascript:void(0);', :"data-payment_method_url" => catarse_moip.pay_payment_moip_path(@backer), :method => :get, :class => 'payment_link'
+                    span= t('.confirm_payment_hind')
+              - elsif @backer.value == 0
+                .free
+                  = link_to t('.confirm_free'), "javascript: $('form#review_form')[0].submit();"
+                  span
+                    = t('.confirm_free_hind')
+                  .clearfix
+            .payment_disabled
+              .bootstrap-twitter
+                = submit_tag t('.submit'), :disabled => true, :class => 'btn btn-large'
     .clearfix
