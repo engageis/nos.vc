@@ -276,6 +276,7 @@ pt:
         maximum_backers: "Se esse tipo de inscrição é limitada, informe o máximo de pessoas."
         minimum_value: "Pode ser 0 para inscrições gratuitas. Ou à partir de R$ 10,00 para inscrições pagas."
         expires_at: "Este tipo de inscrição tem um prazo limitado? Qual?"
+        private: "Acessível apenas para quem tem o link desse tipo de inscrição."
       dynamic_field:
         input_name: "Faça sua pergunta. As respostas serão enviadas alguns dias após o encerramento das inscrições."
     labels:
@@ -298,7 +299,7 @@ pt:
       reward:
         maximum_backers: "Qual é o número máximo de inscritos desse tipo? (opcional)"
         expires_at: "Quando encerra esse tipo de inscrição? (opcional)"
-        private: "Inscrição 'escondida'"
+        private: "Inscrição secreta"
     optional: " (opcional)"
   found_plural: Encontrados
   found_singular: Encontrado
@@ -552,7 +553,7 @@ pt:
       total_remaining: "Vagas restantes"
       unlimited_vacancies: "Vagas ilimitadas"
       about_title: "Sobre o encontro"
-      private_rewards_title: "Inscrições 'escondidas'"
+      private_rewards_title: "Inscrições secretas:"
       menu:
         about: "Sobre"
         backers: "Quem vai?"
