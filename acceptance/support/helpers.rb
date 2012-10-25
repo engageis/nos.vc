@@ -14,7 +14,7 @@ module HelperMethods
   def click_login
     visit homepage
     page.should have_no_css('.user')
-    click_link 'login'
+    click_link 'Entrar'
   end
 
   def user_to_admin user
@@ -28,12 +28,12 @@ module HelperMethods
       create(:project, {name: "Foo bar #{n}"}.merge(attributes))
     end
   end
-  
+
   def verify_translations
     page.should have_no_css('.translation_missing')
     page.should have_no_content('translation missing')
   end
-  
+
 end
 
 RSpec.configuration.include HelperMethods, :type => :acceptance

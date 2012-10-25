@@ -1,3 +1,4 @@
+# Encoding: utf-8
 require File.expand_path(File.dirname(__FILE__) + '/acceptance_helper')
 
 feature "Login Feature" do
@@ -10,7 +11,7 @@ feature "Login Feature" do
     fake_login
     verify_translations
     page.should have_css('.user')
-    page.should have_link(I18n.t('layouts.header.account'))
+    page.should have_link("Olá, #{current_user.display_name.split(' ').first}")
   end
 
   scenario "After insertion of a new provider it should appear in the login options" do
