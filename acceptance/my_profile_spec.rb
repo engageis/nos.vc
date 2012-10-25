@@ -14,14 +14,14 @@ feature "My profile Feature" do
       Factory(:backer, user: user, confirmed: true)
     end
 
-    click_link I18n.t('layouts.header.account')
+    click_link "Olá, #{current_user.display_name.split(' ').first}"
     verify_translations
-    click_link 'meu perfil'
+    click_link 'Meu perfil'
     verify_translations
     current_path.should == user_path(user)
 
     within 'head title' do
-      page.should have_content("#{user.display_name} · #{I18n.t('site.name')}") 
+      page.should have_content("#{user.display_name} · #{I18n.t('site.name')}")
     end
 
     within '.profile_title' do
@@ -34,14 +34,15 @@ feature "My profile Feature" do
     end
 
     titles = all("#user_profile_menu a")
-    titles.shift.should have_content("Projetos apoiados")
-    titles.shift.should have_content("Projetos criados")
+    titles.shift.should have_content("Me inscrevi")
+    titles.shift.should have_content("Criei")
+    titles.shift.should have_content("Depoimentos")
     titles.shift.should have_content("Créditos")
-    titles.shift.should have_content("Preferências")
+    titles.shift.should have_content("Configurações")
 
     # User Settings
     within "#user_profile_menu" do
-      click_link "Preferências"
+      click_link "Configurações"
     end
     verify_translations
 
@@ -59,24 +60,24 @@ feature "My profile Feature" do
 
     # My Projects
     within "#user_profile_menu" do
-      click_link "Projetos criados"
+      click_link "Criei"
     end
     verify_translations
     sleep 2
 
     within "#user_created_projects" do
-      all('li .small_project_land').should have(4).items
+      all('li .project').should have(4).items
     end
 
     # Backed Projects
     within "#user_profile_menu" do
-      click_link "Projetos apoiados"
+      click_link "Me inscrevi"
     end
     verify_translations
     sleep 2
 
     within "#user_backed_projects" do
-      all('li .project_land').should have(7).items
+      all('li .project').should have(7).items
     end
 
     # Testing on the spot edits
@@ -105,7 +106,7 @@ feature "My profile Feature" do
     end
 
     within "#user_profile_menu" do
-      click_link "Preferências"
+      click_link "Configurações"
     end
     verify_translations
 
@@ -123,22 +124,22 @@ feature "My profile Feature" do
     end
 
     within "#user_profile_menu" do
-      click_link "Preferências"
+      click_link "Configurações"
     end
     verify_translations
 
     within "#social_info" do
-      fill_in "twitter ( usuário )", with: "@FooBar"
-      fill_in "perfil do facebook", with: "facebook.com/FooBar"
-      fill_in "link da sua página na internet", with: "boobar.com"
-      click_button "Atualizar informações"
+      fill_in "Seu usuário do twitter", with: "@FooBar"
+      fill_in "Link do seu perfil do facebook", with: "facebook.com/FooBar"
+      fill_in "Link do seu site", with: "boobar.com"
+      click_button "Atualizar"
     end
     verify_translations
 
     within "#social_info" do
-      find_field("twitter ( usuário )").value.should == "FooBar"
-      find_field("perfil do facebook").value.should == "facebook.com/FooBar"
-      find_field("link da sua página na internet").value.should == "boobar.com"
+      find_field("Seu usuário do twitter").value.should == "FooBar"
+      find_field("Link do seu perfil do facebook").value.should == "https://facebook.com/FooBar"
+      find_field("Link do seu site").value.should == "http://boobar.com"
     end
 
   end
