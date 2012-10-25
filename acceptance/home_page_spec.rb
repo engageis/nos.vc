@@ -31,13 +31,13 @@ feature "Home Page Feature" do
     ]
 
     successful = [
-      Factory(:project, created_at: 30.days.ago, expires_at: 2.days.ago, visible: true),
-      Factory(:project, created_at: 30.days.ago, expires_at: 3.days.ago, visible: true),
-      Factory(:project, created_at: 30.days.ago, expires_at: 4.days.ago, visible: true),
-      Factory(:project, created_at: 30.days.ago, expires_at: 5.days.ago, visible: true)
+      Factory(:project, created_at: 30.days.ago, expires_at: 2.days.ago, visible: true, goal: 2),
+      Factory(:project, created_at: 30.days.ago, expires_at: 3.days.ago, visible: true, goal: 2),
+      Factory(:project, created_at: 30.days.ago, expires_at: 4.days.ago, visible: true, goal: 2),
+      Factory(:project, created_at: 30.days.ago, expires_at: 5.days.ago, visible: true, goal: 2)
     ]
     successful.each do |project|
-      Factory(:backer, project: project, value: project.goal, confirmed: true)
+      2.times { Factory(:backer, project: project, value: project.goal, confirmed: true) }
       project.successful?.should be_true
     end
 
@@ -49,14 +49,14 @@ feature "Home Page Feature" do
     verify_translations
 
     within 'head title' do
-      page.should have_content("#{I18n.t('site.title')} · #{I18n.t('site.name')}") 
+      page.should have_content("#{I18n.t('site.title')} · #{I18n.t('site.name')}")
     end
 
     titles = all(".list_title .title h2")
-    titles.shift.text.should == "seleção"
-    titles.shift.text.should == "na reta final"
-    titles.shift.text.should == "novos e fresquinhos"
-    titles.shift.text.should == "parceiros"
+    titles.shift.text.should have_content "NOSSOS DESTAQUES"
+    titles.shift.text.should have_content "ÚLTIMA CHAMADA"
+    titles.shift.text.should have_content "SAINDO DO FORNO"
+
 
     home_page_list = all(".selected_projects .curated_project")
     home_page_list.should have(3).items
