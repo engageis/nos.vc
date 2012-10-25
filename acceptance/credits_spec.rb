@@ -12,14 +12,14 @@ feature "Credits Feature" do
     ]
     user.reload
 
-    click_link I18n.t('layouts.header.account')
+    click_link "Olá, #{user.display_name.split(' ').first}"
     verify_translations
     click_link 'Meus créditos'
     verify_translations
     current_path.should == user_path(user)
 
     within 'head title' do
-      page.should have_content("#{user.display_name} · #{I18n.t('site.name')}") 
+      page.should have_content("#{user.display_name} · #{I18n.t('site.name')}")
     end
   end
 
@@ -56,7 +56,7 @@ feature "Credits Feature" do
       columns[1].text.should == I18n.l(backer.created_at.to_date)
       columns[2].text.should == backer.display_value
       columns[3].text.should == I18n.l(backer.refund_deadline.to_date)
-      columns[4].text.should == "Solicitar estorno"
+      columns[4].text.should == "Solicitar estorno."
     end
 
     # Disabling javascript confirm, because we cannot test it with Capybara

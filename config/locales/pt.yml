@@ -689,6 +689,10 @@ pt:
       title: "Recomende, qualifique, deixe seu depoimento aqui:"
     show:
       attention: "Atenção"
+      user_social:
+        email: "Me envie um email"
+        facebook: "Perfil no facebook"
+        twitter: "Perfil no twitter"
       tabs:
         me_backed_projects: "Me inscrevi"
         me_created_projects: "Criei"
