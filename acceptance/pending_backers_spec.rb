@@ -19,14 +19,13 @@ feature "Pending Backers" do
 
     user_to_admin(current_user)
     visit pending_backers_projects_path
-    verify_translations
 
     page.should have_no_css('.failure.wrapper')
     within ".title" do
-      page.should have_css('h1', :text => 'Gerenciamento de apoios')
+      page.should have_css('h1', :text => 'Gerenciamento de inscrições')
     end
 
-    page.should have_content "10 apoiadores"
+    page.should have_content "10 inscritos"
     all(".bootstrap-twitter table tbody tr").should have(10).itens
 
   end
@@ -41,11 +40,9 @@ feature "Pending Backers" do
 
     visit project_path(project)
     verify_translations
-    click_on "Apoiadores"
-    verify_translations
 
     page.should have_css("#project_backers")
-    page.should have_content "Ninguém apoiou este projeto ainda. Que tal ser o primeiro?"
+    page.should have_content "Ninguém se inscreveu ainda. Você pode ser a primeiríssima pessoa a dar vida ao encontro."
 
     visit pending_backers_projects_path
 
@@ -63,7 +60,6 @@ feature "Pending Backers" do
     uncheck "anonymous__#{backer.id}"
     check "refunded__#{backer.id}"
 
-    verify_translations
 
     find("#anonymous__#{backer.id}")[:checked].should == nil
     find("#refunded__#{backer.id}")[:checked].should == "true"

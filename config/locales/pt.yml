@@ -1,6 +1,8 @@
 pt:
   or: ou
   until: "até"
+  no: "Não"
+  yes: "Sim"
   newsletter_ok_header: "Cadastro efetuado!"
   newsletter_ok_body: "Seu email foi cadastrado com sucesso, obrigado!"
   newsletter_error_header: "Ooops! Ocorreu um erro."
@@ -62,8 +64,6 @@ pt:
       title: "Canais"
       description: "Veja os encontros que eles assinam embaixo:"
     mother_look_us: "Mãe, olha a gente:"
-  no: "Não"
-  yes: "Sim"
   accept_terms_html: "Eu li %{guidelines} e os %{terms} do Nós.vc e estou de acordo."
   slider:
     top:
