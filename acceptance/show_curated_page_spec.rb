@@ -25,9 +25,9 @@ feature "Show curated page" do
       within 'h1' do
         page.should have_content(cp.name)
       end
-      within 'h2' do
-        page.should have_content(cp.description)
-      end
+    end
+    within '.description' do
+      page.should have_content(cp.description)
     end
 
     within ".curated_project_list" do
