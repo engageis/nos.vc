@@ -6,14 +6,7 @@ feature "New Project Feature", :driver => :selenium do
 
   scenario "I'm not logged in and I want to send a project. It should ask for login." do
     visit homepage
-    click_link 'envie'
-    verify_translations
-    current_path.should == guidelines_path
-
-    within ".bootstrap-form" do
-      check "Eu li e entendi como funciona o Catarse."
-      click_button "Quero enviar meu projeto"
-    end
+    click_link 'Criar um encontro'
     verify_translations
     current_path.should == login_path
   end
@@ -28,10 +21,7 @@ feature "New Project Feature", :driver => :selenium do
     current_path.should == new_project_path
     within '.title' do
       within 'h1' do
-        page.should have_content("Envie seu projeto")
-      end
-      within "h2" do
-        page.should have_content("A hora para fazer acontecer é agora! Estamos loucos para saber o que você está aprontando...")
+        page.should have_content("Agora é pra valer. Construa a página do seu encontro.")
       end
     end
 
@@ -44,6 +34,9 @@ feature "New Project Feature", :driver => :selenium do
       fill_in 'project_headline', :with => 'this is our nice headline'
       fill_in 'project_goal', :with => '1000'
       fill_in 'project_expires_at', :with => '21/12/2012'
+      fill_in 'project_when_short', :with => "25/12/2012"
+      fill_in 'project_when_long', :with => "Segunda, 2 de janeiro de 2012. Das 9:00 às 17:00"
+      fill_in 'project_location', :with => "Porto Alegre"
       fill_in 'project_rewards_attributes_0_description', :with => 'this is an exciting reward'
       fill_in 'project_rewards_attributes_0_minimum_value', :with => '10'
       select c.name, :from => 'project_category_id'
