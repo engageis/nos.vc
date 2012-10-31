@@ -8,6 +8,7 @@ feature "with login page" do
   scenario "Login with user that use another provider" do
     click_login
     verify_translations
+    click_link "Sem rede social"
 
     user_facebook = Factory.create(:user, :provider => 'facebook', :uid => '1234566',:email => 'lorem@lorem.com', :password => 'somepassword', :password_confirmation => 'somepassword')
     within ".new_session" do
@@ -24,6 +25,7 @@ feature "with login page" do
   scenario "Login with devise user" do
     click_login
     verify_translations
+    click_link "Sem rede social"
 
     user = Factory.create(:user, :provider => 'devise',:email => 'lorem@lorem.com', :password => '123lorem', :password_confirmation => '123lorem')
     within ".new_session" do
@@ -33,19 +35,19 @@ feature "with login page" do
     end
 
     page.should have_css('.user')
-    page.should have_link(I18n.t('layouts.header.account'))
   end
 
   scenario "Register new user account" do
     click_login
     verify_translations
+    click_link "Me cadastrar"
 
     within ".new_registration" do
       fill_in "Nome", with: "Foo Bar"
       fill_in "Email", with: "foo@bar.com"
       fill_in "Senha", with: "foo!bar"
       fill_in "user_password_confirmation", with: "foo!bar"
-      click_button "Efetuar cadastro"
+      click_button "Me cadastrar"
     end
     verify_translations
     page.should have_css('.user')
@@ -57,6 +59,7 @@ feature "with login page" do
     user = Factory.create(:user, :provider => 'devise',:email => 'lorem@lorem.com', :password => '123lorem', :password_confirmation => '123lorem')
     click_login
     verify_translations
+    click_link "Sem rede social"
 
     click_link("Esqueceu sua senha?")
     verify_translations
@@ -72,6 +75,8 @@ feature "with devise routes" do
   scenario "Try login with email that another provider" do
     visit new_user_session_path
     verify_translations
+    click_link "Sem rede social"
+
     user_facebook = Factory.create(:user, :provider => 'facebook', :uid => '1234566',:email => 'lorem@lorem.com', :password => 'somepassword', :password_confirmation => 'somepassword')
 
     fill_in 'user_email', :with => user_facebook.email
@@ -85,6 +90,7 @@ feature "with devise routes" do
   scenario "Login with devise user" do
     visit new_user_session_path
     verify_translations
+    click_link "Sem rede social"
     user = Factory.create(:user, :provider => 'devise',:email => 'lorem@lorem.com', :password => '123lorem', :password_confirmation => '123lorem')
 
     fill_in 'user_email', :with => user.email
@@ -92,19 +98,19 @@ feature "with devise routes" do
     click_button 'user_submit'
 
     page.should have_css('.user')
-    page.should have_link(I18n.t('layouts.header.account'))
   end
 
   scenario "Register new user using devise" do
     visit new_user_registration_path
     verify_translations
+    click_link "Me cadastrar"
 
     within ".new_registration" do
       fill_in "Nome", with: "Foo Bar"
       fill_in "Email", with: "foo@bar.com"
       fill_in "Senha", with: "foo!bar"
       fill_in "user_password_confirmation", with: "foo!bar"
-      click_button "Efetuar cadastro"
+      click_button "Me cadastrar"
     end
     verify_translations
     page.should have_css('.user')
