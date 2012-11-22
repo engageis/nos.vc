@@ -173,11 +173,12 @@ CATARSE.ProjectsNewView = Backbone.View.extend({
         } else {
           if(/maximum_backers/.test($(this).attr('id')) && (!$(this).val())){
             $(this).addClass("ok").removeClass("error")
-          } else if(/expires_at/.test($(this).attr('id')) && (!$(this).val() || /expires_at/.test($(this).attr('id')) && $(this).val() )){
+          } else if(/private/.test($(this).attr('id')) && (!$(this).val()) || $(this).attr('id') === undefined || /expires_at/.test($(this).attr('id')) && (!$(this).val() || /expires_at/.test($(this).attr('id')) && $(this).val() )){
             $(this).addClass("ok").removeClass("error")
           }else {
             $(this).addClass("error").removeClass("ok")
             okey = false
+            console.log($(this).attr('id'));
           }
         }
       })
