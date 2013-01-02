@@ -33,8 +33,8 @@ feature "New Project Feature", :driver => :selenium do
       fill_in 'project_about', :with => 'about this very cool project'
       fill_in 'project_headline', :with => 'this is our nice headline'
       fill_in 'project_goal', :with => '1000'
-      fill_in 'project_expires_at', :with => '21/12/2012'
-      fill_in 'project_when_short', :with => "25/12/2012"
+      fill_in 'project_expires_at', :with => '21/12/2020'
+      fill_in 'project_when_short', :with => "25/12/2020"
       fill_in 'project_when_long', :with => "Segunda, 2 de janeiro de 2012. Das 9:00 às 17:00"
       fill_in 'project_location', :with => "Porto Alegre"
       fill_in 'project_rewards_attributes_0_description', :with => 'this is an exciting reward'
@@ -50,7 +50,7 @@ feature "New Project Feature", :driver => :selenium do
     sleep 2
     p = Project.first
     p.name.should == 'test project'
-    p.expires_at.utc.should == (Time.zone.parse('2012-12-21') + (23.hours + 59.minutes + 59.seconds)).utc
+    p.expires_at.utc.should == (Time.zone.parse('2020-12-21') + (23.hours + 59.minutes + 59.seconds)).utc
     page.should have_content("test project")
 
   end
