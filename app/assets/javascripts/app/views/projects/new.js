@@ -8,6 +8,7 @@ CATARSE.ProjectsNewView = Backbone.View.extend({
       new_reward = new_reward.replace(/\[0\]/g, '[' + rewards_id + ']')
       new_reward = $(new_reward)
       new_reward.find('input').val(null)
+      new_reward.find('.private').val("1").removeAttr('checked')
       new_reward.find('textarea').html(null)
       new_reward.find('input').numeric(false)
       new_reward.find('input, textarea').removeClass('ok').removeClass('error')
