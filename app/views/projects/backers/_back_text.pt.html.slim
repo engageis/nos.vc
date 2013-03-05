@@ -1,5 +1,5 @@
 h3 Como é feito o pagamento?
-p Você escolhe sua inscrição e nós te direcionamos para efetuar o pagamento pelo #{link_to "MoIP", "http://www.moip.com.br/", :target => :_blank}. Um sistema seguro para pagamentos online de todos os tipos que aceita cartões, boleto e transferência bancária. No cartão, você pode parcelar em até 6x, com juros de 1,99% ao mês.
+p Você escolhe sua inscrição e nós te direcionamos para efetuar o pagamento pelo #{link_to "MoIP", "http://www.moip.com.br/", :target => :_blank}. Um sistema seguro para pagamentos online de todos os tipos que aceita cartões e transferência bancária. No cartão, você pode parcelar em até 6x, com juros de 1,99% ao mês.
 h3 Quando a inscrição é efetivada?
 p Assim que o #{link_to "MoIP", "http://www.moip.com.br/", :target => :_blank} confirmar a transação. Pode demorar alguns minutos ou alguns dias, depende da forma de pagamento e dos bancos. Se a inscrição for gratuita, é efetivada na hora.
 h3 Como faço para inscrever outra pessoa?
@@ -7,6 +7,6 @@ p Você não pode fazer inscrição para outra pessoa. Mas pode pagar a inscriç
 h3 O que acontece se o encontro não atingir o número mínimo de inscritos?
 p Caso não atinja o número mínimo de inscritos até #{@project.display_expires_at}, o encontro não será realizado. Você receberá seu dinheiro de volta na forma de créditos no Nós.vc. Isso mesmo, 100% do valor volta pra ser utilizado em outra inscrição. Ou, se a inscrição for gratuita, você vai receber good vibes para gastar como quiser.
 h3 E se eu não quiser usar os créditos no Nós.vc?
-p Tudo bem! É só entrar em #{link_to t('credits.title'), credits_path, :target => :_blank}, no seu perfil, e solicitar um estorno, em até 180 dias após sua inscrição. Se você pagou com cartão de crédito, o estorno será feito na sua próxima fatura. Se pagou com débito em conta ou boleto bancário, a única maneira de fazer o estorno é através de uma conta no MoIP que você pode abrir gratuitamente. A gente vai transferir o valor da nossa conta para a sua e, de lá, você transfere para sua conta no banco. De qualquer forma, você não terá nenhuma despesa.
+p Tudo bem! É só entrar em #{link_to t('credits.title'), credits_path, :target => :_blank}, no seu perfil, e solicitar um estorno, em até 180 dias após sua inscrição. Se você pagou com cartão de crédito, o estorno será feito na sua próxima fatura. Se pagou com débito em conta, a única maneira de fazer o estorno é através de uma conta no MoIP que você pode abrir gratuitamente. A gente vai transferir o valor da nossa conta para a sua e, de lá, você transfere para sua conta no banco. De qualquer forma, você não terá nenhuma despesa.
 h3 Depois de fazer a inscrição, como faço para participar?
 p É só chegar e se apresentar! Qualquer informação adicional será enviada por #{link_to @project.user.display_name, user_path(@project.user)}.

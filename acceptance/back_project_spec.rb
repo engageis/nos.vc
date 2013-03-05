@@ -92,7 +92,7 @@ feature "Back project" do
       page.should have_content("Muito obrigado")
     end
 
-    page.should have_content "Você está dando vida a este encontro e vai receber uma confirmação por email assim que a inscrição for processada. Se foi com boleto bancário, pode demorar até 3 dias úteis. Dúvidas? Entre em contato!"
+    page.should have_content "Você está dando vida a este encontro e vai receber uma confirmação por email assim que a inscrição for processada. Entre em contato!"
 
   end
 

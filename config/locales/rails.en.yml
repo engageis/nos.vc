@@ -32,10 +32,9 @@ en:
       - Saturday
     formats:
       default: "%d/%m/%Y"
-      long: %B "%d  %Y"
-      short: %B "%d"
+      long: "%d  %Y"
+      short: "%d"
     month_names:
-      - 
       - January
       - February
       - March
