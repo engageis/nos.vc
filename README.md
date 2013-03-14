@@ -17,7 +17,7 @@ Then just checkout the code, configure dependencies and run the tests:
 
 2. Enter the repo directory and accept the [RVM](https://rvm.io/):
 
- `cd initjs`
+ `cd nos.vc`
 
  `yes` if solicited
 
@@ -33,7 +33,7 @@ Then just checkout the code, configure dependencies and run the tests:
 
 1. Go to app folder
 
-	`cd ~/code/nos.vc`
+	`cd nos.vc`
 
 2. Prepare the database
 	
