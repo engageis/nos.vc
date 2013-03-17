@@ -64,45 +64,6 @@ class ProjectsController < ApplicationController
     end
   end
 
-  def start
-    return unless require_login
-    @title = t('projects.start.title').gsub(/<\/?[^>]*>/, "")
-  end
-
-  def send_mail
-    current_user.update_attributes({ email: params[:contact] }) if current_user.email.nil?
-    ProjectsMailer.start_project_email(
-      params[:name],
-      params[:about],
-      params[:when],
-      params[:where],
-      params[:video],
-      params[:leader_name],
-      params[:more_info],
-      params[:goal],
-      params[:maximum_backers],
-      params[:how_works],
-      params[:contact],
-      params[:know_us_via],
-      current_user,
-      "#{I18n.t('site.base_url')}#{user_path(current_user)}").deliver
-
-    # Send project receipt
-    notification_text = I18n.t('project.start.notification_text', :locale => current_user.locale)
-    email_subject = I18n.t('project.start.email_subject', :locale => current_user.locale)
-    email_text = I18n.t('project.start.email_text',
-                        :facebook => I18n.t('site.facebook', :locale => current_user.locale),
-                        :twitter => "http://twitter.com/#{I18n.t('site.twitter', :locale => current_user.locale)}",
-                        :blog => I18n.t('site.blog', :locale => current_user.locale),
-                        :explore_link => explore_url,
-                        :email => (I18n.t('site.email.contact', :locale => current_user.locale)),
-                        :locale => current_user.locale,
-                        :help => (I18n.t('site.help', :locale => current_user.locale)))
-    Notification.create :user => current_user, :text => notification_text, :email_subject => email_subject, :email_text => email_text
-    flash[:success] = t('projects.send_mail.success')
-    redirect_to :root
-  end
-
   def new
     return unless require_login
     new! do
@@ -122,6 +83,7 @@ class ProjectsController < ApplicationController
     unless @project.new_record?
       @project.reload
       @project.update_attributes({ short_url: bitly })
+      ProjectsMailer.new_project(params[:project][:name], project_url(@project), current_user).deliver
     end
   end
 

@@ -56,8 +56,6 @@ Catarse::Application.routes.draw do
       end
     end
     collection do
-      get 'start'
-      post 'send_mail'
       get 'vimeo'
       get 'cep'
       get 'pending'

@@ -614,9 +614,9 @@ pt:
     video_embed:
       a_project_by_html: "Um encontro de %{link} no"
   projects_mailer:
-    start_project_email:
-      subject: "Encontro enviado por %{name}"
-      subject_html: "Encontro enviado por %{link}"
+    new_project:
+      subject: "Encontro criado por %{name}"
+      text: "%{name} cadastrou um novo encontro, segue o link do encontro %{link}"
   registrations:
     new:
       site_title: Cadastre-se
