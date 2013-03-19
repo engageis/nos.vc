@@ -83,7 +83,7 @@ class ProjectsController < ApplicationController
     unless @project.new_record?
       @project.reload
       @project.update_attributes({ short_url: bitly })
-      ProjectsMailer.new_project(params[:project][:name], project_url(@project), current_user).deliver
+      ProjectsMailer.new_project(params[:project][:name], project_url(@project), @project, current_user).deliver
     end
   end
 
