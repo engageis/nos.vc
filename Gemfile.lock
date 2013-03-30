@@ -77,6 +77,7 @@ GEM
       rinku
       tag_helper
     bcrypt-ruby (3.0.1)
+    bootstrap-sass (2.1.1.0)
     bourbon (2.1.1)
       sass (>= 3.1)
     braintree (2.16.0)
@@ -167,6 +168,9 @@ GEM
       net-ssh (>= 2.1.4)
       nokogiri (>= 1.4.4)
       ruby-hmac
+    font-awesome-sass-rails (2.0.0.0)
+      railties (>= 3.1.1)
+      sass-rails (>= 3.1.1)
     foreigner (1.2.0)
       activerecord (>= 3.0.0)
     formatador (0.2.3)
@@ -180,6 +184,7 @@ GEM
       vimeo
     hashie (1.2.0)
     hike (1.2.1)
+    hpricot (0.8.6)
     http_accept_language (1.0.2)
     httparty (0.6.1)
       crack (= 0.1.8)
@@ -193,6 +198,9 @@ GEM
     jquery-rails (2.0.2)
       railties (>= 3.2.0, < 5.0)
       thor (~> 0.14)
+    jquery-ui-rails (2.0.2)
+      jquery-rails
+      railties (>= 3.1.0)
     json (1.7.7)
     json_pure (1.7.4)
     jwt (0.1.5)
@@ -240,6 +248,7 @@ GEM
       nokogiri (~> 1.4.2)
     multi_json (1.6.0)
     multipart-post (1.1.5)
+    nested_form (0.2.3)
     net-scp (1.0.4)
       net-ssh (>= 1.99.1)
     net-ssh (2.5.2)
@@ -286,6 +295,9 @@ GEM
     rack-openid (1.3.1)
       rack (>= 1.1.0)
       ruby-openid (>= 2.1.8)
+    rack-pjax (0.5.9)
+      hpricot (~> 0.8.6)
+      rack (~> 1.3)
     rack-protection (1.2.0)
       rack
     rack-ssl (1.3.3)
@@ -301,6 +313,20 @@ GEM
       activesupport (= 3.2.12)
       bundler (~> 1.0)
       railties (= 3.2.12)
+    rails_admin (0.1.2)
+      bootstrap-sass (~> 2.0)
+      builder (~> 3.0)
+      coffee-rails (~> 3.1)
+      font-awesome-sass-rails (~> 2.0)
+      haml (~> 3.1)
+      jquery-rails (~> 2.0)
+      jquery-ui-rails (~> 2.0)
+      kaminari (~> 0.12)
+      nested_form (~> 0.2.3)
+      rack-pjax (~> 0.5)
+      rails (~> 3.1)
+      remotipart (~> 1.0)
+      sass-rails (~> 3.1)
     rails_autolink (1.0.9)
       rails (~> 3.1)
     railties (3.2.12)
@@ -315,6 +341,7 @@ GEM
     rdoc (3.12.1)
       json (~> 1.4)
     redcarpet (2.1.1)
+    remotipart (1.0.5)
     responders (0.9.2)
       railties (~> 3.1)
     rest-client (1.6.7)
@@ -489,6 +516,7 @@ DEPENDENCIES
   pg
   rack-timeout
   rails (= 3.2.12)
+  rails_admin
   rails_autolink (~> 1.0.7)
   rake (= 0.9.2.2)
   rcov (= 0.9.11)

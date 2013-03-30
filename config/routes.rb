@@ -1,4 +1,6 @@
 Catarse::Application.routes.draw do
+  mount RailsAdmin::Engine => '/rails_admin', :as => 'rails_admin'
+
   devise_for :users, :controllers => {:registrations => "registrations", :passwords => "passwords"} do
     get "/login" => "devise/sessions#new"
   end
