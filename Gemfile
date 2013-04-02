@@ -79,7 +79,7 @@ gem 'rails_admin'
 # Payment
 gem 'activemerchant', '1.17.0', require: 'active_merchant'
 gem 'httpclient', '2.2.5'
-gem 'selenium-webdriver', '~> 2.25.0'
+gem 'selenium-webdriver', '~> 2.31.0'
 gem 'bourbon'
 gem 'paypal-express', :require => 'paypal'
 
@@ -104,7 +104,7 @@ group :test, :development do
   gem 'mocha', '0.13.3', :require => false
   gem 'shoulda-matchers'
   gem 'factory_girl_rails', '1.7.0'
-  gem 'capybara', ">= 1.0.1"
+  gem 'capybara', ">= 2.0.3"
 end
 
 group :development do

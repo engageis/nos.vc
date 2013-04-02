@@ -5,6 +5,7 @@ require 'factory_girl_rails'
 require 'rspec/rails'
 require 'capybara/rspec'
 require 'capybara/rails'
+require "mocha/setup"
 
 
 # Put your acceptance spec helpers inside /spec/acceptance/support
