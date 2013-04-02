@@ -1,5 +1,5 @@
 Catarse::Application.routes.draw do
-  mount RailsAdmin::Engine => '/rails_admin', :as => 'rails_admin'
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   devise_for :users, :controllers => {:registrations => "registrations", :passwords => "passwords"} do
     get "/login" => "devise/sessions#new"
@@ -11,8 +11,6 @@ Catarse::Application.routes.draw do
   elsif Rails.env == "development"
     resources :emails, :only => [ :index ]
   end
-
-  ActiveAdmin.routes(self)
 
   mount CatarseMoip::Engine => "/", :as => "catarse_moip"
 
