@@ -1,0 +1,11 @@
+h3 Relatórios
+
+ul
+  li = link_to 'Usuários que mais apoiaram', main_app.most_backed_report_path
+  li = link_to 'Todos os apoios confirmados', main_app.all_confirmed_backers_report_path
+  li = link_to 'Todos os realizadores', main_app.all_projects_owner_report_path
+  li = link_to 'Todos os emails', main_app.all_emails_to_newsletter_path
+
+h3 Registros
+
+= render file: "#{RailsAdmin::Engine.root}/app/views/rails_admin/main/dashboard.html.haml"
