@@ -1,6 +1,9 @@
 # RailsAdmin config file. Generated on March 29, 2013 15:54
 # See github.com/sferik/rails_admin for more informations
 
+require Rails.root.join('lib', 'rails_admin_report_backers_financial.rb')
+require Rails.root.join('lib', 'rails_admin_report_backers_location.rb')
+
 RailsAdmin.config do |config|
 
 
@@ -31,5 +34,26 @@ RailsAdmin.config do |config|
 
   # Include specific models (exclude the others):
   # config.included_models = ['Backer', 'Category', 'Configuration', 'CuratedPage', 'DynamicField', 'DynamicValue', 'InstitutionalVideo', 'Notification', 'OauthProvider', 'PaymentDetail', 'PaymentLog', 'Project', 'ProjectTotal', 'ProjectsCuratedPage', 'Reward', 'State', 'StaticContent', 'Statistics', 'Update', 'User', 'UserTotal']
-  #
+
+  config.actions do
+    # root actions
+    dashboard # mandatory
+    # collection actions
+    index # mandatory
+    new
+    export
+    history_index
+    bulk_delete
+    # member actions
+    show
+    edit
+    delete
+    history_show
+    show_in_app
+
+    # Set the custom action here
+    report_backers_financial
+    report_backers_location
+  end
+
 end

@@ -39,6 +39,10 @@ pt:
       item: "Item"
       message: "Mensagem"
     actions:
+      report_backers_financial:
+        menu: "Relatório financeiro dos inscritos"
+      report_backers_location:
+        menu: "Relatório de locais dos inscritos"
       dashboard:
         title: "Administração do Site"
         menu: "Dashboard"
