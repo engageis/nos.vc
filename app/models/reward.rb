@@ -11,7 +11,7 @@ class Reward < ActiveRecord::Base
   validates_numericality_of :maximum_backers, :only_integer => true, :greater_than => 0, :allow_nil => true
   scope :remaining, where("maximum_backers IS NULL OR (maximum_backers IS NOT NULL AND (SELECT COUNT(*) FROM backers WHERE confirmed AND reward_id = rewards.id) < maximum_backers)")
   scope :not_expired, where("expires_at >= current_timestamp OR expires_at IS NULL")
-  scope :public, -> { where(:private => false) }
+  scope :public, -> { where('private = ? or private IS NULL', false) }
   scope :not_public, -> { where(:private => true) }
   scope :with_token, ->(token) { where(:token => token) }
 
