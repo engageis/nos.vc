@@ -20,7 +20,7 @@ gem 'dalli', '~> 2.2.1'
 gem 'draper', '0.17.0'
 
 # Frontend stuff
-gem 'jquery-rails'
+gem 'jquery-rails', '2.0.2'
 gem 'slim'
 gem 'slim-rails'
 
