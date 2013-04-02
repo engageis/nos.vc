@@ -3,7 +3,7 @@ source 'http://gems.github.com'
 
 ruby '1.9.3'
 
-gem 'rails', '3.2.12'
+gem 'rails', '3.2.13'
 gem 'rake', '0.9.2.2'
 
 # Database and data related [Putting pg to the end because of a weird bug with Lion, pg and openssl]
@@ -17,7 +17,7 @@ gem 'moip_catarse', '~> 1.0.6', require: 'moip'
 
 gem 'maxim-sexy_pg_constraints'
 gem 'dalli', '~> 2.2.1'
-gem 'draper'
+gem 'draper', '0.17.0'
 
 # Frontend stuff
 gem 'jquery-rails'
@@ -69,7 +69,6 @@ gem 'tumblr-api'
 
 # Translations
 gem 'http_accept_language'
-gem 'web_translate_it'
 gem 'routing-filter' #, :git => 'git://github.com/svenfuchs/routing-filter.git'
 
 # Administration
@@ -100,10 +99,10 @@ group :test, :development do
   gem 'launchy'
   gem 'database_cleaner'
   gem 'steak', "~> 1.1.0"
-  gem 'rspec-rails', "~> 2.10.0"
+  gem 'rspec-rails', "~> 2.13.0"
   gem 'rcov', '= 0.9.11'
-  gem 'mocha', '0.10.4'
-  gem 'shoulda'
+  gem 'mocha', '0.13.3', :require => false
+  gem 'shoulda-matchers'
   gem 'factory_girl_rails', '1.7.0'
   gem 'capybara', ">= 1.0.1"
 end
