@@ -206,8 +206,8 @@ describe Project do
     subject{ build_with_video("http://vimeo.com/17298435") }
 
     its(:vimeo) do
-      subject.id.should == "17298435"
-      subject.embed_url.should == "http://player.vimeo.com/video/17298435"
+      subject.vimeo.id.should == "17298435"
+      subject.vimeo.embed_url.should == "http://player.vimeo.com/video/17298435"
     end
 
     it "should get vimeo image URL and store it" do
