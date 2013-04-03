@@ -32,9 +32,6 @@ gem 'omniauth-facebook', '~> 1.2.0'
 gem 'devise', '1.5.3'
 gem 'cancan'
 
-# Error reporting
-gem "airbrake"
-
 # Email marketing
 gem 'mailchimp'
 
