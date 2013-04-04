@@ -3,7 +3,6 @@
 # See github.com/sferik/rails_admin for more informations
 
 require Rails.root.join('lib', 'rails_admin_report_backers_financial.rb')
-require Rails.root.join('lib', 'rails_admin_report_backers_location.rb')
 
 RailsAdmin.config do |config|
 
@@ -54,7 +53,6 @@ RailsAdmin.config do |config|
 
     # Set the custom action here
     report_backers_financial
-    report_backers_location
   end
 
 end
