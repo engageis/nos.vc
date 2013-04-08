@@ -5,8 +5,8 @@
     h2= t('projects.start.the_meeting')
     fieldset
       = form.input :name, :as => :string
-      = form.input :headline, :input_html => { :maxlength => 140 }
       = form.input :about
+      = form.input :headline, :input_html => { :maxlength => 140 }
       = form.input :when_short
       = form.input :when_long
       = form.input :category, :collection => Category.all(:order => :name)
