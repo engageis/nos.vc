@@ -10,7 +10,7 @@
       = form.input :when_short
       = form.input :when_long
       = form.input :category, :collection => Category.all(:order => :name)
-      = form.input :location
+      = form.input :location, :hint => t('formtastic.hints.project.location').html_safe
       = form.input :video_url, :as => :string
       = form.input :image_url, :as => :string
     h2= t('projects.start.the_people')

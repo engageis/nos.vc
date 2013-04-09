@@ -266,7 +266,7 @@ pt:
         video_url: 'Cole aqui o link do vídeo no Vimeo. Faça um vídeo mágico que explica o encontro, mostra seu rosto e provoca aplausos espontâneos.'
         when_short: "Data(s) do encontro, exemplo: '02 a 04/01/12'"
         when_long: "Descreva detalhadamente a(s) data(s) e o(s) horário(s) de início e término do encontro, exemplo: 'Segunda, 2 de janeiro de 2013. Das 9:00 às 17:00')"
-        location: "Local, endereço, cidade e estado."
+        location: "Local, endereço, cidade e estado. Se você ainda não tem um local, temos algumas sugestões <a href='http://blog.nos.vc/category/locais/' target='_blank'>aqui</a>."
         image_url: "Cole aqui o link da imagem fantástica que ilustra o encontro. Recomendamos imagens grandes, com, pelo menos, 1200 pixels de largura. Você pode usar um link do Flickr, por exemplo."
         leader_id: "Id, número do perfil da pessoa que vai conduzir o encontro. Pode ser você! Exemplo: 'X'. Se a página do perfil é http://nos.vc/pt/users/X"
         leader_bio: "Fale um pouco sobre quem vai conduzir o encontro. Sua vida e experiência com o assunto."
