@@ -19,7 +19,7 @@ pt:
       subtitle: "atingidos de %{total}"
   project_by: "Quem está organizando?"
   with: "Com"
-  leader_id: "Este encontro é com: (Id, número do perfil da pessoa que vai conduzí-lo)"
+  leader_id: "Id, número do perfil da pessoa que vai conduzir o encontro. Pode ser você, ou não. Exemplo: 'X'. Se a página do perfil é http://nos.vc/pt/users/X"
   tell_about_this_back: "Espalhe pra todo mundo que você se inscreveu!"
   share_my_backs: "Confira o encontro"
   tell_about_this_project: "Espalhe seu encontro pra todo mundo!"
@@ -94,7 +94,7 @@ pt:
         name: "Qual é o nome do encontro?"
         user_id: "Id do usuário:"
         video_url: "URL do vídeo:"
-        leader_id: "Este encontro é com:"
+        leader_id: "Id, número do perfil da pessoa que vai conduzir o encontro. Pode ser você, ou não. Exemplo: 'X'. Se a página do perfil é http://nos.vc/pt/users/X"
         leader_bio: "Mini, muito mini, biografia:"
         location: "Onde?"
       reward:
@@ -259,7 +259,7 @@ pt:
       project:
         about: "Capriche, é hora de vender o peixe. Por que me inscrever? Como será o encontro? Qual será a programação? Para quem é indicado? Tem pré-requisistos? Seja verdadeiro, direto e procure organizar o texto por tópicos. Abra seu coração e mostre o valor do encontro."
         category: "Escolha a cidade em que o encontro vai acontecer."
-        expires_at: "Tem que ser tempo suficiente pra divulgar e encontrar as pessoas que vão se inscrever. Por outro lado, tem que dar tempo de cancelar e avisar todo mundo sem prejudicar ninguém, caso não alcance o número mínimo de inscritos. Por isso, sugerimos encerrar as inscrições uma semana antes da data do encontro."
+        expires_at: "Tem que ser tempo suficiente pra divulgar e encontrar as pessoas que vão se inscrever. Por outro lado, tem que dar tempo de cancelar e avisar todo mundo sem prejudicar ninguém, caso não alcance o número mínimo de inscritos. Por isso, sugerimos encerrar as inscrições até 2 dias úteis antes da data do encontro."
         goal: "De verdade. Quantas pessoas são realmente necessárias para tornar o encontro possível? Só será realizado se alcançar o número mínimo."
         headline: "Até 140 caracteres, direto, reto e convidativo. Evite repetir o que já tem no nome. Este é o texto que vai sempre acompanhá-lo."
         name: "Título bacanudo, auto-explicativo e curto, vale trocadilho."
