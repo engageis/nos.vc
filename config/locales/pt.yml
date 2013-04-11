@@ -94,7 +94,7 @@ pt:
         name: "Qual é o nome do encontro?"
         user_id: "Id do usuário:"
         video_url: "URL do vídeo:"
-        leader_id: "Id, número do perfil da pessoa que vai conduzir o encontro. Pode ser você, ou não. Exemplo: 'X'. Se a página do perfil é http://nos.vc/pt/users/X"
+        leader_id: "Id, número do perfil da pessoa que vai conduzir o encontro."
         leader_bio: "Mini, muito mini, biografia:"
         location: "Onde?"
       reward:
