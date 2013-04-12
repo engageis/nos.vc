@@ -61,7 +61,7 @@ class Project < ActiveRecord::Base
 
   search_methods :visible, :recommended, :expired, :not_expired, :expiring, :not_expiring, :recent, :successful
 
-  validates_presence_of :name, :user, :category, :about, :headline, :goal, :expires_at, :video_url, :when_short, :when_long, :location
+  validates_presence_of :name, :user, :category, :about, :headline, :goal, :expires_at, :when_short, :when_long, :location
   validates_length_of :headline, :maximum => 140
   validates_uniqueness_of :permalink, :allow_blank => true, :allow_nil => true
   validates_numericality_of :maximum_backers, :only_integer => true, :greater_than => 0, :allow_nil => true
@@ -73,6 +73,7 @@ class Project < ActiveRecord::Base
   end
 
   def store_image_url
+		return unless video_url.present?
     self.image_url = vimeo.thumbnail unless self.image_url
   end
 

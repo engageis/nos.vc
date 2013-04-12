@@ -290,7 +290,7 @@ pt:
       project:
         expires_at: "Quando encerram as inscrições?"
         goal: "Qual é o número mínimo de inscritos?"
-        video_url: "Vídeo:"
+        video_url: "Já tem vídeo?"
         when_short: "Data(s) do encontro"
         when_long: "Data(s) com horário(s) de início e término"
         location: "Onde?"

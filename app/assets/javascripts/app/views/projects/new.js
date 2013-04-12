@@ -104,7 +104,12 @@ CATARSE.ProjectsNewView = Backbone.View.extend({
           }
           everything_ok()
         })
-      }
+      } else {
+				if($('#project_video_url').val() == ""){
+					video_valid = true;
+				 $('#project_video_url').removeClass("ok").removeClass("error").addClass('ok')
+				}
+			}
       everything_ok()
     }
     video_ok = function(){
