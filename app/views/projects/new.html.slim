@@ -18,8 +18,7 @@
             p= t('.sidebar.third_step')
           li
             span.four
-            p= t('.sidebar.fourth_step')
-            a= t('.sidebar.link')
+            p= t('.sidebar.fourth_step', link: link_to('Guias', 'http://blog.nos.vc/category/guias/')).html_safe
       .main
 	      .title
 	        h1= t('.title').html_safe

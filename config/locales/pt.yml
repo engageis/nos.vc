@@ -458,12 +458,11 @@ pt:
     new:
       title: "Compartilhe sua <span>paixão</span> e encontre outros <span>apaixonados</span>."
       sidebar:
-        title: "Como fazer seu encontro acontecer:"
-        first_step: "Defina quantos tipos de inscrição quiser. Podem ter preços e prazos diferentes ou até serem de graça."
-        second_step: "Crie tipos de inscrições atrativas para alcançar o número mínimo de pessoas mais rapidamente."
-        third_step: "Mas, lembre-se, suas contas devem fechar. Considere todos os custos e o valor mínimo arrecadado."
-        fourth_step: "Você já conhece as dicas da nossa comunidade?"
-        link: "Descubra nosso Help!"
+        title: "Como criar e organizar um encontro sobre o que você quiser:"
+        first_step: "Preencha o formulário com todo seu gingado e talento. Crie um curso, debate, workshop, open space, imersão, sessão de cinema ou qualquer outra desculpa pra se encontrar."
+        second_step: "Vamos ler sua proposta e responder por email com nossos próprios dedos. Quando estiver tudo ok, as inscrições serão abertas."
+        third_step: "O encontro será organizado por você no mundo real. Você define o prazo de inscrições e o número mínimo de participantes."
+        fourth_step: "Tá meio perdido? Leia nossos %{link} pra fazer o seu encontro acontecer."
     footer_featured:
       mi_casa_su_casa:
         title: "Mi casa, su casa."
