@@ -6,6 +6,9 @@ require Rails.root.join('lib', 'rails_admin_report_backers_financial.rb')
 
 RailsAdmin.config do |config|
 
+  config.authenticate_with do
+    require_admin
+  end
 
   ################  Global configuration  ################
 
@@ -13,8 +16,6 @@ RailsAdmin.config do |config|
   config.main_app_name = ['Nós.vc', 'Admin']
   # or for a more dynamic name:
   # config.main_app_name = Proc.new { |controller| [Rails.application.engine_name.titleize, controller.params['action'].titleize] }
-
-  config.authorize_with :cancan, Ability
 
   config.current_user_method { current_user }
 
