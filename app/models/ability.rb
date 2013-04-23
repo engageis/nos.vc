@@ -13,6 +13,8 @@ class Ability
 
     if current_user.admin?
       can :manage, :all
+      can :access, :rails_admin
+      can :access, :dashboard
     elsif current_user.projects.present? or current_user.manages_projects.present?
       can :manage, Project do |project|
         current_user.manages_projects.include?(project) or project.user == current_user
