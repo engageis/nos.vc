@@ -1,9 +1,9 @@
 Catarse::Application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+
   devise_for :users, :controllers => {:registrations => "registrations", :passwords => "passwords"} do
     get "/login" => "devise/sessions#new"
   end
-
-  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   # Non production routes
   if Rails.env == "test"
