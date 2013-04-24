@@ -65,4 +65,19 @@ RailsAdmin.config do |config|
     end
   end
 
+  config.model "Reward" do
+    edit do
+      fields_of_type :datetime do
+        date_format :default
+      end
+    end
+  end
+
+  config.model "Backer" do
+    edit do
+      fields_of_type :datetime do
+        date_format :default
+      end
+    end
+  end
 end
