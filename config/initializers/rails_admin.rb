@@ -58,6 +58,33 @@ RailsAdmin.config do |config|
   end
 
   config.model "Project" do
+    field :name
+    field :user
+    field :category
+    field :goal
+    field :expires_at
+    field :about
+    field :headline
+    field :video_url
+    field :image_url
+    field :short_url
+    field :can_finish
+    field :finished
+    field :visible
+    field :rejected
+    #field :permalink
+    field :recommended
+    field :successful
+    field :when_short
+    field :when_long
+    field :location
+    field :maximum_backers
+    field :leader_bio
+    field :leader
+    field :rewards
+    field :curated_pages
+
+
     edit do
       fields_of_type :datetime do
         date_format :default

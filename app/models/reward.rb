@@ -48,9 +48,9 @@ class Reward < ActiveRecord::Base
     else
       status = "<div class='unlimited'>#{I18n.t('reward.unlimited')}</div>"
     end
-    maximum_backers_html = "#{status}<div class='expires_at'><span>#{I18n.t('until')}</span> #{display_expires_at || project.display_expires_at}</div><div class='clearfix'></div>"
+    maximum_backers_html = "#{status}<div class='expires_at'><span>#{I18n.t('until')}</span> #{display_expires_at || (project.display_expires_at if project.present?)}</div><div class='clearfix'></div>"
 
-    "<div class='left'><div class='reward_minimum_value'>#{minimum_value > 0 ? display_minimum : I18n.t('reward.free')}</div><div class='reward_description'>#{h description}</div>#{'<div class="sold_out">' + I18n.t('reward.sold_out') + '</div>' if sold_out?}</div><div class='right'>#{maximum_backers_html}</div><div class='clear'></div>".html_safe
+    "<div class='left'><div class='reward_minimum_value'>#{minimum_value.to_f > 0 ? display_minimum : I18n.t('reward.free')}</div><div class='reward_description'>#{h description}</div>#{'<div class="sold_out">' + I18n.t('reward.sold_out') + '</div>' if sold_out?}</div><div class='right'>#{maximum_backers_html}</div><div class='clear'></div>".html_safe
   end
   def display_minimum
     number_to_currency minimum_value, :unit => 'R$', :precision => 2, :delimiter => '.'
