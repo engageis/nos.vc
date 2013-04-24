@@ -57,4 +57,12 @@ RailsAdmin.config do |config|
     report_backers_financial
   end
 
+  config.model "Project" do
+    edit do
+      fields_of_type :datetime do
+        date_format :default
+      end
+    end
+  end
+
 end
