@@ -267,8 +267,9 @@ class Project < ActiveRecord::Base
           email_subject = I18n.t('project.finish.unsuccessful.email_subject', :locale => backer.user.locale)
           email_text = I18n.t('project.finish.unsuccessful.email_text', :project_link => link_to(name, "#{I18n.t('site.base_url')}/projects/#{self.to_param}", :style => 'color: #008800;'), :value => backer.display_value, :credits_link => link_to(I18n.t('clicking_here', :locale => backer.user.locale), "#{I18n.t('site.base_url')}/users/#{backer.user.to_param}#credits", :style => 'color: #008800;'), :locale => backer.user.locale)
           backer.user.notifications.create :project => self, :text => notification_text, :email_subject => email_subject, :email_text => email_text
+          backer.update_attributes({ can_refund: true })
         end
-        backer.update_attributes({ can_refund: true, notified_finish: true })
+        backer.update_attributes({ notified_finish: true })
       end
     end
     self.update_attributes finished: true, successful: successful?
