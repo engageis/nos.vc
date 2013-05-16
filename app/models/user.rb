@@ -135,7 +135,7 @@ class User < ActiveRecord::Base
       user.uid = auth["uid"]
       user.name = auth["info"]["name"]
       user.email = auth["info"]["email"]
-      user.email = auth["extra"]["user_hash"]["email"] if auth["extra"] and auth["extra"]["raw_info"] and user.email.nil?
+      user.email = auth["extra"]["user_hash"]["email"] if auth["extra"] and auth["extra"]["user_hash"] and user.email.nil?
       user.nickname = auth["info"]["nickname"]
       user.bio = auth["info"]["description"][0..139] if auth["info"]["description"]
       user.image_url = auth["info"]["image"] if auth["info"]["image"]
