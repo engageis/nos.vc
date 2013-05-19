@@ -33,8 +33,7 @@ class User < ActiveRecord::Base
                   :twitter,
                   :facebook_link,
                   :other_link,
-                  :credits,
-                  :admin
+                  :credits
 
   include ActionView::Helpers::NumberHelper
   include ActionView::Helpers::TextHelper
