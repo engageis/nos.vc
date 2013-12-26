@@ -63,4 +63,5 @@ Catarse::Application.configure do
 
   config.action_mailer.default_url_options = {:host => I18n.t("site.host") }
 
+  config.assets.initialize_on_precompile = false
 end

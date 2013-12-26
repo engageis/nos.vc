@@ -9,7 +9,7 @@ class CreateProjects < ActiveRecord::Migration
       t.datetime :expires_at, :null => false
       t.text :about, :null => false
       t.text :headline, :null => false
-      t.text :video_url, :null => false
+      t.text :video_url
       t.text :image_url
       t.text :short_url
       t.boolean :visible, :default => false
@@ -20,7 +20,6 @@ class CreateProjects < ActiveRecord::Migration
     constrain :projects do |t|
       t.user_id :reference => {:users => :id}
       t.category_id :reference => {:categories => :id}
-      t.video_url :not_blank => true
       t.about :not_blank => true
       t.headline :not_blank => true, :length_within => 1..140
     end
