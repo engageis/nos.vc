@@ -211,7 +211,6 @@ GEM
     mailchimp (0.0.8)
       httparty
     maxim-sexy_pg_constraints (0.1.3)
-    memcachier (0.0.2)
     meta_search (1.1.3)
       actionpack (~> 3.1)
       activerecord (~> 3.1)
@@ -475,7 +474,6 @@ DEPENDENCIES
   mailcatcher
   mailchimp
   maxim-sexy_pg_constraints
-  memcachier
   meta_search (= 1.1.3)
   mocha (= 0.13.3)
   moip_catarse (~> 1.0.6)
