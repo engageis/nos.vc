@@ -564,19 +564,19 @@ en:
     failure:
       error: "There was an error while loggin in. Please try again."
   site:
-    host: "nos.vc"
-    base_url: "http://nos.vc"
-    blog: "http://blog.nos.vc/"
-    help: "http://help.nos.vc/"
+    host: "bunker360.com.br"
+    base_url: "http://bunker360.com.br"
+    blog: "http://blog.bunker360.com.br/"
+    help: "http://help.bunker360.com.br/"
     email:
-      contact: somos@nos.vc
-      payments: leo@nos.vc
-      projects: barrosdaniel@gmail.com, mauroalex@gmail.com, leocorrea.leonardo@gmail.com, badjolo@gmail.com, victor@nos.vc, guilacerda@nos.vc, sharlie@nos.vc
-      system: somos@nos.vc
-    facebook: "http://www.facebook.com/nos.vc"
-    name: "Nós.vc"
+      contact: contato@bunker360.com.br
+      payments: vagner@bunker360.com.br
+      projects: lfzawacki@gmail.com
+      system: contato@bunker360.com.br
+    facebook: "https://www.facebook.com/BNKR360"
+    name: "Bunker360"
     title: "Encontros Inspiradores"
-    twitter: "Nos_vc"
+    twitter: "Bunker360"
   static:
     faq:
       title: "Frequent asked questions"
