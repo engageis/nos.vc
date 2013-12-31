@@ -19,7 +19,7 @@ pt:
       subtitle: "atingidos de %{total}"
   project_by: "Quem está organizando?"
   with: "Com"
-  leader_id: "Id, número do perfil da pessoa que vai conduzir o encontro. Pode ser você, ou não. Exemplo: 'X'. Se a página do perfil é http://nos.vc/pt/users/X"
+  leader_id: "Id, número do perfil da pessoa que vai conduzir o encontro. Pode ser você, ou não. Exemplo: 'X'. Se a página do perfil é http://bunker360.com.br/pt/users/X"
   tell_about_this_back: "Espalhe pra todo mundo que você se inscreveu!"
   share_my_backs: "Confira o encontro"
   tell_about_this_project: "Espalhe seu encontro pra todo mundo!"
@@ -266,9 +266,9 @@ pt:
         video_url: 'Se sim, cole aqui o link do vídeo no Vimeo. Se não, deixe o campo em branco.'
         when_short: "Data(s) do encontro, exemplo: '02 a 04/01/12'"
         when_long: "Descreva detalhadamente a(s) data(s) e o(s) horário(s) de início e término do encontro, exemplo: 'Segunda, 2 de janeiro de 2013. Das 9:00 às 17:00')"
-        location: "Local, endereço, cidade e estado. Se você ainda não tem um local, temos algumas sugestões <a href='http://blog.nos.vc/category/locais/' target='_blank'>aqui</a>."
+        location: "Local, endereço, cidade e estado. Se você ainda não tem um local, temos algumas sugestões <a href='http://blog.bunker360.com.br/category/locais/' target='_blank'>aqui</a>."
         image_url: "Cole aqui o link da imagem fantástica que ilustra o encontro. Recomendamos imagens grandes, com, pelo menos, 1200 pixels de largura. Você pode usar um link do Flickr, por exemplo."
-        leader_id: "Id, número do perfil da pessoa que vai conduzir o encontro. Pode ser você! Exemplo: 'X'. Se a página do perfil é http://nos.vc/pt/users/X"
+        leader_id: "Id, número do perfil da pessoa que vai conduzir o encontro. Pode ser você! Exemplo: 'X'. Se a página do perfil é http://bunker360.com.br/pt/users/X"
         leader_bio: "Fale um pouco sobre quem vai conduzir o encontro. Sua vida e experiência com o assunto."
         maximum_backers: "Defina um número limite, mesmo, de pessoas. Quando chegar nele, as inscrições serão encerradas."
       reward:
@@ -304,8 +304,8 @@ pt:
   found_plural: Encontrados
   found_singular: Encontrado
   here: aqui
-  i_backed: "Eu me inscrevi em %{name} no @Nos_vc"
-  i_just_backed: "Eu acabei de me inscrever em %{name} no @Nos_vc"
+  i_backed: "Eu me inscrevi em %{name} no @Bunker360"
+  i_just_backed: "Eu acabei de me inscrever em %{name} no @Bunker360"
   layouts:
     application:
       notifications:
@@ -368,7 +368,7 @@ pt:
         facebook_text: "Yeah! O encontro '%{name}' foi confirmado no Nós.vc. Eu vou!"
         notification_text: "Yeah! O encontro %{link}, em que você se inscreveu, foi confirmado! Espalhe por aí!"
         reward_notification_text: "Qualquer informação adicional será enviada por %{link}. Bom encontro!"
-        twitter_text: "Yeah! O encontro '%{name}' foi confirmado no @Nos_vc. Eu vou! %{short_url}"
+        twitter_text: "Yeah! O encontro '%{name}' foi confirmado no @Bunker360. Eu vou! %{short_url}"
       unsuccessful:
         email_subject: "O encontro em que você se inscreveu não será realizado"
         email_text: "%{project_link}, em que você se inscreveu, não alcançou o número mínimo de inscritos e não será realizado. Quem sabe numa próxima vez? <br><br>Por isso, você recebeu <strong>%{value}</strong> em créditos para se inscrever em outros encontros. Caso prefira, você pode receber seu dinheiro de volta %{credits_link}."
@@ -609,7 +609,7 @@ pt:
         fourth_step: "Quer uma dica para fazer acontecer um encontro inspirador?"
         link: "Nós temos várias pra te dar"
     twitter:
-      take_a_look: "%{name} via @Nos_vc"
+      take_a_look: "%{name} via @Bunker360"
     video_embed:
       a_project_by_html: "Um encontro de %{link} no"
   projects_mailer:
@@ -642,33 +642,33 @@ pt:
     failure:
       error: "Ocorreu um erro ao realizar o login. Por favor, tente novamente."
   site:
-    host: "nos.vc"
-    base_url: "http://nos.vc"
-    blog: "http://blog.nos.vc/"
-    help: "http://help.nos.vc/"
+    host: "bunker360.com"
+    base_url: "http://bunker360.com.br"
+    blog: "http://blog.bunker360.com.br/"
+    help: "http://help.bunker360.com.br/"
     email:
-      contact: somos@nos.vc
-      payments: leo@nos.vc
-      projects: "barrosdaniel@gmail.com, mauroalex@gmail.com, leocorrea.leonardo@gmail.com, badjolo@gmail.com, victor@nos.vc, guilacerda@nos.vc, sharlie@nos.vc"
-      system: somos@nos.vc
-    facebook: "http://www.facebook.com/nos.vc"
-    name: "Nós.vc"
+      contact: contato@bunker360.com.br
+      payments: vagner@bunker360.com.br
+      projects: "lfzawacki@gmail.com"
+      system: contato@bunker360.com.br
+    facebook: "https://www.facebook.com/BNKR360"
+    name: "Bunker360"
     title: "Encontros Inspiradores"
-    twitter: "Nos_vc"
+    twitter: "Bunker360"
   static:
     faq:
       title: "Perguntas frequentes"
     guidelines:
-      accept: "Eu li e entendi como funciona o Nós.vc."
+      accept: "Eu li e entendi como funciona o Bunker360."
       submit: "Quero enviar meu encontro"
       title: "Como funciona"
       sidebar:
         how_it_works: "Como funciona?"
         who_organizes_the_meetings: "Quem organiza os encontros?"
-        how_much: "Quanto custa usar o Nós.vc?"
-        why_use: "Por que usar o Nós.vc?"
+        how_much: "Quanto custa usar o Bunker360?"
+        why_use: "Por que usar o Bunker360?"
     about_us:
-      title: "Sobre Nós.vc"
+      title: "Sobre o Bunker360"
     contact:
       title: "Contato"
     privacy:
