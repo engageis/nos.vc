@@ -8,14 +8,14 @@
     li
       | Se você colar a URL de uma imagem ou de um vídeo do Vimeo ou do YouTube, eles irão aparecer no comentário. Experimente!
     li
-      | Ao colar uma URL qualquer, ela virará um link. Por exemplo, http://nos.vc virará 
-      a href="http://nos.vc" target="_blank" http://nos.vc
+      | Ao colar uma URL qualquer, ela virará um link. Por exemplo, #{t('site.base_url')} virará 
+      a href="#{t('site.base_url')}" target="_blank" #{t('site.base_url')}
       | .
     li
       | Se você quiser colocar um texto no link, basta usar o seguinte formato: 
       strong "texto que você quer":http://sua.url
-      | . Por exemplo, "Nós.vc":http://nos.vc virará 
-      a href="http://nos.vc" target="_blank" Nós.vc
+      | . Por exemplo, "#{t('site.name')}":#{t('site.base_url')} virará 
+      a href="#{t('site.base_url')}" target="_blank" #{t('site.name')}
       | .
     li
       | Você pode usar 
