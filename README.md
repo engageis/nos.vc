@@ -1,27 +1,30 @@
-# Nós.vc
 
-Nós.vc is a crowdlearning plataform for inspiring encounters.
 
+# This is a fork of Nós.vc
+
+Nós.vc is a crowdlearning plataform for inspiring encounters. We're using it to organize the courses on
+Bunker360.
+
+For the original project see <http://github.com/engageis/nos.vc>
 
 ## Development environment
 
-You'll need [RVM](https://rvm.io/) to isolate your development environment.
 
-Make sure you install `Ruby 1.9.3` on your [RVM](https://rvm.io/).
+~~You'll need [RVM](https://rvm.io/) to isolate your development environment.~~
+
+~~Make sure you install `Ruby 1.9.3` on your [RVM](https://rvm.io/).~~
+
+The project is now using [rbenv](https://github.com/sstephenson/rbenv). You can install ruby 1.9.3 with [rbenv install](https://github.com/sstephenson/rbenv#installing-ruby-versions).
 
 Then just checkout the code, configure dependencies and run the tests:
 
 1. Clone the repository:
 
- `git clone git://github.com/engageis/nos.vc.git`
+ `git clone git://github.com/matehackers/nos.vc.git`
 
-2. Enter the repo directory and accept the [RVM](https://rvm.io/):
+2. Enter the repo directory
 
- `cd nos.vc`
-
- `yes` if solicited
-
-3. Install [Bundler](http://gembundler.com/) into our [RVM](https://rvm.io/):
+3. Install [Bundler](http://gembundler.com/):
 
  `gem install bundler`
 
@@ -53,7 +56,7 @@ Then just checkout the code, configure dependencies and run the tests:
 
 ## Thanks
 
-To [Catarse](http://github.com/catarse/catarse)'s code
+To [Catarse](http://github.com/catarse/catarse)'s code. To the people at [Engage](http://engage.is/) and the original [Nós.vc](http://nos.vc/) code.
 
 
 # License
