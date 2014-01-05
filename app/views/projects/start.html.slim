@@ -95,7 +95,7 @@
               fieldset.accept
                 = check_box_tag 'accept'
                 |  
-                = label_tag 'accept', t('accept_terms_html', :terms => link_to(t('terms'), terms_path, :target => :_blank), :guidelines => link_to(t('guidelines'), guidelines_path, :target => :_blank)), :class => 'inline'
+                = label_tag 'accept', t('accept_terms_html', :terms => link_to(t('terms'), terms_path, :target => :_blank), :guidelines => link_to(t('guidelines'), guidelines_path, :target => :_blank), :site => t('site.name')), :class => 'inline'w
               fieldset
                 .bootstrap-twitter
                   = submit_tag t('.submit'), :disabled => true, :class => 'btn btn-large'

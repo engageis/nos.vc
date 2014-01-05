@@ -32,7 +32,7 @@ pt:
       social: "Junte-se a nós"
       newsletter: "receba nossa newsletter"
     stats:
-      users: "Pessoas fazem parte do Nós.vc"
+      users: "Pessoas fazem parte do "
       backs: "Inscrições já foram feitas"
       total_backers: "Pessoas se inscreveram em encontros"
       funded_projects: "Encontros já foram realizados"
@@ -64,7 +64,7 @@ pt:
       title: "Canais"
       description: "Veja os encontros que eles assinam embaixo:"
     mother_look_us: "Mãe, olha a gente:"
-  accept_terms_html: "Eu li %{guidelines} e os %{terms} do Nós.vc e estou de acordo."
+  accept_terms_html: "Eu li %{guidelines} e os %{terms} do %{site} e estou de acordo."
   slider:
     top:
       explore:
@@ -224,9 +224,9 @@ pt:
         title: "Entre utilizando o seu endereço de email"
         social: "Com rede social"
         login_title: "Sem rede social"
-        login_subtitle: "Entre se você já tem uma conta criada no Nós.vc."
+        login_subtitle: "Entre se você já tem uma conta criada no Bunker360."
         register_title: "Me cadastrar"
-        register_subtitle: "Crie uma conta no Nós.vc do bom e velho jeito tradicional."
+        register_subtitle: "Crie uma conta no Bunker360 do bom e velho jeito tradicional."
         with_facebook: "É mais fácil e mais rápido."
         with_facebook_subtitle: "Não publicamos no seu mural."
         with_another_social: "Não tem conta no facebook?"
@@ -359,13 +359,13 @@ pt:
   project:
     start:
       email_subject: "Yeah! Seu encontro foi recebido!"
-      email_text: "Olá! Eu sou um robô do Nós.vc e vou te ajudar a fazer este encontro acontecer.<br><br>Mas, antes, uma pessoa de verdade precisa ler o que você criou. O que ainda não aconteceu.<br><br>Pode ser que demore alguns dias. Pode ser que seja rápido.<br><br>É tudo uma questão de sorte e de quantas pessoas estão criando encontros agora.<br><br>Se tudo estiver ok, logo, logo seu encontro vai pro ar.<br><br>Por enquanto, você pode explorar outros encontros. (<a href='%{explore_link}' style='color: #1aa79c !important;'>%{explore_link}</a>)<br><br>Ler o nosso blog, o <a href='%{blog}' style='color: #1aa79c !important;'>Ponto de Encontro</a>, que tem várias dicas quentes.<br><br>E, ainda, curtir nosso <a href='%{facebook}' style='color: #1aa79c !important;'>facebook</a> e seguir nosso <a href='%{twitter}' style='color: #1aa79c !important;'>twitter</a>.<br><br>Qualquer dúvida, só vir falar comigo. Sou uma máquina, mas posso responder."
+      email_text: "Olá! Eu sou um robô do Bunker360 e vou te ajudar a fazer este encontro acontecer.<br><br>Mas, antes, uma pessoa de verdade precisa ler o que você criou. O que ainda não aconteceu.<br><br>Pode ser que demore alguns dias. Pode ser que seja rápido.<br><br>É tudo uma questão de sorte e de quantas pessoas estão criando encontros agora.<br><br>Se tudo estiver ok, logo, logo seu encontro vai pro ar.<br><br>Por enquanto, você pode explorar outros encontros. (<a href='%{explore_link}' style='color: #1aa79c !important;'>%{explore_link}</a>)<br><br>Ler o nosso blog, o <a href='%{blog}' style='color: #1aa79c !important;'>Ponto de Encontro</a>, que tem várias dicas quentes.<br><br>E, ainda, curtir nosso <a href='%{facebook}' style='color: #1aa79c !important;'>facebook</a> e seguir nosso <a href='%{twitter}' style='color: #1aa79c !important;'>twitter</a>.<br><br>Qualquer dúvida, só vir falar comigo. Sou uma máquina, mas posso responder."
       notification_text: "Yeah! Seu encontro foi recebido!"
     finish:
       successful:
         email_subject: "Yeah! Encontro confirmado!"
         email_text: "%{project_link}, em que você se inscreveu, atingiu o número mínimo de inscritos e está confirmado!<br><br>Muito obrigado por dar vida a este encontro. Você fez ele acontecer!<br><br>Qualquer informação adicional será enviada por %{user_link}. Espalhe pra todo mundo!"
-        facebook_text: "Yeah! O encontro '%{name}' foi confirmado no Nós.vc. Eu vou!"
+        facebook_text: "Yeah! O encontro '%{name}' foi confirmado no Bunker360. Eu vou!"
         notification_text: "Yeah! O encontro %{link}, em que você se inscreveu, foi confirmado! Espalhe por aí!"
         reward_notification_text: "Qualquer informação adicional será enviada por %{link}. Bom encontro!"
         twitter_text: "Yeah! O encontro '%{name}' foi confirmado no @Bunker360. Eu vou! %{short_url}"
@@ -445,7 +445,7 @@ pt:
       success: "Seu encontro foi criado com sucesso! Logo entraremos em contato. Muito obrigado!"
     form:
       add_reward: "Adicionar tipo de inscrição"
-      important_html: "Não esqueça: o Nós.vc fica com 7,5% das inscrições dos encontros realizados + taxa do meio de pagamento, entre 1,9% e 7,4%. Não cobramos nada de inscrições gratuitas. Inclua estes valores no seu orçamento pra não ter problemas. Você deve receber em torno de 85% do valor total arrecadado."
+      important_html: "Não esqueça: o Bunker fica com 7,5% das inscrições dos encontros realizados + taxa do meio de pagamento, entre 1,9% e 7,4%. Não cobramos nada de inscrições gratuitas. Inclua estes valores no seu orçamento pra não ter problemas. Você deve receber em torno de 85% do valor total arrecadado."
       rewards_description: "Você pode criar quantos tipos de inscrição quiser. Podem ter preços diferentes, ou serem até de graça. É possível definir um prazo de inscrição para cada tipo. Ou, ainda, permitir que a pessoa escolha quanto quer pagar, por exemplo. Crie tipos de inscrições atrativas para alcançar o número mínimo de pessoas mais rapidamente. Mas, lembre-se, suas contas devem fechar."
       rewards_title: "Inscrições"
       submit: "Enviar"
@@ -534,16 +534,16 @@ pt:
       destroy: "Remover atualização"
       destroy_confirmation: "Deseja remover a atualização?"
     project_warning:
-      rejected: "Não foi dessa vez. Este encontro não foi selecionado pra participar do Nós.vc. Quem sabe na próxima?"
-      waiting: "Estamos revisando este encontro. Logo, logo saberemos se ele entrará no Nós.vc."
+      rejected: "Não foi dessa vez. Este encontro não foi selecionado pra participar do Bunker360. Quem sabe na próxima?"
+      waiting: "Estamos revisando este encontro. Logo, logo saberemos se ele entrará no Bunker360."
     rewards:
       reward_title: "%{minimum}"
       title: "Inscrições"
     send_mail:
       success: "Sua proposta de encontro foi enviada com sucesso! Logo entraremos em contato. Muito obrigado!"
     show:
-      rejected: "Não foi dessa vez. Este encontro não foi selecionado pra participar do Nós.vc. Quem sabe na próxima?"
-      waiting: "Estamos revisando este encontro. Logo, logo saberemos se ele entrará no Nós.vc."
+      rejected: "Não foi dessa vez. Este encontro não foi selecionado pra participar do Bunker360. Quem sabe na próxima?"
+      waiting: "Estamos revisando este encontro. Logo, logo saberemos se ele entrará no Bunker360."
       where: "Onde?"
       when: "Quando?"
       is_confirmed: "Tá confirmado?"
@@ -595,7 +595,7 @@ pt:
       the_contact: "O contato"
       contact: "Qual é o seu email?"
       contact_hint: "Aquele que você lê e responde. É por ele que vamos entrar em contato."
-      know_us_via: "Você já conversou sobre este encontro com alguém do Nós.vc? Quem?"
+      know_us_via: "Você já conversou sobre este encontro com alguém do Bunker360? Quem?"
       know_us_via_hint: "Bem-vindo! Quem te fez chegar até aqui?"
 
       submit: "Enviar"
@@ -711,7 +711,7 @@ pt:
     backs:
       anonymous: "Inscrição anônima."
       no_backs: "%{name} ainda não se inscreveu em nenhum encontro. Ainda."
-      no_backs_current_user_html: "Você ainda não se inscreveu em nenhum encontro no Nós.vc. Que tal <a href=\"/\">começar agora</a>?"
+      no_backs_current_user_html: "Você ainda não se inscreveu em nenhum encontro no Bunker360. Que tal <a href=\"/\">começar agora</a>?"
       no_reward: "Você não selecionou nenhuma inscrição."
       title: "Encontros em que %{name} já se inscreveu"
       title_current_user: "Encontros em que me inscrevi"
@@ -725,18 +725,18 @@ pt:
       other_link: "Link do seu site"
       change_password: "Senha"
       current_password_hint: "<i>Para que a senha seja alterada você precisa confirmar a sua senha atual.</i>"
-      email_hint: "Seu email não é visível às outras pessoas. Mas você poderá receber emails dos organizadores dos encontros em que você se inscrever ou informações do Nós.vc."
+      email_hint: "Seu email não é visível às outras pessoas. Mas você poderá receber emails dos organizadores dos encontros em que você se inscrever ou informações do Bunker360."
       email_tooltip: "Clique aqui para preencher seu email..."
       gravatar_hint_html: "Quer mudar sua foto? Use o %{link} com seu email. É tão simples quanto enviar uma imagem e funciona para outros sites também."
       my_data: "Email"
-      newsletter: "Quero receber novidades do Nós.vc por email. (Spam nunca!)"
+      newsletter: "Quero receber novidades do Bunker360 por email. (Spam nunca!)"
       password_hint: "<i>Deixe em branco caso você não queira trocar sua senha.</i>"
     header:
       bio_tooltip: "O que você gostaria de ensinar e aprender?"
       name_tooltip: "Qual é o seu nome?"
     projects:
-      no_projects: "%{name} ainda não criou nenhum encontro no Nós.vc. Ainda."
-      no_projects_current_user_html: "Você ainda não criou nenhum encontro no Nós.vc. Compartilhe sua paixão e encontre outros apaixonados: %{link}"
+      no_projects: "%{name} ainda não criou nenhum encontro no Bunker360. Ainda."
+      no_projects_current_user_html: "Você ainda não criou nenhum encontro no Bunker360. Compartilhe sua paixão e encontre outros apaixonados: %{link}"
       title: "Encontros de %{name}"
       title_current_user: "Meus encontros"
   users_mailer:
@@ -744,10 +744,10 @@ pt:
       alt: "Você deve habilitar imagens para visualizar corretamente essa mensagem."
       forward: "Encaminhar"
       hello: "Olá"
-      intro: "Você está recebendo esta mensagem pois se cadastrou no Nós.vc"
+      intro: "Você está recebendo esta mensagem pois se cadastrou no Bunker360"
       mailee: "Mensagem entregue pelo Mailee.me"
       salutation: "Grande abraço,"
-      signature: "Nós.vc"
+      signature: "Bunker360"
       unsubscribe: "Descadastrar da lista"
       unsubscribe_long: "Se não quiser mais receber estes emails"
       weblink: "Ver na web"

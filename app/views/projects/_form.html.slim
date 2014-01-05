@@ -79,7 +79,7 @@
           .important= t('.important_html', :link => link_to("MoIP", "http://www.moip.com.br/", :target => :_blank))
       fieldset.accept
         = check_box_tag 'accept'
-        = label_tag 'accept', t('accept_terms_html', :terms => link_to(t('terms'), terms_path, :target => :_blank), :guidelines => link_to(t('guidelines'), guidelines_path, :target => :_blank)), :class => 'inline'
+        = label_tag 'accept', t('accept_terms_html', :terms => link_to(t('terms'), terms_path, :target => :_blank), :guidelines => link_to(t('guidelines'), guidelines_path, :target => :_blank), :site => t('site.name')), :class => 'inline'
       = form.actions do
         .bootstrap-twitter
           = form.submit t('.submit'), :disabled => true, :class => 'btn', :id => 'project_submit'

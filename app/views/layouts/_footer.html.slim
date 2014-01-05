@@ -20,7 +20,9 @@
         ul
           li
             h5= @total_users
-            p= t('footer.stats.users')
+            p
+              =t('footer.stats.users')
+              =t('site.name')
           li
             h5= @total_backs
             p= t('footer.stats.backs')
