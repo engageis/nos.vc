@@ -43,9 +43,6 @@
             p.input
               = f.label :password_confirmation
               = f.password_field :password_confirmation
-            p.input.check
-              = f.check_box :newsletter
-              = f.label :newsletter, t('users.current_user_fields.newsletter')
             p.action
               .bootstrap-twitter
                 = f.submit t('registrations.new.submit'), class: 'btn', id: 'user_submit'
