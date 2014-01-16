@@ -564,22 +564,22 @@ en:
     failure:
       error: "There was an error while loggin in. Please try again."
   site:
-    host: "bunker360.com.br"
-    base_url: "http://bunker360.com.br"
-    blog: "http://blog.bunker360.com.br/"
-    help: "http://help.bunker360.com.br/"
+    host: "matehackers.org"
+    base_url: "http://encontros.matehackers.org"
+    blog: "http://blog.matehackers.org/"
+    help: "http://matehackers.org/doku.php?id=suporte_cursos_matehackers/"
     email:
-      contact: contato@bunker360.com.br
-      payments: vagner@bunker360.com.br
+      contact: matehackers@gmail.com
+      payments: lfzawacki@gmail.com
       projects: lfzawacki@gmail.com
-      system: contato@bunker360.com.br
-    facebook: "https://www.facebook.com/BNKR360"
-    name: "Bunker360"
+      system: matehackers@gmail.com
+    facebook: "http://www.facebook.com/HackerspaceMatehackers"
+    name: "Mate Encontros"
     title: "Encontros Inspiradores"
-    twitter: "Bunker360"
+    twitter: "matehackers"
   static:
     faq:
-      title: "Frequent asked questions"
+      title: "Frequently asked questions"
     guidelines:
       accept: "I have read and understood how Catarse works."
       submit: "I want to submit my project"

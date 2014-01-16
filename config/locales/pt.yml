@@ -19,7 +19,7 @@ pt:
       subtitle: "atingidos de %{total}"
   project_by: "Quem está organizando?"
   with: "Com"
-  leader_id: "Id, número do perfil da pessoa que vai conduzir o encontro. Pode ser você, ou não. Exemplo: 'X'. Se a página do perfil é http://bunker360.com.br/pt/users/X"
+  leader_id: "Id, número do perfil da pessoa que vai conduzir o encontro. Pode ser você, ou não. Exemplo: 'X'. Se a página do perfil é http://encontros.matehackers.org/pt/users/X"
   tell_about_this_back: "Espalhe pra todo mundo que você se inscreveu!"
   share_my_backs: "Confira o encontro"
   tell_about_this_project: "Espalhe seu encontro pra todo mundo!"
@@ -224,9 +224,9 @@ pt:
         title: "Entre utilizando o seu endereço de email"
         social: "Com rede social"
         login_title: "Sem rede social"
-        login_subtitle: "Entre se você já tem uma conta criada no Bunker360."
+        login_subtitle: "Entre se você já tem uma conta criada no Mate Encontros."
         register_title: "Me cadastrar"
-        register_subtitle: "Crie uma conta no Bunker360 do bom e velho jeito tradicional."
+        register_subtitle: "Crie uma conta no Mate Encontros do bom e velho jeito tradicional."
         with_facebook: "É mais fácil e mais rápido."
         with_facebook_subtitle: "Não publicamos no seu mural."
         with_another_social: "Não tem conta no facebook?"
@@ -266,9 +266,9 @@ pt:
         video_url: 'Se sim, cole aqui o link do vídeo no Vimeo. Se não, deixe o campo em branco.'
         when_short: "Data(s) do encontro, exemplo: '02 a 04/01/12'"
         when_long: "Descreva detalhadamente a(s) data(s) e o(s) horário(s) de início e término do encontro, exemplo: 'Segunda, 2 de janeiro de 2013. Das 9:00 às 17:00')"
-        location: "Local, endereço, cidade e estado. Se você ainda não tem um local, temos algumas sugestões <a href='http://blog.bunker360.com.br/category/locais/' target='_blank'>aqui</a>."
+        location: "Local, endereço, cidade e estado."
         image_url: "Cole aqui o link da imagem fantástica que ilustra o encontro. Recomendamos imagens grandes, com, pelo menos, 1200 pixels de largura. Você pode usar um link do Flickr, por exemplo."
-        leader_id: "Id, número do perfil da pessoa que vai conduzir o encontro. Pode ser você! Exemplo: 'X'. Se a página do perfil é http://bunker360.com.br/pt/users/X"
+        leader_id: "Id, número do perfil da pessoa que vai conduzir o encontro. Pode ser você! Exemplo: 'X'. Se a página do perfil é http://encontros.matehackers.org/pt/users/X"
         leader_bio: "Fale um pouco sobre quem vai conduzir o encontro. Sua vida e experiência com o assunto."
         maximum_backers: "Defina um número limite, mesmo, de pessoas. Quando chegar nele, as inscrições serão encerradas."
       reward:
@@ -304,8 +304,8 @@ pt:
   found_plural: Encontrados
   found_singular: Encontrado
   here: aqui
-  i_backed: "Eu me inscrevi em %{name} no @Bunker360"
-  i_just_backed: "Eu acabei de me inscrever em %{name} no @Bunker360"
+  i_backed: "Eu me inscrevi em %{name} no @matehackers"
+  i_just_backed: "Eu acabei de me inscrever em %{name} no @matehackers"
   layouts:
     application:
       notifications:
@@ -359,16 +359,16 @@ pt:
   project:
     start:
       email_subject: "Yeah! Seu encontro foi recebido!"
-      email_text: "Olá! Eu sou um robô do Bunker360 e vou te ajudar a fazer este encontro acontecer.<br><br>Mas, antes, uma pessoa de verdade precisa ler o que você criou. O que ainda não aconteceu.<br><br>Pode ser que demore alguns dias. Pode ser que seja rápido.<br><br>É tudo uma questão de sorte e de quantas pessoas estão criando encontros agora.<br><br>Se tudo estiver ok, logo, logo seu encontro vai pro ar.<br><br>Por enquanto, você pode explorar outros encontros. (<a href='%{explore_link}' style='color: #1aa79c !important;'>%{explore_link}</a>)<br><br>Ler o nosso blog, o <a href='%{blog}' style='color: #1aa79c !important;'>Ponto de Encontro</a>, que tem várias dicas quentes.<br><br>E, ainda, curtir nosso <a href='%{facebook}' style='color: #1aa79c !important;'>facebook</a> e seguir nosso <a href='%{twitter}' style='color: #1aa79c !important;'>twitter</a>.<br><br>Qualquer dúvida, só vir falar comigo. Sou uma máquina, mas posso responder."
+      email_text: "Olá! Eu sou um robô do Mate Encontros e vou te ajudar a fazer este encontro acontecer.<br><br>Mas, antes, uma pessoa de verdade precisa ler o que você criou. O que ainda não aconteceu.<br><br>Pode ser que demore alguns dias. Pode ser que seja rápido.<br><br>É tudo uma questão de sorte e de quantas pessoas estão criando encontros agora.<br><br>Se tudo estiver ok, logo, logo seu encontro vai pro ar.<br><br>Por enquanto, você pode explorar outros encontros. (<a href='%{explore_link}' style='color: #1aa79c !important;'>%{explore_link}</a>)<br><br>Ler o nosso blog, o <a href='%{blog}' style='color: #1aa79c !important;'>Ponto de Encontro</a>, que tem várias dicas quentes.<br><br>E, ainda, curtir nosso <a href='%{facebook}' style='color: #1aa79c !important;'>facebook</a> e seguir nosso <a href='%{twitter}' style='color: #1aa79c !important;'>twitter</a>.<br><br>Qualquer dúvida, só vir falar comigo. Sou uma máquina, mas posso responder."
       notification_text: "Yeah! Seu encontro foi recebido!"
     finish:
       successful:
         email_subject: "Yeah! Encontro confirmado!"
         email_text: "%{project_link}, em que você se inscreveu, atingiu o número mínimo de inscritos e está confirmado!<br><br>Muito obrigado por dar vida a este encontro. Você fez ele acontecer!<br><br>Qualquer informação adicional será enviada por %{user_link}. Espalhe pra todo mundo!"
-        facebook_text: "Yeah! O encontro '%{name}' foi confirmado no Bunker360. Eu vou!"
+        facebook_text: "Yeah! O encontro '%{name}' foi confirmado no Mate Encontros. Eu vou!"
         notification_text: "Yeah! O encontro %{link}, em que você se inscreveu, foi confirmado! Espalhe por aí!"
         reward_notification_text: "Qualquer informação adicional será enviada por %{link}. Bom encontro!"
-        twitter_text: "Yeah! O encontro '%{name}' foi confirmado no @Bunker360. Eu vou! %{short_url}"
+        twitter_text: "Yeah! O encontro '%{name}' foi confirmado no @matehackers. Eu vou! %{short_url}"
       unsuccessful:
         email_subject: "O encontro em que você se inscreveu não será realizado"
         email_text: "%{project_link}, em que você se inscreveu, não alcançou o número mínimo de inscritos e não será realizado. Quem sabe numa próxima vez? <br><br>Por isso, você recebeu <strong>%{value}</strong> em créditos para se inscrever em outros encontros. Caso prefira, você pode receber seu dinheiro de volta %{credits_link}."
@@ -445,7 +445,7 @@ pt:
       success: "Seu encontro foi criado com sucesso! Logo entraremos em contato. Muito obrigado!"
     form:
       add_reward: "Adicionar tipo de inscrição"
-      important_html: "Não esqueça: o Bunker fica com 7,5% das inscrições dos encontros realizados + taxa do meio de pagamento, entre 1,9% e 7,4%. Não cobramos nada de inscrições gratuitas. Inclua estes valores no seu orçamento pra não ter problemas. Você deve receber em torno de 85% do valor total arrecadado."
+      important_html: "Não esqueça: o Matehackers fica com 7,5% das inscrições dos encontros realizados + taxa do meio de pagamento, entre 1,9% e 7,4%. Não cobramos nada de inscrições gratuitas. Inclua estes valores no seu orçamento pra não ter problemas. Você deve receber em torno de 85% do valor total arrecadado."
       rewards_description: "Você pode criar quantos tipos de inscrição quiser. Podem ter preços diferentes, ou serem até de graça. É possível definir um prazo de inscrição para cada tipo. Ou, ainda, permitir que a pessoa escolha quanto quer pagar, por exemplo. Crie tipos de inscrições atrativas para alcançar o número mínimo de pessoas mais rapidamente. Mas, lembre-se, suas contas devem fechar."
       rewards_title: "Inscrições"
       submit: "Enviar"
@@ -534,16 +534,16 @@ pt:
       destroy: "Remover atualização"
       destroy_confirmation: "Deseja remover a atualização?"
     project_warning:
-      rejected: "Não foi dessa vez. Este encontro não foi selecionado pra participar do Bunker360. Quem sabe na próxima?"
-      waiting: "Estamos revisando este encontro. Logo, logo saberemos se ele entrará no Bunker360."
+      rejected: "Não foi dessa vez. Este encontro não foi selecionado pra participar do Mate Encontros. Quem sabe na próxima?"
+      waiting: "Estamos revisando este encontro. Logo, logo saberemos se ele entrará no Mate Encontros."
     rewards:
       reward_title: "%{minimum}"
       title: "Inscrições"
     send_mail:
       success: "Sua proposta de encontro foi enviada com sucesso! Logo entraremos em contato. Muito obrigado!"
     show:
-      rejected: "Não foi dessa vez. Este encontro não foi selecionado pra participar do Bunker360. Quem sabe na próxima?"
-      waiting: "Estamos revisando este encontro. Logo, logo saberemos se ele entrará no Bunker360."
+      rejected: "Não foi dessa vez. Este encontro não foi selecionado pra participar do Mate Encontros. Quem sabe na próxima?"
+      waiting: "Estamos revisando este encontro. Logo, logo saberemos se ele entrará no Mate Encontros."
       where: "Onde?"
       when: "Quando?"
       is_confirmed: "Tá confirmado?"
@@ -595,7 +595,7 @@ pt:
       the_contact: "O contato"
       contact: "Qual é o seu email?"
       contact_hint: "Aquele que você lê e responde. É por ele que vamos entrar em contato."
-      know_us_via: "Você já conversou sobre este encontro com alguém do Bunker360? Quem?"
+      know_us_via: "Você já conversou sobre este encontro com alguém do Mate Encontros? Quem?"
       know_us_via_hint: "Bem-vindo! Quem te fez chegar até aqui?"
 
       submit: "Enviar"
@@ -609,7 +609,7 @@ pt:
         fourth_step: "Quer uma dica para fazer acontecer um encontro inspirador?"
         link: "Nós temos várias pra te dar"
     twitter:
-      take_a_look: "%{name} via @Bunker360"
+      take_a_look: "%{name} via @matehackers"
     video_embed:
       a_project_by_html: "Um encontro de %{link} no"
   projects_mailer:
@@ -642,33 +642,33 @@ pt:
     failure:
       error: "Ocorreu um erro ao realizar o login. Por favor, tente novamente."
   site:
-    host: "bunker360.com"
-    base_url: "http://bunker360.com.br"
-    blog: "http://blog.bunker360.com.br/"
-    help: "http://help.bunker360.com.br/"
+    host: "matehackers.org"
+    base_url: "http://encontros.matehackers.org"
+    blog: "http://blog.matehackers.org/"
+    help: "http://matehackers.org/doku.php?id=suporte_cursos_matehackers"
     email:
-      contact: contato@bunker360.com.br
-      payments: vagner@bunker360.com.br
-      projects: "lfzawacki@gmail.com"
-      system: contato@bunker360.com.br
-    facebook: "https://www.facebook.com/BNKR360"
-    name: "Bunker360"
+      contact: matehackers@gmail.com
+      payments: lfzawacki@gmail.com
+      projects: lfzawacki@gmail.com
+      system: matehackers@gmail.com
+    facebook: "https://www.facebook.com/HackerspaceMatehackers"
+    name: "Mate Encontros"
     title: "Encontros Inspiradores"
-    twitter: "Bunker360"
+    twitter: "matehackers"
   static:
     faq:
       title: "Perguntas frequentes"
     guidelines:
-      accept: "Eu li e entendi como funciona o Bunker360."
+      accept: "Eu li e entendi como funciona o Mate Encontros."
       submit: "Quero enviar meu encontro"
       title: "Como funciona"
       sidebar:
         how_it_works: "Como funciona?"
         who_organizes_the_meetings: "Quem organiza os encontros?"
-        how_much: "Quanto custa usar o Bunker360?"
-        why_use: "Por que usar o Bunker360?"
+        how_much: "Quanto custa usar o Mate Encontros?"
+        why_use: "Por que usar o Mate Encontros?"
     about_us:
-      title: "Sobre o Bunker360"
+      title: "Sobre o Mate Encontros"
     contact:
       title: "Contato"
     privacy:
@@ -711,7 +711,7 @@ pt:
     backs:
       anonymous: "Inscrição anônima."
       no_backs: "%{name} ainda não se inscreveu em nenhum encontro. Ainda."
-      no_backs_current_user_html: "Você ainda não se inscreveu em nenhum encontro no Bunker360. Que tal <a href=\"/\">começar agora</a>?"
+      no_backs_current_user_html: "Você ainda não se inscreveu em nenhum encontro no Mate Encontros. Que tal <a href=\"/\">começar agora</a>?"
       no_reward: "Você não selecionou nenhuma inscrição."
       title: "Encontros em que %{name} já se inscreveu"
       title_current_user: "Encontros em que me inscrevi"
@@ -725,18 +725,18 @@ pt:
       other_link: "Link do seu site"
       change_password: "Senha"
       current_password_hint: "<i>Para que a senha seja alterada você precisa confirmar a sua senha atual.</i>"
-      email_hint: "Seu email não é visível às outras pessoas. Mas você poderá receber emails dos organizadores dos encontros em que você se inscrever ou informações do Bunker360."
+      email_hint: "Seu email não é visível às outras pessoas. Mas você poderá receber emails dos organizadores dos encontros em que você se inscrever ou informações do Mate Encontros."
       email_tooltip: "Clique aqui para preencher seu email..."
       gravatar_hint_html: "Quer mudar sua foto? Use o %{link} com seu email. É tão simples quanto enviar uma imagem e funciona para outros sites também."
       my_data: "Email"
-      newsletter: "Quero receber novidades do Bunker360 por email. (Spam nunca!)"
+      newsletter: "Quero receber novidades do Mate Encontros por email. (Spam nunca!)"
       password_hint: "<i>Deixe em branco caso você não queira trocar sua senha.</i>"
     header:
       bio_tooltip: "O que você gostaria de ensinar e aprender?"
       name_tooltip: "Qual é o seu nome?"
     projects:
-      no_projects: "%{name} ainda não criou nenhum encontro no Bunker360. Ainda."
-      no_projects_current_user_html: "Você ainda não criou nenhum encontro no Bunker360. Compartilhe sua paixão e encontre outros apaixonados: %{link}"
+      no_projects: "%{name} ainda não criou nenhum encontro no Mate Encontros. Ainda."
+      no_projects_current_user_html: "Você ainda não criou nenhum encontro no Mate Encontros. Compartilhe sua paixão e encontre outros apaixonados: %{link}"
       title: "Encontros de %{name}"
       title_current_user: "Meus encontros"
   users_mailer:
@@ -744,10 +744,10 @@ pt:
       alt: "Você deve habilitar imagens para visualizar corretamente essa mensagem."
       forward: "Encaminhar"
       hello: "Olá"
-      intro: "Você está recebendo esta mensagem pois se cadastrou no Bunker360"
+      intro: "Você está recebendo esta mensagem pois se cadastrou no Mate Encontros"
       mailee: "Mensagem entregue pelo Mailee.me"
       salutation: "Grande abraço,"
-      signature: "Bunker360"
+      signature: "Mate Encontros"
       unsubscribe: "Descadastrar da lista"
       unsubscribe_long: "Se não quiser mais receber estes emails"
       weblink: "Ver na web"
