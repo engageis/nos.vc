@@ -7,8 +7,9 @@
   meta[property="og:site_name" content=t('site.name')]
 
 #page_content
-  - if has_institutional_videos?
-    = render 'layouts/institutional_video_header'
+  -# if has_institutional_videos?
+  -#  = render 'layouts/institutional_video_header'
+  = render 'layouts/call_to_action_header'
   = render 'slider_top'
   .container
     .main
