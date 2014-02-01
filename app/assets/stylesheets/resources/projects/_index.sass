@@ -5,7 +5,7 @@
       +grid-system(16)
       .selected_projects
         h2
-          background: image-url("nosvc/icon-selected.png") left top no-repeat
+          background: image-url("nosvc/icon-selected2.png") left top no-repeat
       .expiring_projects
         h2
           background: image-url("nosvc/icon-expiring.png") left top no-repeat
@@ -29,7 +29,7 @@
           float: right
           font-family: "Dosis-Medium"
           font-size: 18px
-          color: #83b1df
+          color: $em-color
           text-decoration: none
           text-transform: uppercase
           margin: 0px
@@ -43,7 +43,7 @@
     .footer_featured
       padding-top: 5px
       padding-bottom: 30px
-      border-top: 1px #d8d3d3 dashed 
+      border-top: 1px #d8d3d3 dashed
       border-bottom: 1px #d8d3d3 dashed
       margin-bottom: 50px
       .content
@@ -56,7 +56,7 @@
           padding-left: 65px
           margin-right: 80px
           .title
-            color: #83B1DF
+            color: $em-color
             font-family: "Dosis-Medium"
             font-size: 21px
             margin-bottom: 25px
@@ -68,7 +68,7 @@
             color: #5d5d5d
             line-height: 21px
           a
-            color: #83B1DF
+            color: $em-color
             text-decoration: none
             +text-shadow(white 1px 1px 0px)
             font-size: 14px
@@ -98,7 +98,7 @@
             width: 146px
             margin-top: 10px
           input[type="submit"]
-            background: #83B1DF
+            background: $em-color
             border: none
             color: white
             margin-left: 6px
@@ -179,17 +179,44 @@
       margin: 0 auto
       margin-top: 60px
       clear: both
-      .social
-        .fb-like
-          float: right
-          width: 110px
-          margin-top: 5px
-        .twitter-share-button
-          float: right
-          margin-top: 5px
-          margin-right: 10px
-        .clear
-          clear: both
+
+    .social
+      margin-left: auto
+      margin-right: auto
+      width: 250px
+      .fb-like
+        width: 110px
+        margin-top: 5px
+      .twitter-share-button
+        margin-top: 5px
+        margin-right: 10px
+      .clear
+        clear: both
+
+    .call_to_action
+      background: image-url("call_to_action.png") center top no-repeat
+      width: 786px
+      height: 500px
+      margin: 0 auto
+      margin-top: 60px
+      clear: both
+      .centered-down
+        padding-top: 100px
+      .title
+        color: $em-color
+        font-family: "Dosis-Medium"
+        font-size: 50px
+        margin-bottom: 25px
+        text-transform: uppercase
+        +text-shadow(#424340 3px 1px 0px)
+      p
+        font-family: "Sans-serif", "Helvetica", "Arial"
+        font-size: 18px
+        color: #5d5d5d
+        line-height: 28px
+      strong
+        color: $em-color
+        text-weight: bold
     #logos
       +grid-container
       +grid-system(16)
