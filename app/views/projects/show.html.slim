@@ -173,8 +173,9 @@ css:
       #project_content.clearfix
         #project_about.content
           .midia
-            .video
-              iframe src="#{@project.vimeo.embed_url}?title=0&amp;byline=0&amp;portrait=0&amp" width="614" height="355" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen
+            - if @project.vimeo.id
+              .video
+                iframe src="#{@project.vimeo.embed_url}?title=0&amp;byline=0&amp;portrait=0&amp" width="614" height="355" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen
             .social
               #project_share
                 #facebook_share= render 'facebook'
