@@ -84,7 +84,8 @@ class ProjectsController < ApplicationController
     # because @project.reload *works only with created records*
     unless @project.new_record?
       @project.reload
-      @project.update_attributes({ short_url: bitly })
+      # Don't use short urls for now
+      @project.update_attributes({ short_url: project_url(@project) })
       ProjectsMailer.new_project(params[:project][:name], project_url(@project), @project, current_user).deliver
     end
   end
