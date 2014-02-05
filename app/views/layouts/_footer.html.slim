@@ -3,10 +3,7 @@
     .content
       .logofooter
         = link_to root_path do
-          /= image_tag('nosvc/logofooter.jpg', :target => '_blank', :alt => t('site.name'))
-
-          .social
-            h3= t('site.name')
+          = image_tag('nosvc/logofooter.jpg', :target => '_blank', :alt => t('site.name'))
 
       .info
         h3= t('footer.titles.info')
