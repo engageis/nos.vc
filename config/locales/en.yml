@@ -564,7 +564,7 @@ en:
     failure:
       error: "There was an error while loggin in. Please try again."
   site:
-    host: "matehackers.org"
+    host: "encontros.matehackers.org"
     base_url: "http://encontros.matehackers.org"
     blog: "http://blog.matehackers.org/"
     help: "http://matehackers.org/doku.php?id=suporte_cursos_matehackers/"

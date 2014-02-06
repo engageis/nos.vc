@@ -642,7 +642,7 @@ pt:
     failure:
       error: "Ocorreu um erro ao realizar o login. Por favor, tente novamente."
   site:
-    host: "matehackers.org"
+    host: "encontros.matehackers.org"
     base_url: "http://encontros.matehackers.org"
     blog: "http://blog.matehackers.org/"
     help: "http://matehackers.org/doku.php?id=suporte_cursos_matehackers"
