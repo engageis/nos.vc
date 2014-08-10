@@ -29,6 +29,13 @@ Then just checkout the code, configure dependencies and run the tests:
 
  `bundler install`
 
+## Production environment
+
+1. To deploy on heroku, you will need to install the "memcachier" addon:
+  `heroku addons:add memcachier`
+
+  Without this addon you may get the error "undefined method `split' for nil:NilClass", once the ENV["MEMCACHIER_SERVERS"] variable will be nil.
+
 ### Running tests
 
 1. Go to app folder
@@ -36,7 +43,7 @@ Then just checkout the code, configure dependencies and run the tests:
 	`cd nos.vc`
 
 2. Prepare the database
-	
+
 	`bundle exec rake db:test:prepare`
 
 3. Run the rspec
