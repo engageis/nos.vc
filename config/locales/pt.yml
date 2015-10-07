@@ -642,10 +642,10 @@ pt:
     failure:
       error: "Ocorreu um erro ao realizar o login. Por favor, tente novamente."
   site:
-    host: "encontros.matehackers.org"
-    base_url: "http://encontros.matehackers.org"
-    blog: "http://blog.matehackers.org/"
-    help: "http://matehackers.org/doku.php?id=suporte_cursos_matehackers"
+    host: "matehackers.herokuapp.com"
+    base_url: "https://matehackers.herokuapp.com"
+    blog: "https://blog.matehackers.org/"
+    help: "https://matehackers.org/doku.php?id=suporte_cursos_matehackers"
     email:
       contact: matehackers@gmail.com
       payments: lfzawacki@gmail.com
