@@ -42,14 +42,14 @@
       .content
         .links
           p
-           = link_to t('footer.links.help'), t('site.help')
+           = link_to t('footer.links.help'), 'http://www.facebook.com/nos.vc/'
            | |
            = link_to t('footer.links.about'), about_us_path
            | |
            = link_to t('footer.links.contact'), contact_path
            | |
-           = link_to "Blog", t('site.blog')
-           | |
+           /= link_to "Blog", t('site.blog')
+           /| |
            = link_to t('footer.links.terms'), terms_path
            | |
            = link_to t('footer.links.policy'), privacy_path
