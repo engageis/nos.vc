@@ -4,6 +4,14 @@ GIT
   specs:
     validation_reflection (1.0.0)
 
+GIT
+  remote: https://github.com/engageis/has_vimeo_video.git
+  revision: 5b050942445e92cc785633c6319db127172a7386
+  specs:
+    has_vimeo_video (0.0.5)
+      supermodel
+      vimeo
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -66,6 +74,19 @@ GEM
     brcep (3.3.0)
     builder (3.0.4)
     cancan (1.6.9)
+    capistrano (2.15.7)
+      highline
+      net-scp (>= 1.0.0)
+      net-sftp (>= 2.0.0)
+      net-ssh (>= 2.0.14)
+      net-ssh-gateway (>= 1.1.0)
+    capistrano-platform-resources (0.1.3)
+      capistrano (< 3)
+    capistrano-rails (1.0.0)
+      capistrano
+    capistrano-rbenv (1.0.5)
+      capistrano (< 3)
+      capistrano-platform-resources (>= 0.1.3)
     capybara (2.0.3)
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
@@ -117,6 +138,9 @@ GEM
       activesupport (>= 3.0.0)
     erubis (2.7.0)
     eventmachine (1.0.3)
+    exception_notification (4.0.1)
+      actionmailer (>= 3.0.4)
+      activesupport (>= 3.0.4)
     excon (0.6.6)
     execjs (1.4.0)
       multi_json (~> 1.0)
@@ -159,10 +183,8 @@ GEM
     fssm (0.2.10)
     haml (3.1.8)
     has_scope (0.5.1)
-    has_vimeo_video (0.0.5)
-      supermodel
-      vimeo
     hashie (1.2.0)
+    highline (1.7.8)
     hike (1.2.1)
     hpricot (0.8.6)
     http_accept_language (1.0.2)
@@ -228,7 +250,11 @@ GEM
     nested_form (0.2.3)
     net-scp (1.1.0)
       net-ssh (>= 2.6.5)
+    net-sftp (2.1.2)
+      net-ssh (>= 2.6.5)
     net-ssh (2.6.6)
+    net-ssh-gateway (1.2.0)
+      net-ssh (>= 2.6.5)
     nokogiri (1.4.7)
     oauth (0.4.7)
     oauth2 (0.8.1)
@@ -418,7 +444,7 @@ GEM
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
     unicode (0.4.4)
-    vimeo (1.5.3)
+    vimeo (1.5.4)
       httparty (>= 0.4.5)
       httpclient (>= 2.1.5.2)
       json (>= 1.1.9)
@@ -444,6 +470,9 @@ DEPENDENCIES
   bourbon
   brcep
   cancan
+  capistrano
+  capistrano-rails
+  capistrano-rbenv
   capybara (>= 2.0.3)
   carrierwave (= 0.5.8)
   catarse_moip (~> 0.1.1)
@@ -456,13 +485,14 @@ DEPENDENCIES
   devise (= 1.5.3)
   draper (= 0.17.0)
   enumerate_it
+  exception_notification (~> 4.0.0)
   factory_girl_rails (= 1.7.0)
   feedzirra
   fog
   foreigner
   formtastic
   has_scope
-  has_vimeo_video (~> 0.0.5)
+  has_vimeo_video!
   http_accept_language
   httparty (~> 0.6.1)
   httpclient (= 2.2.5)
@@ -476,6 +506,7 @@ DEPENDENCIES
   meta_search (= 1.1.3)
   mocha (= 0.13.3)
   moip_catarse (~> 1.0.6)
+  net-ssh (~> 2.6.1)
   omniauth (~> 1.1.0)
   omniauth-facebook (~> 1.2.0)
   omniauth-openid (~> 1.0.1)
