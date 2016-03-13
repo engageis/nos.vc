@@ -1,7 +1,4 @@
 source "https://rubygems.org"
-source 'http://gems.github.com'
-
-ruby '1.9.3'
 
 gem 'rails', '3.2.13'
 gem 'rake', '0.9.2.2'
@@ -52,7 +49,7 @@ gem 'validation_reflection', git: 'git://github.com/ncri/validation_reflection.g
 gem 'inherited_resources', '1.3.1'
 gem 'has_scope'
 gem 'spectator-validates_email', require: 'validates_email'
-gem 'has_vimeo_video', '~> 0.0.5'
+gem 'has_vimeo_video', git: 'https://github.com/engageis/has_vimeo_video.git'
 gem 'wirble'
 gem "on_the_spot"
 gem 'weekdays'
@@ -82,6 +79,8 @@ gem 'paypal-express', :require => 'paypal'
 # Server
 gem 'thin'
 
+gem 'exception_notification', '~> 4.0.0'
+
 group :assets do
   gem 'sass-rails',   '~> 3.2.5'
   gem 'coffee-rails', '~> 3.2.2'
@@ -106,4 +105,8 @@ end
 group :development do
   gem 'mailcatcher'
   gem 'ruby-debug19'
+  gem 'net-ssh', '~> 2.6.1'
+  gem 'capistrano'
+  gem 'capistrano-rails'
+  gem 'capistrano-rbenv'
 end
