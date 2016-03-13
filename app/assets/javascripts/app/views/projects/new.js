@@ -24,6 +24,9 @@ CATARSE.ProjectsNewView = Backbone.View.extend({
       rewards_id++
     })
 
+    // A better selector for the cities
+    $('#project_category_id').select2();
+
     $('#add_dynamic_field').click(function(e){
       e.preventDefault()
       var new_dynamic_field = '<div class="clearfix"></div><div class="dynamic_field">' + $($('.dynamic_field')[0]).html() + '</div>'
