@@ -5,11 +5,15 @@ class Ability
   def initialize(current_user)
     current_user ||= User.new
 
-    can :read, User
+    can :show, User
     can :manage, User, :id => current_user.id
     can :request_refund, Backer, :user_id => current_user.id
     can :backs, User
     can :projects, User
+
+    if current_user.persisted?
+      can :index, User
+    end
 
     if current_user.admin?
       can :manage, :all
@@ -21,7 +25,7 @@ class Ability
         current_user.manages_projects.include?(reward.project) or reward.project.user == current_user
       end
     else
-      can :read, :all
+      # can :read, :all
     end
   end
 end

@@ -27,6 +27,51 @@ CATARSE.ProjectsNewView = Backbone.View.extend({
     // A better selector for the cities
     $('#project_category_id').select2();
 
+    function format (user) {
+      if (user.loading) return user.name;
+
+      var markup = "<div class='select2-result-user clearfix'>" +
+        "<div class='select2-result-user-avatar'><img src='" + user.image + "' /></div>" +
+        "<div class='select2-result-user-name'>" + user.name + "</div></div>";
+
+      return markup;
+    }
+
+    function formatSelection (user) {
+      return user.name;
+    }
+
+    $('#project_leader_id').select2({
+      ajax: {
+        url: "/users.json",
+        dataType: 'json',
+        delay: 500,
+        data: function (params) {
+          console.log(params.page);
+
+          return {
+            q: params.term,
+            page: params.page
+          };
+        },
+        processResults: function (data, params) {
+          params.page = params.page || 1;
+
+          return {
+            results: data.items,
+            pagination: {
+              more: (params.page * 10) < data.total_count
+            }
+          };
+        },
+        cache: true
+      },
+      escapeMarkup: function (markup) { return markup; },
+      minimumInputLength: 0,
+      templateResult: format,
+      templateSelection: formatSelection
+    });
+
     $('#add_dynamic_field').click(function(e){
       e.preventDefault()
       var new_dynamic_field = '<div class="clearfix"></div><div class="dynamic_field">' + $($('.dynamic_field')[0]).html() + '</div>'

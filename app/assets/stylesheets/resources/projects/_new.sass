@@ -1,3 +1,20 @@
+.select2-result-user
+  padding-top: 6px
+  padding-bottom: 12px
+
+.select2-result-user-avatar
+  img
+    height: 30px
+    margin-right: 10px
+    float: left
+    +border-radius(50%)
+
+.select2-result-user-name
+  width: 100%
+  height: auto
+  border-radius: 2px
+  padding-top: 8px
+
 [data-controller="projects"][data-action="new"]
   #loading
     display: none
@@ -116,7 +133,7 @@
               margin-right: 20px
               width: 66%
 
-          label[for='project_category_id']
+          label[for='project_category_id'], label[for='project_leader_id']
             padding-right: 20px
 
           #project_rewards

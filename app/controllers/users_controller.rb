@@ -5,7 +5,27 @@ class UsersController < ApplicationController
   actions :show, :update
   can_edit_on_the_spot
   before_filter :can_update_on_the_spot?, :only => :update_attribute_on_the_spot
-  respond_to :json, :only => [:backs, :projects, :request_refund]
+
+  respond_to :json, :only => [:backs, :projects, :request_refund, :index]
+
+  def index
+    if params[:q].present?
+      @users = User.where("name ILIKE ? OR full_name ILIKE ? OR nickname ILIKE ?",
+        "%#{params[:q]}%", "%#{params[:q]}%", "%#{params[:q]}%")
+    end
+
+    @users = @users.order('name ASC').page(params[:page]).per(10)
+
+    respond_with do |format|
+      format.json do
+        render :json => {
+            :items => @users.map(&:as_json),
+            :total_count => @users.total_count
+          }
+      end
+    end
+  end
+
   def show
     show!{
       return redirect_to(user_path(@user.primary)) if @user.primary
@@ -16,7 +36,7 @@ class UsersController < ApplicationController
   end
 
   def update
-    update! do 
+    update! do
       flash[:notice] = t('users.current_user_fields.updated')
       return redirect_to user_path(@user, :anchor => 'settings')
     end
