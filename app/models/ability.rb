@@ -17,15 +17,18 @@ class Ability
 
     if current_user.admin?
       can :manage, :all
-    elsif current_user.projects.present? or current_user.manages_projects.present?
+    else
       can :manage, Project do |project|
-        current_user.manages_projects.include?(project) or project.user == current_user
+        can_manage_project?(current_user, project)
       end
       can :manage, Reward do |reward|
-        current_user.manages_projects.include?(reward.project) or reward.project.user == current_user
+        can_manage_project?(current_user, reward.project)
       end
-    else
-      # can :read, :all
     end
+  end
+
+  private
+  def can_manage_project?(user, project)
+    user.manages_project_ids.include?(project.id) || [project.leader_id, project.user_id].include?(user.id)
   end
 end
