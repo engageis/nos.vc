@@ -5,6 +5,7 @@ class UsersController < ApplicationController
   actions :show, :update
   can_edit_on_the_spot
   before_filter :can_update_on_the_spot?, :only => :update_attribute_on_the_spot
+  before_filter :filter_mass_assignment, :only => [:update, :create]
 
   respond_to :json, :only => [:backs, :projects, :request_refund, :index]
 
@@ -86,5 +87,12 @@ class UsersController < ApplicationController
       notification = Notification.find id
       return render_error unless current_user.id == notification.user.id
     end
+  end
+
+  # TODO: use real rails4 style strong parameters
+  def filter_mass_assignment
+    # For now admin is set as attr_accesible to allow rails_admin to update,
+    # but this means we have to filter it out here.
+    params[:user][:admin] = nil
   end
 end

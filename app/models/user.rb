@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
             :to => :decorator
 
   # Setup accessible (or protected) attributes for your model
+  # TODO: move to rails4 style strong parameters
   attr_accessible :email,
                   :password,
                   :password_confirmation,
@@ -33,7 +34,8 @@ class User < ActiveRecord::Base
                   :twitter,
                   :facebook_link,
                   :other_link,
-                  :credits
+                  :credits,
+                  :admin # being filtered in the controller
 
   include ActionView::Helpers::NumberHelper
   include ActionView::Helpers::TextHelper
