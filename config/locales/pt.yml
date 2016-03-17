@@ -126,6 +126,7 @@ pt:
       category: "Cidades"
       project: "Encontros"
       reward: "Tipo de inscrições"
+      configuration: Configurações (MOIP)
       dynamic_field: "Campos dinâmicos"
       curated_page: "Canais"
       update: "Atualizações"

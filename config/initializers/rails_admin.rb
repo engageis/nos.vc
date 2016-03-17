@@ -32,7 +32,7 @@ RailsAdmin.config do |config|
   # config.default_items_per_page = 20
 
   # Exclude specific models (keep the others):
-  config.excluded_models = ['Configuration', 'DynamicValue', 'Notification', 'OauthProvider', 'ProjectTotal', 'ProjectsCuratedPage', 'State', 'StaticContent', 'Statistics', 'UserTotal']
+  config.excluded_models = ['DynamicValue', 'Notification', 'OauthProvider', 'ProjectTotal', 'ProjectsCuratedPage', 'State', 'StaticContent', 'Statistics', 'UserTotal']
 
   # Include specific models (exclude the others):
   # config.included_models = ['Backer', 'Category', 'Configuration', 'CuratedPage', 'DynamicField', 'DynamicValue', 'InstitutionalVideo', 'Notification', 'OauthProvider', 'PaymentDetail', 'PaymentLog', 'Project', 'ProjectTotal', 'ProjectsCuratedPage', 'Reward', 'State', 'StaticContent', 'Statistics', 'Update', 'User', 'UserTotal']
