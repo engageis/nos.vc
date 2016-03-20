@@ -47,8 +47,6 @@ CATARSE.ProjectsNewView = Backbone.View.extend({
         dataType: 'json',
         delay: 500,
         data: function (params) {
-          console.log(params.page);
-
           return {
             q: params.term,
             page: params.page
@@ -284,7 +282,24 @@ CATARSE.ProjectsNewView = Backbone.View.extend({
     $('#project_goal').keyup(everything_ok)
     $('#project_expires_at').keyup(everything_ok)
     $('#project_headline').keyup(everything_ok)
-    $('#project_when_short').keyup(everything_ok)
+
+    function date_text_from_datepicker(datepicker){
+      var months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+      return datepicker.selectedDay + " de " + months[datepicker.selectedMonth] + " de " + datepicker.selectedYear;
+    }
+
+    $('#project_when_short').datepicker({
+      altFormat: 'dd/mm/yy',
+      onSelect: function (text, datepicker) {
+        if ($('#project_when_long').val() == '') {
+          $('#project_when_long').val(date_text_from_datepicker(datepicker) + " ");
+        }
+
+        $('#project_when_long').focus();
+        everything_ok(text, datepicker);
+      }
+    });
+
     $('#project_when_long').keyup(everything_ok)
     $('#project_location').keyup(everything_ok)
     $('#project_image_url').keyup(everything_ok)
