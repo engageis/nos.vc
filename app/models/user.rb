@@ -187,6 +187,7 @@ class User < ActiveRecord::Base
         :name => display_name,
         :short_name => short_name,
         :medium_name => medium_name,
+        :bio => bio,
         :image => display_image,
         :total_backs => total_backs,
         :backs_text => backs_text,

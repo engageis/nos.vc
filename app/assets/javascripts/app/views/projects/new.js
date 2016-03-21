@@ -68,6 +68,10 @@ CATARSE.ProjectsNewView = Backbone.View.extend({
       minimumInputLength: 0,
       templateResult: format,
       templateSelection: formatSelection
+    }).on("select2:select", function(e) {
+        if ($('#project_leader_bio').val() == '') {
+         $('#project_leader_bio').val(e.params.data.bio);
+       }
     });
 
     $('#add_dynamic_field').click(function(e){
