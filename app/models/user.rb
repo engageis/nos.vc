@@ -226,6 +226,10 @@ class User < ActiveRecord::Base
     new_user.save
   end
 
+  def can_manage_project?(project)
+    manages_project_ids.include?(project.id) || [project.leader_id, project.user_id].include?(id)
+  end
+
   protected
   def fix_twitter_user
     self.twitter.gsub! /http(s)?:\/\/(www.)?twitter.com\//, '' if self.twitter

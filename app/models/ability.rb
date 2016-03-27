@@ -19,16 +19,12 @@ class Ability
       can :manage, :all
     else
       can :manage, Project do |project|
-        can_manage_project?(current_user, project)
+        current_user.can_manage_project?(project)
       end
       can :manage, Reward do |reward|
-        can_manage_project?(current_user, reward.project)
+        current_user.can_manage_project?(reward.project)
       end
     end
   end
 
-  private
-  def can_manage_project?(user, project)
-    user.manages_project_ids.include?(project.id) || [project.leader_id, project.user_id].include?(user.id)
-  end
 end
