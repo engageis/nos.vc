@@ -543,6 +543,7 @@ pt:
     send_mail:
       success: "Sua proposta de encontro foi enviada com sucesso! Logo entraremos em contato. Muito obrigado!"
     show:
+      back_to_edit: "Voltar à edição do encontro"
       rejected: "Não foi dessa vez. Este encontro não foi selecionado pra participar do Nós.vc. Quem sabe na próxima?"
       waiting: "Estamos revisando este encontro. Logo, logo saberemos se ele entrará no Nós.vc."
       where: "Onde?"
@@ -554,6 +555,7 @@ pt:
       unlimited_vacancies: "Vagas ilimitadas"
       about_title: "Sobre o encontro"
       private_rewards_title: "Inscrições secretas:"
+      view_as_user: "Visualizar como usuário"
       menu:
         about: "Sobre"
         backers: "Quem vai?"

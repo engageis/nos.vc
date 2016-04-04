@@ -81,7 +81,7 @@ css:
               h2= reward.minimum_value > 0 ? reward.display_minimum : I18n.t('reward.free')
               .clearfix
               p
-                - if can?(:edit, reward)
+                - if can?(:edit, reward) && !preview_mode?
                   #{on_the_spot_edit reward, :description, :type => :textarea}
                 - else
                   = auto_link(simple_format(reward.description), :html => {:target => :_blank})
@@ -100,13 +100,13 @@ css:
                 .clearfix
         #when.clearfix
           h3= t('projects.show.when')
-          - if can?(:edit, @project)
+          - if show_edit_field
             p= on_the_spot_edit @project, :when_long
           - else
             p= @project.when_long
         #location
           h3= t('projects.show.where')
-          - if can?(:edit, @project)
+          - if show_edit_field
             p= on_the_spot_edit @project, :location
           - else
             p= @project.location if @project.location
@@ -156,23 +156,31 @@ css:
 
     .main
       .section_header
+
         h1
-          - if can?(:edit, @project)
+          - if show_edit_field
             = on_the_spot_edit @project, :name
           - else
             = @project.name
         .info
           .when
-            - if can?(:edit, @project)
+            - if show_edit_field
               = on_the_spot_edit @project, :when_short
             - else
               = @project.when_short
           .categorie= link_to(@project.category.name, explore_path(:anchor => @project.category.name.parameterize))
         p.headline
-          - if can?(:edit, @project)
+          - if show_edit_field
             = on_the_spot_edit @project, :headline
           - else
             = @project.headline
+
+        - if can?(:edit, @project)
+          p.preview-link
+            - if preview_mode?
+              = link_to t('.back_to_edit'), project_path(@project)
+            - else
+              = link_to t('.view_as_user'), project_path(@project, :preview => true)
 
       #project_content.clearfix
         #project_about.content
@@ -195,12 +203,12 @@ css:
           .text.clearfix
             h1= t('.about_title')
             p
-              - if can?(:edit, @project)
+              - if show_edit_field
                 | #{on_the_spot_edit @project, :about, :type => :textarea}
               - else
                 = @project.about_html.html_safe
-              = render "admin_fields" if can?(:edit, @project)
-        - if (can?(:edit, @project) && @project.rewards.not_public.any?) || current_user.try(:admin)
+              = render "admin_fields" if show_edit_field
+        - if (show_edit_field && @project.rewards.not_public.any?) || current_user.try(:admin)
 
           #private_rewards
             .text.bootstrap-form
@@ -221,12 +229,12 @@ css:
             = leader.display_name
             | :
           .text
-            - if can?(:edit, @project)
+            - if show_edit_field
               p= on_the_spot_edit @project, :leader_bio, :type => :textarea
             - else
               p= @project.leader_bio
 
-            - if current_user.try(:admin)
+            - if current_user.try(:admin) && !preview_mode?
               p
                 b= t('leader_id')
                 |
