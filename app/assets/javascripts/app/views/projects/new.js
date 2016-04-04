@@ -90,6 +90,12 @@ CATARSE.ProjectsNewView = Backbone.View.extend({
       dynamic_fields_id++
     })
 
+    // When clicking on a past location, set it as the event location
+    $('span.past-location').click(function(e) {
+      var past_location = e.currentTarget.innerText;
+      $('#project_location').val(past_location);
+    })
+
     var video_valid = null
     everything_ok = function(){
       var all_ok = true

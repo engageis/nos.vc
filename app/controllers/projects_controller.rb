@@ -11,6 +11,8 @@ class ProjectsController < ApplicationController
   before_filter :can_update_on_the_spot?, :only => :update_attribute_on_the_spot
   before_filter :date_format_convert, :only => [:create]
 
+  before_filter :load_past_locations, :only => [:new]
+
   def date_format_convert
     # TODO localize here and on the datepicker on project_form.js
     params["project"]["expires_at"] = Date.strptime(params["project"]["expires_at"], '%d/%m/%Y')
@@ -174,6 +176,13 @@ class ProjectsController < ApplicationController
 
 
   private
+
+  # Used to show other past event locations to the users
+  # in the project creation form
+  def load_past_locations
+    past_projects = Project.where('leader_id = ? OR user_id = ?', current_user.id, current_user.id).limit(3)
+    @past_locations = past_projects.pluck(:location).uniq
+  end
 
   # Just to fix a minor bug,
   # when user submit the project without some rewards.
