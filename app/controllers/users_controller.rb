@@ -93,6 +93,8 @@ class UsersController < ApplicationController
   def filter_mass_assignment
     # For now admin is set as attr_accesible to allow rails_admin to update,
     # but this means we have to filter it out here.
-    params[:user][:admin] = nil
+    if params[:user].present?
+      params[:user][:admin] = nil
+    end
   end
 end
