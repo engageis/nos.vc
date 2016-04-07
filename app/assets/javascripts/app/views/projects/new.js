@@ -24,6 +24,56 @@ CATARSE.ProjectsNewView = Backbone.View.extend({
       rewards_id++
     })
 
+    // A better selector for the cities
+    $('#project_category_id').select2();
+
+    function format (user) {
+      if (user.loading) return user.name;
+
+      var markup = "<div class='select2-result-user clearfix'>" +
+        "<div class='select2-result-user-avatar'><img src='" + user.image + "' /></div>" +
+        "<div class='select2-result-user-name'>" + user.name + "</div></div>";
+
+      return markup;
+    }
+
+    function formatSelection (user) {
+      return user.name;
+    }
+
+    $('#project_leader_id').select2({
+      ajax: {
+        url: "/users.json",
+        dataType: 'json',
+        delay: 500,
+        data: function (params) {
+          return {
+            q: params.term,
+            page: params.page
+          };
+        },
+        processResults: function (data, params) {
+          params.page = params.page || 1;
+
+          return {
+            results: data.items,
+            pagination: {
+              more: (params.page * 10) < data.total_count
+            }
+          };
+        },
+        cache: true
+      },
+      escapeMarkup: function (markup) { return markup; },
+      minimumInputLength: 0,
+      templateResult: format,
+      templateSelection: formatSelection
+    }).on("select2:select", function(e) {
+        if ($('#project_leader_bio').val() == '') {
+         $('#project_leader_bio').val(e.params.data.bio);
+       }
+    });
+
     $('#add_dynamic_field').click(function(e){
       e.preventDefault()
       var new_dynamic_field = '<div class="clearfix"></div><div class="dynamic_field">' + $($('.dynamic_field')[0]).html() + '</div>'
@@ -38,6 +88,12 @@ CATARSE.ProjectsNewView = Backbone.View.extend({
 
       dynamic_fields_count++
       dynamic_fields_id++
+    })
+
+    // When clicking on a past location, set it as the event location
+    $('span.past-location').click(function(e) {
+      var past_location = e.currentTarget.innerText;
+      $('#project_location').val(past_location);
     })
 
     var video_valid = null
@@ -236,7 +292,24 @@ CATARSE.ProjectsNewView = Backbone.View.extend({
     $('#project_goal').keyup(everything_ok)
     $('#project_expires_at').keyup(everything_ok)
     $('#project_headline').keyup(everything_ok)
-    $('#project_when_short').keyup(everything_ok)
+
+    function date_text_from_datepicker(datepicker){
+      var months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+      return datepicker.selectedDay + " de " + months[datepicker.selectedMonth] + " de " + datepicker.selectedYear;
+    }
+
+    $('#project_when_short').datepicker({
+      altFormat: 'dd/mm/yy',
+      onSelect: function (text, datepicker) {
+        if ($('#project_when_long').val() == '') {
+          $('#project_when_long').val(date_text_from_datepicker(datepicker) + " ");
+        }
+
+        $('#project_when_long').focus();
+        everything_ok(text, datepicker);
+      }
+    });
+
     $('#project_when_long').keyup(everything_ok)
     $('#project_location').keyup(everything_ok)
     $('#project_image_url').keyup(everything_ok)

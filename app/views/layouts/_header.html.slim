@@ -25,8 +25,7 @@
             = link_to t('layouts.user.my_credits'), user_path(current_user, anchor: 'credits')
             .small (#{current_user.display_credits})
           - if current_user.admin?
-            - for menu, path in Adm::BaseController.menu do
-              li= link_to menu, path
+            li= link_to 'Admin', rails_admin_path
           li= link_to t('layouts.user.logout'), logout_path
       - else
         .login

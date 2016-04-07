@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
             :to => :decorator
 
   # Setup accessible (or protected) attributes for your model
+  # TODO: move to rails4 style strong parameters
   attr_accessible :email,
                   :password,
                   :password_confirmation,
@@ -33,7 +34,8 @@ class User < ActiveRecord::Base
                   :twitter,
                   :facebook_link,
                   :other_link,
-                  :credits
+                  :credits,
+                  :admin # being filtered in the controller
 
   include ActionView::Helpers::NumberHelper
   include ActionView::Helpers::TextHelper
@@ -185,6 +187,7 @@ class User < ActiveRecord::Base
         :name => display_name,
         :short_name => short_name,
         :medium_name => medium_name,
+        :bio => bio,
         :image => display_image,
         :total_backs => total_backs,
         :backs_text => backs_text,
@@ -221,6 +224,10 @@ class User < ActiveRecord::Base
     self.notifications.update_all :user_id => new_user.id
     self.save
     new_user.save
+  end
+
+  def can_manage_project?(project)
+    manages_project_ids.include?(project.id) || [project.leader_id, project.user_id].include?(id)
   end
 
   protected

@@ -1,17 +1,30 @@
 #project_admin
   h2= t('.title')
+
   .project_admin_field
     strong= label :project, :expires_at
-    #{on_the_spot_edit @project, :expires_at}
+
+    - if current_user.try(:admin)
+      #{on_the_spot_edit @project, :expires_at}
+    - else
+      = @project.expires_at
+
   .project_admin_field
     strong= label :project, :user_id
-    #{on_the_spot_edit @project, :user_id}
+
+    - if current_user.try(:admin)
+      #{on_the_spot_edit @project, :user_id}
+    - else
+      = @project.user_id
+
   .project_admin_field
     strong= label :project, :image_url
     #{on_the_spot_edit @project, :image_url}
+
   .project_admin_field
     strong= label :project, :video_url
     #{on_the_spot_edit @project, :video_url}
+
   .project_admin_field
     strong= label :project, :location
     #{on_the_spot_edit @project, :location}

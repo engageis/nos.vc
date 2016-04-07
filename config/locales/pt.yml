@@ -94,7 +94,7 @@ pt:
         name: "Qual é o nome do encontro?"
         user_id: "Id do usuário:"
         video_url: "URL do vídeo:"
-        leader_id: "Id, número do perfil da pessoa que vai conduzir o encontro."
+        leader_id: "Quem vai conduzir o encontro?"
         leader_bio: "Mini, muito mini, biografia:"
         location: "Onde?"
       reward:
@@ -126,6 +126,7 @@ pt:
       category: "Cidades"
       project: "Encontros"
       reward: "Tipo de inscrições"
+      configuration: Configurações (MOIP)
       dynamic_field: "Campos dinâmicos"
       curated_page: "Canais"
       update: "Atualizações"
@@ -448,6 +449,7 @@ pt:
       important_html: "Não esqueça: o Matehackers fica com 7,5% das inscrições dos encontros realizados + taxa do meio de pagamento, entre 1,9% e 7,4%. Não cobramos nada de inscrições gratuitas. Inclua estes valores no seu orçamento pra não ter problemas. Você deve receber em torno de 85% do valor total arrecadado."
       rewards_description: "Você pode criar quantos tipos de inscrição quiser. Podem ter preços diferentes, ou serem até de graça. É possível definir um prazo de inscrição para cada tipo. Ou, ainda, permitir que a pessoa escolha quanto quer pagar, por exemplo. Crie tipos de inscrições atrativas para alcançar o número mínimo de pessoas mais rapidamente. Mas, lembre-se, suas contas devem fechar."
       rewards_title: "Inscrições"
+      past_locations_hint: "Gostaria de fazer um encontro novamente em: %{locations}?"
       submit: "Enviar"
       submit_complement: "e fazer acontecer!"
       has_dynamic_fields: "Adicionar pergunta na inscrição (opcional)."
@@ -542,8 +544,11 @@ pt:
     send_mail:
       success: "Sua proposta de encontro foi enviada com sucesso! Logo entraremos em contato. Muito obrigado!"
     show:
+      back_to_edit: "Voltar à edição do encontro"
       rejected: "Não foi dessa vez. Este encontro não foi selecionado pra participar do Mate Encontros. Quem sabe na próxima?"
       waiting: "Estamos revisando este encontro. Logo, logo saberemos se ele entrará no Mate Encontros."
+      rejected: "Não foi dessa vez. Este encontro não foi selecionado pra participar do Nós.vc. Quem sabe na próxima?"
+      waiting: "Estamos revisando este encontro. Logo, logo saberemos se ele entrará no Nós.vc."
       where: "Onde?"
       when: "Quando?"
       is_confirmed: "Tá confirmado?"
@@ -553,6 +558,7 @@ pt:
       unlimited_vacancies: "Vagas ilimitadas"
       about_title: "Sobre o encontro"
       private_rewards_title: "Inscrições secretas:"
+      view_as_user: "Visualizar como usuário"
       menu:
         about: "Sobre"
         backers: "Quem vai?"

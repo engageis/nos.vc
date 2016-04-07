@@ -87,6 +87,7 @@ group :assets do
   gem "compass-rails", "~> 1.0.1"
   gem 'uglifier', '>= 1.0.3'
   gem 'compass-960-plugin', '~> 0.10.4'
+  gem 'select2-rails'
 end
 
 group :test, :development do
