@@ -723,6 +723,7 @@ pt:
     current_user_fields:
       updated: "Suas configurações foram atualizadas."
       update_social_info: "Atualizar"
+      update_project_info: "Atualizar"
       social_info: "Contatos"
       twitter: "Seu usuário do twitter"
       facebook_link: "Link do seu perfil do facebook"
@@ -735,6 +736,9 @@ pt:
       my_data: "Email"
       newsletter: "Quero receber novidades do Nós.vc por email. (Spam nunca!)"
       password_hint: "<i>Deixe em branco caso você não queira trocar sua senha.</i>"
+      payment_email: Email para pagamentos
+      project_info: "Dados para encontros"
+      report_email: Email para relatório financeiro
     header:
       bio_tooltip: "O que você gostaria de ensinar e aprender?"
       name_tooltip: "Qual é o seu nome?"

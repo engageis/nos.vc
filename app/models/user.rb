@@ -35,6 +35,8 @@ class User < ActiveRecord::Base
                   :facebook_link,
                   :other_link,
                   :credits,
+                  :payment_email,
+                  :report_email,
                   :admin # being filtered in the controller
 
   include ActionView::Helpers::NumberHelper
