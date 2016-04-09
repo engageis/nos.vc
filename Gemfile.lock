@@ -4,6 +4,14 @@ GIT
   specs:
     validation_reflection (1.0.0)
 
+GIT
+  remote: git@github.com:lfzawacki/auto_html.git
+  revision: da24b27114af453724066317a6465d8e0aea19c9
+  specs:
+    auto_html (1.6.4)
+      redcarpet (~> 3.1)
+      rinku (~> 1.7)
+
 GEM
   remote: https://rubygems.org/
   remote: http://gems.github.com/
@@ -49,11 +57,6 @@ GEM
     archive-tar-minitar (0.5.2)
     arel (3.0.2)
     attr_required (0.0.5)
-    auto_html (1.4.2)
-      RedCloth
-      redcarpet
-      rinku
-      tag_helper
     bcrypt-ruby (3.0.1)
     bootstrap-sass (2.3.1.0)
       sass (~> 3.2)
@@ -319,7 +322,7 @@ GEM
     rcov (0.9.11)
     rdoc (3.12.2)
       json (~> 1.4)
-    redcarpet (2.2.2)
+    redcarpet (3.3.4)
     remotipart (1.0.5)
     responders (0.9.3)
       railties (~> 3.1)
@@ -327,7 +330,7 @@ GEM
       mime-types (>= 1.16)
     restclient_with_cert (0.0.8)
       rest-client (>= 1.6)
-    rinku (1.7.2)
+    rinku (1.7.3)
     rmagick (2.13.2)
     routing-filter (0.3.1)
       actionpack
@@ -403,7 +406,6 @@ GEM
       rspec (>= 1.3)
     supermodel (0.1.4)
       activemodel (>= 3.0.0.beta)
-    tag_helper (0.0.3)
     temple (0.5.5)
     thin (1.5.1)
       daemons (>= 1.0.9)
@@ -444,7 +446,7 @@ DEPENDENCIES
   activemerchant (= 1.17.0)
   activerecord-postgresql-adapter
   annotate
-  auto_html (= 1.4.2)
+  auto_html!
   bourbon
   brcep
   cancan

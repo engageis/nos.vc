@@ -36,6 +36,14 @@ class Project < ActiveRecord::Base
     link :target => :_blank
   end
 
+  def youtube_embed
+    if vimeo.youtube_video?
+      auto_html(video_url) { youtube width: 614, height: 355, wmode: "opaque" }
+    else
+      ''
+    end
+  end
+
   scope :visible, where(visible: true)
   scope :recommended, where(recommended: true)
   scope :expired, where("finished OR expires_at < current_timestamp")
@@ -73,7 +81,7 @@ class Project < ActiveRecord::Base
   end
 
   def store_image_url
-		return unless video_url.present?
+    return unless video_url.present?
     self.image_url = vimeo.thumbnail unless self.image_url
   end
 
