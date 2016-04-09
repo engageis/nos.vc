@@ -208,7 +208,8 @@ css:
               - if show_edit_field
                 | #{on_the_spot_edit @project, :about, :type => :textarea}
               - else
-                = @project.about_html.html_safe
+                #project_about_html
+                  = @project.about_html.html_safe
               = render "admin_fields" if show_edit_field
         - if (show_edit_field && @project.rewards.not_public.any?) || current_user.try(:admin)
 

@@ -30,9 +30,9 @@ class Project < ActiveRecord::Base
       '<' => '&lt;',
       '"' => '"' }
     image
-    youtube width: 614, height: 355, wmode: "opaque"
-    vimeo  width: 614, height: 355
-    redcloth :target => :_blank
+    youtube
+    vimeo
+    redcarpet :target => :_blank
     link :target => :_blank
   end
 
