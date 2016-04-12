@@ -53,7 +53,7 @@ gem 'validation_reflection', git: 'git://github.com/ncri/validation_reflection.g
 gem 'inherited_resources', '1.3.1'
 gem 'has_scope'
 gem 'spectator-validates_email', require: 'validates_email'
-gem 'has_vimeo_video', '~> 0.0.5'
+gem 'has_vimeo_video', git: 'https://github.com/lfzawacki/has_vimeo_video.git', branch: 'youtube-support'
 gem 'wirble'
 gem "on_the_spot"
 gem 'weekdays'

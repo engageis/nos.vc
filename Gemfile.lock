@@ -12,6 +12,15 @@ GIT
       redcarpet (~> 3.1)
       rinku (~> 1.7)
 
+GIT
+  remote: https://github.com/lfzawacki/has_vimeo_video.git
+  revision: b0b824f9a2503d95f579f3a6f71f922eafc49c55
+  branch: youtube-support
+  specs:
+    has_vimeo_video (0.0.5)
+      supermodel
+      vimeo
+
 GEM
   remote: https://rubygems.org/
   remote: http://gems.github.com/
@@ -163,9 +172,6 @@ GEM
     fssm (0.2.10)
     haml (3.1.8)
     has_scope (0.5.1)
-    has_vimeo_video (0.0.5)
-      supermodel
-      vimeo
     hashie (1.2.0)
     hike (1.2.1)
     hpricot (0.8.6)
@@ -424,7 +430,7 @@ GEM
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
     unicode (0.4.4)
-    vimeo (1.5.3)
+    vimeo (1.5.4)
       httparty (>= 0.4.5)
       httpclient (>= 2.1.5.2)
       json (>= 1.1.9)
@@ -468,7 +474,7 @@ DEPENDENCIES
   foreigner
   formtastic
   has_scope
-  has_vimeo_video (~> 0.0.5)
+  has_vimeo_video!
   http_accept_language
   httparty (~> 0.6.1)
   httpclient (= 2.2.5)
