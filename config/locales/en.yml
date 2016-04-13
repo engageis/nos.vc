@@ -14,7 +14,7 @@ en:
       subtitle: backers
     goal:
       subtitle: "total of %{total}"
-  project_by: "project by"
+  project_by: "meeting by"
   with: ~
   leader_id: ~
   tell_about_this_back: "Tell the world about your support!"
@@ -26,15 +26,15 @@ en:
     titles:
       info: "Useful Information"
       opendata: "nice statistics"
-      social: "like the catarse?"
+      social: "Do you like Nos.vc?"
       newsletter: "receive our newslatter"
     stats:
       backers: Backers
-      backs: Backs
+      backs: Projects Backed
       total_backed: Backed
       users: Users
       funded_projects: "Successful projects"
-      active_projects: "Projects on air now"
+      active_projects: "Projects open"
     links:
       how_works: "How It works"
       faq: F.A.Q./Help
@@ -73,7 +73,18 @@ en:
     mother_look_us: ~
   "no": "No"
   "yes": "Yes"
-  accept_terms_html: "I have read and accepted the %{link}."
+  accept_terms_html: "I have read the %{guidelines} and accepted the %{terms}."
+  slider:
+    top:
+      explore:
+        title: "Explore projects"
+        text: "<span>Learn</span> something new. Sign up for a project in <span>your city</span>."
+      create:
+        title: "Create a project"
+        text: "Share your <span>passion</span> and <span>find</span> other enthusiasts."
+      how_works:
+        title: "How does it work?"
+        text: "<span>Learn</span> and <span>teach</span> together with people who love the same things as you."
   activerecord:
     errors:
       models:
@@ -229,12 +240,12 @@ en:
       quick_explore: "Quick search"
       recent: Recent
       recommended: Recommended
-      subtitle: "Explore the projects, find the ones that touch you, and make them happen!"
+      subtitle: "Explore projects, find the ones that speak to you, and make them happen!"
       successful: Successful
       title: "Discover amazing projects"
     title: "Explore the projects"
     project:
-      empty: "Hey, we didn't find any project with the text you searched. Wanna try some new words? =D"
+      empty: "Hey, we didn't find any project with the text you searched for. Wanna try some new words? =D"
   formtastic:
     hints:
       backer:
@@ -248,8 +259,8 @@ en:
         headline: "Summarize your project in 140 characters. This sentence will be the first contact people will have with your project, before even seeing the video. Be creative, clear and direct :)"
         name: "What's the name of your project? Choose with care, because this will influence the chances of your project reaching the goal."
         video_url: "Paste the URL from a <a href=\"http://vimeo.com\" target=\"_blank\">Vimeo</a> video. We chose Vimeo because it looks better and doesn't have ads. This way, your project will look better too! <strong>Produce your video the best you can and make a video specifically for your campaign</strong>. If there is a single thing that differentiates the projects that reach the goal from the others is the video. Observe ;)"
-        when_short: ~
-        when_long: ~
+        when_short: "Date (short format)"
+        when_long: "Date (long format)"
         location: ~
       reward:
         description: "Describe your reward in a way that arouses people's interest to back the project. Don't be shy!"
@@ -292,12 +303,12 @@ en:
     header:
       signup: "sign up"
       signin: login
-      explore: explore
-      submit_project: submit
-      how_works: ~
-      profile: "my profile"
+      explore: Explore Projects
+      submit_project: New project
+      how_works: How it works
+      profile: "My Profile"
       hello: ~
-      account: "my account"
+      account: "My Account"
     user:
       logout: Logout
       my_credits: "My credit"
@@ -362,16 +373,17 @@ en:
     admin_fields:
       title: "Admin fields"
     back_project:
+      and_make_it_happen: "And make it happen"
       project_warning:
         not_successful:
-          expired: "This project didn't reach the goal of %{goal} until %{date} and wasn't funded"
-          not_expired: "This project will only be funded if at least %{goal} is backed until %{date}"
+          expired: "This meeting didn't reach the goal of %{goal} registrations until %{date} and won't happen"
+          not_expired: "This meeting will only happen if at least %{goal} people register until %{date}"
         successful:
           expired: "This project was successful and was funded on %{date}"
           not_expired: "This project will be successful and funded on %{date}"
         waiting_confirmation: "Waiting confirmation from payments to know if this project will be funded."
       reached_of: "Reached of"
-      submit: "Back this project"
+      submit: "Register"
     backer:
       anonymous_backer: "Anonymous backer"
       anonymous_description: "Opted to remain incognito"
@@ -427,7 +439,16 @@ en:
       title: "Make the projects you believe in happen"
     new:
       subtitle: "The time to make it happen is now! We really want to know what you're up to..."
-      title: "Submit your project"
+      title: "Submit your meeting"
+
+      sidebar:
+        title: "How to submit and organize you own meeting:"
+        first_step: "Fill in the form. Create your class, debate, workshop or any other learning activity."
+        second_step: "We'll read your proposal and answer it. When everything is OK, registrations will be opened."
+        third_step: "The meeting will be organized by you in the real world. You just need to reach a minimum number of participants in the deadline set."
+        fourth_step: "Would you like some tips to make your inspiring meeting real?"
+        link: "We have several for you"
+
     pending:
       can_finish: "Can finish?"
       finished: Finished?
@@ -466,6 +487,7 @@ en:
     project:
       backed: backed
       reached: reached
+      missing_participants: "<span>%{count}</span> participants missing for this project to happen"
     project_backers:
       empty: "Nobody backed this project so far. How about being the first one?"
     project_comments:
@@ -494,7 +516,11 @@ en:
       total_remaining: ~
       unlimited_vacancies: ~
       about_title: "About this project"
-      private_rewards_title: "Inscrições 'escondidas'"
+      private_rewards_title: "'Hidden' registrations"
+      is_confirmed: "Is it confirmed?"
+      how_much: How much?
+      when: When?
+      where: Where?
       menu:
         about: About
         backers: Backers
@@ -552,7 +578,7 @@ en:
   reward:
     display_remaining: "%{remaining} of %{maximum} available"
     display_maximum_backers: ~
-    free: ~
+    free: "Free"
     limited: Limited
     unlimited: ~
     sold_out: "Sold out"
@@ -600,6 +626,8 @@ en:
     show:
       attention: Attention
       tabs:
+        me_backed_projects: "I have backed"
+        me_created_projects: "I have created"
         backed_projects: "Backed projects"
         created_projects: "Created projects"
         comments: Comments
@@ -624,6 +652,7 @@ en:
     current_user_fields:
       updated: "Your information has been updated"
       update_social_info: "Update info"
+      update_project_info: "Update info"
       social_info: "Contact info"
       twitter: "twitter ( username )"
       facebook_link: "facebook profile link"
