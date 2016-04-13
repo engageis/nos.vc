@@ -90,9 +90,13 @@ class Project < ActiveRecord::Base
   end
 
   def display_image
-    return image_url if image_url
-    return "user.png" unless vimeo.thumbnail
-    vimeo.thumbnail
+    if image_url.present?
+      image_url
+    elsif vimeo.thumbnail.present?
+      vimeo.thumbnail
+    else
+      'nosvc/default_images/1.jpg'
+    end
   end
 
   def display_expires_at
