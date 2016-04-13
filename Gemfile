@@ -38,7 +38,7 @@ gem 'mailchimp'
 
 # HTML manipulation and formatting
 gem 'formtastic'
-gem 'auto_html', git: 'git@github.com:lfzawacki/auto_html.git'
+gem 'auto_html', git: 'https://github.com/lfzawacki/auto_html.git'
 gem 'kaminari'
 gem 'rails_autolink', '~> 1.0.7'
 

@@ -5,8 +5,8 @@ GIT
     validation_reflection (1.0.0)
 
 GIT
-  remote: git@github.com:lfzawacki/auto_html.git
-  revision: da24b27114af453724066317a6465d8e0aea19c9
+  remote: https://github.com/lfzawacki/auto_html.git
+  revision: e272898919d069dd01c9e3ad17fef5abf32aaf0f
   specs:
     auto_html (1.6.4)
       redcarpet (~> 3.1)

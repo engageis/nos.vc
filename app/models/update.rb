@@ -13,7 +13,7 @@ class Update < ActiveRecord::Base
     image
     youtube width: 614, height: 355, wmode: "opaque"
     vimeo width: 614, height: 355
-    redcloth :target => :_blank
+    redcarpet :target => :_blank
     link :target => :_blank
   end
 
@@ -22,7 +22,7 @@ class Update < ActiveRecord::Base
     project.backers.confirmed.each do |backer|
       text = I18n.t('notifications.updates.text',
                     :update_title => title,
-                    :update_text => auto_html(comment) { link; redcloth; },
+                    :update_text => auto_html(comment) { link; redcarpet; },
                     :project_link => Rails.application.routes.url_helpers.project_url(project, :host => I18n.t('site.host')),
                     :project_name => project.name)
       Notification.create! :user => backer.user,
