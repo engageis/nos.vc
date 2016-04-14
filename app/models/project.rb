@@ -4,6 +4,9 @@ class Project < ActiveRecord::Base
   include ActionView::Helpers::NumberHelper
   include ActionView::Helpers::TextHelper
   include ActionView::Helpers::UrlHelper
+  include Sprockets::Helpers::RailsHelper
+  include Sprockets::Helpers::IsolatedHelper
+
   include ERB::Util
   include Rails.application.routes.url_helpers
 
@@ -95,7 +98,7 @@ class Project < ActiveRecord::Base
     elsif vimeo.thumbnail.present?
       vimeo.thumbnail
     else
-      'nosvc/default_images/1.jpg'
+      image_path('nosvc/default_images/1.jpg')
     end
   end
 
