@@ -47,6 +47,16 @@ class Project < ActiveRecord::Base
     end
   end
 
+  # These two fields are for having expires_at on_the_spot editing
+  # with a pretty display format
+  def expires_at_spot
+    expires_at.strftime('%d/%m/%Y')
+  end
+
+  def expires_at_spot=(value)
+    self.expires_at = "#{value} 11:59"
+  end
+
   scope :visible, where(visible: true)
   scope :recommended, where(recommended: true)
   scope :expired, where("finished OR expires_at < current_timestamp")
