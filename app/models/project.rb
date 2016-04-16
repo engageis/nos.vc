@@ -4,6 +4,9 @@ class Project < ActiveRecord::Base
   include ActionView::Helpers::NumberHelper
   include ActionView::Helpers::TextHelper
   include ActionView::Helpers::UrlHelper
+  include Sprockets::Helpers::RailsHelper
+  include Sprockets::Helpers::IsolatedHelper
+
   include ERB::Util
   include Rails.application.routes.url_helpers
 
@@ -30,10 +33,28 @@ class Project < ActiveRecord::Base
       '<' => '&lt;',
       '"' => '"' }
     image
-    youtube width: 614, height: 355, wmode: "opaque"
-    vimeo  width: 614, height: 355
-    redcloth :target => :_blank
+    youtube
+    vimeo
+    redcarpet :target => :_blank
     link :target => :_blank
+  end
+
+  def youtube_embed
+    if vimeo.youtube_video?
+      auto_html(video_url) { youtube width: 614, height: 355, wmode: "opaque" }
+    else
+      ''
+    end
+  end
+
+  # These two fields are for having expires_at on_the_spot editing
+  # with a pretty display format
+  def expires_at_spot
+    expires_at.strftime('%d/%m/%Y')
+  end
+
+  def expires_at_spot=(value)
+    self.expires_at = "#{value} 11:59"
   end
 
   scope :visible, where(visible: true)
@@ -73,7 +94,7 @@ class Project < ActiveRecord::Base
   end
 
   def store_image_url
-		return unless video_url.present?
+    return unless video_url.present?
     self.image_url = vimeo.thumbnail unless self.image_url
   end
 
@@ -82,9 +103,13 @@ class Project < ActiveRecord::Base
   end
 
   def display_image
-    return image_url if image_url
-    return "user.png" unless vimeo.thumbnail
-    vimeo.thumbnail
+    if image_url.present?
+      image_url
+    elsif vimeo.thumbnail.present?
+      vimeo.thumbnail
+    else
+      image_path('nosvc/default_images/1.jpg')
+    end
   end
 
   def display_expires_at

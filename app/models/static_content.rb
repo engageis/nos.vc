@@ -7,7 +7,7 @@ class StaticContent < ActiveRecord::Base
       '>' => '&gt;',
       '<' => '&lt;',
       '"' => '"' }
-    redcloth :target => :_blank
+    redcarpet :target => :_blank
     link :target => :_blank
   end
 end

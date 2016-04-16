@@ -15,7 +15,7 @@ describe Update do
 
   describe ".create" do
     subject{ Update.create!(:user => Factory(:user), :project => Factory(:project), :comment => "this is a comment\n") }
-    its(:comment_html){ should == "<p>this is a comment</p>" }
+    its(:comment_html){ should == "<p>this is a comment</p>\n" }
   end
 
   describe ".notify_backers" do

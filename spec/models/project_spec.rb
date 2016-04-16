@@ -207,7 +207,7 @@ describe Project do
 
     its(:vimeo) do
       subject.vimeo.id.should == "17298435"
-      subject.vimeo.embed_url.should == "http://player.vimeo.com/video/17298435"
+      subject.vimeo.embed_url.should == "//player.vimeo.com/video/17298435"
     end
 
     it "should get vimeo image URL and store it" do
@@ -351,8 +351,8 @@ describe Project do
 
     it "should have a HTML-safe about_html, with textile and regular links" do
       p = Factory.build(:project)
-      p.about = 'Foo Bar http://www.foo.bar <javascript>xss()</javascript>"Click here":http://click.here'
-      p.about_html.should == '<p>Foo Bar <a href="http://www.foo.bar" target="_blank">http://www.foo.bar</a> &lt;javascript&gt;xss()&lt;/javascript&gt;<a target="_blank" href="http://click.here">Click here</a></p>'
+      p.about = 'Foo Bar http://www.foo.bar <javascript>xss()</javascript>[Click here](http://click.here)'
+      p.about_html.should == "<p>Foo Bar <a href=\"http://www.foo.bar\" target=\"_blank\">http://www.foo.bar</a> &lt;javascript&gt;xss()&lt;/javascript&gt;<a href=\"http://click.here\" target=\"_blank\">Click here</a></p>\n"
     end
 
     it "should be able to display the remaining time with days, hours, minutes and seconds" do

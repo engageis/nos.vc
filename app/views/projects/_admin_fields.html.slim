@@ -4,8 +4,8 @@
   .project_admin_field
     strong= label :project, :expires_at
 
-    - if current_user.try(:admin)
-      #{on_the_spot_edit @project, :expires_at}
+    - if show_edit_field
+      #{on_the_spot_edit @project, :expires_at_spot}
     - else
       = @project.expires_at
 
