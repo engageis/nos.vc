@@ -14,7 +14,7 @@ GIT
 
 GIT
   remote: https://github.com/lfzawacki/has_vimeo_video.git
-  revision: b0b824f9a2503d95f579f3a6f71f922eafc49c55
+  revision: 832c5cfe8323f273bebd39efd54ed559fa09495c
   branch: youtube-support
   specs:
     has_vimeo_video (0.0.5)
