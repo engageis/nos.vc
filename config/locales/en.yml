@@ -17,9 +17,9 @@ en:
   project_by: "meeting by"
   with: ~
   leader_id: ~
-  tell_about_this_back: "Tell the world about your support!"
-  share_my_backs: "See the projects that i support in Catarse!"
-  tell_about_this_project: "Tell the world about your project!"
+  tell_about_this_back: "Tell the world about this meeting!"
+  share_my_backs: "See the meetings that I have attended to in Nos.vc!"
+  tell_about_this_project: "Tell the world about your meeting!"
   share_my_projects: "See my created projects in Catarse!"
   count_backed_projects: "backed %{total} projects"
   footer:
@@ -33,8 +33,8 @@ en:
       backs: Projects Backed
       total_backed: Backed
       users: Users
-      funded_projects: "Successful projects"
-      active_projects: "Projects open"
+      funded_projects: "Successful Meetings"
+      active_projects: "Meetings open for registration"
     links:
       how_works: "How It works"
       faq: F.A.Q./Help
@@ -51,7 +51,7 @@ en:
     titles:
       blog: blog
       facebook: "have enjoyed our face?"
-      twitter: "@catarse_"
+      twitter: "@Nos_vc"
       newsletter: "want to receive news?"
       faq: "have any doubt?"
       schedule: calendar
@@ -59,14 +59,14 @@ en:
       newsletter: submit
   sections:
     selection:
-      title: selection
-      description: ~
+      title: Our Highlights
+      description: Incredible meetings that inspire us. Have fun!
     expiring:
-      title: expiring
-      description: ~
+      title: Last call
+      description: Hurry! Registrations are almost ending for these meetings.
     recents:
-      title: recents
-      description: ~
+      title: Recently created
+      description: Secure your spot, register and make it happen!
     partners:
       title: partners
       description: ~
@@ -77,10 +77,10 @@ en:
   slider:
     top:
       explore:
-        title: "Explore projects"
-        text: "<span>Learn</span> something new. Sign up for a project in <span>your city</span>."
+        title: "Explore meetings"
+        text: "<span>Learn</span> something new. Sign up for a meeting in <span>your city</span>."
       create:
-        title: "Create a project"
+        title: "Create a meeting"
         text: "Share your <span>passion</span> and <span>find</span> other enthusiasts."
       how_works:
         title: "How does it work?"
@@ -240,10 +240,10 @@ en:
       quick_explore: "Quick search"
       recent: Recent
       recommended: Recommended
-      subtitle: "Explore projects, find the ones that speak to you, and make them happen!"
+      subtitle: "Explore meetings, find the ones that speak to you, and make them happen!"
       successful: Successful
-      title: "Discover amazing projects"
-    title: "Explore the projects"
+      title: "Discover amazing meetings"
+    title: "Explore the meetings"
     project:
       empty: "Hey, we didn't find any project with the text you searched for. Wanna try some new words? =D"
   formtastic:
@@ -257,7 +257,7 @@ en:
         expires_at: "Finally, choose how long you want your campaign to last. Again, this is a strategic choice: if you put a lot of time, people will lose interest along the way; if put too little, you may not reach the minimum in time."
         goal: "Think hard about the amount you will ask for. It should be the <strong>minimum necessary for the project to happen</strong>. Nothing more, nothing less. If you ask too much, your chances of reaching the minimum will be lower; if you don't ask for enough, you won't be able to execute the project and consequently will have your reputation damaged, hindering future achievements."
         headline: "Summarize your project in 140 characters. This sentence will be the first contact people will have with your project, before even seeing the video. Be creative, clear and direct :)"
-        name: "What's the name of your project? Choose with care, because this will influence the chances of your project reaching the goal."
+        name: "What's your meeting called? Choose with care, because this will influence the chances of your meeting reaching the goal."
         video_url: "Paste the URL from a <a href=\"http://vimeo.com\" target=\"_blank\">Vimeo</a> video. We chose Vimeo because it looks better and doesn't have ads. This way, your project will look better too! <strong>Produce your video the best you can and make a video specifically for your campaign</strong>. If there is a single thing that differentiates the projects that reach the goal from the others is the video. Observe ;)"
         when_short: "Date (short format)"
         when_long: "Date (long format)"
@@ -276,14 +276,18 @@ en:
       comment:
         comment: "Leave your comment about this project"
       project:
-        about: "About your project"
-        expires_at: "What's the deadline to reach your goal?"
+        about: "About your meeting"
+        category: City
+        expires_at: "What's the deadline for registrations?"
         goal: "How much do you need?"
-        name: "Name your project"
-        video_url: Video
-        when_short: ~
-        when_long: ~
-        location: ~
+        name: "Name your meeting"
+        headline: "Explain your meeting in one tweet's worth"
+        video_url: Video URL
+        when_short: "Meeting date(s)"
+        when_long: "Date(s) with beginning and end times"
+        location: Where?
+        leader: Who will conduct the meeting?
+        leader_bio: "A very short bio:"
       reward:
         maximum_backers: "Maximum backers (optional)"
         expires_at: ~
@@ -291,8 +295,8 @@ en:
   found_plural: Found
   found_singular: Found
   here: here
-  i_backed: "I backed the project %{name} on @Catarse_"
-  i_just_backed: "I just backed the project %{name} on @Catarse_"
+  i_backed: "I registered for the meeting %{name} on @Nos_vc"
+  i_just_backed: "I just registered for the meeting %{name} on @Nos_vc"
   layouts:
     application:
       notifications:
@@ -303,8 +307,8 @@ en:
     header:
       signup: "sign up"
       signin: login
-      explore: Explore Projects
-      submit_project: New project
+      explore: Explore Meetings
+      submit_project: New Meeting
       how_works: How it works
       profile: "My Profile"
       hello: ~
@@ -352,7 +356,7 @@ en:
         facebook_text: "Hooray! The project '%{name}', which I backed, was successful on Catarse!"
         notification_text: "Hooray! The project %{link} that you backed was successful! Spread the word!"
         reward_notification_text: "Soon, %{link} will contact you to deliver your reward. Enjoy!"
-        twitter_text: "Hooray! The project '%{name}', which I backed, was successful on @Catarse_! %{short_url}"
+        twitter_text: "Hooray! The project '%{name}', which I backed, was successful on @Nos_vc! %{short_url}"
       unsuccessful:
         email_subject: "The project you backed wasn't funded on Catarse."
         email_text: "The project %{project_link}, that you backed, was not funded. Maybe next time!<br><br>Because of this, you received <strong>%{value}</strong> in credits to back other projects. If you prefer, you can ask for a refund %{credits_link}."
@@ -439,7 +443,7 @@ en:
       title: "Make the projects you believe in happen"
     new:
       subtitle: "The time to make it happen is now! We really want to know what you're up to..."
-      title: "Submit your meeting"
+      title: "Submit a new meeting"
 
       sidebar:
         title: "How to submit and organize you own meeting:"
@@ -449,13 +453,26 @@ en:
         fourth_step: "Would you like some tips to make your inspiring meeting real?"
         link: "We have several for you"
 
+    footer_featured:
+      mi_casa_su_casa:
+        title: "Mi casa, su casa."
+        text: "Host inspiring meetings in your co-working space, room, bar or treehouse."
+        link: "Places"
+      not_repress:
+        title: "Don't repress yourself!"
+        text: "Once a month, we'll send some news about us to our friends. If you're one of them, please:"
+      it_will:
+        title: "Everything shall pass..."
+        text: "... by the Meeting Point. Our blog brings tips, learning and things that make us happy."
+        link: "I wanna read it!"
+
     pending:
       can_finish: "Can finish?"
       finished: Finished?
       home_page: "Home page?"
       id: Id
       name: Name
-      no_projects: "No projects found."
+      no_projects: "No meetings found."
       order: Order
       project: Project
       slug: Slug
@@ -487,18 +504,18 @@ en:
     project:
       backed: backed
       reached: reached
-      missing_participants: "<span>%{count}</span> participants missing for this project to happen"
+      missing_participants: "<span>%{count}</span> participants missing for this meeting to happen"
     project_backers:
-      empty: "Nobody backed this project so far. How about being the first one?"
+      empty: "Nobody registered for this meeting so far. How about being the first one?"
     project_comments:
       require_login_html: "Want to send a comment? %{link} to login."
       submit: "Send comment"
     project_header:
-      subtitle_html: "A project by %{link}"
-      without_city: "A project in %{category_name}, by %{author}"
-      with_city: "A project in %{category_name}, in %{city}, by %{author}"
+      subtitle_html: "A meeting by %{link}"
+      without_city: "A meeting in %{category_name}, by %{author}"
+      with_city: "A meeting in %{category_name}, in %{city}, by %{author}"
     project_updates:
-      empty: "This project didn't have updates yet. But wait and see =D"
+      empty: "This meeting didn't have updates yet. But wait and see =D"
       submit: "Send update"
       comment: "Update text"
       title: "Title of the update"
@@ -508,14 +525,14 @@ en:
       reward_title: "For %{minimum} or more"
       title: "Back and receive..."
     send_mail:
-      success: "Your project was successfully sent! We'll soon contact you. Thanks a lot!"
+      success: "Your meeting was successfully created! We'll soon contact you. Thanks a lot!"
     show:
       where: ~
       when: ~
       total_backers: ~
       total_remaining: ~
       unlimited_vacancies: ~
-      about_title: "About this project"
+      about_title: "About this meeting"
       private_rewards_title: "'Hidden' registrations"
       is_confirmed: "Is it confirmed?"
       how_much: How much?
@@ -528,14 +545,14 @@ en:
         updates: Updates
       share:
         embed: embed
-        embed_title: "Embed this project on your site"
+        embed_title: "Embed this meeting on your site"
         link: Link
         link_title: "Share the link"
-        take_a_look: "Check out the project"
-        title: "Be part of it and share this project"
+        take_a_look: "Check out the meeting"
+        title: "Be part of it and share this meeting"
     start:
-      about: "Describe your project and how much do you need"
-      category: "Project category"
+      about: "What will people be learning?"
+      category: "Meeting category"
       how_much_you_need: "How much do you want to raise?"
       about_hint: "Tell us a little about what you want to do, how much you need and what for. Be brief and punctual, but don't forget to give the readers something that moves them. After all, it's your creation and they need to see your passion taking place!"
       contact: "Leave us your email address so we can contact you"
@@ -557,7 +574,7 @@ en:
       subtitle: "The time to make it happen is now! We really want to know what you're up to..."
       title: "Submit your project"
     twitter:
-      take_a_look: "Check out the project %{name} on @Catarse_"
+      take_a_look: "Check out the project %{name} on @Nos_vc"
     video_embed:
       a_project_by_html: "A project by %{link} on Catarse"
   projects_mailer:
