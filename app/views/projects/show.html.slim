@@ -54,7 +54,7 @@ css:
               #pledge
                 = form_tag(new_project_backer_path(@project), :method => :get, :id => 'back_project_form') do
                   fieldset
-                    = submit_tag t('projects.back_project.submit'), :disabled => (not @project.can_back?)
+                    = submit_tag t('projects.back_project.submit'), :disabled => (!@project.can_back? || !@project.rewards.public.any?)
                     span = t('projects.back_project.and_make_it_happen')
 
         #condition[class="#{@project.display_status}"]
