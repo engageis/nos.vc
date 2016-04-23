@@ -24,10 +24,6 @@ RSpec.configure do |config|
     DatabaseCleaner.clean_with :truncation
   end
 
-  config.before(:each) do
-    Project.any_instance.stubs(:store_image_url).returns('http://www.store_image_url.com')
-  end
-
   config.after(:each) do
   end
 

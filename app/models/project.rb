@@ -86,16 +86,15 @@ class Project < ActiveRecord::Base
   validates_length_of :headline, :maximum => 140
   validates_uniqueness_of :permalink, :allow_blank => true, :allow_nil => true
   validates_numericality_of :maximum_backers, :only_integer => true, :greater_than => 0, :allow_nil => true
+  validates_format_of :image_url, :with => /\.(jpg|jpeg|png|gif)$/, :allow_blank => true
   before_create :store_image_url
 
+  def store_image_url
+    self.image_url = display_image
+  end
 
   def has_dynamic_fields?
     true if dynamic_fields.count > 0
-  end
-
-  def store_image_url
-    return unless video_url.present?
-    self.image_url = vimeo.thumbnail unless self.image_url
   end
 
   def to_param

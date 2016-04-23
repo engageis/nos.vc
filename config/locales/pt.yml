@@ -83,6 +83,12 @@ pt:
           attributes:
             email:
               not_found: "Seu email não está cadastrado, verifique o endereço ou crie uma conta."
+
+        project:
+          attributes:
+            image_url:
+              invalid: "Formato inválido. Formatos aceitos são: jpg, png e gif"
+
     attributes:
       backer:
         value: "Valor:"
