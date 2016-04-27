@@ -11,6 +11,8 @@ class Ability
     can :backs, User
     can :projects, User
 
+    can :show, CuratedPage, :visible => true
+
     if current_user.persisted?
       can :index, User
     end
