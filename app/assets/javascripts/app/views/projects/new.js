@@ -148,26 +148,18 @@ CATARSE.ProjectsNewView = Backbone.View.extend({
     }
     verify_video = function(){
       video_valid = false
-      $('#project_video_url').val($('#project_video_url').val().replace("https", "http"))
-      if(/http:\/\/(www\.)?vimeo.com\/(\d+)/.test($('#project_video_url').val())) {
-        $('#project_video_url').removeClass("ok").removeClass("error").addClass('loading')
-        $.get('/projects/vimeo/?url='+$('#project_video_url').val(), function(r){
-          $('#project_video_url').removeClass("loading")
-          if(r.id==false){
-            video_valid = false
-          } else {
-            video_valid = true
-          }
-          everything_ok()
-        })
+      if(/https?:\/\/(www\.)?vimeo.com\/(\d+)|https?:\/\/(www\.)?youtube\.com|https?:\/\/(www\.)?youtu\.?be\/.+/.test($('#project_video_url').val())) {
+        video_valid = true
+        everything_ok()
       } else {
-				if($('#project_video_url').val() == ""){
-					video_valid = true;
-				 $('#project_video_url').removeClass("ok").removeClass("error").addClass('ok')
-				}
-			}
-      everything_ok()
+        if($('#project_video_url').val() == "") {
+          video_valid = true
+          $('#project_video_url').removeClass("ok").removeClass("error").addClass('ok')
+         }
+         everything_ok()
+      }
     }
+
     video_ok = function(){
       if(video_valid){
         $('#project_video_url').addClass("ok").removeClass("error")
@@ -178,6 +170,7 @@ CATARSE.ProjectsNewView = Backbone.View.extend({
         return false
       }
     }
+
     headline_ok = function(){
       var value = $('#project_headline').val()
       if(value && value.length > 0 && value.length <= 140){

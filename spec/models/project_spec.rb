@@ -211,13 +211,39 @@ describe Project do
     end
 
     it "should get vimeo image URL and store it" do
-      Project.any_instance.unstub(:store_image_url)
       p = Factory.build(:project)
       p.vimeo.stubs(:info).returns({'id' => '1', 'thumbnail_large' => 'http://b.vimeocdn.com/ts/117/614/117614276_200.jpg'})
       p.vimeo.stubs(:id).returns('1')
       p.save!
       p.reload
       p.image_url.should == 'http://b.vimeocdn.com/ts/117/614/117614276_200.jpg'
+    end
+
+  end
+
+  describe "#image_url" do
+
+    ['jpg', 'jpeg', 'gif', 'png'].each do |format|
+      context "creating with valid format (#{format})" do
+        let(:project) { Factory.create(:project, :image_url => "http://imagens.com/img.#{format}") }
+
+        it { project.should be_persisted }
+        it { project.image_url.should eq("http://imagens.com/img.#{format}") }
+      end
+    end
+
+    context "creating with invalid format (mp4)" do
+      let(:project) { Factory.build(:project, :image_url => 'http://imagens.com/img.mp4') }
+      before { project.save }
+
+      it { project.errors.should be_present }
+    end
+
+    context "creating with invalid format (none)" do
+      let(:project) { Factory.build(:project, :image_url => 'http://imagens.com/img') }
+      before { project.save }
+
+      it { project.errors.should be_present }
     end
 
   end
@@ -345,8 +371,8 @@ describe Project do
     end
 
     it "display_image should return image_url if it exists" do
-      p = Factory(:project, :image_url => 'http://test.com/image')
-      p.display_image.should == 'http://test.com/image'
+      p = Factory(:project, :image_url => 'http://test.com/image.jpg')
+      p.display_image.should == 'http://test.com/image.jpg'
     end
 
     it "should have a HTML-safe about_html, with textile and regular links" do
