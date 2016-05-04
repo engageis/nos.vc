@@ -76,7 +76,8 @@ class ApplicationController < ActionController::Base
 
   def replace_locale(new_locale)
     session[:locale] = new_locale
-    new_url = "#{request.fullpath}"
+    new_url = "#{request.original_fullpath}"
+
     if params[:locale]
       new_url.gsub!(/^\/#{params[:locale]}/, "/#{new_locale}")
     else
