@@ -18,21 +18,20 @@ en:
   with: ~
   leader_id: ~
   tell_about_this_back: "Tell the world about this meeting!"
-  share_my_backs: "See the meetings that I have attended to in Nos.vc!"
+  share_my_backs: "See the meetings that I have attended to in Nós.vc!"
   tell_about_this_project: "Tell the world about your meeting!"
-  share_my_projects: "See my created projects in Catarse!"
+  share_my_projects: "See my created projects in Nós.vc!"
   count_backed_projects: "backed %{total} projects"
   footer:
     titles:
       info: "Useful Information"
       opendata: "nice statistics"
-      social: "Do you like Nos.vc?"
+      social: "Do you like Nós.vc?"
       newsletter: "receive our newslatter"
     stats:
-      backers: Backers
-      backs: Projects Backed
-      total_backed: Backed
-      users: Users
+      backs: Users registered in meetings
+      total_backers: Registrations made
+      users: Users registered on Nós.vc
       funded_projects: "Successful Meetings"
       active_projects: "Meetings open for registration"
     links:
@@ -104,9 +103,10 @@ en:
         user_id: "User Id"
         video_url: "Video URL"
       reward:
-        description: Description
-        maximum_backers: "Maximum backers"
-        minimum_value: "Minimum value"
+        description: Name of the registration
+        maximum_backers: "Maximum number of participants"
+        minimum_value: "Minimum number of participants"
+        private: Private Registration
       user:
         address_city: City
         address_complement: Complement
@@ -141,10 +141,10 @@ en:
     display_time: "%{time_ago} ago"
   credits:
     index:
-      back_date: "Back date"
+      back_date: "Registration date"
       current_credits_html: "Your current balance is <span id=\"current_credits\">%{credits}</span> in credits."
       important_html: "You have <strong>up to 180 days after the payment date</strong> to ask for a refund. If you ask for a refund, the value of your payment will be deducted from your credits."
-      project: Project
+      project: Meeting
       refund_expration_date: "Refund deadline"
       refunded: Refunded
       refunds_title: "Payments that can be refunded"
@@ -279,7 +279,7 @@ en:
         about: "About your meeting"
         category: City
         expires_at: "What's the deadline for registrations?"
-        goal: "How much do you need?"
+        goal: "Minimum number of participants?"
         name: "Name your meeting"
         headline: "Explain your meeting in one tweet's worth"
         video_url: Video URL
@@ -289,7 +289,7 @@ en:
         leader: Who will conduct the meeting?
         leader_bio: "A very short bio:"
       reward:
-        maximum_backers: "Maximum backers (optional)"
+        maximum_backers: "Maximum number of participants (optional)"
         expires_at: ~
     optional: " (optional)"
   found_plural: Found
@@ -346,19 +346,19 @@ en:
       title: "Thank you"
   project:
     start:
-      email_subject: "Your project has been received by Catarse's team"
-      email_text: "Thanks for trusting your project to Catarse :)<br><br>We know that you expect a quick reply but, to be quite frank, we take up to 4 days to resnpond, ok? That is because we have a small team working on several projects. Note that the reply can come sooner, so keep atention to your inbox.<br><br>Meanwhile it is worth to get to know the projects that are online (<a href='%{explore_link}' style='color: #E75297 !important;'>%{explore_link}</a>) and - if you like any of them- back it! This is the way to show support for the crowdfunding culture in Brazil and to feed the ecosystem that keeps growing around Catarse.<br><br>Besides that, you will get some inspiration for your own project...<br><br>Stay tuned for updates in <a href='%{facebook}' style='color: #E75297 !important;'>Facebook</a> and get some deeper knowledge about Catarse reading the posts in our <a href='%{blog}' style='color: #E75297 !important;'>blog</a>.<br><br>If you have any doubt, send an email to: %{email}"
-      notification_text: "Your project has been received by Catarse's team"
+      email_subject: "Your project has been received by Nós.vc's team"
+      email_text: "Thanks for trusting your project to Nós.vc :)<br><br>We know that you expect a quick reply but, to be quite frank, we take up to 4 days to resnpond, ok? That is because we have a small team working on several projects. Note that the reply can come sooner, so keep atention to your inbox.<br><br>Meanwhile it is worth to get to know the projects that are online (<a href='%{explore_link}' style='color: #E75297 !important;'>%{explore_link}</a>) and - if you like any of them- back it! This is the way to show support for the crowdfunding culture in Brazil and to feed the ecosystem that keeps growing around Nós.vc.<br><br>Besides that, you will get some inspiration for your own project...<br><br>Stay tuned for updates in <a href='%{facebook}' style='color: #E75297 !important;'>Facebook</a> and get some deeper knowledge about Nós.vc reading the posts in our <a href='%{blog}' style='color: #E75297 !important;'>blog</a>.<br><br>If you have any doubt, send an email to: %{email}"
+      notification_text: "Your project has been received by Nós.vc's team"
     finish:
       successful:
-        email_subject: "Hooray! The project you backed was successful on Catarse!"
-        email_text: "The project %{project_link}, which you backed, was successfuly funded on Catarse! Time to celebrate :D<br><br>Thank you very much, from the heart, for your support! Without you this would never have been possible. Soon, %{user_link} will contact you to deliver your reward. Meanwhile, share with everybody this success!"
-        facebook_text: "Hooray! The project '%{name}', which I backed, was successful on Catarse!"
+        email_subject: "Hooray! The project you backed was successful on Nós.vc!"
+        email_text: "The project %{project_link}, which you backed, was successfuly funded on Nós.vc! Time to celebrate :D<br><br>Thank you very much, from the heart, for your support! Without you this would never have been possible. Soon, %{user_link} will contact you to deliver your reward. Meanwhile, share with everybody this success!"
+        facebook_text: "Hooray! The project '%{name}', which I backed, was successful on Nós.vc!"
         notification_text: "Hooray! The project %{link} that you backed was successful! Spread the word!"
         reward_notification_text: "Soon, %{link} will contact you to deliver your reward. Enjoy!"
         twitter_text: "Hooray! The project '%{name}', which I backed, was successful on @Nos_vc! %{short_url}"
       unsuccessful:
-        email_subject: "The project you backed wasn't funded on Catarse."
+        email_subject: "The project you backed wasn't funded on Nós.vc."
         email_text: "The project %{project_link}, that you backed, was not funded. Maybe next time!<br><br>Because of this, you received <strong>%{value}</strong> in credits to back other projects. If you prefer, you can ask for a refund %{credits_link}."
         notification_text: "You received %{value} in credits to back other projects. If you prefer, you can request a refund %{link}."
         unsuccessful_text: "The project %{link} that you backed wasn't funded. Maybe next time!"
@@ -431,7 +431,7 @@ en:
       success: "Your project was successfully created! We'll soon contact you. Thanks a lot!"
     form:
       add_reward: "Add reward"
-      important_html: "Please notice that Catarse will charge 7.5% if your project is successful, and our payment gateways (MoIP and Paypal) charge a fee that varies, usually, from 4% to 5% per transaction. Add this values to your budget in order to execute your project with no surprises."
+      important_html: "Please notice that Nós.vc will charge 7.5% if your project is successful, and our payment gateways (MoIP and Paypal) charge a fee that varies, usually, from 4% to 5% per transaction. Add this values to your budget in order to execute your project with no surprises."
       project_warning:
         content_html: "Want to have your project selected? Don't forget to read %{link}."
         help_link: "our guide"
@@ -527,11 +527,9 @@ en:
     send_mail:
       success: "Your meeting was successfully created! We'll soon contact you. Thanks a lot!"
     show:
-      where: ~
-      when: ~
-      total_backers: ~
-      total_remaining: ~
-      unlimited_vacancies: ~
+      total_backers: Maximum registrations
+      total_remaining: Remaining registrations
+      unlimited_vacancies: Unlimited
       about_title: "About this meeting"
       private_rewards_title: "'Hidden' registrations"
       is_confirmed: "Is it confirmed?"
@@ -540,7 +538,7 @@ en:
       where: Where?
       menu:
         about: About
-        backers: Backers
+        backers: Attendees
         comments: Comments
         updates: Updates
       share:
@@ -563,7 +561,7 @@ en:
       twitter: "Have twitter account?"
       facebook: "Have facebook account?"
       blog: "Have a blog about the project?"
-      know_us_via: "How did you meet Catarse?"
+      know_us_via: "How did you meet Nós.vc?"
       how_works: "How to mobilize backers to raise $ needed for enforcement?"
       project_warning:
         content_html: "Want to have your project selected? Don't forget to read %{link}."
@@ -576,7 +574,7 @@ en:
     twitter:
       take_a_look: "Check out the project %{name} on @Nos_vc"
     video_embed:
-      a_project_by_html: "A project by %{link} on Catarse"
+      a_project_by_html: "A project by %{link} on Nós.vc"
   projects_mailer:
     start_project_email:
       subject: "Project sent by %{name}"
@@ -593,12 +591,12 @@ en:
   require_login: "You must be logged in to perform this action."
   require_permission: "You don't have permission to perform this action."
   reward:
-    display_remaining: "%{remaining} of %{maximum} available"
-    display_maximum_backers: ~
-    free: "Free"
-    limited: Limited
-    unlimited: ~
-    sold_out: "Sold out"
+    display_remaining: "<span>%{remaining}</span> remaining"
+    display_maximum_backers: "<span>%{maximum}</span> available"
+    free: "FREE"
+    limited: "Limited"
+    unlimited: "Unlimited"
+    sold_out: "Sold Out"
   sessions:
     auth:
       success: "Successfully logged in. Welcome, %{name}!"
@@ -618,16 +616,16 @@ en:
       system: somos@nos.vc
     facebook: "http://www.facebook.com/nos.vc"
     name: "Nós.vc"
-    title: "Encontros Inspiradores"
+    title: "Inspiring Meetings"
     twitter: "Nos_vc"
   static:
     faq:
       title: "Frequent asked questions"
     guidelines:
-      accept: "I have read and understood how Catarse works."
+      accept: "I have read and understood how Nós.vc works."
       submit: "I want to submit my project"
-      subtitle: "Before submitting your project, learn a little about how Catarse works."
-      title: "How does Catarse work?"
+      subtitle: "Before submitting your project, learn a little about how Nós.vc works."
+      title: "How does Nós.vc work?"
     privacy:
       title: "Privacy Policy"
     terms:
@@ -640,13 +638,15 @@ en:
       two: "Backed this and 1 other project"
     no_name: Unnamed
   users:
+    statements:
+      title: "Recommend, qualify, leave your review here:"
     show:
       attention: Attention
       tabs:
-        me_backed_projects: "I have backed"
+        me_backed_projects: "I have registered"
         me_created_projects: "I have created"
-        backed_projects: "Backed projects"
-        created_projects: "Created projects"
+        backed_projects: "Meetings registered"
+        created_projects: "Meetings created"
         comments: Comments
         credits: Credits
         settings: Settings
@@ -660,8 +660,8 @@ en:
         twitter: "Profile on twiiter"
     backs:
       anonymous: "Anonymous back."
-      no_backs: "%{name} haven't backed any project yet. But we know it's just a matter of time! :D"
-      no_backs_current_user_html: "You haven't backed any project yet. What about <a href=\"/\">starting now</a>?"
+      no_backs: "%{name} has not registered for any meeting yet. But we know it's just a matter of time! :D"
+      no_backs_current_user_html: "You haven't registered for any meeting yet. What about <a href=\"/\">starting now</a>?"
       no_reward: "You didn't pick a reward"
       title: "Projects %{name} has backed"
       title_current_user: "Projects I've backed"
@@ -676,18 +676,18 @@ en:
       other_link: "another internet page"
       change_password: "Change my password"
       current_password_hint: "<i>We need your current password to confirm your changes.</i>"
-      email_hint: "Your email will only be used for communications from Catarse and from the projects you back. It won't be visible in your profile. When you back a project, we will give your email to the project owner so he can provide your rewards."
+      email_hint: "Your email will only be used for communications from Nós.vc and from the projects you back. It won't be visible in your profile. When you back a project, we will give your email to the project owner so he can provide your rewards."
       email_tooltip: "Click here to fill your email..."
       gravatar_hint_html: "Want to change your picture? Use %{link} with your email. It's as simple as uploading an image and works for other sites as well ;)"
       my_data: "My profile"
-      newsletter: "I want to receive news from Catarse via email"
+      newsletter: "I want to receive news from Nós.vc via email"
       password_hint: "<i>Leave blank if you don't want to change it.</i>"
     header:
       bio_tooltip: "Click here to write about you..."
       name_tooltip: "Click here to fill your name..."
     projects:
-      no_projects: "%{name} haven't started any project on Catarse yet. We wonder if inspiration will hit one of these days!"
-      no_projects_current_user_html: "You haven't submitted any project to Catarse yet. Let the inspiration flow and %{link} to start!"
+      no_projects: "%{name} haven't created any meeting on Nós.vc yet. We wonder if inspiration will hit one of these days!"
+      no_projects_current_user_html: "You haven't submitted any meeting to Nós.vc yet. Let the inspiration flow and %{link} to start!"
       title: "%{name}'s projects"
       title_current_user: "My projects"
   users_mailer:
@@ -695,10 +695,10 @@ en:
       alt: "You must enable images in order to correctly view this message."
       forward: "Foward to your friends"
       hello: Hi
-      intro: "You are receiving this message because you signed up on Catarse"
+      intro: "You are receiving this message because you signed up on Nós.vc"
       mailee: "Message delivered by Mailee.me"
       salutation: "Big hugs,"
-      signature: "Catarse's Team"
+      signature: "Nós.vc's Team"
       unsubscribe: Unsubscribe
       unsubscribe_long: "If you don't want to receive these emails"
       weblink: "View on the web"
