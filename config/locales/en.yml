@@ -106,7 +106,7 @@ en:
         description: Name of the registration
         maximum_backers: "Maximum number of participants"
         minimum_value: "Minimum number of participants"
-        private: Private Registration
+        private: Private
       user:
         address_city: City
         address_complement: Complement
@@ -123,6 +123,10 @@ en:
         password: Password
         password_confirmation: "Password Confirmation"
         phone_number: "Mobile phone number"
+      dynamic_field:
+        input_name: "Which question do you want to ask before registration?"
+        required: "Required answer."
+        project: "Project"
     models:
       backer: Backer
       category: Category
@@ -257,16 +261,21 @@ en:
         expires_at: "Finally, choose how long you want your campaign to last. Again, this is a strategic choice: if you put a lot of time, people will lose interest along the way; if put too little, you may not reach the minimum in time."
         goal: "Think hard about the amount you will ask for. It should be the <strong>minimum necessary for the project to happen</strong>. Nothing more, nothing less. If you ask too much, your chances of reaching the minimum will be lower; if you don't ask for enough, you won't be able to execute the project and consequently will have your reputation damaged, hindering future achievements."
         headline: "Summarize your project in 140 characters. This sentence will be the first contact people will have with your project, before even seeing the video. Be creative, clear and direct :)"
-        name: "What's your meeting called? Choose with care, because this will influence the chances of your meeting reaching the goal."
-        video_url: "Paste the URL from a <a href=\"http://vimeo.com\" target=\"_blank\">Vimeo</a> video. We chose Vimeo because it looks better and doesn't have ads. This way, your project will look better too! <strong>Produce your video the best you can and make a video specifically for your campaign</strong>. If there is a single thing that differentiates the projects that reach the goal from the others is the video. Observe ;)"
-        when_short: "Date (short format)"
-        when_long: "Date (long format)"
-        location: ~
+        name: "What's your meeting called? Choose with care, because this will influence the chances of your meeting being succesful."
+        video_url: "Paste the URL from a Vimeo or Youtube video or leave it blank."
+        when_short: "Date for the meeting. For example 02 to 04/01/12."
+        when_long: "Describe the date and time with more details and with beginning and end times. For example: 'Monday, January 2nd 2013. From 9:00 to 17:00'"
+        location: "Place, address, city, state."
+        image_url: "Paste here the URL to a fantastic image which illustrates your meeting. We recommend large images with at least 1200 pixels width. You can use a Flickr link for example."
+        leader_id: ~
+        leader_bio: "Write about who'll conduct the meeting. Their life and experiences."
+        maximum_backers: "Define a limit to the number of registrations. When this number is reached, registrations will be closed."
       reward:
-        description: "Describe your reward in a way that arouses people's interest to back the project. Don't be shy!"
-        maximum_backers: "If your reward is limited, tell us the maximum backers."
-        minimum_value: "This is the minimum amount to choose this reward."
-        expires_at: ~
+        description: "Describe this registration in a way that arouses people's interest. Don't be shy!"
+        maximum_backers: "If this registration is limited, tell us the maximum number of attendees."
+        minimum_value: "Can be 0 for free registrations or minimum R$ 10,00 for paid ones."
+        expires_at: "This kind of registration has an expiration date? When?"
+        private: "Accessible only to people who have a link to it."
     labels:
       backer:
         anonymous: "I want my back to be anonymous."
@@ -432,12 +441,16 @@ en:
     form:
       add_reward: "Add reward"
       important_html: "Please notice that Nós.vc will charge 7.5% if your project is successful, and our payment gateways (MoIP and Paypal) charge a fee that varies, usually, from 4% to 5% per transaction. Add this values to your budget in order to execute your project with no surprises."
+      past_locations_hint: "Would you like to meet again at: %{locations}?"
       project_warning:
         content_html: "Want to have your project selected? Don't forget to read %{link}."
         help_link: "our guide"
-      rewards_description: "We believe that the best way to inspire people to back a project is offering excelent – and creative! – rewards. Everybody loves limited editions, unique things and joyfull experiences (parties, candies, balloon traveling!). Spend some time devising creative rewards and people will be interested."
-      rewards_title: Rewards
-      submit: "Submit project"
+      rewards_description: "You can create as many registrations as you want. They can have different prices or be free. You can define a different deadline for each one. Or even allow the attendee to choose how much to pay for their registration. Try to create atractive types of registration to reach the minimum number of attendees quicker, but remember: your math has to check out."
+      rewards_title: Registrations
+      submit: "Submit"
+      submit_complement: "and make it happen!"
+      has_dynamic_fields: "Add a question to this registration (optional)."
+      add_dynamic_field: "Add question"
     index_header:
       subtitle_html: "Fund projects collaboratively and become part of something bigger.<br/>Promote a collective catharsis! You're the missing part in this story."
       title: "Make the projects you believe in happen"

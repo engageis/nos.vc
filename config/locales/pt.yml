@@ -206,7 +206,7 @@ pt:
         goal: "De verdade. Quantas pessoas são realmente necessárias para tornar o encontro possível? Só será realizado se alcançar o número mínimo."
         headline: "Até 140 caracteres, direto, reto e convidativo. Evite repetir o que já tem no nome. Este é o texto que vai sempre acompanhá-lo."
         name: "Título bacanudo, auto-explicativo e curto, vale trocadilho."
-        video_url: 'Se sim, cole aqui o link do vídeo no Vimeo. Se não, deixe o campo em branco.'
+        video_url: 'Se sim, cole aqui o link do vídeo no Vimeo ou Youtube. Se não, deixe o campo em branco.'
         when_short: "Data(s) do encontro, exemplo: '02 a 04/01/12'"
         when_long: "Descreva detalhadamente a(s) data(s) e o(s) horário(s) de início e término do encontro, exemplo: 'Segunda, 2 de janeiro de 2013. Das 9:00 às 17:00')"
         location: "Local, endereço, cidade e estado."
