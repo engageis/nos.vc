@@ -44,6 +44,9 @@ class User < ActiveRecord::Base
   include Rails.application.routes.url_helpers
   extend ActiveSupport::Memoizable
 
+  # For users created via registration form or rails_admin
+  before_validation :set_provider_and_uid_if_nil
+
   validates_presence_of :provider, :uid
   validates_uniqueness_of :uid, :scope => :provider
   validates_length_of :bio, :maximum => 140
@@ -258,6 +261,18 @@ class User < ActiveRecord::Base
   def gravatar_url params=''
     return unless email
     "http://gravatar.com/avatar/#{Digest::MD5.new.update(email)}.jpg?default=#{image_url or "#{I18n.t('site.base_url')}/assets/user.png"}#{params}"
+  end
+
+  # Set the provider and uid for a default user not associated
+  # with any external oauth2 service
+  #
+  # This is relevant when creating a user via Registrations#create
+  # (sign up form) or via the rails_admin interface.
+  def set_provider_and_uid_if_nil
+    if provider.nil? && uid.nil?
+      self.provider = 'devise'
+      self.uid = Devise.friendly_token
+    end
   end
 
 end
