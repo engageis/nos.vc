@@ -21,6 +21,10 @@ en:
       invalid_token: 'Invalid authentication token.'
       timeout: 'Your session expired, please sign in again to continue.'
       inactive: 'Your account was not activated yet.'
+    links:
+      forgot_password: "Forgot your password?"
+      sign_in: "Log In"
+      sign_up: "Sign Up"
     sessions:
       new:
         site_title: "Log in"

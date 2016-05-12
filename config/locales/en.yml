@@ -1,5 +1,9 @@
 en:
-  or: or
+  until: 'until'
+  no: 'No'
+  yes: 'Yes'
+  or: 'or'
+  by: 'by'
   newsletter_ok_header: "You are subscribed to the newsletter!"
   newsletter_ok_body: "Your email is now in our newsletter list, thanks for subscribing!"
   newsletter_error_header: "Woops! There was an error."
@@ -174,68 +178,6 @@ en:
     show:
       backed: backed
       reached: reached
-  devise:
-    confirmations:
-      confirmed: "Your account was successfully confirmed. You are now signed in."
-      send_instructions: "You will receive an email with instructions about how to confirm your account in a few minutes."
-      send_paranoid_instructions: "If your e-mail exists on our database, you will receive a password recovery link on your e-mail"
-    failure:
-      already_authenticated: "You are already signed in."
-      inactive: "Your account was not activated yet."
-      invalid: "Invalid email or password."
-      invalid_token: "Invalid authentication token."
-      locked: "Your account is locked."
-      timeout: "Your session expired, please sign in again to continue."
-      unauthenticated: "You need to sign up or sign in to continue."
-      unconfirmed: "You have to confirm your account before continuing."
-    links:
-      forgot_password: "Forgot your password?"
-      sign_in: "Sign in"
-      sign_up: "Sign up"
-    mailer:
-      confirmation_instructions:
-        subject: "Confirmation instructions"
-      reset_password_instructions:
-        subject: "Reset password instructions"
-        alt: "Reset password instructions"
-      unlock_instructions:
-        subject: "Unlock Instructions"
-    omniauth_callbacks:
-      failure: "Could not authorize you from %{kind} because \"%{reason}\"."
-      success: "Successfully authorized from %{kind} account."
-    passwords:
-      send_instructions: "You will receive an email with instructions about how to reset your password in a few minutes."
-      send_paranoid_instructions: "If your e-mail exists on our database, you will receive a password recovery link on your e-mail"
-      updated: "Your password was changed successfully. You are now signed in."
-      updated_not_active: "Your password was changed successfully."
-    registrations:
-      destroyed: "Bye! Your account was successfully cancelled. We hope to see you again soon."
-      inactive_signed_up: "You have signed up successfully. However, we could not sign you in because your account is %{reason}."
-      reasons:
-        inactive: inactive
-        locked: locked
-        unconfirmed: unconfirmed
-      signed_up: "Welcome! You have signed up successfully."
-      updated: "You updated your account successfully."
-    sessions:
-      new:
-        site_title: "Sign in"
-        submit: "Sign in"
-        title: "Sign in using your email"
-        login_title: Login
-        login_subtitle: "If already have an account"
-        register_title: "Sign Up"
-        register_subtitle: "Use your e-mail account"
-        with_facebook: "Sign in with your facebook account"
-        with_facebook_subtitle: "A quick way to access"
-        with_another_social: "Don't have facebook account?"
-        with_another_social_subtitle: "Sign in with another social network"
-      signed_in: "Signed in successfully."
-      signed_out: "Signed out successfully."
-    unlocks:
-      send_instructions: "You will receive an email with instructions about how to unlock your account in a few minutes."
-      send_paranoid_instructions: "If your account exists, you will receive an email with instructions about how to unlock it in a few minutes."
-      unlocked: "Your account was successfully unlocked. You are now signed in."
   error: "Ooops! There was an error. Please try again."
   explore:
     index:
@@ -278,8 +220,8 @@ en:
         private: "Accessible only to people who have a link to it."
     labels:
       backer:
-        anonymous: "I want my back to be anonymous."
-        credits: "I want to use my credits on this back."
+        anonymous: "I want my registration to be anonymous."
+        credits: "I want to use my credits to register."
         reward: "Select your reward"
         value: "With how much do you want to back?"
       comment:
@@ -386,7 +328,6 @@ en:
     admin_fields:
       title: "Admin fields"
     back_project:
-      and_make_it_happen: "And make it happen"
       project_warning:
         not_successful:
           expired: "This meeting didn't reach the goal of %{goal} registrations until %{date} and won't happen"
@@ -398,7 +339,7 @@ en:
       reached_of: "Reached of"
       submit: "Register"
     backer:
-      anonymous_backer: "Anonymous backer"
+      anonymous_backer: "Anonymous registration"
       anonymous_description: "Opted to remain incognito"
       no_reward: "This backer has not picked a reward"
     backers:
@@ -411,8 +352,9 @@ en:
           subtitle: "You are a few steps from making the difference and becoming part of this project."
           title: "Oohh yeah!"
         no_reward: "Thanks. I just want to help the project."
-        submit: "Review and proceed to checkout"
-        title: "Back %{name}"
+        submit: "Select"
+        title: "Register for %{name}"
+        and_make_it_happen: "my registration"
       review:
         credits_notice_html: "This back will be payed with your credits. After the confirmation, you will have <strong>%{credits}</strong> in credits to back other projects."
         error: "Ooops. There was an error while registering your back. Please try again."
@@ -672,7 +614,7 @@ en:
         facebook: "Profile on facebook"
         twitter: "Profile on twiiter"
     backs:
-      anonymous: "Anonymous back."
+      anonymous: "Anonymous registration."
       no_backs: "%{name} has not registered for any meeting yet. But we know it's just a matter of time! :D"
       no_backs_current_user_html: "You haven't registered for any meeting yet. What about <a href=\"/\">starting now</a>?"
       no_reward: "You didn't pick a reward"
