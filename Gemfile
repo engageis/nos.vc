@@ -108,4 +108,5 @@ end
 group :development do
   gem 'mailcatcher'
   gem 'ruby-debug19'
+  gem 'quiet_assets'
 end
