@@ -180,7 +180,8 @@ class ProjectsController < ApplicationController
   # Used to show other past event locations to the users
   # in the project creation form
   def load_past_locations
-    past_projects = Project.where('leader_id = ? OR user_id = ?', current_user.try(:id), current_user.try(:id)).limit(3)
+    id = current_user.try(:id)
+    past_projects = Project.where('leader_id = ? OR user_id = ?', id, id).order('created_at DESC').limit(3)
     @past_locations = past_projects.pluck(:location).uniq
   end
 
