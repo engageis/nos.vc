@@ -290,11 +290,11 @@ en:
   payment_stream:
     thank_you:
       error: "Ooops. You can only access this page after backing a project."
-      header_subtitle: "Without you maybe this project wouldn't stand a chance. Welcome to the team!"
-      header_title: "Thank you! :D"
-      text_subtitle: "Tell everyone what you just did"
-      text_title_html: "You are now part of the group that does everything to make %{link} happen."
-      title: "Thank you"
+      header_subtitle: "You're giving life to this meeting and you'll receive an email confirmation after your registration is processed. Questions? Contact us!"
+      header_title: "Thank you!"
+      text_subtitle: "Share it:"
+      text_title_html: "%{link} Is the meeting confirmed?"
+      title: "Thank you!"
   project:
     start:
       email_subject: "Your project has been received by Nós.vc's team"
@@ -338,6 +338,7 @@ en:
         waiting_confirmation: "Waiting confirmation from payments to know if this project will be funded."
       reached_of: "Reached of"
       submit: "Register"
+      and_make_it_happen: "And make it happen"
     backer:
       anonymous_backer: "Anonymous registration"
       anonymous_description: "Opted to remain incognito"
@@ -371,7 +372,8 @@ en:
         subtitle: "This is the last step to make the difference and become part of this project."
         title: "Fill in and review your data"
         choose_free: ~
-        confirm_free: ~
+        confirm_free: Confirm
+        confirm_free_hind: and conclude
         choose_payment: "How do you want to pay?"
         choose_payment_subtitle: "Select below a payment method"
         choose_credit_card: "Credit Card"
