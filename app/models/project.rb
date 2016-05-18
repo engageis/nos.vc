@@ -269,6 +269,19 @@ class Project < ActiveRecord::Base
     total - backers.confirmed.count
   end
 
+  # Sum the values for all confirmed registrations
+  def expected_revenue
+    payment_method_fee = Configuration.find_by_name('payment_method_fee')
+
+    payment_method_fee = if payment_method_fee.present?
+      payment_method_fee.value.to_f
+    else
+      0.075
+    end
+
+    backers.confirmed.sum(:value) * (1 - payment_method_fee)
+  end
+
   def finish!
     return unless expired? and can_finish and not finished
     backers.confirmed.each do |backer|

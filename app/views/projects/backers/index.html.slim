@@ -1,0 +1,90 @@
+css:
+  .logo_header {
+    background: url("#{@project.display_image.html_safe}") center center no-repeat;
+  }
+
+#page_content
+  .container
+
+    #project_description
+    .sidebar
+      .info
+        #statistics
+          .statistics
+
+
+            .info_bar
+              ul
+                li
+                  h6
+                    R$
+                    = @project.expected_revenue
+                  p.little
+                    = "Arrecadação esperada"
+
+                li
+                  h6
+                    = @project.backers.count
+                  p.little
+                    = "Inscritos"
+                li
+                  h6
+                    = @project.backers.not_confirmed.count
+                  p.little
+                    = "não confirmados"
+
+              .clearfix
+            .clearfix
+          .clearfix
+        .clearfix
+
+        .media_content_backers.clearfix
+
+          h1
+            = t('.menu.backers')
+
+          .total_backers
+            span= @project.total_backers
+            |
+            = t('projects.show.total_backers')
+          .remaining
+            - if @project.can_back?
+              span= @project.total_vacancies if @project.total_vacancies and not @project.unlimited_vacancies?
+              |
+              = t('projects.show.total_remaining') unless @project.unlimited_vacancies?
+              = t('projects.show.unlimited_vacancies') if @project.unlimited_vacancies?
+            - else
+              span 0
+              = t('projects.show.total_remaining')
+          #project_backers.content.clearfix
+        .clearfix
+
+    .main
+      .section_header
+
+        h1
+          = @project.name
+
+      #project_content.clearfix
+        #project_about.content
+
+          .text.clearfix
+            h1= "Inscritos"
+
+            table
+              tr
+                th
+                th Nome
+                th Inscrição
+                th Confirmado
+              - @project.backers.each do |backer|
+                tr
+                  td
+                    = image_tag backer.user.display_image, class: 'backer_avatar'
+                  td= backer.user.name
+                  td= backer.reward.name
+                  td= backer.confirmed ? 'Sim' : 'Não'
+
+      .clearfix
+    .clearfix
+

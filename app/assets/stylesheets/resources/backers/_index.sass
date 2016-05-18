@@ -1,0 +1,803 @@
+[data-namespace="projects"][data-controller="backers"][data-action="index"]
+  #page_content
+    .section_header
+      padding-top:  20px
+      padding-bottom: 30px
+      h1
+        color: #5d5d5d
+        font-family: "Dosis-Regular"
+        font-size: 41px
+        line-height: 46px
+        padding: 30px 40px 20px
+        letter-spacing: -1px
+        text-align: center
+        text-transform: uppercase
+
+      .preview-link
+        float: right
+        font-size: 20px
+
+      h4
+        color: #5d5d5d
+        font-family: Arial
+        font-size: 16px
+        display: none
+        a
+          color: $ultra_gryn
+          text-decoration: none
+          &:hover
+            color: $blue
+      p
+        font-family: "Dosis-Light"
+        color: #5d5d5d
+        font-size: 24px
+        line-height: 32px
+        padding: 0 40px 40px
+        text-align: center
+        float: left
+        margin-top: 20px
+
+      .info
+        background: image-url("nosvc/background-category_header.gif") left top repeat-x
+        float: left
+        width: 100%
+        height: 29px
+        .categorie
+          a
+            background: #434242
+            color: white
+            font-family: "Dosis-Light"
+            font-size: 18px
+            padding: 5px 10px
+            text-decoration: none
+            float: right
+
+    .main
+      +grid(12)
+      width: 614px
+      background: #f9f9f9
+      margin: 0 0 30px 0
+      padding: 0 0 20px 0
+      .midia
+        width: 100%
+        float: left
+        padding-bottom: 20px
+        .video
+        .social
+          padding: 20px 0 30px 40px
+          float: left
+          border-bottom: dashed 1px #ccc
+          margin-bottom: 20px
+          #facebook_share, #facebook_share iframe
+            width: 570px !important
+            float: left
+            margin-bottom: 20px
+          #twitter_share
+            width: 89px !important
+            float: left
+          ul
+            margin-left: 20px
+            float: left
+            li
+              float: left
+              &.embed
+                margin-right: 15px
+                a
+                  padding: 4px 10px 5px
+                  text-decoration: none
+                  color: black
+                  font-family: Lato
+                  font-size: 12px
+                  margin-top: -2px
+                  float: left
+                  +border-radius(5px)
+                  border: solid 1px #ccc
+                  +transition(all, 0.3s)
+                  img
+                    padding: 0 7px 0 0
+                  &:hover
+                    +box-shadow(rgba(black, 0.5) 0 0 4px inset)
+                  &:active
+                    +box-shadow(rgba(black, 0.5) 0 0 10px inset)
+              &.link
+                input[type="text"]
+                  margin-top: -2px
+                  color: #5d5d5d
+                  font-family: "Helvetica Neue", "Arial", "Sans-serif"
+                  font-size: 12px
+                  border: 1px $minimal_gryn solid
+                  +border-radius(5px)
+                  padding: 3px 10px 3px 30px
+                  text-align: left
+                  background: url($images_path+'link_icon14x14.png') 6px 4px no-repeat
+      #project_content, #leader_profile, #private_rewards
+        h1, h3
+          padding-bottom: 20px
+          padding-left: 40px
+          font-size: 24px
+          color: #83b1df
+          font-family: "Dosis-Regular"
+        #project_about, #leader_profile, #private_rewards
+          .text
+            color: #5d5d5d
+            padding: 0 0 40px 40px
+            font-family: "Helvetica Neue", "Arial", "Sans-serif"
+            font-size: 14px
+            line-height: 20px
+            width: 534px
+            float: left
+            p
+              margin: 10px 0
+              line-height: 28px
+              iframe, img
+                margin-left: -40px
+            strong
+              font-weight: bold
+            a
+              color: $ultra_gryn
+              text-decoration: none
+              &:hover
+                color: $blue
+            h1
+              padding-left: 0
+
+          #project_about_html
+            ul, ol
+              list-style-type: initial
+              padding-left: 20px
+
+            h1, h2, h3, h4, h5, h6
+              padding-top: 14px
+              padding-bottom: 8px
+              color: #6DAE92
+              font-family: "Dosis-Regular"
+
+            h1
+              font-size: 24px
+
+            h2
+              font-size: 20px
+
+            h3, h4, h5, h6
+              padding-left: 0
+              font-size: 18px
+
+        #leader_profile, #private_rewards
+          float: left
+          width: 614px
+          padding-top: 40px
+          padding-bottom: 40px
+          border-top: dashed 1px #ccc
+
+          .text
+            width: 300px
+            padding: 0 0 0 40px
+          .personal_info
+            float: right
+            margin-right: 40px
+            margin-bottom: 40px
+            width: 220px
+            text-align: center
+            .avatar
+              img
+                width: 220px
+                display: block
+                float: left
+                overflow: hidden
+                +border-radius(112px)
+            p
+              a
+                font-family: "Dosis-Medium"
+                font-size: 18px
+                color: #3772ae
+                text-decoration: none
+                margin-top: 15px
+                margin-bottom: 15px
+                float: left
+                display: block
+                width: 100%
+                text-align: center
+                +text-shadow(white 1px 1px 0px)
+          .user_social
+            +grid(3)
+            display: block
+            margin: 0 auto
+            width: 100%
+            ul
+              margin-left: 65px
+              float: left
+              width: 96px
+              li
+                height: 26px
+                text-indent: -3000em
+                float: left
+                margin-right: 5px
+                width: 27px
+                a
+                  color: black
+                  +transition(all, 0.5s)
+                  text-decoration: none
+                  display: block
+                  &:hover
+                    color: $blue
+                &.email
+                  background: image-url("nosvc/icon-user_face.png") left top no-repeat
+                  display: none
+                &.facebook
+                  background: image-url("nosvc/icon-user_face.png") left top no-repeat
+                &.twitter
+                  background: image-url("nosvc/icon-user_twitter.png") left top no-repeat
+                &.other
+                  background: image-url("nosvc/icon-user_home.png") left top no-repeat
+        #private_rewards
+          .text
+            width: 90%
+          input.link_private
+            width: 88%
+            float: right
+            display: inline
+
+        #project_updates
+          border-top: 1px #D8D3D3 dashed
+          padding: 50px 0 50px 0
+          color: #5d5d5d
+          font-family: "Helvetica Neue", "Arial", "Sans-serif"
+          hr
+            border: none
+            border-top: 1px #D8D3D3 dashed
+            margin-bottom: 15px
+          h1
+            padding-bottom: 20px
+            text-align: center
+            text-transform: uppercase
+          form
+            padding: 0
+            margin: 0
+            margin-bottom: 30px
+            label
+              float: none
+            input, textarea
+              margin-left: 0
+          .deleting_update
+            text-align: center
+          .updates_wrapper
+            .media_content_update
+              padding: 0 40px 0 40px
+              ul.collection_list
+                li
+                  width: 100%
+                  padding: 40px 0 0 0
+                  min-height: 67px
+                  .comment
+                    p
+                      font-family: "Helvetica Neue", "Arial", "Sans-serif"
+                      font-size: 13px
+                      line-height: 21px
+                      color: #5d5d5d
+                      margin: 10px 0
+          &:last-child
+            border-bottom: none
+          .time
+            color: $gryn_almost_ccc
+            font-size: 12px
+          h3
+            color: #83b1df
+            font-family: "Dosis-Regular"
+            font-size: 1.5em
+            margin-bottom: 15px
+            padding-left: 0px
+          p
+            padding: 5px 0
+            font-size: 17px
+            font-family: "Helvetica Neue", "Arial", "Sans-serif"
+            line-height: 28px
+          img
+            max-width: 614px
+          a
+            font-family: "Helvetica Neue", "Arial", "Sans-serif"
+            color: #83b1df
+            text-decoration: none
+            background: image-url("nosvc/icon-link.png") right 2px no-repeat
+            padding-right: 20px
+            font-size: 14px
+            +text-shadow(white 1px 1px 0px)
+            &:hover
+              text-decoration: underline
+          iframe, img
+            margin-left: -40px
+        strong
+          font-weight: bold
+        em
+          font-style: italic
+          font-size: 12px
+        h1
+          padding-left: 0
+          text-align: left
+          text-transform: none
+
+        .bootstrap-form
+          padding: 0 40px 0 40px
+          textarea, input#update_title
+            width: 524px
+          label
+            font-family: "Helvetica Neue", "Arial", "Sans-serif"
+            font-size: 15px
+            color: rgba(0, 0, 0, 0.8)
+        #show_formatting_tips
+          font-family: "Helvetica Neue", "Arial", "Sans-serif"
+          text-align: left !important
+          color: #5d5d5d
+          font-size: 14px
+          margin-bottom: 15px
+          a
+            color: #83b1df
+            text-decoration: none
+            &:hover
+              color: #83b1df
+        #formatting_tips
+          font-family: "Helvetica Neue", "Arial", "Sans-serif"
+          display: none
+          text-align: left
+          color: #5d5d5d
+          strong
+            font-weight: bold
+          em
+            font-style: italic
+          h3
+            font-size: 21px
+            margin-bottom: 15px
+            padding-top: 15px
+            width: 100%
+            color: #5d5d5d
+            float: left
+          ul li
+            font-size: 13px
+            padding-bottom: 12px
+            margin-bottom: 16px
+            line-height: 21px
+            border-bottom: 1px dashed #D8D3D3
+            &:last-child
+              border: none
+          a
+            color: #83b1df
+            text-decoration: none
+            &:hover
+              text-decoration: underline
+        #project_comments
+          border-top: 1px #D8D3D3 dashed
+          padding: 50px 0 50px 0
+          background: #fff
+          h1
+            margin-bottom: 20px
+            text-align: center
+            text-transform: normal
+            padding-left: 0
+          .fb-comments
+            margin: 0 auto
+            width: 534px
+            display: block
+    .sidebar
+      +omega
+      border: none
+      margin-top: 125px
+      margin-left: 0px
+      width: 345px
+      float: left
+      h3
+        color: #83b1df
+        font-family: "Dosis-Medium"
+        font-size: 21px
+        display: block
+        text-indent: 50px
+        padding-top: 10px
+        text-transform: uppercase
+        margin-bottom: 20px
+        height: 30px
+        +text-shadow(white 1px 1px 0px)
+      #when, #location, #condition, #rewards
+        margin-top: 40px
+        padding-right: 50px
+        h3
+          background: image-url("nosvc/icon-when.gif") left top no-repeat
+        p
+          font-family: "Helvetica Neue", "Arial", "Sans-serif"
+          color: #5d5d5d
+          +text-shadow(white 1px 1px 0px)
+          font-size: 14px
+          padding-left: 50px
+          line-height: 21px
+      #location
+        h3
+          background: image-url("nosvc/icon-locale.gif") left top no-repeat
+        iframe
+          width: 240px
+          float: left
+          height: 175px
+          margin-top: 20px
+      .user_social
+        float: left
+        height: 27px
+        margin: 0 auto 40px
+        width: 97%
+        ul
+          margin: 0 auto
+          width: 100px
+          li
+            height: 26px
+            text-indent: -3000em
+            float: left
+            margin-right: 5px
+            width: 27px
+            a
+              color: black
+              +transition(all, 0.5s)
+              text-decoration: none
+              display: block
+              &:hover
+                color: $blue
+            &.email
+              background: image-url("nosvc/icon-user_face.png") left top no-repeat
+              display: none
+            &.facebook
+              background: image-url("nosvc/icon-user_face.png") left top no-repeat
+            &.twitter
+              background: image-url("nosvc/icon-user_twitter.png") left top no-repeat
+            &.other
+              background: image-url("nosvc/icon-user_home.png") left top no-repeat
+      #rewards
+        margin-bottom: 20px
+        float: left
+        h3
+          background: image-url("nosvc/icon-rewards.gif") left top no-repeat
+        .box
+          background: #fefefe
+          padding: 20px 20px 1px
+          margin-top: 3px
+          float: left
+          +transition(all, 0.3s)
+          width: 270px
+          border: solid 1px #e7e6e1
+          margin-bottom: 20px
+          +border-radius(16px)
+          position: relative
+          &.clickable:hover
+            background: #f7f6f0
+          h2
+            font-family: "Dosis-Regular"
+            font-size: 38px
+            color: #5d5d5d
+            text-transform: uppercase
+            padding-bottom: 5px
+          em
+            background: url($images_path+"reward_count_icon18x17.png") left top no-repeat
+            color: $_4d_gryn
+            font-family: Arial
+            font-weight: bold
+            font-size: 11px
+            padding: 3px 3px 10px 25px
+            text-transform: uppercase
+            clear: both
+            display: block
+          p, .on_the_spot_editing
+            color: #5d5d5d
+            font-family: "Helvetica Neue", "Arial", "Sans-serif"
+            font-size: 13px
+            line-height: 21px
+            padding-bottom: 10px
+            a
+              color: $blue
+              text-decoration: none
+              &:hover
+                text-decoration: underline
+          .maximum_backers
+            color: #5d5d5d
+            font-family: "Dosis-Regular"
+            font-size: 11px
+            text-transform: uppercase
+            margin-left: -19px
+            width: 308px
+            height: 40px
+            background: #F7F6F0 image-url("nosvc/separador-pledge.gif") center top no-repeat
+            +border-radius(0 0 16px 16px)
+            +text-shadow(white 1px 1px 1px)
+            .unlimited, .sold_out
+              font-size: 16px
+              color: #58b491
+              width: 120px
+              text-align: center
+              margin-left: 20px
+              margin-top: 13px
+              float: left
+            .sold_out
+              color: #ed6569
+              width: 125px
+              margin-left: 18px
+            .remaining
+              float: left
+              padding-top: 19px
+              text-indent: 10px
+              span
+                font-size: 24px
+                float: left
+                margin-left: 10px
+                margin-top: -10px
+            .expires_at
+              font-family: "Helvetica Neue","Arial","Sans-serif"
+              font-size: 13px
+              float: right
+              margin-right: 20px
+              margin-top: 16px
+              width: 120px
+              text-align: center
+      .info
+        #pledge
+
+        .statistics
+          background: #323334
+          width: 345px
+          height: 220px
+
+          .info_bar
+            background: #323334
+            float: left
+            height: 200px
+            width: 115px
+            padding: 10px
+            ul
+              li
+                float: left
+                width: 115px
+                font-family: "Dosis-Light"
+                color: #dddddd
+                margin-top: 20px
+                &:last-child
+                  margin-left: 0px
+                h6
+                  font-size: 38px
+                  margin-bottom: 3px
+                  float: left
+                  margin-left: 5px
+                .little
+                  width: 60px
+                p
+                  text-transform: uppercase
+                  font-size: 12px
+                  line-height: 13px
+                  float: left
+                  padding-top: 4px
+                  margin-left: 10px
+                  span
+                    color: #ed6569
+                    font-size: 38px
+                    margin-left: 5px
+                .confirmed, .not_confirmed
+                  background: image-url("nosvc/icon-confirmed.gif") left top no-repeat
+                  padding-left: 40px
+                  color: #58a479
+                  height: 32px
+                  margin-top: 20px
+                  margin-left: 0px
+                .not_confirmed
+                  background: image-url("nosvc/icon-expired.gif") left top no-repeat
+                  color: #ed6569
+          .item
+            font-family: Arial
+            font-size: 16px
+            color: rgba(black, 0.8)
+            padding-left: 55px
+            margin-bottom: 20px
+            p
+              font-family: "Helvetica Neue"
+              font-size: 34px
+              color: black
+            &.backers
+              background: url($images_path+"sidebar_backers_icon26x19.png") 4px center no-repeat
+            &.goal
+              background: url($images_path+"goal_icon36x17.png") left center no-repeat
+            &.time
+              background: url($images_path+"time_icon19x30.png") 10px center no-repeat
+        #condition
+          h3
+            background: image-url("nosvc/icon-condition.gif") left top no-repeat
+          p
+            line-height: 21px
+            font-family: "Helvetica Neue", "Arial", "Sans-serif"
+            font-size: 14px
+            color: #5d5d5d
+            padding-left: 50px
+            a
+              color: #83b1df
+              text-decoration: none
+              &:hover
+                text-decoration: underline
+        #pledge
+          padding-top: 20px
+          padding-bottom: 20px
+          input[type="submit"][disabled="disabled"]
+            +opacity(0.6)
+            background: url($images_path+"submit_back_icon25x22.png") 6px center no-repeat $ultra_gryn
+          input[type="submit"]
+            display: block
+            margin: 0 auto
+            background: image-url("nosvc/button-pledge.png") left top no-repeat
+            width: 171px
+            height: 61px
+            border: none
+            text-indent: 40px
+            cursor: pointer
+            +transition(all, 0.5s)
+            margin-top: 70px
+            text-transform: uppercase
+            font-family: "Dosis-Medium"
+            font-size: 18px
+            color: white
+            padding-bottom: 13px
+            +text-shadow(#4c8e75 1px 1px 0px)
+            &:hover
+              +box-shadow(rgba(black, 0.3) 0 0 4px inset)
+            &:active
+              +box-shadow(rgba(black, 0.3) 0 0 10px inset)
+          span
+            color: #bef3df
+            +text-shadow(#4c8e75 1px 1px 0px)
+            font-family: "Dosis-Medium"
+            text-transform: uppercase
+            font-size: 12px
+            float: left
+            margin-top: -25px
+            margin-left: 73px
+
+        #creator_profile
+          padding-top: 40px
+          float: left
+          padding-bottom: 15px
+          a
+            color: $ultra_gryn
+            text-decoration: none
+            &:hover
+              color: $blue
+          h3
+            background: image-url("nosvc/icon-user.gif") left top no-repeat
+          .avatar
+            float: left
+            margin-left: 50px
+            img
+              width: 220px
+              display: block
+              float: left
+              overflow: hidden
+              +border-radius(112px)
+          .personal_info
+            float: left
+            margin-left: 50px
+            text-align: center
+            width: 65%
+            p.name
+              padding-bottom: 5px
+              a
+                font-family: "Dosis-Medium"
+                font-size: 18px
+                color: #3772ae
+                text-decoration: none
+                margin-top: 20px
+                display: block
+                width: 100%
+                +text-shadow(white 1px 1px 0px)
+            p
+              font-family: Arial
+              font-size: 12px
+              color: $ultra_gryn
+              line-height: 140%
+          #bio
+            +grid(5)
+            +alpha
+            p
+              padding: 10px 0
+              font-family: Arial
+              font-size: 12px
+              color: $ultra_gryn
+              line-height: 140%
+        .media_content_backers
+          margin-top: 20px
+
+          p
+            font-family: "Dosis-Regular"
+            color: #5D5D5D
+            font-size: 16px
+            line-height: 24px
+            padding: 0 50px 0 50px
+            +text-shadow(white 1px 1px 0px)
+          h1
+            background: image-url("nosvc/icon-users.gif") left top no-repeat
+            color: #83b1df
+            font-family: "Dosis-Medium"
+            font-size: 21px
+            display: block
+            text-indent: 50px
+            padding-top: 10px
+            text-transform: uppercase
+            margin-bottom: 30px
+            height: 30px
+            +text-shadow(white 1px 1px 0px)
+          .total_backers, .remaining
+            color: #5d5d5d
+            +text-shadow(white 1px 1px 0px)
+            font-family: "Dosis-Light"
+            padding-left: 50px
+            text-transform: uppercase
+            width: 100px
+            font-size: 12px
+            float: left
+            margin-bottom: 20px
+            span
+              font-size: 32px
+              float: left
+              margin-top: -4px
+              margin-right: 10px
+          .remaining
+            padding-left: 0px
+          ul.collection_list
+            padding-left: 40px
+            float: left
+            li
+              width: 70px
+              float: left
+              margin: 8px
+              min-height: 67px
+              &:last-child
+                border-bottom: none
+              .backer
+                position: relative
+                .img
+                  .backer_avatar
+                    display: block
+                    width: 70px
+                    height: 70px
+                    @include border-radius(50%)
+
+              &:hover .back_info
+                display: block
+              .back_info
+                display: none
+                padding: 10px
+                width: 300px
+                position: absolute
+                top: 25px
+                left: 25px
+                z-index: 1001
+                font-family: "Helvetica", "Arial", "Sans-serif"
+                background: white
+                font-weight: lighter
+                +border-radius(4px)
+                +box-shadow(rgba(black, 0.4) 1px 1px 2px)
+                #text
+                  padding: 0 10px
+                  font-family: "Dosis-ExtraLight"
+                  text-transform: uppercase
+                  a, em.anon
+                    font-size: 17px
+                    padding-bottom: 5px
+                    font-weight: bold
+                    color: #83b1df
+                    text-decoration: none
+                    display: inline-block
+                #confirmed
+                  padding-top: 8px
+                  padding-left: 10px
+                #confirmed, #backed
+                  padding-top: 2px
+                  padding-left: 10px
+                  line-height: 18px
+                  font-family: "Helvetica", "Arial", "Sans-serif"
+                  font-size: 12px
+                  color: #5D5D5D
+                .reward
+                  clear: both
+                  padding: 10px
+                  font-size: 12px
+                  background: $ed_gryn
+                  font-weight: normal
+                  margin-top: 10px
+                  line-height: 18px
+                  +border-radius(4px)
+                  font-family: "Helvetica", "Arial", "Sans-serif"
