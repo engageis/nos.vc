@@ -681,9 +681,9 @@ pt:
       my_data: "Email"
       newsletter: "Quero receber novidades do Nós.vc por email. (Spam nunca!)"
       password_hint: "<i>Deixe em branco caso você não queira trocar sua senha.</i>"
-      payment_email: Email para pagamentos
+      payment_email: Login MoIP para pagamentos e estornos
       project_info: "Dados para encontros"
-      report_email: Email para relatório financeiro
+      report_email: E-mail Google para relatório financeiro
     header:
       bio_tooltip: "O que você gostaria de ensinar e aprender?"
       name_tooltip: "Qual é o seu nome?"
