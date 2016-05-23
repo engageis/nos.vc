@@ -410,9 +410,9 @@ pt:
         fourth_step: "Tá meio perdido? Entre em <a href=\"/contact\">contato com a gente</a> para fazer o seu encontro acontecer!"
     footer_featured:
       mi_casa_su_casa:
-        title: "Mi casa, su casa."
-        text: "Receba encontros inspiradores no seu espaço, sala, coworking, bar ou casa na árvore."
-        link: "Locais"
+        title: "Você, seja um de Nós"
+        text: "Queremos fazer as conexões e pôr esta energia em movimento!"
+        link: "Vem com a gente?!"
       not_repress:
         title: "Não se reprima!"
         text: "Uma vez por mês, e olhe lá, contamos as novidades pros amigos. Se você é um, por favor:"
@@ -591,7 +591,7 @@ pt:
   site:
     host: "nos.vc"
     base_url: "http://nos.vc"
-    blog: "http://blog.nos.vc/"
+    blog: "https://medium.com/@nos.vc"
     help: "http://help.nos.vc/"
     email:
       contact: somos@nos.vc

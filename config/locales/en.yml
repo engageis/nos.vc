@@ -564,7 +564,7 @@ en:
   site:
     host: "nos.vc"
     base_url: "http://nos.vc"
-    blog: "http://blog.nos.vc/"
+    blog: "https://medium.com/@nos.vc"
     help: "http://help.nos.vc/"
     email:
       contact: somos@nos.vc
