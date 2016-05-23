@@ -2,8 +2,10 @@
 class ProjectsController < ApplicationController
   include ActionView::Helpers::DateHelper
 
+  include ActiveModel::ForbiddenAttributesProtection
+
   inherit_resources
-  actions :index, :show, :new, :create
+  actions :index, :show, :new, :create, :update
   respond_to :html, :except => [:backers]
   respond_to :json, :only => [:index, :show, :backers]
   can_edit_on_the_spot
@@ -227,4 +229,18 @@ class ProjectsController < ApplicationController
       return render_error unless current_user.can_manage_project?(reward.project) or current_user.admin
     end
   end
+
+  # Started migrating stuff for usage with strong_parameters and newer rails standards
+  # For the moment this is only called on update by inherited resources
+  def permitted_params
+    params.permit(:project => [
+        :name, :user_id, :category_id, :goal, :expires_at, :about, :headline, :leader_bio, :leader_id,
+        :video_url, :image_url, :logo, :when_short, :when_long, :location, :maximum_backers, {
+          :rewards_attributes => [:description, :minimum_value, :maximum_backers, :expires_at, :private],
+          :dynamic_fields_attributes => [:input_name, :required]
+        }
+      ]
+    )
+  end
+
 end

@@ -129,7 +129,7 @@ CATARSE.ProjectsNewView = Backbone.View.extend({
         all_ok = false
       if(!ok('#project_location'))
         all_ok = false
-      $('#project_image_url, #project_leader_id, #project_leader_bio').addClass('ok')
+      $('#project_logo_url, #project_image_url, #project_leader_id, #project_leader_bio').addClass('ok')
       if(all_ok){
         $('#project_submit').attr('disabled', false)
       } else {

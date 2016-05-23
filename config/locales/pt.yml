@@ -97,7 +97,8 @@ pt:
         category: "Cidade:"
         expires_at: "Prazo:"
         headline: "Como você explicaria o encontro em um tweet?"
-        image_url: "Imagem:"
+        logo: "Faça o upload de uma imagem"
+        image_url: "ou cole o URL de uma imagem"
         name: "Qual é o nome do encontro?"
         user_id: "Id do usuário:"
         video_url: "URL do vídeo:"
@@ -332,6 +333,7 @@ pt:
       by: por
     admin_fields:
       title: "Administração"
+      upload_logo: Enviar nova imagem
     back_project:
       project_warning:
         not_successful:

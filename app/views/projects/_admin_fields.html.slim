@@ -18,6 +18,15 @@
       = @project.user_id
 
   .project_admin_field
+    strong= label :project, :logo
+    = form_for(@project) do |f|
+      - if @project.logo.url.present?
+        = image_tag @project.logo.url, :class => 'logo-preview'
+
+      = f.file_field :logo, :accept => "image/png,image/gif,image/jpeg"
+      = f.submit :value => t('.upload_logo')
+
+  .project_admin_field
     strong= label :project, :image_url
     #{on_the_spot_edit @project, :image_url}
 

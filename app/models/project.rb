@@ -10,6 +10,8 @@ class Project < ActiveRecord::Base
   include ERB::Util
   include Rails.application.routes.url_helpers
 
+  mount_uploader :logo, LogoUploader
+
   belongs_to :user
   belongs_to :leader, :class_name => "User", :foreign_key => "leader_id"
   belongs_to :category
@@ -89,8 +91,12 @@ class Project < ActiveRecord::Base
   validates_format_of :image_url, :with => /\.(jpg|jpeg|png|gif)$/, :allow_blank => true
   before_create :store_image_url
 
+  # Store the image URL if no image was uploaded
+  # If there's no upload and no URL, store the default image
   def store_image_url
-    self.image_url = display_image
+    if logo.url.blank?
+      self.image_url = display_image
+    end
   end
 
   def has_dynamic_fields?
@@ -102,7 +108,9 @@ class Project < ActiveRecord::Base
   end
 
   def display_image
-    if image_url.present?
+    if logo.url.present?
+      logo.url
+    elsif image_url.present?
       image_url
     elsif vimeo.thumbnail.present?
       vimeo.thumbnail

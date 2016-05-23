@@ -20,6 +20,8 @@ gem 'memcachier'
 gem 'dalli', '~> 2.2.1'
 gem 'draper', '0.17.0'
 
+gem 'strong_parameters'
+
 # Frontend stuff
 gem 'jquery-rails', '2.0.2'
 gem 'slim'
@@ -50,8 +52,8 @@ gem 'fog'
 # Other Tools
 gem 'feedzirra'
 gem 'validation_reflection', git: 'git://github.com/ncri/validation_reflection.git'
-gem 'inherited_resources', '1.3.1'
-gem 'has_scope'
+gem 'inherited_resources', '1.5.0'
+gem 'has_scope', '~> 0.6.0.rc'
 gem 'spectator-validates_email', require: 'validates_email'
 gem 'has_vimeo_video', git: 'https://github.com/lfzawacki/has_vimeo_video.git', branch: 'youtube-support'
 gem 'wirble'

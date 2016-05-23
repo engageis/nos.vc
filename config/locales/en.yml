@@ -327,6 +327,7 @@ en:
       by: by
     admin_fields:
       title: "Admin fields"
+      upload_logo: Upload new image
     back_project:
       project_warning:
         not_successful:
