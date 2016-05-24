@@ -3,7 +3,7 @@ class ReportsController < ApplicationController
   def financial_by_project
     @project = Project.find(params[:project_id])
 
-    unless can?(:manage, @project)
+    unless can?(:manage_backers, @project)
       redirect_to login_path
       return
     end
