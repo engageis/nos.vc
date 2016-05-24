@@ -1,5 +1,37 @@
 [data-namespace="projects"][data-controller="backers"][data-action="index"]
   #page_content
+
+    .user_social
+      +grid(3)
+      display: block
+      margin: 0 auto
+      width: 100%
+      ul
+        float: left
+        width: 96px
+        li
+          height: 26px
+          text-indent: -3000em
+          float: left
+          margin-right: 5px
+          width: 27px
+          a
+            color: black
+            +transition(all, 0.5s)
+            text-decoration: none
+            display: block
+            &:hover
+              color: $blue
+          &.email
+            background: image-url("nosvc/icon-user_face.png") left top no-repeat
+            display: none
+          &.facebook
+            background: image-url("nosvc/icon-user_face.png") left top no-repeat
+          &.twitter
+            background: image-url("nosvc/icon-user_twitter.png") left top no-repeat
+          &.other
+            background: image-url("nosvc/icon-user_home.png") left top no-repeat
+
     .section_header
       padding-top:  10px
       padding-bottom: 20px
@@ -47,8 +79,9 @@
 
       #project_content
         h1, h3
+          padding-top: 18px
           padding-bottom: 30px
-          font-size: 24px
+          font-size: 26px
           color: #83b1df
           font-family: "Dosis-Regular"
 
@@ -120,12 +153,11 @@
         .statistics
           background: #323334
           width: 345px
-          height: 220px
+          height: 150px
 
           .info_bar
             background: #323334
             float: left
-            height: 200px
             width: 200px
             padding: 10px
 

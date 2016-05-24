@@ -282,7 +282,7 @@ class Project < ActiveRecord::Base
     payment_method_fee = Configuration.find_by_name('payment_method_fee')
 
     payment_method_fee = if payment_method_fee.present?
-      payment_method_fee.value.to_f
+      (payment_method_fee.value.to_f/100.0)
     else
       0.075
     end

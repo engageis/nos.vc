@@ -24,14 +24,9 @@ css:
 
                 li
                   h6
-                    = @project.backers.count
+                    = @project.backers.confirmed.count
                   p.little
                     = t('.backers')
-                li
-                  h6
-                    = @project.backers.not_confirmed.count
-                  p.little
-                    = t('.non_confirmed')
 
     .main
       .section_header
@@ -42,26 +37,31 @@ css:
       #project_content.clearfix
         #project_backers
 
+          = render 'projects/admin_links'
+
           .text.clearfix
             h1= t('.backers')
 
-            table
-              tr
-                th
-                th
-                  strong= t('.name')
-                th
-                  strong= t('.pledge')
-                th
-                  strong= t('.confirmed')
-
-              - @project.backers.each do |backer|
+            - if @backers.any?
+              table
                 tr
-                  td
-                    = image_tag backer.user.display_image, width: '48', class: 'backer_picture'
-                  td= backer.user.name
-                  td= backer.reward.name
-                  td= backer.confirmed ? t('yes') : t('no')
+                  th
+                  th
+                    strong= t('.name')
+                  th
+                    strong= t('.pledge')
+                  th
+                    strong= t('.info')
+
+                - @backers.each do |backer|
+                  tr
+                    td
+                      = image_tag backer.user.display_image, width: '48', class: 'backer_picture'
+                    td= backer.user.name
+                    td= backer.reward.name
+                    td= render 'projects/user_social', :user => backer.user
+            - else
+              = t('.no_backers')
 
       .clearfix
     .clearfix

@@ -117,20 +117,9 @@ css:
           .personal_info
             p.name
              = link_to @project.user.display_name, user_path(@project.user)
-        .user_social
-          ul
-            - if can? :manage, @project.user
-              li.email
-                = mail_to @project.user.email, "Me envie um email", :target => '_blank'
-            - if @project.user.facebook_link
-              li.facebook
-                = link_to "Perfil no facebook", @project.user.facebook_link, :target => '_blank'
-            - if @project.user.twitter
-              li.twitter
-                = link_to "Perfil no twitter", @project.user.twitter_link, :target => '_blank'
-            - if @project.user.other_link
-              li.other
-                = link_to @project.user.other_link, @project.user.other_link, :target => '_blank'
+
+          = render 'user_social', user: @project.user
+
           .clearfix
         .media_content_backers.clearfix
           h1

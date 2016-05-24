@@ -1,7 +1,13 @@
 class ReportsController < ApplicationController
 
   def financial_by_project
-    return unless require_admin
+    @project = Project.find(params[:project_id])
+
+    unless can?(:manage, @project)
+      redirect_to login_path
+      return
+    end
+
     @csv = Reports::Financial::Backers.report(params[:project_id])
     send_data @csv,
               :type => 'text/csv; charset=utf-8; header=present',

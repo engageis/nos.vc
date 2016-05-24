@@ -1,8 +1,8 @@
 pt:
   or: ou
   until: "até"
-  no: Não
-  yes: Sim
+  "no": Não
+  "yes": Sim
   by: "por"
   newsletter_ok_header: "Cadastro efetuado!"
   newsletter_ok_body: "Seu email foi cadastrado com sucesso, obrigado!"
@@ -331,6 +331,11 @@ pt:
       highlight_project: "projeto em destaque"
     box:
       by: por
+    admin_links:
+      back_to_edit: "Voltar à edição do encontro"
+      backers: "Administração"
+      view_as_user: "Visualizar como usuário"
+      report: "Relatório Financeiro"
     admin_fields:
       title: "Administração"
       upload_logo: Enviar nova imagem
@@ -361,11 +366,11 @@ pt:
       index:
         admin_page: "Administração - %{project}"
         backers: Inscritos
-        confirmed: "Confirmado"
         expected_revenue: "Arrecadação esperada"
+        info: Contatos
         name: "Nome"
-        non_confirmed: 'Não confirmados'
         pledge: "Inscrição"
+        no_backers: "Nenhum inscrito... ainda ;)"
       new:
         cannot_back: "Não é possível se inscrever neste encontro no momento. Por favor, tente mais tarde."
         header:
@@ -497,7 +502,6 @@ pt:
     send_mail:
       success: "Sua proposta de encontro foi enviada com sucesso! Logo entraremos em contato. Muito obrigado!"
     show:
-      back_to_edit: "Voltar à edição do encontro"
       rejected: "Não foi dessa vez. Este encontro não foi selecionado pra participar do Nós.vc. Quem sabe na próxima?"
       waiting: "Estamos revisando este encontro. Logo, logo saberemos se ele entrará no Nós.vc."
       where: "Onde?"

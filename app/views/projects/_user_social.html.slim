@@ -1,0 +1,14 @@
+.user_social
+  ul
+    - if can? :manage, user
+      li.email
+        = mail_to user.email, "Me envie um email", :target => '_blank'
+    - if user.facebook_link.present?
+      li.facebook
+        = link_to "Perfil no facebook", user.facebook_link, :target => '_blank'
+    - if user.twitter.present?
+      li.twitter
+        = link_to "Perfil no twitter", user.twitter_link, :target => '_blank'
+    - if user.other_link.present?
+      li.other
+        = link_to user.other_link, user.other_link, :target => '_blank'
