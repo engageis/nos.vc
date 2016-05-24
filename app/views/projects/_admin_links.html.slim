@@ -13,9 +13,9 @@
             = image_tag 'report.png'
             = link_to t('.report'), backers_financial_report_path(@project)
 
-          li
-            = image_tag 'catarse/pencil_16.png'
-            = link_to t('.back_to_edit'), project_path(@project)
+        li
+          = image_tag 'catarse/pencil_16.png'
+          = link_to t('.back_to_edit'), project_path(@project)
 
     li.preview-link
         - if preview_mode?

@@ -291,7 +291,7 @@ class Project < ActiveRecord::Base
   end
 
   def display_expected_revenue
-    number_to_currency expected_revenue, :unit => 'R$', :precision => 0, :delimiter => '.'
+    number_to_currency expected_revenue, :unit => 'R$', :precision => 2, :delimiter => '.'
   end
 
   def finish!
