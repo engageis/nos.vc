@@ -320,7 +320,7 @@ pt:
         notification_text: "Você recebeu %{value} em créditos para se inscrever em outros encontros. Caso prefira, você pode pedir seu dinheiro de volta %{link}."
         unsuccessful_text: "%{link}, em que você se inscreveu, não será realizado. Quem sabe numa próxima vez?"
     verify_if_video_exists_on_vimeo: "deve existir no Vimeo"
-    vimeo_regex_validation: "somente URLs do Vimeo são aceitas"
+    vimeo_regex_validation: "somente URLs Vimeo e Youtube são aceitas"
     display_status:
       expired: "Encontro não realizado"
       successful: "Encontro confirmado"
