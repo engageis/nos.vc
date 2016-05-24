@@ -282,6 +282,10 @@ class Project < ActiveRecord::Base
     backers.confirmed.sum(:value) * (1 - payment_method_fee)
   end
 
+  def display_expected_revenue
+    number_to_currency expected_revenue, :unit => 'R$', :precision => 0, :delimiter => '.'
+  end
+
   def finish!
     return unless expired? and can_finish and not finished
     backers.confirmed.each do |backer|

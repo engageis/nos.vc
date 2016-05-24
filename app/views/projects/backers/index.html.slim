@@ -3,6 +3,8 @@ css:
     background: url("#{@project.display_image.html_safe}") center center no-repeat;
   }
 
+= content_for :title, t('.admin_page', :project => @project.name)
+
 #page_content
   .container
 
@@ -12,78 +14,54 @@ css:
         #statistics
           .statistics
 
-
             .info_bar
               ul
                 li
                   h6
-                    R$
-                    = @project.expected_revenue
+                    = @project.display_expected_revenue
                   p.little
-                    = "Arrecadação esperada"
+                    = t('.expected_revenue')
 
                 li
                   h6
                     = @project.backers.count
                   p.little
-                    = "Inscritos"
+                    = t('.backers')
                 li
                   h6
                     = @project.backers.not_confirmed.count
                   p.little
-                    = "não confirmados"
-
-              .clearfix
-            .clearfix
-          .clearfix
-        .clearfix
-
-        .media_content_backers.clearfix
-
-          h1
-            = t('.menu.backers')
-
-          .total_backers
-            span= @project.total_backers
-            |
-            = t('projects.show.total_backers')
-          .remaining
-            - if @project.can_back?
-              span= @project.total_vacancies if @project.total_vacancies and not @project.unlimited_vacancies?
-              |
-              = t('projects.show.total_remaining') unless @project.unlimited_vacancies?
-              = t('projects.show.unlimited_vacancies') if @project.unlimited_vacancies?
-            - else
-              span 0
-              = t('projects.show.total_remaining')
-          #project_backers.content.clearfix
-        .clearfix
+                    = t('.non_confirmed')
 
     .main
       .section_header
 
         h1
-          = @project.name
+          = t('.admin_page', :project => @project.name)
 
       #project_content.clearfix
-        #project_about.content
+        #project_backers
 
           .text.clearfix
-            h1= "Inscritos"
+            h1= t('.backers')
 
             table
               tr
                 th
-                th Nome
-                th Inscrição
-                th Confirmado
+                th
+                  strong= t('.name')
+                th
+                  strong= t('.pledge')
+                th
+                  strong= t('.confirmed')
+
               - @project.backers.each do |backer|
                 tr
                   td
-                    = image_tag backer.user.display_image, class: 'backer_avatar'
+                    = image_tag backer.user.display_image, width: '48', class: 'backer_picture'
                   td= backer.user.name
                   td= backer.reward.name
-                  td= backer.confirmed ? 'Sim' : 'Não'
+                  td= backer.confirmed ? t('yes') : t('no')
 
       .clearfix
     .clearfix

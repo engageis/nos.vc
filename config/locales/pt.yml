@@ -1,8 +1,8 @@
 pt:
   or: ou
   until: "até"
-  no: "Não"
-  yes: "Sim"
+  no: Não
+  yes: Sim
   by: "por"
   newsletter_ok_header: "Cadastro efetuado!"
   newsletter_ok_body: "Seu email foi cadastrado com sucesso, obrigado!"
@@ -356,6 +356,14 @@ pt:
         paypal_description: "Inscrição no encontro %{project_name} no valor de %{value}"
         paypal_error: "Ooops. Ocorreu um erro ao enviar seu pagamento para o PayPal. Por favor, tente novamente."
         success: "Sua inscrição foi realizada com sucesso. Muito obrigado!"
+      index:
+        admin_page: "Administração - %{project}"
+        backers: Inscritos
+        confirmed: "Confirmado"
+        expected_revenue: "Arrecadação esperada"
+        name: "Nome"
+        non_confirmed: 'Não confirmados'
+        pledge: "Inscrição"
       new:
         cannot_back: "Não é possível se inscrever neste encontro no momento. Por favor, tente mais tarde."
         header:

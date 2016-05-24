@@ -6,10 +6,11 @@ class Projects::BackersController < ApplicationController
 
   def index
     @backers = @project.backers.confirmed.order("confirmed_at DESC").page(params[:page]).per(20)
+    can_manage = can?(:manage, @project)
 
     respond_to do |format|
-      format.html
-      format.json { render :json => @backers.to_json(:can_manage => can?(:manage, @project)) }
+      format.html { redirect_to(login_path) unless can_manage }
+      format.json { render :json => @backers.to_json(:can_manage => can_manage) }
     end
   end
 

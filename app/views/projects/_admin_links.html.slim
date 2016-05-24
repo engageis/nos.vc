@@ -1,0 +1,12 @@
+- if can?(:edit, @project)
+
+  ul.admin-links
+    li.admin-link
+      - if controller_name != 'backers'
+        = link_to t('.backers'), project_path(@project)
+
+    li.preview-link
+        - if preview_mode?
+          = link_to t('.back_to_edit'), project_path(@project)
+        - else
+          = link_to t('.view_as_user'), project_path(@project, :preview => true)

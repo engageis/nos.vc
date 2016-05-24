@@ -175,12 +175,7 @@ css:
           - else
             = @project.headline
 
-        - if can?(:edit, @project)
-          p.preview-link
-            - if preview_mode?
-              = link_to t('.back_to_edit'), project_path(@project)
-            - else
-              = link_to t('.view_as_user'), project_path(@project, :preview => true)
+        = render 'admin_links'
 
       #project_content.clearfix
         #project_about.content
