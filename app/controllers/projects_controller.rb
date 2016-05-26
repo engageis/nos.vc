@@ -93,6 +93,10 @@ class ProjectsController < ApplicationController
     end
   end
 
+  def update
+    update! { project_path(@project) }
+  end
+
   def show
     begin
       if params[:permalink].present?
