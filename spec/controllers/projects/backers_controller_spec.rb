@@ -157,7 +157,7 @@ describe Projects::BackersController do
     shared_examples_for  "admin / owner" do
       it "should see all info from backer" do
         request.session[:user_id]=@user.id
-        get :index, {:locale => :pt, :project_id => @project.id}
+        get :index, {:locale => :pt, :project_id => @project.id, :format => 'json'}
 
         ActiveSupport::JSON.decode(response.body).to_s.should =~ /R\$ 10/
         ActiveSupport::JSON.decode(response.body).to_s.should =~ /Lorem Ipsum/
@@ -167,7 +167,7 @@ describe Projects::BackersController do
     shared_examples_for "normal / guest" do
       it "should see filtered info about backer" do
         request.session[:user_id]=@user.id
-        get :index, {:locale => :pt, :project_id => @project.id}
+        get :index, {:locale => :pt, :project_id => @project.id, :format => 'json'}
 
         ActiveSupport::JSON.decode(response.body).to_s.should =~ /Lorem Ipsum/
       end
