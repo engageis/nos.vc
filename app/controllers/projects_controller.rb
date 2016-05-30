@@ -213,8 +213,8 @@ class ProjectsController < ApplicationController
     project_admin_fields = ["name", "about", "headline", "can_finish", "expires_at_spot", "user_id", "image_url", "video_url", "visible", "rejected", "recommended", "home_page",  "permalink", "when_short", "when_long", "leader_bio", "leader_id", "location"]
     backer_fields = ["display_notice"]
     backer_admin_fields = ["confirmed", "requested_refund", "refunded", "anonymous", "user_id"]
-    reward_fields = ["description"]
-    reward_admin_fields = ["description"]
+    reward_fields = ["description", "minimum_value", "maximum_backers"]
+    reward_admin_fields = ["description", "minimum_value", "maximum_backers"]
     def render_error; render :text => t('require_permission'), :status => 422; end
     return render_error unless current_user
     klass, field, id = params[:id].split('__')

@@ -85,6 +85,15 @@ css:
                   #{on_the_spot_edit reward, :description, :type => :textarea}
                 - else
                   = auto_link(simple_format(reward.description), :html => {:target => :_blank})
+
+                - if can?(:edit, reward) && !preview_mode?
+                  .reward-edit
+                    label= t('activerecord.attributes.reward.minimum_value')
+                    #{on_the_spot_edit reward, :minimum_value}
+
+                    label= t('activerecord.attributes.reward.maximum_backers')
+                    #{on_the_spot_edit reward, :maximum_backers}
+
               .maximum_backers
                 - if reward.maximum_backers
                   - if reward.sold_out?
@@ -93,6 +102,7 @@ css:
                     .remaining= reward.display_remaining.html_safe
                 - else
                   .unlimited= t('reward.unlimited')
+
                 .expires_at
                   span= t('until')
                   |
