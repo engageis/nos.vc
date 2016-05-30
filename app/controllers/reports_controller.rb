@@ -14,6 +14,15 @@ class ReportsController < ApplicationController
               :disposition => "attachment; filename=financial_report_of_project_#{params[:project_id]}.csv"
   end
 
+  def projects_monthly
+    return unless require_admin
+
+    @csv = Reports::Financial::Monthly.report(params[:month], params[:year])
+    send_data @csv,
+              :type => 'text/csv; charset=utf-8; header=present',
+              :disposition => "attachment; filename=monthly_report_#{"%02d" % params[:month]}_#{params[:year]}.csv"
+  end
+
   def location_by_project
     return unless require_admin
     @csv = Reports::Location::Backers.report(params[:project_id])
