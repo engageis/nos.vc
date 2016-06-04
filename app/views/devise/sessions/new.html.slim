@@ -9,7 +9,7 @@
         li= link_to t('.login_title'), "#login", class: "#{'selected' if params[:active_register]}", id: "login_link"
         li= link_to t('.register_title'), '#register', id: "register_link"
     .main
-      span= t('.subtitle')
+      span.dont-knock= t('.subtitle')
       .login_with_social.social_content.content
         h3= t('.social')
         .content_form
@@ -37,6 +37,9 @@
             p.input
               = f.label :email
               = f.text_field :email
+            p.input.user-interests
+              = f.label :interest_list
+              = f.select :interest_list, [], {:class => 'form-control'}, { :multiple => true, :size => 5 }
             p.input
               = f.label :password
               = f.password_field :password

@@ -1,3 +1,21 @@
+ul.admin-links
+  float: right
+  display: list
+  margin: 0px 20px 16px 4px
+
+  li
+    font-family: "Dosis-Regular"
+    font-size: 16px
+    margin-right: 16px
+    display: inline
+
+    img
+      margin-right: 6px
+
+    a
+      color: #5d5d5d
+
+
 [data-namespace="null"][data-controller="projects"][data-action="show"]
   #page_content
     .section_header
@@ -12,10 +30,6 @@
         letter-spacing: -1px
         text-align: center
         text-transform: uppercase
-
-      .preview-link
-        float: right
-        font-size: 20px
 
       h4
         color: #5d5d5d
@@ -242,6 +256,17 @@
             width: 88%
             float: right
             display: inline
+
+        #project_admin
+          .project_admin_field
+            img.logo-preview
+              width: 100px
+              margin: 5px 5px 0px 0px
+              border: 1px #aaa solid
+
+            .user-interests
+              input[type='submit']
+                margin-left: 30px
 
         #project_updates
           border-top: 1px #D8D3D3 dashed
@@ -495,6 +520,21 @@
               text-decoration: none
               &:hover
                 text-decoration: underline
+
+          .reward-edit
+            margin-top: 10px
+            padding-top: 10px
+            margin-bottom: 5px
+            border-top: dashed 1px #cccccc
+
+          label
+            float: left
+            font-family: "Dosis-Light"
+            font-size: 18px
+            text-align: left
+            color: #5D5D5D
+            margin-right: 5px
+
           .maximum_backers
             color: #5d5d5d
             font-family: "Dosis-Regular"

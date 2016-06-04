@@ -25,6 +25,7 @@ Factory.define :project do |f|
   f.name "Foo bar"
   f.permalink { Factory.next(:permalink) }
   f.association :user, :factory => :user
+  f.association :leader, :factory => :user
   f.association :category, :factory => :category
   f.about "Foo bar"
   f.headline "Foo bar"

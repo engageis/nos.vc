@@ -6,8 +6,10 @@ CATARSE.SessionsNewView = Backbone.View.extend({
     CATARSE.router.route("social", "social", this.social)
     CATARSE.router.route("login", "login", this.login)
     CATARSE.router.route("register", "register", this.register)
-    this.render()
 
+    UserInterests.initialize('#user_interest_list', '98%');
+
+    this.render()
   },
 
   index: function() {

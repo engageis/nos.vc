@@ -1,0 +1,68 @@
+css:
+  .logo_header {
+    background: url("#{@project.display_image.html_safe}") center center no-repeat;
+  }
+
+= content_for :title, t('.admin_page', :project => @project.name)
+
+#page_content
+  .container
+
+    #project_description
+    .sidebar
+      .info
+        #statistics
+          .statistics
+
+            .info_bar
+              ul
+                li
+                  h6
+                    = @project.display_expected_revenue
+                  p.little
+                    = t('.expected_revenue')
+
+                li
+                  h6
+                    = @project.backers.confirmed.count
+                  p.little
+                    = t('.backers')
+
+    .main
+      .section_header
+
+        h1
+          = t('.admin_page', :project => @project.name)
+
+      #project_content.clearfix
+        #project_backers
+
+          = render 'projects/admin_links'
+
+          .text.clearfix
+            h1= t('.backers')
+
+            - if @backers.any?
+              table
+                tr
+                  th
+                  th
+                    strong= t('.name')
+                  th
+                    strong= t('.pledge')
+                  th
+                    strong= t('.info')
+
+                - @backers.each do |backer|
+                  tr
+                    td
+                      = image_tag backer.user.display_image, width: '48', class: 'backer_picture'
+                    td= backer.user.name
+                    td= backer.reward.name
+                    td= render 'projects/user_social', :user => backer.user
+            - else
+              = t('.no_backers')
+
+      .clearfix
+    .clearfix
+

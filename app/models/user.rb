@@ -9,6 +9,8 @@ class User < ActiveRecord::Base
             :medium_name, :display_credits, :display_total_of_backs, :display_image_large,
             :to => :decorator
 
+  acts_as_taggable_on :interests
+
   # Setup accessible (or protected) attributes for your model
   # TODO: move to rails4 style strong parameters
   attr_accessible :email,
@@ -37,12 +39,16 @@ class User < ActiveRecord::Base
                   :credits,
                   :payment_email,
                   :report_email,
+                  :interest_list,
                   :admin # being filtered in the controller
 
   include ActionView::Helpers::NumberHelper
   include ActionView::Helpers::TextHelper
   include Rails.application.routes.url_helpers
   extend ActiveSupport::Memoizable
+
+  # For users created via registration form or rails_admin
+  before_validation :set_provider_and_uid_if_nil
 
   validates_presence_of :provider, :uid
   validates_uniqueness_of :uid, :scope => :provider
@@ -258,6 +264,18 @@ class User < ActiveRecord::Base
   def gravatar_url params=''
     return unless email
     "https://gravatar.com/avatar/#{Digest::MD5.new.update(email)}.jpg?default=#{image_url or "#{I18n.t('site.base_url')}/assets/user.png"}#{params}"
+  end
+
+  # Set the provider and uid for a default user not associated
+  # with any external oauth2 service
+  #
+  # This is relevant when creating a user via Registrations#create
+  # (sign up form) or via the rails_admin interface.
+  def set_provider_and_uid_if_nil
+    if provider.nil? && uid.nil?
+      self.provider = 'devise'
+      self.uid = Devise.friendly_token
+    end
   end
 
 end

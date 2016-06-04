@@ -1,4 +1,8 @@
 [data-namespace="null"][data-controller="users"][data-action="show"]
+
+  label[for='user_interest_list']
+    padding-right: 20px
+
   #creditsModal
     h3
       font-family: "Helvetica", "Arial", "Sans-serif"
@@ -14,7 +18,7 @@
       background-position: left 13px
       background-repeat: no-repeat
     #backed_projects_link
-      background-image: image-url('nosvc/icon-successful.png')    
+      background-image: image-url('nosvc/icon-successful.png')
     #created_projects_link
       background-image: image-url('nosvc/icon-user-create.png')
     #statements_link
@@ -144,7 +148,7 @@
         width: 65px
         float: right
         margin-right: 10px
-        margin-top: 20px        
+        margin-top: 20px
         ul
           li
             a
@@ -225,7 +229,7 @@
       +grid(16)
       width: 534px
       float: right
-      padding: 40px
+      padding: 0px 40px 40px 40px
       margin: -250px 0px 0px 0px
       display: none
       #gravatar_hint.alert
@@ -321,9 +325,9 @@
       padding-bottom: 10px
       margin-bottom: 10px
       text-transform: uppercase
-    ul
+    ul.form-list
       padding-top: 15px
-      li
+      li.form-list-item
         font-family: "Helvetica Neue"
         font-size: 15px
         margin-bottom: 15px
@@ -339,6 +343,7 @@
           margin-left: 5px
         &:last-child
           margin-bottom: 55px
+
   #social_info, #change_password, #project_info
     h1
       font-family: "Dosis-Regular"
@@ -351,9 +356,9 @@
     form
       padding: 0px
       float: left
-      ul
+      ul.form-list
         margin-top: 40px
-        li
+        li.form-list-item
           float: left
           padding-bottom: 15px
           width: 100%
@@ -374,7 +379,8 @@
             width: 374px
             float: right
             line-height: 18px
-      input#user_submit
+
+      input.user_submit
         float: right
         margin-bottom: 40px
         background: $em-color

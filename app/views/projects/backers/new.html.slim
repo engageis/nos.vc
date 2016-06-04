@@ -18,7 +18,7 @@
         #project_info
           .project_name= link_to @project.name, project_path(@project)
           .infos
-            .project_owner por #{link_to @project.user.display_name, user_path(@project.user)}
+            .project_owner #{t('by')} #{link_to @project.user.display_name, user_path(@project.user)}
             .when= @project.when_short
             .location= @project.category.name
         .clearfix  

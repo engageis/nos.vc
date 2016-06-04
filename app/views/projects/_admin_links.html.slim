@@ -1,0 +1,37 @@
+- if can?(:edit, @project)
+
+  ul.admin-links
+
+    - if can?(:manage_backers, @project)
+      - if controller_name != 'backers'
+        li.admin-link
+          = link_to project_backers_path(@project) do
+            = image_tag 'admin.png'
+            = t('.backers')
+
+      - else
+        - if @project.backers.confirmed.any?
+          li.download-report
+            = link_to backers_financial_report_path(@project) do
+              = image_tag 'report.png'
+              = t('.report')
+
+          li.download-report
+            = link_to backers_attendance_report_path(@project) do
+              = image_tag 'catarse/profile_icon19x14.png'
+              = t('.attendance')
+
+        li
+          = link_to project_path(@project) do
+            = image_tag 'catarse/pencil_16.png'
+            = t('.back_to_edit')
+
+    li.preview-link
+        - if preview_mode?
+          = link_to project_path(@project) do
+            = image_tag 'catarse/pencil_16.png'
+            = t('.back_to_edit')
+        - else
+          = link_to project_path(@project, :preview => true) do
+            = image_tag 'catarse/explore_icon21x14.png'
+            = t('.view_as_user')

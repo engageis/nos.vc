@@ -21,6 +21,9 @@ CATARSE.ProjectsShowView = Backbone.View.extend({
     this.project = new CATARSE.Project($('#project_description').data("project"))
     this.updates()
     this.backers()
+
+    UserInterests.initialize('#project_tag_list', '50%');
+
     this.render()
   },
 

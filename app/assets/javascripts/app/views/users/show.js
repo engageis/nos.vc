@@ -18,6 +18,8 @@ CATARSE.UsersShowView = Backbone.View.extend({
       }
     })
 
+    UserInterests.initialize('#user_interest_list', '69%');
+
     $('#user_feed input').live('keyup', function(){
       var value = $(this).val()
       var re = /^[a-z0-9\._-]+@([a-z0-9][a-z0-9-_]*[a-z0-9-_]\.)+([a-z-_]+\.)?([a-z-_]+)$/

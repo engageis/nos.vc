@@ -55,10 +55,11 @@ class ApplicationController < ActionController::Base
   end
 
   def set_locale
-    #return unless params[:locale]
-    I18n.locale = 'pt'#params[:locale]
-    #return unless current_user
-    #current_user.update_attribute :locale, params[:locale] if params[:locale] != current_user.locale
+    return unless params[:locale]
+    I18n.locale = params[:locale]
+    session[:locale] = params[:locale]
+    return unless current_user
+    current_user.update_attribute :locale, params[:locale] if params[:locale] != current_user.locale
   end
 
   def detect_locale
@@ -66,17 +67,20 @@ class ApplicationController < ActionController::Base
     return if params[:locale]
     new_locale = current_user.locale if current_user
     new_locale = session[:locale] if session[:locale]
+
     unless new_locale
-      new_locale = 'pt' #request.compatible_language_from(I18n.available_locales.map(&:to_s))
+      # Doesn't seem to detect all BR ips as 'pt', so we'll just comment for now
+      # new_locale = request.compatible_language_from(I18n.available_locales.map(&:to_s))
       new_locale = I18n.default_locale.to_s unless new_locale
-      #flash[:locale] = t('notify_locale', :locale => new_locale)
     end
+
     return redirect_to replace_locale(new_locale)
   end
 
   def replace_locale(new_locale)
     session[:locale] = new_locale
-    new_url = "#{request.fullpath}"
+    new_url = "#{request.original_fullpath}"
+
     if params[:locale]
       new_url.gsub!(/^\/#{params[:locale]}/, "/#{new_locale}")
     else

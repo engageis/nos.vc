@@ -7,6 +7,8 @@
       = form.input :name, :as => :string
       = form.input :about
       = form.input :headline, :input_html => { :maxlength => 140 }
+      .user-interests
+        = form.input :tag_list, :as => :select, :input_html => { :multiple => true }
       = form.input :when_short
       = form.input :when_long
       = form.input :category, :collection => Category.all(:order => :name)
@@ -19,6 +21,7 @@
       = form.input :location, :hint => location_hint
 
       = form.input :video_url, :as => :string
+      = form.input :logo, :as => :file, :input_html => { :accept => "image/png,image/gif,image/jpeg" }
       = form.input :image_url, :as => :string
     h2= t('projects.start.the_people')
     fieldset

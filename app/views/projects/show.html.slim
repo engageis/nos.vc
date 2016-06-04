@@ -54,7 +54,7 @@ css:
               #pledge
                 = form_tag(new_project_backer_path(@project), :method => :get, :id => 'back_project_form') do
                   fieldset
-                    = submit_tag t('projects.back_project.submit'), :disabled => (not @project.can_back?)
+                    = submit_tag t('projects.back_project.submit'), :disabled => (!@project.can_back? || !@project.rewards.public.any?)
                     span = t('projects.back_project.and_make_it_happen')
 
         #condition[class="#{@project.display_status}"]
@@ -76,16 +76,27 @@ css:
         #rewards
           h3= t('.how_much')
           - @rewards.each do |reward|
-            div[class="box #{('clickable' if @project.can_back? and not reward.sold_out? and not reward.expired?)}"]
+            div[class="box"]
               = hidden_field_tag 'url', "#{new_project_backer_path(@project)}/?reward_id=#{reward.id}"
-              h2= reward.minimum_value > 0 ? reward.display_minimum : I18n.t('reward.free')
+              h2[class="#{('clickable' if @project.can_back? and not reward.sold_out? and not reward.expired?)}"]
+                = reward.minimum_value > 0 ? reward.display_minimum : I18n.t('reward.free')
+
               .clearfix
               p
                 - if can?(:edit, reward) && !preview_mode?
                   #{on_the_spot_edit reward, :description, :type => :textarea}
                 - else
                   = auto_link(simple_format(reward.description), :html => {:target => :_blank})
-              .maximum_backers
+
+                - if can?(:edit, reward) && !preview_mode?
+                  .reward-edit
+                    label= t('activerecord.attributes.reward.minimum_value')
+                    #{on_the_spot_edit reward, :minimum_value}
+
+                    label= t('activerecord.attributes.reward.maximum_backers')
+                    #{on_the_spot_edit reward, :maximum_backers}
+
+              .maximum_backers[class="#{('clickable' if @project.can_back? and not reward.sold_out? and not reward.expired?)}"]
                 - if reward.maximum_backers
                   - if reward.sold_out?
                     .sold_out= t('reward.sold_out')
@@ -93,6 +104,7 @@ css:
                     .remaining= reward.display_remaining.html_safe
                 - else
                   .unlimited= t('reward.unlimited')
+
                 .expires_at
                   span= t('until')
                   |
@@ -117,20 +129,9 @@ css:
           .personal_info
             p.name
              = link_to @project.user.display_name, user_path(@project.user)
-        .user_social
-          ul
-            - if can? :manage, @project.user
-              li.email
-                = mail_to @project.user.email, "Me envie um email", :target => '_blank'
-            - if @project.user.facebook_link
-              li.facebook
-                = link_to "Perfil no facebook", @project.user.facebook_link, :target => '_blank'
-            - if @project.user.twitter
-              li.twitter
-                = link_to "Perfil no twitter", @project.user.twitter_link, :target => '_blank'
-            - if @project.user.other_link
-              li.other
-                = link_to @project.user.other_link, @project.user.other_link, :target => '_blank'
+
+          = render 'user_social', user: @project.user
+
           .clearfix
         .media_content_backers.clearfix
           h1
@@ -175,12 +176,7 @@ css:
           - else
             = @project.headline
 
-        - if can?(:edit, @project)
-          p.preview-link
-            - if preview_mode?
-              = link_to t('.back_to_edit'), project_path(@project)
-            - else
-              = link_to t('.view_as_user'), project_path(@project, :preview => true)
+        = render 'admin_links'
 
       #project_content.clearfix
         #project_about.content

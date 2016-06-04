@@ -1,11 +1,18 @@
-h2 I want to back, how do I do it?
-h3 How do I back this project?
-p First, chose the value and reward you wish. Then we will redirect you to #{link_to "MoIP", "http://www.moip.com.br/", :target => :_blank} so you can proceed with the payment.
-h3 When is the payment made and confirmed?
-p Shortly after MoIP confirms the transaction. After that, if the project doesn't reach #{@project.display_goal} until #{@project.display_expires_at}, you will receive your money back as credits on Catarse.
-h3 Oh, so I receive my money back if the project doesn't succeed?
-p Yes! You receive 100% back as credits to back other projects on Catarse.
-h3 What if I don't want to use the credits on Catarse?
-p No problem. Just go to #{link_to t('credits.title'), credits_path, :target => :_blank}, up until 180 days after your payment, and request a refund. If you payed with credit card, the refund will be received in your next bill. If you payed with debit or transfer, the only way to receive the refund is to open an account on MoIP. This way we transfer you the value from our account to yours and, from there, you transfer to your bank account. No matter what way you chose, you wont have to pay anything.
-h3 If the project is successful, how do I receive my reward?
-p When your reward is ready, #{link_to @project.user.display_name, user_path(@project.user)} will get in touch with you to arrange the delivery.
+h3 How is the payment made?
+p You'll choose a type of registration and we'll redirect you to #{link_to "MoIP", "http://www.moip.com.br/", :target => :_blank}, Um sistema seguro para pagamentos online de todos os tipos que aceita cartões e transferência bancária,  where you'll be able to finish your payment.
+
+h3 When is the registration confirmed?
+p Shortly after #{link_to "MoIP", "http://www.moip.com.br/", :target => :_blank} confirms the transaction. It could take a few minutes, to a few days depending on the choosen bank or method of payment. Free registrations will be confirmed immediately.
+
+h3 How can I register another person for the meeting?
+p You can't register another person for this meeting. You could make a payment for someone else, but we suggest that each person register individually. It's a way to affirm that you yourself want to learn and help make the meeting happen. Besides, registrations will be listed on the profile page of the person that made them. If you want to pay for someone else's registration you can personally arrange this with them, for example he/she can register themselves and you'll help them by paying with your credit card or giving them the money afterwards.
+
+h3 What happens if the meeting doesn't reach the minimum number of registrations?
+p In case the meeting does not get the minimum number of registrations until #{@project.display_expires_at} the meeting won't happen. You'll get your money back in the form of credits on Nós.vc. Yes, 100% of what you've paid will be returned and can be used to pay for another registration. If your registration was free you'll get back 'good vibes' that you can spend however you want.
+
+
+h3 What if I don't want to use the credits on Nós.vc?
+p No problem. Just go to #{link_to t('credits.title'), credits_path, :target => :_blank}, up until 180 days after your payment, and request a refund. If you've paid with credit card, the refund will be received in your next bill. If you've paid with debit or transfer, the only way to receive the refund is to open an account on MoIP. This way we can transfer the value from our account to yours and, from there, you can transfer it to your bank account. No matter the way you chose to do it, you wont have to pay anything extra.
+
+h3 After I'm registered, how do I participate?
+p Just go to the meeting location and intoduce yourself! Any additional information will be sent by  #{link_to @project.user.display_name, user_path(@project.user)}.

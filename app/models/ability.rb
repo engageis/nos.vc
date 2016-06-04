@@ -11,6 +11,8 @@ class Ability
     can :backs, User
     can :projects, User
 
+    can :show, CuratedPage, :visible => true
+
     if current_user.persisted?
       can :index, User
     end
@@ -21,6 +23,11 @@ class Ability
       can :manage, Project do |project|
         current_user.can_manage_project?(project)
       end
+
+      if Configuration.find_by_name('backer_management').try(:value) != 'active'
+        cannot :manage_backers, Project
+      end
+
       can :manage, Reward do |reward|
         current_user.can_manage_project?(reward.project)
       end

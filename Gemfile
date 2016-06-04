@@ -16,6 +16,10 @@ gem 'maxim-sexy_pg_constraints'
 gem 'dalli', '~> 2.2.1'
 gem 'draper', '0.17.0'
 
+gem 'strong_parameters'
+
+gem 'acts-as-taggable-on', '~> 3.4'
+
 # Frontend stuff
 gem 'jquery-rails', '2.0.2'
 gem 'slim'
@@ -46,8 +50,8 @@ gem 'fog'
 # Other Tools
 gem 'feedzirra'
 gem 'validation_reflection', git: 'git://github.com/ncri/validation_reflection.git'
-gem 'inherited_resources', '1.3.1'
-gem 'has_scope'
+gem 'inherited_resources', '1.5.0'
+gem 'has_scope', '~> 0.6.0.rc'
 gem 'spectator-validates_email', require: 'validates_email'
 gem 'has_vimeo_video', git: 'https://github.com/lfzawacki/has_vimeo_video.git', branch: 'youtube-support'
 gem 'wirble'
@@ -110,4 +114,5 @@ group :development do
   gem 'capistrano'
   gem 'capistrano-rails'
   gem 'capistrano-rbenv'
+  gem 'quiet_assets'
 end

@@ -21,7 +21,25 @@ en:
       invalid_token: 'Invalid authentication token.'
       timeout: 'Your session expired, please sign in again to continue.'
       inactive: 'Your account was not activated yet.'
+    links:
+      forgot_password: "Forgot your password?"
+      sign_in: "Log In"
+      sign_up: "Sign Up"
     sessions:
+      new:
+        site_title: "Log in"
+        subtitle: "Please come in!"
+        submit: "Log in"
+        title: "Log in with your email address"
+        social: "With a social network"
+        login_title: "Without a social network"
+        login_subtitle: "Log in if you already have a Nós.vc account"
+        register_title: "Register"
+        register_subtitle: "Create a new Nós.vc account the old fashioned way."
+        with_facebook: "It's easier and faster."
+        with_facebook_subtitle: "We won't publish anything to your wall."
+        with_another_social: "No Facebook account?"
+        with_another_social_subtitle: "Log in with another account."
       signed_in: 'Signed in successfully.'
       signed_out: 'Signed out successfully.'
     passwords:

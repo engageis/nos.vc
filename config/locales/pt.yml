@@ -1,8 +1,9 @@
 pt:
   or: ou
   until: "até"
-  no: "Não"
-  yes: "Sim"
+  "no": Não
+  "yes": Sim
+  by: "por"
   newsletter_ok_header: "Cadastro efetuado!"
   newsletter_ok_body: "Seu email foi cadastrado com sucesso, obrigado!"
   newsletter_error_header: "Ooops! Ocorreu um erro."
@@ -83,6 +84,12 @@ pt:
           attributes:
             email:
               not_found: "Seu email não está cadastrado, verifique o endereço ou crie uma conta."
+
+        project:
+          attributes:
+            image_url:
+              invalid: "Formato inválido. Formatos aceitos são: jpg, png e gif"
+
     attributes:
       backer:
         value: "Valor:"
@@ -90,16 +97,18 @@ pt:
         category: "Cidade:"
         expires_at: "Prazo:"
         headline: "Como você explicaria o encontro em um tweet?"
-        image_url: "Imagem:"
+        logo: "Faça o upload de uma imagem"
+        image_url: "ou cole o URL de uma imagem"
         name: "Qual é o nome do encontro?"
         user_id: "Id do usuário:"
         video_url: "URL do vídeo:"
         leader_id: "Quem vai conduzir o encontro?"
         leader_bio: "Mini, muito mini, biografia:"
         location: "Onde?"
+        tag_list: Tema(s) do encontro
       reward:
         description: "Tipo de inscrição:"
-        maximum_backers: "Máximo de inscritos:"
+        maximum_backers: "Máx. inscritos:"
         minimum_value: "Preço (R$):"
       user:
         address_city: "Cidade:"
@@ -117,6 +126,7 @@ pt:
         password: "Senha:"
         password_confirmation: "Digite de novo:"
         phone_number: "Celular:"
+        interest_list: Meus Interesses
       dynamic_field:
         input_name: "Que pergunta você precisa fazer aos inscritos?"
         required: "Resposta obrigatória."
@@ -174,70 +184,6 @@ pt:
     show:
       backed: "levantados"
       reached: "atingido"
-  devise:
-    confirmations:
-      confirmed: "Sua conta foi confirmada com sucesso. Você entrou à partir de agora."
-      send_instructions: "Você receberá um email com instruções sobre como confirmar a sua conta em poucos minutos."
-      send_paranoid_instructions: "Se seu e-mail existe no nosso banco de dados, você receberá um email com instruções sobre como confirmar a sua conta em poucos minutos."
-    failure:
-      already_authenticated: "Você já está logado."
-      inactive: "Sua conta ainda não foi ativada."
-      invalid: "Email ou senha inválidos."
-      invalid_token: "Token de autenticação inválido."
-      locked: "Sua conta está bloqueada."
-      timeout: "Sua sessão expirou, loge-se novamente para continuar."
-      unauthenticated: "Você precisa entrar ou criar uma conta antes de continuar."
-      unconfirmed: "Você tem que confirmar a sua conta antes de continuar."
-    links:
-      forgot_password: "Esqueceu sua senha?"
-      sign_in: "Entrar"
-      sign_up: "Entrar"
-    mailer:
-      confirmation_instructions:
-        subject: "Instruções de confirmação"
-      reset_password_instructions:
-        subject: "Instruções para redefinir sua senha"
-        alt: "Instruções para redefinir sua senha"
-      unlock_instructions:
-        subject: "Instruções para desbloquear conta"
-    omniauth_callbacks:
-      failure: "Não foi possível autenticá-lo a partir de %{kind} porque \"%{reason}\"."
-      success: "Autenticado com sucesso a partir de %{kind} conta."
-    passwords:
-      send_instructions: "Você receberá um email com instruções para redefinir sua senha em alguns minutos."
-      send_paranoid_instructions: "Se seu e-mail existe no nosso banco de dados, você receberá um link para recuperação de senha em seu e-mail."
-      updated: "Sua senha foi alterada com sucesso. Você está logado a partir de agora."
-      updated_not_active: "Sua senha foi alterada com sucesso."
-    registrations:
-      destroyed: "Bye! Sua conta foi cancelada com sucesso. Esperamos vê-lo novamente em breve."
-      inactive_signed_up: "Você se registrou com sucesso. Mas não pode entrar porque a sua conta é %{reason}."
-      reasons:
-        inactive: inativo
-        locked: bloqueado
-        unconfirmed: "não confirmado"
-      signed_up: "Bem vindo! Você se registrou com sucesso."
-      updated: "Você atualizou a sua conta com sucesso."
-    sessions:
-      new:
-        site_title: "Entrar"
-        subtitle: "Entre sem bater"
-        submit: "Entrar"
-        title: "Entre utilizando o seu endereço de email"
-        social: "Com rede social"
-        login_title: "Sem rede social"
-        login_subtitle: "Entre se você já tem uma conta criada no Mate Encontros."
-        register_title: "Me cadastrar"
-        register_subtitle: "Crie uma conta no Mate Encontros do bom e velho jeito tradicional."
-        with_facebook: "É mais fácil e mais rápido."
-        with_facebook_subtitle: "Não publicamos no seu mural."
-        with_another_social: "Não tem conta no facebook?"
-        with_another_social_subtitle: "Entre com outra conta."
-      signed_in: "Login realizado com sucesso. Seja bem-vindo!"
-      signed_out: "Logout realizado com sucesso. Até logo!"
-    unlocks:
-      send_instructions: "Você receberá um email com instruções sobre como desbloquear a sua conta em poucos minutos."
-      send_paranoid_instructions: "Se a sua conta existe, você receberá um email com instruções sobre como desbloqueá-la em poucos minutos."
-      unlocked: "Sua conta foi desbloqueada com sucesso. Você está logado à partir de agora."
   error: "Ooops! Ocorreu um erro. Por favor, tente novamente."
   explore:
     index:
@@ -264,12 +210,12 @@ pt:
         goal: "De verdade. Quantas pessoas são realmente necessárias para tornar o encontro possível? Só será realizado se alcançar o número mínimo."
         headline: "Até 140 caracteres, direto, reto e convidativo. Evite repetir o que já tem no nome. Este é o texto que vai sempre acompanhá-lo."
         name: "Título bacanudo, auto-explicativo e curto, vale trocadilho."
-        video_url: 'Se sim, cole aqui o link do vídeo no Vimeo. Se não, deixe o campo em branco.'
+        video_url: 'Se sim, cole aqui o link do vídeo no Vimeo ou Youtube. Se não, deixe o campo em branco.'
         when_short: "Data(s) do encontro, exemplo: '02 a 04/01/12'"
         when_long: "Descreva detalhadamente a(s) data(s) e o(s) horário(s) de início e término do encontro, exemplo: 'Segunda, 2 de janeiro de 2013. Das 9:00 às 17:00')"
         location: "Local, endereço, cidade e estado."
-        image_url: "Cole aqui o link da imagem fantástica que ilustra o encontro. Recomendamos imagens grandes, com, pelo menos, 1200 pixels de largura. Você pode usar um link do Flickr, por exemplo."
-        leader_id: "Id, número do perfil da pessoa que vai conduzir o encontro. Pode ser você! Exemplo: 'X'. Se a página do perfil é http://encontros.matehackers.org/pt/users/X"
+        image_url: "Uma imagem fantástica que ilustra o encontro. Recomendamos imagens grandes, com, pelo menos, 1200 pixels de largura."
+        leader_id: "Id, número do perfil da pessoa que vai conduzir o encontro. Pode ser você! Exemplo: 'X'. Se a página do perfil é https://encontros.matehackers.org/pt/users/X"
         leader_bio: "Fale um pouco sobre quem vai conduzir o encontro. Sua vida e experiência com o assunto."
         maximum_backers: "Defina um número limite, mesmo, de pessoas. Quando chegar nele, as inscrições serão encerradas."
       reward:
@@ -298,6 +244,7 @@ pt:
         about: "Sobre o encontro"
         maximum_backers: "Qual é o número máximo de inscritos?"
       reward:
+        minimum_value: "Preço (R$)"
         maximum_backers: "Qual é o número máximo de inscritos desse tipo? (opcional)"
         expires_at: "Quando encerra esse tipo de inscrição? (opcional)"
         private: "Inscrição secreta"
@@ -376,7 +323,7 @@ pt:
         notification_text: "Você recebeu %{value} em créditos para se inscrever em outros encontros. Caso prefira, você pode pedir seu dinheiro de volta %{link}."
         unsuccessful_text: "%{link}, em que você se inscreveu, não será realizado. Quem sabe numa próxima vez?"
     verify_if_video_exists_on_vimeo: "deve existir no Vimeo"
-    vimeo_regex_validation: "somente URLs do Vimeo são aceitas"
+    vimeo_regex_validation: "somente URLs Vimeo e Youtube são aceitas"
     display_status:
       expired: "Encontro não realizado"
       successful: "Encontro confirmado"
@@ -387,8 +334,15 @@ pt:
       highlight_project: "projeto em destaque"
     box:
       by: por
+    admin_links:
+      back_to_edit: "Voltar à edição"
+      backers: "Administração"
+      view_as_user: "Ver como usuário"
+      report: "Relatório Financeiro"
+      attendance: "Lista de Presença"
     admin_fields:
       title: "Administração"
+      upload_logo: Enviar nova imagem
     back_project:
       project_warning:
         not_successful:
@@ -413,6 +367,14 @@ pt:
         paypal_description: "Inscrição no encontro %{project_name} no valor de %{value}"
         paypal_error: "Ooops. Ocorreu um erro ao enviar seu pagamento para o PayPal. Por favor, tente novamente."
         success: "Sua inscrição foi realizada com sucesso. Muito obrigado!"
+      index:
+        admin_page: "Administração - %{project}"
+        backers: Inscritos
+        expected_revenue: "Arrecadação esperada"
+        info: Contatos
+        name: "Nome"
+        pledge: "Inscrição"
+        no_backers: "Nenhum inscrito... ainda ;)"
       new:
         cannot_back: "Não é possível se inscrever neste encontro no momento. Por favor, tente mais tarde."
         header:
@@ -467,9 +429,9 @@ pt:
         fourth_step: "Tá meio perdido? Entre em <a href=\"/contact\">contato com a gente</a> para fazer o seu encontro acontecer!"
     footer_featured:
       mi_casa_su_casa:
-        title: "Mi casa, su casa."
-        text: "Receba encontros inspiradores no seu espaço, sala, coworking, bar ou casa na árvore."
-        link: "Locais"
+        title: "Você, seja um de Nós"
+        text: "Queremos fazer as conexões e pôr esta energia em movimento!"
+        link: "Vem com a gente?!"
       not_repress:
         title: "Não se reprima!"
         text: "Uma vez por mês, e olhe lá, contamos as novidades pros amigos. Se você é um, por favor:"
@@ -547,8 +509,6 @@ pt:
       back_to_edit: "Voltar à edição do encontro"
       rejected: "Não foi dessa vez. Este encontro não foi selecionado pra participar do Mate Encontros. Quem sabe na próxima?"
       waiting: "Estamos revisando este encontro. Logo, logo saberemos se ele entrará no Mate Encontros."
-      rejected: "Não foi dessa vez. Este encontro não foi selecionado pra participar do Nós.vc. Quem sabe na próxima?"
-      waiting: "Estamos revisando este encontro. Logo, logo saberemos se ele entrará no Nós.vc."
       where: "Onde?"
       when: "Quando?"
       is_confirmed: "Tá confirmado?"
@@ -659,7 +619,7 @@ pt:
       system: matehackers@gmail.com
     facebook: "https://www.facebook.com/HackerspaceMatehackers"
     name: "Mate Encontros"
-    title: "Encontros Inspiradores"
+    title: "Encontros Hackers"
     twitter: "matehackers"
   static:
     faq:
@@ -723,9 +683,11 @@ pt:
       title_current_user: "Encontros em que me inscrevi"
       your_reward: "Sua inscrição"
     current_user_fields:
+      interest_list: Meus Interesses
       updated: "Suas configurações foram atualizadas."
       update_social_info: "Atualizar"
       update_project_info: "Atualizar"
+      update_interests: "Atualizar"
       social_info: "Contatos"
       twitter: "Seu usuário do twitter"
       facebook_link: "Link do seu perfil do facebook"
@@ -738,9 +700,9 @@ pt:
       my_data: "Email"
       newsletter: "Quero receber novidades do Mate Encontros por email. (Spam nunca!)"
       password_hint: "<i>Deixe em branco caso você não queira trocar sua senha.</i>"
-      payment_email: Email para pagamentos
+      payment_email: Login MoIP para pagamentos e estornos
       project_info: "Dados para encontros"
-      report_email: Email para relatório financeiro
+      report_email: E-mail Google para relatório financeiro
     header:
       bio_tooltip: "O que você gostaria de ensinar e aprender?"
       name_tooltip: "Qual é o seu nome?"

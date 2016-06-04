@@ -5,6 +5,11 @@ ul
   li = link_to 'Todos os apoios confirmados', main_app.all_confirmed_backers_report_path
   li = link_to 'Todos os realizadores', main_app.all_projects_owner_report_path
   li = link_to 'Todos os emails', main_app.all_emails_to_newsletter_path
+  = 'Relatório Mensal'
+  = form_tag main_app.projects_monthly_path, :method => 'GET', :class => 'form-inline' do
+    = select_tag :month, options_for_select((1..12).map{|m| [t('date.month_names')[m], m]}, Time.now.month), :class => 'input-small'
+    = select_tag :year, options_for_select(2000..(Time.now.year), Time.now.year), :class => 'input-small'
+    = submit_tag 'Ok', :class => 'btn btn-default'
 
 h3 Registros
 

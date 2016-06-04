@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   before_filter :can_update_on_the_spot?, :only => :update_attribute_on_the_spot
   before_filter :filter_mass_assignment, :only => [:update, :create]
 
-  respond_to :json, :only => [:backs, :projects, :request_refund, :index]
+  respond_to :json, :only => [:backs, :projects, :request_refund, :index, :interests]
 
   def index
     if params[:q].present?
@@ -70,6 +70,19 @@ class UsersController < ApplicationController
     render :json => {:status => status, :credits => current_user.reload.display_credits}
   end
 
+  # Return a JSON list of tags for the interest tagging, usable with select2 inputs
+  def interests
+    @interests = if params[:q].present?
+      ActsAsTaggableOn::Tag.named_like(params[:q])
+    else
+      ActsAsTaggableOn::Tag
+    end
+
+    @interests = @interests.order('name ASC').pluck(:name)
+
+    render :json => @interests.map {|interest| {:text => interest, :id => interest} }
+  end
+
   private
   def can_update_on_the_spot?
     user_fields = ["email", "name", "bio", "newsletter", "project_updates"]
@@ -94,7 +107,7 @@ class UsersController < ApplicationController
     # For now admin is set as attr_accesible to allow rails_admin to update,
     # but this means we have to filter it out here.
     if params[:user].present?
-      params[:user][:admin] = nil
+      params[:user].except!(:admin)
     end
   end
 end
