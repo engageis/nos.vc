@@ -76,9 +76,11 @@ css:
         #rewards
           h3= t('.how_much')
           - @rewards.each do |reward|
-            div[class="box #{('clickable' if @project.can_back? and not reward.sold_out? and not reward.expired?)}"]
+            div[class="box"]
               = hidden_field_tag 'url', "#{new_project_backer_path(@project)}/?reward_id=#{reward.id}"
-              h2= reward.minimum_value > 0 ? reward.display_minimum : I18n.t('reward.free')
+              h2[class="#{('clickable' if @project.can_back? and not reward.sold_out? and not reward.expired?)}"]
+                = reward.minimum_value > 0 ? reward.display_minimum : I18n.t('reward.free')
+
               .clearfix
               p
                 - if can?(:edit, reward) && !preview_mode?
@@ -94,7 +96,7 @@ css:
                     label= t('activerecord.attributes.reward.maximum_backers')
                     #{on_the_spot_edit reward, :maximum_backers}
 
-              .maximum_backers
+              .maximum_backers[class="#{('clickable' if @project.can_back? and not reward.sold_out? and not reward.expired?)}"]
                 - if reward.maximum_backers
                   - if reward.sold_out?
                     .sold_out= t('reward.sold_out')
