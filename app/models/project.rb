@@ -10,6 +10,8 @@ class Project < ActiveRecord::Base
   include ERB::Util
   include Rails.application.routes.url_helpers
 
+  acts_as_taggable_on :tags
+
   mount_uploader :logo, LogoUploader
 
   belongs_to :user

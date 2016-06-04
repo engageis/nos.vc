@@ -238,8 +238,8 @@ class ProjectsController < ApplicationController
   # For the moment this is only called on update by inherited resources
   def permitted_params
     params.permit(:project => [
-        :name, :user_id, :category_id, :goal, :expires_at, :about, :headline, :leader_bio, :leader_id,
-        :video_url, :image_url, :logo, :when_short, :when_long, :location, :maximum_backers, {
+        :name, :user_id, :category_id, :goal, :expires_at, :about, :headline, {:tag_list => []}, :leader_bio,
+        :leader_id, :video_url, :image_url, :logo, :when_short, :when_long, :location, :maximum_backers, {
           :rewards_attributes => [:description, :minimum_value, :maximum_backers, :expires_at, :private],
           :dynamic_fields_attributes => [:input_name, :required]
         }

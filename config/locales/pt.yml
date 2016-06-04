@@ -105,9 +105,10 @@ pt:
         leader_id: "Quem vai conduzir o encontro?"
         leader_bio: "Mini, muito mini, biografia:"
         location: "Onde?"
+        tag_list: Tema(s) do encontro
       reward:
         description: "Tipo de inscrição:"
-        maximum_backers: "Máximo de inscritos:"
+        maximum_backers: "Máx. inscritos:"
         minimum_value: "Preço (R$):"
       user:
         address_city: "Cidade:"

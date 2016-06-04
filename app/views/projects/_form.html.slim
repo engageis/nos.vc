@@ -7,6 +7,8 @@
       = form.input :name, :as => :string
       = form.input :about
       = form.input :headline, :input_html => { :maxlength => 140 }
+      .user-interests
+        = form.input :tag_list, :as => :select, :input_html => { :multiple => true }
       = form.input :when_short
       = form.input :when_long
       = form.input :category, :collection => Category.all(:order => :name)

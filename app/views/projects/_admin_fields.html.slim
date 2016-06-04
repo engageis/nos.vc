@@ -27,6 +27,13 @@
       = f.submit :value => t('.upload_logo')
 
   .project_admin_field
+    strong= label :project, :tag_list
+    = form_for(@project) do |f|
+      .user-interests
+        = f.select :tag_list, @project.tag_list, {:class => 'form-control'}, { :multiple => true, :size => 5 }
+        = f.submit
+
+  .project_admin_field
     strong= label :project, :image_url
     #{on_the_spot_edit @project, :image_url}
 

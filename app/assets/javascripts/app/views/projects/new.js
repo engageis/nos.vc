@@ -24,6 +24,8 @@ CATARSE.ProjectsNewView = Backbone.View.extend({
       rewards_id++
     })
 
+    UserInterests.initialize('#project_tag_list', '69%');
+
     // A better selector for the cities
     $('#project_category_id').select2();
 
