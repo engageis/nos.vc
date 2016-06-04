@@ -60,6 +60,8 @@ GEM
     activesupport (3.2.13)
       i18n (= 0.6.1)
       multi_json (~> 1.0)
+    acts-as-taggable-on (3.5.0)
+      activerecord (>= 3.2, < 5)
     addressable (2.3.3)
     annotate (2.5.0)
       rake
@@ -460,6 +462,7 @@ DEPENDENCIES
   RedCloth
   activemerchant (= 1.17.0)
   activerecord-postgresql-adapter
+  acts-as-taggable-on (~> 3.4)
   annotate
   auto_html!
   bourbon

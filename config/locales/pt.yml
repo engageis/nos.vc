@@ -125,6 +125,7 @@ pt:
         password: "Senha:"
         password_confirmation: "Digite de novo:"
         phone_number: "Celular:"
+        interest_list: Meus Interesses
       dynamic_field:
         input_name: "Que pergunta você precisa fazer aos inscritos?"
         required: "Resposta obrigatória."
@@ -679,9 +680,11 @@ pt:
       title_current_user: "Encontros em que me inscrevi"
       your_reward: "Sua inscrição"
     current_user_fields:
+      interest_list: Meus Interesses
       updated: "Suas configurações foram atualizadas."
       update_social_info: "Atualizar"
       update_project_info: "Atualizar"
+      update_interests: "Atualizar"
       social_info: "Contatos"
       twitter: "Seu usuário do twitter"
       facebook_link: "Link do seu perfil do facebook"

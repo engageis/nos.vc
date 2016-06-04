@@ -8,8 +8,8 @@
 
 #my_data
   h1= t('.my_data')
-  ul
-    li
+  ul.form-list
+    li.form-list-item
       #{on_the_spot_edit @user, :email, :tooltip => t('.email_tooltip')}
       .hint= t('.email_hint')
     /li
@@ -23,18 +23,18 @@
     li
       .bootstrap-form
         = form_for(@user, :as => :user, :html => { :method => :put }) do |f|
-          ul
-            li
+          ul.form-list
+            li.form-list-item
               = f.label :twitter, t('.twitter')
               = f.text_field :twitter
-            li
+            li.form-list-item
               = f.label :facebook_link, t('.facebook_link')
               = f.text_field :facebook_link
-            li
+            li.form-list-item
               = f.label :other_link, t('.other_link')
               = f.text_field :other_link
 
-          p= f.submit t('.update_social_info'), :class => 'btn', :id => "user_submit"
+          p= f.submit t('.update_social_info'), :class => 'btn user_submit'
 
 #project_info
   h1= t('.project_info')
@@ -42,16 +42,19 @@
     li
       .bootstrap-form
         = form_for(@user, :as => :user, :html => { :method => :put }) do |f|
-          ul
-            li
+          ul.form-list
+            li.form-list-item.user-interests
+              = f.label :interest_list,  t('.interest_list')
+              = f.select :interest_list, @user.interest_list, {:class => 'form-control'}, { :multiple => true, :size => 5 }
+            li.form-list-item
               = f.label :payment_email, t('.payment_email')
               = f.text_field :payment_email
 
-            li
+            li.form-list-item
               = f.label :report_email, t('.report_email')
               = f.text_field :report_email
 
-          p= f.submit t('.update_project_info'), :class => 'btn', :id => "user_submit"
+          p= f.submit t('.update_project_info'), :class => 'btn user_submit'
 
 - if @user.is_devise?
   #change_password
@@ -60,15 +63,15 @@
       li
         .bootstrap-form
           = form_for(@user, :as => :user, :url => registration_path(:user), :html => { :method => :put, :class => 'skip_feed_event' }) do |f|
-            ul
-              li
+            ul.form-list
+              li.form-list-item
                 = f.label :current_password
                 = f.password_field :current_password, :class=>'empty'
                 span.hint= t('.current_password_hint').html_safe
-              li
+              li.form-list-item
                 = f.label :password, t('passwords.edit.label_new_password')
                 = f.password_field :password, :class=>'empty'
-              li
+              li.form-list-item
                 = f.label :password_confirmation
                 = f.password_field :password_confirmation, :class=>'empty'
-            p= f.submit 'OK', :class => 'btn'
+            p= f.submit 'OK', :class => 'btn user_submit'

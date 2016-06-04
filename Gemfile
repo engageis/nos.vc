@@ -22,6 +22,8 @@ gem 'draper', '0.17.0'
 
 gem 'strong_parameters'
 
+gem 'acts-as-taggable-on', '~> 3.4'
+
 # Frontend stuff
 gem 'jquery-rails', '2.0.2'
 gem 'slim'

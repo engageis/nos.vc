@@ -9,6 +9,8 @@ class User < ActiveRecord::Base
             :medium_name, :display_credits, :display_total_of_backs, :display_image_large,
             :to => :decorator
 
+  acts_as_taggable_on :interests
+
   # Setup accessible (or protected) attributes for your model
   # TODO: move to rails4 style strong parameters
   attr_accessible :email,
@@ -37,6 +39,7 @@ class User < ActiveRecord::Base
                   :credits,
                   :payment_email,
                   :report_email,
+                  :interest_list,
                   :admin # being filtered in the controller
 
   include ActionView::Helpers::NumberHelper
