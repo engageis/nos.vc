@@ -335,10 +335,11 @@ pt:
     box:
       by: por
     admin_links:
-      back_to_edit: "Voltar à edição do encontro"
+      back_to_edit: "Voltar à edição"
       backers: "Administração"
-      view_as_user: "Visualizar como usuário"
+      view_as_user: "Ver como usuário"
       report: "Relatório Financeiro"
+      attendance: "Lista de Presença"
     admin_fields:
       title: "Administração"
       upload_logo: Enviar nova imagem

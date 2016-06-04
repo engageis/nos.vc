@@ -20,6 +20,7 @@ Catarse::Application.routes.draw do
   root to: 'projects#index'
 
   match "/reports/financial/:project_id/backers" => "reports#financial_by_project", :as => :backers_financial_report
+  match "/reports/attendance/:project_id/backers" => "reports#attendance_by_project", :as => :backers_attendance_report
   match "/reports/location/:project_id/backers" => "reports#location_by_project", :as => :backers_location_report
   match "/reports/users_most_backed" => "reports#users_most_backed", :as => :most_backed_report
   match "/reports/all_confirmed_backers" => "reports#all_confirmed_backers", :as => :all_confirmed_backers_report

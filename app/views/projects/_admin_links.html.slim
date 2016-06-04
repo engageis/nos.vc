@@ -16,6 +16,11 @@
               = image_tag 'report.png'
               = t('.report')
 
+          li.download-report
+            = link_to backers_attendance_report_path(@project) do
+              = image_tag 'catarse/profile_icon19x14.png'
+              = t('.attendance')
+
         li
           = link_to project_path(@project) do
             = image_tag 'catarse/pencil_16.png'
