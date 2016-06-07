@@ -4,13 +4,15 @@ CATARSE.ExploreIndexView = Backbone.View.extend({
   },
   initialize: function() {
     $('#header header nav.actions ul li.explore').addClass('selected');
-    _.bindAll(this, "render", "ProjectView", "ProjectsView", "initializeView", "recommended", "expiring", "recent", "successful", "category", "search", "updateSearch", "more_categories")
+    _.bindAll(this, "render", "ProjectView", "ProjectsView", "initializeView", "recommended", "expiring",
+      "recent", "successful", "category", "search", "updateSearch", "tagged", "more_categories")
     CATARSE.router.route(":name", "category", this.category)
     CATARSE.router.route("recommended", "recommended", this.recommended)
     CATARSE.router.route("expiring", "expiring", this.expiring)
     CATARSE.router.route("recent", "recent", this.recent)
     CATARSE.router.route("successful", "successful", this.successful)
     CATARSE.router.route("search/*search", "search", this.search)
+    CATARSE.router.route("tagged/*tag", "tagged", this.tagged)
     CATARSE.router.route("", "index", this.index)
     this.render()
     _this = this;
@@ -48,6 +50,17 @@ CATARSE.ExploreIndexView = Backbone.View.extend({
     var input = this.$('#search')
     if(input.val() != search)
       input.val(search)
+  },
+
+  tagged: function(tag){
+    tag = decodeURIComponent(tag);
+
+    this.selectTag("")
+    this.initializeView({
+      meta_sort: "created_at.desc",
+      tagged_with: tag
+    })
+    this.selectTag(tag)
   },
 
   updateSearch: function(){
@@ -130,11 +143,17 @@ CATARSE.ExploreIndexView = Backbone.View.extend({
     }
   },
 
+  selectTag: function(tag) {
+    this.selectedTag = $('a[href="#tagged/' + tag + '"]')
+    $('.sidebar .selected').removeClass('selected')
+    this.selectedTag.addClass('selected')
+  },
+
   selectItem: function(name) {
     this.selectedItem = $('.sidebar a[href=#' + name + ']')
     $('.sidebar .selected').removeClass('selected')
     this.selectedItem.addClass('selected')
-    this.$('section.categories h2.selected_categorie').html('')
+    // this.$('section.categories h2.selected_categorie').html('')
   },
 
   render: function(){

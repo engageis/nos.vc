@@ -26,22 +26,35 @@
                 li.successful
                   a href='#successful'
                     = t('.successful')
+
         section.categories
           h1= t('.subtitle').html_safe
-          h2.selected_categorie
+
+          .list_categories
+            ul
+              - @tags.each do |tag|
+                li
+                  a.tag-link href="#tagged/#{tag}" data-id=tag
+                    = tag
+
+            .clearfix
+          .clearfix
+
           .list_categories
             a.more_categories +
             ul#explore_categories
-              - @featured_categories.each do |category|
+              - @featured_cities.each do |category|
                 li.featured_categorie
                   a href="##{category.name.parameterize}" data-id=category.id
                     = category.name
-              - @other_categories.each do |category|
+              - @other_cities.each do |category|
                 li.other_categorie
                   a href="##{category.name.parameterize}" data-id=category.id
                     = category.name
+
             .clearfix
           .clearfix
+
     .main
       #explore_results
         .results &nbsp;

@@ -84,7 +84,7 @@ class Project < ActiveRecord::Base
     includes(:user, :category, :project_total).where("coalesce(id NOT IN (?), true)", exclude_ids).visible.recent.not_expiring.order('date(created_at) DESC, random()').limit(3)
   }
 
-  search_methods :visible, :recommended, :expired, :not_expired, :expiring, :not_expiring, :recent, :successful
+  search_methods :visible, :recommended, :expired, :not_expired, :expiring, :not_expiring, :recent, :successful, :tagged_with
 
   validates_presence_of :name, :user, :category, :about, :headline, :goal, :expires_at, :when_short, :when_long, :location, :leader
   validates_length_of :headline, :maximum => 140
