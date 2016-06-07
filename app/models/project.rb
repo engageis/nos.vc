@@ -129,8 +129,14 @@ class Project < ActiveRecord::Base
     number_to_currency pledged, :unit => 'R$', :precision => 0, :delimiter => '.'
   end
 
+  # Temporary HACK
+  # Used to display the 'goal' correctly as integer in on_the_spot edits
+  def goal
+    read_attribute(:goal).to_i if read_attribute(:goal).present?
+  end
+
   def display_goal
-    goal.to_i
+    goal
     #number_to_currency goal, :unit => 'R$', :precision => 0, :delimiter => '.'
   end
 
