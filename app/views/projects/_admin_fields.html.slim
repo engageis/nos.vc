@@ -47,7 +47,7 @@
     = form_for(@project) do |f|
       .user-interests
         = f.select :tag_list, @project.tag_list, {:class => 'form-control'}, { :multiple => true, :size => 5 }
-        = f.submit
+        = f.submit :value => t('.update_tags')
 
   .project_admin_field
     strong= label :project, :image_url

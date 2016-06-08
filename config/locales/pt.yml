@@ -345,6 +345,7 @@ pt:
     admin_fields:
       title: "Administração"
       upload_logo: Enviar nova imagem
+      update_tags: "Atualizar temas"
     back_project:
       project_warning:
         not_successful:
