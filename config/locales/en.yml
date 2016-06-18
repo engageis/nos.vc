@@ -550,7 +550,7 @@ en:
   require_login: "You must be logged in to perform this action."
   require_permission: "You don't have permission to perform this action."
   reward:
-    display_remaining: "%{remaining} of %{maximum} available"
+    display_remaining: "<span>%{remaining}</span> available"
     display_maximum_backers: ~
     free: ~
     limited: Limited
