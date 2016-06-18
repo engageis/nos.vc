@@ -4,7 +4,8 @@ module Reports
     class Attendance
       class << self
         def report(project_id)
-          @backers = Project.find(project_id).backers.confirmed
+          project = Project.find(project_id)
+          @backers = project.backers.confirmed
 
           @csv = CSV.generate(:col_sep => ',') do |csv_string|
 
@@ -13,6 +14,10 @@ module Reports
               'Valor da Inscrição',
               'Presente'
             ]
+
+            questions = project.dynamic_fields.pluck(:input_name)
+            csv_header.insert(2, questions)
+            csv_header.flatten!
 
             csv_string << csv_header
 
@@ -23,6 +28,10 @@ module Reports
                 "#{backer.reward.description} (#{backer.display_value})",
                 nil
               ]
+
+              answers = backer.dynamic_values.pluck(:value)
+              csv_line.insert(2, answers)
+              csv_line.flatten!
 
               csv_string << csv_line
             end
