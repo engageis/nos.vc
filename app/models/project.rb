@@ -285,6 +285,11 @@ class Project < ActiveRecord::Base
     total - backers.confirmed.count
   end
 
+  # 
+  def total_payment_method_fee
+    backers.confirmed.sum(:payment_service_fee)
+  end
+
   # Sum the values for all confirmed registrations
   def expected_revenue
     payment_method_fee = Configuration.find_by_name('payment_method_fee')
