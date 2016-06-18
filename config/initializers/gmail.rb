@@ -1,11 +1,11 @@
 begin
   if Rails.env.production?
     ActionMailer::Base.smtp_settings = {
-      :address => 'smtp.gmail.com',
-      :port => 587,
-      :domain => 'matehackers.org',
-      :user_name => ENV['GMAIL_USERNAME'],
-      :password => ENV['GMAIL_PASSWORD'],
+      :address => ENV['SMTP_ADDRESS'],
+      :port => ENV['SMTP_PORT'],
+      :domain => ENV['SMTP_DOMAIN'],
+      :user_name => ENV['SMTP_USERNAME'],
+      :password => ENV['SMTP_PASSWORD'],
       :authentication => :plain,
       :enable_starttls_auto => true
     }
