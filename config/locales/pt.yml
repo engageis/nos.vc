@@ -105,6 +105,8 @@ pt:
         leader_id: "Quem vai conduzir o encontro?"
         leader_bio: "Mini, muito mini, biografia:"
         location: "Onde?"
+        maximum_backers: "Máximo de Inscritos:"
+        goal: "Mínimo de Inscritos:"
         tag_list: Tema(s) do encontro
       reward:
         description: "Tipo de inscrição:"
@@ -343,6 +345,7 @@ pt:
     admin_fields:
       title: "Administração"
       upload_logo: Enviar nova imagem
+      update_tags: "Atualizar temas"
     back_project:
       project_warning:
         not_successful:

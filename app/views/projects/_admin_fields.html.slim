@@ -10,6 +10,22 @@
       = @project.expires_at
 
   .project_admin_field
+    strong= label :project, :goal
+
+    - if show_edit_field
+      #{on_the_spot_edit @project, :goal}
+    - else
+      = @project.goal
+
+  .project_admin_field
+    strong= label :project, :maximum_backers
+
+    - if show_edit_field
+      #{on_the_spot_edit @project, :maximum_backers}
+    - else
+      = @project.maximum_backers
+
+  .project_admin_field
     strong= label :project, :user_id
 
     - if current_user.try(:admin)
@@ -31,7 +47,7 @@
     = form_for(@project) do |f|
       .user-interests
         = f.select :tag_list, @project.tag_list, {:class => 'form-control'}, { :multiple => true, :size => 5 }
-        = f.submit
+        = f.submit :value => t('.update_tags')
 
   .project_admin_field
     strong= label :project, :image_url

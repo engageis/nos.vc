@@ -198,8 +198,15 @@ css:
                   li.link
                     = text_field_tag "project_link", @project.short_url
                 .clearfix
+
           .text.clearfix
             h1= t('.about_title')
+
+            p
+              - @project.tag_list.each do |tag|
+                span.user-interest-tag
+                  = tag
+
             p
               - if show_edit_field
                 | #{on_the_spot_edit @project, :about, :type => :textarea}

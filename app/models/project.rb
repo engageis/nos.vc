@@ -84,7 +84,7 @@ class Project < ActiveRecord::Base
     includes(:user, :category, :project_total).where("coalesce(id NOT IN (?), true)", exclude_ids).visible.recent.not_expiring.order('date(created_at) DESC, random()').limit(3)
   }
 
-  search_methods :visible, :recommended, :expired, :not_expired, :expiring, :not_expiring, :recent, :successful
+  search_methods :visible, :recommended, :expired, :not_expired, :expiring, :not_expiring, :recent, :successful, :tagged_with
 
   validates_presence_of :name, :user, :category, :about, :headline, :goal, :expires_at, :when_short, :when_long, :location, :leader
   validates_length_of :headline, :maximum => 140
@@ -129,8 +129,14 @@ class Project < ActiveRecord::Base
     number_to_currency pledged, :unit => 'R$', :precision => 0, :delimiter => '.'
   end
 
+  # Temporary HACK
+  # Used to display the 'goal' correctly as integer in on_the_spot edits
+  def goal
+    read_attribute(:goal).to_i if read_attribute(:goal).present?
+  end
+
   def display_goal
-    goal.to_i
+    goal
     #number_to_currency goal, :unit => 'R$', :precision => 0, :delimiter => '.'
   end
 
