@@ -24,7 +24,8 @@ module Reports
               'Valor sem Taxa',
               'Organizador',
               'E-mail Organizador',
-              'Cidade'
+              'Cidade',
+              'Pago'
             ]
 
             csv_string << csv_header
@@ -36,16 +37,20 @@ module Reports
               csv_line = [
                 project.name,
                 project.id,
-                project.when,
+                project.when_short,
                 I18n.l(project.expires_at),
                 project.visible ? I18n.t('yes') : I18n.t('no'),
                 project.successful ? I18n.t('yes') : I18n.t('no'),
                 nil,
                 project.user.payment_email,
                 project.pledged,
-                backer_mean,
-                I18n.l(project.created_at),
-                I18n.l(project.expires_at)
+                project.total_payment_method_fee,
+                project.expected_fee,
+                project.expected_revenue,
+                project.user.name,
+                project.user.email,
+                project.category.name,
+                nil
               ]
 
               csv_string << csv_line
