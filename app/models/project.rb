@@ -285,8 +285,8 @@ class Project < ActiveRecord::Base
     total - backers.confirmed.count
   end
 
-  # Sum the values for all confirmed registrations
-  def expected_revenue
+  # The service fee, defined in the website configuration (defaults to 7.5% (or 0.075))
+  def service_fee
     payment_method_fee = Configuration.find_by_name('payment_method_fee')
 
     payment_method_fee = if payment_method_fee.present?
@@ -294,8 +294,27 @@ class Project < ActiveRecord::Base
     else
       0.075
     end
+  end
 
-    backers.confirmed.sum(:value) * (1 - payment_method_fee)
+  # Sum the values for all confirmed registrations, minus our service fees
+  def expected_revenue
+    backers.confirmed.sum(:value) * (1 - service_fee)
+  end
+
+  # Total service fee from our platform
+  def expected_fee
+    backers.confirmed.sum(:value) * service_fee
+  end
+
+  # Return the sum of payment service fees (real fees) for all backers
+  def total_payment_method_fee
+    backer_fees = backers.confirmed.map(&:payment_service_fee)
+    backer_fees.sum
+  end
+
+  # Total liquid revenue with the real payment method fees
+  def total_revenue
+    backers.confirmed.sum(:value) - total_payment_method_fee
   end
 
   def display_expected_revenue

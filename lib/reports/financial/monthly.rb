@@ -10,14 +10,22 @@ module Reports
           @csv = CSV.generate(:col_sep => ',') do |csv_string|
 
              csv_header = [
-              'Encontro',
-              'Terminado',
-              'Bem sucedido',
-              'Número de apoios',
+              'Nome do Encontro',
+              'ID do Encontro',
+              'Data do Encontro',
+              'Data do fechamento das inscrições',
+              'Publicado',
+              'Confirmado',
+              'Deadline de Pagamento',
+              'ID Moip do organizador',
               'Arrecadação Total',
-              'Arrecadação Média',
-              'Data de Criação',
-              'Data do Encontro'
+              'Taxa do Moip',
+              'Taxa Nos.vc',
+              'Valor sem Taxa',
+              'Organizador',
+              'E-mail Organizador',
+              'Cidade',
+              'Pago'
             ]
 
             csv_string << csv_header
@@ -28,13 +36,21 @@ module Reports
 
               csv_line = [
                 project.name,
-                project.finished ? I18n.t('yes') : I18n.t('no'),
+                project.id,
+                project.when_short,
+                I18n.l(project.expires_at),
+                project.visible ? I18n.t('yes') : I18n.t('no'),
                 project.successful ? I18n.t('yes') : I18n.t('no'),
-                backer_count,
+                nil,
+                project.user.payment_email,
                 project.pledged,
-                backer_mean,
-                I18n.l(project.created_at),
-                I18n.l(project.expires_at)
+                project.total_payment_method_fee,
+                project.expected_fee,
+                project.expected_revenue,
+                project.user.name,
+                project.user.email,
+                project.category.name,
+                nil
               ]
 
               csv_string << csv_line
