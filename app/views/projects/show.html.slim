@@ -30,6 +30,12 @@ css:
         - else
           .alert.alert-warning
             = t('.waiting')
+
+    - if @project.finished?
+      #project_warning.bootstrap-alert
+        .alert.alert-warning
+          = t('.finished')
+
     #project_description[data-project=@project.to_json]
     .sidebar
       .info

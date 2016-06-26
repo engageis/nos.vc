@@ -485,6 +485,9 @@ en:
     send_mail:
       success: "Your meeting was successfully created! We'll soon contact you. Thanks a lot!"
     show:
+      rejected: "It didn't happen this time. This meeting wasn't pick to be a part of Nós.vc. Maybe next time?"
+      waiting: "We're reviewing this meeting. Soon it'll show up in Nós.vc."
+      finished: "This meeting has already finished. If you're the meeting admin and would like to edit some info here, please create a new meeting."
       total_backers: Maximum registrations
       total_remaining: Remaining registrations
       unlimited_vacancies: Unlimited

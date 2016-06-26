@@ -235,7 +235,7 @@ class User < ActiveRecord::Base
   end
 
   def can_manage_project?(project)
-    manages_project_ids.include?(project.id) || [project.leader_id, project.user_id].include?(id)
+    !project.finished && (manages_project_ids.include?(project.id) || [project.leader_id, project.user_id].include?(id))
   end
 
   protected
