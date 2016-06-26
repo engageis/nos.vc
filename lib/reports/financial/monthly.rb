@@ -41,7 +41,7 @@ module Reports
                 I18n.l(project.expires_at),
                 project.visible ? I18n.t('yes') : I18n.t('no'),
                 project.successful ? I18n.t('yes') : I18n.t('no'),
-                nil,
+                I18n.l(project.expires_at + 7.days),
                 project.user.payment_email,
                 project.pledged,
                 project.total_payment_method_fee,
