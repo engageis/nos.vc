@@ -443,8 +443,8 @@ pt:
         text: "Pelo Ponto de Encontro. Nosso blog traz dicas, aprendizados e o que nos deixa feliz."
         link: "Quero lê-lo!"
     pending:
-      can_finish: "Pode finalizar?"
-      finished: Finalizado?
+      can_finish: "Pode finalizar"
+      finished: Finalizado
       home_page: "Home page?"
       id: Id
       name: Nome
@@ -457,7 +457,18 @@ pt:
       submit: Pesquisar
       title: "Gerenciamento dos encontros"
       user: Usuário
-      visible: Visível?
+      visible: Visível
+      when_short: Data
+      expires_at: Fechamento
+      deadline: Deadline
+      payment_email: MoIP
+      pledged: Total
+      total_payment_method_fee: Taxa MoIP
+      expected_fee: Taxa NosVc
+      expected_profit: NosVc
+      expected_revenue: Saldo
+      category: Cidade
+      success: Sucesso
     pending_backers:
       anonymous: Anônimo?
       confirmed: Confirmado?

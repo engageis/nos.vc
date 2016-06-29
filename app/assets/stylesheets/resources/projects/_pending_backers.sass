@@ -2,7 +2,12 @@
 [data-controller="projects"][data-action="pending"],
 [data-controller-class="adm::backerscontroller"][data-action="index"],
 [data-controller-class="adm::userscontroller"][data-action="index"]
+
+  .logo_header
+    display: none
+
   #page_content
+
     .container
       .project_content
         +grid(16)
@@ -10,11 +15,11 @@
         .title
           +grid(16)
           +alpha
-          padding-bottom: 40px
+          padding-bottom: 20px
           h1
             color: $ultra_gryn
             font-family: "Helvetica Neue"
-            font-size: 28px
+            font-size: 34px
             padding: 5px 0
           h2
             color: rgba($ultra_gryn, 0.7)
@@ -29,7 +34,7 @@
           width: 100%
           .input
             float: left
-            margin-right: 20px
+            margin-right: 16px
             &.check
               input
                 display: inline
@@ -40,14 +45,23 @@
             &.submit
               float: right
               margin-top: 23px
+
+            input
+              margin-left: 0px
+
             label
               font-family: 'Lato-Regular'
               font-size: 13px
+              text-align: left !important
+              padding-left: 4px !important
+              margin-right: 8px
+              width: initial
+
         #total_results
-          float: right
           font-family: 'Lato-Regular'
-          font-size: 13px
-          padding-top: 2px
+          font-size: 14px
+          padding-top: 6px
+          padding-bottom: 6px
           strong
             font-family: 'Lato-Bold'
             color: $green
@@ -64,17 +78,21 @@
           thead
             th
               font-family: 'Lato-Bold'
-              font-size: 13px
+              font-size: 11px
               text-align: center
           tbody
             tr
               td
                 font-family: 'Lato-Regular'
-                font-size: 12px
+                font-size: 11px
                 text-align: center
                 vertical-align: middle
+                padding: 4px
                 img
                   &.project_img
-                    width: 50px
+                    width: 40px
                   &.user_img
-                    width: 30px
+                    width: 28px
+
+    .container-wide
+      width: 1260px

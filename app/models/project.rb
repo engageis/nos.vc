@@ -301,9 +301,17 @@ class Project < ActiveRecord::Base
     backers.confirmed.sum(:value) * (1 - service_fee)
   end
 
+  def display_expected_revenue
+    number_to_currency expected_revenue, :unit => 'R$', :precision => 2, :delimiter => '.'
+  end
+
   # Total service fee from our platform
   def expected_fee
     backers.confirmed.sum(:value) * service_fee
+  end
+
+  def display_expected_fee
+    number_to_currency expected_fee, :unit => 'R$', :precision => 2, :delimiter => '.'
   end
 
   # Return the sum of payment service fees (real fees) for all backers
@@ -312,13 +320,25 @@ class Project < ActiveRecord::Base
     backer_fees.sum
   end
 
+  def display_total_payment_method_fee
+    number_to_currency total_payment_method_fee, :unit => 'R$', :precision => 2, :delimiter => '.'
+  end
+
   # Total liquid revenue with the real payment method fees
   def total_revenue
     backers.confirmed.sum(:value) - total_payment_method_fee
   end
 
-  def display_expected_revenue
-    number_to_currency expected_revenue, :unit => 'R$', :precision => 2, :delimiter => '.'
+  def display_total_revenue
+    number_to_currency total_revenue, :unit => 'R$', :precision => 2, :delimiter => '.'
+  end
+
+  def expected_profit
+    expected_fee - total_payment_method_fee
+  end
+
+  def display_expected_profit
+    number_to_currency expected_profit, :unit => 'R$', :precision => 2, :delimiter => '.'
   end
 
   def finish!
