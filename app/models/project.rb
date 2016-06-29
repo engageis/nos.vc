@@ -84,7 +84,7 @@ class Project < ActiveRecord::Base
     includes(:user, :category, :project_total).where("coalesce(id NOT IN (?), true)", exclude_ids).visible.recent.not_expiring.order('date(created_at) DESC, random()').limit(3)
   }
 
-  search_methods :visible, :recommended, :expired, :not_expired, :expiring, :not_expiring, :recent, :successful, :tagged_with
+  search_methods :visible, :recommended, :expired, :not_expired, :expiring, :not_expiring, :recent, :successful, :paid, :tagged_with
 
   validates_presence_of :name, :user, :category, :about, :headline, :goal, :expires_at, :when_short, :when_long, :location, :leader
   validates_length_of :headline, :maximum => 140
@@ -285,6 +285,7 @@ class Project < ActiveRecord::Base
     total - backers.confirmed.count
   end
 
+  # Lots of refactoring needed here
   # The service fee, defined in the website configuration (defaults to 7.5% (or 0.075))
   def service_fee
     payment_method_fee = Configuration.find_by_name('payment_method_fee')

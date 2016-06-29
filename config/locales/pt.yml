@@ -451,7 +451,7 @@ pt:
       no_projects: "Nenhum encontro encontrado."
       order: Ordem
       project: Encontro
-      slug: Slug
+      slug: Atalho
       recommended: Recomendado?
       rejected: Rejeitado?
       submit: Pesquisar
@@ -469,6 +469,7 @@ pt:
       expected_revenue: Saldo
       category: Cidade
       success: Sucesso
+      paid: Pago
     pending_backers:
       anonymous: Anônimo?
       confirmed: Confirmado?

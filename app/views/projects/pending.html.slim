@@ -34,6 +34,9 @@
               .input.check
                 = f.check_box :finished_is_true
                 = f.label :finished_is_true, t('.finished')
+              .input.check
+                = f.check_box :paid_is_true
+                = f.label :paid_is_true, t('.paid')
 
               .bootstrap-twitter
                 .input.submit
@@ -71,6 +74,7 @@
                   th= t('.category')
                   th= t('.visible')
                   th= t('.can_finish')
+                  th= t('.paid')
                   th= t('.success')
                   th= t('.slug')
               tbody
@@ -115,6 +119,8 @@
                       = (project.finished ? "(x)" : "( )")
 
                     / td= (project.finished ? t('yes') : t('no'))
+
+                    td= check_box_tag "project__paid__#{project.id}", '1', project.paid
 
                     td= (project.successful ? I18n.t('yes') : I18n.t('no'))
 
