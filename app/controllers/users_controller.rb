@@ -80,7 +80,7 @@ class UsersController < ApplicationController
 
     @interests = @interests.order('name ASC').pluck(:name)
 
-    render :json => @interests.map {|interest| {:text => interest, :id => interest} }
+    render :json => @interests.map {|interest| {:text => interest.titleize, :id => interest} }
   end
 
   private
