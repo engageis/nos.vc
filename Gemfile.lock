@@ -132,6 +132,9 @@ GEM
       activesupport (>= 3.0.0)
     erubis (2.7.0)
     eventmachine (1.0.3)
+    exception_notification (4.0.1)
+      actionmailer (>= 3.0.4)
+      activesupport (>= 3.0.4)
     excon (0.6.6)
     execjs (1.4.0)
       multi_json (~> 1.0)
@@ -480,6 +483,7 @@ DEPENDENCIES
   devise (= 1.5.3)
   draper (= 0.17.0)
   enumerate_it
+  exception_notification (~> 4.0.0)
   factory_girl_rails (= 1.7.0)
   feedzirra
   fog

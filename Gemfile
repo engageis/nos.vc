@@ -87,6 +87,8 @@ gem 'paypal-express', :require => 'paypal'
 # Server
 gem 'thin'
 
+gem 'exception_notification', '~> 4.0.0'
+
 group :assets do
   gem 'sass-rails',   '~> 3.2.5'
   gem 'coffee-rails', '~> 3.2.2'
