@@ -1,5 +1,4 @@
 source "https://rubygems.org"
-source 'http://gems.github.com'
 
 ruby '1.9.3'
 
@@ -16,7 +15,6 @@ gem 'catarse_moip', '~> 0.1.1'
 gem 'moip_catarse', '~> 1.0.6', require: 'moip'
 
 gem 'maxim-sexy_pg_constraints'
-gem 'memcachier'
 gem 'dalli', '~> 2.2.1'
 gem 'draper', '0.17.0'
 
@@ -115,4 +113,8 @@ group :development do
   gem 'mailcatcher'
   gem 'ruby-debug19'
   gem 'quiet_assets'
+  gem 'net-ssh', '~> 2.6.1'
+  gem 'capistrano'
+  gem 'capistrano-rails'
+  gem 'capistrano-rbenv'
 end
