@@ -362,7 +362,7 @@ GEM
     restclient_with_cert (0.0.8)
       rest-client (>= 1.6)
     rinku (1.7.3)
-    rmagick (2.13.2)
+    rmagick (2.16.0)
     routing-filter (0.3.1)
       actionpack
     rspec (2.13.0)
@@ -538,7 +538,7 @@ DEPENDENCIES
   rails_autolink (~> 1.0.7)
   rake (= 0.9.2.2)
   rcov (= 0.9.11)
-  rmagick
+  rmagick (~> 2.16.0)
   routing-filter
   rspec-rails (~> 2.13.0)
   ruby-debug19

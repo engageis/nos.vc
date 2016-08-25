@@ -46,7 +46,7 @@ gem 'rails_autolink', '~> 1.0.7'
 
 # Uploads
 gem 'carrierwave', '= 0.5.8'
-gem 'rmagick'
+gem 'rmagick', '~> 2.16.0'
 gem 'fog'
 
 # Other Tools
