@@ -567,7 +567,7 @@ en:
       error: "There was an error while loggin in. Please try again."
   site:
     host: "nos.vc"
-    base_url: "http://nos.vc"
+    base_url: "https://nos.vc"
     blog: "https://medium.com/@nos.vc"
     help: "http://help.nos.vc/"
     email:

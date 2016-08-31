@@ -624,7 +624,7 @@ pt:
       error: "Ocorreu um erro ao realizar o login. Por favor, tente novamente."
   site:
     host: "nos.vc"
-    base_url: "http://nos.vc"
+    base_url: "https://nos.vc"
     blog: "https://medium.com/@nos.vc"
     help: "http://help.nos.vc/"
     email:
