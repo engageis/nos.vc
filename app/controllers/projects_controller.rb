@@ -46,19 +46,7 @@ class ProjectsController < ApplicationController
           total
         end || []
 
-        calendar = Calendar.new
-        @events = Rails.cache.fetch 'calendar', expires_in: 30.minutes do
-          calendar.fetch_events_from("catarse.me_237l973l57ir0v6279rhrr1qs0@group.calendar.google.com") || []
-        end
         @curated_pages = CuratedPage.visible.order("created_at desc").limit(8)
-        @last_tweets = Rails.cache.fetch('last_tweets', :expires_in => 30.minutes) do
-          begin
-            JSON.parse(Net::HTTP.get(URI("http://api.twitter.com/1/statuses/user_timeline.json?screen_name=#{t('site.twitter')}")))[0..1]
-          rescue
-            []
-          end
-        end
-        @last_tweets ||= []
       end
       format.json do
         # After the search params we order by ID to avoid ties and therefore duplicate items in pagination
