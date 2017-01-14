@@ -1,7 +1,9 @@
 FROM ruby:1.9.3
 RUN apt-get update && apt-get install imagemagick libmagickcore-dev \
-libmagickwand-dev libmagick++-dev libxml2-dev libxslt-dev \
-libpq-dev libssl-dev  -y
+    libmagickwand-dev libmagick++-dev libxml2-dev libxslt-dev \
+    libpq-dev libssl-dev  -y \
+    && rm -rf /var/lib/apt/lists/*
+    
 COPY Gemfile* ./
 RUN bundler install
 
