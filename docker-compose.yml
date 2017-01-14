@@ -1,0 +1,25 @@
+version: '2'
+services:
+  nosvc:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+       - RAILS_ENV=development
+    depends_on:
+       - db
+    ports:
+      - "3000:3000"
+
+  db:
+    image: postgres:9.6
+    environment:
+       - POSTGRES_PASSWORD=catarse
+       - POSTGRES_USER=catarse
+       - POSTGRES_DB=catarse_development
+    volumes:
+       - "db:/var/lib/postgresql"
+
+volumes:
+  db:
+    external: false
