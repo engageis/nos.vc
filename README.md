@@ -3,7 +3,22 @@
 Nós.vc is a crowdlearning plataform for inspiring encounters.
 
 
-## Development environment
+## Development environment using Docker
+
+You'll need [docker](https://www.docker.com/) and `make`.
+
+1. Clone the repository:
+
+ `git clone git://github.com/engageis/nos.vc.git`
+
+2. Enter the repo directory:
+
+ `cd nos.vc`
+
+3. Run the environment:
+ `make run`
+
+## Development environment without docker
 
 You'll need [RVM](https://rvm.io/) to isolate your development environment.
 

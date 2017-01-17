@@ -538,7 +538,7 @@ DEPENDENCIES
   rails_autolink (~> 1.0.7)
   rake (= 0.9.2.2)
   rcov (= 0.9.11)
-  rmagick (~> 2.16.0)
+  rmagick (= 2.16.0)
   routing-filter
   rspec-rails (~> 2.13.0)
   ruby-debug19
