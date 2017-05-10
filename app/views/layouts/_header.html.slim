@@ -29,5 +29,5 @@
           li= link_to t('layouts.user.logout'), logout_path
       - else
         .login
-          = link_to t('layouts.header.signin'), login_path
+          = link_to t('layouts.header.signin'), login_path(:anchor => "login")
     .clearfix
