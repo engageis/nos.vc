@@ -17,13 +17,6 @@
           p=t('.with_facebook_subtitle')
           = link_to t('layouts.login.login_with_facebook'), '/auth/facebook', :class => 'facebook_start'
           .clearfix
-          h2=t('.with_another_social')
-          p=t('.with_another_social_subtitle')
-          .another_social
-            = link_to image_tag('auth/google_128.png', :title => 'Google'), '/auth/google', :class => 'provider first'
-            = link_to image_tag('auth/orkut_128.png', :title => 'Orkut'), '/auth/google', :class => 'provider'
-            - OauthProvider.where("path <> 'facebook'").order('"order"').all.each do |p|
-              = link_to image_tag("auth/#{p.path}_128.png", :title => p.name), "/auth/#{p.path}", :class => 'provider'
       .form_login.bootstrap-form.new_registration.register_content.content.hide
         .content_form
           h1=t('.register_title')
