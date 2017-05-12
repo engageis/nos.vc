@@ -5,6 +5,7 @@
   .container
     .sidebar
       ul.menu
+        li= link_to t('.social'), "#social", class: "#{'selected' unless params[:active_register]}", id: "social_link"
         li= link_to t('.login_title'), "#login", class: "#{'selected' if params[:active_register]}", id: "login_link"
         li= link_to t('.register_title'), '#register', id: "register_link"
     .main
