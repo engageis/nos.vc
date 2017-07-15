@@ -1,6 +1,7 @@
 CATARSE.ExploreIndexView = Backbone.View.extend({
   events: {
-    "click section.categories a.more_categories": "more_categories"
+    "click section.categories a.more_categories": "more_categories",
+    "click section.categories a.more_tags": "more_tags"
   },
   initialize: function() {
     $('#header header nav.actions ul li.explore').addClass('selected');
@@ -61,6 +62,11 @@ CATARSE.ExploreIndexView = Backbone.View.extend({
       tagged_with: tag
     })
     this.selectTag(tag)
+  },
+
+  more_tags: function(){
+    $('section.categories ul li.other_tag').toggle('hide');
+    $('section.categories ul li.featured_tag').toggle('hide');
   },
 
   updateSearch: function(){

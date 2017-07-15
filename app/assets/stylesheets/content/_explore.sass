@@ -94,6 +94,18 @@
               font-family: "Dosis-Regular"
               font-size: 18px
               position: relative
+
+              a.more_tags
+                background-image: image-url("nosvc/more-categories.gif")
+                height: 19px
+                width: 18px
+                display: block
+                cursor: pointer
+                text-indent: -9999em
+                right: 10px
+                top: 20px
+                position: absolute
+
               a.more_categories
                 background-image: image-url("nosvc/more-categories.gif")
                 height: 19px
@@ -127,6 +139,10 @@
 
                   &.other_categorie
                     display: none
+
+                  &.other_tag
+                    display: none
+
                 .featured_categorie + .other_categorie
                   clear: left
 

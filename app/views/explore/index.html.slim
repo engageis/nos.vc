@@ -3,6 +3,7 @@
 
 - content_for :header_featured do
   #banner_explore
+
 #page_content
   .container
     .sidebar
@@ -31,9 +32,15 @@
           h1= t('.subtitle').html_safe
 
           .list_categories
+            a.more_tags +
             ul
               - @tags.each do |tag|
-                li
+                li.featured_tag
+                  a.tag-link href="#tagged/#{tag}" data-id=tag
+                    = tag.titleize
+
+              - @other_tags.each do |tag|
+                li.other_tag
                   a.tag-link href="#tagged/#{tag}" data-id=tag
                     = tag.titleize
 
