@@ -7,6 +7,7 @@ UserInterests.initialize = function(id, width) {
     width: width,
     tags: true,
     multiple: true,
+    maximumSelectionLength: 2,
 
     ajax: {
       url: "/interests",
